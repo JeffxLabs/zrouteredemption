@@ -171,6 +171,7 @@
 <body>
   <header class="shell topbar">
     <div class="brand"><span class="mark" aria-hidden="true"></span><span>Z Route Planner</span></div>
+    <a class="source-link" href="promo-codes/">Promo codes →</a>
     <nav class="site-nav" aria-label="Calculators">
       <button id="base-view-button" aria-pressed="true">Base planner</button>
       <button id="roi-view-button" aria-pressed="false">Producer ROI</button>
@@ -233,6 +234,7 @@
         <div id="loading" class="panel loading"><div><div class="spinner"></div>Loading verified client data…</div></div>
         <div id="result-content" hidden>
           <div id="error" class="error"></div>
+          <div id="base-output">
           <header class="result-head">
             <div><div class="route-label">Remaining route</div><div id="route-title" class="route-title"></div></div>
             <div class="version">Client v1.30.07<br><span id="modifier-summary"></span></div>
@@ -259,6 +261,7 @@
               </table>
             </div>
           </section>
+          </div>
         </div>
       </section>
     </div>
@@ -297,6 +300,7 @@
         <div id="roi-loading" class="panel loading"><div><div class="spinner"></div>Loading verified producer data…</div></div>
         <div id="roi-content" hidden>
           <div id="roi-error" class="error"></div>
+          <div id="roi-output-content">
           <header class="result-head">
             <div><div class="route-label">Producer investment</div><div id="roi-title" class="route-title"></div></div>
             <div id="roi-gate" class="version"></div>
@@ -322,8 +326,9 @@
 
           <section class="panel section">
             <h3>How this is calculated</h3>
-            <p class="section-note">The building keeps producing at its last completed level while the next upgrade builds. Break-even credits that intermediate output above your starting level and compares it with the selected upgrades' direct Food, Metal, and Oil costs. Relative values convert unlike inputs and output into one comparison unit. Base prerequisite costs are excluded because they benefit the whole account, not only this producer.</p>
+            <p class="section-note">The building keeps producing at its last completed level while the next upgrade builds. Break-even credits that intermediate output above your starting level and compares it with the selected upgrades' direct Food, Metal, and Oil costs; the 30-day result deducts each upgrade cost when that upgrade starts. Relative values convert unlike inputs and output into one comparison unit. Base prerequisite costs are excluded because they benefit the whole account, not only this producer.</p>
           </section>
+          </div>
         </div>
       </section>
     </div>
@@ -423,6 +428,7 @@
 
     function plan(state, target) {
       const current = state[1001] || 0;
+      if (!Number.isInteger(target) || target < current || target > 30) throw new Error(`Target Base must be an integer from ${current} to 30`);
       const stages = [], actions = [];
       for (let level = current + 1; level <= target; level++) {
         const stageActions = ensure(1001, level, state);
@@ -438,11 +444,13 @@
       const unchanged = {speedPercent: 0, freeSeconds: 0};
       if (result.actions.length !== 220 || total.seconds !== 110094695 || total.food !== 13352203480 || total.metal !== 12992121750 || total.oil !== 4500620760
           || schedule(result.actions, 1, unchanged).seconds !== total.seconds
+          || schedule(result.actions, 2, unchanged).seconds !== 60425316
           || schedule(result.actions, 4, unchanged).seconds > total.seconds
+          || schedule([{building_id: 1, from_level: 0, level: 1, requirements: [[2, 1]], base_time_seconds: 100}, {building_id: 2, from_level: 0, level: 1, requirements: [], base_time_seconds: 10}], 2, unchanged).seconds !== 110
           || adjustedTime({base_time_seconds: 100}, {speedPercent: 100, freeSeconds: 10}) !== 40
           || roiFor({costValue: 1000, previousOutput: 100, output: 200, buildSeconds: 3600}, {outputValue: 1, productionFactor: 1, utilization: 1}).totalHours !== 11
           || roiPlanBreakEven([{costValue: 50, previousOutput: 100, output: 200, buildSeconds: 3600}, {costValue: 100, previousOutput: 200, output: 300, buildSeconds: 3600}], {outputValue: 1, productionFactor: 1, utilization: 1}) !== 2.25
-          || roiPlanProfit([{costValue: 50, previousOutput: 100, output: 200, buildSeconds: 3600}, {costValue: 100, previousOutput: 200, output: 300, buildSeconds: 3600}], {outputValue: 1, productionFactor: 1, utilization: 1}, 3) !== 150) {
+          || roiPlanProfit([{costValue: 50, previousOutput: 100, output: 200, buildSeconds: 7200}, {costValue: 100, previousOutput: 200, output: 300, buildSeconds: 7200}], {outputValue: 1, productionFactor: 1, utilization: 1}, 1) !== -50) {
         throw new Error("Planner self-check failed for client v1.30.07");
       }
     }
@@ -511,7 +519,13 @@
     }
 
     function roiPlanProfit(upgrades, assumptions, horizonHours) {
-      return roiPlanBenefit(upgrades, assumptions, horizonHours) - upgrades.reduce((sum, item) => sum + item.costValue, 0);
+      let elapsed = 0, costs = 0;
+      for (const item of upgrades) {
+        if (elapsed >= horizonHours) break;
+        costs += item.costValue;
+        elapsed += item.buildSeconds / 3600;
+      }
+      return roiPlanBenefit(upgrades, assumptions, horizonHours) - costs;
     }
 
     function roiPlanBreakEven(upgrades, assumptions) {
@@ -529,22 +543,45 @@
     }
 
     function schedule(actions, slotCount, modifier) {
-      // ponytail: deterministic greedy list schedule; use an exact optimizer if alternate queue order materially matters.
-      const slots = Array(slotCount).fill(0);
-      const completion = new Map();
-      for (const action of actions) {
-        const dependencyKeys = [[action.building_id, action.from_level], ...(action.requirements || [])];
-        const ready = Math.max(0, ...dependencyKeys.map(([id, level]) => completion.get(`${id}:${level}`) || 0));
-        let slot = 0, start = Math.max(slots[0], ready);
-        for (let index = 1; index < slots.length; index++) {
-          const candidate = Math.max(slots[index], ready);
-          if (candidate < start) [slot, start] = [index, candidate];
-        }
-        const finish = start + adjustedTime(action, modifier);
-        slots[slot] = finish;
-        completion.set(`${action.building_id}:${action.level}`, finish);
+      // ponytail: critical-tail list scheduling is heuristic; use an exact solver if proof of optimality is required.
+      const keys = new Map(actions.map((action, index) => [`${action.building_id}:${action.level}`, index]));
+      const dependencies = actions.map(action => [[action.building_id, action.from_level], ...(action.requirements || [])]
+        .flatMap(([id, level]) => keys.has(`${id}:${level}`) ? [keys.get(`${id}:${level}`)] : []));
+      const successors = actions.map(() => []);
+      dependencies.forEach((items, index) => items.forEach(dependency => successors[dependency].push(index)));
+      const durations = actions.map(action => adjustedTime(action, modifier));
+      const tails = Array(actions.length), visiting = new Set();
+      function tail(index) {
+        if (tails[index] !== undefined) return tails[index];
+        if (visiting.has(index)) throw new Error("Building route contains a dependency cycle");
+        visiting.add(index);
+        tails[index] = durations[index] + Math.max(0, ...successors[index].map(tail));
+        visiting.delete(index);
+        return tails[index];
       }
-      return {seconds: Math.max(0, ...slots)};
+      actions.forEach((_, index) => tail(index));
+      function run(priority) {
+        const remaining = dependencies.map(items => items.length), ready = [], running = [];
+        remaining.forEach((count, index) => { if (!count) ready.push(index); });
+        let time = 0, available = slotCount, completed = 0;
+        while (completed < actions.length) {
+          ready.sort(priority);
+          while (available && ready.length) {
+            const index = ready.shift();
+            running.push({index, finish: time + durations[index]});
+            available--;
+          }
+          if (!running.length) throw new Error("Building route cannot be scheduled");
+          time = Math.min(...running.map(item => item.finish));
+          for (let index = running.length - 1; index >= 0; index--) if (running[index].finish === time) {
+            const [finished] = running.splice(index, 1);
+            available++; completed++;
+            for (const successor of successors[finished.index]) if (!--remaining[successor]) ready.push(successor);
+          }
+        }
+        return time;
+      }
+      return {seconds: Math.min(run((a, b) => a - b), run((a, b) => tails[b] - tails[a] || a - b))};
     }
 
     function groupWork(actions, modifier) {
@@ -575,6 +612,7 @@
         const slots = Number($("builder-slots").value);
         const elapsed = schedule(result.actions, slots, modifier);
         $("error").style.display = "none";
+        $("base-output").hidden = false;
         $("route-title").textContent = `Base ${result.current} → ${result.target}`;
         $("elapsed-time").textContent = time(elapsed.seconds);
         $("base-time").textContent = time(adjustedTotal(baseActions, modifier));
@@ -605,6 +643,7 @@
       } catch (error) {
         $("error").textContent = error.message;
         $("error").style.display = "block";
+        $("base-output").hidden = true;
       }
     }
 
@@ -670,15 +709,22 @@
 
     function applyConfig(value) {
       if (!value || value.schema !== "zroute-base-planner" || value.version !== 1) throw new Error("Not a supported Z Route planner configuration");
+      if (value.clientVersion !== "1.30.07") throw new Error("Configuration client version must be 1.30.07");
       if (!["base-only", "building-levels"].includes(value.mode)) throw new Error("Configuration mode is not supported");
       const currentBase = validInteger(value.currentBase, 0, 30, "Current Base");
       const targetBase = validInteger(value.targetBase, currentBase, 30, "Target Base");
       const slots = validInteger(value.builderSlots, 1, 4, "Builder slots");
       const vip = validInteger(value.vipLevel, 0, 18, "VIP level");
       const researchLevels = value.researchLevels || {};
-      for (const tech of research) validInteger(researchLevels[tech.id] ?? 0, 0, tech.max_level, tech.name);
+      if (typeof researchLevels !== "object" || Array.isArray(researchLevels) || research.some(tech => !Object.hasOwn(researchLevels, tech.id))) throw new Error("Research-level configuration is incomplete");
+      for (const [id, level] of Object.entries(researchLevels)) {
+        const tech = research.find(item => item.id === Number(id));
+        if (!tech) throw new Error(`Unknown research ID ${id}`);
+        validInteger(level, 0, tech.max_level, tech.name);
+      }
       const sourceLevels = value.mode === "building-levels" ? value.buildingLevels : value.buildingOverrides || {};
       if (!sourceLevels || typeof sourceLevels !== "object" || Array.isArray(sourceLevels)) throw new Error("Building levels must be an object");
+      if (value.mode === "building-levels" && BUILDING_IDS.some(id => !Object.hasOwn(sourceLevels, id))) throw new Error("Building-level configuration is incomplete");
       for (const [id, level] of Object.entries(sourceLevels)) {
         if (!BUILDING_IDS.includes(Number(id))) throw new Error(`Unknown building ID ${id}`);
         validInteger(level, 0, buildings[id].max_level, buildings[id].name);
@@ -694,7 +740,7 @@
       $("vip-level").value = vip;
       $("free-minutes").value = free;
       $("other-speed").value = other;
-      for (const tech of research) $(`research-${tech.id}`).value = researchLevels[tech.id] ?? 0;
+      for (const tech of research) $(`research-${tech.id}`).value = researchLevels[tech.id];
       advanced = value.mode === "building-levels";
       if (advanced) manualLevels = Object.fromEntries(BUILDING_IDS.map(id => [id, value.buildingLevels?.[id] ?? inferredState(currentBase)[id] ?? 0]));
       else quickOverrides = Object.fromEntries(Object.entries(sourceLevels).map(([id, level]) => [Number(id), level]));
@@ -789,6 +835,7 @@
         const directCosts = [1, 2, 3].map(type => ({type, count: upgrades.reduce((sum, item) => sum + (item.costs.find(cost => cost.type === type)?.count || 0), 0)}));
         const gate = Math.max(0, ...upgrades.map(item => item.gate));
         $("roi-error").style.display = "none";
+        $("roi-output-content").hidden = false;
         $("roi-title").textContent = `${producer.building_name} ${current} → ${target}`;
         $("roi-gate").textContent = `Requires Base ${gate || "—"} · Client v1.30.07`;
         $("roi-payback").textContent = durationHours(cumulative.paybackHours);
@@ -806,6 +853,7 @@
       } catch (error) {
         $("roi-error").textContent = error.message;
         $("roi-error").style.display = "block";
+        $("roi-output-content").hidden = true;
       }
     }
 
@@ -841,7 +889,11 @@
           renderBuildingInputs();
           render();
         });
-        $("target-base").addEventListener("change", render);
+        $("target-base").addEventListener("change", () => {
+          const current = Number($("current-base").value);
+          if (Number($("target-base").value) < current) $("target-base").value = current;
+          render();
+        });
         $("building-inputs").addEventListener("change", event => {
           const id = Number(event.target.id.replace("building-", ""));
           if (advanced) manualLevels[id] = Number(event.target.value);
