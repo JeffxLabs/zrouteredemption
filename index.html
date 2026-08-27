@@ -48,6 +48,8 @@
     .site-nav { display: flex; align-items: center; gap: 8px }
     .site-nav button { border: 1px solid transparent; border-radius: 9px; padding: 7px 10px; background: transparent; color: var(--muted); cursor: pointer }
     .site-nav button[aria-pressed="true"] { border-color: var(--line); background: var(--panel-2); color: var(--text) }
+    .site-nav .nav-link { border: 1px solid transparent; border-radius: 9px; padding: 7px 10px; color: var(--muted); text-decoration: none; font-size: inherit }
+    .site-nav .nav-link:hover { border-color: var(--line); background: var(--panel-2); color: var(--text) }
 
     .hero { padding: 64px 0 38px; max-width: 940px }
     .eyebrow { color: var(--green); font-size: .78rem; font-weight: 800; letter-spacing: .18em; text-transform: uppercase }
@@ -155,6 +157,7 @@
       .topbar { align-items: flex-start }
       .site-nav { flex-wrap: wrap; justify-content: flex-end }
       .site-nav button { padding: 6px 8px; font-size: .82rem }
+      .site-nav .nav-link { padding: 6px 8px; font-size: .82rem }
       .hero { padding: 40px 2px 27px }
       .planner { gap: 15px }
       .controls-inner, .section { padding: 17px }
@@ -174,7 +177,7 @@
     <nav class="site-nav" aria-label="Calculators">
       <button id="base-view-button" aria-pressed="true">Base planner</button>
       <button id="roi-view-button" aria-pressed="false">Producer ROI</button>
-      <a class="source-link" href="promo-codes/">Promo codes →</a>
+      <a class="nav-link" href="promo-codes/">Promo Codes</a>
       <a class="source-link" href="https://github.com/JeffxLabs/zroute-building-data">GitHub ↗</a>
     </nav>
   </header>
