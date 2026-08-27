@@ -2,9 +2,9 @@
 
 This repository turns static progression facts from Android client version `1.30.07` into machine-readable JSON for route planning and leveling analysis. It covers buildings, research, resource generation and gathering nodes, speedups, playable heroes, hero progression, and equipment. The original Base level 1–30 CSV remains available for spreadsheet use.
 
-Use the interactive [Z Route Progression Planner](https://jeffxlabs.github.io/zroute-building-data/) to calculate a Base route or compare the payback time and 30-day profit of every resource-producer upgrade.
+Use the interactive [Z Route Progression Planner](https://jeffxlabs.github.io/zrouteredemption/) to calculate a Base route or compare the payback time and 30-day profit of every resource-producer upgrade.
 
-Producer ROI compares the selected producer levels' direct Food, Metal, and Oil costs with marginal hourly output, construction time, and user-defined relative values for unlike resources. A producer continues at its last completed level while the next upgrade builds. Base gates are shown but their costs are excluded because they benefit the whole account.
+Producer ROI compares the selected producer levels' direct Food, Metal, and Oil costs with marginal hourly output, construction time, and user-defined relative values for unlike resources. A producer continues at its last completed level while the next upgrade builds, and fixed-horizon profit deducts each upgrade cost when that upgrade starts. Base gates are shown but their costs are excluded because they benefit the whole account.
 
 ## Data
 
@@ -27,7 +27,7 @@ A live recommendation still needs an account-state input: current building/resea
 
 Conditions preserve their numeric parameters and include a semantic `kind` where confirmed. Conditions in a prerequisite list are jointly required; `any_building_in_list_level` is the client’s internal OR case. A planner can resolve `building_level`, `research_level`, and `any_building_class_level` against IDs/classes in `progression.json`; seasonal and event gates need live server state. Building levels expose `static_optimizer_supported` and `requires_external_state`; a solver should reject unsupported levels rather than treating an unknown gate as satisfied. Two event/decor buildings also expose `level_rows_complete=false` because their configured maximum exceeds the available client rows.
 
-Hero rows are limited to client records where `heroType=1` and `showType=1`, excluding mode/copy records. Their `level_curve_id` joins to `level_curves`, and `skill_group_ids` join to `skills`. No direct construction, research, production, or gathering modifier appears in the playable heroes’ `levelBenefit` records in this version.
+Hero rows are limited to client records where `heroType=1` and `showType=1`, excluding mode/copy records. Their `level_curve_id` joins to `level_curves`, and `skill_group_ids` join to `skills`. `replaces_hero_id` identifies hero replacement paths, while `uses_extra_star_fragment_cost` selects `extra_fragment_count` instead of `fragment_count` from the star curve. No direct construction, research, production, or gathering modifier appears in the playable heroes’ `levelBenefit` records in this version.
 
 All prerequisite entries on a level must pass. Condition `20103` requires the named building to reach the minimum level; condition `20105` requires any one building in its group to reach the minimum. The group used here is Warrior, Tactical, or Assault Training Center.
 
