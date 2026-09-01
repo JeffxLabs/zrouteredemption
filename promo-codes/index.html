@@ -21,8 +21,8 @@
   </main>
   <div class="toast" id="toast" role="status"></div>
   <script>
-    const codes=['DC60KHAX','ZRRUSG26','DC50KURM','ZRDAD26','ZRRLW2AC','ZRSURV26','ZRR2NX6Q','ZRR999','ZRRFT9BM','ZRRC7WES','VK90KPJD','ZRYOUTH26','DC45KIGS','DC38KQEU','DC40KHAX','ZRRVJ4YD','DC32KJBV','DC28KRCG','DC30KMWZ','DC35KNZH','DC55KQEU'];
-    const codeDates={'DC60KHAX':'2026-08-31'};
+    const codes=['26SCHOOL','DC60KHAX','ZRRUSG26','DC50KURM','ZRDAD26','ZRRLW2AC','ZRSURV26','ZRR2NX6Q','ZRR999','ZRRFT9BM','ZRRC7WES','VK90KPJD','ZRYOUTH26','DC45KIGS','DC38KQEU','DC40KHAX','ZRRVJ4YD','DC32KJBV','DC28KRCG','DC30KMWZ','DC35KNZH','DC55KQEU'];
+    const codeDates={'26SCHOOL':'2026-08-31','DC60KHAX':'2026-08-31'};
     const voteKey='zroute-votes',usedKey='zroute-used',votes=JSON.parse(localStorage.getItem(voteKey)||'{}'),used=JSON.parse(localStorage.getItem(usedKey)||'[]');
     const count=document.querySelector('#count'),list=document.querySelector('#codes'),toast=document.querySelector('#toast');let timer;
     function pop(text){toast.textContent=text;toast.classList.add('show');clearTimeout(timer);timer=setTimeout(()=>toast.classList.remove('show'),1700)}
