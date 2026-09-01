@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Z Route server-vs-server alliance intelligence.">
+  <meta name="description" content="Z Route P1MP alliance roster and leaderboard intelligence.">
   <link rel="icon" href="data:,">
   <link rel="stylesheet" href="styles.css">
   <title>Z Route Alliance Intel</title>
@@ -12,29 +12,28 @@
   <header class="shell site-head">
     <a class="brand" href="./">Z ROUTE INTEL</a>
     <nav class="nav" aria-label="Intel navigation">
-      <a href="./" aria-current="page">Alliances</a>
-      <a href="compare/">Compare servers</a>
+      <a href="./" aria-current="page">P1MP roster</a>
       <a href="leaderboard/">Leaderboard evidence</a>
     </nav>
   </header>
 
   <main class="shell">
     <section class="hero">
-      <div class="eyebrow">Server-vs-server intelligence</div>
-      <h1>Choose an alliance.<br><span>Know the matchup.</span></h1>
-      <p class="lede">Browse the two supplied rosters or compare home server #117 against opponent server #116 across power, levels, depth, ranks, and head-to-head lineup strength.</p>
-      <div class="actions"><a class="button primary" href="compare/">Open server comparison</a></div>
+      <div class="eyebrow">Alliance intelligence · Server #117</div>
+      <h1>Know the roster.<br><span>Track the leaderboard.</span></h1>
+      <p class="lede">Browse the supplied JU1CE [P1MP] roster across power, levels, and ranks, then use the dated leaderboard evidence to review current event output.</p>
+      <div class="actions"><a class="button primary" href="alliance/?id=p1mp">Open P1MP roster</a><a class="button" href="leaderboard/">View leaderboard evidence</a></div>
     </section>
 
     <section>
-      <div class="section-head"><div><div class="eyebrow">Available dossiers</div><h2>Alliance rosters</h2></div><div class="note">198 players across two alliances</div></div>
+      <div class="section-head"><div><div class="eyebrow">Available dossier</div><h2>Alliance roster</h2></div><div class="note">98 listed P1MP players</div></div>
       <div id="alliances" class="alliance-grid"></div>
     </section>
 
     <section class="panel section">
-      <div class="section-head"><div><div class="eyebrow">Current read</div><h2>At a glance</h2></div><a class="button" href="compare/">Deep analysis →</a></div>
+      <div class="section-head"><div><div class="eyebrow">Current read</div><h2>P1MP at a glance</h2></div><a class="button" href="alliance/?id=p1mp">Full roster →</a></div>
       <div id="overview" class="insights"></div>
-      <p class="note">Roster powers are mostly rounded to 0.1M, so totals and derived comparisons are estimates. This is a roster-strength comparison, not a battle-outcome prediction.</p>
+      <p class="note">Roster power describes account strength. Leaderboard points describe event output; the two measures are intentionally kept separate.</p>
     </section>
   </main>
 
@@ -43,7 +42,7 @@
     (() => {
     const {alliances, stats, formatPower} = Intel;
     const rosterUrl = alliance => `alliance/?id=${alliance.id}`;
-    const cards = [alliances.p1mp, alliances.biw];
+    const cards = [alliances.p1mp];
     document.getElementById("alliances").innerHTML = cards.map(alliance => {
       const metric = stats(alliance.players);
       return `<article class="alliance-card ${alliance.id === "p1mp" ? "home" : "opponent"}">
@@ -52,10 +51,10 @@
         <a class="button" href="${rosterUrl(alliance)}">Open ${alliance.tag} dossier →</a>
       </article>`;
     }).join("");
-    const home = stats(alliances.p1mp.players), opponent = stats(alliances.biw.players);
+    const home = stats(alliances.p1mp.players);
     document.getElementById("overview").innerHTML = `
-      <article class="insight"><strong>P1MP leads estimated total power</strong>${formatPower(home.total - opponent.total)} more across ${home.count} listed players, a ${((home.total / opponent.total - 1) * 100).toFixed(1)}% edge.</article>
-      <article class="insight"><strong>BIW owns the level ceiling</strong>BIW reaches Lv. ${opponent.maxLevel}; P1MP tops out at Lv. ${home.maxLevel} but carries the stronger median power.</article>`;
+      <article class="insight"><strong>${home.count} listed members</strong>The supplied P1MP roster totals ${formatPower(home.total)} with ${formatPower(home.average)} average and ${formatPower(home.median)} median power.</article>
+      <article class="insight"><strong>Roster ceiling</strong>${home.strongest.name} is the strongest listed member at ${formatPower(home.strongest.power)}; the highest listed Base level is Lv. ${home.maxLevel}.</article>`;
     })();
   </script>
 </body>

@@ -4,18 +4,6 @@
 const makePlayers = rows => rows.map(([rank, name, level, power, role]) => ({rank, name, level, power, role}));
 
 const alliances = {
-  biw: {
-    id: "biw", tag: "BIW", name: "BloodWing", server: 116, relation: "Opponent alliance",
-    leader: "МатьСерверов~", language: "Russian", scouted: "Aug 9, 2026 · 2:05 p.m. ET", serverTime: "Aug 9, 2026 · 4:05 p.m.",
-    precision: "Powers were supplied rounded to 0.1M.",
-    players: makePlayers([
-      ["R5","МатьСерверов~",20,12.4],
-      ["R4","-Ragnar-",23,26.7],["R4","Egoistelux",21,17.8],["R4","Lordsnoy6",20,15.8],["R4","-Sunshine-",17,9.1],["R4","Депутат",22,26.6],
-      ["R3","qviler13",26,22.9],["R3","Колчакъ",20,13.9],["R3","Виталик124",20,12.6],["R3","EHOT22",20,12.0],["R3","2Rist96",20,10.2],["R3","1Dark~King1",19,10.3],["R3","Yana163",19,8.0],["R3","AlexKiller",18,10.3],["R3","Легендарный",18,11.2],["R3","☯Harmony☯",21,16.2],["R3","Влад26",20,14.7],["R3","ViKki",20,9.5],["R3","Hooch",21,14.8],["R3","🤌Белочка🤌",19,11.8],["R3","САХАРОК161",20,13.2],["R3","денчик26",18,7.5],["R3","КрасныйТелепузик",21,20.7],["R3","Crazy-KrakeN",21,22.4],["R3","DenSibir",20,15.1],["R3","Lady~Vengeance",20,15.8],["R3","Egoistkalux",18,10.0],["R3","Мэмфис",18,12.6],["R3","MooN",20,17.1],["R3","V0van",24,22.6],["R3","TopOneSNG",18,6.1],["R3","харашо",17,9.2],["R3","Семь",20,14.9],["R3","Пилигрим",20,11.0],["R3","GROZZ",20,11.5],["R3","Kellt",21,17.9],["R3","Кот-Капоне🤝",18,6.8],["R3","JIaMnoBa-H9IIIKa",21,22.8],["R3","MONTER",19,11.9],["R3","Пулька-Шпулька",19,8.6],["R3","opexu",18,6.6],["R3","-PRETORIAN-",20,13.1],["R3","Artesska",18,8.4],["R3","Ruslan4ik228",18,12.8],["R3","alex6419",17,9.6],
-      ["R2","♔ØŁ乇G♔",18,8.1],["R2","Bastian",18,5.3],["R2","Tirr",16,7.5],["R2","Шиш1986",15,8.3],["R2","MYROMEC",17,5.5],["R2","Egoist61",19,5.2],["R2","MonsterEnergy031",18,8.7],["R2","путятя",18,6.3],["R2","blikmax",19,9.2],["R2","АНАТОЛИЙ44",17,7.8],["R2","PIWTIPIWPIW",17,8.4],["R2","МакаЧленс",17,7.7],["R2","Kristinkka",15,4.9],["R2","кофеιη",16,4.3],["R2","Ömer16",18,8.1],["R2","NSA26",17,5.6],["R2","VezdexoD",17,10.4],["R2","Ромарио1987",18,7.3],["R2","•SunRay•",18,8.4],["R2","Alexbro",18,6.2],["R2","DIZELL",18,8.0],["R2","Umbrella",17,5.4],["R2","9миля",16,6.7],["R2","incitanem",20,12.1],["R2","тремар",18,10.4],["R2","Dobruy",20,10.8],["R2","Дминко",15,7.7],["R2","22ОТБМП55Бр",15,5.1],["R2","♔ARHØNT♔",17,5.8],["R2","Кэкусик",17,10.4],["R2","Колумб-Псков",19,6.2],["R2","says",18,6.5],
-      ["R1","drKsen",21,15.2],["R1","VIsion",18,11.0],["R1","гнутый",18,6.3],["R1","MaríaAmarilla",17,8.6],["R1","горемуж",16,7.1],["R1","Tre3d3",15,7.4],["R1","dyhbvdfg",15,7.4],["R1","Noname669",17,7.3],["R1","meoook",15,4.6],["R1","татарин23408",19,10.0],["R1","ToKio",18,6.1],["R1","DrKiss",16,6.5],["R1","Karatel777",10,2.6],["R1","V1rtyoZ",20,15.1],["R1","Fenrir1488",17,9.9],["R1","SoriuGared",15,7.3],["R1","kbpf77",16,4.4],["R1","черныйкот",16,7.7],["R1","Ruha°",16,5.4],["R1","Evgenk0",15,6.0],["R1","Bizon33",17,5.9],["R1","Шершавый",17,9.0],["R1","Kulik72",17,8.0]
-    ])
-  },
   p1mp: {
     id: "p1mp", tag: "P1MP", name: "JU1CE", server: 117, relation: "Home alliance",
     leader: "TheRequiem", language: "English", scouted: "Aug 9, 2026 · 6:24 p.m. ET", serverTime: "Aug 9, 2026 · 8:24 p.m.",
@@ -53,7 +41,7 @@ const sortedPlayers = (players, key = "power", descending = true) => [...players
   return direction * difference || a.name.localeCompare(b.name);
 });
 
-if (alliances.biw.players.length !== 100 || alliances.p1mp.players.length !== 98 || Math.abs(stats(alliances.biw.players).average - 10.321) > 1e-9) {
+if (alliances.p1mp.players.length !== 98) {
   throw new Error("Alliance intel data self-check failed");
 }
 

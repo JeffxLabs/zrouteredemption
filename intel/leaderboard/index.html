@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Today alliance-member leaderboard evidence for Z Route servers 117 and 116.">
+  <meta name="description" content="Today alliance-member leaderboard evidence for P1MP and ddk.">
   <link rel="icon" href="data:,">
   <link rel="stylesheet" href="../styles.css">
   <title>Today leaderboard evidence · Z Route Intel</title>
@@ -12,8 +12,7 @@
   <header class="shell site-head">
     <a class="brand" href="../">Z ROUTE INTEL</a>
     <nav class="nav" aria-label="Intel navigation">
-      <a href="../">Alliances</a>
-      <a href="../compare/">Compare servers</a>
+      <a href="../">P1MP roster</a>
       <a href="./" aria-current="page">Leaderboard evidence</a>
     </nav>
   </header>
@@ -23,7 +22,7 @@
       <div class="eyebrow">Evidence layer · captured Aug 31, 2026</div>
       <h1>Today’s leaderboard.<br><span>What the screenshots show.</span></h1>
       <p class="lede">A normalized read of the 27 supplied mobile screenshots. The capture covers ranks 1–186 in the Today → Alliance Members view and mixes JU1CE [P1MP] with DreadMark [ddk]. Points are event leaderboard points, not the roster power values used in the alliance dossiers.</p>
-      <div class="actions"><a class="button primary" href="../compare/">Compare roster strength</a><a class="button" href="https://file.kiwi/6858f433#vXj6T78Gd7c2HLrFqz5P5A">Open source folder ↗</a></div>
+      <div class="actions"><a class="button primary" href="../alliance/?id=p1mp">Open P1MP roster</a><a class="button" href="https://file.kiwi/6858f433#vXj6T78Gd7c2HLrFqz5P5A">Open source folder ↗</a></div>
     </section>
 
     <section id="scope" class="panel section">
@@ -57,14 +56,13 @@
   <script src="data.js"></script>
   <script>
     (() => {
-      const {alliances, stats, formatPower} = Intel;
       const f = value => value.toLocaleString("en-US");
       const readout = [
         {id: "p1mp", tag: "P1MP", name: "JU1CE", role: "Screenshot alliance · tag P1MP", observed: "Visible from rank 1 through the bottom of the capture", note: "The screenshot set confirms a deep event presence, including six of the first seven visible entries and Jeff at rank 22 (10,066,490 points)."},
-        {id: "ddk", tag: "ddk", name: "DreadMark", role: "Screenshot alliance · tag ddk", observed: "Visible throughout the same rank 1–186 capture", note: "DreadMark supplies the main counter-presence in the board’s upper and middle bands. The screenshots do not establish that ddk is the same alliance as BIW in the separate roster dossier."}
+        {id: "ddk", tag: "ddk", name: "DreadMark", role: "Screenshot alliance · tag ddk", observed: "Visible throughout the same rank 1–186 capture", note: "DreadMark supplies the main counter-presence in the board’s upper and middle bands and is retained under the alliance identity shown in the screenshots."}
       ];
       document.getElementById("alliance-readout").innerHTML = readout.map(item => {
-        const rosterId = item.id === "p1mp" ? "p1mp" : "biw", a = alliances[rosterId], s = stats(a.players), board = Leaderboard.top.filter(row => row.alliance === item.tag);
+        const board = Leaderboard.top.filter(row => row.alliance === item.tag);
         const boardPoints = board.reduce((sum, row) => sum + row.points, 0);
         return `<article class="alliance-card ${item.id === "p1mp" ? "home" : "opponent"}"><div class="alliance-top"><div class="insignia ${item.id === "p1mp" ? "home" : ""}">${item.tag}</div><div><div class="eyebrow">${item.role}</div><h2>${item.name}</h2><div class="server">${item.observed}</div></div></div><div class="quick-stats"><div><div class="label">Top-15 entries</div><div class="value">${board.length}</div></div><div><div class="label">Top-15 points</div><div class="value">${f(boardPoints)}</div></div><div><div class="label">Best rank</div><div class="value">#${board[0]?.rank || "—"}</div></div></div><p class="note">${item.note}</p><a class="button" href="${item.id === "p1mp" ? "../alliance/?id=p1mp" : "#scope"}">${item.id === "p1mp" ? "Open P1MP roster dossier →" : "Keep ddk as screenshot evidence"}</a></article>`;
       }).join("");
@@ -73,7 +71,7 @@
       document.getElementById("insights").innerHTML = [
         `<article class="insight"><strong>JU1CE owns the visible podium</strong>The first three rows are all P1MP: Eldagrim (${f(Leaderboard.top[0].points)}), Vieques (${f(Leaderboard.top[1].points)}), and TheRequiem (${f(Leaderboard.top[2].points)}). That is a strong signal of current event activity at the top end.</article>`,
         `<article class="insight"><strong>DreadMark still has a broad scoring band</strong>${d.length} ddk players appear in the exact top-15 transcription, including four consecutive entries at ranks 8–12. The board shows concentrated JU1CE leadership versus real opponent depth, but does not prove a battle outcome.</article>`,
-        `<article class="insight"><strong>Event output and account power diverge</strong>Use this board to identify active scorers and lineup candidates. Use the <a href="../compare/">server comparison</a> for the separately sourced P1MP-versus-BIW roster-power model. The screenshot tag ddk is intentionally not silently relabeled as BIW.</article>`,
+        `<article class="insight"><strong>Event output and account power diverge</strong>Use this board to identify active scorers and lineup candidates. Use the <a href="../alliance/?id=p1mp">P1MP roster</a> for separately sourced account-power data; leaderboard points and roster power are not interchangeable.</article>`,
         `<article class="insight"><strong>Jeff is a visible benchmark</strong>Jeff’s highlighted row is rank 22 at ${f(Leaderboard.jeff.points)} points. Track that row over future captures to measure personal event movement without confusing it with alliance-wide power.</article>`
       ].join("");
     })();

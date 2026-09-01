@@ -2,13 +2,12 @@
 (function () {
 
 const $ = id => document.getElementById(id);
-const id = new URLSearchParams(location.search).get("id") || "biw";
-const alliance = Intel.alliances[id] || Intel.alliances.biw;
+const alliance = Intel.alliances.p1mp;
 
 const metric = Intel.stats(alliance.players);
 document.title = `[${alliance.tag}] ${alliance.name} Alliance Intel`;
 $("insignia").textContent = alliance.tag;
-if (id === "p1mp") $("insignia").classList.add("home");
+$("insignia").classList.add("home");
 $("alliance-name").innerHTML = `<span>[${alliance.tag}]</span> ${alliance.name}`;
 $("precision").textContent = alliance.precision;
 $("precision").hidden = !alliance.precision;

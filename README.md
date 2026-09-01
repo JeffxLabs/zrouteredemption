@@ -4,7 +4,7 @@ This repository turns static progression facts from Android client version `1.30
 
 Use the interactive [Z Route Progression Planner](https://jeffxlabs.github.io/zrouteredemption/) to calculate a Base route or compare the payback time and 30-day profit of every resource-producer upgrade.
 
-The [Alliance Intel dashboard](https://jeffxlabs.github.io/zrouteredemption/intel/) compares the supplied P1MP and BIW rosters. Its [leaderboard evidence page](https://jeffxlabs.github.io/zrouteredemption/intel/leaderboard/) adds a dated, screenshot-based read of the Today event board. Leaderboard points and roster power are separate measures; the evidence page preserves the screenshot tag `ddk` rather than assuming it is the same identity as the BIW roster.
+The [Alliance Intel dashboard](https://jeffxlabs.github.io/zrouteredemption/intel/) presents the supplied P1MP roster. Its [leaderboard evidence page](https://jeffxlabs.github.io/zrouteredemption/intel/leaderboard/) adds a dated, screenshot-based read of the Today event board, where P1MP and ddk leaderboard points remain separate from roster power.
 
 Producer ROI compares the selected producer levels' direct Food, Metal, and Oil costs with marginal hourly output, construction time, and user-defined relative values for unlike resources. A producer continues at its last completed level while the next upgrade builds, and fixed-horizon profit deducts each upgrade cost when that upgrade starts. Base gates are shown but their costs are excluded because they benefit the whole account.
 
