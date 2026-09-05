@@ -1005,10 +1005,10 @@
 
     let deferredInstall;
     window.addEventListener("beforeinstallprompt", event => {
-      event.preventDefault(); deferredInstall = event; $("install-button").hidden = false;
+      event.preventDefault(); deferredInstall = event; $("install-button").style.display = "inline-block";
     });
     $("install-button").addEventListener("click", async () => {
-      if (!deferredInstall) return;
+      if (!deferredInstall) { alert("Use your browser menu and choose Install app or Add to Home Screen."); return; }
       deferredInstall.prompt(); await deferredInstall.userChoice; deferredInstall = null;
     });
     if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(() => {});
