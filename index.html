@@ -166,15 +166,35 @@
       .site-nav { flex-wrap: wrap; justify-content: flex-end }
       .site-nav button { padding: 6px 8px; font-size: .82rem }
       .site-nav .nav-link { padding: 6px 8px; font-size: .82rem }
-      .hero { padding: 40px 2px 27px }
-      .planner { gap: 15px }
-      .controls-inner, .section { padding: 17px }
-      .metrics { grid-template-columns: 1fr }
-      .metric { min-height: 108px }
-      .metric::before { margin-bottom: 12px }
-      .work-grid { grid-template-columns: 1fr }
-      .result-head { align-items: start; flex-direction: column }
+      .hero { padding: 22px 2px 14px }
+      .hero h1 { font-size: 2rem; line-height: 1.02; margin: 8px 0 8px }
+      .hero p { font-size: .9rem; line-height: 1.35 }
+      .planner { gap: 10px; padding-bottom: 35px }
+      .controls-inner, .section { padding: 13px }
+      .controls h2 { font-size: 1rem }
+      .hint { margin-bottom: 12px; font-size: .78rem }
+      .field { margin-top: 9px; gap: 4px }
+      .mode { margin-bottom: 12px }
+      .settings { margin-top: 12px; padding-top: 11px }
+      .metrics { grid-template-columns: 1fr 1fr; gap: 7px }
+      .metric { min-height: 82px; padding: 10px }
+      .metric::before { width: 20px; margin-bottom: 8px }
+      .metric-label { font-size: .6rem; letter-spacing: .05em }
+      .metric-value { font-size: 1rem; line-height: 1.1 }
+      .metric-note { margin-top: 4px; font-size: .65rem; line-height: 1.2 }
+      .work-grid { grid-template-columns: 1fr 1fr; gap: 7px }
+      .work-card { min-height: 100px; padding: 10px }
+      .work-name { font-size: .78rem; line-height: 1.2 }
+      .work-level { margin-top: 3px; font-size: 1rem }
+      .work-time { margin-top: 7px; font-size: .83rem }
+      .work-resources { font-size: .65rem }
+      .section-head { margin-bottom: 10px }
+      .section h3 { font-size: .95rem }
+      .section-note { font-size: .7rem }
+      .result-head { align-items: start; flex-direction: column; gap: 5px; margin-bottom: 10px }
+      .route-title { font-size: 1.35rem }
       .version { text-align: left }
+      footer { padding-bottom: 25px }
     }
     @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; animation: none !important } }
   </style>
