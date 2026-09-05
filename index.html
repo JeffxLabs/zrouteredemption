@@ -116,6 +116,14 @@
     .section { margin-top: 18px; padding: 21px }
     .section-head { display: flex; align-items: end; justify-content: space-between; gap: 16px; margin-bottom: 17px }
     .section h3 { margin: 0; font-size: 1.08rem }
+    .route-details > summary { list-style: none; cursor: pointer }
+    .route-details > summary::-webkit-details-marker { display: none }
+    .route-details > summary::after { content: "＋"; float: right; color: var(--cyan); font-size: 1.2rem }
+    .route-details[open] > summary::after { content: "−" }
+    .route-details[open] > summary { margin-bottom: 17px }
+    .work-card { transition: border-color .15s ease, transform .15s ease }
+    .work-card:hover { border-color: var(--cyan); transform: translateY(-2px) }
+
     .section-note { color: var(--muted); font-size: .8rem }
     .work-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 11px }
     .work-card { position: relative; overflow: hidden; min-height: 142px; padding: 16px; border: 1px solid #294462; border-radius: 15px; background: #0d1b2e }
@@ -193,7 +201,7 @@
       <aside class="panel controls" aria-label="Planner inputs">
         <div class="controls-inner">
           <h2>Your progression</h2>
-          <p class="hint">Start with inferred levels, then tune queues, speed bonuses, or any building.</p>
+          <p class="hint">Set your Base levels to see the prerequisite checklist, build time, and total resource cost. Open advanced settings only when you need them.</p>
           <div class="mode" role="group" aria-label="Input detail">
             <button id="quick-mode" aria-pressed="true">Base only</button>
             <button id="advanced-mode" aria-pressed="false">Building levels</button>
@@ -206,8 +214,8 @@
             <label for="target-base">Target Base level</label>
             <select id="target-base"></select>
           </div>
-          <details class="settings" open>
-            <summary>Builders &amp; speed bonuses</summary>
+          <details class="settings">
+            <summary>Advanced: builders &amp; speed bonuses</summary>
             <div class="settings-grid">
               <div class="field"><label for="builder-slots">Builder slots</label><select id="builder-slots"><option selected>1</option><option>2</option><option>3</option><option>4</option></select></div>
               <div class="field"><label for="vip-level">VIP level</label><select id="vip-level"></select></div>
@@ -255,15 +263,15 @@
             <div id="work-grid" class="work-grid"></div>
           </section>
 
-          <section class="panel section">
-            <div class="section-head"><div><h3>Level-by-level route</h3><div class="section-note">Resources are incremental from the preceding Base level.</div></div></div>
+          <details class="panel section route-details">
+            <summary class="section-head"><div><h3>Level-by-level route</h3><div class="section-note">Resources are incremental from the preceding Base level.</div></div></summary>
             <div class="table-wrap">
               <table>
                 <thead><tr><th>Base</th><th>Base time</th><th>Total resources</th><th>Missing prerequisite work</th></tr></thead>
                 <tbody id="route-rows"></tbody>
               </table>
             </div>
-          </section>
+          </details>
           </div>
         </div>
       </section>
