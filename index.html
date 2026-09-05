@@ -2,7 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#07101d">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Z Route Planner">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icon.svg">
   <meta name="description" content="Interactive Z Route Base leveling and resource-producer return-on-investment calculators.">
   <link rel="icon" href="data:,">
   <title>Z Route Progression Planner</title>
@@ -27,6 +34,7 @@
     html { scroll-behavior: smooth }
     body {
       margin: 0;
+      padding-bottom: env(safe-area-inset-bottom);
       min-width: 320px;
       background:
         radial-gradient(circle at 88% -8%, rgba(46, 92, 148, .32), transparent 34rem),
@@ -149,6 +157,7 @@
     .spinner { width: 34px; height: 34px; margin: auto auto 12px; border: 3px solid #29435f; border-top-color: var(--green); border-radius: 50%; animation: spin .8s linear infinite }
     @keyframes spin { to { transform: rotate(1turn) } }
 
+    .install-button { display: none; border: 1px solid #315071; border-radius: 9px; padding: 7px 10px; background: var(--panel-2); cursor: pointer }
     footer { padding: 0 0 50px; color: var(--muted); font-size: .8rem }
     footer p { max-width: 930px }
 
@@ -160,7 +169,8 @@
     }
     @media (max-width: 620px) {
       .shell { width: min(100% - 22px, 1480px) }
-      .topbar { padding-top: 16px }
+      .topbar { padding-top: calc(12px + env(safe-area-inset-top)) }
+      .install-button { display: inline-block }
       .source-link { font-size: .82rem }
       .topbar { align-items: flex-start }
       .site-nav { flex-wrap: wrap; justify-content: flex-end }
@@ -206,6 +216,7 @@
       <button id="base-view-button" aria-pressed="true">Base planner</button>
       <button id="roi-view-button" aria-pressed="false">Producer ROI</button>
       <a class="nav-link" href="promo-codes/">Promo Codes</a>
+      <button id="install-button" class="install-button" type="button">Install</button>
       <a class="source-link" href="https://github.com/JeffxLabs/zrouteredemption">GitHub ↗</a>
     </nav>
   </header>
@@ -976,6 +987,15 @@
       }
     }
 
+    let deferredInstall;
+    window.addEventListener("beforeinstallprompt", event => {
+      event.preventDefault(); deferredInstall = event; $("install-button").hidden = false;
+    });
+    $("install-button").addEventListener("click", async () => {
+      if (!deferredInstall) return;
+      deferredInstall.prompt(); await deferredInstall.userChoice; deferredInstall = null;
+    });
+    if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(() => {});
     init();
   </script>
 </body>
