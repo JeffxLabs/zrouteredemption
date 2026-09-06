@@ -436,11 +436,19 @@
     .base-picker output { color:var(--text); }
     footer { color:#53606a; }
     @media(max-width:700px) { .topbar { border-bottom-color:#202327; } .stage-card { border-radius:16px; } .stage-buildings li { background:#0d0f10; } }
+
+    .theme-toggle { min-width:40px; min-height:40px; border:1px solid var(--line); border-radius:999px; background:transparent; color:var(--text); cursor:pointer; }
+    .building-row.warrior { color:#d6d9df; border-color:#66707c; background:#252a31; }
+    body.day { --bg:#f4f6f8; --panel:#fff; --panel-2:#e8edf2; --line:#c8d0d8; --text:#17202a; --muted:#536170; --cyan:#0879c9; background:#f4f6f8; }
+    body.day .stage-card, body.day .building-row { background:#fff; }
+    body.day .stage-buildings li { background:#f5f7f9; }
+    body.day .topbar { border-color:#d5dbe1; }
   </style>
 </head>
 <body>
   <header class="shell topbar">
     <div class="brand"><span class="mark" aria-hidden="true"></span><span>Z Route Planner<small>S:117 Jeff</small></span></div>
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle day and night mode">☼</button>
     <label class="language-control"><span>Language</span><select id="language-select" aria-label="Language"></select></label>
     <nav class="site-nav" aria-label="Calculators">
       <button id="base-view-button" aria-pressed="true">Base planner</button>
@@ -869,6 +877,7 @@
 
     function buildingType(name) {
       const n = name.toLowerCase();
+      if (n.includes("warrior")) return "warrior";
       if (n.includes("research")) return "research";
       if (n.includes("drill")) return "drill";
       if (n.includes("soldier") && n.includes("camp")) return "soldier";
@@ -1251,6 +1260,10 @@
       if (!deferredInstall) { alert("Use your browser menu and choose Install app or Add to Home Screen."); return; }
       deferredInstall.prompt(); await deferredInstall.userChoice; deferredInstall = null;
     });
+    const themeToggle = $("theme-toggle");
+    function setTheme(mode) { document.body.classList.toggle("day", mode === "day"); themeToggle.textContent = mode === "day" ? "☾" : "☼"; themeToggle.setAttribute("aria-label", mode === "day" ? "Switch to night mode" : "Switch to day mode"); localStorage.setItem("zroute-theme", mode); }
+    setTheme(localStorage.getItem("zroute-theme") || "night");
+    themeToggle.addEventListener("click", () => setTheme(document.body.classList.contains("day") ? "night" : "day"));
     if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js?v=6").catch(() => {});
     document.addEventListener("languagechange", () => { if (buildings) { render(); renderRoi(); } });
     init();
