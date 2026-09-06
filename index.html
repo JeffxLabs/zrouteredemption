@@ -321,11 +321,11 @@
     }
 
     /* Final responsive pass */
-    .planner { grid-template-columns:320px minmax(0,1fr); max-width:1500px; margin:0 auto; }
+    .planner { grid-template-columns:minmax(250px,320px) minmax(0,1fr); max-width:none; margin:0; }
     .controls { width:320px; }
     .results { width:100%; }
     .stage-list { align-items:start; }
-    @media(max-width:1050px) { .planner { grid-template-columns:280px minmax(0,1fr); } .controls { width:280px; } }
+    @media(max-width:800px) { .planner { grid-template-columns:1fr; } .controls { width:100%; } }
     @media(max-width:700px) {
       .planner { display:flex; flex-direction:column; gap:7px; }
       .controls { width:100%; margin:0; }
