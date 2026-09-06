@@ -880,7 +880,6 @@
         const elapsed = schedule(result.actions, slots, modifier);
         $("error").style.display = "none";
         $("base-output").hidden = false;
-        $("route-title").textContent = `Base ${result.current} → ${result.target}`;
         $("elapsed-time").textContent = time(elapsed.seconds);
         $("base-time").textContent = time(adjustedTotal(baseActions, modifier));
         $("food").textContent = compact(total.food);
