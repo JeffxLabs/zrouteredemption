@@ -838,7 +838,7 @@
       const blob = new Blob([JSON.stringify(config(), null, 2) + "\n"], {type: "application/json"});
       const link = document.createElement("a");
       link.href = URL.createObjectURL(blob);
-      link.download = `zroute-base-${$("current-base").value}-to-${$("target-base").value}.json`;
+      link.download = `zroute-base-${$("current-base").value}-to-30.json`;
       link.click();
       URL.revokeObjectURL(link.href);
       $("config-status").textContent = "Configuration exported.";
