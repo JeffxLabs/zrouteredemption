@@ -342,6 +342,20 @@
       details[open] > summary::after { content:'−'; }
       .language-control select { min-height:40px; }
     }
+
+    /* Put prerequisite buildings at the visual center of each stage. */
+    .stage-card { border-color:#315579; background:linear-gradient(145deg,rgba(18,39,64,.98),rgba(10,24,42,.98)); }
+    .stage-card > h3:first-of-type { color:var(--green); font-size:.9rem; letter-spacing:.08em; text-transform:uppercase; }
+    .stage-buildings { display:grid; gap:6px; }
+    .stage-buildings li { padding:10px 12px; border:1px solid #315579; border-radius:10px; background:#102b46; font-size:1rem; font-weight:750; }
+    .stage-buildings li strong { padding:2px 7px; border-radius:6px; background:#173e5b; color:var(--green); font-size:1rem; }
+    .stage-card > h3:not(:first-of-type) { margin-top:11px; }
+    @media(max-width:700px) {
+      .stage-card > h3:first-of-type { font-size:.78rem; }
+      .stage-buildings { gap:4px; }
+      .stage-buildings li { min-height:40px; padding:8px 9px; font-size:.88rem; }
+      .stage-buildings li strong { font-size:.86rem; }
+    }
   </style>
 </head>
 <body>
@@ -807,11 +821,10 @@
             <h3>Required buildings</h3>
             <ul class="stage-buildings">${tasks.map(task => `<li><span>${escape(task.name)}</span><strong>${task.from} → ${task.to}</strong></li>`).join("")}</ul>
             ${tasks.length ? "" : '<p class="section-note">No additional building upgrades needed.</p>'}
-            <div class="base-step"><span>Base upgrade</span><strong>${stage.level - 1} → ${stage.level}</strong></div>
             <h3>Stage resources</h3>${resources(stageTotal)}
             <details class="stage-details"><summary>Upgrade details</summary>
               <p class="section-note">Resources include the Base upgrade and all missing building prerequisites for this stage.</p>
-              ${stage.actions.map(action => `<div class="upgrade-line"><b>${escape(SHORT[action.building_name] || action.building_name)}</b> ${action.from_level} → ${action.level}${resources(summarize([action]))}<small>${time(adjustedTime(action, modifier))}</small></div>`).join("")}
+              ${stage.actions.filter(action => action.building_id !== 1001).map(action => `<div class="upgrade-line"><b>${escape(SHORT[action.building_name] || action.building_name)}</b> ${action.from_level} → ${action.level}${resources(summarize([action]))}<small>${time(adjustedTime(action, modifier))}</small></div>`).join("")}
             </details>
           </article>`;
         }).join("") : '<div class="panel empty">Base 30 reached</div>';
