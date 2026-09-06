@@ -250,11 +250,31 @@
       .config-actions { margin-top:10px }
       .building-inputs label { white-space:normal }
     }
+
+    .brand > span:last-child { display:grid; line-height:1.05 }
+    .brand small { margin-top:3px; color:var(--muted); font-size:.62rem; font-weight:600; letter-spacing:.04em }
+    .controls-inner { padding:15px 18px }
+    .controls h2 { font-size:1rem }
+    .controls .hint { margin:3px 0 10px }
+    .controls .mode { margin-bottom:10px }
+    .config-details { margin-top:12px; border-top:1px solid var(--line); padding-top:10px }
+    .config-details summary { cursor:pointer; color:var(--muted); font-size:.82rem }
+    .config-details .config-actions { margin-top:10px }
+    .result-head { align-items:center; margin-bottom:8px }
+    .route-label { font-size:.76rem }
+    .route-title { font-size:1.25rem; line-height:1.1 }
+    .stage-card { padding:14px 18px }
+    .stage-header { padding-bottom:7px; margin-bottom:8px }
+    .stage-header h2 { margin:0; font-size:1.1rem }
+    .stage-card h3 { margin:9px 0 4px }
+    .stage-buildings li, .base-step { padding:5px 0 }
+    .stage-details { margin-top:8px }
+    @media(max-width:620px) { .controls-inner { padding:11px 13px } .result-head { margin-bottom:5px } .stage-card { padding:11px 13px } .hero { padding:14px 2px 9px } }
   </style>
 </head>
 <body>
   <header class="shell topbar">
-    <div class="brand"><span class="mark" aria-hidden="true"></span><span>Z Route Planner</span></div>
+    <div class="brand"><span class="mark" aria-hidden="true"></span><span>Z Route Planner<small>S:117 Jeff</small></span></div>
     <label class="language-control"><span>Language</span><select id="language-select" aria-label="Language"></select></label>
     <nav class="site-nav" aria-label="Calculators">
       <button id="base-view-button" aria-pressed="true">Base planner</button>
@@ -304,11 +324,12 @@
             <div id="building-inputs" class="building-inputs"></div>
             <p class="advanced-note">Any-of training gates choose the center needing the least remaining builder work.</p>
           </details>
-          <div class="config-actions">
+          <details class="config-details"><summary>Import / Export</summary><div class="config-actions">
             <button id="export-config" type="button">Export JSON</button>
             <button id="import-config" type="button">Import JSON</button>
             <input id="config-file" type="file" accept="application/json,.json" hidden>
           </div>
+          </div></details>
           <p id="config-status" class="config-status" aria-live="polite"></p>
         </div>
       </aside>
@@ -708,7 +729,7 @@
           const stageTotal = summarize(stage.actions);
           const tasks = groupWork(stage.actions, modifier);
           const base = stage.actions.find(action => action.building_id === 1001);
-          const resources = total => `<div class="stage-resources">${["food", "metal", "oil"].map(key => `<div><span>${key[0].toUpperCase() + key.slice(1)}</span><strong>${number(total[key])}</strong></div>`).join("")}</div>`;
+          const resources = total => `<div class="stage-resources">${["food", "metal", "oil"].map(key => `<div><span>${key[0].toUpperCase() + key.slice(1)}</span><strong>${compact(total[key])}</strong></div>`).join("")}</div>`;
           return `<article class="panel stage-card">
             <header class="stage-header"><h2><span>Level</span> ${stage.level - 1} → ${stage.level}</h2></header>
             <h3>Required buildings</h3>
