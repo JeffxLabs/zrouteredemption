@@ -447,7 +447,7 @@
           </div>
           <div class="field">
             <label for="current-base">Current Base level <small id="mode-hint">infer prerequisites</small></label>
-            <div class="base-picker"><button id="base-down" type="button" aria-label="Decrease Base level">−</button><output id="base-value" aria-live="polite">Base 0</output><button id="base-up" type="button" aria-label="Increase Base level">+</button></div><input id="current-base" type="range" min="0" max="30" value="0" aria-label="Current Base level">
+            <div class="base-picker"><button id="base-down" type="button" aria-label="Decrease Base level">−</button><output id="base-value" aria-live="polite">Base 0</output><button id="base-up" type="button" aria-label="Increase Base level">+</button></div><input id="current-base" type="range" min="0" max="30" value="22" aria-label="Current Base level">
           </div>
 
           <details class="settings">
@@ -1144,7 +1144,7 @@
         if (research.some(tech => !tech) || vipSpeed?.length !== 19) throw new Error("Construction modifier data is incomplete");
         selfCheck();
         const requestedBase = Number(new URLSearchParams(location.search).get("current"));
-        const startingBase = Number.isInteger(requestedBase) && requestedBase >= 0 && requestedBase <= 30 ? requestedBase : 0;
+        const startingBase = Number.isInteger(requestedBase) && requestedBase >= 0 && requestedBase <= 30 ? requestedBase : 22;
         $("current-base").value = startingBase;
         updateBasePicker();
 
