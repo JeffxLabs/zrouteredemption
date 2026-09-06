@@ -1223,7 +1223,7 @@
       if (!deferredInstall) { alert("Use your browser menu and choose Install app or Add to Home Screen."); return; }
       deferredInstall.prompt(); await deferredInstall.userChoice; deferredInstall = null;
     });
-    if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js?v=5").catch(() => {});
+    if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js?v=6").catch(() => {});
     document.addEventListener("languagechange", () => { if (buildings) { render(); renderRoi(); } });
     init();
   </script>
