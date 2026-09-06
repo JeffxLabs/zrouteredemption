@@ -59,9 +59,9 @@
     .site-nav .nav-link { border: 1px solid transparent; border-radius: 9px; padding: 7px 10px; color: var(--muted); text-decoration: none; font-size: inherit }
     .site-nav .nav-link:hover { border-color: var(--line); background: var(--panel-2); color: var(--text) }
 
-    .hero { padding: 64px 0 38px; max-width: 940px }
+    .hero { padding: 24px 0 22px; max-width: 940px }
     .eyebrow { color: var(--green); font-size: .78rem; font-weight: 800; letter-spacing: .18em; text-transform: uppercase }
-    h1 { margin: 12px 0 14px; max-width: 850px; font-size: clamp(2.35rem, 6vw, 5.4rem); line-height: .98; letter-spacing: -.055em }
+    h1 { margin: 12px 0 14px; max-width: 850px; font-size: clamp(1.7rem, 3vw, 2.6rem); line-height: .98; letter-spacing: -.055em }
     .hero p { margin: 0; max-width: 720px; color: var(--muted); font-size: clamp(1rem, 2vw, 1.22rem) }
 
     .planner { display: grid; grid-template-columns: minmax(280px, 370px) 1fr; gap: 22px; align-items: start; padding-bottom: 80px }
@@ -216,11 +216,46 @@
       footer { padding-bottom: 25px }
     }
     @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; animation: none !important } }
+
+    .language-control { display:flex; align-items:center; gap:6px; margin-left:auto; margin-right:12px; font-size:.8rem }
+    .language-control select { width:auto; max-width:150px; min-height:44px }
+    .stage-list { display:grid; gap:16px }
+    .stage-card { padding:20px; overflow:hidden }
+    .stage-header { border-bottom:1px solid var(--line); padding-bottom:12px; margin-bottom:16px }
+    .stage-header h2 { color:var(--green); font-size:1.35rem }
+    .stage-card h3 { color:var(--muted); font-size:.82rem; margin:16px 0 8px }
+    .stage-buildings { list-style:none; margin:0; padding:0 }
+    .stage-buildings li, .base-step { display:flex; justify-content:space-between; gap:16px; padding:9px 0; border-bottom:1px solid var(--line) }
+    .stage-buildings strong, .base-step strong { white-space:nowrap; color:var(--cyan) }
+    .base-step { border:0; font-weight:700 }
+    .stage-resources { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px }
+    .stage-resources > div { padding:10px; border-radius:10px; background:#0b1829; min-width:0 }
+    .stage-resources span { display:block; color:var(--muted); font-size:.8rem }
+    .stage-resources strong { font-size:clamp(.8rem,1.3vw,1rem); overflow-wrap:anywhere }
+    .stage-details { margin-top:14px; border-top:1px solid var(--line); padding-top:6px }
+    .stage-details summary, .planning-totals summary { min-height:44px; display:list-item; align-content:center; cursor:pointer; color:var(--muted) }
+    .upgrade-line { padding:12px 0; border-top:1px solid var(--line) }
+    .upgrade-line .stage-resources { margin:8px 0 }
+    .totals-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); gap:12px; font-size:.85rem }
+    .totals-grid dt { color:var(--muted) }
+    .totals-grid dd { margin:4px 0; font-weight:700 }
+    @media(max-width:620px) {
+      .topbar { flex-wrap:wrap; align-items:center; gap:6px }
+      .language-control { margin:0 0 0 auto }
+      .language-control > span { display:none }
+      .stage-card { padding:14px }
+      .stage-resources { gap:5px }
+      .stage-resources > div { padding:8px 5px }
+      .stage-resources strong { font-size:.78rem }
+      .config-actions { margin-top:10px }
+      .building-inputs label { white-space:normal }
+    }
   </style>
 </head>
 <body>
   <header class="shell topbar">
     <div class="brand"><span class="mark" aria-hidden="true"></span><span>Z Route Planner</span></div>
+    <label class="language-control"><span>Language</span><select id="language-select" aria-label="Language"></select></label>
     <nav class="site-nav" aria-label="Calculators">
       <button id="base-view-button" aria-pressed="true">Base planner</button>
       <button id="roi-view-button" aria-pressed="false">Producer ROI</button>
@@ -233,15 +268,15 @@
   <main id="base-view" class="shell">
     <section class="hero">
       <div class="eyebrow">Base progression intelligence</div>
-      <h1>Know what the next Base levels really cost.</h1>
-      <p>Plan direct Base upgrades, recursive building requirements, and per-building construction workloads from your actual account state.</p>
+      <h1>Your route to Base 30</h1>
+      <p>Select your current Base level to see every remaining upgrade through level 30.</p>
     </section>
 
     <div class="planner">
       <aside class="panel controls" aria-label="Planner inputs">
         <div class="controls-inner">
           <h2>Your progression</h2>
-          <p class="hint">Set your Base levels to see the prerequisite checklist, build time, and total resource cost. Open advanced settings only when you need them.</p>
+          <p class="hint">Select your current Base level. Building overrides and speed settings are optional.</p>
           <div class="mode" role="group" aria-label="Input detail">
             <button id="quick-mode" aria-pressed="true">Base only</button>
             <button id="advanced-mode" aria-pressed="false">Building levels</button>
@@ -250,10 +285,7 @@
             <label for="current-base">Current Base level <small id="mode-hint">infer prerequisites</small></label>
             <select id="current-base"></select>
           </div>
-          <div class="field">
-            <label for="target-base">Target Base level</label>
-            <select id="target-base"></select>
-          </div>
+
           <details class="settings">
             <summary>Advanced: builders &amp; speed bonuses</summary>
             <div class="settings-grid">
@@ -288,29 +320,21 @@
           <div id="base-output">
           <header class="result-head">
             <div><div class="route-label">Remaining route</div><div id="route-title" class="route-title"></div></div>
-            <div class="version">Client v1.30.07<br><span id="modifier-summary"></span></div>
+            <div class="version">Client v1.30.07</div>
           </header>
-          <div class="metrics">
-            <article class="metric"><div class="metric-label">Estimated elapsed</div><div id="elapsed-time" class="metric-value"></div><div class="metric-note">Prerequisite-aware builder schedule</div></article>
-            <article class="metric"><div class="metric-label">Adjusted Base work</div><div id="base-time" class="metric-value"></div><div class="metric-note">Speed and free-finish applied per upgrade</div></article>
-            <article class="metric"><div class="metric-label">Food required</div><div id="food" class="metric-value"></div><div class="metric-note">Base + all missing prerequisites</div></article>
-            <article class="metric"><div class="metric-label">Metal required</div><div id="metal" class="metric-value"></div><div class="metric-note">Base + all missing prerequisites</div></article>
-            <article class="metric"><div class="metric-label">Oil required</div><div id="oil" class="metric-value"></div><div class="metric-note">Base + all missing prerequisites</div></article>
-          </div>
-
-          <section class="panel section">
-            <div class="section-head"><div><h3>Building workloads</h3><div class="section-note">Adjusted time by building; the elapsed estimate respects prerequisite order and selected slots.</div></div><div id="action-count" class="section-note"></div></div>
-            <div id="work-grid" class="work-grid"></div>
-          </section>
-
-          <details class="panel section route-details">
-            <summary class="section-head"><div><h3>Level-by-level route</h3><div class="section-note">Resources are incremental from the preceding Base level.</div></div></summary>
-            <div class="table-wrap">
-              <table>
-                <thead><tr><th>Base</th><th>Base time</th><th>Total resources</th><th>Missing prerequisite work</th></tr></thead>
-                <tbody id="route-rows"></tbody>
-              </table>
-            </div>
+          <div id="stage-list" class="stage-list"></div>
+          <details class="panel section planning-totals">
+            <summary>Planning totals</summary>
+            <dl class="totals-grid">
+              <div><dt>Estimated elapsed</dt><dd id="elapsed-time"></dd></div>
+              <div><dt>Adjusted Base work</dt><dd id="base-time"></dd></div>
+              <div><dt>Food required</dt><dd id="food"></dd></div>
+              <div><dt>Metal required</dt><dd id="metal"></dd></div>
+              <div><dt>Oil required</dt><dd id="oil"></dd></div>
+            </dl>
+            <p class="section-note" id="action-count"></p>
+            <p class="section-note" id="modifier-summary"></p>
+            <p class="section-note">Prerequisite-aware builder schedule</p>
           </details>
           </div>
         </div>
@@ -395,6 +419,7 @@
     <p>Costs and production are static Android-client values. Times apply the selected additive Building Speed and free-finish threshold; results cannot predict server overrides or alliance-help timing. Configuration files stay on your device—the planner does not upload or store account state.</p>
   </footer>
 
+  <script src="i18n.js"></script>
   <script>
     "use strict";
 
@@ -512,7 +537,7 @@
       }
     }
 
-    function number(value) { return new Intl.NumberFormat("en-US").format(value); }
+    function number(value) { return new Intl.NumberFormat(window.I18N?.locale || "en-US").format(value); }
     function compact(value) {
       for (const [size, suffix] of [[1e9, "B"], [1e6, "M"], [1e3, "K"]]) if (value >= size) return `${(value / size).toFixed(3).replace(/0+$/, "").replace(/\.$/, "")}${suffix}`;
       return String(value);
@@ -660,7 +685,7 @@
     function render() {
       try {
         const state = currentState();
-        const target = Number($("target-base").value);
+        const target = 30;
         const result = plan({...state}, target);
         const total = summarize(result.actions);
         const modifier = modifiers();
@@ -679,24 +704,25 @@
         $("speed-total").textContent = `Total Building Speed +${number(Number(modifier.speedPercent.toFixed(3)))}% · free finish ${time(modifier.freeSeconds)}`;
         $("modifier-summary").textContent = `${slots} builder slot${slots === 1 ? "" : "s"} · +${number(Number(modifier.speedPercent.toFixed(3)))}% speed`;
         $("action-count").textContent = `${result.actions.length} upgrades remaining`;
-        $("work-grid").innerHTML = work.length ? work.map(item => `
-          <article class="work-card">
-            <div class="work-name">${escape(item.name)}</div>
-            <div class="work-level">Lv ${item.from} → ${item.to}</div>
-            <div class="work-time">${time(item.adjustedSeconds)}</div>
-            <div class="work-resources">F ${compact(item.food)} · M ${compact(item.metal)} · O ${compact(item.oil)}</div>
-          </article>`).join("") : `<div class="empty">No prerequisite building work remains for this target.</div>`;
-        $("route-rows").innerHTML = result.stages.length ? result.stages.map(stage => {
+        $("stage-list").innerHTML = result.stages.length ? result.stages.map(stage => {
           const stageTotal = summarize(stage.actions);
-          const direct = adjustedTotal(stage.actions.filter(action => action.building_id === 1001), modifier);
           const tasks = groupWork(stage.actions, modifier);
-          return `<tr>
-            <td><span class="level-pill">${stage.level}</span></td>
-            <td><b>${time(direct)}</b></td>
-            <td class="resource-stack"><span>F ${number(stageTotal.food)}</span><span>M ${number(stageTotal.metal)}</span><span>O ${number(stageTotal.oil)}</span></td>
-            <td>${tasks.length ? tasks.map(task => `<span class="task">${escape(task.name)} ${task.from}→${task.to} · <b>${time(task.adjustedSeconds)}</b></span>`).join("") : "<span class=\"section-note\">None</span>"}</td>
-          </tr>`;
-        }).join("") : `<tr><td colspan="4"><div class="empty">Target already reached. Raise the target to see remaining work.</div></td></tr>`;
+          const base = stage.actions.find(action => action.building_id === 1001);
+          const resources = total => `<div class="stage-resources">${["food", "metal", "oil"].map(key => `<div><span>${key[0].toUpperCase() + key.slice(1)}</span><strong>${number(total[key])}</strong></div>`).join("")}</div>`;
+          return `<article class="panel stage-card">
+            <header class="stage-header"><h2><span>Level</span> ${stage.level - 1} → ${stage.level}</h2></header>
+            <h3>Required buildings</h3>
+            <ul class="stage-buildings">${tasks.map(task => `<li><span>${escape(task.name)}</span><strong>${task.from} → ${task.to}</strong></li>`).join("")}</ul>
+            ${tasks.length ? "" : '<p class="section-note">No additional building upgrades needed.</p>'}
+            <div class="base-step"><span>Base upgrade</span><strong>${stage.level - 1} → ${stage.level}</strong></div>
+            <h3>Stage resources</h3>${resources(stageTotal)}
+            <details class="stage-details"><summary>Upgrade details</summary>
+              <p class="section-note">Resources include the Base upgrade and all missing building prerequisites for this stage.</p>
+              ${stage.actions.map(action => `<div class="upgrade-line"><b>${escape(SHORT[action.building_name] || action.building_name)}</b> ${action.from_level} → ${action.level}${resources(summarize([action]))}<small>${time(adjustedTime(action, modifier))}</small></div>`).join("")}
+            </details>
+          </article>`;
+        }).join("") : '<div class="panel empty">Base 30 reached</div>';
+
       } catch (error) {
         $("error").textContent = error.message;
         $("error").style.display = "block";
@@ -748,7 +774,7 @@
         clientVersion: "1.30.07",
         mode: advanced ? "building-levels" : "base-only",
         currentBase: Number($("current-base").value),
-        targetBase: Number($("target-base").value),
+        targetBase: 30,
         builderSlots: Number($("builder-slots").value),
         vipLevel: Number($("vip-level").value),
         researchLevels: Object.fromEntries(research.map(tech => [tech.id, Number($(`research-${tech.id}`).value)])),
@@ -769,7 +795,7 @@
       if (value.clientVersion !== "1.30.07") throw new Error("Configuration client version must be 1.30.07");
       if (!["base-only", "building-levels"].includes(value.mode)) throw new Error("Configuration mode is not supported");
       const currentBase = validInteger(value.currentBase, 0, 30, "Current Base");
-      const targetBase = validInteger(value.targetBase, currentBase, 30, "Target Base");
+      // Legacy targetBase is intentionally normalized to the fixed maximum, 30.
       const slots = validInteger(value.builderSlots, 1, 4, "Builder slots");
       const vip = validInteger(value.vipLevel, 0, 18, "VIP level");
       const researchLevels = value.researchLevels || {};
@@ -792,7 +818,7 @@
       if (!Number.isFinite(other) || other < 0 || other > 1000) throw new Error("Other speed must be between 0 and 1000%");
 
       $("current-base").value = currentBase;
-      $("target-base").value = targetBase;
+
       $("builder-slots").value = slots;
       $("vip-level").value = vip;
       $("free-minutes").value = free;
@@ -929,7 +955,7 @@
         if (research.some(tech => !tech) || vipSpeed?.length !== 19) throw new Error("Construction modifier data is incomplete");
         selfCheck();
         $("current-base").innerHTML = options(30, 0);
-        $("target-base").innerHTML = options(30, 30);
+
         $("vip-level").innerHTML = vipSpeed.map((speed, level) => `<option value="${level}">VIP ${level} · +${speed}%</option>`).join("");
         $("research-inputs").innerHTML = research.map(tech => `<label for="research-${tech.id}">${escape(tech.name)}</label><select id="research-${tech.id}">${Array.from({length: tech.max_level + 1}, (_, level) => `<option value="${level}">Lv ${level} · ${researchSpeed(tech, level)}%</option>`).join("")}</select>`).join("");
         $("roi-producer").innerHTML = producers.map(producer => `<option value="${producer.building_id}">${escape(producer.building_name)} · ${escape(producer.output_name)}</option>`).join("");
@@ -942,13 +968,8 @@
         $("advanced-mode").addEventListener("click", () => setMode(true));
         $("current-base").addEventListener("change", () => {
           const current = Number($("current-base").value);
-          if (Number($("target-base").value) < current) $("target-base").value = current;
+
           renderBuildingInputs();
-          render();
-        });
-        $("target-base").addEventListener("change", () => {
-          const current = Number($("current-base").value);
-          if (Number($("target-base").value) < current) $("target-base").value = current;
           render();
         });
         $("building-inputs").addEventListener("change", event => {
@@ -1012,6 +1033,7 @@
       deferredInstall.prompt(); await deferredInstall.userChoice; deferredInstall = null;
     });
     if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(() => {});
+    document.addEventListener("languagechange", () => { if (buildings) { render(); renderRoi(); } });
     init();
   </script>
 </body>
