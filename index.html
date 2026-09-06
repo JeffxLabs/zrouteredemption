@@ -410,6 +410,10 @@
 
     .client-version { margin:0 0 4px; color:#60738e; font-size:.68rem; }
     .stage-buildings .building-label { padding-left:3px; }
+
+    .building-row.drill { color:#f0b35b; border-color:#80602d; background:#332a1c; }
+    .building-row.soldier { color:#79d98b; border-color:#38734d; background:#19372c; }
+    .building-row.defense { color:#ffb454; border-color:#815528; background:#302517; }
   </style>
 </head>
 <body>
@@ -844,7 +848,9 @@
     function buildingType(name) {
       const n = name.toLowerCase();
       if (n.includes("research")) return "research";
-      if (n.includes("training") || n.includes("camp") || n.includes("drill")) return "military";
+      if (n.includes("drill")) return "drill";
+      if (n.includes("soldier") && n.includes("camp")) return "soldier";
+      if (n.includes("training") || n.includes("camp")) return "military";
       if (n.includes("defense") || n.includes("wall")) return "defense";
       if (n.includes("hospital")) return "medical";
       if (n.includes("alliance")) return "economy";
