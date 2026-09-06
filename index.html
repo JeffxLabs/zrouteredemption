@@ -356,6 +356,13 @@
       .stage-buildings li { min-height:40px; padding:8px 9px; font-size:.88rem; }
       .stage-buildings li strong { font-size:.86rem; }
     }
+
+    .base-picker { display:grid; grid-template-columns:44px 1fr 44px; gap:6px; align-items:center; }
+    .base-picker button { min-height:42px; border:1px solid #315579; border-radius:10px; background:#102b46; color:var(--cyan); font-size:1.35rem; cursor:pointer; }
+    .base-picker button:disabled { opacity:.35; cursor:not-allowed; }
+    .base-picker output { text-align:center; font-size:1.2rem; font-weight:850; color:var(--green); }
+    #current-base { width:100%; margin-top:8px; accent-color:var(--cyan); }
+    @media(max-width:700px) { .base-picker button { min-height:40px; } .base-picker output { font-size:1.05rem; } }
   </style>
 </head>
 <body>
@@ -389,7 +396,7 @@
           </div>
           <div class="field">
             <label for="current-base">Current Base level <small id="mode-hint">infer prerequisites</small></label>
-            <select id="current-base"></select>
+            <div class="base-picker"><button id="base-down" type="button" aria-label="Decrease Base level">−</button><output id="base-value" aria-live="polite">Base 0</output><button id="base-up" type="button" aria-label="Increase Base level">+</button></div><input id="current-base" type="range" min="0" max="30" value="0" aria-label="Current Base level">
           </div>
 
           <details class="settings">
@@ -789,6 +796,18 @@
       }));
     }
 
+    function updateBasePicker() {
+      const level = Number($("current-base").value);
+      $("base-value").textContent = `Base ${level}`;
+      $("base-down").disabled = level <= 0;
+      $("base-up").disabled = level >= 30;
+    }
+
+    function changeBase(delta) {
+      $("current-base").value = Math.max(0, Math.min(30, Number($("current-base").value) + delta));
+      $("current-base").dispatchEvent(new Event("input", {bubbles:true}));
+    }
+
     function render() {
       try {
         const state = currentState();
@@ -1062,7 +1081,8 @@
         selfCheck();
         const requestedBase = Number(new URLSearchParams(location.search).get("current"));
         const startingBase = Number.isInteger(requestedBase) && requestedBase >= 0 && requestedBase <= 30 ? requestedBase : 0;
-        $("current-base").innerHTML = options(30, startingBase);
+        $("current-base").value = startingBase;
+        updateBasePicker();
 
         $("vip-level").innerHTML = vipSpeed.map((speed, level) => `<option value="${level}">VIP ${level} · +${speed}%</option>`).join("");
         $("research-inputs").innerHTML = research.map(tech => `<label for="research-${tech.id}">${escape(tech.name)}</label><select id="research-${tech.id}">${Array.from({length: tech.max_level + 1}, (_, level) => `<option value="${level}">Lv ${level} · ${researchSpeed(tech, level)}%</option>`).join("")}</select>`).join("");
@@ -1074,7 +1094,10 @@
         renderBuildingInputs();
         $("quick-mode").addEventListener("click", () => setMode(false));
         $("advanced-mode").addEventListener("click", () => setMode(true));
-        $("current-base").addEventListener("change", () => {
+        $("base-down").addEventListener("click", () => changeBase(-1));
+        $("base-up").addEventListener("click", () => changeBase(1));
+        $("current-base").addEventListener("input", () => {
+          updateBasePicker();
           const current = Number($("current-base").value);
           const params = new URLSearchParams(location.search);
           params.set("current", String(current));
