@@ -387,6 +387,26 @@
     .building-row.defense .building-label { color:#fff5df; }
     .stage-card { background:linear-gradient(145deg,rgba(17,39,65,.98),rgba(10,24,42,.98)); }
     @media(max-width:700px) { .building-icon { width:34px; height:34px; } }
+
+    /* Use the full viewport: controls are a compact toolbar above the route. */
+    .planner { display:block; max-width:none; }
+    .controls { width:100%; position:static; max-height:none; overflow:visible; margin-bottom:12px; }
+    .controls-inner { padding:10px 14px; }
+    .controls-inner > h2 { display:inline-block; margin-right:10px; }
+    .controls-inner > .hint { display:inline; }
+    .mode { max-width:360px; margin:8px 0; }
+    .results { width:100%; }
+    @media(max-width:900px) {
+      .shell { width:calc(100% - 14px); }
+      .topbar { flex-wrap:wrap; }
+      .planner { display:block !important; }
+      .controls { width:100% !important; }
+    }
+    @media(max-width:700px) {
+      .controls-inner > h2 { display:block; margin:0; }
+      .controls-inner > .hint { display:none; }
+      .mode { max-width:none; }
+    }
   </style>
 </head>
 <body>
@@ -1203,7 +1223,7 @@
       if (!deferredInstall) { alert("Use your browser menu and choose Install app or Add to Home Screen."); return; }
       deferredInstall.prompt(); await deferredInstall.userChoice; deferredInstall = null;
     });
-    if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js?v=4").catch(() => {});
+    if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js?v=5").catch(() => {});
     document.addEventListener("languagechange", () => { if (buildings) { render(); renderRoi(); } });
     init();
   </script>
