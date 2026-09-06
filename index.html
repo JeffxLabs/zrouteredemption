@@ -363,6 +363,18 @@
     .base-picker output { text-align:center; font-size:1.2rem; font-weight:850; color:var(--green); }
     #current-base { width:100%; margin-top:8px; accent-color:var(--cyan); }
     @media(max-width:700px) { .base-picker button { min-height:40px; } .base-picker output { font-size:1.05rem; } }
+
+    .stage-buildings li { display:grid; grid-template-columns:34px minmax(0,1fr) auto; align-items:center; gap:8px; }
+    .building-icon { display:grid; place-items:center; width:30px; height:30px; border:1px solid currentColor; border-radius:7px; background:rgba(255,255,255,.08); font-size:1.05rem; }
+    .building-label { min-width:0; }
+    .building-row.research { color:#62b8ff; border-color:#286098; background:#102b46; }
+    .building-row.military { color:#8fdc72; border-color:#477b43; background:#183a2b; }
+    .building-row.defense { color:#ff9278; border-color:#8b4538; background:#3b211f; }
+    .building-row.medical { color:#ffd26e; border-color:#92763d; background:#3b301b; }
+    .building-row.economy { color:#d3a2ff; border-color:#6e4a9a; background:#2c2040; }
+    .building-row .building-label { color:var(--text); }
+    .building-row strong { color:inherit; }
+    @media(max-width:700px) { .stage-buildings li { grid-template-columns:28px minmax(0,1fr) auto; gap:6px; } .building-icon { width:25px; height:25px; font-size:.85rem; } }
   </style>
 </head>
 <body>
@@ -796,6 +808,19 @@
       }));
     }
 
+    function buildingType(name) {
+      const n = name.toLowerCase();
+      if (n.includes("research")) return "research";
+      if (n.includes("training") || n.includes("camp") || n.includes("drill")) return "military";
+      if (n.includes("defense") || n.includes("wall")) return "defense";
+      if (n.includes("hospital")) return "medical";
+      if (n.includes("alliance")) return "economy";
+      return "default";
+    }
+    function buildingGlyph(name) {
+      return ({research:"⚗", military:"⚔", defense:"🛡", medical:"✚", economy:"⚒", default:"▦"})[buildingType(name)];
+    }
+
     function updateBasePicker() {
       const level = Number($("current-base").value);
       $("base-value").textContent = `Base ${level}`;
@@ -838,7 +863,7 @@
           return `<article class="panel stage-card">
             <header class="stage-header"><h2><span>Level</span> ${stage.level - 1} → ${stage.level}</h2></header>
             <h3>Required buildings</h3>
-            <ul class="stage-buildings">${tasks.map(task => `<li><span>${escape(task.name)}</span><strong>${task.from} → ${task.to}</strong></li>`).join("")}</ul>
+            <ul class="stage-buildings">${tasks.map(task => `<li class="building-row ${buildingType(task.name)}"><span class="building-icon" aria-hidden="true">${buildingGlyph(task.name)}</span><span class="building-label">${escape(task.name)}</span><strong>${task.from} → ${task.to}</strong></li>`).join("")}</ul>
             ${tasks.length ? "" : '<p class="section-note">No additional building upgrades needed.</p>'}
             <h3>Stage resources</h3>${resources(stageTotal)}
             <details class="stage-details"><summary>Upgrade details</summary>
