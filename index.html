@@ -364,7 +364,7 @@
     #current-base { width:100%; margin-top:8px; accent-color:var(--cyan); }
     @media(max-width:700px) { .base-picker button { min-height:40px; } .base-picker output { font-size:1.05rem; } }
 
-    .stage-buildings li { display:grid; grid-template-columns:34px minmax(0,1fr) auto; align-items:center; gap:8px; }
+    .stage-buildings li { display:grid; grid-template-columns:42px minmax(0,1fr) auto; align-items:center; gap:10px; }
     .building-icon { display:grid; place-items:center; width:30px; height:30px; border:1px solid currentColor; border-radius:7px; background:rgba(255,255,255,.08); font-size:1.05rem; }
     .building-label { min-width:0; }
     .building-row.research { color:#62b8ff; border-color:#286098; background:#102b46; }
@@ -374,7 +374,7 @@
     .building-row.economy { color:#d3a2ff; border-color:#6e4a9a; background:#2c2040; }
     .building-row .building-label { color:var(--text); }
     .building-row strong { color:inherit; }
-    @media(max-width:700px) { .stage-buildings li { grid-template-columns:28px minmax(0,1fr) auto; gap:6px; } .building-icon { width:25px; height:25px; font-size:.85rem; } }
+    @media(max-width:700px) { .stage-buildings li { grid-template-columns:34px minmax(0,1fr) auto; gap:9px; } .building-icon { width:25px; height:25px; font-size:.85rem; } }
 
     /* Modern mobile-native palette and real image badges. */
     :root { --bg:#07111f; --panel:rgba(14,28,48,.94); --panel-2:#162b48; --line:#294665; --text:#f7fbff; --muted:#9eb1c8; --cyan:#62d9ff; --green:#6ee7b7; --amber:#ffc857; }
@@ -407,6 +407,9 @@
       .controls-inner > .hint { display:none; }
       .mode { max-width:none; }
     }
+
+    .client-version { margin:0 0 4px; color:#60738e; font-size:.68rem; }
+    .stage-buildings .building-label { padding-left:3px; }
   </style>
 </head>
 <body>
@@ -476,10 +479,7 @@
         <div id="result-content" hidden>
           <div id="error" class="error"></div>
           <div id="base-output">
-          <header class="result-head">
-            <div><div class="route-label">Remaining route</div><div id="route-title" class="route-title"></div></div>
-            <div class="version">Client v1.30.07</div>
-          </header>
+
           <div id="stage-list" class="stage-list"></div>
           <details class="panel section planning-totals">
             <summary>Planning totals</summary>
@@ -574,6 +574,7 @@
   </nav>
 
   <footer class="shell">
+    <p class="client-version">Client v1.30.07</p>
     <p>Costs and production are static Android-client values. Times apply the selected additive Building Speed and free-finish threshold; results cannot predict server overrides or alliance-help timing. Configuration files stay on your device—the planner does not upload or store account state.</p>
   </footer>
 
