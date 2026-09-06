@@ -1,4 +1,4 @@
-const CACHE = "zroute-planner-v10";
+const CACHE = "zroute-planner-v11";
 const ASSETS = ["./", "./index.html", "./i18n.js", "./assets/buildings/research.svg", "./assets/buildings/drill.svg", "./assets/buildings/soldier.svg", "./assets/buildings/military.svg", "./assets/buildings/warrior.svg", "./assets/buildings/defense.svg", "./assets/buildings/medical.svg", "./assets/buildings/economy.svg", "./assets/buildings/default.svg", "./manifest.webmanifest", "./icon.svg", "./data/progression.json", "./data/resources.json"];
 self.addEventListener("install", event => event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(ASSETS)).then(() => self.skipWaiting())));
 self.addEventListener("activate", event => event.waitUntil((async () => {

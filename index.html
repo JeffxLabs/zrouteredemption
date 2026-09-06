@@ -443,6 +443,25 @@
     body.day .stage-card, body.day .building-row { background:#fff; }
     body.day .stage-buildings li { background:#f5f7f9; }
     body.day .topbar { border-color:#d5dbe1; }
+
+    /* Light surfaces require dark foregrounds, including nested controls and ROI tables. */
+    body.day { color-scheme:light; --green:#166534; --red:#b42318; --cyan:#075fa8; --muted:#475569; }
+    body.day .panel, body.day .metric, body.day .stage-card { background:#fff; border-color:#c8d0d8; color:#17202a; }
+    body.day select, body.day input[type=number], body.day .mode,
+    body.day .config-actions button, body.day .base-picker button,
+    body.day .stage-resources > div, body.day .upgrade-line { background:#f1f5f9; color:#17202a; border-color:#94a3b8; }
+    body.day .field label, body.day .research-inputs label, body.day .building-inputs label,
+    body.day .value-inputs label, body.day .settings summary, body.day .building-settings summary,
+    body.day .building-row .building-label, body.day .resource-stack,
+    body.day .stage-header h2 { color:#17202a; }
+    body.day .stage-buildings li strong { background:#075fa8; color:#fff; }
+    body.day .stage-buildings li { border-color:#94a3b8; }
+    body.day .mode button[aria-pressed=true], body.day .level-pill { background:#dbeafe; color:#174b78; }
+    body.day th { background:#e2e8f0; color:#334155; }
+    body.day td, body.day .stage-header, body.day .stage-details { border-color:#c8d0d8; }
+    body.day .task, body.day .work-time, body.day footer, body.day .client-version { color:#475569; }
+    body.day .bottom-nav { background:rgba(255,255,255,.97); border-color:#c8d0d8; }
+    body.day .error { background:#fff1f2; color:#9f1239; border-color:#be123c; }
   </style>
 </head>
 <body>

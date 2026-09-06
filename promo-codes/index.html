@@ -11,6 +11,17 @@
     @media(max-width:600px){.wrap{padding-top:20px}.top{margin-bottom:44px}.hero h1{margin-bottom:36px}.card{grid-template-columns:1fr}.actions{display:grid;grid-template-columns:1fr 1fr}.actions .btn{width:100%}.feedback{flex-wrap:wrap}.count{font-size:12px}}
   .bottom-nav{display:none}@media(max-width:600px){body{padding-bottom:calc(64px + env(safe-area-inset-bottom))}.bottom-nav{position:fixed;z-index:20;right:0;bottom:0;left:0;display:grid;grid-template-columns:repeat(3,1fr);padding:6px 10px calc(6px + env(safe-area-inset-bottom));border-top:1px solid var(--line);background:rgba(8,17,31,.96);backdrop-filter:blur(18px)}.bottom-nav a{display:grid;place-items:center;gap:1px;min-height:42px;border:0;border-radius:10px;background:transparent;color:var(--muted);text-decoration:none;cursor:pointer}.bottom-nav a span{font-size:1.15rem;line-height:1}.bottom-nav a small{font-size:.68rem}.bottom-nav a.active,.bottom-nav a:hover{background:#132139;color:var(--cyan)}}
   .theme-toggle{position:fixed;top:14px;right:14px;z-index:30;border:1px solid var(--line);border-radius:999px;background:transparent;color:var(--text);width:40px;height:40px;font-size:18px}.day{--bg:#f4f6f8;--panel:#fff;--line:#c8d0d8;--text:#17202a;--muted:#536170}.day body,.day .wrap{background:#f4f6f8;color:#17202a}.day .card{background:#fff}
+
+    html.day { color-scheme:light; --cyan:#075fa8; --bad:#b42318; --muted:#475569; }
+    .day .card, .day .card.is-used { background:#fff; color:#17202a; border-color:#94a3b8; opacity:1; }
+    .day .card.is-used { background:#e2e8f0; }
+    .day .btn { background:#f1f5f9; color:#17202a; border-color:#64748b; }
+    .day .btn.selected, .day .btn.used { background:#dbeafe; color:#174b78; border-color:#075fa8; }
+    .day .btn.copy { background:#075fa8; color:#fff; }
+    .day footer { color:#475569; }
+    .day .bottom-nav { background:rgba(255,255,255,.97); border-color:#c8d0d8; }
+    .day .bottom-nav a.active, .day .bottom-nav a:hover { background:#dbeafe; color:#174b78; }
+    .day .theme-toggle { background:#fff; }
   </style>
 </head>
 <body>
