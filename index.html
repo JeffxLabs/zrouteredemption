@@ -375,6 +375,18 @@
     .building-row .building-label { color:var(--text); }
     .building-row strong { color:inherit; }
     @media(max-width:700px) { .stage-buildings li { grid-template-columns:28px minmax(0,1fr) auto; gap:6px; } .building-icon { width:25px; height:25px; font-size:.85rem; } }
+
+    /* Modern mobile-native palette and real image badges. */
+    :root { --bg:#07111f; --panel:rgba(14,28,48,.94); --panel-2:#162b48; --line:#294665; --text:#f7fbff; --muted:#9eb1c8; --cyan:#62d9ff; --green:#6ee7b7; --amber:#ffc857; }
+    body { background:radial-gradient(circle at 80% -10%,rgba(62,125,190,.27),transparent 32rem),linear-gradient(180deg,#07111f 0%,#0a1627 100%); }
+    .mark { background:linear-gradient(135deg,#6ee7b7,#62d9ff); }
+    .panel { border-color:#294665; box-shadow:0 14px 45px rgba(0,0,0,.22); }
+    .building-icon { width:34px; height:34px; border:0; background:none; }
+    .building-icon img { display:block; width:100%; height:100%; }
+    .building-row.defense { color:#ffb454; border-color:#815528; background:#302517; }
+    .building-row.defense .building-label { color:#fff5df; }
+    .stage-card { background:linear-gradient(145deg,rgba(17,39,65,.98),rgba(10,24,42,.98)); }
+    @media(max-width:700px) { .building-icon { width:29px; height:29px; } }
   </style>
 </head>
 <body>
@@ -818,7 +830,8 @@
       return "default";
     }
     function buildingGlyph(name) {
-      return ({research:"⚗", military:"⚔", defense:"🛡", medical:"✚", economy:"⚒", default:"▦"})[buildingType(name)];
+      const type = buildingType(name);
+      return `<img src="assets/buildings/${type}.svg" alt="" loading="lazy" decoding="async">`;
     }
 
     function updateBasePicker() {
