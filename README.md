@@ -94,3 +94,5 @@ The relevant bundles are bytewise XOR-obfuscated with `0x10`. After UnityFS extr
 | `lang_building` | `5c86b0882980ee813ddddd26a83b5bcb` | `a2d6dc3657aaf825a5a163b0fac769bad78d212e1ffcd41ebda3d64291f0bc82` |
 
 Only derived facts and the generator are checked in—no APK, bundle, native library, raw localization file, or decrypted client table is included.
+
+The planner accepts `?current=N` to open directly at a Base level, for example `https://jeffxlabs.github.io/zrouteredemption/?current=26`. Changing the current level updates the shareable URL.

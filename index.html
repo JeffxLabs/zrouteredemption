@@ -954,7 +954,9 @@
         producers = resources.producer_buildings;
         if (research.some(tech => !tech) || vipSpeed?.length !== 19) throw new Error("Construction modifier data is incomplete");
         selfCheck();
-        $("current-base").innerHTML = options(30, 0);
+        const requestedBase = Number(new URLSearchParams(location.search).get("current"));
+        const startingBase = Number.isInteger(requestedBase) && requestedBase >= 0 && requestedBase <= 30 ? requestedBase : 0;
+        $("current-base").innerHTML = options(30, startingBase);
 
         $("vip-level").innerHTML = vipSpeed.map((speed, level) => `<option value="${level}">VIP ${level} · +${speed}%</option>`).join("");
         $("research-inputs").innerHTML = research.map(tech => `<label for="research-${tech.id}">${escape(tech.name)}</label><select id="research-${tech.id}">${Array.from({length: tech.max_level + 1}, (_, level) => `<option value="${level}">Lv ${level} · ${researchSpeed(tech, level)}%</option>`).join("")}</select>`).join("");
@@ -968,7 +970,9 @@
         $("advanced-mode").addEventListener("click", () => setMode(true));
         $("current-base").addEventListener("change", () => {
           const current = Number($("current-base").value);
-
+          const params = new URLSearchParams(location.search);
+          params.set("current", String(current));
+          history.replaceState(null, "", `${location.pathname}?${params.toString()}${location.hash}`);
           renderBuildingInputs();
           render();
         });
