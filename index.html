@@ -319,6 +319,29 @@
       .stage-details summary { min-height:28px; font-size:.72rem }
       .planning-totals { margin-top:6px; padding:8px 10px }
     }
+
+    /* Final responsive pass */
+    .planner { grid-template-columns:320px minmax(0,1fr); max-width:1500px; margin:0 auto; }
+    .controls { width:320px; }
+    .results { width:100%; }
+    .stage-list { align-items:start; }
+    @media(max-width:1050px) { .planner { grid-template-columns:280px minmax(0,1fr); } .controls { width:280px; } }
+    @media(max-width:700px) {
+      .planner { display:flex; flex-direction:column; gap:7px; }
+      .controls { width:100%; margin:0; }
+      .controls-inner { padding:8px 10px; }
+      .controls h2 { font-size:.92rem; }
+      .current-base { min-height:44px; }
+      .field label { font-size:.78rem; }
+      .results { width:100%; }
+      .stage-list { gap:6px; }
+      .stage-card { box-shadow:0 8px 24px rgba(0,0,0,.18); }
+      .stage-buildings li { min-height:30px; align-items:center; }
+      .stage-details summary, .planning-totals summary, .settings summary, .building-settings summary, .config-details summary { min-height:40px; display:flex; align-items:center; }
+      .stage-details summary::after, .planning-totals summary::after, .settings summary::after, .building-settings summary::after, .config-details summary::after { content:'＋'; margin-left:auto; color:var(--cyan); }
+      details[open] > summary::after { content:'−'; }
+      .language-control select { min-height:40px; }
+    }
   </style>
 </head>
 <body>
