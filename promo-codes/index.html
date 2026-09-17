@@ -2,50 +2,588 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#08111f">
-  <title>Z Route Promo Codes · JeffxLabs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#000000">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Z Route Codes">
+  <link rel="manifest" href="../manifest.webmanifest">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎁</text></svg>">
+  <title>Z Route Promo Codes · Gift Redemption</title>
   <style>
-    :root{--bg:#08111f;--panel:#132139;--line:#29415f;--text:#f5f8ff;--muted:#9bb0c9;--cyan:#62e6d2;--bad:#ff8f9a}
-    *{box-sizing:border-box}body{margin:0;min-width:320px;background:radial-gradient(circle at 10% 0,#1d3152,transparent 38rem),var(--bg);color:var(--text);font:15px/1.5 system-ui,sans-serif}.wrap{max-width:850px;margin:auto;padding:26px 18px 55px}.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:58px}.brand{color:var(--cyan);font-weight:800;letter-spacing:.1em;font-size:13px}.brand span{color:var(--muted);font-weight:500}.top a{color:var(--muted);text-decoration:none;font-size:13px}.top a:hover{color:var(--text)}.eyebrow{color:var(--cyan);font-size:12px;font-weight:750;letter-spacing:.14em;text-transform:uppercase}.hero h1{font-size:clamp(40px,8vw,68px);line-height:1;letter-spacing:-.06em;margin:12px 0 46px}.toolbar{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px}.count{color:var(--muted);font-size:13px}.codes{display:grid;gap:12px}.card{background:linear-gradient(145deg,#15243b,#101a2b);border:1px solid var(--line);border-radius:17px;padding:18px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:center;transition:opacity .18s,border-color .18s}.card.is-used{opacity:.48;background:#0d1727;border-color:#1d3048}.card.is-used:hover{opacity:.72}.code{font:700 22px ui-monospace,monospace;letter-spacing:.035em;overflow-wrap:anywhere}.actions,.feedback{display:flex;gap:7px;align-items:center}.feedback{margin-top:13px}.btn{border:1px solid var(--line);background:#1a2a43;color:var(--text);border-radius:10px;padding:8px 11px;min-height:36px;font:600 12px system-ui;cursor:pointer}.btn:hover,.btn:focus-visible{border-color:var(--cyan);outline:none}.selected,.used{border-color:var(--cyan);color:var(--cyan);background:#17343b}.copy{background:linear-gradient(135deg,var(--cyan),#38b8ba);border:0;color:#07151a;font-size:13px}.stats{color:var(--muted);font-size:12px;margin-left:3px}.worked{color:var(--cyan)}.failed{color:var(--bad)}footer{text-align:center;color:#71819d;font-size:12px;margin-top:40px}.toast{position:fixed;bottom:22px;left:50%;transform:translate(-50%,20px);opacity:0;background:#f5f8ff;color:#101827;padding:10px 16px;border-radius:99px;font-weight:700;font-size:13px;transition:.2s;pointer-events:none}.toast.show{opacity:1;transform:translate(-50%,0)}
-    @media(max-width:600px){.wrap{padding-top:20px}.top{margin-bottom:44px}.hero h1{margin-bottom:36px}.card{grid-template-columns:1fr}.actions{display:grid;grid-template-columns:1fr 1fr}.actions .btn{width:100%}.feedback{flex-wrap:wrap}.count{font-size:12px}}
-  .bottom-nav{display:none}@media(max-width:600px){body{padding-bottom:calc(64px + env(safe-area-inset-bottom))}.bottom-nav{position:fixed;z-index:20;right:0;bottom:0;left:0;display:grid;grid-template-columns:repeat(3,1fr);padding:6px 10px calc(6px + env(safe-area-inset-bottom));border-top:1px solid var(--line);background:rgba(8,17,31,.96);backdrop-filter:blur(18px)}.bottom-nav a{display:grid;place-items:center;gap:1px;min-height:42px;border:0;border-radius:10px;background:transparent;color:var(--muted);text-decoration:none;cursor:pointer}.bottom-nav a span{font-size:1.15rem;line-height:1}.bottom-nav a small{font-size:.68rem}.bottom-nav a.active,.bottom-nav a:hover{background:#132139;color:var(--cyan)}}
-  .theme-toggle{position:fixed;top:14px;right:14px;z-index:30;border:1px solid var(--line);border-radius:999px;background:transparent;color:var(--text);width:40px;height:40px;font-size:18px}.day{--bg:#f4f6f8;--panel:#fff;--line:#c8d0d8;--text:#17202a;--muted:#536170}.day body,.day .wrap{background:#f4f6f8;color:#17202a}.day .card{background:#fff}
+    :root {
+      --bg: #000000;
+      --card-bg: #0c0c0e;
+      --card-border: rgba(255, 255, 255, 0.08);
+      --card-used-bg: #050506;
+      --text-main: #f3f4f6;
+      --text-muted: #8e8e93;
+      --accent: #0a84ff;
+      --accent-gradient: linear-gradient(135deg, #0a84ff, #00d2ff);
+      --cyan: #30d158;
+      --red: #ff453a;
+      --pill-bg: #1c1c1e;
+      --pill-border: rgba(255, 255, 255, 0.12);
+      --nav-bg: rgba(10, 10, 12, 0.85);
+      --safe-top: env(safe-area-inset-top, 0px);
+      --safe-bottom: env(safe-area-inset-bottom, 0px);
+    }
 
-    html.day { color-scheme:light; --cyan:#075fa8; --bad:#b42318; --muted:#475569; }
-    .day .card, .day .card.is-used { background:#fff; color:#17202a; border-color:#94a3b8; opacity:1; }
-    .day .card.is-used { background:#e2e8f0; }
-    .day .btn { background:#f1f5f9; color:#17202a; border-color:#64748b; }
-    .day .btn.selected, .day .btn.used { background:#dbeafe; color:#174b78; border-color:#075fa8; }
-    .day .btn.copy { background:#075fa8; color:#fff; }
-    .day footer { color:#475569; }
-    .day .bottom-nav { background:rgba(255,255,255,.97); border-color:#c8d0d8; }
-    .day .bottom-nav a.active, .day .bottom-nav a:hover { background:#dbeafe; color:#174b78; }
-    .day .theme-toggle { background:#fff; }
+    * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+    html { background-color: var(--bg); color-scheme: dark; }
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--text-main);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      min-height: 100vh;
+      padding-top: calc(var(--safe-top) + 60px);
+      padding-bottom: calc(var(--safe-bottom) + 80px);
+      user-select: none;
+    }
+
+    /* Fixed Glass Header */
+    .app-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: var(--nav-bg);
+      backdrop-filter: blur(25px) saturate(180%);
+      -webkit-backdrop-filter: blur(25px) saturate(180%);
+      border-bottom: 0.5px solid var(--card-border);
+      padding-top: var(--safe-top);
+    }
+    .header-inner {
+      max-width: 600px;
+      margin: 0 auto;
+      height: 54px;
+      padding: 0 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .header-title {
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: -0.4px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .header-badge {
+      font-size: 11px;
+      font-weight: 600;
+      background: rgba(10, 132, 255, 0.15);
+      color: var(--accent);
+      padding: 3px 8px;
+      border-radius: 12px;
+      letter-spacing: 0;
+    }
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .icon-btn {
+      background: var(--pill-bg);
+      border: 0.5px solid var(--pill-border);
+      color: var(--text-main);
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-size: 15px;
+      cursor: pointer;
+      transition: transform 0.15s ease, opacity 0.15s ease;
+    }
+    .icon-btn:active { transform: scale(0.92); opacity: 0.8; }
+
+    /* Main Container */
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 12px 16px;
+    }
+
+    /* Compact Search & Filter Control Bar */
+    .control-bar {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+    .search-box {
+      position: relative;
+      width: 100%;
+    }
+    .search-input {
+      width: 100%;
+      height: 38px;
+      background: #1c1c1e;
+      border: 0.5px solid var(--card-border);
+      border-radius: 10px;
+      padding: 0 12px 0 36px;
+      color: var(--text-main);
+      font-size: 14px;
+      outline: none;
+      transition: border-color 0.2s ease;
+    }
+    .search-input:focus {
+      border-color: var(--accent);
+    }
+    .search-icon {
+      position: absolute;
+      left: 11px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 14px;
+      color: var(--text-muted);
+      pointer-events: none;
+    }
+
+    .filter-tabs {
+      display: flex;
+      background: #1c1c1e;
+      padding: 3px;
+      border-radius: 9px;
+      gap: 2px;
+    }
+    .tab-btn {
+      flex: 1;
+      height: 28px;
+      border: 0;
+      border-radius: 7px;
+      background: transparent;
+      color: var(--text-muted);
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+    .tab-btn.active {
+      background: #2c2c2e;
+      color: var(--text-main);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+    }
+
+    /* Cards Grid / List */
+    .codes-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .code-card {
+      background: var(--card-bg);
+      border: 0.5px solid var(--card-border);
+      border-radius: 14px;
+      padding: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      transition: opacity 0.2s ease, transform 0.15s ease, border-color 0.2s ease;
+    }
+    .code-card:active { transform: scale(0.995); }
+    .code-card.is-used {
+      opacity: 0.45;
+      background: var(--card-used-bg);
+      border-color: rgba(255, 255, 255, 0.03);
+    }
+
+    .card-info {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      min-width: 0;
+    }
+    .code-title {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 19px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      color: var(--text-main);
+      line-height: 1.1;
+    }
+    .code-meta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+    .date-tag {
+      background: rgba(255, 255, 255, 0.06);
+      padding: 1px 6px;
+      border-radius: 4px;
+      color: #a1a1a6;
+      font-weight: 500;
+    }
+    .vote-counts {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .count-work { color: var(--cyan); font-weight: 600; }
+    .count-fail { color: var(--red); font-weight: 600; }
+
+    /* Actions */
+    .card-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+    
+    .btn-action {
+      height: 36px;
+      padding: 0 12px;
+      border-radius: 10px;
+      font-size: 12px;
+      font-weight: 600;
+      border: 0.5px solid var(--pill-border);
+      background: var(--pill-bg);
+      color: var(--text-main);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      transition: all 0.15s ease;
+    }
+    .btn-action:active { transform: scale(0.95); }
+
+    .btn-copy {
+      background: var(--accent-gradient);
+      color: #ffffff;
+      border: none;
+      font-weight: 700;
+      box-shadow: 0 2px 8px rgba(10, 132, 255, 0.25);
+    }
+    .btn-copy:active { opacity: 0.9; }
+
+    .btn-used.active {
+      background: rgba(48, 209, 88, 0.15);
+      color: var(--cyan);
+      border-color: rgba(48, 209, 88, 0.3);
+    }
+
+    /* Minimal Vote Buttons inside card */
+    .vote-btns {
+      display: flex;
+      gap: 4px;
+    }
+    .btn-vote {
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+      border: 0.5px solid var(--pill-border);
+      background: #1c1c1e;
+      color: var(--text-muted);
+      font-size: 11px;
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+    }
+    .btn-vote.active-work { background: rgba(48, 209, 88, 0.2); color: var(--cyan); border-color: var(--cyan); }
+    .btn-vote.active-fail { background: rgba(255, 69, 58, 0.2); color: var(--red); border-color: var(--red); }
+
+    /* Toast Notification */
+    .toast {
+      position: fixed;
+      top: calc(var(--safe-top) + 64px);
+      left: 50%;
+      transform: translateX(-50%) translateY(-20px);
+      opacity: 0;
+      background: rgba(255, 255, 255, 0.95);
+      color: #000000;
+      padding: 9px 18px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 700;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+      z-index: 200;
+      pointer-events: none;
+      transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    .toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    /* Fixed Native Bottom Navigation */
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: var(--nav-bg);
+      backdrop-filter: blur(25px) saturate(180%);
+      -webkit-backdrop-filter: blur(25px) saturate(180%);
+      border-top: 0.5px solid var(--card-border);
+      padding-bottom: var(--safe-bottom);
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      height: calc(56px + var(--safe-bottom));
+    }
+    .nav-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 10px;
+      font-weight: 600;
+      gap: 3px;
+      transition: color 0.15s ease;
+    }
+    .nav-item .icon {
+      font-size: 18px;
+      line-height: 1;
+    }
+    .nav-item.active {
+      color: var(--accent);
+    }
+
+    /* Light Mode Overrides if toggled */
+    html.day {
+      --bg: #f2f2f7;
+      --card-bg: #ffffff;
+      --card-border: rgba(0, 0, 0, 0.08);
+      --card-used-bg: #e5e5ea;
+      --text-main: #000000;
+      --text-muted: #6c6c70;
+      --pill-bg: #e5e5ea;
+      --pill-border: rgba(0, 0, 0, 0.1);
+      --nav-bg: rgba(249, 249, 249, 0.88);
+    }
+    html.day .search-input { background: #e3e3e8; }
+    html.day .filter-tabs { background: #e3e3e8; }
+    html.day .tab-btn.active { background: #ffffff; }
+    html.day .toast { background: #000000; color: #ffffff; }
   </style>
 </head>
 <body>
-  <main class="wrap">
-    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle day and night mode">☼</button><nav class="top"><div class="brand">JEFFXLABS <span>/ Z ROUTE</span></div><a href="../">Progression planner ↗</a></nav>
-    <section class="hero"><div class="eyebrow">Z Route: Redemption</div><h1>Promo codes,<br>ready to redeem.</h1></section>
-    <div class="toolbar"><strong>Current codes</strong><span class="count" id="count"></span></div>
-    <section class="codes" id="codes"></section>
-    <footer>Built by JeffxLabs</footer>
+
+  <!-- Header -->
+  <header class="app-header">
+    <div class="header-inner">
+      <div class="header-title">
+        <span>Z Route Codes</span>
+        <span class="header-badge" id="count-badge">0/0</span>
+      </div>
+      <div class="header-actions">
+        <button class="icon-btn" id="btn-theme" title="Toggle theme">☾</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <div class="control-bar">
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="search-input" class="search-input" placeholder="Search codes..." autocomplete="off">
+      </div>
+      <div class="filter-tabs">
+        <button class="tab-btn active" data-filter="all">All</button>
+        <button class="tab-btn" data-filter="unused">Unused</button>
+        <button class="tab-btn" data-filter="used">Used</button>
+      </div>
+    </div>
+
+    <section class="codes-list" id="codes-container"></section>
   </main>
-  <nav class="bottom-nav" aria-label="App navigation"><a href="../"><span>⌂</span><small>Base</small></a><a href="../#producer-roi"><span>↗</span><small>ROI</small></a><a class="active" href="./"><span>🎁</span><small>Codes</small></a></nav>
-  <div class="toast" id="toast" role="status"></div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast">Copied to clipboard</div>
+
+  <!-- Bottom Navigation -->
+  <nav class="bottom-nav">
+    <a href="../" class="nav-item">
+      <span class="icon">⌂</span>
+      <span>Base</span>
+    </a>
+    <a href="../#producer-roi" class="nav-item">
+      <span class="icon">↗</span>
+      <span>ROI</span>
+    </a>
+    <a href="./" class="nav-item active">
+      <span class="icon">🎁</span>
+      <span>Codes</span>
+    </a>
+  </nav>
+
   <script>
-    const codes=['DC70KMFT','DC65KZPW','26SCHOOL','DC60KHAX','ZRRUSG26','DC50KURM','ZRDAD26','ZRRLW2AC','ZRSURV26','ZRR2NX6Q','ZRR999','ZRRFT9BM','ZRRC7WES','VK90KPJD','ZRYOUTH26','DC45KIGS','DC38KQEU','DC40KHAX','ZRRVJ4YD','DC32KJBV','DC28KRCG','DC30KMWZ','DC35KNZH','DC55KQEU'];
-    const codeDates={'DC70KMFT':'2026-09-17','DC65KZPW':'2026-09-10','26SCHOOL':'2026-08-31','DC60KHAX':'2026-08-31'};
-    const voteKey='zroute-votes',usedKey='zroute-used',votes=JSON.parse(localStorage.getItem(voteKey)||'{}'),used=JSON.parse(localStorage.getItem(usedKey)||'[]');
-    const count=document.querySelector('#count'),list=document.querySelector('#codes'),toast=document.querySelector('#toast');let timer;
-    function pop(text){toast.textContent=text;toast.classList.add('show');clearTimeout(timer);timer=setTimeout(()=>toast.classList.remove('show'),1700)}
-    async function copy(code){try{await navigator.clipboard.writeText(code)}catch{const area=document.createElement('textarea');area.value=code;document.body.append(area);area.select();document.execCommand('copy');area.remove()}pop('Copied to clipboard')}
-    function markUsed(code){const i=used.indexOf(code);i<0?used.push(code):used.splice(i,1);localStorage.setItem(usedKey,JSON.stringify(used));render()}
-    function vote(code,value){const v=votes[code]||{w:0,f:0,m:null};if(v.m===value){v[value?'w':'f']--;v.m=null}else{if(v.m!==null)v[v.m?'w':'f']--;v[value?'w':'f']++;v.m=value}votes[code]=v;localStorage.setItem(voteKey,JSON.stringify(votes));render()}
-    function render(){count.textContent=`${used.length}/${codes.length} used`;list.innerHTML=codes.map(code=>{const v=votes[code]||{w:0,f:0,m:null},isUsed=used.includes(code),date=codeDates[code];return `<article class="card ${isUsed?'is-used':''}"><div><div class="code">${code}</div>${date?`<div class="stats">Added ${date}</div>`:''}<div class="feedback"><button class="btn ${v.m===true?'selected':''}" onclick="vote('${code}',true)">✓ Worked</button><button class="btn ${v.m===false?'selected':''}" onclick="vote('${code}',false)">✕ Didn’t work</button><span class="stats"><span class="worked">${v.w}</span> / <span class="failed">${v.f}</span></span></div></div><div class="actions"><button class="btn ${isUsed?'used':''}" onclick="markUsed('${code}')">${isUsed?'✓ Used':'Mark used'}</button><button class="btn copy" onclick="copy('${code}')">Copy code</button></div></article>`}).join('')}
-    function setTheme(mode){document.documentElement.classList.toggle('day',mode==='day');document.querySelector('#theme-toggle').textContent=mode==='day'?'☾':'☼';localStorage.setItem('zroute-theme',mode)}
-    setTheme(localStorage.getItem('zroute-theme')||'night');document.querySelector('#theme-toggle').addEventListener('click',()=>setTheme(document.documentElement.classList.contains('day')?'night':'day'));
+    const codes = [
+      'DC70KMFT','DC65KZPW','26SCHOOL','DC60KHAX','ZRRUSG26','DC50KURM',
+      'ZRDAD26','ZRRLW2AC','ZRSURV26','ZRR2NX6Q','ZRR999','ZRRFT9BM',
+      'ZRRC7WES','VK90KPJD','ZRYOUTH26','DC45KIGS','DC38KQEU','DC40KHAX',
+      'ZRRVJ4YD','DC32KJBV','DC28KRCG','DC30KMWZ','DC35KNZH','DC55KQEU'
+    ];
+
+    const codeDates = {
+      'DC70KMFT': '2026-09-17',
+      'DC65KZPW': '2026-09-10',
+      '26SCHOOL': '2026-08-31',
+      'DC60KHAX': '2026-08-31'
+    };
+
+    const voteKey = 'zroute-votes';
+    const usedKey = 'zroute-used';
+    const votes = JSON.parse(localStorage.getItem(voteKey) || '{}');
+    const used = JSON.parse(localStorage.getItem(usedKey) || '[]');
+
+    let currentFilter = 'all';
+    let searchQuery = '';
+    let toastTimer;
+
+    const container = document.getElementById('codes-container');
+    const countBadge = document.getElementById('count-badge');
+    const toast = document.getElementById('toast');
+    const searchInput = document.getElementById('search-input');
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const themeBtn = document.getElementById('btn-theme');
+
+    function showToast(msg) {
+      toast.textContent = msg;
+      toast.classList.add('show');
+      if (navigator.vibrate) navigator.vibrate(30);
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => toast.classList.remove('show'), 1800);
+    }
+
+    async function copyCode(code) {
+      try {
+        await navigator.clipboard.writeText(code);
+      } catch {
+        const input = document.createElement('input');
+        input.value = code;
+        document.body.appendChild(input);
+        input.select();
+        document.execCommand('copy');
+        input.remove();
+      }
+      showToast(`Copied "${code}"`);
+    }
+
+    function toggleUsed(code) {
+      const idx = used.indexOf(code);
+      if (idx < 0) {
+        used.push(code);
+      } else {
+        used.splice(idx, 1);
+      }
+      localStorage.setItem(usedKey, JSON.stringify(used));
+      render();
+    }
+
+    function vote(code, isWorked) {
+      const v = votes[code] || { w: 0, f: 0, m: null };
+      if (v.m === isWorked) {
+        v[isWorked ? 'w' : 'f']--;
+        v.m = null;
+      } else {
+        if (v.m !== null) v[v.m ? 'w' : 'f']--;
+        v[isWorked ? 'w' : 'f']++;
+        v.m = isWorked;
+      }
+      votes[code] = v;
+      localStorage.setItem(voteKey, JSON.stringify(votes));
+      render();
+    }
+
+    function render() {
+      const totalUsed = used.length;
+      countBadge.textContent = `${totalUsed}/${codes.length} used`;
+
+      const filtered = codes.filter(code => {
+        const isUsed = used.includes(code);
+        if (currentFilter === 'unused' && isUsed) return false;
+        if (currentFilter === 'used' && !isUsed) return false;
+        if (searchQuery && !code.toLowerCase().includes(searchQuery.toLowerCase())) return false;
+        return true;
+      });
+
+      if (filtered.length === 0) {
+        container.innerHTML = `<div style="text-align:center; padding: 40px 20px; color: var(--text-muted); font-size:14px;">No promo codes found</div>`;
+        return;
+      }
+
+      container.innerHTML = filtered.map(code => {
+        const isUsed = used.includes(code);
+        const v = votes[code] || { w: 0, f: 0, m: null };
+        const date = codeDates[code];
+
+        return `
+          <div class="code-card ${isUsed ? 'is-used' : ''}">
+            <div class="card-info">
+              <div class="code-title">${code}</div>
+              <div class="code-meta">
+                ${date ? `<span class="date-tag">${date}</span>` : ''}
+                <div class="vote-counts">
+                  <span class="count-work">✓ ${v.w}</span>
+                  <span class="count-fail">✕ ${v.f}</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-actions">
+              <div class="vote-btns">
+                <button class="btn-vote ${v.m === true ? 'active-work' : ''}" onclick="vote('${code}', true)" title="Worked">✓</button>
+                <button class="btn-vote ${v.m === false ? 'active-fail' : ''}" onclick="vote('${code}', false)" title="Didn't work">✕</button>
+              </div>
+
+              <button class="btn-action btn-used ${isUsed ? 'active' : ''}" onclick="toggleUsed('${code}')">
+                ${isUsed ? '✓' : 'Used'}
+              </button>
+
+              <button class="btn-action btn-copy" onclick="copyCode('${code}')">
+                Copy
+              </button>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    /* Event Listeners */
+    searchInput.addEventListener('input', e => {
+      searchQuery = e.target.value.trim();
+      render();
+    });
+
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentFilter = btn.dataset.filter;
+        render();
+      });
+    });
+
+    function setTheme(theme) {
+      const isDay = theme === 'day';
+      document.documentElement.classList.toggle('day', isDay);
+      themeBtn.textContent = isDay ? '☼' : '☾';
+      localStorage.setItem('zroute-theme', theme);
+    }
+
+    themeBtn.addEventListener('click', () => {
+      const isDay = document.documentElement.classList.contains('day');
+      setTheme(isDay ? 'night' : 'day');
+    });
+
+    // Init theme (defaulting to night/OLED black)
+    setTheme(localStorage.getItem('zroute-theme') || 'night');
+
     render();
   </script>
 </body>
