@@ -353,12 +353,15 @@
       text-decoration: none;
       font-size: 10px;
       font-weight: 600;
-      gap: 3px;
+      gap: 4px;
       transition: color 0.15s ease;
     }
     .nav-item .icon {
-      font-size: 18px;
-      line-height: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
     }
     .nav-item.active {
       color: var(--accent);
@@ -424,15 +427,15 @@
   <!-- Bottom Navigation -->
   <nav class="bottom-nav">
     <a href="../" class="nav-item">
-      <span class="icon">⌂</span>
+      <span class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg></span>
       <span>Base</span>
     </a>
     <a href="../#producer-roi" class="nav-item">
-      <span class="icon">↗</span>
+      <span class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg></span>
       <span>ROI</span>
     </a>
     <a href="./" class="nav-item active">
-      <span class="icon">🎁</span>
+      <span class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg></span>
       <span>Codes</span>
     </a>
   </nav>
