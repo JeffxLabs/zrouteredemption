@@ -86,7 +86,7 @@
     .header-actions {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
     }
     .icon-btn {
       background: var(--pill-bg);
@@ -102,6 +102,18 @@
       transition: transform 0.15s ease, opacity 0.15s ease;
     }
     .icon-btn:active { transform: scale(0.92); opacity: 0.8; }
+
+    .language-control select {
+      background: var(--pill-bg);
+      border: 0.5px solid var(--pill-border);
+      color: var(--text-main);
+      border-radius: 99px;
+      padding: 6px 10px;
+      font-size: 12px;
+      font-weight: 600;
+      outline: none;
+      cursor: pointer;
+    }
 
     /* Main Container */
     .container {
@@ -150,14 +162,14 @@
       display: flex;
       background: #1c1c1e;
       padding: 3px;
-      border-radius: 9px;
+      border-radius: 99px;
       gap: 2px;
     }
     .tab-btn {
       flex: 1;
       height: 28px;
       border: 0;
-      border-radius: 7px;
+      border-radius: 99px;
       background: transparent;
       color: var(--text-muted);
       font-size: 12px;
@@ -369,6 +381,7 @@
     html.day .tab-btn.active { background: #ffffff; }
     html.day .toast { background: #000000; color: #ffffff; }
   </style>
+  <script src="../i18n.js"></script>
 </head>
 <body>
 
@@ -380,6 +393,9 @@
         <span class="header-badge" id="count-badge">0/0</span>
       </div>
       <div class="header-actions">
+        <label class="language-control">
+          <select id="language-select" aria-label="Language"></select>
+        </label>
         <button class="icon-btn" id="btn-theme" title="Toggle theme">☾</button>
       </div>
     </div>
@@ -452,6 +468,10 @@
     const tabBtns = document.querySelectorAll('.tab-btn');
     const themeBtn = document.getElementById('btn-theme');
 
+    function t(str) {
+      return (window.I18N && window.I18N.t) ? window.I18N.t(str) : str;
+    }
+
     function showToast(msg) {
       toast.textContent = msg;
       toast.classList.add('show');
@@ -471,7 +491,7 @@
         document.execCommand('copy');
         input.remove();
       }
-      showToast(`Copied "${code}"`);
+      showToast(t('Copied to clipboard'));
     }
 
     function toggleUsed(code) {
@@ -502,7 +522,7 @@
 
     function render() {
       const totalUsed = used.length;
-      countBadge.textContent = `${totalUsed}/${codes.length} used`;
+      countBadge.textContent = `${totalUsed}/${codes.length} ${t('used')}`;
 
       const filtered = codes.filter(code => {
         const isUsed = used.includes(code);
@@ -513,7 +533,7 @@
       });
 
       if (filtered.length === 0) {
-        container.innerHTML = `<div style="text-align:center; padding: 40px 20px; color: var(--text-muted); font-size:14px;">No promo codes found</div>`;
+        container.innerHTML = `<div style="text-align:center; padding: 40px 20px; color: var(--text-muted); font-size:14px;">${t('No promo codes found')}</div>`;
         return;
       }
 
@@ -542,16 +562,20 @@
               </div>
 
               <button class="btn-action btn-used ${isUsed ? 'active' : ''}" onclick="toggleUsed('${code}')">
-                ${isUsed ? '✓' : 'Used'}
+                ${isUsed ? '✓' : t('Used')}
               </button>
 
               <button class="btn-action btn-copy" onclick="copyCode('${code}')">
-                Copy
+                ${t('Copy')}
               </button>
             </div>
           </div>
         `;
       }).join('');
+
+      if (window.I18N && window.I18N.apply) {
+        window.I18N.apply(document.body);
+      }
     }
 
     /* Event Listeners */
@@ -579,6 +603,10 @@
     themeBtn.addEventListener('click', () => {
       const isDay = document.documentElement.classList.contains('day');
       setTheme(isDay ? 'night' : 'day');
+    });
+
+    document.addEventListener('languagechange', () => {
+      render();
     });
 
     // Init theme (defaulting to night/OLED black)
