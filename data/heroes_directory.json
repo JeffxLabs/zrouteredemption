@@ -29,30 +29,30 @@
       "peer_scope": "SSR Backline",
       "peers": {
         "hp": {
-          "rank": 5,
-          "of": 9
+          "rank": 4,
+          "of": 8
         },
         "attack": {
           "rank": 5,
-          "of": 9
+          "of": 8
         },
         "defense": {
-          "rank": 5,
-          "of": 9
+          "rank": 4,
+          "of": 8
         }
       },
       "all": {
         "hp": {
-          "rank": 26,
-          "of": 32
+          "rank": 25,
+          "of": 31
         },
         "attack": {
           "rank": 16,
-          "of": 32
+          "of": 31
         },
         "defense": {
-          "rank": 25,
-          "of": 32
+          "rank": 24,
+          "of": 31
         }
       }
     },
@@ -66,7 +66,14 @@
       }
     ],
     "max_level": 150,
-    "image": "../assets/heroes/10005.png",
+    "image": "../assets/heroes/cards/10005.webp",
+    "rarity_logo": "../assets/heroes/ui/rarity_4.webp",
+    "camp_shield": "../assets/heroes/ui/camp_3.webp",
+    "faction_ring": "../assets/heroes/ui/faction_ring_3.webp",
+    "role_ring": "../assets/heroes/ui/role_ring_3.webp",
+    "position": "back",
+    "counters": "Assault",
+    "countered_by": "Tactical",
     "head": "../assets/heroes/heads/10005.webp",
     "head_sprite": "Icon_Hero_Rachel",
     "sprite_match": "name",
@@ -280,22 +287,23 @@
     "exclusive_gear": null,
     "insight": {
       "focus": "pvp",
+      "position": "back",
       "tags": [
-        "Burst AoE",
-        "Self ATK"
+        "Burst damage",
+        "ATK boost"
       ],
-      "summary": "Glass-cannon SSR Warrior gunner: low HP (4,165), a self ATK passive and a 4-hit random grenade volley.",
+      "summary": "Fragile Warrior gunner who throws a 4-grenade volley and boosts her own attack.",
       "tips": [
-        "Grenadier splits 4 hits across random targets; it is best against wide enemy lines, not single bosses.",
-        "Caliber Modification is an unconditional ATK passive, so she keeps her value in PvP where the monster-only SSR passives do nothing."
+        "Her grenades land on random enemies, so she is best against full enemy squads, not a single boss.",
+        "Her passive raises her attack in every fight, so she is one of the SSRs still worth using in PvP."
       ]
     }
   },
   {
     "id": 10006,
     "name": "Nora",
-    "display_name": "Nora (Rocket Launcher)",
-    "variant_note": "Farming Nora (#10006). A different hero from crossbow Nora (#10011).",
+    "display_name": "Nora",
+    "variant_note": "Awakened Nora, unlocked through the Nora Awakening Project (the antidote questline). The pre-antidote crossbow Nora (#10011) from the early story is not listed.",
     "text_source_id": 10006,
     "quality": 4,
     "quality_name": "SSR",
@@ -322,29 +330,29 @@
       "peers": {
         "hp": {
           "rank": 2,
-          "of": 9
+          "of": 8
         },
         "attack": {
           "rank": 7,
-          "of": 9
+          "of": 8
         },
         "defense": {
           "rank": 2,
-          "of": 9
+          "of": 8
         }
       },
       "all": {
         "hp": {
           "rank": 23,
-          "of": 32
+          "of": 31
         },
         "attack": {
           "rank": 20,
-          "of": 32
+          "of": 31
         },
         "defense": {
           "rank": 22,
-          "of": 32
+          "of": 31
         }
       }
     },
@@ -358,7 +366,14 @@
       }
     ],
     "max_level": 150,
-    "image": "../assets/heroes/10006.png",
+    "image": "../assets/heroes/cards/10006.webp",
+    "rarity_logo": "../assets/heroes/ui/rarity_4.webp",
+    "camp_shield": "../assets/heroes/ui/camp_3.webp",
+    "faction_ring": "../assets/heroes/ui/faction_ring_3.webp",
+    "role_ring": "../assets/heroes/ui/role_ring_3.webp",
+    "position": "back",
+    "counters": "Assault",
+    "countered_by": "Tactical",
     "head": "../assets/heroes/heads/10006.webp",
     "head_sprite": "Icon_Hero_Nora",
     "sprite_match": "name",
@@ -581,16 +596,17 @@
     "exclusive_gear": null,
     "insight": {
       "focus": "pve",
+      "position": "back",
       "tags": [
-        "Monster damage",
-        "Farming",
+        "Zombie farming",
+        "Bonus resources",
         "Account-wide buff"
       ],
-      "summary": "The farming Nora: monster damage, bonus Iron Ore/Food/Oil from resource zombies, and an account-wide monster buff.",
+      "summary": "Awakened Nora (after the antidote questline): the zombie-farming specialist. More resources from resource zombies, and a buff for every squad.",
       "tips": [
-        "Her [Pursuer] buff (+5% damage to Wild and Rally Monsters) applies to all squads even if she is not deployed, so owning and starring her helps every rally.",
-        "Put her in the squad that clears Metal, Food and Oil Zombies and Elite Zombie Hordes: [Plunder] raises the resources those kills drop.",
-        "Scavenger makes the target take 9% more damage from monsters for 7s; that only matters in PvE."
+        "Owning her gives ALL your squads +5% damage to Wild and Rally Monsters, even when she is not deployed.",
+        "Put her in the squad that farms Metal, Food and Oil Zombies and Elite Zombie Hordes: her squad gets more Iron Ore, Food and Oil from those kills.",
+        "Her skills only work against monsters, so leave her out of PvP squads."
       ]
     }
   },
@@ -639,15 +655,15 @@
       "all": {
         "hp": {
           "rank": 3,
-          "of": 32
+          "of": 31
         },
         "attack": {
           "rank": 21,
-          "of": 32
+          "of": 31
         },
         "defense": {
           "rank": 3,
-          "of": 32
+          "of": 31
         }
       }
     },
@@ -661,7 +677,14 @@
       }
     ],
     "max_level": 150,
-    "image": "../assets/heroes/10007.png",
+    "image": "../assets/heroes/cards/10007.webp",
+    "rarity_logo": "../assets/heroes/ui/rarity_5.webp",
+    "camp_shield": "../assets/heroes/ui/camp_3.webp",
+    "faction_ring": "../assets/heroes/ui/faction_ring_3.webp",
+    "role_ring": "../assets/heroes/ui/role_ring_1.webp",
+    "position": "front",
+    "counters": "Assault",
+    "countered_by": "Tactical",
     "head": "../assets/heroes/heads/10007.webp",
     "head_sprite": "Icon_Hero_Arnold",
     "sprite_match": "name",
@@ -874,15 +897,16 @@
     ],
     "exclusive_gear": null,
     "insight": {
-      "focus": "both",
+      "focus": "pvp",
+      "position": "front",
       "tags": [
-        "Front-row protection",
-        "Physical DR"
+        "Protects front row",
+        "Physical defense"
       ],
-      "summary": "UR Warrior shield wall: both his battle skill and passive cut damage taken by the whole front row.",
+      "summary": "Warrior tank who reduces the damage the whole front row takes.",
       "tips": [
-        "Field Support only reduces Physical DMG, so he is strongest against gun and blade teams; pair him with Virgilio or Bekka against Radiation teams.",
-        "Tactical Shield is an always-on front-row damage reduction, so he lifts every frontliner beside him, not just himself."
+        "Both his battle skill and passive protect every front-row ally, not just him.",
+        "His shield skill blocks Physical damage only. Against Radiation-heavy squads (Monroe, Yana, Leah), add Virgilio or Bekka."
       ]
     }
   },
@@ -931,15 +955,15 @@
       "all": {
         "hp": {
           "rank": 7,
-          "of": 32
+          "of": 31
         },
         "attack": {
-          "rank": 31,
-          "of": 32
+          "rank": 30,
+          "of": 31
         },
         "defense": {
           "rank": 17,
-          "of": 32
+          "of": 31
         }
       }
     },
@@ -953,7 +977,14 @@
       }
     ],
     "max_level": 150,
-    "image": "../assets/heroes/10008.png",
+    "image": "../assets/heroes/cards/10008.webp",
+    "rarity_logo": "../assets/heroes/ui/rarity_4.webp",
+    "camp_shield": "../assets/heroes/ui/camp_3.webp",
+    "faction_ring": "../assets/heroes/ui/faction_ring_3.webp",
+    "role_ring": "../assets/heroes/ui/role_ring_1.webp",
+    "position": "front",
+    "counters": "Assault",
+    "countered_by": "Tactical",
     "head": "../assets/heroes/heads/10008.webp",
     "head_sprite": "Icon_Hero_Zara",
     "sprite_match": "name",
@@ -1167,306 +1198,15 @@
     "exclusive_gear": null,
     "insight": {
       "focus": "pve",
+      "position": "front",
       "tags": [
-        "Monster DR",
+        "Zombie tank",
         "Flamethrower"
       ],
-      "summary": "SSR Warrior tank tuned for zombies: Roar and Robust Physique keep her alive in PvE.",
+      "summary": "Warrior tank built for zombie fights: her roar cuts damage from monsters and her passive raises her DEF.",
       "tips": [
-        "Her auto attack has a 4.0s interval in the table (Hank shares it); the flamethrower hits hard but slowly.",
-        "Roar and Robust Physique keep her alive against zombies; for PvP a UR frontliner (Arnold, Dirk) does more."
-      ]
-    }
-  },
-  {
-    "id": 10011,
-    "name": "Nora",
-    "display_name": "Nora (Crossbow)",
-    "variant_note": "Crossbow Nora with her dog Max (#10011). A different hero from farming Nora (#10006).",
-    "text_source_id": 10011,
-    "quality": 4,
-    "quality_name": "SSR",
-    "army_type": 3,
-    "army_name": "Backline Hero",
-    "role_short": "Backline",
-    "role_description": "Excels at dealing damage from the backline, possessing powerful attack capabilities and skills.",
-    "role_icon": "../assets/heroes/ui/role_3.webp",
-    "camp_type": 3,
-    "camp_name": "Warrior",
-    "faction_icon": "../assets/heroes/ui/faction_3.webp",
-    "training_center": {
-      "building_id": 5044,
-      "building_name": "Warrior Training Center",
-      "level": 20
-    },
-    "base_stats": {
-      "hp": 5043,
-      "attack": 8157,
-      "defense": 6338
-    },
-    "stat_ranks": {
-      "peer_scope": "SSR Backline",
-      "peers": {
-        "hp": {
-          "rank": 3,
-          "of": 9
-        },
-        "attack": {
-          "rank": 8,
-          "of": 9
-        },
-        "defense": {
-          "rank": 3,
-          "of": 9
-        }
-      },
-      "all": {
-        "hp": {
-          "rank": 24,
-          "of": 32
-        },
-        "attack": {
-          "rank": 22,
-          "of": 32
-        },
-        "defense": {
-          "rank": 23,
-          "of": 32
-        }
-      }
-    },
-    "level_curve_id": 1,
-    "level_benefits": [
-      {
-        "source": 705,
-        "type": 10015,
-        "name": "Warrior Hero ATK +",
-        "value": 0.0025
-      }
-    ],
-    "max_level": 150,
-    "image": "../assets/heroes/10011.png",
-    "head": "../assets/heroes/heads/10011.webp",
-    "head_sprite": "Icon_Hero_NoraClassics",
-    "sprite_match": "name",
-    "story": null,
-    "skills": [
-      {
-        "slot": 1,
-        "group_id": 1001110,
-        "type": 1,
-        "type_name": "Auto Attack",
-        "name": "Tactical Crossbow",
-        "name_in_client": true,
-        "description": "Attacks 2 random units, dealing damage equal to {0} ATK. (CD: {1}s)",
-        "description_in_client": true,
-        "keywords": [],
-        "cooldown_ms": 1000,
-        "cooldown": "1.00s",
-        "unlock": "Hero Lv. 1",
-        "unlock_level": 1,
-        "unlock_star": 0,
-        "icon": null,
-        "icon_sprite": null,
-        "weights": [
-          {
-            "star": 0,
-            "weight": 3250,
-            "max_skill_level": 1
-          },
-          {
-            "star": 1,
-            "weight": 6500,
-            "max_skill_level": 1
-          },
-          {
-            "star": 2,
-            "weight": 10800,
-            "max_skill_level": 5
-          },
-          {
-            "star": 3,
-            "weight": 17300,
-            "max_skill_level": 10
-          },
-          {
-            "star": 4,
-            "weight": 25950,
-            "max_skill_level": 20
-          },
-          {
-            "star": 5,
-            "weight": 34600,
-            "max_skill_level": 30
-          }
-        ],
-        "gear_upgrades": []
-      },
-      {
-        "slot": 2,
-        "group_id": 1001120,
-        "type": 2,
-        "type_name": "Battle Skills",
-        "name": "Max and Friends",
-        "name_in_client": true,
-        "description": "Summons Max to attack a random enemy, dealing {0} ATK damage. (CD: {1}s)",
-        "description_in_client": true,
-        "keywords": [],
-        "cooldown_ms": 9000,
-        "cooldown": "9.00s",
-        "unlock": "Hero Lv. 5",
-        "unlock_level": 5,
-        "unlock_star": 0,
-        "icon": "../assets/heroes/skills/10011_2.webp",
-        "icon_sprite": "Hero_NoraClassics_skill_02",
-        "weights": [
-          {
-            "star": 0,
-            "weight": 3250,
-            "max_skill_level": 1
-          },
-          {
-            "star": 1,
-            "weight": 6500,
-            "max_skill_level": 1
-          },
-          {
-            "star": 2,
-            "weight": 10800,
-            "max_skill_level": 5
-          },
-          {
-            "star": 3,
-            "weight": 17300,
-            "max_skill_level": 10
-          },
-          {
-            "star": 4,
-            "weight": 25950,
-            "max_skill_level": 20
-          },
-          {
-            "star": 5,
-            "weight": 34600,
-            "max_skill_level": 30
-          }
-        ],
-        "gear_upgrades": []
-      },
-      {
-        "slot": 3,
-        "group_id": 1001130,
-        "type": 3,
-        "type_name": "Passive",
-        "name": "Composure",
-        "name_in_client": true,
-        "description": "In combat, increases Crit Rate by {0}.",
-        "description_in_client": true,
-        "keywords": [],
-        "cooldown_ms": null,
-        "cooldown": "Passive",
-        "unlock": "Hero Lv. 21",
-        "unlock_level": 21,
-        "unlock_star": 0,
-        "icon": "../assets/heroes/skills/10011_3.webp",
-        "icon_sprite": "Hero_NoraClassics_skill_03",
-        "weights": [
-          {
-            "star": 0,
-            "weight": 3250,
-            "max_skill_level": 1
-          },
-          {
-            "star": 1,
-            "weight": 6500,
-            "max_skill_level": 1
-          },
-          {
-            "star": 2,
-            "weight": 10800,
-            "max_skill_level": 5
-          },
-          {
-            "star": 3,
-            "weight": 17300,
-            "max_skill_level": 10
-          },
-          {
-            "star": 4,
-            "weight": 25950,
-            "max_skill_level": 20
-          },
-          {
-            "star": 5,
-            "weight": 34600,
-            "max_skill_level": 30
-          }
-        ],
-        "gear_upgrades": []
-      },
-      {
-        "slot": 4,
-        "group_id": 1001140,
-        "type": 4,
-        "type_name": "Specialty",
-        "name": "Specialty",
-        "name_in_client": false,
-        "description": "Specialty slot. The client has no name or description for it; it unlocks at Hero Lv. 31 and 4★ and its weight does not grow with stars.",
-        "description_in_client": false,
-        "keywords": [],
-        "cooldown_ms": null,
-        "cooldown": "Passive",
-        "unlock": "Hero Lv. 31 · 4★",
-        "unlock_level": 31,
-        "unlock_star": 4,
-        "icon": null,
-        "icon_sprite": null,
-        "weights": [
-          {
-            "star": 0,
-            "weight": 10800,
-            "max_skill_level": 1
-          },
-          {
-            "star": 1,
-            "weight": 10800,
-            "max_skill_level": 1
-          },
-          {
-            "star": 2,
-            "weight": 10800,
-            "max_skill_level": 1
-          },
-          {
-            "star": 3,
-            "weight": 10800,
-            "max_skill_level": 1
-          },
-          {
-            "star": 4,
-            "weight": 10800,
-            "max_skill_level": 1
-          },
-          {
-            "star": 5,
-            "weight": 10800,
-            "max_skill_level": 1
-          }
-        ],
-        "gear_upgrades": []
-      }
-    ],
-    "exclusive_gear": null,
-    "insight": {
-      "focus": "pvp",
-      "tags": [
-        "Crit",
-        "Multi-target"
-      ],
-      "summary": "Crossbow Nora with her dog Max: 2-target auto attacks and a Crit Rate passive.",
-      "tips": [
-        "Composure is an unconditional Crit Rate passive, so unlike the farming Nora she keeps her value in PvP.",
-        "Same name as the farming Nora (#10006) but a different hero with different skills; check the ID before spending shards."
+        "Her flamethrower fires slowly (one attack every 4 seconds) but hits hard.",
+        "Her roar only reduces damage from monsters, so use Arnold or Dirk in PvP."
       ]
     }
   },
@@ -1501,29 +1241,29 @@
       "peers": {
         "hp": {
           "rank": 1,
-          "of": 9
+          "of": 8
         },
         "attack": {
-          "rank": 9,
-          "of": 9
+          "rank": 8,
+          "of": 8
         },
         "defense": {
           "rank": 1,
-          "of": 9
+          "of": 8
         }
       },
       "all": {
         "hp": {
           "rank": 22,
-          "of": 32
+          "of": 31
         },
         "attack": {
-          "rank": 24,
-          "of": 32
+          "rank": 23,
+          "of": 31
         },
         "defense": {
           "rank": 21,
-          "of": 32
+          "of": 31
         }
       }
     },
@@ -1537,7 +1277,14 @@
       }
     ],
     "max_level": 150,
-    "image": "../assets/heroes/20005.png",
+    "image": "../assets/heroes/cards/20005.webp",
+    "rarity_logo": "../assets/heroes/ui/rarity_4.webp",
+    "camp_shield": "../assets/heroes/ui/camp_1.webp",
+    "faction_ring": "../assets/heroes/ui/faction_ring_1.webp",
+    "role_ring": "../assets/heroes/ui/role_ring_3.webp",
+    "position": "back",
+    "counters": "Warrior",
+    "countered_by": "Assault",
     "head": "../assets/heroes/heads/20005.webp",
     "head_sprite": "Icon_Hero_Jinmina",
     "sprite_match": "name",
@@ -1751,14 +1498,15 @@
     "exclusive_gear": null,
     "insight": {
       "focus": "pve",
+      "position": "back",
       "tags": [
-        "Back-row buff",
-        "Monster DR"
+        "Buffs back row",
+        "Zombie defense"
       ],
-      "summary": "Tactical SSR support-shooter: Cheer Captain raises back-row allies' damage to monsters.",
+      "summary": "Tactical archer and cheerleader: her dance raises your back row's damage against monsters.",
       "tips": [
-        "Her value scales with how strong your back row is; put her behind Leah, Silas or Katya for zombie events.",
-        "Both her battle skill and passive are monster-only; bench her for PvP."
+        "The stronger your back row, the more her buff is worth. Pair her with Leah, Silas or Katya in zombie events.",
+        "Her buff and passive only work against monsters, so bench her for PvP."
       ]
     }
   },
@@ -1807,15 +1555,15 @@
       "all": {
         "hp": {
           "rank": 9,
-          "of": 32
+          "of": 31
         },
         "attack": {
-          "rank": 29,
-          "of": 32
+          "rank": 28,
+          "of": 31
         },
         "defense": {
           "rank": 19,
-          "of": 32
+          "of": 31
         }
       }
     },
@@ -1829,7 +1577,14 @@
       }
     ],
     "max_level": 150,
-    "image": "../assets/heroes/20006.png",
+    "image": "../assets/heroes/cards/20006.webp",
+    "rarity_logo": "../assets/heroes/ui/rarity_4.webp",
+    "camp_shield": "../assets/heroes/ui/camp_1.webp",
+    "faction_ring": "../assets/heroes/ui/faction_ring_1.webp",
+    "role_ring": "../assets/heroes/ui/role_ring_1.webp",
+    "position": "front",
+    "counters": "Warrior",
+    "countered_by": "Assault",
     "head": "../assets/heroes/heads/20006.webp",
     "head_sprite": "Icon_Hero_Conan",
     "sprite_match": "name",
@@ -2043,14 +1798,15 @@
     "exclusive_gear": null,
     "insight": {
       "focus": "pve",
+      "position": "front",
       "tags": [
-        "Front-row DEF buff",
-        "Monster DR"
+        "Shields front row",
+        "Zombie defense"
       ],
-      "summary": "Tactical SSR frontliner who buffs front-row DEF. DEF is the hero's shield pool in this game.",
+      "summary": "Tactical tank whose battle song gives the front row extra DEF (shield) for 6 seconds.",
       "tips": [
-        "Battle Anthem raises front-row DEF for 6s. The game describes DEF as a shield that absorbs damage until broken, so this is extra shield, not a % reduction.",
-        "His passive only reduces monster damage; in PvP a UR frontliner (Bekka, Virgilio) does more."
+        "In this game DEF works as a shield that soaks damage until it breaks, so his song adds shield to your front line.",
+        "His passive only reduces monster damage. In PvP, Bekka or Virgilio do the job better."
       ]
     }
   },
@@ -2084,30 +1840,30 @@
       "peer_scope": "SSR Backline",
       "peers": {
         "hp": {
-          "rank": 7,
-          "of": 9
+          "rank": 6,
+          "of": 8
         },
         "attack": {
           "rank": 3,
-          "of": 9
+          "of": 8
         },
         "defense": {
-          "rank": 7,
-          "of": 9
+          "rank": 6,
+          "of": 8
         }
       },
       "all": {
         "hp": {
-          "rank": 28,
-          "of": 32
+          "rank": 27,
+          "of": 31
         },
         "attack": {
           "rank": 14,
-          "of": 32
+          "of": 31
         },
         "defense": {
-          "rank": 27,
-          "of": 32
+          "rank": 26,
+          "of": 31
         }
       }
     },
@@ -2121,7 +1877,14 @@
       }
     ],
     "max_level": 150,
-    "image": "../assets/heroes/20009.png",
+    "image": "../assets/heroes/cards/20009.webp",
+    "rarity_logo": "../assets/heroes/ui/rarity_4.webp",
+    "camp_shield": "../assets/heroes/ui/camp_3.webp",
+    "faction_ring": "../assets/heroes/ui/faction_ring_3.webp",
+    "role_ring": "../assets/heroes/ui/role_ring_3.webp",
+    "position": "back",
+    "counters": "Assault",
+    "countered_by": "Tactical",
     "head": "../assets/heroes/heads/20009.webp",
     "head_sprite": "Icon_Hero_Logan",
     "sprite_match": "name",
@@ -2335,14 +2098,15 @@
     "exclusive_gear": null,
     "insight": {
       "focus": "pvp",
+      "position": "back",
       "tags": [
-        "Self ATK",
-        "Multi-target"
+        "ATK boost",
+        "Hits 2 targets"
       ],
-      "summary": "Warrior SSR Molotov thrower with a flat ATK passive and 2-target bursts.",
+      "summary": "Warrior Molotov thrower with a permanent attack boost and 2-target fire bombs.",
       "tips": [
-        "High Pressure Air Pump is an unconditional ATK boost, so he stays useful outside PvE.",
-        "Multiple Loading hits 2 random enemies, so he spreads damage rather than focusing one target."
+        "His attack boost works in every fight, PvP included.",
+        "His battle skill splits damage across 2 random enemies rather than focusing one."
       ]
     }
   },
@@ -2391,15 +2155,15 @@
       "all": {
         "hp": {
           "rank": 8,
-          "of": 32
+          "of": 31
         },
         "attack": {
-          "rank": 30,
-          "of": 32
+          "rank": 29,
+          "of": 31
         },
         "defense": {
           "rank": 18,
-          "of": 32
+          "of": 31
         }
       }
     },
@@ -2413,7 +2177,14 @@
       }
     ],
     "max_level": 150,
-    "image": "../assets/heroes/30001.png",
+    "image": "../assets/heroes/cards/30001.webp",
+    "rarity_logo": "../assets/heroes/ui/rarity_4.webp",
+    "camp_shield": "../assets/heroes/ui/camp_3.webp",
+    "faction_ring": "../assets/heroes/ui/faction_ring_3.webp",
+    "role_ring": "../assets/heroes/ui/role_ring_1.webp",
+    "position": "front",
+    "counters": "Assault",
+    "countered_by": "Tactical",
     "head": "../assets/heroes/heads/30001.webp",
     "head_sprite": "Icon_Hero_Brooks",
     "sprite_match": "artwork",
@@ -2627,14 +2398,15 @@
     "exclusive_gear": null,
     "insight": {
       "focus": "pve",
+      "position": "front",
       "tags": [
-        "ATK debuff",
-        "Monster DR"
+        "Weakens enemy ATK",
+        "Zombie defense"
       ],
-      "summary": "Warrior SSR poison tank: Venom Burst hits 2 front-row enemies and cuts their ATK by 6% for 4s.",
+      "summary": "Warrior poison tank whose venom shot hits 2 front enemies and lowers their attack by 6% for 4 seconds.",
       "tips": [
-        "Venom Burst's -6% ATK is a fixed value in the text and works on any target, including players.",
-        "Nimble Steps only reduces monster damage, so she is a PvE tank first."
+        "The -6% ATK works on any enemy, players included.",
+        "Her passive only reduces monster damage, so she is mainly a zombie tank."
       ]
     }
   },
@@ -2668,30 +2440,30 @@
       "peer_scope": "SSR Backline",
       "peers": {
         "hp": {
-          "rank": 6,
-          "of": 9
+          "rank": 5,
+          "of": 8
         },
         "attack": {
           "rank": 4,
-          "of": 9
+          "of": 8
         },
         "defense": {
-          "rank": 6,
-          "of": 9
+          "rank": 5,
+          "of": 8
         }
       },
       "all": {
         "hp": {
-          "rank": 27,
-          "of": 32
+          "rank": 26,
+          "of": 31
         },
         "attack": {
           "rank": 15,
-          "of": 32
+          "of": 31
         },
         "defense": {
-          "rank": 26,
-          "of": 32
+          "rank": 25,
+          "of": 31
         }
       }
     },
@@ -2705,7 +2477,14 @@
       }
     ],
     "max_level": 150,
-    "image": "../assets/heroes/30003.png",
+    "image": "../assets/heroes/cards/30003.webp",
+    "rarity_logo": "../assets/heroes/ui/rarity_4.webp",
+    "camp_shield": "../assets/heroes/ui/camp_3.webp",
+    "faction_ring": "../assets/heroes/ui/faction_ring_3.webp",
+    "role_ring": "../assets/heroes/ui/role_ring_3.webp",
+    "position": "back",
+    "counters": "Assault",
+    "countered_by": "Tactical",
     "head": "../assets/heroes/heads/30003.webp",
     "head_sprite": "Icon_Hero_AliaClassics",
     "sprite_match": "artwork",
@@ -2919,14 +2698,15 @@
     "exclusive_gear": null,
     "insight": {
       "focus": "pve",
+      "position": "back",
       "tags": [
-        "Warrior back-row buff",
-        "Monster damage"
+        "Buffs Warrior back row",
+        "Zombie damage"
       ],
-      "summary": "SSR Aria: quick 1.10s auto attack and a passive that buffs back-row Warriors against monsters.",
+      "summary": "SSR Aria: a quick-firing rifle and a passive that makes your back-row Warriors hit monsters harder.",
       "tips": [
-        "Zombie Hunter boosts every back-row Warrior's damage to monsters; she is a natural partner for Monroe, Lucian, Rachel and Logan in zombie content.",
-        "The UR Aria (#31003) uses the same skills and SSR skill weights; see her card before choosing which to star."
+        "She is a natural partner for back-row Warriors like Monroe, Lucian, Rachel and Logan in zombie content.",
+        "The UR Aria (#31003) shares her skills. Decide which one to invest in before spending shards."
       ]
     }
   },
@@ -2960,30 +2740,30 @@
       "peer_scope": "SSR Backline",
       "peers": {
         "hp": {
-          "rank": 9,
-          "of": 9
+          "rank": 8,
+          "of": 8
         },
         "attack": {
           "rank": 1,
-          "of": 9
+          "of": 8
         },
         "defense": {
-          "rank": 9,
-          "of": 9
+          "rank": 8,
+          "of": 8
         }
       },
       "all": {
         "hp": {
-          "rank": 30,
-          "of": 32
+          "rank": 29,
+          "of": 31
         },
         "attack": {
           "rank": 11,
-          "of": 32
+          "of": 31
         },
         "defense": {
-          "rank": 29,
-          "of": 32
+          "rank": 28,
+          "of": 31
         }
       }
     },
@@ -2997,7 +2777,14 @@
       }
     ],
     "max_level": 150,
-    "image": "../assets/heroes/30004.png",
+    "image": "../assets/heroes/cards/30004.webp",
+    "rarity_logo": "../assets/heroes/ui/rarity_4.webp",
+    "camp_shield": "../assets/heroes/ui/camp_2.webp",
+    "faction_ring": "../assets/heroes/ui/faction_ring_2.webp",
+    "role_ring": "../assets/heroes/ui/role_ring_3.webp",
+    "position": "back",
+    "counters": "Tactical",
+    "countered_by": "Warrior",
     "head": "../assets/heroes/heads/30004.webp",
     "head_sprite": "Icon_Hero_Celeste",
     "sprite_match": "name",
@@ -3211,14 +2998,15 @@
     "exclusive_gear": null,
     "insight": {
       "focus": "pvp",
+      "position": "back",
       "tags": [
-        "Highest SSR ATK",
-        "Front-target"
+        "Highest SSR attack",
+        "Hits front row"
       ],
-      "summary": "Assault SSR with the highest ATK and lowest HP of any SSR: a pure damage dealer.",
+      "summary": "The hardest-hitting SSR (and the most fragile one): an Assault rocket gunner.",
       "tips": [
-        "White Phosphorus Munition targets the 2 front enemies; she chews through tanks rather than backliners.",
-        "With the lowest SSR HP she needs a real front row (Vera, Vince or Jack) in front of her."
+        "Her phosphorus rounds hit the 2 front enemies, so she shreds tanks.",
+        "She has the lowest HP of any SSR, so keep two solid tanks in front of her."
       ]
     }
   },
@@ -3252,30 +3040,30 @@
       "peer_scope": "SSR Backline",
       "peers": {
         "hp": {
-          "rank": 8,
-          "of": 9
+          "rank": 7,
+          "of": 8
         },
         "attack": {
           "rank": 2,
-          "of": 9
+          "of": 8
         },
         "defense": {
-          "rank": 8,
-          "of": 9
+          "rank": 7,
+          "of": 8
         }
       },
       "all": {
         "hp": {
-          "rank": 29,
-          "of": 32
+          "rank": 28,
+          "of": 31
         },
         "attack": {
           "rank": 12,
-          "of": 32
+          "of": 31
         },
         "defense": {
-          "rank": 28,
-          "of": 32
+          "rank": 27,
+          "of": 31
         }
       }
     },
@@ -3289,7 +3077,14 @@
       }
     ],
     "max_level": 150,
-    "image": "../assets/heroes/30005.png",
+    "image": "../assets/heroes/cards/30005.webp",
+    "rarity_logo": "../assets/heroes/ui/rarity_4.webp",
+    "camp_shield": "../assets/heroes/ui/camp_2.webp",
+    "faction_ring": "../assets/heroes/ui/faction_ring_2.webp",
+    "role_ring": "../assets/heroes/ui/role_ring_3.webp",
+    "position": "back",
+    "counters": "Tactical",
+    "countered_by": "Warrior",
     "head": "../assets/heroes/heads/30005.webp",
     "head_sprite": "Icon_Hero_Liyu",
     "sprite_match": "name",
@@ -3503,14 +3298,15 @@
     "exclusive_gear": null,
     "insight": {
       "focus": "pve",
+      "position": "back",
       "tags": [
-        "5-hit AoE",
-        "Monster damage"
+        "5 grenades",
+        "Zombie damage"
       ],
-      "summary": "Assault SSR grenadier: Frag Grenade throws 5 random grenades, and his passive adds damage to monsters.",
+      "summary": "Assault grenadier: 5 grenades per battle skill and extra damage to monsters.",
       "tips": [
-        "Five random hits make him one of the best SSR wave-clearers for zombie events.",
-        "His passive is monster-only; Celeste is the better Assault SSR for PvP."
+        "Five random grenades make him one of the best SSRs for clearing zombie waves.",
+        "His passive only works against monsters. For PvP, Celeste is the better Assault SSR."
       ]
     }
   },
@@ -3559,15 +3355,15 @@
       "all": {
         "hp": {
           "rank": 19,
-          "of": 32
+          "of": 31
         },
         "attack": {
           "rank": 3,
-          "of": 32
+          "of": 31
         },
         "defense": {
           "rank": 14,
-          "of": 32
+          "of": 31
         }
       }
     },
@@ -3581,7 +3377,14 @@
       }
     ],
     "max_level": 150,
-    "image": "../assets/heroes/30006.png",
+    "image": "../assets/heroes/cards/30006.webp",
+    "rarity_logo": "../assets/heroes/ui/rarity_5.webp",
+    "camp_shield": "../assets/heroes/ui/camp_3.webp",
+    "faction_ring": "../assets/heroes/ui/faction_ring_3.webp",
+    "role_ring": "../assets/heroes/ui/role_ring_3.webp",
+    "position": "back",
+    "counters": "Assault",
+    "countered_by": "Tactical",
     "head": "../assets/heroes/heads/30006.webp",
     "head_sprite": "Icon_Hero_MarilynMonroe",
     "sprite_match": "artwork",
@@ -3808,6 +3611,8 @@
     ],
     "exclusive_gear": {
       "gear_id": 30006,
+      "weapon_icon": "../assets/heroes/ui/weapon_30006.webp",
+      "hero_art": "../assets/heroes/super_30006.webp",
       "season_day": 3,
       "level_cap": 30,
       "shards_per_level_curve": 2830,
@@ -3865,19 +3670,19 @@
       ]
     },
     "insight": {
-      "focus": "both",
+      "focus": "pvp",
+      "position": "back",
       "tags": [
-        "Radiation",
+        "Radiation damage",
         "Exclusive weapon",
-        "Warrior synergy"
+        "Warrior squads"
       ],
-      "summary": "UR Warrior sniper with an exclusive weapon that scales with Warriors on the team and with her crits.",
+      "summary": "Warrior sniper with an exclusive weapon that grows stronger with every Warrior in the squad.",
       "tips": [
-        "Her exclusive weapon stacks [Barrage Amplification] (+3% Radiation damage each, up to 15%) whenever her own auto attack crits, capped by the number of Warrior heroes in your team. Field her with other Warriors.",
-        "At 4 stacks Annihilation Barrage adds a Devastating Rocket: 5% extra Radiation damage to 3 enemies.",
-        "Her battle skill unlocks at Hero Lv. 1 instead of Lv. 5 like everyone else.",
-        "Her exclusive weapon upgrades her auto attack at weapon Lv. 1 and her battle skill at weapon Lv. 10 and Lv. 30.",
-        "Her exclusive weapon has the earliest season gate of the three (day 3; Leah day 17, Yana day 38)."
+        "With her weapon, each of her own critical hits adds a stack of +3% Radiation damage (max 15%). The stack cap equals the number of Warriors in your squad, so fill the squad with Warriors.",
+        "At 4 stacks she also fires a Devastating Rocket at 3 enemies.",
+        "Her battle skill is available from Hero Lv. 1; everyone else waits until Lv. 5.",
+        "Her weapon unlocks earliest in the season (day 3; Leah day 17, Yana day 38)."
       ]
     }
   },
@@ -3926,15 +3731,15 @@
       "all": {
         "hp": {
           "rank": 10,
-          "of": 32
+          "of": 31
         },
         "attack": {
-          "rank": 28,
-          "of": 32
+          "rank": 27,
+          "of": 31
         },
         "defense": {
           "rank": 20,
-          "of": 32
+          "of": 31
         }
       }
     },
@@ -3948,7 +3753,14 @@
       }
     ],
     "max_level": 150,
-    "image": "../assets/heroes/30007.png",
+    "image": "../assets/heroes/cards/30007.webp",
+    "rarity_logo": "../assets/heroes/ui/rarity_4.webp",
+    "camp_shield": "../assets/heroes/ui/camp_2.webp",
+    "faction_ring": "../assets/heroes/ui/faction_ring_2.webp",
+    "role_ring": "../assets/heroes/ui/role_ring_1.webp",
+    "position": "front",
+    "counters": "Tactical",
+    "countered_by": "Warrior",
     "head": "../assets/heroes/heads/30007.webp",
     "head_sprite": "Icon_Hero_Jack",
     "sprite_match": "name",
@@ -4162,14 +3974,15 @@
     "exclusive_gear": null,
     "insight": {
       "focus": "pve",
+      "position": "front",
       "tags": [
-        "Slow",
-        "Front-row monster DR"
+        "Slows enemies",
+        "Zombie defense"
       ],
-      "summary": "Assault SSR frontliner: grenades that slow, and Pincer Tactic cuts front-row damage from monsters.",
+      "summary": "Assault tank whose grenades slow enemies and whose tactics cut monster damage to the front row.",
       "tips": [
-        "Tactical Grenade also lowers enemy movement speed, which buys time against charging zombies.",
-        "Both defensive skills are monster-only; use Vera or Vince for Assault PvP fronts."
+        "Slowing enemies buys time against charging zombies.",
+        "His damage reduction only works against monsters. For PvP fronts use Vera or Vince."
       ]
     }
   },
@@ -4217,16 +4030,16 @@
       },
       "all": {
         "hp": {
-          "rank": 31,
-          "of": 32
+          "rank": 30,
+          "of": 31
         },
         "attack": {
-          "rank": 27,
-          "of": 32
+          "rank": 26,
+          "of": 31
         },
         "defense": {
-          "rank": 31,
-          "of": 32
+          "rank": 30,
+          "of": 31
         }
       }
     },
@@ -4240,7 +4053,14 @@
       }
     ],
     "max_level": 150,
-    "image": "../assets/heroes/30011.png",
+    "image": "../assets/heroes/cards/30011.webp",
+    "rarity_logo": "../assets/heroes/ui/rarity_3.webp",
+    "camp_shield": "../assets/heroes/ui/camp_1.webp",
+    "faction_ring": "../assets/heroes/ui/faction_ring_1.webp",
+    "role_ring": "../assets/heroes/ui/role_ring_3.webp",
+    "position": "back",
+    "counters": "Warrior",
+    "countered_by": "Assault",
     "head": "../assets/heroes/heads/30011.webp",
     "head_sprite": "Icon_Hero_Jackson",
     "sprite_match": "name",
@@ -4403,14 +4223,15 @@
     "exclusive_gear": null,
     "insight": {
       "focus": "utility",
+      "position": "back",
       "tags": [
         "Gathering",
-        "Soldier load"
+        "Carry load"
       ],
-      "summary": "SR Tactical bomber. His real job is the Soldier Load levelBenefit, which raises gathering capacity.",
+      "summary": "SR bomber whose real job is gathering: he raises the load your march can carry.",
       "tips": [
-        "SR heroes (Jackson, Jamal, Hank) are the only ones whose levelBenefit is Soldier Load Increase (0.01) instead of a faction stat. Use them to lead gathering marches.",
-        "He has only 2 combat skills plus the Specialty slot (no passive), and his battle-skill name is missing from the client text."
+        "The three SR heroes (Jackson, Jamal, Hank) are the only ones that boost Soldier Load, so send them on gathering marches.",
+        "He has no passive skill, so he is weak in combat."
       ]
     }
   },
@@ -4459,15 +4280,15 @@
       "all": {
         "hp": {
           "rank": 15,
-          "of": 32
+          "of": 31
         },
         "attack": {
           "rank": 7,
-          "of": 32
+          "of": 31
         },
         "defense": {
           "rank": 10,
-          "of": 32
+          "of": 31
         }
       }
     },
@@ -4481,7 +4302,14 @@
       }
     ],
     "max_level": 150,
-    "image": "../assets/heroes/31003.png",
+    "image": "../assets/heroes/cards/31003.webp",
+    "rarity_logo": "../assets/heroes/ui/rarity_5.webp",
+    "camp_shield": "../assets/heroes/ui/camp_3.webp",
+    "faction_ring": "../assets/heroes/ui/faction_ring_3.webp",
+    "role_ring": "../assets/heroes/ui/role_ring_3.webp",
+    "position": "back",
+    "counters": "Assault",
+    "countered_by": "Tactical",
     "head": "../assets/heroes/heads/31003.webp",
     "head_sprite": "Icon_Hero_Alia",
     "sprite_match": "artwork",
@@ -4695,14 +4523,15 @@
     "exclusive_gear": null,
     "insight": {
       "focus": "pve",
+      "position": "back",
       "tags": [
-        "UR edition",
-        "Warrior back-row buff"
+        "UR version",
+        "Buffs Warrior back row"
       ],
-      "summary": "UR-quality Aria. She has her own card art but reuses SSR Aria's skills, SSR skill weights and SSR level curve.",
+      "summary": "UR-quality Aria with her own card art but the same skills as SSR Aria.",
       "tips": [
-        "The client has no separate name or skill text for #31003; this page shows SSR Aria's text, and the in-game names may differ.",
-        "HeroInfo gives her UR base stats (HP 6,207 / ATK 14,204), about 1.5x SSR Aria, but her skill weights stay at the SSR values (3,250 → 34,600)."
+        "The game has no separate skill text for this version, so this page shows SSR Aria's skills. In-game names may differ.",
+        "Her base HP and ATK are about 1.5× SSR Aria's, but her skills grow at the SSR rate."
       ]
     }
   },
@@ -4750,16 +4579,16 @@
       },
       "all": {
         "hp": {
-          "rank": 32,
-          "of": 32
+          "rank": 31,
+          "of": 31
         },
         "attack": {
-          "rank": 26,
-          "of": 32
+          "rank": 25,
+          "of": 31
         },
         "defense": {
-          "rank": 32,
-          "of": 32
+          "rank": 31,
+          "of": 31
         }
       }
     },
@@ -4773,7 +4602,14 @@
       }
     ],
     "max_level": 150,
-    "image": "../assets/heroes/40001.png",
+    "image": "../assets/heroes/cards/40001.webp",
+    "rarity_logo": "../assets/heroes/ui/rarity_3.webp",
+    "camp_shield": "../assets/heroes/ui/camp_3.webp",
+    "faction_ring": "../assets/heroes/ui/faction_ring_3.webp",
+    "role_ring": "../assets/heroes/ui/role_ring_1.webp",
+    "position": "back",
+    "counters": "Assault",
+    "countered_by": "Tactical",
     "head": "../assets/heroes/heads/40001.webp",
     "head_sprite": "Icon_Hero_Jamal",
     "sprite_match": "name",
@@ -4936,14 +4772,15 @@
     "exclusive_gear": null,
     "insight": {
       "focus": "utility",
+      "position": "back",
       "tags": [
         "Gathering",
-        "Soldier load"
+        "Carry load"
       ],
-      "summary": "SR gatherer listed as a frontliner, but with backline-like stats (ATK 2.3x HP).",
+      "summary": "SR gatherer. He is listed as Frontline, but his stats are those of a fragile damage dealer.",
       "tips": [
-        "Use for gathering (Soldier Load Increase levelBenefit), not as a tank: his HP is the lowest of any frontliner by far.",
-        "No passive skill; Quick Repair hits the 2 front enemies."
+        "Use him for gathering (bigger Soldier Load), not as a tank: he has by far the lowest HP of any Frontline hero.",
+        "If he must fight, put him in the back row."
       ]
     }
   },
@@ -4992,15 +4829,15 @@
       "all": {
         "hp": {
           "rank": 11,
-          "of": 32
+          "of": 31
         },
         "attack": {
-          "rank": 32,
-          "of": 32
+          "rank": 31,
+          "of": 31
         },
         "defense": {
-          "rank": 30,
-          "of": 32
+          "rank": 29,
+          "of": 31
         }
       }
     },
@@ -5014,7 +4851,14 @@
       }
     ],
     "max_level": 150,
-    "image": "../assets/heroes/40002.png",
+    "image": "../assets/heroes/cards/40002.webp",
+    "rarity_logo": "../assets/heroes/ui/rarity_3.webp",
+    "camp_shield": "../assets/heroes/ui/camp_3.webp",
+    "faction_ring": "../assets/heroes/ui/faction_ring_3.webp",
+    "role_ring": "../assets/heroes/ui/role_ring_1.webp",
+    "position": "front",
+    "counters": "Assault",
+    "countered_by": "Tactical",
     "head": "../assets/heroes/heads/40002.webp",
     "head_sprite": "Icon_Hero_Hank",
     "sprite_match": "name",
@@ -5177,14 +5021,15 @@
     "exclusive_gear": null,
     "insight": {
       "focus": "utility",
+      "position": "front",
       "tags": [
         "Gathering",
-        "Soldier load"
+        "Carry load"
       ],
-      "summary": "SR flame gatherer with real frontline stats and a slow 4.0s auto attack.",
+      "summary": "SR flamethrower gatherer with real tank stats.",
       "tips": [
-        "The sturdier of the three SR gatherers (HP 7,174) if a gathering march might get hit.",
-        "No passive skill."
+        "The sturdiest of the three gatherers, a good pick if your gathering march might be attacked.",
+        "Slow attacks (every 4 seconds) and no passive skill."
       ]
     }
   },
@@ -5218,30 +5063,30 @@
       "peer_scope": "SSR Backline",
       "peers": {
         "hp": {
-          "rank": 4,
-          "of": 9
+          "rank": 3,
+          "of": 8
         },
         "attack": {
           "rank": 6,
-          "of": 9
+          "of": 8
         },
         "defense": {
-          "rank": 4,
-          "of": 9
+          "rank": 3,
+          "of": 8
         }
       },
       "all": {
         "hp": {
-          "rank": 25,
-          "of": 32
+          "rank": 24,
+          "of": 31
         },
         "attack": {
           "rank": 17,
-          "of": 32
+          "of": 31
         },
         "defense": {
-          "rank": 24,
-          "of": 32
+          "rank": 23,
+          "of": 31
         }
       }
     },
@@ -5255,7 +5100,14 @@
       }
     ],
     "max_level": 150,
-    "image": "../assets/heroes/40010.png",
+    "image": "../assets/heroes/cards/40010.webp",
+    "rarity_logo": "../assets/heroes/ui/rarity_4.webp",
+    "camp_shield": "../assets/heroes/ui/camp_1.webp",
+    "faction_ring": "../assets/heroes/ui/faction_ring_1.webp",
+    "role_ring": "../assets/heroes/ui/role_ring_3.webp",
+    "position": "back",
+    "counters": "Warrior",
+    "countered_by": "Assault",
     "head": "../assets/heroes/heads/40010.webp",
     "head_sprite": "Icon_Hero_Taylor",
     "sprite_match": "name",
@@ -5469,14 +5321,15 @@
     "exclusive_gear": null,
     "insight": {
       "focus": "pve",
+      "position": "back",
       "tags": [
-        "Front-target",
-        "Monster damage"
+        "Hits front row",
+        "Zombie damage"
       ],
-      "summary": "Tactical SSR archer: Heavy Arrow hits the front enemies and her passive adds damage to monsters.",
+      "summary": "Tactical archer whose heavy arrow hits the front enemies and whose passive adds monster damage.",
       "tips": [
-        "A budget back-row filler for Tactical zombie teams until Leah, Silas or Katya are starred.",
-        "Passive is monster-only."
+        "A budget back-row filler for Tactical zombie squads until your UR Tactical heroes are starred.",
+        "Her passive only works against monsters."
       ]
     }
   },
@@ -5525,15 +5378,15 @@
       "all": {
         "hp": {
           "rank": 2,
-          "of": 32
+          "of": 31
         },
         "attack": {
-          "rank": 23,
-          "of": 32
+          "rank": 22,
+          "of": 31
         },
         "defense": {
           "rank": 2,
-          "of": 32
+          "of": 31
         }
       }
     },
@@ -5547,7 +5400,14 @@
       }
     ],
     "max_level": 150,
-    "image": "../assets/heroes/50001.png",
+    "image": "../assets/heroes/cards/50001.webp",
+    "rarity_logo": "../assets/heroes/ui/rarity_5.webp",
+    "camp_shield": "../assets/heroes/ui/camp_3.webp",
+    "faction_ring": "../assets/heroes/ui/faction_ring_3.webp",
+    "role_ring": "../assets/heroes/ui/role_ring_1.webp",
+    "position": "front",
+    "counters": "Assault",
+    "countered_by": "Tactical",
     "head": "../assets/heroes/heads/50001.webp",
     "head_sprite": "Icon_Hero_Deke",
     "sprite_match": "artwork",
@@ -5760,15 +5620,16 @@
     ],
     "exclusive_gear": null,
     "insight": {
-      "focus": "both",
+      "focus": "pvp",
+      "position": "front",
       "tags": [
-        "Front-row DEF buff",
+        "Shields front row",
         "Damage reduction"
       ],
-      "summary": "UR Warrior tank: Iron Will raises front-row DEF (shield) and Heavy Armor cuts all damage he takes.",
+      "summary": "Warrior UR tank: his shout adds DEF (shield) to the front row and his armor cuts all damage he takes.",
       "tips": [
-        "Heavy Armor reduces all incoming damage, not just monster damage, so he holds up in PvP.",
-        "Pairs with Arnold: Dirk adds shield (DEF) while Arnold reduces damage, two different layers on the same front row."
+        "His armor works against everything, not just monsters, so he holds up in PvP.",
+        "Pair him with Arnold: Dirk adds shield while Arnold reduces damage, two layers of protection."
       ]
     }
   },
@@ -5817,15 +5678,15 @@
       "all": {
         "hp": {
           "rank": 12,
-          "of": 32
+          "of": 31
         },
         "attack": {
           "rank": 10,
-          "of": 32
+          "of": 31
         },
         "defense": {
           "rank": 7,
-          "of": 32
+          "of": 31
         }
       }
     },
@@ -5839,7 +5700,14 @@
       }
     ],
     "max_level": 150,
-    "image": "../assets/heroes/50002.png",
+    "image": "../assets/heroes/cards/50002.webp",
+    "rarity_logo": "../assets/heroes/ui/rarity_5.webp",
+    "camp_shield": "../assets/heroes/ui/camp_3.webp",
+    "faction_ring": "../assets/heroes/ui/faction_ring_3.webp",
+    "role_ring": "../assets/heroes/ui/role_ring_2.webp",
+    "position": "back",
+    "counters": "Assault",
+    "countered_by": "Tactical",
     "head": "../assets/heroes/heads/50002.webp",
     "head_sprite": "Icon_Hero_Carter",
     "sprite_match": "name",
@@ -6052,17 +5920,18 @@
     ],
     "exclusive_gear": null,
     "insight": {
-      "focus": "both",
+      "focus": "pvp",
+      "position": "back",
       "tags": [
-        "Team ATK",
-        "Cooldown speed",
-        "Only support"
+        "Buffs whole squad",
+        "Faster skills",
+        "Only Support"
       ],
-      "summary": "The only Support hero: team-wide ATK and faster skill cooldowns, in any faction.",
+      "summary": "The only Support hero: he raises the whole squad's attack and makes everyone's skills recharge faster.",
       "tips": [
-        "Hawkeye raises ALL allies' ATK, and Sheriff speeds up skill cooldowns and protects your highest-ATK ally. Few slots give more team value.",
-        "His battle skill has the longest cooldown in the roster (12s), and Sheriff's cooldown speed partly offsets it.",
-        "Sheriff protects the highest-ATK ally, so build your main carry's ATK first and Carter will shield the right hero."
+        "None of his buffs depend on faction or enemy type, so he fits almost any squad.",
+        "His passive also protects your highest-attack ally, so build your main damage dealer first.",
+        "His own battle skill recharges slowly (12 seconds), but his cooldown-speed passive offsets that."
       ]
     }
   },
@@ -6111,15 +5980,15 @@
       "all": {
         "hp": {
           "rank": 21,
-          "of": 32
+          "of": 31
         },
         "attack": {
           "rank": 1,
-          "of": 32
+          "of": 31
         },
         "defense": {
           "rank": 16,
-          "of": 32
+          "of": 31
         }
       }
     },
@@ -6133,7 +6002,14 @@
       }
     ],
     "max_level": 150,
-    "image": "../assets/heroes/50003.png",
+    "image": "../assets/heroes/cards/50003.webp",
+    "rarity_logo": "../assets/heroes/ui/rarity_5.webp",
+    "camp_shield": "../assets/heroes/ui/camp_3.webp",
+    "faction_ring": "../assets/heroes/ui/faction_ring_3.webp",
+    "role_ring": "../assets/heroes/ui/role_ring_3.webp",
+    "position": "back",
+    "counters": "Assault",
+    "countered_by": "Tactical",
     "head": "../assets/heroes/heads/50003.webp",
     "head_sprite": "Icon_Hero_Lucien",
     "sprite_match": "name",
@@ -6346,15 +6222,16 @@
     ],
     "exclusive_gear": null,
     "insight": {
-      "focus": "both",
+      "focus": "pvp",
+      "position": "back",
       "tags": [
-        "Highest ATK",
+        "Highest attack",
         "Crit"
       ],
-      "summary": "Highest base ATK in the game (15,706) and lowest UR HP: an all-in Warrior carry with Crit Rate.",
+      "summary": "The highest attack in the game and the lowest HP of any UR: an all-in Warrior damage dealer.",
       "tips": [
-        "Tesla Coil arcs multiple random targets, and Frankenstein adds Crit Rate.",
-        "Needs Arnold or Dirk in front; his HP is the lowest of any UR."
+        "His Tesla Coil arcs between several random enemies, and his passive adds Crit Rate.",
+        "Protect him with Arnold or Dirk; one bad matchup and he goes down first."
       ]
     }
   },
@@ -6403,15 +6280,15 @@
       "all": {
         "hp": {
           "rank": 1,
-          "of": 32
+          "of": 31
         },
         "attack": {
-          "rank": 25,
-          "of": 32
+          "rank": 24,
+          "of": 31
         },
         "defense": {
           "rank": 1,
-          "of": 32
+          "of": 31
         }
       }
     },
@@ -6425,7 +6302,14 @@
       }
     ],
     "max_level": 150,
-    "image": "../assets/heroes/50004.png",
+    "image": "../assets/heroes/cards/50004.webp",
+    "rarity_logo": "../assets/heroes/ui/rarity_5.webp",
+    "camp_shield": "../assets/heroes/ui/camp_1.webp",
+    "faction_ring": "../assets/heroes/ui/faction_ring_1.webp",
+    "role_ring": "../assets/heroes/ui/role_ring_1.webp",
+    "position": "front",
+    "counters": "Warrior",
+    "countered_by": "Assault",
     "head": "../assets/heroes/heads/50004.webp",
     "head_sprite": "Icon_Hero_Bekka",
     "sprite_match": "name",
@@ -6638,16 +6522,17 @@
     ],
     "exclusive_gear": null,
     "insight": {
-      "focus": "both",
+      "focus": "pvp",
+      "position": "front",
       "tags": [
-        "AoE",
-        "Radiation counter",
+        "Hits all enemies",
+        "Stops Radiation",
         "Highest HP"
       ],
-      "summary": "Highest base HP in the game (14,281). Sonic Boom hits all enemies and cuts their Radiation damage.",
+      "summary": "The tankiest hero in the game. Her sonic grenade hits all enemies and weakens their Radiation attacks.",
       "tips": [
-        "Sonic Boom deals Physical damage to ALL enemies and lowers their Radiation damage for 5s, and Ion Shield cuts Radiation damage taken. She hard-counters Radiation carries like Monroe and Yana.",
-        "Pair with Virgilio for a near-complete Radiation shutdown on Tactical teams."
+        "She counters Radiation damage dealers like Monroe and Yana: her grenade lowers their Radiation damage, and her passive cuts the Radiation damage she takes.",
+        "With Virgilio she makes a near Radiation-proof Tactical front line."
       ]
     }
   },
@@ -6696,15 +6581,15 @@
       "all": {
         "hp": {
           "rank": 4,
-          "of": 32
+          "of": 31
         },
         "attack": {
           "rank": 19,
-          "of": 32
+          "of": 31
         },
         "defense": {
           "rank": 4,
-          "of": 32
+          "of": 31
         }
       }
     },
@@ -6718,7 +6603,14 @@
       }
     ],
     "max_level": 150,
-    "image": "../assets/heroes/50005.png",
+    "image": "../assets/heroes/cards/50005.webp",
+    "rarity_logo": "../assets/heroes/ui/rarity_5.webp",
+    "camp_shield": "../assets/heroes/ui/camp_1.webp",
+    "faction_ring": "../assets/heroes/ui/faction_ring_1.webp",
+    "role_ring": "../assets/heroes/ui/role_ring_1.webp",
+    "position": "front",
+    "counters": "Warrior",
+    "countered_by": "Assault",
     "head": "../assets/heroes/heads/50005.webp",
     "head_sprite": "Icon_Hero_Vigilo",
     "sprite_match": "name",
@@ -6931,15 +6823,16 @@
     ],
     "exclusive_gear": null,
     "insight": {
-      "focus": "both",
+      "focus": "pvp",
+      "position": "front",
       "tags": [
-        "Team Radiation DR",
-        "Front-row DR"
+        "Radiation shield for squad",
+        "Protects front row"
       ],
-      "summary": "UR Tactical anti-Radiation tank: a team-wide Radiation shield plus front-row damage reduction.",
+      "summary": "Tactical tank who shields the whole squad from Radiation damage and toughens the front row.",
       "tips": [
-        "Magnetic Coil reduces Radiation damage taken by ALL allies; Magnetic Armor gives the front row both general and Radiation damage reduction.",
-        "Bring him when the enemy runs Monroe, Yana or Leah, whose exclusive weapons all deal Radiation damage."
+        "His EM pulse lowers Radiation damage taken by ALL allies, so bring him against Monroe, Yana or Leah squads.",
+        "His passive also gives the front row general damage reduction."
       ]
     }
   },
@@ -6988,15 +6881,15 @@
       "all": {
         "hp": {
           "rank": 14,
-          "of": 32
+          "of": 31
         },
         "attack": {
           "rank": 8,
-          "of": 32
+          "of": 31
         },
         "defense": {
           "rank": 9,
-          "of": 32
+          "of": 31
         }
       }
     },
@@ -7010,7 +6903,14 @@
       }
     ],
     "max_level": 150,
-    "image": "../assets/heroes/50006.png",
+    "image": "../assets/heroes/cards/50006.webp",
+    "rarity_logo": "../assets/heroes/ui/rarity_5.webp",
+    "camp_shield": "../assets/heroes/ui/camp_1.webp",
+    "faction_ring": "../assets/heroes/ui/faction_ring_1.webp",
+    "role_ring": "../assets/heroes/ui/role_ring_3.webp",
+    "position": "back",
+    "counters": "Warrior",
+    "countered_by": "Assault",
     "head": "../assets/heroes/heads/50006.webp",
     "head_sprite": "Icon_Hero_Leah",
     "sprite_match": "name",
@@ -7233,6 +7133,8 @@
     ],
     "exclusive_gear": {
       "gear_id": 50006,
+      "weapon_icon": "../assets/heroes/ui/weapon_50006.webp",
+      "hero_art": "../assets/heroes/super_50006.webp",
       "season_day": 17,
       "level_cap": 30,
       "shards_per_level_curve": 2830,
@@ -7294,19 +7196,18 @@
       ]
     },
     "insight": {
-      "focus": "both",
+      "focus": "pvp",
+      "position": "back",
       "tags": [
-        "AoE",
+        "Hits all enemies",
         "Exclusive weapon",
-        "Tactical synergy",
-        "Crit"
+        "Tactical squads"
       ],
-      "summary": "UR Tactical sniper: Black Hawk Call hits all enemies, and her exclusive weapon scales with Tactical heroes.",
+      "summary": "Tactical sniper whose helicopter hits every enemy. Her exclusive weapon scales with Tactical heroes.",
       "tips": [
-        "Exclusive weapon: 2 [Radiation Charge] stacks per Tactical hero at battle start (up to 10), plus [Tactical Surge] for +20% attack speed per stack (up to +100%, 4s). Run her in a mostly Tactical team.",
-        "Explosive Start fires her battle skill at 2 front-row enemies the moment battle begins.",
-        "Her exclusive weapon upgrades her auto attack from weapon Lv. 1 and raises all her skill caps from 30 to 40 by weapon Lv. 30.",
-        "Exclusive weapon season gate: day 17 (Monroe day 3, Yana day 38)."
+        "With her weapon she starts each battle with 2 stacks of +3% Radiation damage per Tactical hero (max 10), and gains up to +100% attack speed as she lands hits.",
+        "Her weapon also makes her fire her battle skill at 2 front enemies the moment battle starts.",
+        "Her weapon unlocks on season day 17."
       ]
     }
   },
@@ -7355,15 +7256,15 @@
       "all": {
         "hp": {
           "rank": 17,
-          "of": 32
+          "of": 31
         },
         "attack": {
           "rank": 5,
-          "of": 32
+          "of": 31
         },
         "defense": {
           "rank": 12,
-          "of": 32
+          "of": 31
         }
       }
     },
@@ -7377,7 +7278,14 @@
       }
     ],
     "max_level": 150,
-    "image": "../assets/heroes/50007.png",
+    "image": "../assets/heroes/cards/50007.webp",
+    "rarity_logo": "../assets/heroes/ui/rarity_5.webp",
+    "camp_shield": "../assets/heroes/ui/camp_1.webp",
+    "faction_ring": "../assets/heroes/ui/faction_ring_1.webp",
+    "role_ring": "../assets/heroes/ui/role_ring_3.webp",
+    "position": "back",
+    "counters": "Warrior",
+    "countered_by": "Assault",
     "head": "../assets/heroes/heads/50007.webp",
     "head_sprite": "Icon_Hero_Silas",
     "sprite_match": "name",
@@ -7595,16 +7503,17 @@
     ],
     "exclusive_gear": null,
     "insight": {
-      "focus": "both",
+      "focus": "pvp",
+      "position": "back",
       "tags": [
-        "Back-row assassin",
+        "Hits back row",
         "Stun",
-        "Self ATK"
+        "ATK boost"
       ],
-      "summary": "UR Tactical damage dealer whose spider robot dives the enemy back row with a 20% stun chance.",
+      "summary": "Tactical damage dealer whose spider robot dives the enemy back row, with a 20% chance to stun.",
       "tips": [
-        "[Stun] makes the target's skills fail and go straight to cooldown; hitting back-row carries is where it matters most.",
-        "Overload is a flat ATK passive that works everywhere."
+        "A stunned enemy's skills fail and go straight onto cooldown, so stunning their back-row damage dealers matters most.",
+        "His passive raises his attack in every fight."
       ]
     }
   },
@@ -7653,15 +7562,15 @@
       "all": {
         "hp": {
           "rank": 13,
-          "of": 32
+          "of": 31
         },
         "attack": {
           "rank": 9,
-          "of": 32
+          "of": 31
         },
         "defense": {
           "rank": 8,
-          "of": 32
+          "of": 31
         }
       }
     },
@@ -7675,7 +7584,14 @@
       }
     ],
     "max_level": 150,
-    "image": "../assets/heroes/50008.png",
+    "image": "../assets/heroes/cards/50008.webp",
+    "rarity_logo": "../assets/heroes/ui/rarity_5.webp",
+    "camp_shield": "../assets/heroes/ui/camp_1.webp",
+    "faction_ring": "../assets/heroes/ui/faction_ring_1.webp",
+    "role_ring": "../assets/heroes/ui/role_ring_3.webp",
+    "position": "back",
+    "counters": "Warrior",
+    "countered_by": "Assault",
     "head": "../assets/heroes/heads/50008.webp",
     "head_sprite": "Icon_Hero_Katya",
     "sprite_match": "name",
@@ -7888,15 +7804,16 @@
     ],
     "exclusive_gear": null,
     "insight": {
-      "focus": "both",
+      "focus": "pvp",
+      "position": "back",
       "tags": [
-        "DEF shred",
-        "Physical"
+        "Breaks shields",
+        "Physical damage"
       ],
-      "summary": "UR Tactical machine-gunner: Viper strips 5% DEF per hit (up to 25%) and War Machine boosts Physical damage.",
+      "summary": "Tactical machine-gunner whose toxin rounds strip up to 25% of the target's DEF.",
       "tips": [
-        "Viper's DEF shred (up to -25% for 9s) helps every Physical damage dealer on the team; pair with Nicole's Physical passive in mixed teams or with Leah and Silas in Tactical.",
-        "Because DEF is the shield pool, shredding it makes shields break sooner."
+        "DEF is the enemy's shield: shredding it makes the whole squad's hits break through sooner.",
+        "Her passive boosts Physical damage, which also pairs well with Nicole in mixed squads."
       ]
     }
   },
@@ -7945,15 +7862,15 @@
       "all": {
         "hp": {
           "rank": 6,
-          "of": 32
+          "of": 31
         },
         "attack": {
           "rank": 13,
-          "of": 32
+          "of": 31
         },
         "defense": {
           "rank": 6,
-          "of": 32
+          "of": 31
         }
       }
     },
@@ -7967,7 +7884,14 @@
       }
     ],
     "max_level": 150,
-    "image": "../assets/heroes/50009.png",
+    "image": "../assets/heroes/cards/50009.webp",
+    "rarity_logo": "../assets/heroes/ui/rarity_5.webp",
+    "camp_shield": "../assets/heroes/ui/camp_2.webp",
+    "faction_ring": "../assets/heroes/ui/faction_ring_2.webp",
+    "role_ring": "../assets/heroes/ui/role_ring_1.webp",
+    "position": "front",
+    "counters": "Tactical",
+    "countered_by": "Warrior",
     "head": "../assets/heroes/heads/50009.webp",
     "head_sprite": "Icon_Hero_Vera",
     "sprite_match": "name",
@@ -8185,15 +8109,16 @@
     ],
     "exclusive_gear": null,
     "insight": {
-      "focus": "both",
+      "focus": "pvp",
+      "position": "front",
       "tags": [
-        "Counter-attack tank",
-        "Assault synergy"
+        "Counter-attacks",
+        "Assault squads"
       ],
-      "summary": "UR Assault frontliner with the highest ATK of any tank, built to counter-attack while in [Guard].",
+      "summary": "Assault tank who hits back: in Guard state she counter-attacks every time she is hit.",
       "tips": [
-        "Portable Sentry puts her in [Guard]: she auto-attacks back each time she is hit (max once per second), so her high ATK (9,665, highest of any frontliner) is the point.",
-        "Sentinel's front-row damage reduction is doubled for Assault heroes while she is in [Guard]; she belongs with Vince and Jack."
+        "She has the highest attack of any tank, and her Guard state turns that into counter-damage (at most once per second).",
+        "Her passive protects the front row, and the effect doubles for Assault heroes while she is on Guard, so field her with Vince and Jack."
       ]
     }
   },
@@ -8242,15 +8167,15 @@
       "all": {
         "hp": {
           "rank": 5,
-          "of": 32
+          "of": 31
         },
         "attack": {
           "rank": 18,
-          "of": 32
+          "of": 31
         },
         "defense": {
           "rank": 5,
-          "of": 32
+          "of": 31
         }
       }
     },
@@ -8264,7 +8189,14 @@
       }
     ],
     "max_level": 150,
-    "image": "../assets/heroes/50010.png",
+    "image": "../assets/heroes/cards/50010.webp",
+    "rarity_logo": "../assets/heroes/ui/rarity_5.webp",
+    "camp_shield": "../assets/heroes/ui/camp_2.webp",
+    "faction_ring": "../assets/heroes/ui/faction_ring_2.webp",
+    "role_ring": "../assets/heroes/ui/role_ring_1.webp",
+    "position": "front",
+    "counters": "Tactical",
+    "countered_by": "Warrior",
     "head": "../assets/heroes/heads/50010.webp",
     "head_sprite": "Icon_Hero_Vince",
     "sprite_match": "name",
@@ -8477,15 +8409,16 @@
     ],
     "exclusive_gear": null,
     "insight": {
-      "focus": "both",
+      "focus": "pvp",
+      "position": "front",
       "tags": [
-        "Taunt",
-        "ATK debuff"
+        "Taunts",
+        "Weakens enemy ATK"
       ],
-      "summary": "UR Assault taunt tank: Glaring Taunt pulls aggro from front-row enemies and lowers their ATK for 8s.",
+      "summary": "Assault tank who taunts the enemy front row and lowers their attack for 8 seconds.",
       "tips": [
-        "Taunting the enemy front row keeps damage off your backliners; with Vera, it gives Assault a full two-tank front.",
-        "Mountain Ranger reduces all incoming damage, so it is not PvE-only."
+        "Taunting pulls enemy fire away from your back row.",
+        "His passive reduces all damage he takes, so he works in PvP too."
       ]
     }
   },
@@ -8534,15 +8467,15 @@
       "all": {
         "hp": {
           "rank": 20,
-          "of": 32
+          "of": 31
         },
         "attack": {
           "rank": 2,
-          "of": 32
+          "of": 31
         },
         "defense": {
           "rank": 15,
-          "of": 32
+          "of": 31
         }
       }
     },
@@ -8556,7 +8489,14 @@
       }
     ],
     "max_level": 150,
-    "image": "../assets/heroes/50011.png",
+    "image": "../assets/heroes/cards/50011.webp",
+    "rarity_logo": "../assets/heroes/ui/rarity_5.webp",
+    "camp_shield": "../assets/heroes/ui/camp_2.webp",
+    "faction_ring": "../assets/heroes/ui/faction_ring_2.webp",
+    "role_ring": "../assets/heroes/ui/role_ring_3.webp",
+    "position": "back",
+    "counters": "Tactical",
+    "countered_by": "Warrior",
     "head": "../assets/heroes/heads/50011.webp",
     "head_sprite": "Icon_Hero_Yana",
     "sprite_match": "name",
@@ -8783,6 +8723,8 @@
     ],
     "exclusive_gear": {
       "gear_id": 50011,
+      "weapon_icon": "../assets/heroes/ui/weapon_50011.webp",
+      "hero_art": "../assets/heroes/super_50011.webp",
       "season_day": 38,
       "level_cap": 30,
       "shards_per_level_curve": 2830,
@@ -8840,17 +8782,18 @@
       ]
     },
     "insight": {
-      "focus": "both",
+      "focus": "pvp",
+      "position": "back",
       "tags": [
-        "Radiation DoT",
+        "Radiation damage over time",
         "Exclusive weapon",
-        "Assault synergy"
+        "Assault squads"
       ],
-      "summary": "UR Assault lightning carry who hits the 3 back enemies and stacks Radiation damage-over-time through her exclusive weapon.",
+      "summary": "Assault lightning caster who hits the 3 back-row enemies; her exclusive weapon adds stacking Radiation burn.",
       "tips": [
-        "Exclusive weapon: auto attacks and skills apply [Overload Charge] (3% of her ATK as Radiation damage per second for 30s, up to 15 stacks); the cap is 3 per Assault hero on your team.",
-        "Her exclusive weapon upgrades her auto attack at weapon Lv. 1 and her battle skill at weapon Lv. 10 and Lv. 30, so weapon shards are her main growth path once she is 5★.",
-        "Exclusive weapon season gate: day 38, the latest of the three."
+        "With her weapon, her hits apply Overload Charge, which burns for 3% of her ATK per second for 30 seconds. The stack cap is 3 per Assault hero in the squad.",
+        "Her weapon upgrades her auto attack at weapon Lv. 1 and her battle skill at Lv. 10 and Lv. 30, so weapon shards are her main upgrade path once she is 5★.",
+        "Her weapon unlocks last in the season (day 38)."
       ]
     }
   },
@@ -8899,15 +8842,15 @@
       "all": {
         "hp": {
           "rank": 16,
-          "of": 32
+          "of": 31
         },
         "attack": {
           "rank": 6,
-          "of": 32
+          "of": 31
         },
         "defense": {
           "rank": 11,
-          "of": 32
+          "of": 31
         }
       }
     },
@@ -8921,7 +8864,14 @@
       }
     ],
     "max_level": 150,
-    "image": "../assets/heroes/50012.png",
+    "image": "../assets/heroes/cards/50012.webp",
+    "rarity_logo": "../assets/heroes/ui/rarity_5.webp",
+    "camp_shield": "../assets/heroes/ui/camp_2.webp",
+    "faction_ring": "../assets/heroes/ui/faction_ring_2.webp",
+    "role_ring": "../assets/heroes/ui/role_ring_3.webp",
+    "position": "back",
+    "counters": "Tactical",
+    "countered_by": "Warrior",
     "head": "../assets/heroes/heads/50012.webp",
     "head_sprite": "Icon_Hero_Victor",
     "sprite_match": "name",
@@ -9134,15 +9084,16 @@
     ],
     "exclusive_gear": null,
     "insight": {
-      "focus": "both",
+      "focus": "pvp",
+      "position": "back",
       "tags": [
-        "Execute",
+        "Finishes weak enemies",
         "Crit"
       ],
-      "summary": "UR Assault finisher: his SMG always targets the enemy with the lowest HP percentage.",
+      "summary": "Assault finisher: his SMG always targets the enemy with the lowest HP percentage.",
       "tips": [
-        "Auto attacks go to the lowest-HP% enemy, so he finishes wounded targets and pairs well with AoE (Nicole, Yana).",
-        "Mechanic adds Crit Rate."
+        "He mops up wounded enemies, so pair him with heroes that hit everyone (Nicole, Yana).",
+        "His passive adds Crit Rate."
       ]
     }
   },
@@ -9191,15 +9142,15 @@
       "all": {
         "hp": {
           "rank": 18,
-          "of": 32
+          "of": 31
         },
         "attack": {
           "rank": 4,
-          "of": 32
+          "of": 31
         },
         "defense": {
           "rank": 13,
-          "of": 32
+          "of": 31
         }
       }
     },
@@ -9213,7 +9164,14 @@
       }
     ],
     "max_level": 150,
-    "image": "../assets/heroes/50013.png",
+    "image": "../assets/heroes/cards/50013.webp",
+    "rarity_logo": "../assets/heroes/ui/rarity_5.webp",
+    "camp_shield": "../assets/heroes/ui/camp_2.webp",
+    "faction_ring": "../assets/heroes/ui/faction_ring_2.webp",
+    "role_ring": "../assets/heroes/ui/role_ring_3.webp",
+    "position": "back",
+    "counters": "Tactical",
+    "countered_by": "Warrior",
     "head": "../assets/heroes/heads/50013.webp",
     "head_sprite": "Icon_Hero_Niko",
     "sprite_match": "artwork",
@@ -9426,15 +9384,16 @@
     ],
     "exclusive_gear": null,
     "insight": {
-      "focus": "both",
+      "focus": "pvp",
+      "position": "back",
       "tags": [
-        "AoE",
-        "Physical"
+        "Hits all enemies",
+        "Physical damage"
       ],
-      "summary": "UR Assault grenadier: Fine Firepower Net hits ALL enemies and Actuary boosts her Physical damage.",
+      "summary": "Assault grenadier whose firepower net hits every enemy, with a passive that boosts Physical damage.",
       "tips": [
-        "One of three heroes whose battle skill hits every enemy (with Leah and Bekka), so she is strong against wide formations.",
-        "Physical damage: Katya's DEF shred helps her if you run a cross-faction team."
+        "One of only three heroes whose battle skill hits the whole enemy squad (with Leah and Bekka).",
+        "Katya's DEF shred makes her Physical hits land harder in mixed squads."
       ]
     }
   }

@@ -1,0 +1,93 @@
+{
+  "catalog": "V202610032200",
+  "strings": {
+    "lineup_benefit_condition_1": {
+      "file": "lang_hmi_en.json",
+      "en": "Deploy 3 Heroes of the same type."
+    },
+    "lineup_benefit_condition_2": {
+      "file": "lang_hmi_en.json",
+      "en": "Deploy 3 Heroes of the same type and 2 of another type."
+    },
+    "lineup_benefit_condition_3": {
+      "file": "lang_hmi_en.json",
+      "en": "Deploy 4 Heroes of the same type."
+    },
+    "lineup_benefit_condition_4": {
+      "file": "lang_hmi_en.json",
+      "en": "Deploy 5 Heroes of the same type."
+    },
+    "lineup_benefit_des_1": {
+      "file": "lang_hmi_en.json",
+      "en": "Hero HP, ATK, DEF +5% in battle."
+    },
+    "lineup_benefit_des_2": {
+      "file": "lang_hmi_en.json",
+      "en": "Hero HP, ATK, DEF +10% in battle."
+    },
+    "lineup_benefit_des_3": {
+      "file": "lang_hmi_en.json",
+      "en": "Hero HP, ATK, DEF +15% in battle."
+    },
+    "lineup_benefit_des_4": {
+      "file": "lang_hmi_en.json",
+      "en": "Hero HP, ATK, DEF +20% in battle."
+    },
+    "faction_counter_guide": {
+      "file": "lang_hmi_en.json",
+      "en": "Warrior heroes take 20% reduced damage from Assault heroes.\nAssault heroes take 20% reduced damage from Tactical heroes.\nTactical heroes take 20% reduced damage from Warrior heroes."
+    },
+    "faction_counter_effect_description": {
+      "file": "lang_hmi_en.json",
+      "en": "Faction suppression will reduce damage by 20%"
+    },
+    "faq_report_contrast_hero_num": {
+      "file": "lang_hmi_en.json",
+      "en": "Deploy Heroes:\n1. Deploy up to 5 heroes per squad.\n2. Deployed heroes activate faction bonuses.\n3. Deployed heroes affect Soldier Morale.\n4. Deploy all heroes to maximize squad power."
+    },
+    "faq_report_contrast_lineup": {
+      "file": "lang_hmi_en.json",
+      "en": "Unit Type Counters:\n1. Heroes are divided into 3 types: Warrior, Tactical, and Assault.\n2. Unit types counter each other:\nWarrior heroes deal 20% less damage to Tactical heroes.\nTactical heroes deal 20% less damage to Assault heroes.\nAssault heroes deal 20% less damage to Warrior heroes."
+    },
+    "faq_report_contrast_position": {
+      "file": "lang_hmi_en.json",
+      "en": "Hero Classes:\n1. Heroes have 3 classes: Defense, Attack, and Support.\n2. Defense Heroes can take more damage. Place them in the front row to maximize their class effectiveness."
+    },
+    "report_contrast_position": {
+      "file": "lang_hmi_en.json",
+      "en": "Place DEF heroes in front!"
+    },
+    "same_faction_count_bonus_guide": {
+      "file": "lang_hmi_en.json",
+      "en": "Deploy enough Heroes from the same faction, or from two different factions, to activate corresponding lineup bonuses."
+    },
+    "Equipment_Attribute_Description_4": {
+      "file": "lang_hmi_en.json",
+      "en": "When faction counters trigger, the advantaged side takes reduced damage. This effect calculates independently. Hero Faction Counters are: \nWarrior counters Assault\nAssault counters Tactical\nTactical counters Warrior\nDamage reduction effect has a base value of 20%"
+    },
+    "report_title_lineup_win_all": {
+      "file": "lang_hmi_en.json",
+      "en": "<color=#9CD75A>Our lineup completely counters the enemy.</color>"
+    },
+    "report_title_lineup_lose_all": {
+      "file": "lang_hmi_en.json",
+      "en": "<color=#FF7676>Our lineup is completely countered by the enemy.</color>"
+    },
+    "city_popup_messages_text_18": {
+      "file": "lang_base_en.json",
+      "en": "Heroes come in frontline and backline, corresponding to their optimal battle positions."
+    },
+    "loading_tips_09": {
+      "file": "lang_tips_en.json",
+      "en": "During battles, deploy Frontline Heroes in the front row to absorb damage"
+    },
+    "attribute_effects_des006": {
+      "file": "lang_benefit_en.json",
+      "en": "Deals increased damage when attacking countered targets. This effect calculates independently. Hero Faction Counters:\nWarrior counters Assault\nAssault counters Tactical\nTactical counters Warrior"
+    },
+    "attribute_effects_des012": {
+      "file": "lang_benefit_en.json",
+      "en": "Takes less damage when attacked by a countered target. This effect calculates independently. Hero Faction Counters:\nWarrior counters Assault\nAssault counters Tactical\nTactical counters Warrior"
+    }
+  }
+}

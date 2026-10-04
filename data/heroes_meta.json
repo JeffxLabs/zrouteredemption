@@ -439,45 +439,431 @@
   },
   "global_insights": [
     {
-      "title": "Roles are set by the stat profile, and it shows",
-      "body": "Every UR frontliner has 10.5k–14.3k HP and 7.8k–9.7k ATK; every UR backliner flips that to 5.5k–6.5k HP and 13.6k–15.7k ATK. The outliers are the interesting heroes: Vera is the only tank built to deal damage (highest frontline ATK, lowest UR frontline HP), Lucian is the most fragile UR, and Bekka is the bulkiest hero in the game."
+      "title": "Fill the squad with one faction",
+      "body": "A squad has 5 heroes. Heroes from the same faction unlock a bonus to HP, ATK and DEF: 3 of one faction gives +5%, 3 plus 2 of another faction +10%, 4 of one faction +15%, and all 5 +20%."
     },
     {
-      "title": "DEF is a shield, not armor",
-      "body": "The game's own stat help says DEF is a shield value that absorbs most incoming damage and stops working once broken. Front-row DEF buffs (Conan, Dirk) add shield HP, Katya's DEF shred breaks shields faster, and the flat damage-reduction passives (Arnold, Dirk, Vince, Virgilio) are a separate layer that keeps working after the shield is gone."
+      "title": "Know the counter triangle",
+      "body": "Warrior beats Assault, Assault beats Tactical, Tactical beats Warrior. When your faction counters theirs, your heroes take 20% less damage from them. The game's battle report tells you whether your lineup counters the enemy or is countered."
     },
     {
-      "title": "Half the SSR passives only work on monsters",
-      "body": "Nora, Zara, Kim Mina, Conan, Toxina, Aria, Lee Yu, Jack and Taylor all have passives (and often battle skills) worded 'damage to monsters' or 'damage from monsters'. They are strong for zombies, rallies and events, but in PvP those lines do nothing. Rachel, Logan, Celeste and Nora (#10011) carry unconditional ATK or Crit passives and are the SSRs to keep for PvP."
+      "title": "Tanks in front, damage in back",
+      "body": "A squad has 2 front-row and 3 back-row slots. Frontline heroes have the HP and DEF to absorb hits, so the game tells you to put them in front. Backline heroes deal the damage from behind. Carter (Support) belongs in the back row."
     },
     {
-      "title": "Exclusive weapons reward single-faction teams",
-      "body": "Monroe's stacks are capped by the Warrior heroes on your team, Leah's by Tactical heroes and Yana's by Assault heroes. Each weapon also unlocks a [Faction Boost] talent that raises HP/ATK/DEF for that faction. If you own one of these three, build the rest of the team around her faction."
+      "title": "Many SSRs only shine against zombies",
+      "body": "About half of the SSR heroes have skills that only work against monsters (\"damage to monsters\", \"damage from monsters\"). They are great for zombies, rallies and events but weak in PvP. Rachel, Logan and Celeste have boosts that work everywhere."
     },
     {
-      "title": "An exclusive weapon is worth more than 150 levels",
-      "body": "At weapon level 30 the curve grants +702,792 HP, +8,366 ATK, +4,183 DEF and +5% DMG Resistance, more HP than the whole Lv. 150 level curve (+537,095). It also raises the hero's skill caps from 30 to 40 (levels 31–40 cost another 350,000 skill books). Strengthening the weapon also gives every hero up to +800 ATK, +40,000 HP and +200 DEF, so the shards help your whole roster."
+      "title": "DEF is a shield",
+      "body": "The game describes DEF as a shield that absorbs most damage until it breaks. DEF buffs (Conan, Dirk) add shield; Katya breaks shields faster; damage-reduction passives (Arnold, Dirk, Vince, Virgilio) keep working after the shield is gone."
     },
     {
-      "title": "Stars come before skill books",
-      "body": "Skill level caps are locked to whole stars: 1★ → Lv. 1, 2★ → 5, 3★ → 10, 4★ → 20, 5★ → 30. Books spent early are capped anyway, and the client skill weight for every combat skill multiplies about 10.6× from 0★ to 5★ (UR 3,600 → 38,400; SSR 3,250 → 34,600). Going from 0★ to 5★ costs 975 shards (25 steps at 5/10/20/60/100 shards)."
+      "title": "Physical vs Radiation",
+      "body": "There are two damage types. All three exclusive weapons deal Radiation damage. Bekka and Virgilio are the Radiation counters; Arnold's shield only blocks Physical damage. A front line with both covers you either way."
     },
     {
-      "title": "UR heroes start faster, but the curves meet at Lv. 65",
-      "body": "UR heroes (except UR Aria) use level curve 2, which grants 27–46% more HP/ATK/DEF than curve 1 between Lv. 1 and Lv. 50. From Lv. 65 the two curves are identical up to Lv. 175. Troop command grows identically on both curves: 52 at Lv. 1, 351 at Lv. 150 and 400 at Lv. 175."
+      "title": "Exclusive weapons are huge",
+      "body": "A level-30 exclusive weapon adds about 703k HP, 8.4k ATK, 4.2k DEF and 5% damage resistance to its hero. That is more HP than levelling the hero to 150. It also raises skill caps from 30 to 40. Upgrading it gives every hero up to +40k HP, +800 ATK and +200 DEF, so weapon shards help your whole roster."
     },
     {
-      "title": "Radiation vs Physical is a real matchup",
-      "body": "The game has two damage types (Physical and Radiation) with matching defenses. All three exclusive weapons deal Radiation damage, and Monroe and Yana also have Radiation passives. Bekka (enemy Radiation DMG down + Radiation DR) and Virgilio (team Radiation DR) are the counters. Arnold's Field Support only stops Physical damage, so a strong front row covers both."
+      "title": "Raise stars before skill books",
+      "body": "Star level caps skill level: 1★ → Lv. 1, 2★ → 5, 3★ → 10, 4★ → 20, 5★ → 30. Books beyond the cap are wasted, so star a hero up first. Going from 0 to 5 stars takes 975 shards."
     },
     {
-      "title": "Carter fits any team",
-      "body": "The only Support hero buffs ALL allies' ATK (Hawkeye), speeds skill cooldowns and protects your highest-ATK hero (Sheriff), and none of it is faction- or monster-gated."
+      "title": "UR heroes start faster",
+      "body": "UR heroes get about 27–46% more HP, ATK and DEF from levels 1–50. From Lv. 65 every hero gains the same from levelling, and the hero's own base stats make the difference. Troop command rises from 52 at Lv. 1 to 351 at Lv. 150."
     },
     {
-      "title": "SR heroes are your gatherers",
-      "body": "Jamal, Hank and Jackson are the only heroes whose levelBenefit is Soldier Load Increase rather than a faction stat bonus. They have no passive and the lowest skill weights, so give them gathering marches, not combat slots."
+      "title": "Carter fits anywhere; SR heroes gather",
+      "body": "Carter's buffs work in any squad and against any enemy. Jamal, Hank and Jackson are weak fighters but the only heroes that raise Soldier Load, so use them for gathering."
     }
   ],
-  "about": "Curated reading of the datamined client data (heroes.json from tables 1.30.07, English hero text from catalog V202610032200). Each claim cites the skill text or table field it comes from. Skill effect values ({0} in the game text) live in NewHeroSkillEffect, which is not extracted, so tips compare mechanics and stat profiles, not exact percentages."
+  "squad": {
+    "size": 5,
+    "front_slots": 2,
+    "back_slots": 3,
+    "lineup_bonus": [
+      {
+        "condition": "Deploy 3 Heroes of the same type.",
+        "effect": "Hero HP, ATK, DEF +5% in battle.",
+        "percent": 5,
+        "pattern": [
+          3
+        ]
+      },
+      {
+        "condition": "Deploy 3 Heroes of the same type and 2 of another type.",
+        "effect": "Hero HP, ATK, DEF +10% in battle.",
+        "percent": 10,
+        "pattern": [
+          3,
+          2
+        ]
+      },
+      {
+        "condition": "Deploy 4 Heroes of the same type.",
+        "effect": "Hero HP, ATK, DEF +15% in battle.",
+        "percent": 15,
+        "pattern": [
+          4
+        ]
+      },
+      {
+        "condition": "Deploy 5 Heroes of the same type.",
+        "effect": "Hero HP, ATK, DEF +20% in battle.",
+        "percent": 20,
+        "pattern": [
+          5
+        ]
+      }
+    ],
+    "counters": [
+      {
+        "faction": "Warrior",
+        "beats": "Assault",
+        "faction_id": 3,
+        "beats_id": 2
+      },
+      {
+        "faction": "Assault",
+        "beats": "Tactical",
+        "faction_id": 2,
+        "beats_id": 1
+      },
+      {
+        "faction": "Tactical",
+        "beats": "Warrior",
+        "faction_id": 1,
+        "beats_id": 3
+      }
+    ],
+    "counter_reduction_percent": 20,
+    "rules_text": {
+      "faction_counter_guide": "Warrior heroes take 20% reduced damage from Assault heroes. Assault heroes take 20% reduced damage from Tactical heroes. Tactical heroes take 20% reduced damage from Warrior heroes.",
+      "faction_counter_effect_description": "Faction suppression will reduce damage by 20%",
+      "faq_report_contrast_hero_num": "Deploy Heroes: 1. Deploy up to 5 heroes per squad. 2. Deployed heroes activate faction bonuses. 3. Deployed heroes affect Soldier Morale. 4. Deploy all heroes to maximize squad power.",
+      "faq_report_contrast_position": "Hero Classes: 1. Heroes have 3 classes: Defense, Attack, and Support. 2. Defense Heroes can take more damage. Place them in the front row to maximize their class effectiveness.",
+      "city_popup_messages_text_18": "Heroes come in frontline and backline, corresponding to their optimal battle positions.",
+      "loading_tips_09": "During battles, deploy Frontline Heroes in the front row to absorb damage",
+      "same_faction_count_bonus_guide": "Deploy enough Heroes from the same faction, or from two different factions, to activate corresponding lineup bonuses.",
+      "Equipment_Attribute_Description_4": "When faction counters trigger, the advantaged side takes reduced damage. This effect calculates independently. Hero Faction Counters are: Warrior counters Assault Assault counters Tactical Tactical counters Warrior Damage reduction effect has a base value of 20%"
+    },
+    "row_evidence": "Skill texts target 'the 2 front enemies' and 'the 3 back enemies' (Bekka, Celeste, Yana), so a squad is 2 front + 3 back."
+  },
+  "glossary": {
+    "Barrage Amplification": {
+      "text": "Radiation damage increased by 3%. Stacks up to 15%",
+      "source": "exclusiveSkillDes_30006_link01",
+      "kind": "keyword"
+    },
+    "Radiation Charge": {
+      "text": "Radiation damage increased by 3%, reduced by 1 stack with each basic attack",
+      "source": "exclusiveSkillDes_50006_link01",
+      "kind": "keyword"
+    },
+    "Tactical Surge": {
+      "text": "Leah's Attack Speed increased by 20%, up to 100%, lasts 4s",
+      "source": "exclusiveSkillDes_50006_link02",
+      "kind": "keyword"
+    },
+    "Overload Charge": {
+      "text": "Deals radiation damage equal to 3% of Yana's Attack per second, lasting 30s. Stacks up to 15 times",
+      "source": "exclusiveSkillDes_50011_link01",
+      "kind": "keyword"
+    },
+    "Plunder": {
+      "text": "Increases the amount of Iron Ore, Food, and Oil obtained after defeating Metal Zombies, Food Zombies, Oil Zombies, and Elite Zombie Hordes.",
+      "source": "heroSkillDes_10006_3_link1",
+      "kind": "keyword"
+    },
+    "Pursuer": {
+      "text": "Damage dealt to Wild Monsters and Rally Monsters +5%.",
+      "source": "heroSkillDes_10006_3_link2",
+      "kind": "keyword"
+    },
+    "Stun": {
+      "text": "While stunned, skills will fail to activate and immediately enter cooldown.",
+      "source": "heroSkillDes_50007_2_link",
+      "kind": "keyword"
+    },
+    "Guard": {
+      "text": "Counterattacks the attacker with an auto attack each time you are hit, up to once per second.",
+      "source": "heroSkillDes_50009_2_link",
+      "kind": "keyword"
+    },
+    "Warrior Vanguard": {
+      "text": "In battle, increases Life, Attack, and Defense of all allied Warrior Heroes by {0}%",
+      "source": "exclusiveSkillName_Talent_1",
+      "kind": "keyword"
+    },
+    "Tactical Mastery": {
+      "text": "In battle, increases Life, Attack, and Defense of all allied Tactical Heroes by {0}%",
+      "source": "exclusiveSkillName_Talent_2",
+      "kind": "keyword"
+    },
+    "Assault Vanguard": {
+      "text": "In battle, increase all Assault Heroes' HP, Attack, and Defense by {0}%",
+      "source": "exclusiveSkillName_Talent_3",
+      "kind": "keyword"
+    },
+    "Faction Boost": {
+      "text": "Exclusive-weapon talent that raises HP, ATK and DEF of all allied heroes of the weapon's faction.",
+      "source": "exclusiveSkillDes_Talent_1..3",
+      "kind": "keyword"
+    },
+    "Radiation DMG": {
+      "text": "Deals Radiation damage. Grants energy defense that reduces incoming Radiation damage.",
+      "source": "hero_skillEffectType_Des_3/4",
+      "kind": "term",
+      "match": [
+        "Radiation DMG",
+        "Radiation damage"
+      ]
+    },
+    "Physical DMG": {
+      "text": "Deals physical damage. Grants physical defense that reduces incoming physical damage.",
+      "source": "hero_skillEffectType_Des_1/2",
+      "kind": "term",
+      "match": [
+        "Physical DMG",
+        "Physical damage"
+      ]
+    },
+    "DEF": {
+      "text": "The hero's shield value can absorb most enemy damage; once broken, it becomes ineffective.",
+      "source": "hero_Attr_Def_Des",
+      "kind": "term",
+      "match": [
+        "DEF"
+      ]
+    },
+    "ATK": {
+      "text": "Base damage value when the hero uses their skill.",
+      "source": "hero_Attr_Atk_Des",
+      "kind": "term",
+      "match": [
+        "ATK"
+      ]
+    },
+    "Front row": {
+      "text": "Heroes come in frontline and backline, corresponding to their optimal battle positions. A squad has 2 front-row slots.",
+      "source": "city_popup_messages_text_18",
+      "kind": "term",
+      "match": [
+        "front-row",
+        "front row",
+        "front enemies"
+      ]
+    },
+    "Back row": {
+      "text": "The 3 rear slots of a squad, where Backline heroes deal damage from safety.",
+      "source": "squad layout",
+      "kind": "term",
+      "match": [
+        "back-row",
+        "back row",
+        "back enemies"
+      ]
+    },
+    "Monsters": {
+      "text": "Zombies and other PvE enemies (wild, rally and event monsters). Skills that mention monsters do nothing against players.",
+      "source": "skill wording",
+      "kind": "term",
+      "match": [
+        "monsters",
+        "Monsters"
+      ]
+    }
+  },
+  "unreleased": [
+    {
+      "id": 10009,
+      "name": "Travis",
+      "story": "The Mech Emperor is the name given by the Mech Combat Alliance, undefeated in the arena and never revealing his true identity. This led people to believe he might actually be an AI controlling the mech. After the apocalypse, he appeared on the battlefield, using his signature moves from the arena to defeat enemy troops. His mystery only adds to his allure, now the dream of countless surviving girl",
+      "skills": [
+        {
+          "slot": 1,
+          "name": "Iron Judgment",
+          "description": "Launches an energy orb at enemies, dealing {0} ATK damage (CD: {1}s)",
+          "icon": null
+        },
+        {
+          "slot": 2,
+          "name": "Meteorite",
+          "description": "Launches a massive rocket punch at all enemies, dealing {0} ATK damage and has a {1}% chance to stun them for {2}s (CD: {3}s)",
+          "icon": null
+        },
+        {
+          "slot": 3,
+          "name": "Heavy Echo",
+          "description": "Increases shield by {0} and HP by {1}.",
+          "icon": null
+        }
+      ]
+    },
+    {
+      "id": 10010,
+      "name": "Chen Yiwen",
+      "story": "The dying quantum scientist Joaquin gently stroked his daughter Joelle's head in a pool of blood. Once the Abyssling broke down the lab door and killed the father and daughter, the city's living population would be reduced to zero. \"Dad said he's leaving.\" Sitting atop a pile of scrapped Abyssling mechs, Joelle told the astonished rescue team, \"I said I wanted to go with him, but he refused.\" Her ",
+      "skills": [
+        {
+          "slot": 1,
+          "name": "Quantum Dad",
+          "description": "Attacks enemies with a phantom, dealing {0} ATK damage (CD: {1}s)",
+          "icon": "../assets/heroes/skills/10010_1.webp"
+        },
+        {
+          "slot": 2,
+          "name": "Father's Love",
+          "description": "Uses a phantom to prioritize attacking back-row enemies, dealing {0} ATK damage and reducing their ATK by {1}% for {2}s (CD: {3}s)",
+          "icon": "../assets/heroes/skills/10010_2.webp"
+        },
+        {
+          "slot": 3,
+          "name": "Don't touch my daughter",
+          "description": "Increases shield by {0} and HP by {1}.",
+          "icon": "../assets/heroes/skills/10010_3.webp"
+        }
+      ]
+    },
+    {
+      "id": 20008,
+      "name": "\"Pepper\" Harper",
+      "story": "In the early stages of the Abyss War, the Abyssling had only fully mechanized units, even the zombified human army was controlled by parasitic machine helmets. It was the emergence of this entity that forced the Abyssling to develop genetic technology and deploy biochemical units on the battlefield. Without this, you would witness large swathes of the Abyssling's mechanical Troop either paralyzed ",
+      "skills": [
+        {
+          "slot": 1,
+          "name": "Disruption Cannon",
+          "description": "Attacks enemies with a laser cannon, dealing {0} ATK damage (CD: {1}s)",
+          "icon": "../assets/heroes/skills/20008_1.webp"
+        },
+        {
+          "slot": 2,
+          "name": "Digital Apocalypse",
+          "description": "Launches a simulated black hole to attack enemies, dealing {0} ATK damage to all enemies and increasing damage by {2}% to targets with less than {1}% HP (CD: {3}s)",
+          "icon": "../assets/heroes/skills/20008_2.webp"
+        },
+        {
+          "slot": 3,
+          "name": "Ruthless Witch",
+          "description": "Increases shield by {0} and HP by {1}.",
+          "icon": "../assets/heroes/skills/20008_3.webp"
+        }
+      ]
+    },
+    {
+      "id": 40004,
+      "name": "Zoe",
+      "story": "Evelyn, oh Evelyn! My creator! I offer you my fervent core, engraved with your name. My reactor emits the glow of your signature color, and my storage is filled with your visage. I sculpt my core in your likeness, tirelessly calculating how to love you. You need not acknowledge or respond to me. I will always watch you, captivated by the exquisite tapestry of the truth seeker.",
+      "skills": [
+        {
+          "slot": 1,
+          "name": "Black Mamba",
+          "description": "Fires an energy beam at enemies, dealing {0} ATK damage (CD: {1}s)",
+          "icon": "../assets/heroes/skills/40004_1.webp"
+        },
+        {
+          "slot": 2,
+          "name": "For Evelyn",
+          "description": "Attacks all enemies with psychic energy, dealing {0} ATK damage and has a {1}% chance to disable their normal attacks for {2}s (CD: {3}s)",
+          "icon": "../assets/heroes/skills/40004_2.webp"
+        },
+        {
+          "slot": 3,
+          "name": "Stand in the corner",
+          "description": "Increases shield by {0} and HP by {1}.",
+          "icon": "../assets/heroes/skills/40004_3.webp"
+        }
+      ]
+    },
+    {
+      "id": 40011,
+      "name": "Caleb",
+      "story": "Former naval leader Gustaf was always gloomy, saying his dream was to become a great pirate, yet he couldn't plunder humans, a contradiction that seemed to make his dream unattainable. Now it's different; after his navy was defeated by the Abyss Empire, he fulfilled his dream. Commanding a pirate ship is much easier than leading a military fleet, and he quickly became the Abyssling's maritime nigh",
+      "skills": [
+        {
+          "slot": 1,
+          "name": null,
+          "description": null,
+          "icon": "../assets/heroes/skills/40011_1.webp"
+        },
+        {
+          "slot": 2,
+          "name": null,
+          "description": null,
+          "icon": "../assets/heroes/skills/40011_2.webp"
+        },
+        {
+          "slot": 3,
+          "name": null,
+          "description": null,
+          "icon": "../assets/heroes/skills/40011_3.webp"
+        }
+      ]
+    },
+    {
+      "id": 40012,
+      "name": "Marcus",
+      "story": "No one knows what the world looks like through his profound gaze. To him, it's the reality: both humans and Abysslings are terminally ill. It's the path he believes in: anything can be \"corrected\" through his thorough surgery. Cooperate with caution, but don't attempt to understand or get close to him. His unparalleled nano-medical skills are a disaster for the Abysslings when controlled. In uncon",
+      "skills": [
+        {
+          "slot": 1,
+          "name": "Deathbringer Bolt",
+          "description": "Attacks enemies with a crossbow, dealing {0} ATK damage (CD: {1}s)",
+          "icon": "../assets/heroes/skills/40012_1.webp"
+        },
+        {
+          "slot": 2,
+          "name": "Reaper's Passage",
+          "description": "Crafts a hurricane to attack two random enemies on the field, dealing {0} ATK damage and having a {1}% chance to stun the enemy for {2}s (CD: {3}s)",
+          "icon": "../assets/heroes/skills/40012_2.webp"
+        },
+        {
+          "slot": 3,
+          "name": "Silent to the End",
+          "description": "Increases shield by {0} and HP by {1}.",
+          "icon": "../assets/heroes/skills/40012_3.webp"
+        }
+      ]
+    }
+  ],
+  "faction_icons": {
+    "Tactical": {
+      "shield": "../assets/heroes/ui/camp_1.webp",
+      "ring": "../assets/heroes/ui/faction_ring_1.webp",
+      "badge": "../assets/heroes/ui/badge_1.webp"
+    },
+    "Assault": {
+      "shield": "../assets/heroes/ui/camp_2.webp",
+      "ring": "../assets/heroes/ui/faction_ring_2.webp",
+      "badge": "../assets/heroes/ui/badge_2.webp"
+    },
+    "Warrior": {
+      "shield": "../assets/heroes/ui/camp_3.webp",
+      "ring": "../assets/heroes/ui/faction_ring_3.webp",
+      "badge": "../assets/heroes/ui/badge_3.webp"
+    }
+  },
+  "role_icons": {
+    "Frontline": {
+      "tile": "../assets/heroes/ui/role_1.webp",
+      "ring": "../assets/heroes/ui/role_ring_1.webp",
+      "label": "Frontline Hero",
+      "description": "Excels at absorbing enemy damage in the frontline, boasting formidable defense with significant HP and shield growth."
+    },
+    "Support": {
+      "tile": "../assets/heroes/ui/role_2.webp",
+      "ring": "../assets/heroes/ui/role_ring_2.webp",
+      "label": "Support Hero",
+      "description": "A well-rounded hero that excels at elevating team performance."
+    },
+    "Backline": {
+      "tile": "../assets/heroes/ui/role_3.webp",
+      "ring": "../assets/heroes/ui/role_ring_3.webp",
+      "label": "Backline Hero",
+      "description": "Excels at dealing damage from the backline, possessing powerful attack capabilities and skills."
+    }
+  },
+  "about": "Plain-language reading of the datamined client data: hero tables from client 1.30.07 and English game text from catalog V202610032200. Every tip follows from a skill description, a stat or a rule text in the game files. Exact skill percentages are not extracted yet, so tips compare what skills do, not their numbers."
 }

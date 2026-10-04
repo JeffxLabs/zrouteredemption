@@ -1,447 +1,463 @@
 {
-  "_about": "Curated reading of the datamined client data (heroes.json from tables 1.30.07, English hero text from catalog V202610032200). Each claim cites the skill text or table field it comes from. Skill effect values ({0} in the game text) live in NewHeroSkillEffect, which is not extracted, so tips compare mechanics and stat profiles, not exact percentages.",
+  "_about": "Plain-language reading of the datamined client data: hero tables from client 1.30.07 and English game text from catalog V202610032200. Every tip follows from a skill description, a stat or a rule text in the game files. Exact skill percentages are not extracted yet, so tips compare what skills do, not their numbers.",
   "heroes": {
     "10005": {
       "focus": "pvp",
+      "position": "back",
       "tags": [
-        "Burst AoE",
-        "Self ATK"
+        "Burst damage",
+        "ATK boost"
       ],
-      "summary": "Glass-cannon SSR Warrior gunner: low HP (4,165), a self ATK passive and a 4-hit random grenade volley.",
+      "summary": "Fragile Warrior gunner who throws a 4-grenade volley and boosts her own attack.",
       "tips": [
-        "Grenadier splits 4 hits across random targets; it is best against wide enemy lines, not single bosses.",
-        "Caliber Modification is an unconditional ATK passive, so she keeps her value in PvP where the monster-only SSR passives do nothing."
+        "Her grenades land on random enemies, so she is best against full enemy squads, not a single boss.",
+        "Her passive raises her attack in every fight, so she is one of the SSRs still worth using in PvP."
       ]
     },
     "10006": {
       "focus": "pve",
+      "position": "back",
       "tags": [
-        "Monster damage",
-        "Farming",
+        "Zombie farming",
+        "Bonus resources",
         "Account-wide buff"
       ],
-      "summary": "The farming Nora: monster damage, bonus Iron Ore/Food/Oil from resource zombies, and an account-wide monster buff.",
+      "summary": "Awakened Nora (after the antidote questline): the zombie-farming specialist. More resources from resource zombies, and a buff for every squad.",
       "tips": [
-        "Her [Pursuer] buff (+5% damage to Wild and Rally Monsters) applies to all squads even if she is not deployed, so owning and starring her helps every rally.",
-        "Put her in the squad that clears Metal, Food and Oil Zombies and Elite Zombie Hordes: [Plunder] raises the resources those kills drop.",
-        "Scavenger makes the target take 9% more damage from monsters for 7s; that only matters in PvE."
+        "Owning her gives ALL your squads +5% damage to Wild and Rally Monsters, even when she is not deployed.",
+        "Put her in the squad that farms Metal, Food and Oil Zombies and Elite Zombie Hordes: her squad gets more Iron Ore, Food and Oil from those kills.",
+        "Her skills only work against monsters, so leave her out of PvP squads."
       ]
     },
     "10007": {
-      "focus": "both",
+      "focus": "pvp",
+      "position": "front",
       "tags": [
-        "Front-row protection",
-        "Physical DR"
+        "Protects front row",
+        "Physical defense"
       ],
-      "summary": "UR Warrior shield wall: both his battle skill and passive cut damage taken by the whole front row.",
+      "summary": "Warrior tank who reduces the damage the whole front row takes.",
       "tips": [
-        "Field Support only reduces Physical DMG, so he is strongest against gun and blade teams; pair him with Virgilio or Bekka against Radiation teams.",
-        "Tactical Shield is an always-on front-row damage reduction, so he lifts every frontliner beside him, not just himself."
+        "Both his battle skill and passive protect every front-row ally, not just him.",
+        "His shield skill blocks Physical damage only. Against Radiation-heavy squads (Monroe, Yana, Leah), add Virgilio or Bekka."
       ]
     },
     "10008": {
       "focus": "pve",
+      "position": "front",
       "tags": [
-        "Monster DR",
+        "Zombie tank",
         "Flamethrower"
       ],
-      "summary": "SSR Warrior tank tuned for zombies: Roar and Robust Physique keep her alive in PvE.",
+      "summary": "Warrior tank built for zombie fights: her roar cuts damage from monsters and her passive raises her DEF.",
       "tips": [
-        "Her auto attack has a 4.0s interval in the table (Hank shares it); the flamethrower hits hard but slowly.",
-        "Roar and Robust Physique keep her alive against zombies; for PvP a UR frontliner (Arnold, Dirk) does more."
-      ]
-    },
-    "10011": {
-      "focus": "pvp",
-      "tags": [
-        "Crit",
-        "Multi-target"
-      ],
-      "summary": "Crossbow Nora with her dog Max: 2-target auto attacks and a Crit Rate passive.",
-      "tips": [
-        "Composure is an unconditional Crit Rate passive, so unlike the farming Nora she keeps her value in PvP.",
-        "Same name as the farming Nora (#10006) but a different hero with different skills; check the ID before spending shards."
+        "Her flamethrower fires slowly (one attack every 4 seconds) but hits hard.",
+        "Her roar only reduces damage from monsters, so use Arnold or Dirk in PvP."
       ]
     },
     "20005": {
       "focus": "pve",
+      "position": "back",
       "tags": [
-        "Back-row buff",
-        "Monster DR"
+        "Buffs back row",
+        "Zombie defense"
       ],
-      "summary": "Tactical SSR support-shooter: Cheer Captain raises back-row allies' damage to monsters.",
+      "summary": "Tactical archer and cheerleader: her dance raises your back row's damage against monsters.",
       "tips": [
-        "Her value scales with how strong your back row is; put her behind Leah, Silas or Katya for zombie events.",
-        "Both her battle skill and passive are monster-only; bench her for PvP."
+        "The stronger your back row, the more her buff is worth. Pair her with Leah, Silas or Katya in zombie events.",
+        "Her buff and passive only work against monsters, so bench her for PvP."
       ]
     },
     "20006": {
       "focus": "pve",
+      "position": "front",
       "tags": [
-        "Front-row DEF buff",
-        "Monster DR"
+        "Shields front row",
+        "Zombie defense"
       ],
-      "summary": "Tactical SSR frontliner who buffs front-row DEF. DEF is the hero's shield pool in this game.",
+      "summary": "Tactical tank whose battle song gives the front row extra DEF (shield) for 6 seconds.",
       "tips": [
-        "Battle Anthem raises front-row DEF for 6s. The game describes DEF as a shield that absorbs damage until broken, so this is extra shield, not a % reduction.",
-        "His passive only reduces monster damage; in PvP a UR frontliner (Bekka, Virgilio) does more."
+        "In this game DEF works as a shield that soaks damage until it breaks, so his song adds shield to your front line.",
+        "His passive only reduces monster damage. In PvP, Bekka or Virgilio do the job better."
       ]
     },
     "20009": {
       "focus": "pvp",
+      "position": "back",
       "tags": [
-        "Self ATK",
-        "Multi-target"
+        "ATK boost",
+        "Hits 2 targets"
       ],
-      "summary": "Warrior SSR Molotov thrower with a flat ATK passive and 2-target bursts.",
+      "summary": "Warrior Molotov thrower with a permanent attack boost and 2-target fire bombs.",
       "tips": [
-        "High Pressure Air Pump is an unconditional ATK boost, so he stays useful outside PvE.",
-        "Multiple Loading hits 2 random enemies, so he spreads damage rather than focusing one target."
+        "His attack boost works in every fight, PvP included.",
+        "His battle skill splits damage across 2 random enemies rather than focusing one."
       ]
     },
     "30001": {
       "focus": "pve",
+      "position": "front",
       "tags": [
-        "ATK debuff",
-        "Monster DR"
+        "Weakens enemy ATK",
+        "Zombie defense"
       ],
-      "summary": "Warrior SSR poison tank: Venom Burst hits 2 front-row enemies and cuts their ATK by 6% for 4s.",
+      "summary": "Warrior poison tank whose venom shot hits 2 front enemies and lowers their attack by 6% for 4 seconds.",
       "tips": [
-        "Venom Burst's -6% ATK is a fixed value in the text and works on any target, including players.",
-        "Nimble Steps only reduces monster damage, so she is a PvE tank first."
+        "The -6% ATK works on any enemy, players included.",
+        "Her passive only reduces monster damage, so she is mainly a zombie tank."
       ]
     },
     "30003": {
       "focus": "pve",
+      "position": "back",
       "tags": [
-        "Warrior back-row buff",
-        "Monster damage"
+        "Buffs Warrior back row",
+        "Zombie damage"
       ],
-      "summary": "SSR Aria: quick 1.10s auto attack and a passive that buffs back-row Warriors against monsters.",
+      "summary": "SSR Aria: a quick-firing rifle and a passive that makes your back-row Warriors hit monsters harder.",
       "tips": [
-        "Zombie Hunter boosts every back-row Warrior's damage to monsters; she is a natural partner for Monroe, Lucian, Rachel and Logan in zombie content.",
-        "The UR Aria (#31003) uses the same skills and SSR skill weights; see her card before choosing which to star."
+        "She is a natural partner for back-row Warriors like Monroe, Lucian, Rachel and Logan in zombie content.",
+        "The UR Aria (#31003) shares her skills. Decide which one to invest in before spending shards."
       ]
     },
     "30004": {
       "focus": "pvp",
+      "position": "back",
       "tags": [
-        "Highest SSR ATK",
-        "Front-target"
+        "Highest SSR attack",
+        "Hits front row"
       ],
-      "summary": "Assault SSR with the highest ATK and lowest HP of any SSR: a pure damage dealer.",
+      "summary": "The hardest-hitting SSR (and the most fragile one): an Assault rocket gunner.",
       "tips": [
-        "White Phosphorus Munition targets the 2 front enemies; she chews through tanks rather than backliners.",
-        "With the lowest SSR HP she needs a real front row (Vera, Vince or Jack) in front of her."
+        "Her phosphorus rounds hit the 2 front enemies, so she shreds tanks.",
+        "She has the lowest HP of any SSR, so keep two solid tanks in front of her."
       ]
     },
     "30005": {
       "focus": "pve",
+      "position": "back",
       "tags": [
-        "5-hit AoE",
-        "Monster damage"
+        "5 grenades",
+        "Zombie damage"
       ],
-      "summary": "Assault SSR grenadier: Frag Grenade throws 5 random grenades, and his passive adds damage to monsters.",
+      "summary": "Assault grenadier: 5 grenades per battle skill and extra damage to monsters.",
       "tips": [
-        "Five random hits make him one of the best SSR wave-clearers for zombie events.",
-        "His passive is monster-only; Celeste is the better Assault SSR for PvP."
+        "Five random grenades make him one of the best SSRs for clearing zombie waves.",
+        "His passive only works against monsters. For PvP, Celeste is the better Assault SSR."
       ]
     },
     "30006": {
-      "focus": "both",
+      "focus": "pvp",
+      "position": "back",
       "tags": [
-        "Radiation",
+        "Radiation damage",
         "Exclusive weapon",
-        "Warrior synergy"
+        "Warrior squads"
       ],
-      "summary": "UR Warrior sniper with an exclusive weapon that scales with Warriors on the team and with her crits.",
+      "summary": "Warrior sniper with an exclusive weapon that grows stronger with every Warrior in the squad.",
       "tips": [
-        "Her exclusive weapon stacks [Barrage Amplification] (+3% Radiation damage each, up to 15%) whenever her own auto attack crits, capped by the number of Warrior heroes in your team. Field her with other Warriors.",
-        "At 4 stacks Annihilation Barrage adds a Devastating Rocket: 5% extra Radiation damage to 3 enemies.",
-        "Her battle skill unlocks at Hero Lv. 1 instead of Lv. 5 like everyone else.",
-        "Her exclusive weapon upgrades her auto attack at weapon Lv. 1 and her battle skill at weapon Lv. 10 and Lv. 30.",
-        "Her exclusive weapon has the earliest season gate of the three (day 3; Leah day 17, Yana day 38)."
+        "With her weapon, each of her own critical hits adds a stack of +3% Radiation damage (max 15%). The stack cap equals the number of Warriors in your squad, so fill the squad with Warriors.",
+        "At 4 stacks she also fires a Devastating Rocket at 3 enemies.",
+        "Her battle skill is available from Hero Lv. 1; everyone else waits until Lv. 5.",
+        "Her weapon unlocks earliest in the season (day 3; Leah day 17, Yana day 38)."
       ]
     },
     "30007": {
       "focus": "pve",
+      "position": "front",
       "tags": [
-        "Slow",
-        "Front-row monster DR"
+        "Slows enemies",
+        "Zombie defense"
       ],
-      "summary": "Assault SSR frontliner: grenades that slow, and Pincer Tactic cuts front-row damage from monsters.",
+      "summary": "Assault tank whose grenades slow enemies and whose tactics cut monster damage to the front row.",
       "tips": [
-        "Tactical Grenade also lowers enemy movement speed, which buys time against charging zombies.",
-        "Both defensive skills are monster-only; use Vera or Vince for Assault PvP fronts."
+        "Slowing enemies buys time against charging zombies.",
+        "His damage reduction only works against monsters. For PvP fronts use Vera or Vince."
       ]
     },
     "30011": {
       "focus": "utility",
+      "position": "back",
       "tags": [
         "Gathering",
-        "Soldier load"
+        "Carry load"
       ],
-      "summary": "SR Tactical bomber. His real job is the Soldier Load levelBenefit, which raises gathering capacity.",
+      "summary": "SR bomber whose real job is gathering: he raises the load your march can carry.",
       "tips": [
-        "SR heroes (Jackson, Jamal, Hank) are the only ones whose levelBenefit is Soldier Load Increase (0.01) instead of a faction stat. Use them to lead gathering marches.",
-        "He has only 2 combat skills plus the Specialty slot (no passive), and his battle-skill name is missing from the client text."
+        "The three SR heroes (Jackson, Jamal, Hank) are the only ones that boost Soldier Load, so send them on gathering marches.",
+        "He has no passive skill, so he is weak in combat."
       ]
     },
     "31003": {
       "focus": "pve",
+      "position": "back",
       "tags": [
-        "UR edition",
-        "Warrior back-row buff"
+        "UR version",
+        "Buffs Warrior back row"
       ],
-      "summary": "UR-quality Aria. She has her own card art but reuses SSR Aria's skills, SSR skill weights and SSR level curve.",
+      "summary": "UR-quality Aria with her own card art but the same skills as SSR Aria.",
       "tips": [
-        "The client has no separate name or skill text for #31003; this page shows SSR Aria's text, and the in-game names may differ.",
-        "HeroInfo gives her UR base stats (HP 6,207 / ATK 14,204), about 1.5x SSR Aria, but her skill weights stay at the SSR values (3,250 → 34,600)."
+        "The game has no separate skill text for this version, so this page shows SSR Aria's skills. In-game names may differ.",
+        "Her base HP and ATK are about 1.5× SSR Aria's, but her skills grow at the SSR rate."
       ]
     },
     "40001": {
       "focus": "utility",
+      "position": "back",
       "tags": [
         "Gathering",
-        "Soldier load"
+        "Carry load"
       ],
-      "summary": "SR gatherer listed as a frontliner, but with backline-like stats (ATK 2.3x HP).",
+      "summary": "SR gatherer. He is listed as Frontline, but his stats are those of a fragile damage dealer.",
       "tips": [
-        "Use for gathering (Soldier Load Increase levelBenefit), not as a tank: his HP is the lowest of any frontliner by far.",
-        "No passive skill; Quick Repair hits the 2 front enemies."
+        "Use him for gathering (bigger Soldier Load), not as a tank: he has by far the lowest HP of any Frontline hero.",
+        "If he must fight, put him in the back row."
       ]
     },
     "40002": {
       "focus": "utility",
+      "position": "front",
       "tags": [
         "Gathering",
-        "Soldier load"
+        "Carry load"
       ],
-      "summary": "SR flame gatherer with real frontline stats and a slow 4.0s auto attack.",
+      "summary": "SR flamethrower gatherer with real tank stats.",
       "tips": [
-        "The sturdier of the three SR gatherers (HP 7,174) if a gathering march might get hit.",
-        "No passive skill."
+        "The sturdiest of the three gatherers, a good pick if your gathering march might be attacked.",
+        "Slow attacks (every 4 seconds) and no passive skill."
       ]
     },
     "40010": {
       "focus": "pve",
+      "position": "back",
       "tags": [
-        "Front-target",
-        "Monster damage"
+        "Hits front row",
+        "Zombie damage"
       ],
-      "summary": "Tactical SSR archer: Heavy Arrow hits the front enemies and her passive adds damage to monsters.",
+      "summary": "Tactical archer whose heavy arrow hits the front enemies and whose passive adds monster damage.",
       "tips": [
-        "A budget back-row filler for Tactical zombie teams until Leah, Silas or Katya are starred.",
-        "Passive is monster-only."
+        "A budget back-row filler for Tactical zombie squads until your UR Tactical heroes are starred.",
+        "Her passive only works against monsters."
       ]
     },
     "50001": {
-      "focus": "both",
+      "focus": "pvp",
+      "position": "front",
       "tags": [
-        "Front-row DEF buff",
+        "Shields front row",
         "Damage reduction"
       ],
-      "summary": "UR Warrior tank: Iron Will raises front-row DEF (shield) and Heavy Armor cuts all damage he takes.",
+      "summary": "Warrior UR tank: his shout adds DEF (shield) to the front row and his armor cuts all damage he takes.",
       "tips": [
-        "Heavy Armor reduces all incoming damage, not just monster damage, so he holds up in PvP.",
-        "Pairs with Arnold: Dirk adds shield (DEF) while Arnold reduces damage, two different layers on the same front row."
+        "His armor works against everything, not just monsters, so he holds up in PvP.",
+        "Pair him with Arnold: Dirk adds shield while Arnold reduces damage, two layers of protection."
       ]
     },
     "50002": {
-      "focus": "both",
+      "focus": "pvp",
+      "position": "back",
       "tags": [
-        "Team ATK",
-        "Cooldown speed",
-        "Only support"
+        "Buffs whole squad",
+        "Faster skills",
+        "Only Support"
       ],
-      "summary": "The only Support hero: team-wide ATK and faster skill cooldowns, in any faction.",
+      "summary": "The only Support hero: he raises the whole squad's attack and makes everyone's skills recharge faster.",
       "tips": [
-        "Hawkeye raises ALL allies' ATK, and Sheriff speeds up skill cooldowns and protects your highest-ATK ally. Few slots give more team value.",
-        "His battle skill has the longest cooldown in the roster (12s), and Sheriff's cooldown speed partly offsets it.",
-        "Sheriff protects the highest-ATK ally, so build your main carry's ATK first and Carter will shield the right hero."
+        "None of his buffs depend on faction or enemy type, so he fits almost any squad.",
+        "His passive also protects your highest-attack ally, so build your main damage dealer first.",
+        "His own battle skill recharges slowly (12 seconds), but his cooldown-speed passive offsets that."
       ]
     },
     "50003": {
-      "focus": "both",
+      "focus": "pvp",
+      "position": "back",
       "tags": [
-        "Highest ATK",
+        "Highest attack",
         "Crit"
       ],
-      "summary": "Highest base ATK in the game (15,706) and lowest UR HP: an all-in Warrior carry with Crit Rate.",
+      "summary": "The highest attack in the game and the lowest HP of any UR: an all-in Warrior damage dealer.",
       "tips": [
-        "Tesla Coil arcs multiple random targets, and Frankenstein adds Crit Rate.",
-        "Needs Arnold or Dirk in front; his HP is the lowest of any UR."
+        "His Tesla Coil arcs between several random enemies, and his passive adds Crit Rate.",
+        "Protect him with Arnold or Dirk; one bad matchup and he goes down first."
       ]
     },
     "50004": {
-      "focus": "both",
+      "focus": "pvp",
+      "position": "front",
       "tags": [
-        "AoE",
-        "Radiation counter",
+        "Hits all enemies",
+        "Stops Radiation",
         "Highest HP"
       ],
-      "summary": "Highest base HP in the game (14,281). Sonic Boom hits all enemies and cuts their Radiation damage.",
+      "summary": "The tankiest hero in the game. Her sonic grenade hits all enemies and weakens their Radiation attacks.",
       "tips": [
-        "Sonic Boom deals Physical damage to ALL enemies and lowers their Radiation damage for 5s, and Ion Shield cuts Radiation damage taken. She hard-counters Radiation carries like Monroe and Yana.",
-        "Pair with Virgilio for a near-complete Radiation shutdown on Tactical teams."
+        "She counters Radiation damage dealers like Monroe and Yana: her grenade lowers their Radiation damage, and her passive cuts the Radiation damage she takes.",
+        "With Virgilio she makes a near Radiation-proof Tactical front line."
       ]
     },
     "50005": {
-      "focus": "both",
+      "focus": "pvp",
+      "position": "front",
       "tags": [
-        "Team Radiation DR",
-        "Front-row DR"
+        "Radiation shield for squad",
+        "Protects front row"
       ],
-      "summary": "UR Tactical anti-Radiation tank: a team-wide Radiation shield plus front-row damage reduction.",
+      "summary": "Tactical tank who shields the whole squad from Radiation damage and toughens the front row.",
       "tips": [
-        "Magnetic Coil reduces Radiation damage taken by ALL allies; Magnetic Armor gives the front row both general and Radiation damage reduction.",
-        "Bring him when the enemy runs Monroe, Yana or Leah, whose exclusive weapons all deal Radiation damage."
+        "His EM pulse lowers Radiation damage taken by ALL allies, so bring him against Monroe, Yana or Leah squads.",
+        "His passive also gives the front row general damage reduction."
       ]
     },
     "50006": {
-      "focus": "both",
+      "focus": "pvp",
+      "position": "back",
       "tags": [
-        "AoE",
+        "Hits all enemies",
         "Exclusive weapon",
-        "Tactical synergy",
-        "Crit"
+        "Tactical squads"
       ],
-      "summary": "UR Tactical sniper: Black Hawk Call hits all enemies, and her exclusive weapon scales with Tactical heroes.",
+      "summary": "Tactical sniper whose helicopter hits every enemy. Her exclusive weapon scales with Tactical heroes.",
       "tips": [
-        "Exclusive weapon: 2 [Radiation Charge] stacks per Tactical hero at battle start (up to 10), plus [Tactical Surge] for +20% attack speed per stack (up to +100%, 4s). Run her in a mostly Tactical team.",
-        "Explosive Start fires her battle skill at 2 front-row enemies the moment battle begins.",
-        "Her exclusive weapon upgrades her auto attack from weapon Lv. 1 and raises all her skill caps from 30 to 40 by weapon Lv. 30.",
-        "Exclusive weapon season gate: day 17 (Monroe day 3, Yana day 38)."
+        "With her weapon she starts each battle with 2 stacks of +3% Radiation damage per Tactical hero (max 10), and gains up to +100% attack speed as she lands hits.",
+        "Her weapon also makes her fire her battle skill at 2 front enemies the moment battle starts.",
+        "Her weapon unlocks on season day 17."
       ]
     },
     "50007": {
-      "focus": "both",
+      "focus": "pvp",
+      "position": "back",
       "tags": [
-        "Back-row assassin",
+        "Hits back row",
         "Stun",
-        "Self ATK"
+        "ATK boost"
       ],
-      "summary": "UR Tactical damage dealer whose spider robot dives the enemy back row with a 20% stun chance.",
+      "summary": "Tactical damage dealer whose spider robot dives the enemy back row, with a 20% chance to stun.",
       "tips": [
-        "[Stun] makes the target's skills fail and go straight to cooldown; hitting back-row carries is where it matters most.",
-        "Overload is a flat ATK passive that works everywhere."
+        "A stunned enemy's skills fail and go straight onto cooldown, so stunning their back-row damage dealers matters most.",
+        "His passive raises his attack in every fight."
       ]
     },
     "50008": {
-      "focus": "both",
+      "focus": "pvp",
+      "position": "back",
       "tags": [
-        "DEF shred",
-        "Physical"
+        "Breaks shields",
+        "Physical damage"
       ],
-      "summary": "UR Tactical machine-gunner: Viper strips 5% DEF per hit (up to 25%) and War Machine boosts Physical damage.",
+      "summary": "Tactical machine-gunner whose toxin rounds strip up to 25% of the target's DEF.",
       "tips": [
-        "Viper's DEF shred (up to -25% for 9s) helps every Physical damage dealer on the team; pair with Nicole's Physical passive in mixed teams or with Leah and Silas in Tactical.",
-        "Because DEF is the shield pool, shredding it makes shields break sooner."
+        "DEF is the enemy's shield: shredding it makes the whole squad's hits break through sooner.",
+        "Her passive boosts Physical damage, which also pairs well with Nicole in mixed squads."
       ]
     },
     "50009": {
-      "focus": "both",
+      "focus": "pvp",
+      "position": "front",
       "tags": [
-        "Counter-attack tank",
-        "Assault synergy"
+        "Counter-attacks",
+        "Assault squads"
       ],
-      "summary": "UR Assault frontliner with the highest ATK of any tank, built to counter-attack while in [Guard].",
+      "summary": "Assault tank who hits back: in Guard state she counter-attacks every time she is hit.",
       "tips": [
-        "Portable Sentry puts her in [Guard]: she auto-attacks back each time she is hit (max once per second), so her high ATK (9,665, highest of any frontliner) is the point.",
-        "Sentinel's front-row damage reduction is doubled for Assault heroes while she is in [Guard]; she belongs with Vince and Jack."
+        "She has the highest attack of any tank, and her Guard state turns that into counter-damage (at most once per second).",
+        "Her passive protects the front row, and the effect doubles for Assault heroes while she is on Guard, so field her with Vince and Jack."
       ]
     },
     "50010": {
-      "focus": "both",
+      "focus": "pvp",
+      "position": "front",
       "tags": [
-        "Taunt",
-        "ATK debuff"
+        "Taunts",
+        "Weakens enemy ATK"
       ],
-      "summary": "UR Assault taunt tank: Glaring Taunt pulls aggro from front-row enemies and lowers their ATK for 8s.",
+      "summary": "Assault tank who taunts the enemy front row and lowers their attack for 8 seconds.",
       "tips": [
-        "Taunting the enemy front row keeps damage off your backliners; with Vera, it gives Assault a full two-tank front.",
-        "Mountain Ranger reduces all incoming damage, so it is not PvE-only."
+        "Taunting pulls enemy fire away from your back row.",
+        "His passive reduces all damage he takes, so he works in PvP too."
       ]
     },
     "50011": {
-      "focus": "both",
+      "focus": "pvp",
+      "position": "back",
       "tags": [
-        "Radiation DoT",
+        "Radiation damage over time",
         "Exclusive weapon",
-        "Assault synergy"
+        "Assault squads"
       ],
-      "summary": "UR Assault lightning carry who hits the 3 back enemies and stacks Radiation damage-over-time through her exclusive weapon.",
+      "summary": "Assault lightning caster who hits the 3 back-row enemies; her exclusive weapon adds stacking Radiation burn.",
       "tips": [
-        "Exclusive weapon: auto attacks and skills apply [Overload Charge] (3% of her ATK as Radiation damage per second for 30s, up to 15 stacks); the cap is 3 per Assault hero on your team.",
-        "Her exclusive weapon upgrades her auto attack at weapon Lv. 1 and her battle skill at weapon Lv. 10 and Lv. 30, so weapon shards are her main growth path once she is 5★.",
-        "Exclusive weapon season gate: day 38, the latest of the three."
+        "With her weapon, her hits apply Overload Charge, which burns for 3% of her ATK per second for 30 seconds. The stack cap is 3 per Assault hero in the squad.",
+        "Her weapon upgrades her auto attack at weapon Lv. 1 and her battle skill at Lv. 10 and Lv. 30, so weapon shards are her main upgrade path once she is 5★.",
+        "Her weapon unlocks last in the season (day 38)."
       ]
     },
     "50012": {
-      "focus": "both",
+      "focus": "pvp",
+      "position": "back",
       "tags": [
-        "Execute",
+        "Finishes weak enemies",
         "Crit"
       ],
-      "summary": "UR Assault finisher: his SMG always targets the enemy with the lowest HP percentage.",
+      "summary": "Assault finisher: his SMG always targets the enemy with the lowest HP percentage.",
       "tips": [
-        "Auto attacks go to the lowest-HP% enemy, so he finishes wounded targets and pairs well with AoE (Nicole, Yana).",
-        "Mechanic adds Crit Rate."
+        "He mops up wounded enemies, so pair him with heroes that hit everyone (Nicole, Yana).",
+        "His passive adds Crit Rate."
       ]
     },
     "50013": {
-      "focus": "both",
+      "focus": "pvp",
+      "position": "back",
       "tags": [
-        "AoE",
-        "Physical"
+        "Hits all enemies",
+        "Physical damage"
       ],
-      "summary": "UR Assault grenadier: Fine Firepower Net hits ALL enemies and Actuary boosts her Physical damage.",
+      "summary": "Assault grenadier whose firepower net hits every enemy, with a passive that boosts Physical damage.",
       "tips": [
-        "One of three heroes whose battle skill hits every enemy (with Leah and Bekka), so she is strong against wide formations.",
-        "Physical damage: Katya's DEF shred helps her if you run a cross-faction team."
+        "One of only three heroes whose battle skill hits the whole enemy squad (with Leah and Bekka).",
+        "Katya's DEF shred makes her Physical hits land harder in mixed squads."
       ]
     }
   },
   "global": [
     {
-      "title": "Roles are set by the stat profile, and it shows",
-      "body": "Every UR frontliner has 10.5k–14.3k HP and 7.8k–9.7k ATK; every UR backliner flips that to 5.5k–6.5k HP and 13.6k–15.7k ATK. The outliers are the interesting heroes: Vera is the only tank built to deal damage (highest frontline ATK, lowest UR frontline HP), Lucian is the most fragile UR, and Bekka is the bulkiest hero in the game."
+      "title": "Fill the squad with one faction",
+      "body": "A squad has 5 heroes. Heroes from the same faction unlock a bonus to HP, ATK and DEF: 3 of one faction gives +5%, 3 plus 2 of another faction +10%, 4 of one faction +15%, and all 5 +20%."
     },
     {
-      "title": "DEF is a shield, not armor",
-      "body": "The game's own stat help says DEF is a shield value that absorbs most incoming damage and stops working once broken. Front-row DEF buffs (Conan, Dirk) add shield HP, Katya's DEF shred breaks shields faster, and the flat damage-reduction passives (Arnold, Dirk, Vince, Virgilio) are a separate layer that keeps working after the shield is gone."
+      "title": "Know the counter triangle",
+      "body": "Warrior beats Assault, Assault beats Tactical, Tactical beats Warrior. When your faction counters theirs, your heroes take 20% less damage from them. The game's battle report tells you whether your lineup counters the enemy or is countered."
     },
     {
-      "title": "Half the SSR passives only work on monsters",
-      "body": "Nora, Zara, Kim Mina, Conan, Toxina, Aria, Lee Yu, Jack and Taylor all have passives (and often battle skills) worded 'damage to monsters' or 'damage from monsters'. They are strong for zombies, rallies and events, but in PvP those lines do nothing. Rachel, Logan, Celeste and Nora (#10011) carry unconditional ATK or Crit passives and are the SSRs to keep for PvP."
+      "title": "Tanks in front, damage in back",
+      "body": "A squad has 2 front-row and 3 back-row slots. Frontline heroes have the HP and DEF to absorb hits, so the game tells you to put them in front. Backline heroes deal the damage from behind. Carter (Support) belongs in the back row."
     },
     {
-      "title": "Exclusive weapons reward single-faction teams",
-      "body": "Monroe's stacks are capped by the Warrior heroes on your team, Leah's by Tactical heroes and Yana's by Assault heroes. Each weapon also unlocks a [Faction Boost] talent that raises HP/ATK/DEF for that faction. If you own one of these three, build the rest of the team around her faction."
+      "title": "Many SSRs only shine against zombies",
+      "body": "About half of the SSR heroes have skills that only work against monsters (\"damage to monsters\", \"damage from monsters\"). They are great for zombies, rallies and events but weak in PvP. Rachel, Logan and Celeste have boosts that work everywhere."
     },
     {
-      "title": "An exclusive weapon is worth more than 150 levels",
-      "body": "At weapon level 30 the curve grants +702,792 HP, +8,366 ATK, +4,183 DEF and +5% DMG Resistance, more HP than the whole Lv. 150 level curve (+537,095). It also raises the hero's skill caps from 30 to 40 (levels 31–40 cost another 350,000 skill books). Strengthening the weapon also gives every hero up to +800 ATK, +40,000 HP and +200 DEF, so the shards help your whole roster."
+      "title": "DEF is a shield",
+      "body": "The game describes DEF as a shield that absorbs most damage until it breaks. DEF buffs (Conan, Dirk) add shield; Katya breaks shields faster; damage-reduction passives (Arnold, Dirk, Vince, Virgilio) keep working after the shield is gone."
     },
     {
-      "title": "Stars come before skill books",
-      "body": "Skill level caps are locked to whole stars: 1★ → Lv. 1, 2★ → 5, 3★ → 10, 4★ → 20, 5★ → 30. Books spent early are capped anyway, and the client skill weight for every combat skill multiplies about 10.6× from 0★ to 5★ (UR 3,600 → 38,400; SSR 3,250 → 34,600). Going from 0★ to 5★ costs 975 shards (25 steps at 5/10/20/60/100 shards)."
+      "title": "Physical vs Radiation",
+      "body": "There are two damage types. All three exclusive weapons deal Radiation damage. Bekka and Virgilio are the Radiation counters; Arnold's shield only blocks Physical damage. A front line with both covers you either way."
     },
     {
-      "title": "UR heroes start faster, but the curves meet at Lv. 65",
-      "body": "UR heroes (except UR Aria) use level curve 2, which grants 27–46% more HP/ATK/DEF than curve 1 between Lv. 1 and Lv. 50. From Lv. 65 the two curves are identical up to Lv. 175. Troop command grows identically on both curves: 52 at Lv. 1, 351 at Lv. 150 and 400 at Lv. 175."
+      "title": "Exclusive weapons are huge",
+      "body": "A level-30 exclusive weapon adds about 703k HP, 8.4k ATK, 4.2k DEF and 5% damage resistance to its hero. That is more HP than levelling the hero to 150. It also raises skill caps from 30 to 40. Upgrading it gives every hero up to +40k HP, +800 ATK and +200 DEF, so weapon shards help your whole roster."
     },
     {
-      "title": "Radiation vs Physical is a real matchup",
-      "body": "The game has two damage types (Physical and Radiation) with matching defenses. All three exclusive weapons deal Radiation damage, and Monroe and Yana also have Radiation passives. Bekka (enemy Radiation DMG down + Radiation DR) and Virgilio (team Radiation DR) are the counters. Arnold's Field Support only stops Physical damage, so a strong front row covers both."
+      "title": "Raise stars before skill books",
+      "body": "Star level caps skill level: 1★ → Lv. 1, 2★ → 5, 3★ → 10, 4★ → 20, 5★ → 30. Books beyond the cap are wasted, so star a hero up first. Going from 0 to 5 stars takes 975 shards."
     },
     {
-      "title": "Carter fits any team",
-      "body": "The only Support hero buffs ALL allies' ATK (Hawkeye), speeds skill cooldowns and protects your highest-ATK hero (Sheriff), and none of it is faction- or monster-gated."
+      "title": "UR heroes start faster",
+      "body": "UR heroes get about 27–46% more HP, ATK and DEF from levels 1–50. From Lv. 65 every hero gains the same from levelling, and the hero's own base stats make the difference. Troop command rises from 52 at Lv. 1 to 351 at Lv. 150."
     },
     {
-      "title": "SR heroes are your gatherers",
-      "body": "Jamal, Hank and Jackson are the only heroes whose levelBenefit is Soldier Load Increase rather than a faction stat bonus. They have no passive and the lowest skill weights, so give them gathering marches, not combat slots."
+      "title": "Carter fits anywhere; SR heroes gather",
+      "body": "Carter's buffs work in any squad and against any enemy. Jamal, Hank and Jackson are weak fighters but the only heroes that raise Soldier Load, so use them for gathering."
     }
   ]
 }
