@@ -1030,7 +1030,15 @@
     },
     {
       "id": "heroSkillDes_10006_3",
-      "en": "In combat, deals {0} more damage to monsters. After your squad defeats Metal Zombies, Food Zombies, Oil Zombies, and Zombie Elite Hordes, the resource acquisition of Oil, Food, and Iron Mine increases by {1}."
+      "en": "In battle, own damage to monsters increases by {0};\nThe squad gains the <color=#E3812F><link=heroSkillDes_10006_3_link1><u>[Plunder]</u></link></color> buff {1}.\nRegardless of whether Nora is deployed, all squads gain the <color=#E3812F><link=heroSkillDes_10006_3_link2><u>[Pursuer]</u></link></color> buff."
+    },
+    {
+      "id": "heroSkillDes_10006_3_link1",
+      "en": "<color=#E3812F>[Plunder]</color>: Increases the amount of Iron Ore, Food, and Oil obtained after defeating Metal Zombies, Food Zombies, Oil Zombies, and Elite Zombie Hordes."
+    },
+    {
+      "id": "heroSkillDes_10006_3_link2",
+      "en": "<color=#E3812F>[Pursuer]</color>: Damage dealt to Wild Monsters and Rally Monsters +5%."
     },
     {
       "id": "heroSkillName_30003_1",

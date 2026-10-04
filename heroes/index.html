@@ -9,8 +9,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="Heroes Directory">
   <link rel="manifest" href="../manifest.webmanifest">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎖️</text></svg>">
-  <title>Z Route Heroes Directory · Official Mined Intel, Skills &amp; Stats</title>
+  <link rel="icon" href="../assets/heroes/ui/star.webp">
+  <title>Z Route Heroes Directory · Datamined Intel, Skills &amp; Stats</title>
   <style>
     :root {
       --bg: #07101d;
@@ -211,7 +211,7 @@
       flex-wrap: wrap;
       gap: 10px;
       margin-bottom: 24px;
-    }}
+    }
     .roster-stat-pill {
       display: inline-flex;
       align-items: center;
@@ -836,34 +836,6 @@
       gap: 12px;
       margin-bottom: 14px;
     }
-    .star-selector-tabs {
-      display: flex;
-      gap: 4px;
-      background: var(--card-inner);
-      padding: 4px;
-      border-radius: 12px;
-      border: 1px solid var(--line);
-    }
-    .star-tab-btn {
-      padding: 6px 12px;
-      border: none;
-      background: transparent;
-      color: var(--text-muted);
-      border-radius: 8px;
-      font-size: 0.82rem;
-      font-weight: 750;
-      cursor: pointer;
-      transition: all 0.15s;
-    }
-    .star-tab-btn:hover {
-      color: var(--text-main);
-    }
-    .star-tab-btn.active {
-      background: var(--pill-bg);
-      color: var(--ur-gold);
-      box-shadow: 0 2px 8px rgba(0,0,0,0.25);
-    }
-
     /* Skills List */
     .skills-list {
       display: grid;
@@ -924,15 +896,6 @@
       line-height: 1.5;
       color: var(--text-main);
     }
-    .skill-scaling-badge {
-      display: inline-block;
-      padding: 2px 7px;
-      border-radius: 6px;
-      background: rgba(255, 180, 0, 0.15);
-      color: var(--ur-gold);
-      font-weight: 800;
-    }
-
     .skill-unlock-note {
       font-size: 0.78rem;
       color: var(--text-muted);
@@ -1070,6 +1033,134 @@
       font-size: 0.82rem;
       text-align: center;
     }
+    /* Data-aware roster, insights and inspector */
+    .game-icon { width: 20px; height: 20px; object-fit: contain; flex-shrink: 0; vertical-align: middle; }
+    .class-badge .game-icon { width: 22px; height: 22px; }
+    .class-badge { color: var(--text-main); background: var(--card-inner); }
+    .faction-emblem { position: absolute; bottom: 12px; left: 12px; width: 38px; height: 38px; padding: 4px; background: rgba(7,16,29,.8); border: 1px solid var(--line); border-radius: 50%; }
+    .variant-subtitle, .rank-hint { font-size: .72rem; color: var(--accent); line-height: 1.4; }
+    .variant-subtitle { margin: 2px 0 10px; color: var(--text-muted); }
+    .tag-row { display: flex; flex-wrap: wrap; gap: 5px; margin: 0 0 12px; }
+    .insight-tag { font-size: .72rem; padding: 4px 8px; border: 1px solid var(--line); border-radius: 7px; background: var(--pill-bg); color: var(--text-muted); }
+    .focus-tag { color: var(--green); border-color: var(--green); background: var(--card-inner); }
+    .skill-icon { width: 56px; height: 56px; object-fit: contain; border: 1px solid var(--pill-border); border-radius: 12px; padding: 3px; background: var(--card-bg); flex-shrink: 0; }
+    .skill-icon.small { width: 26px; height: 26px; border-radius: 6px; padding: 1px; }
+    .skill-fallback { display: inline-flex; align-items: center; justify-content: center; color: var(--faction-tint); background: var(--card-bg); border-color: var(--faction-tint); }
+    .skill-fallback svg { width: 80%; height: 80%; }
+    .client-missing { color: var(--text-muted) !important; }
+    .name-missing { font-style: italic; }
+    .strengths-panel { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 20px; margin-bottom: 28px; box-shadow: var(--shadow); min-width: 0; }
+    .strengths-panel > summary { padding: 18px 20px; font-size: 1.15rem; font-weight: 850; cursor: pointer; }
+    .summary-hint { font-size: .78rem; color: var(--text-muted); font-weight: 500; margin-left: 10px; }
+    .strengths-body { padding: 0 20px 20px; display: grid; gap: 18px; }
+    .insight-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%,280px),1fr)); gap: 12px; }
+    .insight-card, .analysis-card { background: var(--card-inner); border: 1px solid var(--line); border-radius: 14px; padding: 16px; min-width: 0; }
+    .insight-card h3, .analysis-card h3 { margin: 0 0 9px; font-size: 1rem; letter-spacing: -.02em; }
+    .insight-card p, .muted, .growth-notes p { color: var(--text-muted); font-size: .84rem; line-height: 1.55; margin: 8px 0 0; }
+    .chart-wrap { width: 100%; min-width: 0; }
+    .chart-wrap > svg { display: block; width: 100%; height: auto; overflow: visible; }
+    .chart-grid { stroke: var(--line); stroke-width: 1; }
+    .chart-label { fill: var(--text-muted); font-size: 12px; font-family: inherit; }
+    .chart-head { cursor: pointer; outline: none; }
+    .chart-head:hover circle, .chart-head:focus circle { stroke-width: 4; }
+    .chart-head:focus-visible .focus-ring { stroke: var(--accent); stroke-width: 2; }
+    .quality-legend { display: flex; flex-wrap: wrap; gap: 14px; color: var(--text-muted); font-size: .8rem; padding: 12px 0; }
+    .quality-legend span { display: inline-flex; align-items: center; gap: 6px; }
+    .quality-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--ring); }
+    .quality-5 { --ring: var(--ur-gold); }
+    .quality-4 { --ring: var(--ssr-purple); }
+    .quality-3 { --ring: var(--sr-blue); }
+    .chart-info { color: var(--accent); font-size: .82rem; line-height: 1.5; margin: 8px 0 0; min-height: 2.5em; }
+    .faction-matrix { display: grid; grid-template-columns: 80px repeat(3,minmax(0,1fr)); gap: 6px; }
+    .matrix-heading, .matrix-role { display: flex; align-items: center; justify-content: center; gap: 6px; font-weight: 750; font-size: .82rem; padding: 8px 2px; }
+    .matrix-role { flex-direction: column; color: var(--text-muted); }
+    .matrix-cell { background: var(--card-bg); border: 1px solid var(--line); border-radius: 10px; padding: 10px 6px; display: flex; flex-wrap: wrap; justify-content: center; align-content: start; gap: 10px 6px; }
+    .head-button { background: none; border: 0; padding: 0; color: var(--text-main); cursor: pointer; width: 64px; display: flex; flex-direction: column; align-items: center; gap: 4px; font: inherit; }
+    .head-button img { width: 32px; height: 32px; border-radius: 50%; border: 2px solid var(--ring); object-fit: cover; }
+    .head-button span { font-size: .68rem; line-height: 1.2; overflow-wrap: anywhere; }
+    .growth-legend { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .8rem; color: var(--text-muted); margin: 8px 0; }
+    .curve-key { display: inline-block; width: 20px; border-top: 3px solid var(--accent); vertical-align: middle; margin-right: 5px; }
+    .curve-key.two { border-color: var(--purple); border-top-style: dashed; }
+    .modal-hero-summary { min-width: 0; }
+    .modal-hero-name { padding-right: 28px; }
+    .variant-callout { background: var(--pill-bg); border-left: 3px solid var(--accent); border-radius: 8px; font-size: .8rem; line-height: 1.5; padding: 10px 12px; margin-bottom: 12px; color: var(--text-muted); }
+    .modal-stat-box { min-width: 0; padding: 10px 6px; }
+    .stat-meter { height: 4px; background: var(--line); border-radius: 4px; margin: 8px 0 5px; overflow: hidden; }
+    .stat-meter span { display: block; height: 100%; background: var(--accent); }
+    .stat-rank { font-size: .66rem; color: var(--text-muted); line-height: 1.4; }
+    .insight-lead { margin: 0 0 12px; line-height: 1.6; }
+    .tip-list { margin: 8px 0 0; padding-left: 20px; color: var(--text-muted); font-size: .9rem; line-height: 1.6; }
+    .tip-list li + li { margin-top: 7px; }
+    .skill-card { flex-direction: row; align-items: flex-start; gap: 14px; }
+    .skill-detail { flex: 1; min-width: 0; display: grid; gap: 9px; }
+    .skill-title-grp { flex-wrap: wrap; gap: 6px; }
+    .skill-meta-grp { flex-wrap: wrap; font-size: .74rem; }
+    .effect-chip { display: inline-block; border: 1px solid var(--amber); background: var(--pill-bg); color: var(--amber); border-radius: 5px; font-weight: 800; font-size: .8em; padding: 0 5px; line-height: 1.5; vertical-align: baseline; }
+    .keyword-term { color: var(--accent); background: var(--pill-bg); border-radius: 3px; padding: 0 3px; }
+    .keyword-glossary { padding: 9px 12px; border-left: 2px solid var(--accent); color: var(--text-muted); font-size: .78rem; line-height: 1.5; }
+    .keyword-glossary p { margin: 0; }
+    .keyword-glossary p + p { margin-top: 5px; }
+    .weight-title { display: flex; align-items: center; gap: 6px; font-size: .76rem; color: var(--text-muted); }
+    .info-tip { border: 1px solid var(--line); border-radius: 50%; padding: 0; width: 18px; height: 18px; color: var(--accent); background: var(--card-bg); font-size: 11px; cursor: help; }
+    .weight-info { margin: 5px 0; font-size: .75rem; line-height: 1.5; color: var(--text-muted); }
+    .weight-strip { display: flex; gap: 8px; max-width: 330px; }
+    .weight-tier { flex: 1; min-width: 0; display: flex; flex-direction: column; align-items: center; gap: 3px; color: var(--text-muted); font-size: .65rem; border-radius: 5px; }
+    .weight-track { height: 38px; width: 100%; max-width: 26px; display: flex; align-items: flex-end; }
+    .weight-bar { background: var(--accent); width: 100%; border-radius: 3px 3px 0 0; opacity: .75; }
+    .star-label { display: inline-flex; gap: 2px; align-items: center; white-space: nowrap; }
+    .star-label img { width: 13px; height: 13px; }
+    .gear-upgrade-badge { justify-self: start; padding: 4px 8px; border: 1px solid var(--amber); border-radius: 6px; color: var(--amber); font-size: .72rem; }
+    .specialty-line { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; color: var(--text-muted); font-size: .78rem; padding: 8px 12px; border: 1px solid var(--line); border-radius: 10px; }
+    .gear-facts { display: grid; gap: 6px; margin-bottom: 4px; font-size: .84rem; line-height: 1.5; }
+    .gear-facts p { margin: 0; }
+    .story-details > summary { cursor: pointer; font-weight: 800; margin-bottom: 10px; }
+    .star-table-note { font-size: .8rem; color: var(--text-muted); line-height: 1.5; }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+    footer a { color: var(--accent); }
+    #data-sources p { overflow-wrap: anywhere; }
+    @media (max-width: 600px) {
+      .container { padding: 20px 12px 80px; }
+      .controls-card { padding: 16px 12px; }
+      .filter-row { gap: 6px; }
+      .filter-label { width: 100%; }
+      .chip { padding: 6px 10px; font-size: .78rem; }
+      .search-input-wrap { min-width: 0; flex-basis: 100%; }
+      .sort-wrap { width: 100%; }
+      .sort-wrap select { min-width: 0; flex: 1; }
+      .summary-hint { display: block; margin: 5px 0 0; }
+      .strengths-panel > summary { padding: 16px 12px; }
+      .strengths-body { padding: 0 10px 12px; gap: 12px; }
+      .analysis-card { padding: 12px 8px; }
+      .faction-matrix { grid-template-columns: 48px repeat(3,minmax(0,1fr)); gap: 4px; }
+      .matrix-heading { flex-direction: column; font-size: .65rem; gap: 3px; }
+      .matrix-role { font-size: .6rem; }
+      .matrix-cell { padding: 8px 2px; gap: 8px 2px; }
+      .head-button { width: 52px; }
+      .head-button span { font-size: .6rem; }
+      .modal-backdrop { padding: 8px; }
+      .modal-content { max-height: calc(100dvh - 16px); border-radius: 18px; }
+      .modal-hero-header, .modal-body { padding: 16px; }
+      .modal-hero-header { gap: 12px; }
+      .modal-stats-row { gap: 5px; }
+      .modal-stat-box .val { font-size: 1rem; }
+      .modal-hero-name { font-size: 1.65rem; }
+      .modal-training-gate { font-size: .8rem; line-height: 1.5; }
+      .skill-card { padding: 12px 10px; gap: 9px; }
+      .skill-card > .skill-icon { width: 56px; height: 56px; }
+      .skill-name-txt { font-size: .94rem; }
+      .skill-desc-txt { font-size: .84rem; }
+      .exclusive-weapon-card { padding: 12px 10px; }
+      .weight-strip { gap: 4px; }
+      .weight-tier { font-size: .58rem; }
+      .star-table { font-size: .7rem; }
+      .star-table th, .star-table td { padding: 8px 6px; }
+      .star-table th { font-size: .6rem; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition: none !important; }
+    }
+
   </style>
 </head>
 <body>
@@ -1077,7 +1168,7 @@
   <header class="app-header">
     <div class="header-inner">
       <div class="header-brand">
-        <div class="header-logo">🎖️</div>
+        <div class="header-logo"><img src="../assets/heroes/ui/star.webp" alt="Hero star" width="24" height="24"></div>
         <span>Z Route Heroes</span>
         <span class="header-badge">v1.30.07</span>
       </div>
@@ -1104,7 +1195,7 @@
       <div class="eyebrow">Client Data &amp; Abilities Database</div>
       <h1>Heroes Directory &amp; Combat Intel</h1>
       <p class="hero-lead">
-        Comprehensive mined database for all 32 playable heroes across Frontline, Backline, and Support tactical roles. Includes official client card artwork, base stats, training gate requirements, full 4-skill scaling, and exclusive weapon enhancements.
+        Comprehensive mined database for all 32 playable heroes across Frontline, Backline, and Support tactical roles. Explore client artwork, base stat ranks, strengths and tips, training gates, skill weights, and exclusive weapons. Effect values are still being extracted.
       </p>
 
       <!-- Roster Quick Stats -->
@@ -1113,10 +1204,10 @@
         <div class="roster-stat-pill"><span class="dot gold"></span> 16 UR (Quality 5)</div>
         <div class="roster-stat-pill"><span class="dot purple"></span> 13 SSR (Quality 4)</div>
         <div class="roster-stat-pill"><span class="dot blue"></span> 3 SR (Quality 3)</div>
-        <div class="roster-stat-pill">🛡️ 12 Frontline</div>
-        <div class="roster-stat-pill">🎯 19 Backline</div>
-        <div class="roster-stat-pill">✨ 1 Support</div>
-        <div class="roster-stat-pill">⭐ 3 Exclusive Weapons</div>
+        <div class="roster-stat-pill"><img class="game-icon" src="../assets/heroes/ui/role_1.webp" alt="Frontline"> 12 Frontline</div>
+        <div class="roster-stat-pill"><img class="game-icon" src="../assets/heroes/ui/role_3.webp" alt="Backline"> 19 Backline</div>
+        <div class="roster-stat-pill"><img class="game-icon" src="../assets/heroes/ui/role_2.webp" alt="Support"> 1 Support</div>
+        <div class="roster-stat-pill"><img class="game-icon" src="../assets/heroes/ui/star.webp" alt="Star"> 3 Exclusive Weapons</div>
       </div>
     </section>
 
@@ -1124,8 +1215,8 @@
     <section class="controls-card">
       <div class="search-row">
         <div class="search-input-wrap">
-          <span class="search-icon">🔍</span>
-          <input type="text" id="hero-search" placeholder="Search hero by name, skill, or keyword..." autocomplete="off">
+          <span class="search-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="10" cy="10" r="7"/><path d="m15 15 6 6"/></svg></span>
+          <input type="text" id="hero-search" aria-label="Search heroes, skills and insights" placeholder="Search hero by name, skill, or keyword..." autocomplete="off">
         </div>
         <div class="sort-wrap">
           <label for="hero-sort">Sort By:</label>
@@ -1156,33 +1247,67 @@
           <span class="filter-label">Role:</span>
           <div class="filter-chips" id="filter-army">
             <button class="chip active" data-val="all">All Roles</button>
-            <button class="chip" data-val="1">🛡️ Frontline (12)</button>
-            <button class="chip" data-val="3">🎯 Backline (19)</button>
-            <button class="chip" data-val="2">✨ Support (1)</button>
+            <button class="chip" data-val="1"><img class="game-icon" src="../assets/heroes/ui/role_1.webp" alt="Frontline"> Frontline (12)</button>
+            <button class="chip" data-val="3"><img class="game-icon" src="../assets/heroes/ui/role_3.webp" alt="Backline"> Backline (19)</button>
+            <button class="chip" data-val="2"><img class="game-icon" src="../assets/heroes/ui/role_2.webp" alt="Support"> Support (1)</button>
           </div>
         </div>
 
-        <!-- Training Center Filter -->
+        <!-- Faction Filter -->
         <div class="filter-row">
-          <span class="filter-label">Training:</span>
+          <span class="filter-label">Faction:</span>
           <div class="filter-chips" id="filter-camp">
-            <button class="chip active" data-val="all">All Centers</button>
-            <button class="chip" data-val="3">⚔️ Warrior Center</button>
-            <button class="chip" data-val="1">🎯 Tactical Center</button>
-            <button class="chip" data-val="2">⚡ Assault Center</button>
+            <button class="chip active" data-val="all">All Factions</button>
+            <button class="chip" data-val="3"><img class="game-icon" src="../assets/heroes/ui/faction_3.webp" alt="Warrior"> Warrior</button>
+            <button class="chip" data-val="1"><img class="game-icon" src="../assets/heroes/ui/faction_1.webp" alt="Tactical"> Tactical</button>
+            <button class="chip" data-val="2"><img class="game-icon" src="../assets/heroes/ui/faction_2.webp" alt="Assault"> Assault</button>
           </div>
         </div>
 
+        <div class="filter-row">
+          <span class="filter-label">Best for:</span>
+          <div class="filter-chips" id="filter-focus">
+            <button class="chip active" data-val="all">All</button>
+            <button class="chip" data-val="pve">PvE</button>
+            <button class="chip" data-val="pvp">PvP</button>
+            <button class="chip" data-val="both">PvE + PvP</button>
+            <button class="chip" data-val="utility">Gathering</button>
+          </div>
+        </div>
         <!-- Special Filters -->
         <div class="filter-row">
           <span class="filter-label">Gear:</span>
           <div class="filter-chips" id="filter-special">
             <button class="chip active" data-val="all">All Heroes</button>
-            <button class="chip" data-val="gear">⭐ Has Exclusive Weapon (3)</button>
+            <button class="chip" data-val="gear"><img class="game-icon" src="../assets/heroes/ui/star.webp" alt="Star"> Has Exclusive Weapon (3)</button>
           </div>
         </div>
       </div>
     </section>
+
+    <details class="strengths-panel" id="strengths-panel" open>
+      <summary>Strengths &amp; Tips <span class="summary-hint">Roster insights, stat profiles &amp; growth</span></summary>
+      <div class="strengths-body">
+        <div class="insight-grid" id="global-insights"></div>
+        <section class="analysis-card">
+          <h3>Stat profile</h3>
+          <p class="muted">Base HP × base ATK. Hover or focus a portrait for stats; tap or click to inspect. Nearby portraits are spaced with lines to their exact stat position.</p>
+          <div class="quality-legend"><span><i class="quality-dot quality-5"></i>UR</span><span><i class="quality-dot quality-4"></i>SSR</span><span><i class="quality-dot quality-3"></i>SR</span></div>
+          <div id="stat-profile" class="chart-wrap"></div>
+          <p id="stat-profile-info" class="chart-info" aria-live="polite">Select a hero portrait to see its stats.</p>
+        </section>
+        <section class="analysis-card">
+          <h3>Faction matrix</h3>
+          <div id="faction-matrix" class="faction-matrix"></div>
+          <p class="muted">Exclusive weapons (Monroe, Leah, Yana) scale with heroes of their own faction.</p>
+        </section>
+        <section class="analysis-card">
+          <h3>Growth</h3>
+          <div id="growth-chart" class="chart-wrap"></div>
+          <div id="growth-notes" class="growth-notes"></div>
+        </section>
+      </div>
+    </details>
 
     <!-- Heroes Grid -->
     <section>
@@ -1195,13 +1320,14 @@
 
     <!-- Footer -->
     <footer>
-      <p>Official client assets extracted from Android APK v1.30.07 (<code>heroes.json</code>, <code>HeroLevel.lua</code> &amp; <code>lang_hero_en.bundle</code>).</p>
+      <div id="data-sources"></div>
+      <p>Effect values ({0}) are not yet extracted; skill weights are the client's NewHeroSkill.ability field.</p>
       <p>All calculations run locally in your browser. <a href="https://github.com/JeffxLabs/zrouteredemption" target="_blank" rel="noopener">View source repository on GitHub</a>.</p>
     </footer>
   </main>
 
   <!-- Hero Detail Modal -->
-  <div class="modal-backdrop" id="hero-modal" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="modal-backdrop" id="hero-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-hero-name" inert>
     <div class="modal-content" id="modal-content">
       <!-- Injected dynamically via JS -->
     </div>
@@ -1237,444 +1363,362 @@
 
   <script src="heroes_data.js"></script>
   <script>
-    // State
-    let activeRarity = "all";
-    let activeArmy = "all";
-    let activeCamp = "all";
-    let activeSpecial = "all";
-    let activeSort = "rarity-desc";
-    let searchQuery = "";
+    const filters = { rarity: 'all', army: 'all', camp: 'all', special: 'all', focus: 'all' };
+    let activeSort = 'rarity-desc';
+    let searchQuery = '';
     let activeModalHero = null;
-    let selectedStarTier = "range"; // "range" or 0, 1, 2, 3, 4, 5
+    let modalReturnFocus = null;
+    const stats = [['hp', 'HP'], ['attack', 'ATK'], ['defense', 'DEF']];
+    const statMax = Object.fromEntries(stats.map(([key]) => [key, Math.max(...HEROES_DATA.map(h => h.base_stats[key]))]));
+    const focusLabels = { pve: 'PvE', pvp: 'PvP', both: 'PvE + PvP', utility: 'Gathering' };
+    const factionTints = { 1: 'var(--accent)', 2: 'var(--purple)', 3: 'var(--amber)' };
+    const weightHelp = 'Client NewHeroSkill.ability. Same for all combat skills of a hero; tracks star growth and feeds Power. The {0} effect values live in NewHeroSkillEffect, which is not extracted yet.';
+    const modal = document.getElementById('hero-modal');
+    const modalContent = document.getElementById('modal-content');
 
-    // Theme Management
-    const themeBtn = document.getElementById("theme-toggle");
+    // Retain the existing theme key, preference detection and toggle behavior.
+    const themeBtn = document.getElementById('theme-toggle');
     function applyTheme(day) {
-      document.documentElement.classList.toggle("day", day);
-      document.body.classList.toggle("day", day);
-      themeBtn.textContent = day ? "☼" : "☾";
-      localStorage.setItem("theme", day ? "day" : "night");
+      document.documentElement.classList.toggle('day', day);
+      document.body.classList.toggle('day', day);
+      themeBtn.textContent = day ? '☼' : '☾';
+      try { localStorage.setItem('theme', day ? 'day' : 'night'); } catch (_) { /* file/private contexts */ }
     }
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme === "day" || (!savedTheme && window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)) {
-      applyTheme(true);
-    } else {
-      applyTheme(false);
-    }
-    themeBtn.addEventListener("click", () => {
-      const isDay = document.documentElement.classList.contains("day");
-      applyTheme(!isDay);
-    });
+    let savedTheme = null;
+    try { savedTheme = localStorage.getItem('theme'); } catch (_) { /* storage may be unavailable */ }
+    applyTheme(savedTheme === 'day' || (!savedTheme && window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches));
+    themeBtn.addEventListener('click', () => applyTheme(!document.documentElement.classList.contains('day')));
 
-    // Helper functions
-    function formatNumber(num) {
-      return Number(num).toLocaleString();
+    function esc(value) {
+      return String(value ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+    }
+    function formatNumber(value) { return Number(value).toLocaleString('en-US', { maximumFractionDigits: 0 }); }
+    function percent(value) { return formatNumber(Number(value) * 100) + '%'; }
+    function rarityClass(h) { return h.quality === 5 ? 'ur' : h.quality === 4 ? 'ssr' : 'sr'; }
+    function gameIcon(path, alt) { return `<img class="game-icon" src="${esc(path)}" alt="${esc(alt)}">`; }
+    function starLabel(star) {
+      return `<span class="star-label" aria-label="${Number(star)} stars">${Number(star)}<img src="../assets/heroes/ui/${Number(star) ? 'star' : 'star_off'}.webp" alt=""></span>`;
+    }
+    // Tokenize before escaping: data never becomes executable markup.
+    function richDescription(value) {
+      return String(value ?? '').split(/(\{\d+\}|\[[^\]]+\])/g).map(part => {
+        if (/^\{\d+\}$/.test(part)) return '<span class="effect-chip" title="Effect value not in extracted tables yet" aria-label="Effect value not in extracted tables yet">?</span>';
+        if (/^\[[^\]]+\]$/.test(part)) return `<span class="keyword-term">${esc(part)}</span>`;
+        return esc(part);
+      }).join('');
+    }
+    function glossary(keywords) {
+      if (!keywords?.length) return '';
+      return `<div class="keyword-glossary">${keywords.map(k => `<p><strong>${esc(k.name)}</strong> — ${richDescription(k.text)}</p>`).join('')}</div>`;
+    }
+    function skillName(skill, className = '') {
+      return `<span class="${className} ${skill.name_in_client === false ? 'client-missing name-missing' : ''}"${skill.name_in_client === false ? ' title="No name in client text"' : ''}>${esc(skill.name)}</span>`;
+    }
+    function skillIcon(skill, hero, small = false) {
+      const cls = 'skill-icon' + (small ? ' small' : '');
+      if (skill.icon) return `<img class="${cls}" src="${esc(skill.icon)}" alt="${esc(skill.name || skill.type_name)} skill icon" loading="lazy">`;
+      const glyphs = {
+        1: '<circle cx="12" cy="12" r="6"/><path d="M12 2v6m0 8v6M2 12h6m8 0h6"/>',
+        2: '<path d="m12 2 2.5 6 6.5-3-3 6.5 4 2-6 2.5 2 6-6-4-5 4 1-7-6-2 6-3-1-6 5 4Z"/>',
+        3: '<path d="m12 3 8 3v6c0 5-8 9-8 9S4 17 4 12V6Z"/><path d="M8 12h8m-4-4v8"/>',
+        4: '<path d="m12 2 3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1Z"/>'
+      };
+      return `<span class="${cls} skill-fallback" style="--faction-tint:${factionTints[hero.camp_type]}" role="img" aria-label="${esc(skill.type_name || 'Weapon skill')} fallback icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true">${glyphs[skill.type] || glyphs[3]}</svg></span>`;
+    }
+    function insightTags(h, limit) {
+      const tags = h.insight?.tags || [];
+      return `<div class="tag-row">${h.insight?.focus ? `<span class="insight-tag focus-tag">${esc(focusLabels[h.insight.focus] || h.insight.focus)}</span>` : ''}${tags.slice(0, limit ?? tags.length).map(t => `<span class="insight-tag">${esc(t)}</span>`).join('')}</div>`;
     }
 
-    function getArmyIcon(armyType) {
-      switch (armyType) {
-        case 1: return "🛡️ Frontline Hero";
-        case 2: return "✨ Support Hero";
-        case 3: return "🎯 Backline Hero";
-        default: return "⚔️ Hero";
-      }
-    }
-
-    // Filter Chips Event Handlers
-    function setupChipGroup(containerId, callback) {
-      const container = document.getElementById(containerId);
-      container.addEventListener("click", (e) => {
-        const chip = e.target.closest(".chip");
+    for (const [group, id] of [['rarity', 'filter-rarity'], ['army', 'filter-army'], ['camp', 'filter-camp'], ['special', 'filter-special'], ['focus', 'filter-focus']]) {
+      const container = document.getElementById(id);
+      container.querySelectorAll('.chip').forEach(chip => chip.setAttribute('aria-pressed', chip.classList.contains('active')));
+      container.addEventListener('click', e => {
+        const chip = e.target.closest('.chip');
         if (!chip) return;
-        container.querySelectorAll(".chip").forEach(c => c.classList.remove("active"));
-        chip.classList.add("active");
-        callback(chip.dataset.val);
+        container.querySelectorAll('.chip').forEach(c => { c.classList.toggle('active', c === chip); c.setAttribute('aria-pressed', c === chip); });
+        filters[group] = chip.dataset.val;
         renderHeroes();
       });
     }
-
-    setupChipGroup("filter-rarity", val => activeRarity = val);
-    setupChipGroup("filter-army", val => activeArmy = val);
-    setupChipGroup("filter-camp", val => activeCamp = val);
-    setupChipGroup("filter-special", val => activeSpecial = val);
-
-    // Search and Sort
-    const searchInput = document.getElementById("hero-search");
-    searchInput.addEventListener("input", (e) => {
-      searchQuery = e.target.value.trim().toLowerCase();
-      renderHeroes();
-    });
-
-    const sortSelect = document.getElementById("hero-sort");
-    sortSelect.addEventListener("change", (e) => {
-      activeSort = e.target.value;
-      renderHeroes();
-    });
-
-    // Filtering & Sorting Logic
+    document.getElementById('hero-search').addEventListener('input', e => { searchQuery = e.target.value.trim().toLowerCase(); renderHeroes(); });
+    document.getElementById('hero-sort').addEventListener('change', e => { activeSort = e.target.value; renderHeroes(); });
     function getFilteredHeroes() {
       return HEROES_DATA.filter(h => {
-        // Rarity
-        if (activeRarity !== "all" && String(h.quality) !== activeRarity) return false;
-        // Army
-        if (activeArmy !== "all" && String(h.army_type) !== activeArmy) return false;
-        // Camp
-        if (activeCamp !== "all" && String(h.camp_type) !== activeCamp) return false;
-        // Special
-        if (activeSpecial === "gear" && !h.exclusive_gear) return false;
-        // Search
+        if (filters.rarity !== 'all' && String(h.quality) !== filters.rarity) return false;
+        if (filters.army !== 'all' && String(h.army_type) !== filters.army) return false;
+        if (filters.camp !== 'all' && String(h.camp_type) !== filters.camp) return false;
+        if (filters.special === 'gear' && !h.exclusive_gear) return false;
+        if (filters.focus !== 'all') {
+          const focus = h.insight?.focus;
+          if (focus !== filters.focus && !(['pve', 'pvp'].includes(filters.focus) && focus === 'both')) return false;
+        }
         if (searchQuery) {
-          const nameMatch = h.display_name.toLowerCase().includes(searchQuery);
-          const campMatch = h.camp_name.toLowerCase().includes(searchQuery);
-          const armyMatch = h.army_name.toLowerCase().includes(searchQuery);
-          const skillMatch = h.skills.some(s => s.name.toLowerCase().includes(searchQuery) || s.description.toLowerCase().includes(searchQuery));
-          if (!nameMatch && !campMatch && !armyMatch && !skillMatch) return false;
+          const haystack = [h.display_name, h.name, h.camp_name, h.role_short, h.insight?.summary, ...(h.insight?.tags || []),
+            ...h.skills.flatMap(s => [s.name, s.description, ...(s.keywords || []).flatMap(k => [k.name, k.text])])];
+          if (!haystack.some(text => String(text ?? '').toLowerCase().includes(searchQuery))) return false;
         }
         return true;
       }).sort((a, b) => {
-        switch (activeSort) {
-          case "rarity-desc":
-            if (b.quality !== a.quality) return b.quality - a.quality;
-            return b.base_stats.attack - a.base_stats.attack;
-          case "atk-desc":
-            return b.base_stats.attack - a.base_stats.attack;
-          case "hp-desc":
-            return b.base_stats.hp - a.base_stats.hp;
-          case "def-desc":
-            return b.base_stats.defense - a.base_stats.defense;
-          case "name-asc":
-            return a.display_name.localeCompare(b.display_name);
-          default:
-            return 0;
-        }
+        if (activeSort === 'name-asc') return a.display_name.localeCompare(b.display_name);
+        const key = { 'hp-desc': 'hp', 'atk-desc': 'attack', 'def-desc': 'defense' }[activeSort];
+        if (key) return b.base_stats[key] - a.base_stats[key] || a.display_name.localeCompare(b.display_name);
+        return b.quality - a.quality || b.base_stats.attack - a.base_stats.attack || a.display_name.localeCompare(b.display_name);
       });
     }
-
-    // Render Grid
     function renderHeroes() {
-      const grid = document.getElementById("heroes-grid");
       const list = getFilteredHeroes();
-      document.getElementById("roster-count-title").textContent = `Hero Roster (${list.length})`;
-
-      if (list.length === 0) {
-        grid.innerHTML = `
-          <div class="no-results">
-            <h3>No heroes matched your filters</h3>
-            <p>Try clearing your search query or loosening the selected rarity/class criteria.</p>
+      document.getElementById('roster-count-title').textContent = `Hero Roster (${list.length})`;
+      document.getElementById('heroes-grid').innerHTML = list.length ? list.map(h => `
+        <article class="hero-card quality-${Number(h.quality)}" data-hero-id="${Number(h.id)}">
+          <div class="portrait-wrap">
+            <img class="portrait-img" src="${esc(h.image)}" alt="${esc(h.display_name)}" loading="lazy">
+            <div class="portrait-overlay"></div>
+            <div class="card-top-badges"><span class="rarity-badge ${rarityClass(h)}">${esc(h.quality_name)}</span><span class="class-badge">${gameIcon(h.role_icon, h.role_short)}${esc(h.role_short)}</span></div>
+            <img class="faction-emblem" src="${esc(h.faction_icon)}" alt="${esc(h.camp_name)} faction">
+            ${h.exclusive_gear ? '<div class="weapon-badge">Exclusive Weapon</div>' : ''}
           </div>
-        `;
-        return;
+          <div class="card-body">
+            <div class="hero-name-row"><h3 class="hero-name">${esc(h.display_name)}</h3><span class="hero-id-tag">#${Number(h.id)}</span></div>
+            ${h.variant_note ? `<p class="variant-subtitle" title="${esc(h.variant_note)}">${esc(h.variant_note.split('. ')[0].replace(/\.$/, ''))}</p>` : ''}
+            <div class="hero-role-subtitle">${esc(h.camp_name)}<span class="sep">•</span>Max Lv. ${Number(h.max_level)}</div>
+            ${insightTags(h, 2)}
+            <div class="card-stats-grid">${stats.map(([key, label]) => `<div class="card-stat-item"><span class="stat-name">${label}</span><span class="stat-number">${formatNumber(h.base_stats[key])}</span>${h.stat_ranks.all[key].rank <= 3 ? `<span class="rank-hint">#${Number(h.stat_ranks.all[key].rank)} ${label}</span>` : ''}</div>`).join('')}</div>
+            <div class="card-skills-row">${h.skills.filter(s => s.type !== 4).map(s => `<div class="card-skill-pill"><div class="sk-left">${skillIcon(s, h, true)}${skillName(s, 'sk-title')}</div><span class="sk-cd">${esc(s.cooldown)}</span></div>`).join('')}</div>
+            <button class="card-inspect-btn" type="button" aria-label="Inspect ${esc(h.display_name)}"><span>Inspect Full Intel &amp; Skills</span><span aria-hidden="true">→</span></button>
+          </div>
+        </article>`).join('') : '<div class="no-results"><h3>No heroes matched your filters</h3><p>Try clearing your search or selecting fewer filters.</p></div>';
+    }
+
+    // A single delegated activation path covers cards, matrix buttons and SVG heads.
+    document.addEventListener('click', e => {
+      const target = e.target.closest('[data-hero-id]');
+      if (target) openHeroModal(Number(target.dataset.heroId));
+      if (e.target.closest('[data-close-modal]')) closeHeroModal();
+      const infoButton = e.target.closest('[data-weight-info]');
+      if (infoButton) {
+        const note = document.getElementById(infoButton.getAttribute('aria-controls'));
+        note.hidden = !note.hidden;
+        infoButton.setAttribute('aria-expanded', !note.hidden);
       }
-
-      grid.innerHTML = list.map(h => {
-        const rarityClass = h.quality === 5 ? "ur" : (h.quality === 4 ? "ssr" : "sr");
-        const weaponBadge = h.exclusive_gear ? `<div class="weapon-badge">⭐ Exclusive Gear</div>` : "";
-
-        // First 3 skills preview
-        const skillsPreview = h.skills.slice(0, 3).map(s => `
-          <div class="card-skill-pill">
-            <div class="sk-left">
-              <span class="sk-dot"></span>
-              <span class="sk-title">${s.name}</span>
-            </div>
-            <span class="sk-cd">${s.cooldown}</span>
-          </div>
-        `).join("");
-
-        return `
-          <article class="hero-card quality-${h.quality}" onclick="openHeroModal(${h.id})">
-            <div class="portrait-wrap">
-              <img class="portrait-img" src="${h.image}" alt="${h.display_name}" loading="lazy" onerror="this.src='../icon.svg'">
-              <div class="portrait-overlay"></div>
-              <div class="card-top-badges">
-                <span class="rarity-badge ${rarityClass}">${h.quality_name}</span>
-                <span class="class-badge">${getArmyIcon(h.army_type)}</span>
-              </div>
-              ${weaponBadge}
-            </div>
-            <div class="card-body">
-              <div class="hero-name-row">
-                <h3 class="hero-name">${h.display_name}</h3>
-                <span class="hero-id-tag">#${h.id}</span>
-              </div>
-              <div class="hero-role-subtitle">
-                <span>${h.training_center.building_name || h.camp_name + " Center"}</span>
-                <span class="sep">•</span>
-                <span>Max Lv ${h.max_level}</span>
-              </div>
-
-              <div class="card-stats-grid">
-                <div class="card-stat-item">
-                  <span class="stat-name">HP</span>
-                  <span class="stat-number">${formatNumber(h.base_stats.hp)}</span>
-                </div>
-                <div class="card-stat-item">
-                  <span class="stat-name">ATK</span>
-                  <span class="stat-number">${formatNumber(h.base_stats.attack)}</span>
-                </div>
-                <div class="card-stat-item">
-                  <span class="stat-name">DEF</span>
-                  <span class="stat-number">${formatNumber(h.base_stats.defense)}</span>
-                </div>
-              </div>
-
-              <div class="card-skills-row">
-                ${skillsPreview}
-              </div>
-
-              <button class="card-inspect-btn" type="button" aria-label="Inspect ${h.display_name}">
-                <span>Inspect Full Intel &amp; Skills</span>
-                <span>→</span>
-              </button>
-            </div>
-          </article>
-        `;
-      }).join("");
-    }
-
-    // Modal Details Logic
-    function openHeroModal(heroId) {
-      const hero = HEROES_DATA.find(h => h.id === heroId);
-      if (!hero) return;
-      activeModalHero = hero;
-      selectedStarTier = "range"; // default to full range
-      renderModalContent();
-
-      const modal = document.getElementById("hero-modal");
-      modal.classList.add("open");
-      modal.setAttribute("aria-hidden", "false");
-      document.body.style.overflow = "hidden";
-    }
-
-    function closeHeroModal() {
-      const modal = document.getElementById("hero-modal");
-      modal.classList.remove("open");
-      modal.setAttribute("aria-hidden", "true");
-      document.body.style.overflow = "";
-      activeModalHero = null;
-    }
-
-    // Close on backdrop or ESC
-    document.getElementById("hero-modal").addEventListener("click", (e) => {
-      if (e.target.id === "hero-modal") closeHeroModal();
     });
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape" && activeModalHero) closeHeroModal();
-    });
-
-    function setModalStarTier(star) {
-      selectedStarTier = star;
-      renderModalContent();
-    }
-
-    function renderModalContent() {
+    document.addEventListener('keydown', e => {
+      const head = e.target.closest('.chart-head');
+      if (head && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); openHeroModal(Number(head.dataset.heroId)); return; }
       if (!activeModalHero) return;
-      const h = activeModalHero;
-      const rarityClass = h.quality === 5 ? "ur" : (h.quality === 4 ? "ssr" : "sr");
-
-      // Format skills based on selected star tier
-      const skillsHtml = h.skills.map(s => {
-        let desc = s.description;
-        let scalingText = "";
-        let maxSkillLv = 30;
-
-        if (s.star_tiers && s.star_tiers.length > 0) {
-          if (selectedStarTier === "range") {
-            const vMin = s.star_tiers[0].ability_display;
-            const vMax = s.star_tiers[s.star_tiers.length - 1].ability_display;
-            scalingText = `${vMin} → ${vMax}`;
-            desc = desc.replace("{0}", `<span class="skill-scaling-badge">${vMin} ~ ${vMax}</span>`);
-          } else {
-            const tierIdx = Math.min(Number(selectedStarTier), s.star_tiers.length - 1);
-            const tier = s.star_tiers[tierIdx];
-            scalingText = tier.ability_display;
-            maxSkillLv = tier.max_skill_level;
-            desc = desc.replace("{0}", `<span class="skill-scaling-badge">${tier.ability_display}</span>`);
-          }
-          // Replace secondary placeholders if any
-          desc = desc.replace(/\{[1-9]\}/g, `<span class="skill-scaling-badge">Level Scaling</span>`);
-        }
-
-        return `
-          <div class="skill-card">
-            <div class="skill-top-bar">
-              <div class="skill-title-grp">
-                <span class="skill-slot-tag">${s.type_name}</span>
-                <h4 class="skill-name-txt">${s.name}</h4>
-              </div>
-              <div class="skill-meta-grp">
-                <span class="skill-meta-pill">⏱️ ${s.cooldown}</span>
-                <span class="skill-meta-pill">🔓 ${s.unlock}</span>
-              </div>
-            </div>
-            <p class="skill-desc-txt">${desc}</p>
-            <div class="skill-unlock-note">
-              <span>Current Star Tier Power: <strong style="color:var(--ur-gold);">${scalingText}</strong></span>
-              <span>Max Skill Level at this Tier: <strong>Lv. ${maxSkillLv}</strong></span>
-            </div>
-          </div>
-        `;
-      }).join("");
-
-      // Exclusive gear block
-      let weaponHtml = "";
-      if (h.exclusive_gear) {
-        const eg = h.exclusive_gear;
-        weaponHtml = `
-          <div class="exclusive-weapon-card">
-            <div class="ew-head">
-              <h3 class="ew-title">⭐ Exclusive Weapon: ${eg.skill_enhancement_name}</h3>
-              <span class="ew-levels-badge">600 Max Stages (${eg.strengthen_levels_count} levels)</span>
-            </div>
-            <p class="ew-desc"><strong>Weapon Skill Effect:</strong> ${eg.skill_enhancement_desc}</p>
-            <div class="skill-unlock-note">
-              <span>Required Shard Item: <code>${eg.shard_item_name}</code></span>
-              <span>Strength Limit: Stage ${eg.strength_limit}</span>
-            </div>
-          </div>
-        `;
+      if (e.key === 'Escape') { e.preventDefault(); closeHeroModal(); return; }
+      if (e.key === 'Tab') {
+        const focusable = [...modalContent.querySelectorAll('button, a[href], summary, [tabindex="0"]')].filter(el => !el.hidden && el.getClientRects().length);
+        const first = focusable[0], last = focusable[focusable.length - 1];
+        if (e.shiftKey && (document.activeElement === first || !modalContent.contains(document.activeElement))) { e.preventDefault(); last?.focus(); }
+        else if (!e.shiftKey && (document.activeElement === last || !modalContent.contains(document.activeElement))) { e.preventDefault(); first?.focus(); }
       }
-
-      // Level benefits string
-      const benefitsStr = h.level_benefits.map(b => `${b.name} +${(b.value * 100).toFixed(2)}%`).join(", ");
-
-      const content = document.getElementById("modal-content");
-      content.innerHTML = `
-        <div class="modal-hero-header">
-          <button class="modal-close-btn" onclick="closeHeroModal()" aria-label="Close dialog">✕</button>
-          
-          <div class="modal-portrait">
-            <img src="${h.image}" alt="${h.display_name}">
-          </div>
-
-          <div class="modal-hero-summary">
-            <div class="modal-tags-row">
-              <span class="rarity-badge ${rarityClass}">${h.quality_name} Quality</span>
-              <span class="class-badge">${getArmyIcon(h.army_type)}</span>
-              <span class="class-badge">🏛️ ${h.camp_name}</span>
-              <span class="class-badge">ID: #${h.id}</span>
-            </div>
-
-            <h2 class="modal-hero-name">${h.display_name}</h2>
-            <div class="modal-training-gate">
-              <span>🏰 Training Requirement: <strong>${h.training_center.building_name} (Lv. ${h.training_center.level})</strong></span>
-            </div>
-
-            <div class="modal-stats-row">
-              <div class="modal-stat-box">
-                <div class="lbl">Base HP</div>
-                <div class="val">${formatNumber(h.base_stats.hp)}</div>
-              </div>
-              <div class="modal-stat-box">
-                <div class="lbl">Base ATK</div>
-                <div class="val">${formatNumber(h.base_stats.attack)}</div>
-              </div>
-              <div class="modal-stat-box">
-                <div class="lbl">Base DEF</div>
-                <div class="val">${formatNumber(h.base_stats.defense)}</div>
-              </div>
-            </div>
-
-            ${benefitsStr ? `<div class="modal-benefits-box">📈 Level Up Passive: ${benefitsStr}</div>` : ""}
-          </div>
+    });
+    modal.addEventListener('click', e => { if (e.target === modal) closeHeroModal(); });
+    function openHeroModal(id) {
+      const hero = HEROES_DATA.find(h => h.id === id);
+      if (!hero) return;
+      const trigger = document.activeElement;
+      const heroTrigger = trigger?.closest('[data-hero-id]');
+      modalReturnFocus = {
+        element: trigger,
+        heroId: heroTrigger?.dataset.heroId,
+        selector: trigger?.closest('.chart-head') ? '.chart-head' : trigger?.closest('.head-button') ? '.head-button' : '.hero-card'
+      };
+      activeModalHero = hero;
+      renderModalContent();
+      modal.inert = false;
+      modal.classList.add('open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      document.querySelector('main').inert = true;
+      document.querySelector('.app-header').inert = true;
+      document.querySelector('.bottom-nav').inert = true;
+      modalContent.scrollTop = 0;
+      modalContent.querySelector('[data-close-modal]').focus();
+    }
+    function closeHeroModal() {
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden', 'true');
+      modal.inert = true;
+      document.body.style.overflow = '';
+      document.querySelector('main').inert = false;
+      document.querySelector('.app-header').inert = false;
+      document.querySelector('.bottom-nav').inert = false;
+      activeModalHero = null;
+      let returnTarget = modalReturnFocus?.element;
+      if (!returnTarget?.isConnected && modalReturnFocus?.heroId) {
+        returnTarget = document.querySelector(`${modalReturnFocus.selector}[data-hero-id="${Number(modalReturnFocus.heroId)}"]`);
+        if (returnTarget?.classList.contains('hero-card')) returnTarget = returnTarget.querySelector('button');
+      }
+      returnTarget?.focus({ preventScroll: true });
+    }
+    function weightStrip(skill, hero) {
+      const max = Math.max(1, ...skill.weights.map(w => w.weight));
+      const noteId = `weight-info-${Number(hero.id)}-${Number(skill.slot)}`;
+      return `<div><div class="weight-title">Skill weight <button class="info-tip" data-weight-info aria-label="About skill weight" title="${esc(weightHelp)}" aria-controls="${noteId}" aria-expanded="false">i</button></div><p class="weight-info" id="${noteId}" hidden>${esc(weightHelp)}</p>
+        <div class="weight-strip">${skill.weights.map(w => `<div class="weight-tier" tabindex="0" title="${Number(w.star)} stars: Skill weight ${formatNumber(w.weight)}; skill-level cap ${Number(w.max_skill_level)}" aria-label="${Number(w.star)} stars: Skill weight ${formatNumber(w.weight)}; skill-level cap ${Number(w.max_skill_level)}"><div class="weight-track"><span class="weight-bar" style="height:${Number(w.weight) / max * 100}%"></span></div>${starLabel(w.star)}<span>Lv. ${Number(w.max_skill_level)}</span></div>`).join('')}</div></div>`;
+    }
+    function combatSkill(skill, h) {
+      if (skill.type === 4) return `<div class="specialty-line">${skillIcon(skill, h, true)}${skillName(skill)}<span class="client-missing">${esc(skill.unlock)} · Specialty slot; client description unavailable.</span></div>`;
+      return `<article class="skill-card">${skillIcon(skill, h)}<div class="skill-detail">
+        <div class="skill-title-grp"><span class="skill-slot-tag">${esc(skill.type_name)}</span><h4 class="skill-name-txt">${skillName(skill)}</h4></div>
+        <div class="skill-meta-grp"><span class="skill-meta-pill">${esc(skill.cooldown)}</span><span>${esc(skill.unlock)}</span></div>
+        <p class="skill-desc-txt ${skill.description_in_client === false ? 'client-missing' : ''}">${richDescription(skill.description)}</p>
+        ${glossary(skill.keywords)}${weightStrip(skill, h)}
+        ${skill.gear_upgrades?.length ? `<span class="gear-upgrade-badge">Exclusive weapon upgrades at Lv. ${skill.gear_upgrades.map(g => Number(g.weapon_level)).join(', ')}</span>` : ''}
+      </div></article>`;
+    }
+    // Attained-star markers delimit tiers; boundary steps belong to the tier just completed.
+    function starTiers() {
+      let previousStep = 0, cumulative = 0;
+      return HEROES_META.star_steps.filter(s => s.star > 0 && HEROES_META.star_steps.find(r => r.star === s.star) === s).map(boundary => {
+        const steps = HEROES_META.star_steps.filter(s => s.step > previousStep && s.step <= boundary.step);
+        previousStep = boundary.step;
+        const total = steps.reduce((sum, s) => sum + s.shards, 0);
+        cumulative += total;
+        return { star: boundary.star, count: steps.length, perStep: [...new Set(steps.map(s => s.shards))], total, cumulative, cap: boundary.skill_cap };
+      });
+    }
+    function starTable() {
+      return `<div class="star-table-card"><table class="star-table"><thead><tr><th>Star tier</th><th>Steps</th><th>Shards / step</th><th>Tier total</th><th>Cumulative</th><th>Skill cap</th></tr></thead><tbody>${starTiers().map(t => `<tr><td>${starLabel(t.star - 1)} → ${starLabel(t.star)}</td><td>${Number(t.count)}</td><td>${t.perStep.map(formatNumber).join(' / ')}</td><td>${formatNumber(t.total)}</td><td>${formatNumber(t.cumulative)}</td><td>${t.star === 5 ? 'Skill Lv. 30 (Lv. 40 with exclusive weapon Lv. 30)' : `Skill Lv. ${Number(t.cap)}${t.star === 4 ? ' · Unlocks Specialty slot' : ''}`}</td></tr>`).join('')}</tbody></table></div>`;
+    }
+    function gearSection(h) {
+      const gear = h.exclusive_gear;
+      if (!gear) return '';
+      const bonus = gear.max_level_bonus;
+      return `<section class="exclusive-weapon-card"><h3 class="ew-title">Exclusive weapon</h3>
+        <div class="gear-facts"><p>Season gate: day ${Number(gear.season_day)}</p>
+          <p>At weapon Lv. ${Number(gear.level_cap)}: +${formatNumber(bonus['Hero HP'])} HP / +${formatNumber(bonus['Hero ATK'])} ATK / +${formatNumber(bonus['Hero DEF'])} DEF / +${percent(bonus['DMG Resistance'])} DMG Resistance</p>
+          <p>Combat skill caps raised to ${Number(Math.max(...gear.skill_caps_at_max))}.</p>
+          <p>Strengthening (all heroes): +${formatNumber(gear.max_strengthen_all_heroes['Hero ATK'])} ATK / +${formatNumber(gear.max_strengthen_all_heroes['Hero HP'])} HP / +${formatNumber(gear.max_strengthen_all_heroes['Hero DEF'])} DEF</p>
         </div>
-
-        <div class="modal-body">
-          ${h.story ? `
-            <div>
-              <h3 class="modal-section-title">📜 Hero Dossier &amp; Background Story</h3>
-              <div class="story-card">${h.story}</div>
-            </div>
-          ` : ""}
-
-          ${weaponHtml}
-
-          <!-- Skills Deep Dive with Star Selector -->
-          <div>
-            <div class="skills-header-bar">
-              <h3 class="modal-section-title" style="margin:0;">⚡ Combat Abilities &amp; Scaling</h3>
-              <div class="star-selector-tabs">
-                <button class="star-tab-btn ${selectedStarTier === 'range' ? 'active' : ''}" onclick="setModalStarTier('range')">Range</button>
-                <button class="star-tab-btn ${selectedStarTier === '0' ? 'active' : ''}" onclick="setModalStarTier('0')">0★</button>
-                <button class="star-tab-btn ${selectedStarTier === '1' ? 'active' : ''}" onclick="setModalStarTier('1')">1★</button>
-                <button class="star-tab-btn ${selectedStarTier === '2' ? 'active' : ''}" onclick="setModalStarTier('2')">2★</button>
-                <button class="star-tab-btn ${selectedStarTier === '3' ? 'active' : ''}" onclick="setModalStarTier('3')">3★</button>
-                <button class="star-tab-btn ${selectedStarTier === '4' ? 'active' : ''}" onclick="setModalStarTier('4')">4★</button>
-                <button class="star-tab-btn ${selectedStarTier === '5' ? 'active' : ''}" onclick="setModalStarTier('5')">5★</button>
-              </div>
-            </div>
-
-            <div class="skills-list">
-              ${skillsHtml}
-            </div>
-          </div>
-
-          <!-- Star Tier Shard Progression Card -->
-          <div>
-            <h3 class="modal-section-title">⭐ Star Tier Shard Requirements (975 Total Shards)</h3>
-            <div class="star-table-card">
-              <table class="star-table">
-                <thead>
-                  <tr>
-                    <th>Star Tier</th>
-                    <th>Sub-Steps</th>
-                    <th>Shards / Step</th>
-                    <th>Total Tier Shards</th>
-                    <th>Cumulative Shards</th>
-                    <th>Skill Cap</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><strong>0★ → 1★</strong></td>
-                    <td>5 Steps</td>
-                    <td>5 shards</td>
-                    <td>25 shards</td>
-                    <td>25 shards</td>
-                    <td>Skill Lv. 1</td>
-                  </tr>
-                  <tr>
-                    <td><strong>1★ → 2★</strong></td>
-                    <td>5 Steps</td>
-                    <td>10 shards</td>
-                    <td>50 shards</td>
-                    <td>75 shards</td>
-                    <td>Skill Lv. 5</td>
-                  </tr>
-                  <tr>
-                    <td><strong>2★ → 3★</strong></td>
-                    <td>5 Steps</td>
-                    <td>20 shards</td>
-                    <td>100 shards</td>
-                    <td>175 shards</td>
-                    <td>Skill Lv. 10</td>
-                  </tr>
-                  <tr>
-                    <td><strong>3★ → 4★</strong></td>
-                    <td>5 Steps</td>
-                    <td>60 shards</td>
-                    <td>300 shards</td>
-                    <td>475 shards</td>
-                    <td>Skill Lv. 20 (Unlocks Leadership)</td>
-                  </tr>
-                  <tr>
-                    <td><strong>4★ → 5★</strong></td>
-                    <td>5 Steps</td>
-                    <td>100 shards</td>
-                    <td>500 shards</td>
-                    <td><strong>975 shards</strong></td>
-                    <td>Skill Lv. 30 (Lv. 40 for UR)</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
+        ${gear.skills.map(skill => `<article class="skill-card">${skillIcon(skill, h)}<div class="skill-detail"><h4 class="skill-name-txt">${esc(skill.name)}</h4><p class="skill-desc-txt">${richDescription(skill.description)}</p></div></article>`).join('')}
+        ${glossary(gear.keywords)}
+      </section>`;
+    }
+    function renderModalContent() {
+      const h = activeModalHero;
+      if (!h) return;
+      modalContent.innerHTML = `<div class="modal-hero-header">
+        <button class="modal-close-btn" data-close-modal aria-label="Close dialog">✕</button>
+        <div class="modal-portrait"><img src="${esc(h.image)}" alt="${esc(h.display_name)}"></div>
+        <div class="modal-hero-summary">
+          <div class="modal-tags-row"><span class="rarity-badge ${rarityClass(h)}">${esc(h.quality_name)}</span><span class="class-badge">${gameIcon(h.faction_icon, h.camp_name)}${esc(h.camp_name)}</span><span class="class-badge">${gameIcon(h.role_icon, h.role_short)}${esc(h.role_short)}</span><span class="class-badge">#${Number(h.id)}</span></div>
+          <h2 class="modal-hero-name" id="modal-hero-name">${esc(h.display_name)}</h2>
+          ${h.variant_note ? `<aside class="variant-callout">${esc(h.variant_note)}</aside>` : ''}
+          <div class="modal-training-gate">Training requirement: ${esc(h.training_center.building_name)} (Lv. ${Number(h.training_center.level)})</div>
+          <div class="modal-stats-row">${stats.map(([key, label]) => {
+            const all = h.stat_ranks.all[key], peers = h.stat_ranks.peers[key];
+            return `<div class="modal-stat-box"><div class="lbl">Base ${label}</div><div class="val">${formatNumber(h.base_stats[key])}</div><div class="stat-meter" role="img" aria-label="${label}: ${formatNumber(h.base_stats[key])} of roster maximum ${formatNumber(statMax[key])}"><span style="width:${h.base_stats[key] / statMax[key] * 100}%"></span></div><div class="stat-rank">#${Number(all.rank)} of ${Number(all.of)} · #${Number(peers.rank)} of ${Number(peers.of)} ${esc(h.stat_ranks.peer_scope)}</div></div>`;
+          }).join('')}</div>
+          ${h.level_benefits?.length ? `<div class="modal-benefits-box"><strong>Passive stat bonus (levelBenefit)</strong><br>${h.level_benefits.map(b => `${esc(b.name.replace(/\s*\+\s*$/, ''))} +${percent(b.value)}`).join('<br>')}</div>` : ''}
         </div>
-      `;
+      </div>
+      <div class="modal-body">
+        <section><h3 class="modal-section-title">Strengths &amp; tips</h3><p class="insight-lead">${esc(h.insight?.summary)}</p>${insightTags(h)}<ul class="tip-list">${(h.insight?.tips || []).map(tip => `<li>${esc(tip)}</li>`).join('')}</ul></section>
+        <section><h3 class="modal-section-title">Skills</h3><div class="skills-list">${h.skills.map(s => combatSkill(s, h)).join('')}</div></section>
+        ${gearSection(h)}
+        <section><h3 class="modal-section-title">Star progression</h3>${starTable()}<p class="star-table-note">${formatNumber(starTiers().at(-1).cumulative)} shards to 5★. Specialty also requires Hero Lv. 31.</p></section>
+        ${h.story ? `<details class="story-details"><summary>Story</summary><div class="story-card">${esc(h.story)}</div></details>` : ''}
+      </div>`;
     }
 
-    // Initial render
+    function renderMatrix() {
+      const factions = [[3, 'Warrior'], [1, 'Tactical'], [2, 'Assault']];
+      const roles = [[1, 'Frontline'], [2, 'Support'], [3, 'Backline']];
+      document.getElementById('faction-matrix').innerHTML = '<div aria-hidden="true"></div>' + factions.map(([id, name]) => `<div class="matrix-heading">${gameIcon(`../assets/heroes/ui/faction_${id}.webp`, name)}${name}</div>`).join('') + roles.map(([role, name]) => `<div class="matrix-role">${gameIcon(`../assets/heroes/ui/role_${role}.webp`, name)}${name}</div>${factions.map(([camp, faction]) => {
+        const heroes = HEROES_DATA.filter(h => h.army_type === role && h.camp_type === camp).sort((a, b) => b.quality - a.quality || a.display_name.localeCompare(b.display_name));
+        return `<div class="matrix-cell" role="group" aria-label="${faction} ${name}">${heroes.length ? heroes.map(h => `<button class="head-button quality-${Number(h.quality)}" data-hero-id="${Number(h.id)}" title="${esc(h.display_name)} · ${esc(h.quality_name)}" aria-label="Inspect ${esc(h.display_name)}"><img src="${esc(h.head || h.image)}" alt="${esc(h.display_name)}" loading="lazy"><span>${esc(h.display_name)}</span></button>`).join('') : '<span class="muted" aria-label="No heroes">—</span>'}</div>`;
+      }).join('')}`).join('');
+    }
+    function renderStatProfile() {
+      const container = document.getElementById('stat-profile');
+      const focusedHeroId = document.activeElement?.closest('.chart-head')?.dataset.heroId;
+      const width = Math.max(240, Math.round(container.clientWidth || 320));
+      const height = width < 500 ? 380 : 440;
+      const left = 56, right = width - 22, top = 24, bottom = height - 48;
+      const maxHP = Math.ceil(statMax.hp / 2000) * 2000, maxATK = Math.ceil(statMax.attack / 2000) * 2000;
+      const x = hp => left + hp / maxHP * (right - left), y = atk => bottom - atk / maxATK * (bottom - top);
+      const ticks = width < 500 ? 2 : 4;
+      let axes = '';
+      for (let i = 0; i <= ticks; i++) {
+        const hp = maxHP * i / ticks, atk = maxATK * i / ticks;
+        axes += `<line class="chart-grid" x1="${x(hp)}" y1="${top}" x2="${x(hp)}" y2="${bottom}"/><text class="chart-label" x="${x(hp)}" y="${bottom + 20}" text-anchor="middle">${formatNumber(hp)}</text><line class="chart-grid" x1="${left}" y1="${y(atk)}" x2="${right}" y2="${y(atk)}"/><text class="chart-label" x="${left - 8}" y="${y(atk) + 4}" text-anchor="end">${formatNumber(atk)}</text>`;
+      }
+      // Portraits remain 30px at any width. Spiral placement resolves both close and identical values.
+      const placed = [];
+      const nodes = HEROES_DATA.slice().sort((a, b) => b.quality - a.quality).map(h => {
+        const actualX = x(h.base_stats.hp), actualY = y(h.base_stats.attack);
+        let px = actualX, py = actualY, bestScore = Infinity;
+        for (let n = 0; n < 2500; n++) {
+          const radius = n ? Math.sqrt(n) * 5 : 0, angle = n * 2.399963;
+          const cx = Math.max(left + 16, Math.min(right - 16, actualX + Math.cos(angle) * radius));
+          const cy = Math.max(top + 16, Math.min(bottom - 16, actualY + Math.sin(angle) * radius));
+          const overlap = placed.reduce((sum, p) => sum + Math.max(0, 34 - Math.hypot(cx - p.x, cy - p.y)), 0);
+          const score = overlap * 1000 + Math.hypot(cx - actualX, cy - actualY);
+          if (score < bestScore) { px = cx; py = cy; bestScore = score; }
+          if (overlap === 0) break;
+        }
+        placed.push({ x: px, y: py });
+        const label = `${h.display_name}: HP ${formatNumber(h.base_stats.hp)}, ATK ${formatNumber(h.base_stats.attack)}, DEF ${formatNumber(h.base_stats.defense)}`;
+        const offset = Math.hypot(px - actualX, py - actualY) > 2;
+        return { leader: offset ? `<line class="chart-grid" x1="${actualX}" y1="${actualY}" x2="${px}" y2="${py}"/><circle cx="${actualX}" cy="${actualY}" r="2" fill="var(--text-muted)"/>` : '',
+          head: `<g class="chart-head quality-${Number(h.quality)}" data-hero-id="${Number(h.id)}" data-stat-info="${esc(label)}" role="button" tabindex="0" aria-label="Inspect ${esc(label)}"><title>${esc(label)}</title><clipPath id="head-clip-${Number(h.id)}"><circle cx="${px}" cy="${py}" r="14"/></clipPath><circle cx="${px}" cy="${py}" r="16" fill="var(--card-inner)" stroke="var(--ring)" stroke-width="2"/><image href="${esc(h.head || h.image)}" x="${px - 15}" y="${py - 15}" width="30" height="30" clip-path="url(#head-clip-${Number(h.id)})" preserveAspectRatio="xMidYMid slice" role="img" aria-label="${esc(h.display_name)} portrait"/><circle class="focus-ring" cx="${px}" cy="${py}" r="20" fill="none" stroke="transparent"/></g>` };
+      });
+      container.innerHTML = `<svg viewBox="0 0 ${width} ${height}" role="group" aria-label="Base HP and ATK scatter plot, 32 hero buttons">${axes}<text class="chart-label" x="${(left + right) / 2}" y="${height - 5}" text-anchor="middle">Base HP</text><text class="chart-label" x="14" y="${(top + bottom) / 2}" transform="rotate(-90 14 ${(top + bottom) / 2})" text-anchor="middle">Base ATK</text>${nodes.map(n => n.leader).join('')}${nodes.map(n => n.head).join('')}</svg>`;
+      if (focusedHeroId) container.querySelector(`[data-hero-id="${Number(focusedHeroId)}"]`)?.focus({ preventScroll: true });
+    }
+    const profile = document.getElementById('stat-profile');
+    function showStatInfo(e) {
+      const head = e.target.closest('.chart-head');
+      if (head) document.getElementById('stat-profile-info').textContent = head.dataset.statInfo;
+    }
+    profile.addEventListener('pointerover', showStatInfo);
+    profile.addEventListener('focusin', showStatInfo);
+    profile.addEventListener('click', showStatInfo);
+
+    function renderGrowth() {
+      const curves = HEROES_META.level_curves;
+      const width = Math.max(240, Math.round(document.getElementById('growth-chart').clientWidth || 320)), height = 250;
+      const left = 58, right = width - 18, top = 24, bottom = 205;
+      const maxLevel = Math.max(...curves['1'].map(p => p.level));
+      const maxHP = Math.ceil(Math.max(...curves['1'].map(p => p.hp), ...curves['2'].map(p => p.hp)) / 200000) * 200000;
+      const x = level => left + (level - 1) / (maxLevel - 1) * (right - left), y = hp => bottom - hp / maxHP * (bottom - top);
+      const convergence = curves['1'].find(p => p.level > 1 && curves['2'].some(q => q.level === p.level && q.hp === p.hp));
+      let grid = '';
+      for (let i = 0; i <= 2; i++) {
+        const value = maxHP * i / 2;
+        grid += `<line class="chart-grid" x1="${left}" y1="${y(value)}" x2="${right}" y2="${y(value)}"/><text class="chart-label" x="${left - 6}" y="${y(value) + 4}" text-anchor="end">${formatNumber(value)}</text>`;
+      }
+      grid += [1, convergence.level, maxLevel].map(level => `<text class="chart-label" x="${x(level)}" y="${bottom + 19}" text-anchor="middle">${level}</text>`).join('');
+      document.getElementById('growth-chart').innerHTML = `<div class="growth-legend"><span><i class="curve-key"></i>SR/SSR + UR Aria (curve 1)</span><span><i class="curve-key two"></i>UR (curve 2)</span></div><svg viewBox="0 0 ${width} ${height}" role="img" aria-label="HP level growth curves converge at Lv. ${convergence.level}, then match through Lv. ${maxLevel}"><title>HP added by level curve, excluding base stats</title>${grid}<text class="chart-label" x="${left}" y="14">Added HP</text>${['1', '2'].map((id, i) => `<polyline points="${curves[id].map(p => `${x(p.level)},${y(p.hp)}`).join(' ')}" fill="none" stroke="var(--${i ? 'purple' : 'accent'})" stroke-width="${i ? 2 : 3}" ${i ? 'stroke-dasharray="5 4"' : ''}/>`).join('')}<line x1="${x(convergence.level)}" y1="${top}" x2="${x(convergence.level)}" y2="${bottom}" stroke="var(--text-muted)" stroke-dasharray="3 4"/><circle cx="${x(convergence.level)}" cy="${y(convergence.hp)}" r="4" fill="var(--green)"/><text class="chart-label" x="${x(convergence.level) + 6}" y="${top + 15}">Lv. ${convergence.level}</text><text class="chart-label" x="${(left + right) / 2}" y="245" text-anchor="middle">Hero level</text></svg>`;
+      const tiers = starTiers();
+      const books = HEROES_META.skill_books;
+      document.getElementById('growth-notes').innerHTML = `<p>The curves converge at Lv. ${Number(convergence.level)} and match through Lv. ${Number(maxLevel)}; current hero cards cap at Lv. ${Number(Math.max(...HEROES_DATA.map(h => h.max_level)))}.</p><p>${formatNumber(tiers.at(-1).cumulative)} shards to 5★ (${tiers.map(t => `${Number(t.count)} × ${t.perStep.map(formatNumber).join('/')}`).join(' + ')}); skill caps ${tiers.map(t => Number(t.cap)).join('/')} at 1★–5★.</p><p>UR: ${formatNumber(books['5'][3])} books to Lv. 30 per skill; ${formatNumber(books['5'][4])} to Lv. 40 with exclusive weapon.</p><p>SSR: ${formatNumber(books['4'][3])}; SR: ${formatNumber(books['3'][3])} books to Lv. 30 per skill.</p>`;
+    }
+    const strengths = document.getElementById('strengths-panel');
+    try { strengths.open = localStorage.getItem('heroes-strengths-open') !== 'false'; } catch (_) { /* default open */ }
+    strengths.addEventListener('toggle', () => {
+      try { localStorage.setItem('heroes-strengths-open', String(strengths.open)); } catch (_) { /* storage may be unavailable */ }
+      if (strengths.open) { renderStatProfile(); renderGrowth(); }
+    });
+    document.getElementById('global-insights').innerHTML = HEROES_META.global_insights.map(insight => `<article class="insight-card"><h3>${esc(insight.title)}</h3><p>${esc(insight.body)}</p></article>`).join('');
+    document.getElementById('data-sources').innerHTML = Object.entries(HEROES_META.sources).map(([key, source]) => `<p><strong>${esc(key[0].toUpperCase() + key.slice(1))}:</strong> ${esc(source)}</p>`).join('');
     renderHeroes();
+    renderMatrix();
+    renderStatProfile();
+    renderGrowth();
+    if (window.ResizeObserver) {
+      let chartWidth = 0;
+      new ResizeObserver(entries => {
+        const width = Math.round(entries[0].contentRect.width);
+        if (width > 0 && width !== chartWidth) { chartWidth = width; renderStatProfile(); renderGrowth(); }
+      }).observe(profile);
+    } else {
+      window.addEventListener('resize', () => { renderStatProfile(); renderGrowth(); });
+    }
+
   </script>
 </body>
 </html>

@@ -3,12 +3,18 @@ const HEROES_DATA = [
     "id": 10005,
     "name": "Rachel",
     "display_name": "Rachel",
+    "variant_note": null,
+    "text_source_id": 10005,
     "quality": 4,
     "quality_name": "SSR",
     "army_type": 3,
     "army_name": "Backline Hero",
+    "role_short": "Backline",
+    "role_description": "Excels at dealing damage from the backline, possessing powerful attack capabilities and skills.",
+    "role_icon": "../assets/heroes/ui/role_3.webp",
     "camp_type": 3,
     "camp_name": "Warrior",
+    "faction_icon": "../assets/heroes/ui/faction_3.webp",
     "training_center": {
       "building_id": 5044,
       "building_name": "Warrior Training Center",
@@ -19,6 +25,38 @@ const HEROES_DATA = [
       "attack": 9421,
       "defense": 6114
     },
+    "stat_ranks": {
+      "peer_scope": "SSR Backline",
+      "peers": {
+        "hp": {
+          "rank": 5,
+          "of": 9
+        },
+        "attack": {
+          "rank": 5,
+          "of": 9
+        },
+        "defense": {
+          "rank": 5,
+          "of": 9
+        }
+      },
+      "all": {
+        "hp": {
+          "rank": 26,
+          "of": 32
+        },
+        "attack": {
+          "rank": 16,
+          "of": 32
+        },
+        "defense": {
+          "rank": 25,
+          "of": 32
+        }
+      }
+    },
+    "level_curve_id": 1,
     "level_benefits": [
       {
         "source": 705,
@@ -29,214 +67,246 @@ const HEROES_DATA = [
     ],
     "max_level": 150,
     "image": "../assets/heroes/10005.png",
-    "story": "Before the catastrophe, vicious criminals were often slapped by him, and no one ever received a second slap. The surviving prisoners claimed that one slap was enough.\nAfter the catastrophe, the cruel enemies of the Abyss Empire were often slapped by him, and no enemy survived.",
+    "head": "../assets/heroes/heads/10005.webp",
+    "head_sprite": "Icon_Hero_Rachel",
+    "sprite_match": "name",
+    "story": "Before the catastrophe, vicious criminals were often slapped by him, and no one ever received a second slap. The surviving prisoners claimed that one slap was enough. After the catastrophe, the cruel enemies of the Abyss Empire were often slapped by him, and no enemy survived.",
     "skills": [
       {
         "slot": 1,
+        "group_id": 1000510,
         "type": 1,
         "type_name": "Auto Attack",
         "name": "Heavy Rifle",
+        "name_in_client": true,
         "description": "Fires heavy ammunition to attack enemies, dealing damage equal to {0} ATK.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": 1550,
         "cooldown": "1.55s",
         "unlock": "Hero Lv. 1",
-        "star_tiers": [
+        "unlock_level": 1,
+        "unlock_star": 0,
+        "icon": "../assets/heroes/skills/10005_1.webp",
+        "icon_sprite": "Hero_Rachel_skill_01",
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3250,
-            "ability_display": "32.5%",
+            "weight": 3250,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 6500,
-            "ability_display": "65%",
+            "weight": 6500,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 10800,
-            "ability_display": "108%",
+            "weight": 10800,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 17300,
-            "ability_display": "173%",
+            "weight": 17300,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 25950,
-            "ability_display": "259.5%",
+            "weight": 25950,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 34600,
-            "ability_display": "346%",
+            "weight": 34600,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 2,
+        "group_id": 1000520,
         "type": 2,
-        "type_name": "Tactical Skill",
+        "type_name": "Battle Skills",
         "name": "Grenadier",
+        "name_in_client": true,
         "description": "Throws grenades consecutively to attack random enemies 4 times, dealing damage equal to {0} ATK.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": 9000,
         "cooldown": "9.00s",
         "unlock": "Hero Lv. 5",
-        "star_tiers": [
+        "unlock_level": 5,
+        "unlock_star": 0,
+        "icon": "../assets/heroes/skills/10005_2.webp",
+        "icon_sprite": "Hero_Rachel_skill_02",
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3250,
-            "ability_display": "32.5%",
+            "weight": 3250,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 6500,
-            "ability_display": "65%",
+            "weight": 6500,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 10800,
-            "ability_display": "108%",
+            "weight": 10800,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 17300,
-            "ability_display": "173%",
+            "weight": 17300,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 25950,
-            "ability_display": "259.5%",
+            "weight": 25950,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 34600,
-            "ability_display": "346%",
+            "weight": 34600,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 3,
+        "group_id": 1000530,
         "type": 3,
-        "type_name": "Passive Skill",
+        "type_name": "Passive",
         "name": "Caliber Modification",
+        "name_in_client": true,
         "description": "In combat, increases ATK by {0}.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": null,
         "cooldown": "Passive",
         "unlock": "Hero Lv. 21",
-        "star_tiers": [
+        "unlock_level": 21,
+        "unlock_star": 0,
+        "icon": null,
+        "icon_sprite": null,
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3250,
-            "ability_display": "32.5%",
+            "weight": 3250,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 6500,
-            "ability_display": "65%",
+            "weight": 6500,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 10800,
-            "ability_display": "108%",
+            "weight": 10800,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 17300,
-            "ability_display": "173%",
+            "weight": 17300,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 25950,
-            "ability_display": "259.5%",
+            "weight": 25950,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 34600,
-            "ability_display": "346%",
+            "weight": 34600,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 4,
+        "group_id": 1000540,
         "type": 4,
-        "type_name": "Specialty / Leadership",
-        "name": "Troop Leadership",
-        "description": "Number of soldiers the hero can lead, providing additional attack, HP, and defense stats to the squad.",
+        "type_name": "Specialty",
+        "name": "Specialty",
+        "name_in_client": false,
+        "description": "Specialty slot. The client has no name or description for it; it unlocks at Hero Lv. 31 and 4★ and its weight does not grow with stars.",
+        "description_in_client": false,
+        "keywords": [],
+        "cooldown_ms": null,
         "cooldown": "Passive",
-        "unlock": "Hero Lv. 31 & 4★",
-        "star_tiers": [
+        "unlock": "Hero Lv. 31 · 4★",
+        "unlock_level": 31,
+        "unlock_star": 4,
+        "icon": null,
+        "icon_sprite": null,
+        "weights": [
           {
             "star": 0,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 3,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 4,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 5,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           }
-        ]
+        ],
+        "gear_upgrades": []
       }
     ],
     "exclusive_gear": null,
-    "role_type": 3,
-    "role_name": "Backline Hero",
-    "role_short": "Backline",
-    "role_icon": "🎯",
-    "role_description": "Excels at dealing damage from the backline with high attack and burst skills."
+    "insight": {
+      "focus": "pvp",
+      "tags": [
+        "Burst AoE",
+        "Self ATK"
+      ],
+      "summary": "Glass-cannon SSR Warrior gunner: low HP (4,165), a self ATK passive and a 4-hit random grenade volley.",
+      "tips": [
+        "Grenadier splits 4 hits across random targets; it is best against wide enemy lines, not single bosses.",
+        "Caliber Modification is an unconditional ATK passive, so she keeps her value in PvP where the monster-only SSR passives do nothing."
+      ]
+    }
   },
   {
     "id": 10006,
     "name": "Nora",
-    "display_name": "Nora (Classics)",
+    "display_name": "Nora (Rocket Launcher)",
+    "variant_note": "Farming Nora (#10006). A different hero from crossbow Nora (#10011).",
+    "text_source_id": 10006,
     "quality": 4,
     "quality_name": "SSR",
     "army_type": 3,
     "army_name": "Backline Hero",
+    "role_short": "Backline",
+    "role_description": "Excels at dealing damage from the backline, possessing powerful attack capabilities and skills.",
+    "role_icon": "../assets/heroes/ui/role_3.webp",
     "camp_type": 3,
     "camp_name": "Warrior",
+    "faction_icon": "../assets/heroes/ui/faction_3.webp",
     "training_center": {
       "building_id": 5044,
       "building_name": "Warrior Training Center",
@@ -247,6 +317,38 @@ const HEROES_DATA = [
       "attack": 8157,
       "defense": 6338
     },
+    "stat_ranks": {
+      "peer_scope": "SSR Backline",
+      "peers": {
+        "hp": {
+          "rank": 2,
+          "of": 9
+        },
+        "attack": {
+          "rank": 7,
+          "of": 9
+        },
+        "defense": {
+          "rank": 2,
+          "of": 9
+        }
+      },
+      "all": {
+        "hp": {
+          "rank": 23,
+          "of": 32
+        },
+        "attack": {
+          "rank": 20,
+          "of": 32
+        },
+        "defense": {
+          "rank": 22,
+          "of": 32
+        }
+      }
+    },
+    "level_curve_id": 1,
     "level_benefits": [
       {
         "source": 705,
@@ -257,214 +359,257 @@ const HEROES_DATA = [
     ],
     "max_level": 150,
     "image": "../assets/heroes/10006.png",
+    "head": "../assets/heroes/heads/10006.webp",
+    "head_sprite": "Icon_Hero_Nora",
+    "sprite_match": "name",
     "story": "The enemy tide covered the coast; it wasn't vast but dense, like red tassels fluttering in the wind. As the wind blew stronger, it wove into a tapestry, gradually obscuring the limited view of the fortifications. The wind grew fiercer, and the tapestry fiercely lashed against the soldiers' faces, forcing them to press their heads tightly against their armor. The wind howled, and a cherry-colored blade flashed. In an instant, the cherry hue intertwined with the tapestry, which ceased to move.",
     "skills": [
       {
         "slot": 1,
+        "group_id": 1000610,
         "type": 1,
         "type_name": "Auto Attack",
         "name": "Militia Rocket Launcher",
+        "name_in_client": true,
         "description": "Launches rockets at 2 random enemies, dealing damage equal to {0} ATK.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": 1000,
         "cooldown": "1.00s",
         "unlock": "Hero Lv. 1",
-        "star_tiers": [
+        "unlock_level": 1,
+        "unlock_star": 0,
+        "icon": "../assets/heroes/skills/10006_1.webp",
+        "icon_sprite": "Hero_Nora_skill_01",
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3250,
-            "ability_display": "32.5%",
+            "weight": 3250,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 6500,
-            "ability_display": "65%",
+            "weight": 6500,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 10800,
-            "ability_display": "108%",
+            "weight": 10800,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 17300,
-            "ability_display": "173%",
+            "weight": 17300,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 25950,
-            "ability_display": "259.5%",
+            "weight": 25950,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 34600,
-            "ability_display": "346%",
+            "weight": 34600,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 2,
+        "group_id": 1000620,
         "type": 2,
-        "type_name": "Tactical Skill",
+        "type_name": "Battle Skills",
         "name": "Scavenger",
+        "name_in_client": true,
         "description": "Launches serum rockets at enemies, dealing damage equal to {0} ATK and increasing damage from monsters by 9% for 7s.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": 9000,
         "cooldown": "9.00s",
         "unlock": "Hero Lv. 5",
-        "star_tiers": [
+        "unlock_level": 5,
+        "unlock_star": 0,
+        "icon": "../assets/heroes/skills/10006_2.webp",
+        "icon_sprite": "Hero_Nora_skill_02",
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3250,
-            "ability_display": "32.5%",
+            "weight": 3250,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 6500,
-            "ability_display": "65%",
+            "weight": 6500,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 10800,
-            "ability_display": "108%",
+            "weight": 10800,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 17300,
-            "ability_display": "173%",
+            "weight": 17300,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 25950,
-            "ability_display": "259.5%",
+            "weight": 25950,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 34600,
-            "ability_display": "346%",
+            "weight": 34600,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 3,
+        "group_id": 1000630,
         "type": 3,
-        "type_name": "Passive Skill",
+        "type_name": "Passive",
         "name": "Treasure Hunter",
-        "description": "In combat, deals {0} more damage to monsters. After your squad defeats Metal Zombies, Food Zombies, Oil Zombies, and Zombie Elite Hordes, the resource acquisition of Oil, Food, and Iron Mine increases by {1}.",
+        "name_in_client": true,
+        "description": "In battle, own damage to monsters increases by {0}; The squad gains the [Plunder] buff {1}. Regardless of whether Nora is deployed, all squads gain the [Pursuer] buff.",
+        "description_in_client": true,
+        "keywords": [
+          {
+            "name": "Plunder",
+            "text": "Increases the amount of Iron Ore, Food, and Oil obtained after defeating Metal Zombies, Food Zombies, Oil Zombies, and Elite Zombie Hordes."
+          },
+          {
+            "name": "Pursuer",
+            "text": "Damage dealt to Wild Monsters and Rally Monsters +5%."
+          }
+        ],
+        "cooldown_ms": null,
         "cooldown": "Passive",
         "unlock": "Hero Lv. 21",
-        "star_tiers": [
+        "unlock_level": 21,
+        "unlock_star": 0,
+        "icon": "../assets/heroes/skills/10006_3.webp",
+        "icon_sprite": "Hero_Nora_skill_03",
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3250,
-            "ability_display": "32.5%",
+            "weight": 3250,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 6500,
-            "ability_display": "65%",
+            "weight": 6500,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 10800,
-            "ability_display": "108%",
+            "weight": 10800,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 17300,
-            "ability_display": "173%",
+            "weight": 17300,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 25950,
-            "ability_display": "259.5%",
+            "weight": 25950,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 34600,
-            "ability_display": "346%",
+            "weight": 34600,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 4,
+        "group_id": 1000640,
         "type": 4,
-        "type_name": "Specialty / Leadership",
-        "name": "Troop Leadership",
-        "description": "Number of soldiers the hero can lead, providing additional attack, HP, and defense stats to the squad.",
+        "type_name": "Specialty",
+        "name": "Specialty",
+        "name_in_client": false,
+        "description": "Specialty slot. The client has no name or description for it; it unlocks at Hero Lv. 31 and 4★ and its weight does not grow with stars.",
+        "description_in_client": false,
+        "keywords": [],
+        "cooldown_ms": null,
         "cooldown": "Passive",
-        "unlock": "Hero Lv. 31 & 4★",
-        "star_tiers": [
+        "unlock": "Hero Lv. 31 · 4★",
+        "unlock_level": 31,
+        "unlock_star": 4,
+        "icon": null,
+        "icon_sprite": null,
+        "weights": [
           {
             "star": 0,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 3,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 4,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 5,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           }
-        ]
+        ],
+        "gear_upgrades": []
       }
     ],
     "exclusive_gear": null,
-    "role_type": 3,
-    "role_name": "Backline Hero",
-    "role_short": "Backline",
-    "role_icon": "🎯",
-    "role_description": "Excels at dealing damage from the backline with high attack and burst skills."
+    "insight": {
+      "focus": "pve",
+      "tags": [
+        "Monster damage",
+        "Farming",
+        "Account-wide buff"
+      ],
+      "summary": "The farming Nora: monster damage, bonus Iron Ore/Food/Oil from resource zombies, and an account-wide monster buff.",
+      "tips": [
+        "Her [Pursuer] buff (+5% damage to Wild and Rally Monsters) applies to all squads even if she is not deployed, so owning and starring her helps every rally.",
+        "Put her in the squad that clears Metal, Food and Oil Zombies and Elite Zombie Hordes: [Plunder] raises the resources those kills drop.",
+        "Scavenger makes the target take 9% more damage from monsters for 7s; that only matters in PvE."
+      ]
+    }
   },
   {
     "id": 10007,
     "name": "Arnold",
     "display_name": "Arnold",
+    "variant_note": null,
+    "text_source_id": 10007,
     "quality": 5,
     "quality_name": "UR",
     "army_type": 1,
     "army_name": "Frontline Hero",
+    "role_short": "Frontline",
+    "role_description": "Excels at absorbing enemy damage in the frontline, boasting formidable defense with significant HP and shield growth.",
+    "role_icon": "../assets/heroes/ui/role_1.webp",
     "camp_type": 3,
     "camp_name": "Warrior",
+    "faction_icon": "../assets/heroes/ui/faction_3.webp",
     "training_center": {
       "building_id": 5044,
       "building_name": "Warrior Training Center",
@@ -475,6 +620,38 @@ const HEROES_DATA = [
       "attack": 8157,
       "defense": 10522
     },
+    "stat_ranks": {
+      "peer_scope": "UR Frontline",
+      "peers": {
+        "hp": {
+          "rank": 3,
+          "of": 6
+        },
+        "attack": {
+          "rank": 4,
+          "of": 6
+        },
+        "defense": {
+          "rank": 3,
+          "of": 6
+        }
+      },
+      "all": {
+        "hp": {
+          "rank": 3,
+          "of": 32
+        },
+        "attack": {
+          "rank": 21,
+          "of": 32
+        },
+        "defense": {
+          "rank": 3,
+          "of": 32
+        }
+      }
+    },
+    "level_curve_id": 2,
     "level_benefits": [
       {
         "source": 705,
@@ -485,214 +662,246 @@ const HEROES_DATA = [
     ],
     "max_level": 150,
     "image": "../assets/heroes/10007.png",
-    "story": "In an era of rapid advancements in AI biotechnology, it is the most precious star, becoming the mascot of this technology as a national treasure from the East.\nAfter acquiring AI, it crafted armor for itself and ventured further down the path of honing combat skills.\nThe researchers regret showing it an old animated film about pandas and martial arts.\nNow, no one can defeat it!",
+    "head": "../assets/heroes/heads/10007.webp",
+    "head_sprite": "Icon_Hero_Arnold",
+    "sprite_match": "name",
+    "story": "In an era of rapid advancements in AI biotechnology, it is the most precious star, becoming the mascot of this technology as a national treasure from the East. After acquiring AI, it crafted armor for itself and ventured further down the path of honing combat skills. The researchers regret showing it an old animated film about pandas and martial arts. Now, no one can defeat it!",
     "skills": [
       {
         "slot": 1,
+        "group_id": 1000710,
         "type": 1,
         "type_name": "Auto Attack",
         "name": "Tactical Shotgun",
+        "name_in_client": true,
         "description": "Attacks enemies with a shotgun, dealing damage equal to {0} ATK.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": 1600,
         "cooldown": "1.60s",
         "unlock": "Hero Lv. 1",
-        "star_tiers": [
+        "unlock_level": 1,
+        "unlock_star": 0,
+        "icon": "../assets/heroes/skills/10007_1.webp",
+        "icon_sprite": "Hero_Arnold_skill_01",
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3600,
-            "ability_display": "36%",
+            "weight": 3600,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 7200,
-            "ability_display": "72%",
+            "weight": 7200,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 12000,
-            "ability_display": "120%",
+            "weight": 12000,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 19200,
-            "ability_display": "192%",
+            "weight": 19200,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 28800,
-            "ability_display": "288%",
+            "weight": 28800,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 38400,
-            "ability_display": "384%",
+            "weight": 38400,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 2,
+        "group_id": 1000720,
         "type": 2,
-        "type_name": "Tactical Skill",
+        "type_name": "Battle Skills",
         "name": "Field Support",
+        "name_in_client": true,
         "description": "Provides cover with a shield, reducing front-row allies' incoming Physical DMG by {0} for {2}s.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": 10000,
         "cooldown": "10.00s",
         "unlock": "Hero Lv. 5",
-        "star_tiers": [
+        "unlock_level": 5,
+        "unlock_star": 0,
+        "icon": "../assets/heroes/skills/10007_2.webp",
+        "icon_sprite": "Hero_Arnold_skill_02",
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3600,
-            "ability_display": "36%",
+            "weight": 3600,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 7200,
-            "ability_display": "72%",
+            "weight": 7200,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 12000,
-            "ability_display": "120%",
+            "weight": 12000,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 19200,
-            "ability_display": "192%",
+            "weight": 19200,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 28800,
-            "ability_display": "288%",
+            "weight": 28800,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 38400,
-            "ability_display": "384%",
+            "weight": 38400,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 3,
+        "group_id": 1000730,
         "type": 3,
-        "type_name": "Passive Skill",
+        "type_name": "Passive",
         "name": "Tactical Shield",
+        "name_in_client": true,
         "description": "In combat, reduces front-row allies' incoming damage by {0}.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": null,
         "cooldown": "Passive",
         "unlock": "Hero Lv. 21",
-        "star_tiers": [
+        "unlock_level": 21,
+        "unlock_star": 0,
+        "icon": "../assets/heroes/skills/10007_3.webp",
+        "icon_sprite": "Hero_Arnold_skill_03",
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3600,
-            "ability_display": "36%",
+            "weight": 3600,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 7200,
-            "ability_display": "72%",
+            "weight": 7200,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 12000,
-            "ability_display": "120%",
+            "weight": 12000,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 19200,
-            "ability_display": "192%",
+            "weight": 19200,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 28800,
-            "ability_display": "288%",
+            "weight": 28800,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 38400,
-            "ability_display": "384%",
+            "weight": 38400,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 4,
+        "group_id": 1000740,
         "type": 4,
-        "type_name": "Specialty / Leadership",
-        "name": "Troop Leadership",
-        "description": "Number of soldiers the hero can lead, providing additional attack, HP, and defense stats to the squad.",
+        "type_name": "Specialty",
+        "name": "Specialty",
+        "name_in_client": false,
+        "description": "Specialty slot. The client has no name or description for it; it unlocks at Hero Lv. 31 and 4★ and its weight does not grow with stars.",
+        "description_in_client": false,
+        "keywords": [],
+        "cooldown_ms": null,
         "cooldown": "Passive",
-        "unlock": "Hero Lv. 31 & 4★",
-        "star_tiers": [
+        "unlock": "Hero Lv. 31 · 4★",
+        "unlock_level": 31,
+        "unlock_star": 4,
+        "icon": null,
+        "icon_sprite": null,
+        "weights": [
           {
             "star": 0,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 3,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 4,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 5,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           }
-        ]
+        ],
+        "gear_upgrades": []
       }
     ],
     "exclusive_gear": null,
-    "role_type": 1,
-    "role_name": "Frontline Hero",
-    "role_short": "Frontline",
-    "role_icon": "🛡️",
-    "role_description": "Excels at absorbing enemy damage in the frontline with high HP and shield growth."
+    "insight": {
+      "focus": "both",
+      "tags": [
+        "Front-row protection",
+        "Physical DR"
+      ],
+      "summary": "UR Warrior shield wall: both his battle skill and passive cut damage taken by the whole front row.",
+      "tips": [
+        "Field Support only reduces Physical DMG, so he is strongest against gun and blade teams; pair him with Virgilio or Bekka against Radiation teams.",
+        "Tactical Shield is an always-on front-row damage reduction, so he lifts every frontliner beside him, not just himself."
+      ]
+    }
   },
   {
     "id": 10008,
     "name": "Zara",
     "display_name": "Zara",
+    "variant_note": null,
+    "text_source_id": 10008,
     "quality": 4,
     "quality_name": "SSR",
     "army_type": 1,
     "army_name": "Frontline Hero",
+    "role_short": "Frontline",
+    "role_description": "Excels at absorbing enemy damage in the frontline, boasting formidable defense with significant HP and shield growth.",
+    "role_icon": "../assets/heroes/ui/role_1.webp",
     "camp_type": 3,
     "camp_name": "Warrior",
+    "faction_icon": "../assets/heroes/ui/faction_3.webp",
     "training_center": {
       "building_id": 5044,
       "building_name": "Warrior Training Center",
@@ -703,6 +912,38 @@ const HEROES_DATA = [
       "attack": 5438,
       "defense": 7014
     },
+    "stat_ranks": {
+      "peer_scope": "SSR Frontline",
+      "peers": {
+        "hp": {
+          "rank": 1,
+          "of": 4
+        },
+        "attack": {
+          "rank": 4,
+          "of": 4
+        },
+        "defense": {
+          "rank": 1,
+          "of": 4
+        }
+      },
+      "all": {
+        "hp": {
+          "rank": 7,
+          "of": 32
+        },
+        "attack": {
+          "rank": 31,
+          "of": 32
+        },
+        "defense": {
+          "rank": 17,
+          "of": 32
+        }
+      }
+    },
+    "level_curve_id": 1,
     "level_benefits": [
       {
         "source": 705,
@@ -713,214 +954,246 @@ const HEROES_DATA = [
     ],
     "max_level": 150,
     "image": "../assets/heroes/10008.png",
-    "story": "Once a perpetually burning meteorite, after crashing to Earth, it gained consciousness through the engineer Victor's obsession with silicon-based life and the enhancement of AI.\nIt wanted to join the human resistance but was driven away as a monster that killed its father, Victor.\nIt tried to pick flowers for a crying orphan it had just saved, but the flowers turned to ashes the moment they were picked.\nEvery time it charged into battle to help humans, it was mistaken for a new weapon of the Abyss Empire and was hit by humans even more.\nThe heat prevented it from embracing the humans it loved, so it embraced the enemies of humanity instead.\n\nThank you for accepting him.",
+    "head": "../assets/heroes/heads/10008.webp",
+    "head_sprite": "Icon_Hero_Zara",
+    "sprite_match": "name",
+    "story": "Once a perpetually burning meteorite, after crashing to Earth, it gained consciousness through the engineer Victor's obsession with silicon-based life and the enhancement of AI. It wanted to join the human resistance but was driven away as a monster that killed its father, Victor. It tried to pick flowers for a crying orphan it had just saved, but the flowers turned to ashes the moment they were picked. Every time it charged into battle to help humans, it was mistaken for a new weapon of the Abyss Empire and was hit by humans even more. The heat prevented it from embracing the humans it loved, so it embraced the enemies of humanity instead. Thank you for accepting him.",
     "skills": [
       {
         "slot": 1,
+        "group_id": 1000810,
         "type": 1,
         "type_name": "Auto Attack",
         "name": "Flamethrower",
+        "name_in_client": true,
         "description": "Spews fire at enemies, dealing damage equal to {0} ATK.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": 4000,
         "cooldown": "4.00s",
         "unlock": "Hero Lv. 1",
-        "star_tiers": [
+        "unlock_level": 1,
+        "unlock_star": 0,
+        "icon": "../assets/heroes/skills/10008_1.webp",
+        "icon_sprite": "Hero_Zara_skill_01",
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3250,
-            "ability_display": "32.5%",
+            "weight": 3250,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 6500,
-            "ability_display": "65%",
+            "weight": 6500,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 10800,
-            "ability_display": "108%",
+            "weight": 10800,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 17300,
-            "ability_display": "173%",
+            "weight": 17300,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 25950,
-            "ability_display": "259.5%",
+            "weight": 25950,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 34600,
-            "ability_display": "346%",
+            "weight": 34600,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 2,
+        "group_id": 1000820,
         "type": 2,
-        "type_name": "Tactical Skill",
+        "type_name": "Battle Skills",
         "name": "Roar",
+        "name_in_client": true,
         "description": "Invigorates the spirit with a primal shout, reducing damage from monsters by {0} for 7s.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": 9000,
         "cooldown": "9.00s",
         "unlock": "Hero Lv. 5",
-        "star_tiers": [
+        "unlock_level": 5,
+        "unlock_star": 0,
+        "icon": "../assets/heroes/skills/10008_2.webp",
+        "icon_sprite": "Hero_Zara_skill_02",
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3250,
-            "ability_display": "32.5%",
+            "weight": 3250,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 6500,
-            "ability_display": "65%",
+            "weight": 6500,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 10800,
-            "ability_display": "108%",
+            "weight": 10800,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 17300,
-            "ability_display": "173%",
+            "weight": 17300,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 25950,
-            "ability_display": "259.5%",
+            "weight": 25950,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 34600,
-            "ability_display": "346%",
+            "weight": 34600,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 3,
+        "group_id": 1000830,
         "type": 3,
-        "type_name": "Passive Skill",
+        "type_name": "Passive",
         "name": "Robust Physique",
+        "name_in_client": true,
         "description": "In combat, increases DEF by {0}.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": null,
         "cooldown": "Passive",
         "unlock": "Hero Lv. 21",
-        "star_tiers": [
+        "unlock_level": 21,
+        "unlock_star": 0,
+        "icon": "../assets/heroes/skills/10008_3.webp",
+        "icon_sprite": "Hero_Zara_skill_03",
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3250,
-            "ability_display": "32.5%",
+            "weight": 3250,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 6500,
-            "ability_display": "65%",
+            "weight": 6500,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 10800,
-            "ability_display": "108%",
+            "weight": 10800,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 17300,
-            "ability_display": "173%",
+            "weight": 17300,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 25950,
-            "ability_display": "259.5%",
+            "weight": 25950,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 34600,
-            "ability_display": "346%",
+            "weight": 34600,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 4,
+        "group_id": 1000840,
         "type": 4,
-        "type_name": "Specialty / Leadership",
-        "name": "Troop Leadership",
-        "description": "Number of soldiers the hero can lead, providing additional attack, HP, and defense stats to the squad.",
+        "type_name": "Specialty",
+        "name": "Specialty",
+        "name_in_client": false,
+        "description": "Specialty slot. The client has no name or description for it; it unlocks at Hero Lv. 31 and 4★ and its weight does not grow with stars.",
+        "description_in_client": false,
+        "keywords": [],
+        "cooldown_ms": null,
         "cooldown": "Passive",
-        "unlock": "Hero Lv. 31 & 4★",
-        "star_tiers": [
+        "unlock": "Hero Lv. 31 · 4★",
+        "unlock_level": 31,
+        "unlock_star": 4,
+        "icon": null,
+        "icon_sprite": null,
+        "weights": [
           {
             "star": 0,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 3,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 4,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 5,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           }
-        ]
+        ],
+        "gear_upgrades": []
       }
     ],
     "exclusive_gear": null,
-    "role_type": 1,
-    "role_name": "Frontline Hero",
-    "role_short": "Frontline",
-    "role_icon": "🛡️",
-    "role_description": "Excels at absorbing enemy damage in the frontline with high HP and shield growth."
+    "insight": {
+      "focus": "pve",
+      "tags": [
+        "Monster DR",
+        "Flamethrower"
+      ],
+      "summary": "SSR Warrior tank tuned for zombies: Roar and Robust Physique keep her alive in PvE.",
+      "tips": [
+        "Her auto attack has a 4.0s interval in the table (Hank shares it); the flamethrower hits hard but slowly.",
+        "Roar and Robust Physique keep her alive against zombies; for PvP a UR frontliner (Arnold, Dirk) does more."
+      ]
+    }
   },
   {
     "id": 10011,
     "name": "Nora",
-    "display_name": "Nora (Awakened)",
+    "display_name": "Nora (Crossbow)",
+    "variant_note": "Crossbow Nora with her dog Max (#10011). A different hero from farming Nora (#10006).",
+    "text_source_id": 10011,
     "quality": 4,
     "quality_name": "SSR",
     "army_type": 3,
     "army_name": "Backline Hero",
+    "role_short": "Backline",
+    "role_description": "Excels at dealing damage from the backline, possessing powerful attack capabilities and skills.",
+    "role_icon": "../assets/heroes/ui/role_3.webp",
     "camp_type": 3,
     "camp_name": "Warrior",
+    "faction_icon": "../assets/heroes/ui/faction_3.webp",
     "training_center": {
       "building_id": 5044,
       "building_name": "Warrior Training Center",
@@ -931,6 +1204,38 @@ const HEROES_DATA = [
       "attack": 8157,
       "defense": 6338
     },
+    "stat_ranks": {
+      "peer_scope": "SSR Backline",
+      "peers": {
+        "hp": {
+          "rank": 3,
+          "of": 9
+        },
+        "attack": {
+          "rank": 8,
+          "of": 9
+        },
+        "defense": {
+          "rank": 3,
+          "of": 9
+        }
+      },
+      "all": {
+        "hp": {
+          "rank": 24,
+          "of": 32
+        },
+        "attack": {
+          "rank": 22,
+          "of": 32
+        },
+        "defense": {
+          "rank": 23,
+          "of": 32
+        }
+      }
+    },
+    "level_curve_id": 1,
     "level_benefits": [
       {
         "source": 705,
@@ -941,214 +1246,246 @@ const HEROES_DATA = [
     ],
     "max_level": 150,
     "image": "../assets/heroes/10011.png",
-    "story": "The enemy tide covered the coast; it wasn't vast but dense, like red tassels fluttering in the wind. As the wind blew stronger, it wove into a tapestry, gradually obscuring the limited view of the fortifications. The wind grew fiercer, and the tapestry fiercely lashed against the soldiers' faces, forcing them to press their heads tightly against their armor. The wind howled, and a cherry-colored blade flashed. In an instant, the cherry hue intertwined with the tapestry, which ceased to move.",
+    "head": "../assets/heroes/heads/10011.webp",
+    "head_sprite": "Icon_Hero_NoraClassics",
+    "sprite_match": "name",
+    "story": null,
     "skills": [
       {
         "slot": 1,
+        "group_id": 1001110,
         "type": 1,
         "type_name": "Auto Attack",
         "name": "Tactical Crossbow",
+        "name_in_client": true,
         "description": "Attacks 2 random units, dealing damage equal to {0} ATK. (CD: {1}s)",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": 1000,
         "cooldown": "1.00s",
         "unlock": "Hero Lv. 1",
-        "star_tiers": [
+        "unlock_level": 1,
+        "unlock_star": 0,
+        "icon": null,
+        "icon_sprite": null,
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3250,
-            "ability_display": "32.5%",
+            "weight": 3250,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 6500,
-            "ability_display": "65%",
+            "weight": 6500,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 10800,
-            "ability_display": "108%",
+            "weight": 10800,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 17300,
-            "ability_display": "173%",
+            "weight": 17300,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 25950,
-            "ability_display": "259.5%",
+            "weight": 25950,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 34600,
-            "ability_display": "346%",
+            "weight": 34600,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 2,
+        "group_id": 1001120,
         "type": 2,
-        "type_name": "Tactical Skill",
+        "type_name": "Battle Skills",
         "name": "Max and Friends",
+        "name_in_client": true,
         "description": "Summons Max to attack a random enemy, dealing {0} ATK damage. (CD: {1}s)",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": 9000,
         "cooldown": "9.00s",
         "unlock": "Hero Lv. 5",
-        "star_tiers": [
+        "unlock_level": 5,
+        "unlock_star": 0,
+        "icon": "../assets/heroes/skills/10011_2.webp",
+        "icon_sprite": "Hero_NoraClassics_skill_02",
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3250,
-            "ability_display": "32.5%",
+            "weight": 3250,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 6500,
-            "ability_display": "65%",
+            "weight": 6500,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 10800,
-            "ability_display": "108%",
+            "weight": 10800,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 17300,
-            "ability_display": "173%",
+            "weight": 17300,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 25950,
-            "ability_display": "259.5%",
+            "weight": 25950,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 34600,
-            "ability_display": "346%",
+            "weight": 34600,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 3,
+        "group_id": 1001130,
         "type": 3,
-        "type_name": "Passive Skill",
+        "type_name": "Passive",
         "name": "Composure",
+        "name_in_client": true,
         "description": "In combat, increases Crit Rate by {0}.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": null,
         "cooldown": "Passive",
         "unlock": "Hero Lv. 21",
-        "star_tiers": [
+        "unlock_level": 21,
+        "unlock_star": 0,
+        "icon": "../assets/heroes/skills/10011_3.webp",
+        "icon_sprite": "Hero_NoraClassics_skill_03",
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3250,
-            "ability_display": "32.5%",
+            "weight": 3250,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 6500,
-            "ability_display": "65%",
+            "weight": 6500,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 10800,
-            "ability_display": "108%",
+            "weight": 10800,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 17300,
-            "ability_display": "173%",
+            "weight": 17300,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 25950,
-            "ability_display": "259.5%",
+            "weight": 25950,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 34600,
-            "ability_display": "346%",
+            "weight": 34600,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 4,
+        "group_id": 1001140,
         "type": 4,
-        "type_name": "Specialty / Leadership",
-        "name": "Troop Leadership",
-        "description": "Number of soldiers the hero can lead, providing additional attack, HP, and defense stats to the squad.",
+        "type_name": "Specialty",
+        "name": "Specialty",
+        "name_in_client": false,
+        "description": "Specialty slot. The client has no name or description for it; it unlocks at Hero Lv. 31 and 4★ and its weight does not grow with stars.",
+        "description_in_client": false,
+        "keywords": [],
+        "cooldown_ms": null,
         "cooldown": "Passive",
-        "unlock": "Hero Lv. 31 & 4★",
-        "star_tiers": [
+        "unlock": "Hero Lv. 31 · 4★",
+        "unlock_level": 31,
+        "unlock_star": 4,
+        "icon": null,
+        "icon_sprite": null,
+        "weights": [
           {
             "star": 0,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 3,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 4,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 5,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           }
-        ]
+        ],
+        "gear_upgrades": []
       }
     ],
     "exclusive_gear": null,
-    "role_type": 3,
-    "role_name": "Backline Hero",
-    "role_short": "Backline",
-    "role_icon": "🎯",
-    "role_description": "Excels at dealing damage from the backline with high attack and burst skills."
+    "insight": {
+      "focus": "pvp",
+      "tags": [
+        "Crit",
+        "Multi-target"
+      ],
+      "summary": "Crossbow Nora with her dog Max: 2-target auto attacks and a Crit Rate passive.",
+      "tips": [
+        "Composure is an unconditional Crit Rate passive, so unlike the farming Nora she keeps her value in PvP.",
+        "Same name as the farming Nora (#10006) but a different hero with different skills; check the ID before spending shards."
+      ]
+    }
   },
   {
     "id": 20005,
     "name": "Kim Mina",
     "display_name": "Kim Mina",
+    "variant_note": null,
+    "text_source_id": 20005,
     "quality": 4,
     "quality_name": "SSR",
     "army_type": 3,
     "army_name": "Backline Hero",
+    "role_short": "Backline",
+    "role_description": "Excels at dealing damage from the backline, possessing powerful attack capabilities and skills.",
+    "role_icon": "../assets/heroes/ui/role_3.webp",
     "camp_type": 1,
     "camp_name": "Tactical",
+    "faction_icon": "../assets/heroes/ui/faction_1.webp",
     "training_center": {
       "building_id": 5046,
       "building_name": "Tactical Training Center",
@@ -1159,6 +1496,38 @@ const HEROES_DATA = [
       "attack": 7994,
       "defense": 6370
     },
+    "stat_ranks": {
+      "peer_scope": "SSR Backline",
+      "peers": {
+        "hp": {
+          "rank": 1,
+          "of": 9
+        },
+        "attack": {
+          "rank": 9,
+          "of": 9
+        },
+        "defense": {
+          "rank": 1,
+          "of": 9
+        }
+      },
+      "all": {
+        "hp": {
+          "rank": 22,
+          "of": 32
+        },
+        "attack": {
+          "rank": 24,
+          "of": 32
+        },
+        "defense": {
+          "rank": 21,
+          "of": 32
+        }
+      }
+    },
+    "level_curve_id": 1,
     "level_benefits": [
       {
         "source": 705,
@@ -1169,214 +1538,246 @@ const HEROES_DATA = [
     ],
     "max_level": 150,
     "image": "../assets/heroes/20005.png",
-    "story": "She is a player with an extremely high decibel level. Even when the battle reaches its peak and the artillery is roaring, her voice still echoes through the skies.\nAs a guerrilla, she is responsible for drawing enemy fire, and it's clear she's too competent at it. Often, allied soldiers are tempted to aim at her due to the noise.",
+    "head": "../assets/heroes/heads/20005.webp",
+    "head_sprite": "Icon_Hero_Jinmina",
+    "sprite_match": "name",
+    "story": "She is a player with an extremely high decibel level. Even when the battle reaches its peak and the artillery is roaring, her voice still echoes through the skies. As a guerrilla, she is responsible for drawing enemy fire, and it's clear she's too competent at it. Often, allied soldiers are tempted to aim at her due to the noise.",
     "skills": [
       {
         "slot": 1,
+        "group_id": 2000510,
         "type": 1,
         "type_name": "Auto Attack",
         "name": "Recurve Bow",
+        "name_in_client": true,
         "description": "Shoots arrows at enemies, dealing damage equal to {0} ATK.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": 1000,
         "cooldown": "1.00s",
         "unlock": "Hero Lv. 1",
-        "star_tiers": [
+        "unlock_level": 1,
+        "unlock_star": 0,
+        "icon": "../assets/heroes/skills/20005_1.webp",
+        "icon_sprite": "Hero_Jinmina_skill_01",
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3250,
-            "ability_display": "32.5%",
+            "weight": 3250,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 6500,
-            "ability_display": "65%",
+            "weight": 6500,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 10800,
-            "ability_display": "108%",
+            "weight": 10800,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 17300,
-            "ability_display": "173%",
+            "weight": 17300,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 25950,
-            "ability_display": "259.5%",
+            "weight": 25950,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 34600,
-            "ability_display": "346%",
+            "weight": 34600,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 2,
+        "group_id": 2000520,
         "type": 2,
-        "type_name": "Tactical Skill",
+        "type_name": "Battle Skills",
         "name": "Cheer Captain",
+        "name_in_client": true,
         "description": "Boosts Morale with graceful dancing, increasing back-row allies' damage to monsters by {0} for 5s.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": 9000,
         "cooldown": "9.00s",
         "unlock": "Hero Lv. 5",
-        "star_tiers": [
+        "unlock_level": 5,
+        "unlock_star": 0,
+        "icon": "../assets/heroes/skills/20005_2.webp",
+        "icon_sprite": "Hero_Jinmina_skill_02",
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3250,
-            "ability_display": "32.5%",
+            "weight": 3250,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 6500,
-            "ability_display": "65%",
+            "weight": 6500,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 10800,
-            "ability_display": "108%",
+            "weight": 10800,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 17300,
-            "ability_display": "173%",
+            "weight": 17300,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 25950,
-            "ability_display": "259.5%",
+            "weight": 25950,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 34600,
-            "ability_display": "346%",
+            "weight": 34600,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 3,
+        "group_id": 2000530,
         "type": 3,
-        "type_name": "Passive Skill",
+        "type_name": "Passive",
         "name": "Agile Stance",
+        "name_in_client": true,
         "description": "In combat, reduces damage from monsters by {0}.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": null,
         "cooldown": "Passive",
         "unlock": "Hero Lv. 21",
-        "star_tiers": [
+        "unlock_level": 21,
+        "unlock_star": 0,
+        "icon": "../assets/heroes/skills/20005_3.webp",
+        "icon_sprite": "Hero_Jinmina_skill_03",
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3250,
-            "ability_display": "32.5%",
+            "weight": 3250,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 6500,
-            "ability_display": "65%",
+            "weight": 6500,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 10800,
-            "ability_display": "108%",
+            "weight": 10800,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 17300,
-            "ability_display": "173%",
+            "weight": 17300,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 25950,
-            "ability_display": "259.5%",
+            "weight": 25950,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 34600,
-            "ability_display": "346%",
+            "weight": 34600,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 4,
+        "group_id": 2000540,
         "type": 4,
-        "type_name": "Specialty / Leadership",
-        "name": "Troop Leadership",
-        "description": "Number of soldiers the hero can lead, providing additional attack, HP, and defense stats to the squad.",
+        "type_name": "Specialty",
+        "name": "Specialty",
+        "name_in_client": false,
+        "description": "Specialty slot. The client has no name or description for it; it unlocks at Hero Lv. 31 and 4★ and its weight does not grow with stars.",
+        "description_in_client": false,
+        "keywords": [],
+        "cooldown_ms": null,
         "cooldown": "Passive",
-        "unlock": "Hero Lv. 31 & 4★",
-        "star_tiers": [
+        "unlock": "Hero Lv. 31 · 4★",
+        "unlock_level": 31,
+        "unlock_star": 4,
+        "icon": null,
+        "icon_sprite": null,
+        "weights": [
           {
             "star": 0,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 3,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 4,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 5,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           }
-        ]
+        ],
+        "gear_upgrades": []
       }
     ],
     "exclusive_gear": null,
-    "role_type": 3,
-    "role_name": "Backline Hero",
-    "role_short": "Backline",
-    "role_icon": "🎯",
-    "role_description": "Excels at dealing damage from the backline with high attack and burst skills."
+    "insight": {
+      "focus": "pve",
+      "tags": [
+        "Back-row buff",
+        "Monster DR"
+      ],
+      "summary": "Tactical SSR support-shooter: Cheer Captain raises back-row allies' damage to monsters.",
+      "tips": [
+        "Her value scales with how strong your back row is; put her behind Leah, Silas or Katya for zombie events.",
+        "Both her battle skill and passive are monster-only; bench her for PvP."
+      ]
+    }
   },
   {
     "id": 20006,
     "name": "Conan",
     "display_name": "Conan",
+    "variant_note": null,
+    "text_source_id": 20006,
     "quality": 4,
     "quality_name": "SSR",
     "army_type": 1,
     "army_name": "Frontline Hero",
+    "role_short": "Frontline",
+    "role_description": "Excels at absorbing enemy damage in the frontline, boasting formidable defense with significant HP and shield growth.",
+    "role_icon": "../assets/heroes/ui/role_1.webp",
     "camp_type": 1,
     "camp_name": "Tactical",
+    "faction_icon": "../assets/heroes/ui/faction_1.webp",
     "training_center": {
       "building_id": 5046,
       "building_name": "Tactical Training Center",
@@ -1387,6 +1788,38 @@ const HEROES_DATA = [
       "attack": 5644,
       "defense": 6949
     },
+    "stat_ranks": {
+      "peer_scope": "SSR Frontline",
+      "peers": {
+        "hp": {
+          "rank": 3,
+          "of": 4
+        },
+        "attack": {
+          "rank": 2,
+          "of": 4
+        },
+        "defense": {
+          "rank": 3,
+          "of": 4
+        }
+      },
+      "all": {
+        "hp": {
+          "rank": 9,
+          "of": 32
+        },
+        "attack": {
+          "rank": 29,
+          "of": 32
+        },
+        "defense": {
+          "rank": 19,
+          "of": 32
+        }
+      }
+    },
+    "level_curve_id": 1,
     "level_benefits": [
       {
         "source": 705,
@@ -1397,214 +1830,246 @@ const HEROES_DATA = [
     ],
     "max_level": 150,
     "image": "../assets/heroes/20006.png",
-    "story": "As a child, he was frail and often ill, suffering a severe fever that left him with lasting health issues, feeling cold even near a furnace. Once, while trying to warm himself in his father's chemistry lab, he accidentally spilled reagents on himself and caught fire, feeling much better afterward.\nAs long as he burns, he feels energized. Within a few years, he transformed from emaciated to robust, and his personality shifted from introverted to bold and confident. Now, he is charismatic but struggles to connect with others.\nIt's said that a strange creature named Red Thorn has been looking for him recently.",
+    "head": "../assets/heroes/heads/20006.webp",
+    "head_sprite": "Icon_Hero_Conan",
+    "sprite_match": "name",
+    "story": "As a child, he was frail and often ill, suffering a severe fever that left him with lasting health issues, feeling cold even near a furnace. Once, while trying to warm himself in his father's chemistry lab, he accidentally spilled reagents on himself and caught fire, feeling much better afterward. As long as he burns, he feels energized. Within a few years, he transformed from emaciated to robust, and his personality shifted from introverted to bold and confident. Now, he is charismatic but struggles to connect with others. It's said that a strange creature named Red Thorn has been looking for him recently.",
     "skills": [
       {
         "slot": 1,
+        "group_id": 2000610,
         "type": 1,
         "type_name": "Auto Attack",
         "name": "Spear Launcher",
+        "name_in_client": true,
         "description": "Hurls a spear at the enemy, dealing damage equal to {0} ATK.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": 1000,
         "cooldown": "1.00s",
         "unlock": "Hero Lv. 1",
-        "star_tiers": [
+        "unlock_level": 1,
+        "unlock_star": 0,
+        "icon": null,
+        "icon_sprite": null,
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3250,
-            "ability_display": "32.5%",
+            "weight": 3250,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 6500,
-            "ability_display": "65%",
+            "weight": 6500,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 10800,
-            "ability_display": "108%",
+            "weight": 10800,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 17300,
-            "ability_display": "173%",
+            "weight": 17300,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 25950,
-            "ability_display": "259.5%",
+            "weight": 25950,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 34600,
-            "ability_display": "346%",
+            "weight": 34600,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 2,
+        "group_id": 2000620,
         "type": 2,
-        "type_name": "Tactical Skill",
+        "type_name": "Battle Skills",
         "name": "Battle Anthem",
+        "name_in_client": true,
         "description": "Chant a battle hymn to boost Morale, increasing front-row allies' DEF by {0} for 6s.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": 9000,
         "cooldown": "9.00s",
         "unlock": "Hero Lv. 5",
-        "star_tiers": [
+        "unlock_level": 5,
+        "unlock_star": 0,
+        "icon": "../assets/heroes/skills/20006_2.webp",
+        "icon_sprite": "Hero_Conan_skill_02",
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3250,
-            "ability_display": "32.5%",
+            "weight": 3250,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 6500,
-            "ability_display": "65%",
+            "weight": 6500,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 10800,
-            "ability_display": "108%",
+            "weight": 10800,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 17300,
-            "ability_display": "173%",
+            "weight": 17300,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 25950,
-            "ability_display": "259.5%",
+            "weight": 25950,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 34600,
-            "ability_display": "346%",
+            "weight": 34600,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 3,
+        "group_id": 2000630,
         "type": 3,
-        "type_name": "Passive Skill",
+        "type_name": "Passive",
         "name": "Athlete",
+        "name_in_client": true,
         "description": "In combat, reduces damage from monsters by {0}.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": null,
         "cooldown": "Passive",
         "unlock": "Hero Lv. 21",
-        "star_tiers": [
+        "unlock_level": 21,
+        "unlock_star": 0,
+        "icon": "../assets/heroes/skills/20006_3.webp",
+        "icon_sprite": "Hero_Conan_skill_03",
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3250,
-            "ability_display": "32.5%",
+            "weight": 3250,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 6500,
-            "ability_display": "65%",
+            "weight": 6500,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 10800,
-            "ability_display": "108%",
+            "weight": 10800,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 17300,
-            "ability_display": "173%",
+            "weight": 17300,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 25950,
-            "ability_display": "259.5%",
+            "weight": 25950,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 34600,
-            "ability_display": "346%",
+            "weight": 34600,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 4,
+        "group_id": 2000640,
         "type": 4,
-        "type_name": "Specialty / Leadership",
-        "name": "Troop Leadership",
-        "description": "Number of soldiers the hero can lead, providing additional attack, HP, and defense stats to the squad.",
+        "type_name": "Specialty",
+        "name": "Specialty",
+        "name_in_client": false,
+        "description": "Specialty slot. The client has no name or description for it; it unlocks at Hero Lv. 31 and 4★ and its weight does not grow with stars.",
+        "description_in_client": false,
+        "keywords": [],
+        "cooldown_ms": null,
         "cooldown": "Passive",
-        "unlock": "Hero Lv. 31 & 4★",
-        "star_tiers": [
+        "unlock": "Hero Lv. 31 · 4★",
+        "unlock_level": 31,
+        "unlock_star": 4,
+        "icon": null,
+        "icon_sprite": null,
+        "weights": [
           {
             "star": 0,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 3,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 4,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 5,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           }
-        ]
+        ],
+        "gear_upgrades": []
       }
     ],
     "exclusive_gear": null,
-    "role_type": 1,
-    "role_name": "Frontline Hero",
-    "role_short": "Frontline",
-    "role_icon": "🛡️",
-    "role_description": "Excels at absorbing enemy damage in the frontline with high HP and shield growth."
+    "insight": {
+      "focus": "pve",
+      "tags": [
+        "Front-row DEF buff",
+        "Monster DR"
+      ],
+      "summary": "Tactical SSR frontliner who buffs front-row DEF. DEF is the hero's shield pool in this game.",
+      "tips": [
+        "Battle Anthem raises front-row DEF for 6s. The game describes DEF as a shield that absorbs damage until broken, so this is extra shield, not a % reduction.",
+        "His passive only reduces monster damage; in PvP a UR frontliner (Bekka, Virgilio) does more."
+      ]
+    }
   },
   {
     "id": 20009,
     "name": "Logan",
     "display_name": "Logan",
+    "variant_note": null,
+    "text_source_id": 20009,
     "quality": 4,
     "quality_name": "SSR",
     "army_type": 3,
     "army_name": "Backline Hero",
+    "role_short": "Backline",
+    "role_description": "Excels at dealing damage from the backline, possessing powerful attack capabilities and skills.",
+    "role_icon": "../assets/heroes/ui/role_3.webp",
     "camp_type": 3,
     "camp_name": "Warrior",
+    "faction_icon": "../assets/heroes/ui/faction_3.webp",
     "training_center": {
       "building_id": 5044,
       "building_name": "Warrior Training Center",
@@ -1615,6 +2080,38 @@ const HEROES_DATA = [
       "attack": 9517,
       "defense": 6098
     },
+    "stat_ranks": {
+      "peer_scope": "SSR Backline",
+      "peers": {
+        "hp": {
+          "rank": 7,
+          "of": 9
+        },
+        "attack": {
+          "rank": 3,
+          "of": 9
+        },
+        "defense": {
+          "rank": 7,
+          "of": 9
+        }
+      },
+      "all": {
+        "hp": {
+          "rank": 28,
+          "of": 32
+        },
+        "attack": {
+          "rank": 14,
+          "of": 32
+        },
+        "defense": {
+          "rank": 27,
+          "of": 32
+        }
+      }
+    },
+    "level_curve_id": 1,
     "level_benefits": [
       {
         "source": 705,
@@ -1625,214 +2122,246 @@ const HEROES_DATA = [
     ],
     "max_level": 150,
     "image": "../assets/heroes/20009.png",
-    "story": "Even in this apocalyptic world, the Teutonic Knights persist, upholding the chivalric spirit to save lives.\nGalahad often stands on the rocks gazing at the sea, hoping for holy light to guide him, part the ocean, and allow him to wield his sword into the Abyss Empire, ending this catastrophe.\nHe firmly believes that destiny has a reason for making him a knight, and since he bears the name of the Sacred Knight of Calamity, this unprecedented disaster will be concluded by him.",
+    "head": "../assets/heroes/heads/20009.webp",
+    "head_sprite": "Icon_Hero_Logan",
+    "sprite_match": "name",
+    "story": "Even in this apocalyptic world, the Teutonic Knights persist, upholding the chivalric spirit to save lives. Galahad often stands on the rocks gazing at the sea, hoping for holy light to guide him, part the ocean, and allow him to wield his sword into the Abyss Empire, ending this catastrophe. He firmly believes that destiny has a reason for making him a knight, and since he bears the name of the Sacred Knight of Calamity, this unprecedented disaster will be concluded by him.",
     "skills": [
       {
         "slot": 1,
+        "group_id": 2000910,
         "type": 1,
         "type_name": "Auto Attack",
         "name": "Pneumatic Launcher",
+        "name_in_client": true,
         "description": "Throws a Molotov cocktail at enemies, dealing damage equal to {0} ATK.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": 1600,
         "cooldown": "1.60s",
         "unlock": "Hero Lv. 1",
-        "star_tiers": [
+        "unlock_level": 1,
+        "unlock_star": 0,
+        "icon": "../assets/heroes/skills/20009_1.webp",
+        "icon_sprite": "Hero_Logan_skill_01",
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3250,
-            "ability_display": "32.5%",
+            "weight": 3250,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 6500,
-            "ability_display": "65%",
+            "weight": 6500,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 10800,
-            "ability_display": "108%",
+            "weight": 10800,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 17300,
-            "ability_display": "173%",
+            "weight": 17300,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 25950,
-            "ability_display": "259.5%",
+            "weight": 25950,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 34600,
-            "ability_display": "346%",
+            "weight": 34600,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 2,
+        "group_id": 2000920,
         "type": 2,
-        "type_name": "Tactical Skill",
+        "type_name": "Battle Skills",
         "name": "Multiple Loading",
+        "name_in_client": true,
         "description": "Continuously launches multiple high-explosive Molotov cocktails, randomly attacking 2 enemies, dealing damage equal to {0} ATK.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": 9000,
         "cooldown": "9.00s",
         "unlock": "Hero Lv. 5",
-        "star_tiers": [
+        "unlock_level": 5,
+        "unlock_star": 0,
+        "icon": "../assets/heroes/skills/20009_2.webp",
+        "icon_sprite": "Hero_Logan_skill_02",
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3250,
-            "ability_display": "32.5%",
+            "weight": 3250,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 6500,
-            "ability_display": "65%",
+            "weight": 6500,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 10800,
-            "ability_display": "108%",
+            "weight": 10800,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 17300,
-            "ability_display": "173%",
+            "weight": 17300,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 25950,
-            "ability_display": "259.5%",
+            "weight": 25950,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 34600,
-            "ability_display": "346%",
+            "weight": 34600,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 3,
+        "group_id": 2000930,
         "type": 3,
-        "type_name": "Passive Skill",
+        "type_name": "Passive",
         "name": "High Pressure Air Pump",
+        "name_in_client": true,
         "description": "In combat, increases ATK by {0}.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": null,
         "cooldown": "Passive",
         "unlock": "Hero Lv. 21",
-        "star_tiers": [
+        "unlock_level": 21,
+        "unlock_star": 0,
+        "icon": "../assets/heroes/skills/20009_3.webp",
+        "icon_sprite": "Hero_Logan_skill_03",
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3250,
-            "ability_display": "32.5%",
+            "weight": 3250,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 6500,
-            "ability_display": "65%",
+            "weight": 6500,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 10800,
-            "ability_display": "108%",
+            "weight": 10800,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 17300,
-            "ability_display": "173%",
+            "weight": 17300,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 25950,
-            "ability_display": "259.5%",
+            "weight": 25950,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 34600,
-            "ability_display": "346%",
+            "weight": 34600,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 4,
+        "group_id": 2000940,
         "type": 4,
-        "type_name": "Specialty / Leadership",
-        "name": "Troop Leadership",
-        "description": "Number of soldiers the hero can lead, providing additional attack, HP, and defense stats to the squad.",
+        "type_name": "Specialty",
+        "name": "Specialty",
+        "name_in_client": false,
+        "description": "Specialty slot. The client has no name or description for it; it unlocks at Hero Lv. 31 and 4★ and its weight does not grow with stars.",
+        "description_in_client": false,
+        "keywords": [],
+        "cooldown_ms": null,
         "cooldown": "Passive",
-        "unlock": "Hero Lv. 31 & 4★",
-        "star_tiers": [
+        "unlock": "Hero Lv. 31 · 4★",
+        "unlock_level": 31,
+        "unlock_star": 4,
+        "icon": null,
+        "icon_sprite": null,
+        "weights": [
           {
             "star": 0,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 3,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 4,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 5,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           }
-        ]
+        ],
+        "gear_upgrades": []
       }
     ],
     "exclusive_gear": null,
-    "role_type": 3,
-    "role_name": "Backline Hero",
-    "role_short": "Backline",
-    "role_icon": "🎯",
-    "role_description": "Excels at dealing damage from the backline with high attack and burst skills."
+    "insight": {
+      "focus": "pvp",
+      "tags": [
+        "Self ATK",
+        "Multi-target"
+      ],
+      "summary": "Warrior SSR Molotov thrower with a flat ATK passive and 2-target bursts.",
+      "tips": [
+        "High Pressure Air Pump is an unconditional ATK boost, so he stays useful outside PvE.",
+        "Multiple Loading hits 2 random enemies, so he spreads damage rather than focusing one target."
+      ]
+    }
   },
   {
     "id": 30001,
     "name": "Toxina",
     "display_name": "Toxina",
+    "variant_note": null,
+    "text_source_id": 30001,
     "quality": 4,
     "quality_name": "SSR",
     "army_type": 1,
     "army_name": "Frontline Hero",
+    "role_short": "Frontline",
+    "role_description": "Excels at absorbing enemy damage in the frontline, boasting formidable defense with significant HP and shield growth.",
+    "role_icon": "../assets/heroes/ui/role_1.webp",
     "camp_type": 3,
     "camp_name": "Warrior",
+    "faction_icon": "../assets/heroes/ui/faction_3.webp",
     "training_center": {
       "building_id": 5044,
       "building_name": "Warrior Training Center",
@@ -1843,6 +2372,38 @@ const HEROES_DATA = [
       "attack": 5493,
       "defense": 6997
     },
+    "stat_ranks": {
+      "peer_scope": "SSR Frontline",
+      "peers": {
+        "hp": {
+          "rank": 2,
+          "of": 4
+        },
+        "attack": {
+          "rank": 3,
+          "of": 4
+        },
+        "defense": {
+          "rank": 2,
+          "of": 4
+        }
+      },
+      "all": {
+        "hp": {
+          "rank": 8,
+          "of": 32
+        },
+        "attack": {
+          "rank": 30,
+          "of": 32
+        },
+        "defense": {
+          "rank": 18,
+          "of": 32
+        }
+      }
+    },
+    "level_curve_id": 1,
     "level_benefits": [
       {
         "source": 705,
@@ -1853,214 +2414,246 @@ const HEROES_DATA = [
     ],
     "max_level": 150,
     "image": "../assets/heroes/30001.png",
+    "head": "../assets/heroes/heads/30001.webp",
+    "head_sprite": "Icon_Hero_Brooks",
+    "sprite_match": "artwork",
     "story": "Don't worry about any enemies slipping through; they are already surrounded by her.",
     "skills": [
       {
         "slot": 1,
+        "group_id": 3000110,
         "type": 1,
         "type_name": "Auto Attack",
         "name": "Liquid Injector",
+        "name_in_client": true,
         "description": "Sprays corrosive liquid at enemies, dealing damage equal to {0} ATK.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": 1600,
         "cooldown": "1.60s",
         "unlock": "Hero Lv. 1",
-        "star_tiers": [
+        "unlock_level": 1,
+        "unlock_star": 0,
+        "icon": "../assets/heroes/skills/30001_1.webp",
+        "icon_sprite": "Hero_Brooks_skill_01",
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3250,
-            "ability_display": "32.5%",
+            "weight": 3250,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 6500,
-            "ability_display": "65%",
+            "weight": 6500,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 10800,
-            "ability_display": "108%",
+            "weight": 10800,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 17300,
-            "ability_display": "173%",
+            "weight": 17300,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 25950,
-            "ability_display": "259.5%",
+            "weight": 25950,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 34600,
-            "ability_display": "346%",
+            "weight": 34600,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 2,
+        "group_id": 3000120,
         "type": 2,
-        "type_name": "Tactical Skill",
+        "type_name": "Battle Skills",
         "name": "Venom Burst",
+        "name_in_client": true,
         "description": "Fires a venom shot, prioritizing 2 front-row enemies, dealing {0} of ATK as DMG, and reducing their ATK by 6% for 4s.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": 9000,
         "cooldown": "9.00s",
         "unlock": "Hero Lv. 5",
-        "star_tiers": [
+        "unlock_level": 5,
+        "unlock_star": 0,
+        "icon": "../assets/heroes/skills/30001_2.webp",
+        "icon_sprite": "Hero_Brooks_skill_02",
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3250,
-            "ability_display": "32.5%",
+            "weight": 3250,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 6500,
-            "ability_display": "65%",
+            "weight": 6500,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 10800,
-            "ability_display": "108%",
+            "weight": 10800,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 17300,
-            "ability_display": "173%",
+            "weight": 17300,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 25950,
-            "ability_display": "259.5%",
+            "weight": 25950,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 34600,
-            "ability_display": "346%",
+            "weight": 34600,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 3,
+        "group_id": 3000130,
         "type": 3,
-        "type_name": "Passive Skill",
+        "type_name": "Passive",
         "name": "Nimble Steps",
+        "name_in_client": true,
         "description": "In combat, reduces damage from monsters by {0}.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": null,
         "cooldown": "Passive",
         "unlock": "Hero Lv. 21",
-        "star_tiers": [
+        "unlock_level": 21,
+        "unlock_star": 0,
+        "icon": "../assets/heroes/skills/30001_3.webp",
+        "icon_sprite": "Hero_Brooks_skill_03",
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3250,
-            "ability_display": "32.5%",
+            "weight": 3250,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 6500,
-            "ability_display": "65%",
+            "weight": 6500,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 10800,
-            "ability_display": "108%",
+            "weight": 10800,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 17300,
-            "ability_display": "173%",
+            "weight": 17300,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 25950,
-            "ability_display": "259.5%",
+            "weight": 25950,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 34600,
-            "ability_display": "346%",
+            "weight": 34600,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 4,
+        "group_id": 3000140,
         "type": 4,
-        "type_name": "Specialty / Leadership",
-        "name": "Troop Leadership",
-        "description": "Number of soldiers the hero can lead, providing additional attack, HP, and defense stats to the squad.",
+        "type_name": "Specialty",
+        "name": "Specialty",
+        "name_in_client": false,
+        "description": "Specialty slot. The client has no name or description for it; it unlocks at Hero Lv. 31 and 4★ and its weight does not grow with stars.",
+        "description_in_client": false,
+        "keywords": [],
+        "cooldown_ms": null,
         "cooldown": "Passive",
-        "unlock": "Hero Lv. 31 & 4★",
-        "star_tiers": [
+        "unlock": "Hero Lv. 31 · 4★",
+        "unlock_level": 31,
+        "unlock_star": 4,
+        "icon": null,
+        "icon_sprite": null,
+        "weights": [
           {
             "star": 0,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 3,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 4,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 5,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           }
-        ]
+        ],
+        "gear_upgrades": []
       }
     ],
     "exclusive_gear": null,
-    "role_type": 1,
-    "role_name": "Frontline Hero",
-    "role_short": "Frontline",
-    "role_icon": "🛡️",
-    "role_description": "Excels at absorbing enemy damage in the frontline with high HP and shield growth."
+    "insight": {
+      "focus": "pve",
+      "tags": [
+        "ATK debuff",
+        "Monster DR"
+      ],
+      "summary": "Warrior SSR poison tank: Venom Burst hits 2 front-row enemies and cuts their ATK by 6% for 4s.",
+      "tips": [
+        "Venom Burst's -6% ATK is a fixed value in the text and works on any target, including players.",
+        "Nimble Steps only reduces monster damage, so she is a PvE tank first."
+      ]
+    }
   },
   {
     "id": 30003,
     "name": "Aria",
-    "display_name": "Aria",
+    "display_name": "Aria (SSR)",
+    "variant_note": "SSR Aria (#30003).",
+    "text_source_id": 30003,
     "quality": 4,
     "quality_name": "SSR",
     "army_type": 3,
     "army_name": "Backline Hero",
+    "role_short": "Backline",
+    "role_description": "Excels at dealing damage from the backline, possessing powerful attack capabilities and skills.",
+    "role_icon": "../assets/heroes/ui/role_3.webp",
     "camp_type": 3,
     "camp_name": "Warrior",
+    "faction_icon": "../assets/heroes/ui/faction_3.webp",
     "training_center": {
       "building_id": 5044,
       "building_name": "Warrior Training Center",
@@ -2071,6 +2664,38 @@ const HEROES_DATA = [
       "attack": 9469,
       "defense": 6106
     },
+    "stat_ranks": {
+      "peer_scope": "SSR Backline",
+      "peers": {
+        "hp": {
+          "rank": 6,
+          "of": 9
+        },
+        "attack": {
+          "rank": 4,
+          "of": 9
+        },
+        "defense": {
+          "rank": 6,
+          "of": 9
+        }
+      },
+      "all": {
+        "hp": {
+          "rank": 27,
+          "of": 32
+        },
+        "attack": {
+          "rank": 15,
+          "of": 32
+        },
+        "defense": {
+          "rank": 26,
+          "of": 32
+        }
+      }
+    },
+    "level_curve_id": 1,
     "level_benefits": [
       {
         "source": 705,
@@ -2081,214 +2706,246 @@ const HEROES_DATA = [
     ],
     "max_level": 150,
     "image": "../assets/heroes/30003.png",
+    "head": "../assets/heroes/heads/30003.webp",
+    "head_sprite": "Icon_Hero_AliaClassics",
+    "sprite_match": "artwork",
     "story": "This deep blue mecha excels in ocean combat. Tentacle monsters? Child's play. Like a shark, he'll show enemies who's the predator and who's prey, even though he's allergic to seafood.",
     "skills": [
       {
         "slot": 1,
+        "group_id": 3000310,
         "type": 1,
         "type_name": "Auto Attack",
         "name": "Automatic Rifle",
+        "name_in_client": true,
         "description": "Fires pulse bullets at enemies, dealing damage equal to {0} ATK.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": 1100,
         "cooldown": "1.10s",
         "unlock": "Hero Lv. 1",
-        "star_tiers": [
+        "unlock_level": 1,
+        "unlock_star": 0,
+        "icon": null,
+        "icon_sprite": null,
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3250,
-            "ability_display": "32.5%",
+            "weight": 3250,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 6500,
-            "ability_display": "65%",
+            "weight": 6500,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 10800,
-            "ability_display": "108%",
+            "weight": 10800,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 17300,
-            "ability_display": "173%",
+            "weight": 17300,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 25950,
-            "ability_display": "259.5%",
+            "weight": 25950,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 34600,
-            "ability_display": "346%",
+            "weight": 34600,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 2,
+        "group_id": 3000320,
         "type": 2,
-        "type_name": "Tactical Skill",
+        "type_name": "Battle Skills",
         "name": "Unload Magazine",
+        "name_in_client": true,
         "description": "Unleashes rapid fire at enemies, dealing damage equal to {0} ATK.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": 9000,
         "cooldown": "9.00s",
         "unlock": "Hero Lv. 5",
-        "star_tiers": [
+        "unlock_level": 5,
+        "unlock_star": 0,
+        "icon": "../assets/heroes/skills/30003_2.webp",
+        "icon_sprite": "Hero_Alia_skill_02",
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3250,
-            "ability_display": "32.5%",
+            "weight": 3250,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 6500,
-            "ability_display": "65%",
+            "weight": 6500,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 10800,
-            "ability_display": "108%",
+            "weight": 10800,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 17300,
-            "ability_display": "173%",
+            "weight": 17300,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 25950,
-            "ability_display": "259.5%",
+            "weight": 25950,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 34600,
-            "ability_display": "346%",
+            "weight": 34600,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 3,
+        "group_id": 3000330,
         "type": 3,
-        "type_name": "Passive Skill",
+        "type_name": "Passive",
         "name": "Zombie Hunter",
+        "name_in_client": true,
         "description": "In combat, back-row Warrior allies deal {0} more damage to monsters.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": null,
         "cooldown": "Passive",
         "unlock": "Hero Lv. 21",
-        "star_tiers": [
+        "unlock_level": 21,
+        "unlock_star": 0,
+        "icon": "../assets/heroes/skills/30003_3.webp",
+        "icon_sprite": "Hero_Alia_skill_03",
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3250,
-            "ability_display": "32.5%",
+            "weight": 3250,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 6500,
-            "ability_display": "65%",
+            "weight": 6500,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 10800,
-            "ability_display": "108%",
+            "weight": 10800,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 17300,
-            "ability_display": "173%",
+            "weight": 17300,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 25950,
-            "ability_display": "259.5%",
+            "weight": 25950,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 34600,
-            "ability_display": "346%",
+            "weight": 34600,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 4,
+        "group_id": 3000340,
         "type": 4,
-        "type_name": "Specialty / Leadership",
-        "name": "Troop Leadership",
-        "description": "Number of soldiers the hero can lead, providing additional attack, HP, and defense stats to the squad.",
+        "type_name": "Specialty",
+        "name": "Specialty",
+        "name_in_client": false,
+        "description": "Specialty slot. The client has no name or description for it; it unlocks at Hero Lv. 31 and 4★ and its weight does not grow with stars.",
+        "description_in_client": false,
+        "keywords": [],
+        "cooldown_ms": null,
         "cooldown": "Passive",
-        "unlock": "Hero Lv. 31 & 4★",
-        "star_tiers": [
+        "unlock": "Hero Lv. 31 · 4★",
+        "unlock_level": 31,
+        "unlock_star": 4,
+        "icon": null,
+        "icon_sprite": null,
+        "weights": [
           {
             "star": 0,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 3,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 4,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 5,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           }
-        ]
+        ],
+        "gear_upgrades": []
       }
     ],
     "exclusive_gear": null,
-    "role_type": 3,
-    "role_name": "Backline Hero",
-    "role_short": "Backline",
-    "role_icon": "🎯",
-    "role_description": "Excels at dealing damage from the backline with high attack and burst skills."
+    "insight": {
+      "focus": "pve",
+      "tags": [
+        "Warrior back-row buff",
+        "Monster damage"
+      ],
+      "summary": "SSR Aria: quick 1.10s auto attack and a passive that buffs back-row Warriors against monsters.",
+      "tips": [
+        "Zombie Hunter boosts every back-row Warrior's damage to monsters; she is a natural partner for Monroe, Lucian, Rachel and Logan in zombie content.",
+        "The UR Aria (#31003) uses the same skills and SSR skill weights; see her card before choosing which to star."
+      ]
+    }
   },
   {
     "id": 30004,
     "name": "Celeste",
     "display_name": "Celeste",
+    "variant_note": null,
+    "text_source_id": 30004,
     "quality": 4,
     "quality_name": "SSR",
     "army_type": 3,
     "army_name": "Backline Hero",
+    "role_short": "Backline",
+    "role_description": "Excels at dealing damage from the backline, possessing powerful attack capabilities and skills.",
+    "role_icon": "../assets/heroes/ui/role_3.webp",
     "camp_type": 2,
     "camp_name": "Assault",
+    "faction_icon": "../assets/heroes/ui/faction_2.webp",
     "training_center": {
       "building_id": 5045,
       "building_name": "Assault Training Center",
@@ -2299,6 +2956,38 @@ const HEROES_DATA = [
       "attack": 10898,
       "defense": 5895
     },
+    "stat_ranks": {
+      "peer_scope": "SSR Backline",
+      "peers": {
+        "hp": {
+          "rank": 9,
+          "of": 9
+        },
+        "attack": {
+          "rank": 1,
+          "of": 9
+        },
+        "defense": {
+          "rank": 9,
+          "of": 9
+        }
+      },
+      "all": {
+        "hp": {
+          "rank": 30,
+          "of": 32
+        },
+        "attack": {
+          "rank": 11,
+          "of": 32
+        },
+        "defense": {
+          "rank": 29,
+          "of": 32
+        }
+      }
+    },
+    "level_curve_id": 1,
     "level_benefits": [
       {
         "source": 705,
@@ -2309,214 +2998,246 @@ const HEROES_DATA = [
     ],
     "max_level": 150,
     "image": "../assets/heroes/30004.png",
-    "story": "She doesn't have pointed long ears, yet the troops still call her Little Lynx. During the First Abyss War, she was sent from the rear to support the front lines. Her exceptional mobility and support coordination made her popular on any battlefield she joined.\n.So, although the Human Earth Alliance suffered heavy casualties, everyone loved Little Lynx.",
+    "head": "../assets/heroes/heads/30004.webp",
+    "head_sprite": "Icon_Hero_Celeste",
+    "sprite_match": "name",
+    "story": "She doesn't have pointed long ears, yet the troops still call her Little Lynx. During the First Abyss War, she was sent from the rear to support the front lines. Her exceptional mobility and support coordination made her popular on any battlefield she joined. .So, although the Human Earth Alliance suffered heavy casualties, everyone loved Little Lynx.",
     "skills": [
       {
         "slot": 1,
+        "group_id": 3000410,
         "type": 1,
         "type_name": "Auto Attack",
         "name": "Rocket Launcher",
+        "name_in_client": true,
         "description": "Fires rockets at enemies, dealing damage equal to {0} ATK.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": 1000,
         "cooldown": "1.00s",
         "unlock": "Hero Lv. 1",
-        "star_tiers": [
+        "unlock_level": 1,
+        "unlock_star": 0,
+        "icon": "../assets/heroes/skills/30004_1.webp",
+        "icon_sprite": "Hero_Celeste_skill_01",
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3250,
-            "ability_display": "32.5%",
+            "weight": 3250,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 6500,
-            "ability_display": "65%",
+            "weight": 6500,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 10800,
-            "ability_display": "108%",
+            "weight": 10800,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 17300,
-            "ability_display": "173%",
+            "weight": 17300,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 25950,
-            "ability_display": "259.5%",
+            "weight": 25950,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 34600,
-            "ability_display": "346%",
+            "weight": 34600,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 2,
+        "group_id": 3000420,
         "type": 2,
-        "type_name": "Tactical Skill",
+        "type_name": "Battle Skills",
         "name": "White Phosphorus Munition",
+        "name_in_client": true,
         "description": "Shoots white phosphorus rounds at the 2 front enemies, dealing damage equal to {0} ATK.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": 9000,
         "cooldown": "9.00s",
         "unlock": "Hero Lv. 5",
-        "star_tiers": [
+        "unlock_level": 5,
+        "unlock_star": 0,
+        "icon": "../assets/heroes/skills/30004_2.webp",
+        "icon_sprite": "Hero_Celeste_skill_02",
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3250,
-            "ability_display": "32.5%",
+            "weight": 3250,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 6500,
-            "ability_display": "65%",
+            "weight": 6500,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 10800,
-            "ability_display": "108%",
+            "weight": 10800,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 17300,
-            "ability_display": "173%",
+            "weight": 17300,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 25950,
-            "ability_display": "259.5%",
+            "weight": 25950,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 34600,
-            "ability_display": "346%",
+            "weight": 34600,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 3,
+        "group_id": 3000430,
         "type": 3,
-        "type_name": "Passive Skill",
+        "type_name": "Passive",
         "name": "Disciple",
+        "name_in_client": true,
         "description": "In combat, increases ATK by {0}.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": null,
         "cooldown": "Passive",
         "unlock": "Hero Lv. 21",
-        "star_tiers": [
+        "unlock_level": 21,
+        "unlock_star": 0,
+        "icon": "../assets/heroes/skills/30004_3.webp",
+        "icon_sprite": "Hero_Celeste_skill_03",
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3250,
-            "ability_display": "32.5%",
+            "weight": 3250,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 6500,
-            "ability_display": "65%",
+            "weight": 6500,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 10800,
-            "ability_display": "108%",
+            "weight": 10800,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 17300,
-            "ability_display": "173%",
+            "weight": 17300,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 25950,
-            "ability_display": "259.5%",
+            "weight": 25950,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 34600,
-            "ability_display": "346%",
+            "weight": 34600,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 4,
+        "group_id": 3000440,
         "type": 4,
-        "type_name": "Specialty / Leadership",
-        "name": "Troop Leadership",
-        "description": "Number of soldiers the hero can lead, providing additional attack, HP, and defense stats to the squad.",
+        "type_name": "Specialty",
+        "name": "Specialty",
+        "name_in_client": false,
+        "description": "Specialty slot. The client has no name or description for it; it unlocks at Hero Lv. 31 and 4★ and its weight does not grow with stars.",
+        "description_in_client": false,
+        "keywords": [],
+        "cooldown_ms": null,
         "cooldown": "Passive",
-        "unlock": "Hero Lv. 31 & 4★",
-        "star_tiers": [
+        "unlock": "Hero Lv. 31 · 4★",
+        "unlock_level": 31,
+        "unlock_star": 4,
+        "icon": null,
+        "icon_sprite": null,
+        "weights": [
           {
             "star": 0,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 3,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 4,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 5,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           }
-        ]
+        ],
+        "gear_upgrades": []
       }
     ],
     "exclusive_gear": null,
-    "role_type": 3,
-    "role_name": "Backline Hero",
-    "role_short": "Backline",
-    "role_icon": "🎯",
-    "role_description": "Excels at dealing damage from the backline with high attack and burst skills."
+    "insight": {
+      "focus": "pvp",
+      "tags": [
+        "Highest SSR ATK",
+        "Front-target"
+      ],
+      "summary": "Assault SSR with the highest ATK and lowest HP of any SSR: a pure damage dealer.",
+      "tips": [
+        "White Phosphorus Munition targets the 2 front enemies; she chews through tanks rather than backliners.",
+        "With the lowest SSR HP she needs a real front row (Vera, Vince or Jack) in front of her."
+      ]
+    }
   },
   {
     "id": 30005,
     "name": "Lee Yu",
     "display_name": "Lee Yu",
+    "variant_note": null,
+    "text_source_id": 30005,
     "quality": 4,
     "quality_name": "SSR",
     "army_type": 3,
     "army_name": "Backline Hero",
+    "role_short": "Backline",
+    "role_description": "Excels at dealing damage from the backline, possessing powerful attack capabilities and skills.",
+    "role_icon": "../assets/heroes/ui/role_3.webp",
     "camp_type": 2,
     "camp_name": "Assault",
+    "faction_icon": "../assets/heroes/ui/faction_2.webp",
     "training_center": {
       "building_id": 5045,
       "building_name": "Assault Training Center",
@@ -2527,6 +3248,38 @@ const HEROES_DATA = [
       "attack": 9707,
       "defense": 6068
     },
+    "stat_ranks": {
+      "peer_scope": "SSR Backline",
+      "peers": {
+        "hp": {
+          "rank": 8,
+          "of": 9
+        },
+        "attack": {
+          "rank": 2,
+          "of": 9
+        },
+        "defense": {
+          "rank": 8,
+          "of": 9
+        }
+      },
+      "all": {
+        "hp": {
+          "rank": 29,
+          "of": 32
+        },
+        "attack": {
+          "rank": 12,
+          "of": 32
+        },
+        "defense": {
+          "rank": 28,
+          "of": 32
+        }
+      }
+    },
+    "level_curve_id": 1,
     "level_benefits": [
       {
         "source": 705,
@@ -2537,214 +3290,246 @@ const HEROES_DATA = [
     ],
     "max_level": 150,
     "image": "../assets/heroes/30005.png",
-    "story": "People doubt the power of colors, especially in battle.\nYet, she, with her extraordinary perception of colors, can work wonders, harm foes, heal wounds, and materialize objects... as if colors become omnipotent in her hands.\nThe colors she sees differ vastly from those perceived by ordinary people, and her understanding of them is beyond mortal comprehension.\n\"Colors are magical mediums, spirits. Just because you can't see them, you can't understand,\" she explained.",
+    "head": "../assets/heroes/heads/30005.webp",
+    "head_sprite": "Icon_Hero_Liyu",
+    "sprite_match": "name",
+    "story": "People doubt the power of colors, especially in battle. Yet, she, with her extraordinary perception of colors, can work wonders, harm foes, heal wounds, and materialize objects... as if colors become omnipotent in her hands. The colors she sees differ vastly from those perceived by ordinary people, and her understanding of them is beyond mortal comprehension. \"Colors are magical mediums, spirits. Just because you can't see them, you can't understand,\" she explained.",
     "skills": [
       {
         "slot": 1,
+        "group_id": 3000510,
         "type": 1,
         "type_name": "Auto Attack",
         "name": "Dual Pistols",
+        "name_in_client": true,
         "description": "Attacks enemies with Dual Pistols, dealing damage equal to {0} ATK.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": 1550,
         "cooldown": "1.55s",
         "unlock": "Hero Lv. 1",
-        "star_tiers": [
+        "unlock_level": 1,
+        "unlock_star": 0,
+        "icon": "../assets/heroes/skills/30005_1.webp",
+        "icon_sprite": "Hero_Liyu_skill_01",
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3250,
-            "ability_display": "32.5%",
+            "weight": 3250,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 6500,
-            "ability_display": "65%",
+            "weight": 6500,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 10800,
-            "ability_display": "108%",
+            "weight": 10800,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 17300,
-            "ability_display": "173%",
+            "weight": 17300,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 25950,
-            "ability_display": "259.5%",
+            "weight": 25950,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 34600,
-            "ability_display": "346%",
+            "weight": 34600,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 2,
+        "group_id": 3000520,
         "type": 2,
-        "type_name": "Tactical Skill",
+        "type_name": "Battle Skills",
         "name": "Frag Grenade",
+        "name_in_client": true,
         "description": "Hurls multiple grenades at random enemies 5 times, dealing damage equal to {0} ATK.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": 9000,
         "cooldown": "9.00s",
         "unlock": "Hero Lv. 5",
-        "star_tiers": [
+        "unlock_level": 5,
+        "unlock_star": 0,
+        "icon": "../assets/heroes/skills/30005_2.webp",
+        "icon_sprite": "Hero_Liyu_skill_02",
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3250,
-            "ability_display": "32.5%",
+            "weight": 3250,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 6500,
-            "ability_display": "65%",
+            "weight": 6500,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 10800,
-            "ability_display": "108%",
+            "weight": 10800,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 17300,
-            "ability_display": "173%",
+            "weight": 17300,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 25950,
-            "ability_display": "259.5%",
+            "weight": 25950,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 34600,
-            "ability_display": "346%",
+            "weight": 34600,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 3,
+        "group_id": 3000530,
         "type": 3,
-        "type_name": "Passive Skill",
+        "type_name": "Passive",
         "name": "Martial Arts Family",
+        "name_in_client": true,
         "description": "In combat, deal {0} more damage to monsters.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": null,
         "cooldown": "Passive",
         "unlock": "Hero Lv. 21",
-        "star_tiers": [
+        "unlock_level": 21,
+        "unlock_star": 0,
+        "icon": "../assets/heroes/skills/30005_3.webp",
+        "icon_sprite": "Hero_Liyu_skill_03",
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3250,
-            "ability_display": "32.5%",
+            "weight": 3250,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 6500,
-            "ability_display": "65%",
+            "weight": 6500,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 10800,
-            "ability_display": "108%",
+            "weight": 10800,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 17300,
-            "ability_display": "173%",
+            "weight": 17300,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 25950,
-            "ability_display": "259.5%",
+            "weight": 25950,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 34600,
-            "ability_display": "346%",
+            "weight": 34600,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 4,
+        "group_id": 3000540,
         "type": 4,
-        "type_name": "Specialty / Leadership",
-        "name": "Troop Leadership",
-        "description": "Number of soldiers the hero can lead, providing additional attack, HP, and defense stats to the squad.",
+        "type_name": "Specialty",
+        "name": "Specialty",
+        "name_in_client": false,
+        "description": "Specialty slot. The client has no name or description for it; it unlocks at Hero Lv. 31 and 4★ and its weight does not grow with stars.",
+        "description_in_client": false,
+        "keywords": [],
+        "cooldown_ms": null,
         "cooldown": "Passive",
-        "unlock": "Hero Lv. 31 & 4★",
-        "star_tiers": [
+        "unlock": "Hero Lv. 31 · 4★",
+        "unlock_level": 31,
+        "unlock_star": 4,
+        "icon": null,
+        "icon_sprite": null,
+        "weights": [
           {
             "star": 0,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 3,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 4,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 5,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           }
-        ]
+        ],
+        "gear_upgrades": []
       }
     ],
     "exclusive_gear": null,
-    "role_type": 3,
-    "role_name": "Backline Hero",
-    "role_short": "Backline",
-    "role_icon": "🎯",
-    "role_description": "Excels at dealing damage from the backline with high attack and burst skills."
+    "insight": {
+      "focus": "pve",
+      "tags": [
+        "5-hit AoE",
+        "Monster damage"
+      ],
+      "summary": "Assault SSR grenadier: Frag Grenade throws 5 random grenades, and his passive adds damage to monsters.",
+      "tips": [
+        "Five random hits make him one of the best SSR wave-clearers for zombie events.",
+        "His passive is monster-only; Celeste is the better Assault SSR for PvP."
+      ]
+    }
   },
   {
     "id": 30006,
     "name": "Monroe",
     "display_name": "Monroe",
+    "variant_note": null,
+    "text_source_id": 30006,
     "quality": 5,
     "quality_name": "UR",
     "army_type": 3,
     "army_name": "Backline Hero",
+    "role_short": "Backline",
+    "role_description": "Excels at dealing damage from the backline, possessing powerful attack capabilities and skills.",
+    "role_icon": "../assets/heroes/ui/role_3.webp",
     "camp_type": 3,
     "camp_name": "Warrior",
+    "faction_icon": "../assets/heroes/ui/faction_3.webp",
     "training_center": {
       "building_id": 5044,
       "building_name": "Warrior Training Center",
@@ -2755,6 +3540,38 @@ const HEROES_DATA = [
       "attack": 14893,
       "defense": 9052
     },
+    "stat_ranks": {
+      "peer_scope": "UR Backline",
+      "peers": {
+        "hp": {
+          "rank": 7,
+          "of": 9
+        },
+        "attack": {
+          "rank": 3,
+          "of": 9
+        },
+        "defense": {
+          "rank": 7,
+          "of": 9
+        }
+      },
+      "all": {
+        "hp": {
+          "rank": 19,
+          "of": 32
+        },
+        "attack": {
+          "rank": 3,
+          "of": 32
+        },
+        "defense": {
+          "rank": 14,
+          "of": 32
+        }
+      }
+    },
+    "level_curve_id": 2,
     "level_benefits": [
       {
         "source": 705,
@@ -2765,240 +3582,321 @@ const HEROES_DATA = [
     ],
     "max_level": 150,
     "image": "../assets/heroes/30006.png",
-    "story": "Androids should be noble and beautiful works of art, not mass-produced or made carelessly, nor should they become tools for human laziness.\nShe should have thoughts, emotions, and love. She is imperfect, has a temper, and should not be bound by cold code to remain loyal to humans. Let her decide whether to use her power to protect or destroy us.\nIf you truly create her in the future... please name her Anna.\n—Professor K's last words",
+    "head": "../assets/heroes/heads/30006.webp",
+    "head_sprite": "Icon_Hero_MarilynMonroe",
+    "sprite_match": "artwork",
+    "story": "Androids should be noble and beautiful works of art, not mass-produced or made carelessly, nor should they become tools for human laziness. She should have thoughts, emotions, and love. She is imperfect, has a temper, and should not be bound by cold code to remain loyal to humans. Let her decide whether to use her power to protect or destroy us. If you truly create her in the future... please name her Anna. —Professor K's last words",
     "skills": [
       {
         "slot": 1,
+        "group_id": 3000610,
         "type": 1,
         "type_name": "Auto Attack",
         "name": "Tactical Sniper Rifle",
+        "name_in_client": true,
         "description": "Attacks enemies with a sniper rifle, dealing damage equal to {0} ATK.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": 1550,
         "cooldown": "1.55s",
         "unlock": "Hero Lv. 1",
-        "star_tiers": [
+        "unlock_level": 1,
+        "unlock_star": 0,
+        "icon": "../assets/heroes/skills/30006_1.webp",
+        "icon_sprite": "Hero_Monroe_skill_01",
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3600,
-            "ability_display": "36%",
+            "weight": 3600,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 7200,
-            "ability_display": "72%",
+            "weight": 7200,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 12000,
-            "ability_display": "120%",
+            "weight": 12000,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 19200,
-            "ability_display": "192%",
+            "weight": 19200,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 28800,
-            "ability_display": "288%",
+            "weight": 28800,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 38400,
-            "ability_display": "384%",
+            "weight": 38400,
             "max_skill_level": 30
-          },
+          }
+        ],
+        "gear_upgrades": [
           {
-            "star": 5,
-            "ability_value": 38400,
-            "ability_display": "384%",
-            "max_skill_level": 30
+            "weapon_level": 1,
+            "gear_weight": 250000
           }
         ]
       },
       {
         "slot": 2,
+        "group_id": 3000620,
         "type": 2,
-        "type_name": "Tactical Skill",
+        "type_name": "Battle Skills",
         "name": "Strong Reinforcement",
+        "name_in_client": true,
         "description": "Calls in a tank to launch rockets at random enemies {2} times, dealing damage equal to {0} ATK.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": 10000,
         "cooldown": "10.00s",
         "unlock": "Hero Lv. 1",
-        "star_tiers": [
+        "unlock_level": 1,
+        "unlock_star": 0,
+        "icon": "../assets/heroes/skills/30006_2.webp",
+        "icon_sprite": "Hero_Monroe_skill_02",
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3600,
-            "ability_display": "36%",
+            "weight": 3600,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 7200,
-            "ability_display": "72%",
+            "weight": 7200,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 12000,
-            "ability_display": "120%",
+            "weight": 12000,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 19200,
-            "ability_display": "192%",
+            "weight": 19200,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 28800,
-            "ability_display": "288%",
+            "weight": 28800,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 38400,
-            "ability_display": "384%",
+            "weight": 38400,
             "max_skill_level": 30
+          }
+        ],
+        "gear_upgrades": [
+          {
+            "weapon_level": 10,
+            "gear_weight": 250000
           },
           {
-            "star": 5,
-            "ability_value": 38400,
-            "ability_display": "384%",
-            "max_skill_level": 30
-          },
-          {
-            "star": 5,
-            "ability_value": 38400,
-            "ability_display": "384%",
-            "max_skill_level": 30
+            "weapon_level": 30,
+            "gear_weight": 500000
           }
         ]
       },
       {
         "slot": 3,
+        "group_id": 3000630,
         "type": 3,
-        "type_name": "Passive Skill",
+        "type_name": "Passive",
         "name": "Scout",
+        "name_in_client": true,
         "description": "In combat, increases Radiation DMG by {0}.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": null,
         "cooldown": "Passive",
         "unlock": "Hero Lv. 21",
-        "star_tiers": [
+        "unlock_level": 21,
+        "unlock_star": 0,
+        "icon": "../assets/heroes/skills/30006_3.webp",
+        "icon_sprite": "Hero_Monroe_skill_03",
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3600,
-            "ability_display": "36%",
+            "weight": 3600,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 7200,
-            "ability_display": "72%",
+            "weight": 7200,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 12000,
-            "ability_display": "120%",
+            "weight": 12000,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 19200,
-            "ability_display": "192%",
+            "weight": 19200,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 28800,
-            "ability_display": "288%",
+            "weight": 28800,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 38400,
-            "ability_display": "384%",
+            "weight": 38400,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 4,
+        "group_id": 3000640,
         "type": 4,
-        "type_name": "Specialty / Leadership",
-        "name": "Troop Leadership",
-        "description": "Number of soldiers the hero can lead, providing additional attack, HP, and defense stats to the squad.",
+        "type_name": "Specialty",
+        "name": "Specialty",
+        "name_in_client": false,
+        "description": "Specialty slot. The client has no name or description for it; it unlocks at Hero Lv. 31 and 4★ and its weight does not grow with stars.",
+        "description_in_client": false,
+        "keywords": [],
+        "cooldown_ms": null,
         "cooldown": "Passive",
-        "unlock": "Hero Lv. 31 & 4★",
-        "star_tiers": [
+        "unlock": "Hero Lv. 31 · 4★",
+        "unlock_level": 31,
+        "unlock_star": 4,
+        "icon": null,
+        "icon_sprite": null,
+        "weights": [
           {
             "star": 0,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 3,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 4,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 5,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           }
-        ]
+        ],
+        "gear_upgrades": []
       }
     ],
     "exclusive_gear": {
       "gear_id": 30006,
-      "shard_item_name": "item_exclusiveWeapon_30006",
-      "star_limit": 25,
-      "strength_limit": 30,
-      "strengthen_levels_count": 600,
-      "skill_enhancement_name": "[Battle Skill Enhancement] Annihilation Barrage",
-      "skill_enhancement_desc": "When Monroe has 4 stacks of [Barrage Amplification], she launches a Devastating Rocket that deals additional 5% Radiation damage to 3 enemies around the impact point"
+      "season_day": 3,
+      "level_cap": 30,
+      "shards_per_level_curve": 2830,
+      "strengthen_levels": 200,
+      "strengthen_shards": 6000,
+      "max_level_bonus": {
+        "Hero HP": 702792.09,
+        "Hero ATK": 8365.5,
+        "Hero DEF": 4182.75,
+        "DMG Resistance": 0.05
+      },
+      "skill_caps_at_max": [
+        40,
+        40,
+        40,
+        1
+      ],
+      "max_strengthen_personal": {
+        "Hero HP": 168000,
+        "Hero ATK": 7000,
+        "Hero DEF": 600
+      },
+      "max_strengthen_all_heroes": {
+        "Hero HP": 40000,
+        "Hero ATK": 800,
+        "Hero DEF": 200
+      },
+      "keywords": [
+        {
+          "name": "Barrage Amplification",
+          "text": "Radiation damage increased by 3%. Stacks up to 15%"
+        }
+      ],
+      "skills": [
+        {
+          "name": "Tactical Sniper Rifle II",
+          "description": "Monroe gains 1 stack of [Barrage Amplification] whenever her auto attack crits, stacking up to the number of Warrior Heroes in your team.",
+          "icon": "../assets/heroes/skills/30006_gear_1.webp"
+        },
+        {
+          "name": "Strong Reinforcement II",
+          "description": "For every stack of [Barrage Amplification], Monroe fires an additional 1 rocket at random enemies",
+          "icon": "../assets/heroes/skills/30006_gear_2.webp"
+        },
+        {
+          "name": "[Battle Skill Enhancement] Annihilation Barrage",
+          "description": "When Monroe has 4 stacks of [Barrage Amplification], she launches a Devastating Rocket that deals additional 5% Radiation damage to 3 enemies around the impact point",
+          "icon": "../assets/heroes/skills/30006_gear_4.webp"
+        },
+        {
+          "name": "[Faction Boost] Warrior Vanguard",
+          "description": "In battle, increases Life, Attack, and Defense of all allied Warrior Heroes by {0}%",
+          "icon": "../assets/heroes/skills/30006_gear_talent.webp"
+        }
+      ]
     },
-    "role_type": 3,
-    "role_name": "Backline Hero",
-    "role_short": "Backline",
-    "role_icon": "🎯",
-    "role_description": "Excels at dealing damage from the backline with high attack and burst skills."
+    "insight": {
+      "focus": "both",
+      "tags": [
+        "Radiation",
+        "Exclusive weapon",
+        "Warrior synergy"
+      ],
+      "summary": "UR Warrior sniper with an exclusive weapon that scales with Warriors on the team and with her crits.",
+      "tips": [
+        "Her exclusive weapon stacks [Barrage Amplification] (+3% Radiation damage each, up to 15%) whenever her own auto attack crits, capped by the number of Warrior heroes in your team. Field her with other Warriors.",
+        "At 4 stacks Annihilation Barrage adds a Devastating Rocket: 5% extra Radiation damage to 3 enemies.",
+        "Her battle skill unlocks at Hero Lv. 1 instead of Lv. 5 like everyone else.",
+        "Her exclusive weapon upgrades her auto attack at weapon Lv. 1 and her battle skill at weapon Lv. 10 and Lv. 30.",
+        "Her exclusive weapon has the earliest season gate of the three (day 3; Leah day 17, Yana day 38)."
+      ]
+    }
   },
   {
     "id": 30007,
     "name": "Jack",
     "display_name": "Jack",
+    "variant_note": null,
+    "text_source_id": 30007,
     "quality": 4,
     "quality_name": "SSR",
     "army_type": 1,
     "army_name": "Frontline Hero",
+    "role_short": "Frontline",
+    "role_description": "Excels at absorbing enemy damage in the frontline, boasting formidable defense with significant HP and shield growth.",
+    "role_icon": "../assets/heroes/ui/role_1.webp",
     "camp_type": 2,
     "camp_name": "Assault",
+    "faction_icon": "../assets/heroes/ui/faction_2.webp",
     "training_center": {
       "building_id": 5045,
       "building_name": "Assault Training Center",
@@ -3009,6 +3907,38 @@ const HEROES_DATA = [
       "attack": 5933,
       "defense": 6863
     },
+    "stat_ranks": {
+      "peer_scope": "SSR Frontline",
+      "peers": {
+        "hp": {
+          "rank": 4,
+          "of": 4
+        },
+        "attack": {
+          "rank": 1,
+          "of": 4
+        },
+        "defense": {
+          "rank": 4,
+          "of": 4
+        }
+      },
+      "all": {
+        "hp": {
+          "rank": 10,
+          "of": 32
+        },
+        "attack": {
+          "rank": 28,
+          "of": 32
+        },
+        "defense": {
+          "rank": 20,
+          "of": 32
+        }
+      }
+    },
+    "level_curve_id": 1,
     "level_benefits": [
       {
         "source": 705,
@@ -3019,214 +3949,246 @@ const HEROES_DATA = [
     ],
     "max_level": 150,
     "image": "../assets/heroes/30007.png",
-    "story": "When I was with the special forces, I aimed at people, and the moment I pulled the trigger, I was the taker, stripping away the target's future possibilities.\nNow it's different. Whether it's those red war machines or genetically modified monsters, theoretically, they don't have plans or dreams for their future.\nBut then, how is this different from shooting at fixed targets?\nSo now I roam various battlefields. Yes, I still want to be the taker.",
+    "head": "../assets/heroes/heads/30007.webp",
+    "head_sprite": "Icon_Hero_Jack",
+    "sprite_match": "name",
+    "story": "When I was with the special forces, I aimed at people, and the moment I pulled the trigger, I was the taker, stripping away the target's future possibilities. Now it's different. Whether it's those red war machines or genetically modified monsters, theoretically, they don't have plans or dreams for their future. But then, how is this different from shooting at fixed targets? So now I roam various battlefields. Yes, I still want to be the taker.",
     "skills": [
       {
         "slot": 1,
+        "group_id": 3000710,
         "type": 1,
         "type_name": "Auto Attack",
         "name": "Tactical Grenade",
+        "name_in_client": true,
         "description": "Throws a grenade at enemies, dealing damage equal to {0} ATK and reducing their movement speed.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": 1000,
         "cooldown": "1.00s",
         "unlock": "Hero Lv. 1",
-        "star_tiers": [
+        "unlock_level": 1,
+        "unlock_star": 0,
+        "icon": null,
+        "icon_sprite": null,
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3250,
-            "ability_display": "32.5%",
+            "weight": 3250,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 6500,
-            "ability_display": "65%",
+            "weight": 6500,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 10800,
-            "ability_display": "108%",
+            "weight": 10800,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 17300,
-            "ability_display": "173%",
+            "weight": 17300,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 25950,
-            "ability_display": "259.5%",
+            "weight": 25950,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 34600,
-            "ability_display": "346%",
+            "weight": 34600,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 2,
+        "group_id": 3000720,
         "type": 2,
-        "type_name": "Tactical Skill",
+        "type_name": "Battle Skills",
         "name": "Pincer Tactic",
+        "name_in_client": true,
         "description": "Employs the Pincer Tactic, reducing front-row allies' damage from monsters by {0} for 6s.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": 9000,
         "cooldown": "9.00s",
         "unlock": "Hero Lv. 5",
-        "star_tiers": [
+        "unlock_level": 5,
+        "unlock_star": 0,
+        "icon": "../assets/heroes/skills/30007_2.webp",
+        "icon_sprite": "Hero_Jack_skill_02",
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3250,
-            "ability_display": "32.5%",
+            "weight": 3250,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 6500,
-            "ability_display": "65%",
+            "weight": 6500,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 10800,
-            "ability_display": "108%",
+            "weight": 10800,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 17300,
-            "ability_display": "173%",
+            "weight": 17300,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 25950,
-            "ability_display": "259.5%",
+            "weight": 25950,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 34600,
-            "ability_display": "346%",
+            "weight": 34600,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 3,
+        "group_id": 3000730,
         "type": 3,
-        "type_name": "Passive Skill",
+        "type_name": "Passive",
         "name": "Zombie Nemesis",
+        "name_in_client": true,
         "description": "In combat, reduces damage from monsters by {0}.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": null,
         "cooldown": "Passive",
         "unlock": "Hero Lv. 21",
-        "star_tiers": [
+        "unlock_level": 21,
+        "unlock_star": 0,
+        "icon": "../assets/heroes/skills/30007_3.webp",
+        "icon_sprite": "Hero_Jack_skill_03",
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3250,
-            "ability_display": "32.5%",
+            "weight": 3250,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 6500,
-            "ability_display": "65%",
+            "weight": 6500,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 10800,
-            "ability_display": "108%",
+            "weight": 10800,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 17300,
-            "ability_display": "173%",
+            "weight": 17300,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 25950,
-            "ability_display": "259.5%",
+            "weight": 25950,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 34600,
-            "ability_display": "346%",
+            "weight": 34600,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 4,
+        "group_id": 3000740,
         "type": 4,
-        "type_name": "Specialty / Leadership",
-        "name": "Troop Leadership",
-        "description": "Number of soldiers the hero can lead, providing additional attack, HP, and defense stats to the squad.",
+        "type_name": "Specialty",
+        "name": "Specialty",
+        "name_in_client": false,
+        "description": "Specialty slot. The client has no name or description for it; it unlocks at Hero Lv. 31 and 4★ and its weight does not grow with stars.",
+        "description_in_client": false,
+        "keywords": [],
+        "cooldown_ms": null,
         "cooldown": "Passive",
-        "unlock": "Hero Lv. 31 & 4★",
-        "star_tiers": [
+        "unlock": "Hero Lv. 31 · 4★",
+        "unlock_level": 31,
+        "unlock_star": 4,
+        "icon": null,
+        "icon_sprite": null,
+        "weights": [
           {
             "star": 0,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 3,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 4,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 5,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           }
-        ]
+        ],
+        "gear_upgrades": []
       }
     ],
     "exclusive_gear": null,
-    "role_type": 1,
-    "role_name": "Frontline Hero",
-    "role_short": "Frontline",
-    "role_icon": "🛡️",
-    "role_description": "Excels at absorbing enemy damage in the frontline with high HP and shield growth."
+    "insight": {
+      "focus": "pve",
+      "tags": [
+        "Slow",
+        "Front-row monster DR"
+      ],
+      "summary": "Assault SSR frontliner: grenades that slow, and Pincer Tactic cuts front-row damage from monsters.",
+      "tips": [
+        "Tactical Grenade also lowers enemy movement speed, which buys time against charging zombies.",
+        "Both defensive skills are monster-only; use Vera or Vince for Assault PvP fronts."
+      ]
+    }
   },
   {
     "id": 30011,
     "name": "Jackson",
     "display_name": "Jackson",
+    "variant_note": null,
+    "text_source_id": 30011,
     "quality": 3,
     "quality_name": "SR",
     "army_type": 3,
     "army_name": "Backline Hero",
+    "role_short": "Backline",
+    "role_description": "Excels at dealing damage from the backline, possessing powerful attack capabilities and skills.",
+    "role_icon": "../assets/heroes/ui/role_3.webp",
     "camp_type": 1,
     "camp_name": "Tactical",
+    "faction_icon": "../assets/heroes/ui/faction_1.webp",
     "training_center": {
       "building_id": 5046,
       "building_name": "Tactical Training Center",
@@ -3237,6 +4199,38 @@ const HEROES_DATA = [
       "attack": 7539,
       "defense": 4986
     },
+    "stat_ranks": {
+      "peer_scope": "SR Backline",
+      "peers": {
+        "hp": {
+          "rank": 1,
+          "of": 1
+        },
+        "attack": {
+          "rank": 1,
+          "of": 1
+        },
+        "defense": {
+          "rank": 1,
+          "of": 1
+        }
+      },
+      "all": {
+        "hp": {
+          "rank": 31,
+          "of": 32
+        },
+        "attack": {
+          "rank": 27,
+          "of": 32
+        },
+        "defense": {
+          "rank": 31,
+          "of": 32
+        }
+      }
+    },
+    "level_curve_id": 1,
     "level_benefits": [
       {
         "source": 705,
@@ -3247,167 +4241,195 @@ const HEROES_DATA = [
     ],
     "max_level": 150,
     "image": "../assets/heroes/30011.png",
-    "story": "Demolitions specialist Jackson is feared by enemies and allies alike for his volatile charges.",
+    "head": "../assets/heroes/heads/30011.webp",
+    "head_sprite": "Icon_Hero_Jackson",
+    "sprite_match": "name",
+    "story": null,
     "skills": [
       {
         "slot": 1,
+        "group_id": 3001110,
         "type": 1,
         "type_name": "Auto Attack",
         "name": "Charge Detonator",
+        "name_in_client": true,
         "description": "Hurls a detonator at enemies, dealing damage equal to {0} ATK.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": 1350,
         "cooldown": "1.35s",
         "unlock": "Hero Lv. 1",
-        "star_tiers": [
+        "unlock_level": 1,
+        "unlock_star": 0,
+        "icon": "../assets/heroes/skills/30011_1.webp",
+        "icon_sprite": "Hero_Jackson_skill_01",
+        "weights": [
           {
             "star": 0,
-            "ability_value": 2900,
-            "ability_display": "29%",
+            "weight": 2900,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 5800,
-            "ability_display": "58%",
+            "weight": 5800,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 9600,
-            "ability_display": "96%",
+            "weight": 9600,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 15400,
-            "ability_display": "154%",
+            "weight": 15400,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 23050,
-            "ability_display": "230.5%",
+            "weight": 23050,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 30750,
-            "ability_display": "307.5%",
+            "weight": 30750,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 2,
+        "group_id": 3001120,
         "type": 2,
-        "type_name": "Tactical Skill",
-        "name": "Tactical Strike",
-        "description": "Deals tactical damage to enemy targets.",
+        "type_name": "Battle Skills",
+        "name": "Unnamed skill",
+        "name_in_client": false,
+        "description": "Bombards the front 2 enemies with explosives, dealing damage equal to {0} ATK.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": 10000,
         "cooldown": "10.00s",
         "unlock": "Hero Lv. 5",
-        "star_tiers": [
+        "unlock_level": 5,
+        "unlock_star": 0,
+        "icon": "../assets/heroes/skills/30011_2.webp",
+        "icon_sprite": "Hero_Jackson_skill_02",
+        "weights": [
           {
             "star": 0,
-            "ability_value": 2900,
-            "ability_display": "29%",
+            "weight": 2900,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 5800,
-            "ability_display": "58%",
+            "weight": 5800,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 9600,
-            "ability_display": "96%",
+            "weight": 9600,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 15400,
-            "ability_display": "154%",
+            "weight": 15400,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 23050,
-            "ability_display": "230.5%",
+            "weight": 23050,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 30750,
-            "ability_display": "307.5%",
+            "weight": 30750,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 3,
+        "group_id": 3001140,
         "type": 4,
-        "type_name": "Specialty / Leadership",
-        "name": "Troop Leadership",
-        "description": "Number of soldiers the hero can lead, providing additional attack, HP, and defense stats to the squad.",
+        "type_name": "Specialty",
+        "name": "Specialty",
+        "name_in_client": false,
+        "description": "Specialty slot. The client has no name or description for it; it unlocks at Hero Lv. 31 and 4★ and its weight does not grow with stars.",
+        "description_in_client": false,
+        "keywords": [],
+        "cooldown_ms": null,
         "cooldown": "Passive",
-        "unlock": "Hero Lv. 31 & 4★",
-        "star_tiers": [
+        "unlock": "Hero Lv. 31 · 4★",
+        "unlock_level": 31,
+        "unlock_star": 4,
+        "icon": "../assets/heroes/skills/30011_3.webp",
+        "icon_sprite": "Hero_Jackson_skill_03",
+        "weights": [
           {
             "star": 0,
-            "ability_value": 9600,
-            "ability_display": "+9,600 Soldiers",
+            "weight": 9600,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 9600,
-            "ability_display": "+9,600 Soldiers",
+            "weight": 9600,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 9600,
-            "ability_display": "+9,600 Soldiers",
+            "weight": 9600,
             "max_skill_level": 1
           },
           {
             "star": 3,
-            "ability_value": 9600,
-            "ability_display": "+9,600 Soldiers",
+            "weight": 9600,
             "max_skill_level": 1
           },
           {
             "star": 4,
-            "ability_value": 9600,
-            "ability_display": "+9,600 Soldiers",
+            "weight": 9600,
             "max_skill_level": 1
           },
           {
             "star": 5,
-            "ability_value": 9600,
-            "ability_display": "+9,600 Soldiers",
+            "weight": 9600,
             "max_skill_level": 1
           }
-        ]
+        ],
+        "gear_upgrades": []
       }
     ],
     "exclusive_gear": null,
-    "role_type": 3,
-    "role_name": "Backline Hero",
-    "role_short": "Backline",
-    "role_icon": "🎯",
-    "role_description": "Excels at dealing damage from the backline with high attack and burst skills."
+    "insight": {
+      "focus": "utility",
+      "tags": [
+        "Gathering",
+        "Soldier load"
+      ],
+      "summary": "SR Tactical bomber. His real job is the Soldier Load levelBenefit, which raises gathering capacity.",
+      "tips": [
+        "SR heroes (Jackson, Jamal, Hank) are the only ones whose levelBenefit is Soldier Load Increase (0.01) instead of a faction stat. Use them to lead gathering marches.",
+        "He has only 2 combat skills plus the Specialty slot (no passive), and his battle-skill name is missing from the client text."
+      ]
+    }
   },
   {
     "id": 31003,
     "name": "Aria",
-    "display_name": "Aria",
+    "display_name": "Aria (UR)",
+    "variant_note": "UR-quality Aria (#31003). The client has no separate name or skill text for her and reuses SSR Aria's skills, skill weights and level curve, so this card shows #30003's text.",
+    "text_source_id": 30003,
     "quality": 5,
     "quality_name": "UR",
     "army_type": 3,
     "army_name": "Backline Hero",
+    "role_short": "Backline",
+    "role_description": "Excels at dealing damage from the backline, possessing powerful attack capabilities and skills.",
+    "role_icon": "../assets/heroes/ui/role_3.webp",
     "camp_type": 3,
     "camp_name": "Warrior",
+    "faction_icon": "../assets/heroes/ui/faction_3.webp",
     "training_center": {
       "building_id": 5044,
       "building_name": "Warrior Training Center",
@@ -3418,6 +4440,38 @@ const HEROES_DATA = [
       "attack": 14204,
       "defense": 9159
     },
+    "stat_ranks": {
+      "peer_scope": "UR Backline",
+      "peers": {
+        "hp": {
+          "rank": 3,
+          "of": 9
+        },
+        "attack": {
+          "rank": 7,
+          "of": 9
+        },
+        "defense": {
+          "rank": 3,
+          "of": 9
+        }
+      },
+      "all": {
+        "hp": {
+          "rank": 15,
+          "of": 32
+        },
+        "attack": {
+          "rank": 7,
+          "of": 32
+        },
+        "defense": {
+          "rank": 10,
+          "of": 32
+        }
+      }
+    },
+    "level_curve_id": 1,
     "level_benefits": [
       {
         "source": 705,
@@ -3428,214 +4482,246 @@ const HEROES_DATA = [
     ],
     "max_level": 150,
     "image": "../assets/heroes/31003.png",
+    "head": "../assets/heroes/heads/31003.webp",
+    "head_sprite": "Icon_Hero_Alia",
+    "sprite_match": "artwork",
     "story": "This deep blue mecha excels in ocean combat. Tentacle monsters? Child's play. Like a shark, he'll show enemies who's the predator and who's prey, even though he's allergic to seafood.",
     "skills": [
       {
         "slot": 1,
+        "group_id": 3100310,
         "type": 1,
         "type_name": "Auto Attack",
-        "name": "Enhanced Pulse",
+        "name": "Automatic Rifle",
+        "name_in_client": true,
         "description": "Fires pulse bullets at enemies, dealing damage equal to {0} ATK.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": 1100,
         "cooldown": "1.10s",
         "unlock": "Hero Lv. 1",
-        "star_tiers": [
+        "unlock_level": 1,
+        "unlock_star": 0,
+        "icon": null,
+        "icon_sprite": null,
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3250,
-            "ability_display": "32.5%",
+            "weight": 3250,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 6500,
-            "ability_display": "65%",
+            "weight": 6500,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 10800,
-            "ability_display": "108%",
+            "weight": 10800,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 17300,
-            "ability_display": "173%",
+            "weight": 17300,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 25950,
-            "ability_display": "259.5%",
+            "weight": 25950,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 34600,
-            "ability_display": "346%",
+            "weight": 34600,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 2,
+        "group_id": 3100320,
         "type": 2,
-        "type_name": "Tactical Skill",
-        "name": "Barrage Storm",
+        "type_name": "Battle Skills",
+        "name": "Unload Magazine",
+        "name_in_client": true,
         "description": "Unleashes rapid fire at enemies, dealing damage equal to {0} ATK.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": 9000,
         "cooldown": "9.00s",
         "unlock": "Hero Lv. 5",
-        "star_tiers": [
+        "unlock_level": 5,
+        "unlock_star": 0,
+        "icon": "../assets/heroes/skills/31003_2.webp",
+        "icon_sprite": "Hero_Alia_skill_02",
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3250,
-            "ability_display": "32.5%",
+            "weight": 3250,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 6500,
-            "ability_display": "65%",
+            "weight": 6500,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 10800,
-            "ability_display": "108%",
+            "weight": 10800,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 17300,
-            "ability_display": "173%",
+            "weight": 17300,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 25950,
-            "ability_display": "259.5%",
+            "weight": 25950,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 34600,
-            "ability_display": "346%",
+            "weight": 34600,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 3,
+        "group_id": 3100330,
         "type": 3,
-        "type_name": "Passive Skill",
-        "name": "Zombie Terminator",
+        "type_name": "Passive",
+        "name": "Zombie Hunter",
+        "name_in_client": true,
         "description": "In combat, back-row Warrior allies deal {0} more damage to monsters.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": null,
         "cooldown": "Passive",
         "unlock": "Hero Lv. 21",
-        "star_tiers": [
+        "unlock_level": 21,
+        "unlock_star": 0,
+        "icon": "../assets/heroes/skills/31003_3.webp",
+        "icon_sprite": "Hero_Alia_skill_03",
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3250,
-            "ability_display": "32.5%",
+            "weight": 3250,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 6500,
-            "ability_display": "65%",
+            "weight": 6500,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 10800,
-            "ability_display": "108%",
+            "weight": 10800,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 17300,
-            "ability_display": "173%",
+            "weight": 17300,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 25950,
-            "ability_display": "259.5%",
+            "weight": 25950,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 34600,
-            "ability_display": "346%",
+            "weight": 34600,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 4,
+        "group_id": 3100340,
         "type": 4,
-        "type_name": "Specialty / Leadership",
-        "name": "Troop Leadership",
-        "description": "Number of soldiers the hero can lead, providing additional attack, HP, and defense stats to the squad.",
+        "type_name": "Specialty",
+        "name": "Specialty",
+        "name_in_client": false,
+        "description": "Specialty slot. The client has no name or description for it; it unlocks at Hero Lv. 31 and 4★ and its weight does not grow with stars.",
+        "description_in_client": false,
+        "keywords": [],
+        "cooldown_ms": null,
         "cooldown": "Passive",
-        "unlock": "Hero Lv. 31 & 4★",
-        "star_tiers": [
+        "unlock": "Hero Lv. 31 · 4★",
+        "unlock_level": 31,
+        "unlock_star": 4,
+        "icon": null,
+        "icon_sprite": null,
+        "weights": [
           {
             "star": 0,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 3,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 4,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 5,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           }
-        ]
+        ],
+        "gear_upgrades": []
       }
     ],
     "exclusive_gear": null,
-    "role_type": 3,
-    "role_name": "Backline Hero",
-    "role_short": "Backline",
-    "role_icon": "🎯",
-    "role_description": "Excels at dealing damage from the backline with high attack and burst skills."
+    "insight": {
+      "focus": "pve",
+      "tags": [
+        "UR edition",
+        "Warrior back-row buff"
+      ],
+      "summary": "UR-quality Aria. She has her own card art but reuses SSR Aria's skills, SSR skill weights and SSR level curve.",
+      "tips": [
+        "The client has no separate name or skill text for #31003; this page shows SSR Aria's text, and the in-game names may differ.",
+        "HeroInfo gives her UR base stats (HP 6,207 / ATK 14,204), about 1.5x SSR Aria, but her skill weights stay at the SSR values (3,250 → 34,600)."
+      ]
+    }
   },
   {
     "id": 40001,
     "name": "Jamal",
     "display_name": "Jamal",
+    "variant_note": null,
+    "text_source_id": 40001,
     "quality": 3,
     "quality_name": "SR",
     "army_type": 1,
     "army_name": "Frontline Hero",
+    "role_short": "Frontline",
+    "role_description": "Excels at absorbing enemy damage in the frontline, boasting formidable defense with significant HP and shield growth.",
+    "role_icon": "../assets/heroes/ui/role_1.webp",
     "camp_type": 3,
     "camp_name": "Warrior",
+    "faction_icon": "../assets/heroes/ui/faction_3.webp",
     "training_center": {
       "building_id": 5044,
       "building_name": "Warrior Training Center",
@@ -3646,6 +4732,38 @@ const HEROES_DATA = [
       "attack": 7693,
       "defense": 4961
     },
+    "stat_ranks": {
+      "peer_scope": "SR Frontline",
+      "peers": {
+        "hp": {
+          "rank": 2,
+          "of": 2
+        },
+        "attack": {
+          "rank": 1,
+          "of": 2
+        },
+        "defense": {
+          "rank": 2,
+          "of": 2
+        }
+      },
+      "all": {
+        "hp": {
+          "rank": 32,
+          "of": 32
+        },
+        "attack": {
+          "rank": 26,
+          "of": 32
+        },
+        "defense": {
+          "rank": 32,
+          "of": 32
+        }
+      }
+    },
+    "level_curve_id": 1,
     "level_benefits": [
       {
         "source": 705,
@@ -3656,167 +4774,195 @@ const HEROES_DATA = [
     ],
     "max_level": 150,
     "image": "../assets/heroes/40001.png",
-    "story": "Adam, the Chief Instructor, is enormous, but not as big as his temper.\nEvery soldier in the human resistance must endure his trials; only those who persevere become qualified warriors.\nNo matter how determined one is to fight, failing Adam's test means remaining a protected one forever. His lack of mercy is his form of mercy.",
+    "head": "../assets/heroes/heads/40001.webp",
+    "head_sprite": "Icon_Hero_Jamal",
+    "sprite_match": "name",
+    "story": "Adam, the Chief Instructor, is enormous, but not as big as his temper. Every soldier in the human resistance must endure his trials; only those who persevere become qualified warriors. No matter how determined one is to fight, failing Adam's test means remaining a protected one forever. His lack of mercy is his form of mercy.",
     "skills": [
       {
         "slot": 1,
+        "group_id": 4000110,
         "type": 1,
         "type_name": "Auto Attack",
         "name": "Nail Gun",
+        "name_in_client": true,
         "description": "Shoots steel spikes at enemies, dealing damage equal to {0} ATK.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": 1350,
         "cooldown": "1.35s",
         "unlock": "Hero Lv. 1",
-        "star_tiers": [
+        "unlock_level": 1,
+        "unlock_star": 0,
+        "icon": "../assets/heroes/skills/40001_1.webp",
+        "icon_sprite": "Hero_Jamal_skill_01",
+        "weights": [
           {
             "star": 0,
-            "ability_value": 2900,
-            "ability_display": "29%",
+            "weight": 2900,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 5800,
-            "ability_display": "58%",
+            "weight": 5800,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 9600,
-            "ability_display": "96%",
+            "weight": 9600,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 15400,
-            "ability_display": "154%",
+            "weight": 15400,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 23050,
-            "ability_display": "230.5%",
+            "weight": 23050,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 30750,
-            "ability_display": "307.5%",
+            "weight": 30750,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 2,
+        "group_id": 4000120,
         "type": 2,
-        "type_name": "Tactical Skill",
+        "type_name": "Battle Skills",
         "name": "Quick Repair",
+        "name_in_client": true,
         "description": "Fires a barrage of spikes at the front 2 enemies with dual pistols, dealing damage equal to {0} ATK.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": 10000,
         "cooldown": "10.00s",
         "unlock": "Hero Lv. 5",
-        "star_tiers": [
+        "unlock_level": 5,
+        "unlock_star": 0,
+        "icon": "../assets/heroes/skills/40001_2.webp",
+        "icon_sprite": "Hero_Jamal_skill_02",
+        "weights": [
           {
             "star": 0,
-            "ability_value": 2900,
-            "ability_display": "29%",
+            "weight": 2900,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 5800,
-            "ability_display": "58%",
+            "weight": 5800,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 9600,
-            "ability_display": "96%",
+            "weight": 9600,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 15400,
-            "ability_display": "154%",
+            "weight": 15400,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 23050,
-            "ability_display": "230.5%",
+            "weight": 23050,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 30750,
-            "ability_display": "307.5%",
+            "weight": 30750,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 3,
+        "group_id": 4000140,
         "type": 4,
-        "type_name": "Specialty / Leadership",
-        "name": "Troop Leadership",
-        "description": "Number of soldiers the hero can lead, providing additional attack, HP, and defense stats to the squad.",
+        "type_name": "Specialty",
+        "name": "Specialty",
+        "name_in_client": false,
+        "description": "Specialty slot. The client has no name or description for it; it unlocks at Hero Lv. 31 and 4★ and its weight does not grow with stars.",
+        "description_in_client": false,
+        "keywords": [],
+        "cooldown_ms": null,
         "cooldown": "Passive",
-        "unlock": "Hero Lv. 31 & 4★",
-        "star_tiers": [
+        "unlock": "Hero Lv. 31 · 4★",
+        "unlock_level": 31,
+        "unlock_star": 4,
+        "icon": null,
+        "icon_sprite": null,
+        "weights": [
           {
             "star": 0,
-            "ability_value": 9600,
-            "ability_display": "+9,600 Soldiers",
+            "weight": 9600,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 9600,
-            "ability_display": "+9,600 Soldiers",
+            "weight": 9600,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 9600,
-            "ability_display": "+9,600 Soldiers",
+            "weight": 9600,
             "max_skill_level": 1
           },
           {
             "star": 3,
-            "ability_value": 9600,
-            "ability_display": "+9,600 Soldiers",
+            "weight": 9600,
             "max_skill_level": 1
           },
           {
             "star": 4,
-            "ability_value": 9600,
-            "ability_display": "+9,600 Soldiers",
+            "weight": 9600,
             "max_skill_level": 1
           },
           {
             "star": 5,
-            "ability_value": 9600,
-            "ability_display": "+9,600 Soldiers",
+            "weight": 9600,
             "max_skill_level": 1
           }
-        ]
+        ],
+        "gear_upgrades": []
       }
     ],
     "exclusive_gear": null,
-    "role_type": 1,
-    "role_name": "Frontline Hero",
-    "role_short": "Frontline",
-    "role_icon": "🛡️",
-    "role_description": "Excels at absorbing enemy damage in the frontline with high HP and shield growth."
+    "insight": {
+      "focus": "utility",
+      "tags": [
+        "Gathering",
+        "Soldier load"
+      ],
+      "summary": "SR gatherer listed as a frontliner, but with backline-like stats (ATK 2.3x HP).",
+      "tips": [
+        "Use for gathering (Soldier Load Increase levelBenefit), not as a tank: his HP is the lowest of any frontliner by far.",
+        "No passive skill; Quick Repair hits the 2 front enemies."
+      ]
+    }
   },
   {
     "id": 40002,
     "name": "Hank",
     "display_name": "Hank",
+    "variant_note": null,
+    "text_source_id": 40002,
     "quality": 3,
     "quality_name": "SR",
     "army_type": 1,
     "army_name": "Frontline Hero",
+    "role_short": "Frontline",
+    "role_description": "Excels at absorbing enemy damage in the frontline, boasting formidable defense with significant HP and shield growth.",
+    "role_icon": "../assets/heroes/ui/role_1.webp",
     "camp_type": 3,
     "camp_name": "Warrior",
+    "faction_icon": "../assets/heroes/ui/faction_3.webp",
     "training_center": {
       "building_id": 5044,
       "building_name": "Warrior Training Center",
@@ -3827,6 +4973,38 @@ const HEROES_DATA = [
       "attack": 4462,
       "defense": 5685
     },
+    "stat_ranks": {
+      "peer_scope": "SR Frontline",
+      "peers": {
+        "hp": {
+          "rank": 1,
+          "of": 2
+        },
+        "attack": {
+          "rank": 2,
+          "of": 2
+        },
+        "defense": {
+          "rank": 1,
+          "of": 2
+        }
+      },
+      "all": {
+        "hp": {
+          "rank": 11,
+          "of": 32
+        },
+        "attack": {
+          "rank": 32,
+          "of": 32
+        },
+        "defense": {
+          "rank": 30,
+          "of": 32
+        }
+      }
+    },
+    "level_curve_id": 1,
     "level_benefits": [
       {
         "source": 705,
@@ -3837,167 +5015,195 @@ const HEROES_DATA = [
     ],
     "max_level": 150,
     "image": "../assets/heroes/40002.png",
-    "story": "Henrique has mastered 80% of the Abyss Empire's technology. He can identify useful parts from any mechanical wreckage with just a touch. The mechanic claims this…\nThe human-like arms crossed on his chest are merely decorative. His true arms are a pair of massive mechanical ones extending from his back! Henrique then answered the reporter's question, clearing up the long-standing confusion.",
+    "head": "../assets/heroes/heads/40002.webp",
+    "head_sprite": "Icon_Hero_Hank",
+    "sprite_match": "name",
+    "story": "Henrique has mastered 80% of the Abyss Empire's technology. He can identify useful parts from any mechanical wreckage with just a touch. The mechanic claims this… The human-like arms crossed on his chest are merely decorative. His true arms are a pair of massive mechanical ones extending from his back! Henrique then answered the reporter's question, clearing up the long-standing confusion.",
     "skills": [
       {
         "slot": 1,
+        "group_id": 4000210,
         "type": 1,
         "type_name": "Auto Attack",
         "name": "Custom Spray Gun",
+        "name_in_client": true,
         "description": "Spews fire at enemies, dealing damage equal to {0} ATK.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": 4000,
         "cooldown": "4.00s",
         "unlock": "Hero Lv. 1",
-        "star_tiers": [
+        "unlock_level": 1,
+        "unlock_star": 0,
+        "icon": "../assets/heroes/skills/40002_1.webp",
+        "icon_sprite": "Hero_Hank_skill_01",
+        "weights": [
           {
             "star": 0,
-            "ability_value": 2900,
-            "ability_display": "29%",
+            "weight": 2900,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 5800,
-            "ability_display": "58%",
+            "weight": 5800,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 9600,
-            "ability_display": "96%",
+            "weight": 9600,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 15400,
-            "ability_display": "154%",
+            "weight": 15400,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 23050,
-            "ability_display": "230.5%",
+            "weight": 23050,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 30750,
-            "ability_display": "307.5%",
+            "weight": 30750,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 2,
+        "group_id": 4000220,
         "type": 2,
-        "type_name": "Tactical Skill",
+        "type_name": "Battle Skills",
         "name": "High Pressure Gas Tank",
+        "name_in_client": true,
         "description": "Spews scorching flames at the front 2 enemies, dealing damage equal to {0} ATK.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": 10000,
         "cooldown": "10.00s",
         "unlock": "Hero Lv. 5",
-        "star_tiers": [
+        "unlock_level": 5,
+        "unlock_star": 0,
+        "icon": "../assets/heroes/skills/40002_2.webp",
+        "icon_sprite": "Hero_Hank_skill_02",
+        "weights": [
           {
             "star": 0,
-            "ability_value": 2900,
-            "ability_display": "29%",
+            "weight": 2900,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 5800,
-            "ability_display": "58%",
+            "weight": 5800,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 9600,
-            "ability_display": "96%",
+            "weight": 9600,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 15400,
-            "ability_display": "154%",
+            "weight": 15400,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 23050,
-            "ability_display": "230.5%",
+            "weight": 23050,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 30750,
-            "ability_display": "307.5%",
+            "weight": 30750,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 3,
+        "group_id": 4000240,
         "type": 4,
-        "type_name": "Specialty / Leadership",
-        "name": "Troop Leadership",
-        "description": "Number of soldiers the hero can lead, providing additional attack, HP, and defense stats to the squad.",
+        "type_name": "Specialty",
+        "name": "Specialty",
+        "name_in_client": false,
+        "description": "Specialty slot. The client has no name or description for it; it unlocks at Hero Lv. 31 and 4★ and its weight does not grow with stars.",
+        "description_in_client": false,
+        "keywords": [],
+        "cooldown_ms": null,
         "cooldown": "Passive",
-        "unlock": "Hero Lv. 31 & 4★",
-        "star_tiers": [
+        "unlock": "Hero Lv. 31 · 4★",
+        "unlock_level": 31,
+        "unlock_star": 4,
+        "icon": null,
+        "icon_sprite": null,
+        "weights": [
           {
             "star": 0,
-            "ability_value": 9600,
-            "ability_display": "+9,600 Soldiers",
+            "weight": 9600,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 9600,
-            "ability_display": "+9,600 Soldiers",
+            "weight": 9600,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 9600,
-            "ability_display": "+9,600 Soldiers",
+            "weight": 9600,
             "max_skill_level": 1
           },
           {
             "star": 3,
-            "ability_value": 9600,
-            "ability_display": "+9,600 Soldiers",
+            "weight": 9600,
             "max_skill_level": 1
           },
           {
             "star": 4,
-            "ability_value": 9600,
-            "ability_display": "+9,600 Soldiers",
+            "weight": 9600,
             "max_skill_level": 1
           },
           {
             "star": 5,
-            "ability_value": 9600,
-            "ability_display": "+9,600 Soldiers",
+            "weight": 9600,
             "max_skill_level": 1
           }
-        ]
+        ],
+        "gear_upgrades": []
       }
     ],
     "exclusive_gear": null,
-    "role_type": 1,
-    "role_name": "Frontline Hero",
-    "role_short": "Frontline",
-    "role_icon": "🛡️",
-    "role_description": "Excels at absorbing enemy damage in the frontline with high HP and shield growth."
+    "insight": {
+      "focus": "utility",
+      "tags": [
+        "Gathering",
+        "Soldier load"
+      ],
+      "summary": "SR flame gatherer with real frontline stats and a slow 4.0s auto attack.",
+      "tips": [
+        "The sturdier of the three SR gatherers (HP 7,174) if a gathering march might get hit.",
+        "No passive skill."
+      ]
+    }
   },
   {
     "id": 40010,
     "name": "Taylor",
     "display_name": "Taylor",
+    "variant_note": null,
+    "text_source_id": 40010,
     "quality": 4,
     "quality_name": "SSR",
     "army_type": 3,
     "army_name": "Backline Hero",
+    "role_short": "Backline",
+    "role_description": "Excels at dealing damage from the backline, possessing powerful attack capabilities and skills.",
+    "role_icon": "../assets/heroes/ui/role_3.webp",
     "camp_type": 1,
     "camp_name": "Tactical",
+    "faction_icon": "../assets/heroes/ui/faction_1.webp",
     "training_center": {
       "building_id": 5046,
       "building_name": "Tactical Training Center",
@@ -4008,6 +5214,38 @@ const HEROES_DATA = [
       "attack": 9232,
       "defense": 6145
     },
+    "stat_ranks": {
+      "peer_scope": "SSR Backline",
+      "peers": {
+        "hp": {
+          "rank": 4,
+          "of": 9
+        },
+        "attack": {
+          "rank": 6,
+          "of": 9
+        },
+        "defense": {
+          "rank": 4,
+          "of": 9
+        }
+      },
+      "all": {
+        "hp": {
+          "rank": 25,
+          "of": 32
+        },
+        "attack": {
+          "rank": 17,
+          "of": 32
+        },
+        "defense": {
+          "rank": 24,
+          "of": 32
+        }
+      }
+    },
+    "level_curve_id": 1,
     "level_benefits": [
       {
         "source": 705,
@@ -4018,214 +5256,246 @@ const HEROES_DATA = [
     ],
     "max_level": 150,
     "image": "../assets/heroes/40010.png",
-    "story": "I vow my initial wish: to be born for salvation, may I descend.\nI vow my temporary wish: to end war with killing, to protect life with my body.\nI vow my lifelong wish: even if my body perishes, the wish to save the world shall endure.",
+    "head": "../assets/heroes/heads/40010.webp",
+    "head_sprite": "Icon_Hero_Taylor",
+    "sprite_match": "name",
+    "story": "I vow my initial wish: to be born for salvation, may I descend. I vow my temporary wish: to end war with killing, to protect life with my body. I vow my lifelong wish: even if my body perishes, the wish to save the world shall endure.",
     "skills": [
       {
         "slot": 1,
+        "group_id": 4001010,
         "type": 1,
         "type_name": "Auto Attack",
         "name": "Composite Bow",
+        "name_in_client": true,
         "description": "Shoots arrows at enemies, dealing damage equal to {0} ATK.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": 1550,
         "cooldown": "1.55s",
         "unlock": "Hero Lv. 1",
-        "star_tiers": [
+        "unlock_level": 1,
+        "unlock_star": 0,
+        "icon": "../assets/heroes/skills/40010_1.webp",
+        "icon_sprite": "Hero_Taylor_skill_01",
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3250,
-            "ability_display": "32.5%",
+            "weight": 3250,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 6500,
-            "ability_display": "65%",
+            "weight": 6500,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 10800,
-            "ability_display": "108%",
+            "weight": 10800,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 17300,
-            "ability_display": "173%",
+            "weight": 17300,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 25950,
-            "ability_display": "259.5%",
+            "weight": 25950,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 34600,
-            "ability_display": "346%",
+            "weight": 34600,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 2,
+        "group_id": 4001020,
         "type": 2,
-        "type_name": "Tactical Skill",
+        "type_name": "Battle Skills",
         "name": "Heavy Arrow",
+        "name_in_client": true,
         "description": "Shoots a heavy arrow at the front enemies, dealing damage equal to {0} ATK.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": 9000,
         "cooldown": "9.00s",
         "unlock": "Hero Lv. 5",
-        "star_tiers": [
+        "unlock_level": 5,
+        "unlock_star": 0,
+        "icon": "../assets/heroes/skills/40010_2.webp",
+        "icon_sprite": "Hero_Taylor_skill_02",
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3250,
-            "ability_display": "32.5%",
+            "weight": 3250,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 6500,
-            "ability_display": "65%",
+            "weight": 6500,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 10800,
-            "ability_display": "108%",
+            "weight": 10800,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 17300,
-            "ability_display": "173%",
+            "weight": 17300,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 25950,
-            "ability_display": "259.5%",
+            "weight": 25950,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 34600,
-            "ability_display": "346%",
+            "weight": 34600,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 3,
+        "group_id": 4001030,
         "type": 3,
-        "type_name": "Passive Skill",
+        "type_name": "Passive",
         "name": "Professional Hunter",
+        "name_in_client": true,
         "description": "In combat, deal {0} more damage to monsters.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": null,
         "cooldown": "Passive",
         "unlock": "Hero Lv. 21",
-        "star_tiers": [
+        "unlock_level": 21,
+        "unlock_star": 0,
+        "icon": "../assets/heroes/skills/40010_3.webp",
+        "icon_sprite": "Hero_Taylor_skill_03",
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3250,
-            "ability_display": "32.5%",
+            "weight": 3250,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 6500,
-            "ability_display": "65%",
+            "weight": 6500,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 10800,
-            "ability_display": "108%",
+            "weight": 10800,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 17300,
-            "ability_display": "173%",
+            "weight": 17300,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 25950,
-            "ability_display": "259.5%",
+            "weight": 25950,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 34600,
-            "ability_display": "346%",
+            "weight": 34600,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 4,
+        "group_id": 4001040,
         "type": 4,
-        "type_name": "Specialty / Leadership",
-        "name": "Troop Leadership",
-        "description": "Number of soldiers the hero can lead, providing additional attack, HP, and defense stats to the squad.",
+        "type_name": "Specialty",
+        "name": "Specialty",
+        "name_in_client": false,
+        "description": "Specialty slot. The client has no name or description for it; it unlocks at Hero Lv. 31 and 4★ and its weight does not grow with stars.",
+        "description_in_client": false,
+        "keywords": [],
+        "cooldown_ms": null,
         "cooldown": "Passive",
-        "unlock": "Hero Lv. 31 & 4★",
-        "star_tiers": [
+        "unlock": "Hero Lv. 31 · 4★",
+        "unlock_level": 31,
+        "unlock_star": 4,
+        "icon": null,
+        "icon_sprite": null,
+        "weights": [
           {
             "star": 0,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 3,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 4,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           },
           {
             "star": 5,
-            "ability_value": 10800,
-            "ability_display": "+10,800 Soldiers",
+            "weight": 10800,
             "max_skill_level": 1
           }
-        ]
+        ],
+        "gear_upgrades": []
       }
     ],
     "exclusive_gear": null,
-    "role_type": 3,
-    "role_name": "Backline Hero",
-    "role_short": "Backline",
-    "role_icon": "🎯",
-    "role_description": "Excels at dealing damage from the backline with high attack and burst skills."
+    "insight": {
+      "focus": "pve",
+      "tags": [
+        "Front-target",
+        "Monster damage"
+      ],
+      "summary": "Tactical SSR archer: Heavy Arrow hits the front enemies and her passive adds damage to monsters.",
+      "tips": [
+        "A budget back-row filler for Tactical zombie teams until Leah, Silas or Katya are starred.",
+        "Passive is monster-only."
+      ]
+    }
   },
   {
     "id": 50001,
     "name": "Dirk",
     "display_name": "Dirk",
+    "variant_note": null,
+    "text_source_id": 50001,
     "quality": 5,
     "quality_name": "UR",
     "army_type": 1,
     "army_name": "Frontline Hero",
+    "role_short": "Frontline",
+    "role_description": "Excels at absorbing enemy damage in the frontline, boasting formidable defense with significant HP and shield growth.",
+    "role_icon": "../assets/heroes/ui/role_1.webp",
     "camp_type": 3,
     "camp_name": "Warrior",
+    "faction_icon": "../assets/heroes/ui/faction_3.webp",
     "training_center": {
       "building_id": 5044,
       "building_name": "Warrior Training Center",
@@ -4236,6 +5506,38 @@ const HEROES_DATA = [
       "attack": 8075,
       "defense": 10549
     },
+    "stat_ranks": {
+      "peer_scope": "UR Frontline",
+      "peers": {
+        "hp": {
+          "rank": 2,
+          "of": 6
+        },
+        "attack": {
+          "rank": 5,
+          "of": 6
+        },
+        "defense": {
+          "rank": 2,
+          "of": 6
+        }
+      },
+      "all": {
+        "hp": {
+          "rank": 2,
+          "of": 32
+        },
+        "attack": {
+          "rank": 23,
+          "of": 32
+        },
+        "defense": {
+          "rank": 2,
+          "of": 32
+        }
+      }
+    },
+    "level_curve_id": 2,
     "level_benefits": [
       {
         "source": 705,
@@ -4246,214 +5548,246 @@ const HEROES_DATA = [
     ],
     "max_level": 150,
     "image": "../assets/heroes/50001.png",
-    "story": "",
+    "head": "../assets/heroes/heads/50001.webp",
+    "head_sprite": "Icon_Hero_Deke",
+    "sprite_match": "artwork",
+    "story": null,
     "skills": [
       {
         "slot": 1,
+        "group_id": 5000110,
         "type": 1,
         "type_name": "Auto Attack",
         "name": "Modified Grenade",
+        "name_in_client": true,
         "description": "Fires a shock grenade at enemies, dealing damage equal to {0} ATK.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": 1350,
         "cooldown": "1.35s",
         "unlock": "Hero Lv. 1",
-        "star_tiers": [
+        "unlock_level": 1,
+        "unlock_star": 0,
+        "icon": null,
+        "icon_sprite": null,
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3600,
-            "ability_display": "36%",
+            "weight": 3600,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 7200,
-            "ability_display": "72%",
+            "weight": 7200,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 12000,
-            "ability_display": "120%",
+            "weight": 12000,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 19200,
-            "ability_display": "192%",
+            "weight": 19200,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 28800,
-            "ability_display": "288%",
+            "weight": 28800,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 38400,
-            "ability_display": "384%",
+            "weight": 38400,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 2,
+        "group_id": 5000120,
         "type": 2,
-        "type_name": "Tactical Skill",
+        "type_name": "Battle Skills",
         "name": "Iron Will",
+        "name_in_client": true,
         "description": "Lets out a motivating shout, increasing front-row allies' DEF by {0} for {2}s.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": 10000,
         "cooldown": "10.00s",
         "unlock": "Hero Lv. 5",
-        "star_tiers": [
+        "unlock_level": 5,
+        "unlock_star": 0,
+        "icon": null,
+        "icon_sprite": null,
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3600,
-            "ability_display": "36%",
+            "weight": 3600,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 7200,
-            "ability_display": "72%",
+            "weight": 7200,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 12000,
-            "ability_display": "120%",
+            "weight": 12000,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 19200,
-            "ability_display": "192%",
+            "weight": 19200,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 28800,
-            "ability_display": "288%",
+            "weight": 28800,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 38400,
-            "ability_display": "384%",
+            "weight": 38400,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 3,
+        "group_id": 5000130,
         "type": 3,
-        "type_name": "Passive Skill",
+        "type_name": "Passive",
         "name": "Heavy Armor",
+        "name_in_client": true,
         "description": "In combat, reduces incoming damage by {0}.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": null,
         "cooldown": "Passive",
         "unlock": "Hero Lv. 21",
-        "star_tiers": [
+        "unlock_level": 21,
+        "unlock_star": 0,
+        "icon": null,
+        "icon_sprite": null,
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3600,
-            "ability_display": "36%",
+            "weight": 3600,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 7200,
-            "ability_display": "72%",
+            "weight": 7200,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 12000,
-            "ability_display": "120%",
+            "weight": 12000,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 19200,
-            "ability_display": "192%",
+            "weight": 19200,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 28800,
-            "ability_display": "288%",
+            "weight": 28800,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 38400,
-            "ability_display": "384%",
+            "weight": 38400,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 4,
+        "group_id": 5000140,
         "type": 4,
-        "type_name": "Specialty / Leadership",
-        "name": "Troop Leadership",
-        "description": "Number of soldiers the hero can lead, providing additional attack, HP, and defense stats to the squad.",
+        "type_name": "Specialty",
+        "name": "Specialty",
+        "name_in_client": false,
+        "description": "Specialty slot. The client has no name or description for it; it unlocks at Hero Lv. 31 and 4★ and its weight does not grow with stars.",
+        "description_in_client": false,
+        "keywords": [],
+        "cooldown_ms": null,
         "cooldown": "Passive",
-        "unlock": "Hero Lv. 31 & 4★",
-        "star_tiers": [
+        "unlock": "Hero Lv. 31 · 4★",
+        "unlock_level": 31,
+        "unlock_star": 4,
+        "icon": null,
+        "icon_sprite": null,
+        "weights": [
           {
             "star": 0,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 3,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 4,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 5,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           }
-        ]
+        ],
+        "gear_upgrades": []
       }
     ],
     "exclusive_gear": null,
-    "role_type": 1,
-    "role_name": "Frontline Hero",
-    "role_short": "Frontline",
-    "role_icon": "🛡️",
-    "role_description": "Excels at absorbing enemy damage in the frontline with high HP and shield growth."
+    "insight": {
+      "focus": "both",
+      "tags": [
+        "Front-row DEF buff",
+        "Damage reduction"
+      ],
+      "summary": "UR Warrior tank: Iron Will raises front-row DEF (shield) and Heavy Armor cuts all damage he takes.",
+      "tips": [
+        "Heavy Armor reduces all incoming damage, not just monster damage, so he holds up in PvP.",
+        "Pairs with Arnold: Dirk adds shield (DEF) while Arnold reduces damage, two different layers on the same front row."
+      ]
+    }
   },
   {
     "id": 50002,
     "name": "Carter",
     "display_name": "Carter",
+    "variant_note": null,
+    "text_source_id": 50002,
     "quality": 5,
     "quality_name": "UR",
     "army_type": 2,
     "army_name": "Support Hero",
+    "role_short": "Support",
+    "role_description": "A well-rounded hero that excels at elevating team performance.",
+    "role_icon": "../assets/heroes/ui/role_2.webp",
     "camp_type": 3,
     "camp_name": "Warrior",
+    "faction_icon": "../assets/heroes/ui/faction_3.webp",
     "training_center": {
       "building_id": 5044,
       "building_name": "Warrior Training Center",
@@ -4464,6 +5798,38 @@ const HEROES_DATA = [
       "attack": 12958,
       "defense": 9372
     },
+    "stat_ranks": {
+      "peer_scope": "UR Support",
+      "peers": {
+        "hp": {
+          "rank": 1,
+          "of": 1
+        },
+        "attack": {
+          "rank": 1,
+          "of": 1
+        },
+        "defense": {
+          "rank": 1,
+          "of": 1
+        }
+      },
+      "all": {
+        "hp": {
+          "rank": 12,
+          "of": 32
+        },
+        "attack": {
+          "rank": 10,
+          "of": 32
+        },
+        "defense": {
+          "rank": 7,
+          "of": 32
+        }
+      }
+    },
+    "level_curve_id": 2,
     "level_benefits": [
       {
         "source": 705,
@@ -4474,214 +5840,248 @@ const HEROES_DATA = [
     ],
     "max_level": 150,
     "image": "../assets/heroes/50002.png",
-    "story": "",
+    "head": "../assets/heroes/heads/50002.webp",
+    "head_sprite": "Icon_Hero_Carter",
+    "sprite_match": "name",
+    "story": null,
     "skills": [
       {
         "slot": 1,
+        "group_id": 5000210,
         "type": 1,
         "type_name": "Auto Attack",
         "name": "Heavy Revolver",
+        "name_in_client": true,
         "description": "Attacks enemies with a revolver, dealing damage equal to {0} ATK.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": 1250,
         "cooldown": "1.25s",
         "unlock": "Hero Lv. 1",
-        "star_tiers": [
+        "unlock_level": 1,
+        "unlock_star": 0,
+        "icon": "../assets/heroes/skills/50002_1.webp",
+        "icon_sprite": "Hero_Carter_skill_01",
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3600,
-            "ability_display": "36%",
+            "weight": 3600,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 7200,
-            "ability_display": "72%",
+            "weight": 7200,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 12000,
-            "ability_display": "120%",
+            "weight": 12000,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 19200,
-            "ability_display": "192%",
+            "weight": 19200,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 28800,
-            "ability_display": "288%",
+            "weight": 28800,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 38400,
-            "ability_display": "384%",
+            "weight": 38400,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 2,
+        "group_id": 5000220,
         "type": 2,
-        "type_name": "Tactical Skill",
+        "type_name": "Battle Skills",
         "name": "Hawkeye",
+        "name_in_client": true,
         "description": "Sends a falcon to scout the battlefield, increasing all allies' ATK by {0} for {2}s.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": 12000,
         "cooldown": "12.00s",
         "unlock": "Hero Lv. 5",
-        "star_tiers": [
+        "unlock_level": 5,
+        "unlock_star": 0,
+        "icon": null,
+        "icon_sprite": null,
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3600,
-            "ability_display": "36%",
+            "weight": 3600,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 7200,
-            "ability_display": "72%",
+            "weight": 7200,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 12000,
-            "ability_display": "120%",
+            "weight": 12000,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 19200,
-            "ability_display": "192%",
+            "weight": 19200,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 28800,
-            "ability_display": "288%",
+            "weight": 28800,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 38400,
-            "ability_display": "384%",
+            "weight": 38400,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 3,
+        "group_id": 5000230,
         "type": 3,
-        "type_name": "Passive Skill",
+        "type_name": "Passive",
         "name": "Sheriff",
+        "name_in_client": true,
         "description": "In combat, increases Skill Cooldown Speed by {0} and reduces damage taken by the ally with the highest ATK by {1}.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": null,
         "cooldown": "Passive",
         "unlock": "Hero Lv. 21",
-        "star_tiers": [
+        "unlock_level": 21,
+        "unlock_star": 0,
+        "icon": "../assets/heroes/skills/50002_3.webp",
+        "icon_sprite": "Hero_Carter_skill_03",
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3600,
-            "ability_display": "36%",
+            "weight": 3600,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 7200,
-            "ability_display": "72%",
+            "weight": 7200,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 12000,
-            "ability_display": "120%",
+            "weight": 12000,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 19200,
-            "ability_display": "192%",
+            "weight": 19200,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 28800,
-            "ability_display": "288%",
+            "weight": 28800,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 38400,
-            "ability_display": "384%",
+            "weight": 38400,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 4,
+        "group_id": 5000240,
         "type": 4,
-        "type_name": "Specialty / Leadership",
-        "name": "Troop Leadership",
-        "description": "Number of soldiers the hero can lead, providing additional attack, HP, and defense stats to the squad.",
+        "type_name": "Specialty",
+        "name": "Specialty",
+        "name_in_client": false,
+        "description": "Specialty slot. The client has no name or description for it; it unlocks at Hero Lv. 31 and 4★ and its weight does not grow with stars.",
+        "description_in_client": false,
+        "keywords": [],
+        "cooldown_ms": null,
         "cooldown": "Passive",
-        "unlock": "Hero Lv. 31 & 4★",
-        "star_tiers": [
+        "unlock": "Hero Lv. 31 · 4★",
+        "unlock_level": 31,
+        "unlock_star": 4,
+        "icon": null,
+        "icon_sprite": null,
+        "weights": [
           {
             "star": 0,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 3,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 4,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 5,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           }
-        ]
+        ],
+        "gear_upgrades": []
       }
     ],
     "exclusive_gear": null,
-    "role_type": 2,
-    "role_name": "Support Hero",
-    "role_short": "Support",
-    "role_icon": "✨",
-    "role_description": "A well-rounded hero that excels at elevating team performance and skill speed."
+    "insight": {
+      "focus": "both",
+      "tags": [
+        "Team ATK",
+        "Cooldown speed",
+        "Only support"
+      ],
+      "summary": "The only Support hero: team-wide ATK and faster skill cooldowns, in any faction.",
+      "tips": [
+        "Hawkeye raises ALL allies' ATK, and Sheriff speeds up skill cooldowns and protects your highest-ATK ally. Few slots give more team value.",
+        "His battle skill has the longest cooldown in the roster (12s), and Sheriff's cooldown speed partly offsets it.",
+        "Sheriff protects the highest-ATK ally, so build your main carry's ATK first and Carter will shield the right hero."
+      ]
+    }
   },
   {
     "id": 50003,
     "name": "Lucian",
     "display_name": "Lucian",
+    "variant_note": null,
+    "text_source_id": 50003,
     "quality": 5,
     "quality_name": "UR",
     "army_type": 3,
     "army_name": "Backline Hero",
+    "role_short": "Backline",
+    "role_description": "Excels at dealing damage from the backline, possessing powerful attack capabilities and skills.",
+    "role_icon": "../assets/heroes/ui/role_3.webp",
     "camp_type": 3,
     "camp_name": "Warrior",
+    "faction_icon": "../assets/heroes/ui/faction_3.webp",
     "training_center": {
       "building_id": 5044,
       "building_name": "Warrior Training Center",
@@ -4692,6 +6092,38 @@ const HEROES_DATA = [
       "attack": 15706,
       "defense": 8932
     },
+    "stat_ranks": {
+      "peer_scope": "UR Backline",
+      "peers": {
+        "hp": {
+          "rank": 9,
+          "of": 9
+        },
+        "attack": {
+          "rank": 1,
+          "of": 9
+        },
+        "defense": {
+          "rank": 9,
+          "of": 9
+        }
+      },
+      "all": {
+        "hp": {
+          "rank": 21,
+          "of": 32
+        },
+        "attack": {
+          "rank": 1,
+          "of": 32
+        },
+        "defense": {
+          "rank": 16,
+          "of": 32
+        }
+      }
+    },
+    "level_curve_id": 2,
     "level_benefits": [
       {
         "source": 705,
@@ -4702,214 +6134,246 @@ const HEROES_DATA = [
     ],
     "max_level": 150,
     "image": "../assets/heroes/50003.png",
-    "story": "",
+    "head": "../assets/heroes/heads/50003.webp",
+    "head_sprite": "Icon_Hero_Lucien",
+    "sprite_match": "name",
+    "story": null,
     "skills": [
       {
         "slot": 1,
+        "group_id": 5000310,
         "type": 1,
         "type_name": "Auto Attack",
         "name": "Stun Gun",
+        "name_in_client": true,
         "description": "Unleashes high-voltage arcs at enemies, dealing damage equal to {0} ATK.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": 1450,
         "cooldown": "1.45s",
         "unlock": "Hero Lv. 1",
-        "star_tiers": [
+        "unlock_level": 1,
+        "unlock_star": 0,
+        "icon": "../assets/heroes/skills/50003_1.webp",
+        "icon_sprite": "Hero_Lucien_skill_01",
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3600,
-            "ability_display": "36%",
+            "weight": 3600,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 7200,
-            "ability_display": "72%",
+            "weight": 7200,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 12000,
-            "ability_display": "120%",
+            "weight": 12000,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 19200,
-            "ability_display": "192%",
+            "weight": 19200,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 28800,
-            "ability_display": "288%",
+            "weight": 28800,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 38400,
-            "ability_display": "384%",
+            "weight": 38400,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 2,
+        "group_id": 5000320,
         "type": 2,
-        "type_name": "Tactical Skill",
+        "type_name": "Battle Skills",
         "name": "Tesla Coil",
+        "name_in_client": true,
         "description": "Unleashes high-voltage arcs at random enemies {2} times, dealing damage equal to {0} ATK.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": 10000,
         "cooldown": "10.00s",
         "unlock": "Hero Lv. 5",
-        "star_tiers": [
+        "unlock_level": 5,
+        "unlock_star": 0,
+        "icon": "../assets/heroes/skills/50003_2.webp",
+        "icon_sprite": "Hero_Lucien_skill_02",
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3600,
-            "ability_display": "36%",
+            "weight": 3600,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 7200,
-            "ability_display": "72%",
+            "weight": 7200,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 12000,
-            "ability_display": "120%",
+            "weight": 12000,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 19200,
-            "ability_display": "192%",
+            "weight": 19200,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 28800,
-            "ability_display": "288%",
+            "weight": 28800,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 38400,
-            "ability_display": "384%",
+            "weight": 38400,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 3,
+        "group_id": 5000330,
         "type": 3,
-        "type_name": "Passive Skill",
+        "type_name": "Passive",
         "name": "Frankenstein",
+        "name_in_client": true,
         "description": "In combat, increases Crit Rate by {0}.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": null,
         "cooldown": "Passive",
         "unlock": "Hero Lv. 21",
-        "star_tiers": [
+        "unlock_level": 21,
+        "unlock_star": 0,
+        "icon": null,
+        "icon_sprite": null,
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3600,
-            "ability_display": "36%",
+            "weight": 3600,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 7200,
-            "ability_display": "72%",
+            "weight": 7200,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 12000,
-            "ability_display": "120%",
+            "weight": 12000,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 19200,
-            "ability_display": "192%",
+            "weight": 19200,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 28800,
-            "ability_display": "288%",
+            "weight": 28800,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 38400,
-            "ability_display": "384%",
+            "weight": 38400,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 4,
+        "group_id": 5000340,
         "type": 4,
-        "type_name": "Specialty / Leadership",
-        "name": "Troop Leadership",
-        "description": "Number of soldiers the hero can lead, providing additional attack, HP, and defense stats to the squad.",
+        "type_name": "Specialty",
+        "name": "Specialty",
+        "name_in_client": false,
+        "description": "Specialty slot. The client has no name or description for it; it unlocks at Hero Lv. 31 and 4★ and its weight does not grow with stars.",
+        "description_in_client": false,
+        "keywords": [],
+        "cooldown_ms": null,
         "cooldown": "Passive",
-        "unlock": "Hero Lv. 31 & 4★",
-        "star_tiers": [
+        "unlock": "Hero Lv. 31 · 4★",
+        "unlock_level": 31,
+        "unlock_star": 4,
+        "icon": null,
+        "icon_sprite": null,
+        "weights": [
           {
             "star": 0,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 3,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 4,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 5,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           }
-        ]
+        ],
+        "gear_upgrades": []
       }
     ],
     "exclusive_gear": null,
-    "role_type": 3,
-    "role_name": "Backline Hero",
-    "role_short": "Backline",
-    "role_icon": "🎯",
-    "role_description": "Excels at dealing damage from the backline with high attack and burst skills."
+    "insight": {
+      "focus": "both",
+      "tags": [
+        "Highest ATK",
+        "Crit"
+      ],
+      "summary": "Highest base ATK in the game (15,706) and lowest UR HP: an all-in Warrior carry with Crit Rate.",
+      "tips": [
+        "Tesla Coil arcs multiple random targets, and Frankenstein adds Crit Rate.",
+        "Needs Arnold or Dirk in front; his HP is the lowest of any UR."
+      ]
+    }
   },
   {
     "id": 50004,
     "name": "Bekka",
     "display_name": "Bekka",
+    "variant_note": null,
+    "text_source_id": 50004,
     "quality": 5,
     "quality_name": "UR",
     "army_type": 1,
     "army_name": "Frontline Hero",
+    "role_short": "Frontline",
+    "role_description": "Excels at absorbing enemy damage in the frontline, boasting formidable defense with significant HP and shield growth.",
+    "role_icon": "../assets/heroes/ui/role_1.webp",
     "camp_type": 1,
     "camp_name": "Tactical",
+    "faction_icon": "../assets/heroes/ui/faction_1.webp",
     "training_center": {
       "building_id": 5046,
       "building_name": "Tactical Training Center",
@@ -4920,6 +6384,38 @@ const HEROES_DATA = [
       "attack": 7834,
       "defense": 10629
     },
+    "stat_ranks": {
+      "peer_scope": "UR Frontline",
+      "peers": {
+        "hp": {
+          "rank": 1,
+          "of": 6
+        },
+        "attack": {
+          "rank": 6,
+          "of": 6
+        },
+        "defense": {
+          "rank": 1,
+          "of": 6
+        }
+      },
+      "all": {
+        "hp": {
+          "rank": 1,
+          "of": 32
+        },
+        "attack": {
+          "rank": 25,
+          "of": 32
+        },
+        "defense": {
+          "rank": 1,
+          "of": 32
+        }
+      }
+    },
+    "level_curve_id": 2,
     "level_benefits": [
       {
         "source": 705,
@@ -4930,214 +6426,247 @@ const HEROES_DATA = [
     ],
     "max_level": 150,
     "image": "../assets/heroes/50004.png",
-    "story": "",
+    "head": "../assets/heroes/heads/50004.webp",
+    "head_sprite": "Icon_Hero_Bekka",
+    "sprite_match": "name",
+    "story": null,
     "skills": [
       {
         "slot": 1,
+        "group_id": 5000410,
         "type": 1,
         "type_name": "Auto Attack",
         "name": "Tactical Submachine Gun",
+        "name_in_client": true,
         "description": "Attacks enemies with a submachine gun, dealing damage equal to {0} ATK.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": 1000,
         "cooldown": "1.00s",
         "unlock": "Hero Lv. 1",
-        "star_tiers": [
+        "unlock_level": 1,
+        "unlock_star": 0,
+        "icon": null,
+        "icon_sprite": null,
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3600,
-            "ability_display": "36%",
+            "weight": 3600,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 7200,
-            "ability_display": "72%",
+            "weight": 7200,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 12000,
-            "ability_display": "120%",
+            "weight": 12000,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 19200,
-            "ability_display": "192%",
+            "weight": 19200,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 28800,
-            "ability_display": "288%",
+            "weight": 28800,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 38400,
-            "ability_display": "384%",
+            "weight": 38400,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 2,
+        "group_id": 5000420,
         "type": 2,
-        "type_name": "Tactical Skill",
+        "type_name": "Battle Skills",
         "name": "Sonic Boom",
+        "name_in_client": true,
         "description": "Throws sonic grenades at all enemies, dealingPhysical DMGequal to {0} ATK and reducing their Radiation DMG by {2} for 5s.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": 10000,
         "cooldown": "10.00s",
         "unlock": "Hero Lv. 5",
-        "star_tiers": [
+        "unlock_level": 5,
+        "unlock_star": 0,
+        "icon": null,
+        "icon_sprite": null,
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3600,
-            "ability_display": "36%",
+            "weight": 3600,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 7200,
-            "ability_display": "72%",
+            "weight": 7200,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 12000,
-            "ability_display": "120%",
+            "weight": 12000,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 19200,
-            "ability_display": "192%",
+            "weight": 19200,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 28800,
-            "ability_display": "288%",
+            "weight": 28800,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 38400,
-            "ability_display": "384%",
+            "weight": 38400,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 3,
+        "group_id": 5000430,
         "type": 3,
-        "type_name": "Passive Skill",
+        "type_name": "Passive",
         "name": "Ion Shield",
+        "name_in_client": true,
         "description": "In combat, reduces Radiation DMG taken by {0}.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": null,
         "cooldown": "Passive",
         "unlock": "Hero Lv. 21",
-        "star_tiers": [
+        "unlock_level": 21,
+        "unlock_star": 0,
+        "icon": null,
+        "icon_sprite": null,
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3600,
-            "ability_display": "36%",
+            "weight": 3600,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 7200,
-            "ability_display": "72%",
+            "weight": 7200,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 12000,
-            "ability_display": "120%",
+            "weight": 12000,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 19200,
-            "ability_display": "192%",
+            "weight": 19200,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 28800,
-            "ability_display": "288%",
+            "weight": 28800,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 38400,
-            "ability_display": "384%",
+            "weight": 38400,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 4,
+        "group_id": 5000440,
         "type": 4,
-        "type_name": "Specialty / Leadership",
-        "name": "Troop Leadership",
-        "description": "Number of soldiers the hero can lead, providing additional attack, HP, and defense stats to the squad.",
+        "type_name": "Specialty",
+        "name": "Specialty",
+        "name_in_client": false,
+        "description": "Specialty slot. The client has no name or description for it; it unlocks at Hero Lv. 31 and 4★ and its weight does not grow with stars.",
+        "description_in_client": false,
+        "keywords": [],
+        "cooldown_ms": null,
         "cooldown": "Passive",
-        "unlock": "Hero Lv. 31 & 4★",
-        "star_tiers": [
+        "unlock": "Hero Lv. 31 · 4★",
+        "unlock_level": 31,
+        "unlock_star": 4,
+        "icon": null,
+        "icon_sprite": null,
+        "weights": [
           {
             "star": 0,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 3,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 4,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 5,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           }
-        ]
+        ],
+        "gear_upgrades": []
       }
     ],
     "exclusive_gear": null,
-    "role_type": 1,
-    "role_name": "Frontline Hero",
-    "role_short": "Frontline",
-    "role_icon": "🛡️",
-    "role_description": "Excels at absorbing enemy damage in the frontline with high HP and shield growth."
+    "insight": {
+      "focus": "both",
+      "tags": [
+        "AoE",
+        "Radiation counter",
+        "Highest HP"
+      ],
+      "summary": "Highest base HP in the game (14,281). Sonic Boom hits all enemies and cuts their Radiation damage.",
+      "tips": [
+        "Sonic Boom deals Physical damage to ALL enemies and lowers their Radiation damage for 5s, and Ion Shield cuts Radiation damage taken. She hard-counters Radiation carries like Monroe and Yana.",
+        "Pair with Virgilio for a near-complete Radiation shutdown on Tactical teams."
+      ]
+    }
   },
   {
     "id": 50005,
     "name": "Virgilio",
     "display_name": "Virgilio",
+    "variant_note": null,
+    "text_source_id": 50005,
     "quality": 5,
     "quality_name": "UR",
     "army_type": 1,
     "army_name": "Frontline Hero",
+    "role_short": "Frontline",
+    "role_description": "Excels at absorbing enemy damage in the frontline, boasting formidable defense with significant HP and shield growth.",
+    "role_icon": "../assets/heroes/ui/role_1.webp",
     "camp_type": 1,
     "camp_name": "Tactical",
+    "faction_icon": "../assets/heroes/ui/faction_1.webp",
     "training_center": {
       "building_id": 5046,
       "building_name": "Tactical Training Center",
@@ -5148,6 +6677,38 @@ const HEROES_DATA = [
       "attack": 8298,
       "defense": 10477
     },
+    "stat_ranks": {
+      "peer_scope": "UR Frontline",
+      "peers": {
+        "hp": {
+          "rank": 4,
+          "of": 6
+        },
+        "attack": {
+          "rank": 3,
+          "of": 6
+        },
+        "defense": {
+          "rank": 4,
+          "of": 6
+        }
+      },
+      "all": {
+        "hp": {
+          "rank": 4,
+          "of": 32
+        },
+        "attack": {
+          "rank": 19,
+          "of": 32
+        },
+        "defense": {
+          "rank": 4,
+          "of": 32
+        }
+      }
+    },
+    "level_curve_id": 2,
     "level_benefits": [
       {
         "source": 705,
@@ -5158,214 +6719,246 @@ const HEROES_DATA = [
     ],
     "max_level": 150,
     "image": "../assets/heroes/50005.png",
-    "story": "",
+    "head": "../assets/heroes/heads/50005.webp",
+    "head_sprite": "Icon_Hero_Vigilo",
+    "sprite_match": "name",
+    "story": null,
     "skills": [
       {
         "slot": 1,
+        "group_id": 5000510,
         "type": 1,
         "type_name": "Auto Attack",
         "name": "Light Submachine Gun",
+        "name_in_client": true,
         "description": "ttacks 1 random front enemy with a submachine gun, dealing damage equal to {0} ATK.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": 1000,
         "cooldown": "1.00s",
         "unlock": "Hero Lv. 1",
-        "star_tiers": [
+        "unlock_level": 1,
+        "unlock_star": 0,
+        "icon": null,
+        "icon_sprite": null,
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3600,
-            "ability_display": "36%",
+            "weight": 3600,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 7200,
-            "ability_display": "72%",
+            "weight": 7200,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 12000,
-            "ability_display": "120%",
+            "weight": 12000,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 19200,
-            "ability_display": "192%",
+            "weight": 19200,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 28800,
-            "ability_display": "288%",
+            "weight": 28800,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 38400,
-            "ability_display": "384%",
+            "weight": 38400,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 2,
+        "group_id": 5000520,
         "type": 2,
-        "type_name": "Tactical Skill",
+        "type_name": "Battle Skills",
         "name": "Magnetic Coil",
+        "name_in_client": true,
         "description": "Releases an EM pulse, reducing Radiation DMG taken by all allies by {0} for {2}s.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": 10000,
         "cooldown": "10.00s",
         "unlock": "Hero Lv. 5",
-        "star_tiers": [
+        "unlock_level": 5,
+        "unlock_star": 0,
+        "icon": null,
+        "icon_sprite": null,
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3600,
-            "ability_display": "36%",
+            "weight": 3600,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 7200,
-            "ability_display": "72%",
+            "weight": 7200,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 12000,
-            "ability_display": "120%",
+            "weight": 12000,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 19200,
-            "ability_display": "192%",
+            "weight": 19200,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 28800,
-            "ability_display": "288%",
+            "weight": 28800,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 38400,
-            "ability_display": "384%",
+            "weight": 38400,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 3,
+        "group_id": 5000530,
         "type": 3,
-        "type_name": "Passive Skill",
+        "type_name": "Passive",
         "name": "Magnetic Armor",
+        "name_in_client": true,
         "description": "In combat, front-row allies take {0} less damage and {1} less Radiation DMG.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": null,
         "cooldown": "Passive",
         "unlock": "Hero Lv. 21",
-        "star_tiers": [
+        "unlock_level": 21,
+        "unlock_star": 0,
+        "icon": "../assets/heroes/skills/50005_3.webp",
+        "icon_sprite": "Hero_Vigilo_skill_03",
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3600,
-            "ability_display": "36%",
+            "weight": 3600,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 7200,
-            "ability_display": "72%",
+            "weight": 7200,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 12000,
-            "ability_display": "120%",
+            "weight": 12000,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 19200,
-            "ability_display": "192%",
+            "weight": 19200,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 28800,
-            "ability_display": "288%",
+            "weight": 28800,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 38400,
-            "ability_display": "384%",
+            "weight": 38400,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 4,
+        "group_id": 5000540,
         "type": 4,
-        "type_name": "Specialty / Leadership",
-        "name": "Troop Leadership",
-        "description": "Number of soldiers the hero can lead, providing additional attack, HP, and defense stats to the squad.",
+        "type_name": "Specialty",
+        "name": "Specialty",
+        "name_in_client": false,
+        "description": "Specialty slot. The client has no name or description for it; it unlocks at Hero Lv. 31 and 4★ and its weight does not grow with stars.",
+        "description_in_client": false,
+        "keywords": [],
+        "cooldown_ms": null,
         "cooldown": "Passive",
-        "unlock": "Hero Lv. 31 & 4★",
-        "star_tiers": [
+        "unlock": "Hero Lv. 31 · 4★",
+        "unlock_level": 31,
+        "unlock_star": 4,
+        "icon": null,
+        "icon_sprite": null,
+        "weights": [
           {
             "star": 0,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 3,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 4,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 5,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           }
-        ]
+        ],
+        "gear_upgrades": []
       }
     ],
     "exclusive_gear": null,
-    "role_type": 1,
-    "role_name": "Frontline Hero",
-    "role_short": "Frontline",
-    "role_icon": "🛡️",
-    "role_description": "Excels at absorbing enemy damage in the frontline with high HP and shield growth."
+    "insight": {
+      "focus": "both",
+      "tags": [
+        "Team Radiation DR",
+        "Front-row DR"
+      ],
+      "summary": "UR Tactical anti-Radiation tank: a team-wide Radiation shield plus front-row damage reduction.",
+      "tips": [
+        "Magnetic Coil reduces Radiation damage taken by ALL allies; Magnetic Armor gives the front row both general and Radiation damage reduction.",
+        "Bring him when the enemy runs Monroe, Yana or Leah, whose exclusive weapons all deal Radiation damage."
+      ]
+    }
   },
   {
     "id": 50006,
     "name": "Leah",
     "display_name": "Leah",
+    "variant_note": null,
+    "text_source_id": 50006,
     "quality": 5,
     "quality_name": "UR",
     "army_type": 3,
     "army_name": "Backline Hero",
+    "role_short": "Backline",
+    "role_description": "Excels at dealing damage from the backline, possessing powerful attack capabilities and skills.",
+    "role_icon": "../assets/heroes/ui/role_3.webp",
     "camp_type": 1,
     "camp_name": "Tactical",
+    "faction_icon": "../assets/heroes/ui/faction_1.webp",
     "training_center": {
       "building_id": 5046,
       "building_name": "Tactical Training Center",
@@ -5376,6 +6969,38 @@ const HEROES_DATA = [
       "attack": 13850,
       "defense": 9217
     },
+    "stat_ranks": {
+      "peer_scope": "UR Backline",
+      "peers": {
+        "hp": {
+          "rank": 2,
+          "of": 9
+        },
+        "attack": {
+          "rank": 8,
+          "of": 9
+        },
+        "defense": {
+          "rank": 2,
+          "of": 9
+        }
+      },
+      "all": {
+        "hp": {
+          "rank": 14,
+          "of": 32
+        },
+        "attack": {
+          "rank": 8,
+          "of": 32
+        },
+        "defense": {
+          "rank": 9,
+          "of": 32
+        }
+      }
+    },
+    "level_curve_id": 2,
     "level_benefits": [
       {
         "source": 705,
@@ -5386,234 +7011,321 @@ const HEROES_DATA = [
     ],
     "max_level": 150,
     "image": "../assets/heroes/50006.png",
-    "story": "",
+    "head": "../assets/heroes/heads/50006.webp",
+    "head_sprite": "Icon_Hero_Leah",
+    "sprite_match": "name",
+    "story": null,
     "skills": [
       {
         "slot": 1,
+        "group_id": 5000610,
         "type": 1,
         "type_name": "Auto Attack",
         "name": "Rapid-Fire Sniper Rifle",
+        "name_in_client": true,
         "description": "Attacks enemies with a sniper rifle, dealing damage equal to {0} ATK.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": 1350,
         "cooldown": "1.35s",
         "unlock": "Hero Lv. 1",
-        "star_tiers": [
+        "unlock_level": 1,
+        "unlock_star": 0,
+        "icon": null,
+        "icon_sprite": null,
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3600,
-            "ability_display": "36%",
+            "weight": 3600,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 7200,
-            "ability_display": "72%",
+            "weight": 7200,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 12000,
-            "ability_display": "120%",
+            "weight": 12000,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 19200,
-            "ability_display": "192%",
+            "weight": 19200,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 28800,
-            "ability_display": "288%",
+            "weight": 28800,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 38400,
-            "ability_display": "384%",
+            "weight": 38400,
             "max_skill_level": 30
-          },
+          }
+        ],
+        "gear_upgrades": [
           {
-            "star": 5,
-            "ability_value": 38400,
-            "ability_display": "384%",
-            "max_skill_level": 20
+            "weapon_level": 1,
+            "gear_weight": 250000
           }
         ]
       },
       {
         "slot": 2,
+        "group_id": 5000620,
         "type": 2,
-        "type_name": "Tactical Skill",
+        "type_name": "Battle Skills",
         "name": "Black Hawk Call",
+        "name_in_client": true,
         "description": "Calls an armed helicopter to attack all enemies, dealing damage equal to {0} ATK.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": 10000,
         "cooldown": "10.00s",
         "unlock": "Hero Lv. 5",
-        "star_tiers": [
+        "unlock_level": 5,
+        "unlock_star": 0,
+        "icon": "../assets/heroes/skills/50006_2.webp",
+        "icon_sprite": "Hero_Leah_skill_02",
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3600,
-            "ability_display": "36%",
+            "weight": 3600,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 7200,
-            "ability_display": "72%",
+            "weight": 7200,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 12000,
-            "ability_display": "120%",
+            "weight": 12000,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 19200,
-            "ability_display": "192%",
+            "weight": 19200,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 28800,
-            "ability_display": "288%",
+            "weight": 28800,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 38400,
-            "ability_display": "384%",
+            "weight": 38400,
             "max_skill_level": 30
-          },
+          }
+        ],
+        "gear_upgrades": [
           {
-            "star": 5,
-            "ability_value": 38400,
-            "ability_display": "384%",
-            "max_skill_level": 30
+            "weapon_level": 10,
+            "gear_weight": 250000
           }
         ]
       },
       {
         "slot": 3,
+        "group_id": 5000630,
         "type": 3,
-        "type_name": "Passive Skill",
+        "type_name": "Passive",
         "name": "Box Breathing",
+        "name_in_client": true,
         "description": "In combat, increases Crit Rate by {0}.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": null,
         "cooldown": "Passive",
         "unlock": "Hero Lv. 21",
-        "star_tiers": [
+        "unlock_level": 21,
+        "unlock_star": 0,
+        "icon": null,
+        "icon_sprite": null,
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3600,
-            "ability_display": "36%",
+            "weight": 3600,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 7200,
-            "ability_display": "72%",
+            "weight": 7200,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 12000,
-            "ability_display": "120%",
+            "weight": 12000,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 19200,
-            "ability_display": "192%",
+            "weight": 19200,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 28800,
-            "ability_display": "288%",
+            "weight": 28800,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 38400,
-            "ability_display": "384%",
+            "weight": 38400,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 4,
+        "group_id": 5000640,
         "type": 4,
-        "type_name": "Specialty / Leadership",
-        "name": "Troop Leadership",
-        "description": "Number of soldiers the hero can lead, providing additional attack, HP, and defense stats to the squad.",
+        "type_name": "Specialty",
+        "name": "Specialty",
+        "name_in_client": false,
+        "description": "Specialty slot. The client has no name or description for it; it unlocks at Hero Lv. 31 and 4★ and its weight does not grow with stars.",
+        "description_in_client": false,
+        "keywords": [],
+        "cooldown_ms": null,
         "cooldown": "Passive",
-        "unlock": "Hero Lv. 31 & 4★",
-        "star_tiers": [
+        "unlock": "Hero Lv. 31 · 4★",
+        "unlock_level": 31,
+        "unlock_star": 4,
+        "icon": null,
+        "icon_sprite": null,
+        "weights": [
           {
             "star": 0,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 3,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 4,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 5,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           }
-        ]
+        ],
+        "gear_upgrades": []
       }
     ],
     "exclusive_gear": {
       "gear_id": 50006,
-      "shard_item_name": "item_exclusiveWeapon_50006",
-      "star_limit": 25,
-      "strength_limit": 30,
-      "strengthen_levels_count": 600,
-      "skill_enhancement_name": "[Battle Skill Enhancement] Explosive Start",
-      "skill_enhancement_desc": "At the start of battle, Leah immediately unleashes her battle skill on 2 front-row enemies, dealing {0}% Attack Radiation damage. for each Tactical Hero on your team, Leah gains 1 stack of [Tactical Surge]"
+      "season_day": 17,
+      "level_cap": 30,
+      "shards_per_level_curve": 2830,
+      "strengthen_levels": 200,
+      "strengthen_shards": 6000,
+      "max_level_bonus": {
+        "Hero HP": 702792.09,
+        "Hero ATK": 8365.5,
+        "Hero DEF": 4182.75,
+        "DMG Resistance": 0.05
+      },
+      "skill_caps_at_max": [
+        40,
+        40,
+        40,
+        1
+      ],
+      "max_strengthen_personal": {
+        "Hero HP": 168000,
+        "Hero ATK": 7000,
+        "Hero DEF": 600
+      },
+      "max_strengthen_all_heroes": {
+        "Hero HP": 40000,
+        "Hero ATK": 800,
+        "Hero DEF": 200
+      },
+      "keywords": [
+        {
+          "name": "Radiation Charge",
+          "text": "Radiation damage increased by 3%, reduced by 1 stack with each basic attack"
+        },
+        {
+          "name": "Tactical Surge",
+          "text": "Leah's Attack Speed increased by 20%, up to 100%, lasts 4s"
+        }
+      ],
+      "skills": [
+        {
+          "name": "Rapid-Fire Sniper Rifle II",
+          "description": "At battle start, Leah gains 2 stacks of [Radiation Charge] for each Tactical Hero on your team, up to 10 stacks.",
+          "icon": "../assets/heroes/skills/50006_gear_1.webp"
+        },
+        {
+          "name": "Black Hawk Call II",
+          "description": "After hitting an enemy, gain 1 stack of [Tactical Surge] for each Tactical Hero on your team, stacking up to 5 times.",
+          "icon": "../assets/heroes/skills/50006_gear_2.webp"
+        },
+        {
+          "name": "[Battle Skill Enhancement] Explosive Start",
+          "description": "At the start of battle, Leah immediately unleashes her battle skill on 2 front-row enemies, dealing {0}% Attack Radiation damage. for each Tactical Hero on your team, Leah gains 1 stack of [Tactical Surge]",
+          "icon": "../assets/heroes/skills/50006_gear_4.webp"
+        },
+        {
+          "name": "[Faction Boost] Tactical Mastery",
+          "description": "In battle, increases Life, Attack, and Defense of all allied Tactical Heroes by {0}%",
+          "icon": "../assets/heroes/skills/50006_gear_talent.webp"
+        }
+      ]
     },
-    "role_type": 3,
-    "role_name": "Backline Hero",
-    "role_short": "Backline",
-    "role_icon": "🎯",
-    "role_description": "Excels at dealing damage from the backline with high attack and burst skills."
+    "insight": {
+      "focus": "both",
+      "tags": [
+        "AoE",
+        "Exclusive weapon",
+        "Tactical synergy",
+        "Crit"
+      ],
+      "summary": "UR Tactical sniper: Black Hawk Call hits all enemies, and her exclusive weapon scales with Tactical heroes.",
+      "tips": [
+        "Exclusive weapon: 2 [Radiation Charge] stacks per Tactical hero at battle start (up to 10), plus [Tactical Surge] for +20% attack speed per stack (up to +100%, 4s). Run her in a mostly Tactical team.",
+        "Explosive Start fires her battle skill at 2 front-row enemies the moment battle begins.",
+        "Her exclusive weapon upgrades her auto attack from weapon Lv. 1 and raises all her skill caps from 30 to 40 by weapon Lv. 30.",
+        "Exclusive weapon season gate: day 17 (Monroe day 3, Yana day 38)."
+      ]
+    }
   },
   {
     "id": 50007,
     "name": "Silas",
     "display_name": "Silas",
+    "variant_note": null,
+    "text_source_id": 50007,
     "quality": 5,
     "quality_name": "UR",
     "army_type": 3,
     "army_name": "Backline Hero",
+    "role_short": "Backline",
+    "role_description": "Excels at dealing damage from the backline, possessing powerful attack capabilities and skills.",
+    "role_icon": "../assets/heroes/ui/role_3.webp",
     "camp_type": 1,
     "camp_name": "Tactical",
+    "faction_icon": "../assets/heroes/ui/faction_1.webp",
     "training_center": {
       "building_id": 5046,
       "building_name": "Tactical Training Center",
@@ -5624,6 +7336,38 @@ const HEROES_DATA = [
       "attack": 14521,
       "defense": 9109
     },
+    "stat_ranks": {
+      "peer_scope": "UR Backline",
+      "peers": {
+        "hp": {
+          "rank": 5,
+          "of": 9
+        },
+        "attack": {
+          "rank": 5,
+          "of": 9
+        },
+        "defense": {
+          "rank": 5,
+          "of": 9
+        }
+      },
+      "all": {
+        "hp": {
+          "rank": 17,
+          "of": 32
+        },
+        "attack": {
+          "rank": 5,
+          "of": 32
+        },
+        "defense": {
+          "rank": 12,
+          "of": 32
+        }
+      }
+    },
+    "level_curve_id": 2,
     "level_benefits": [
       {
         "source": 705,
@@ -5634,214 +7378,252 @@ const HEROES_DATA = [
     ],
     "max_level": 150,
     "image": "../assets/heroes/50007.png",
-    "story": "",
+    "head": "../assets/heroes/heads/50007.webp",
+    "head_sprite": "Icon_Hero_Silas",
+    "sprite_match": "name",
+    "story": null,
     "skills": [
       {
         "slot": 1,
+        "group_id": 5000710,
         "type": 1,
         "type_name": "Auto Attack",
         "name": "Powered Submachine Gun",
+        "name_in_client": true,
         "description": "Attacks enemies with a submachine gun, dealing damage equal to {0} ATK.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": 1000,
         "cooldown": "1.00s",
         "unlock": "Hero Lv. 1",
-        "star_tiers": [
+        "unlock_level": 1,
+        "unlock_star": 0,
+        "icon": null,
+        "icon_sprite": null,
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3600,
-            "ability_display": "36%",
+            "weight": 3600,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 7200,
-            "ability_display": "72%",
+            "weight": 7200,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 12000,
-            "ability_display": "120%",
+            "weight": 12000,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 19200,
-            "ability_display": "192%",
+            "weight": 19200,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 28800,
-            "ability_display": "288%",
+            "weight": 28800,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 38400,
-            "ability_display": "384%",
+            "weight": 38400,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 2,
+        "group_id": 5000720,
         "type": 2,
-        "type_name": "Tactical Skill",
+        "type_name": "Battle Skills",
         "name": "Suicide Robot",
+        "name_in_client": true,
         "description": "Controls a self-destruct spider robot that attacks {2} back-row enemy, dealing damage equal to {0} ATK, with a 20% chance to inflict [Stun] on the target for 2s.",
+        "description_in_client": true,
+        "keywords": [
+          {
+            "name": "Stun",
+            "text": "While stunned, skills will fail to activate and immediately enter cooldown."
+          }
+        ],
+        "cooldown_ms": 10000,
         "cooldown": "10.00s",
         "unlock": "Hero Lv. 5",
-        "star_tiers": [
+        "unlock_level": 5,
+        "unlock_star": 0,
+        "icon": "../assets/heroes/skills/50007_2.webp",
+        "icon_sprite": "Hero_Silas_skill_02",
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3600,
-            "ability_display": "36%",
+            "weight": 3600,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 7200,
-            "ability_display": "72%",
+            "weight": 7200,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 12000,
-            "ability_display": "120%",
+            "weight": 12000,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 19200,
-            "ability_display": "192%",
+            "weight": 19200,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 28800,
-            "ability_display": "288%",
+            "weight": 28800,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 38400,
-            "ability_display": "384%",
+            "weight": 38400,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 3,
+        "group_id": 5000730,
         "type": 3,
-        "type_name": "Passive Skill",
+        "type_name": "Passive",
         "name": "Overload",
+        "name_in_client": true,
         "description": "In combat, increases ATK by {0}.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": null,
         "cooldown": "Passive",
         "unlock": "Hero Lv. 21",
-        "star_tiers": [
+        "unlock_level": 21,
+        "unlock_star": 0,
+        "icon": null,
+        "icon_sprite": null,
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3600,
-            "ability_display": "36%",
+            "weight": 3600,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 7200,
-            "ability_display": "72%",
+            "weight": 7200,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 12000,
-            "ability_display": "120%",
+            "weight": 12000,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 19200,
-            "ability_display": "192%",
+            "weight": 19200,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 28800,
-            "ability_display": "288%",
+            "weight": 28800,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 38400,
-            "ability_display": "384%",
+            "weight": 38400,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 4,
+        "group_id": 5000740,
         "type": 4,
-        "type_name": "Specialty / Leadership",
-        "name": "Troop Leadership",
-        "description": "Number of soldiers the hero can lead, providing additional attack, HP, and defense stats to the squad.",
+        "type_name": "Specialty",
+        "name": "Specialty",
+        "name_in_client": false,
+        "description": "Specialty slot. The client has no name or description for it; it unlocks at Hero Lv. 31 and 4★ and its weight does not grow with stars.",
+        "description_in_client": false,
+        "keywords": [],
+        "cooldown_ms": null,
         "cooldown": "Passive",
-        "unlock": "Hero Lv. 31 & 4★",
-        "star_tiers": [
+        "unlock": "Hero Lv. 31 · 4★",
+        "unlock_level": 31,
+        "unlock_star": 4,
+        "icon": null,
+        "icon_sprite": null,
+        "weights": [
           {
             "star": 0,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 3,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 4,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 5,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           }
-        ]
+        ],
+        "gear_upgrades": []
       }
     ],
     "exclusive_gear": null,
-    "role_type": 3,
-    "role_name": "Backline Hero",
-    "role_short": "Backline",
-    "role_icon": "🎯",
-    "role_description": "Excels at dealing damage from the backline with high attack and burst skills."
+    "insight": {
+      "focus": "both",
+      "tags": [
+        "Back-row assassin",
+        "Stun",
+        "Self ATK"
+      ],
+      "summary": "UR Tactical damage dealer whose spider robot dives the enemy back row with a 20% stun chance.",
+      "tips": [
+        "[Stun] makes the target's skills fail and go straight to cooldown; hitting back-row carries is where it matters most.",
+        "Overload is a flat ATK passive that works everywhere."
+      ]
+    }
   },
   {
     "id": 50008,
     "name": "Katya",
     "display_name": "Katya",
+    "variant_note": null,
+    "text_source_id": 50008,
     "quality": 5,
     "quality_name": "UR",
     "army_type": 3,
     "army_name": "Backline Hero",
+    "role_short": "Backline",
+    "role_description": "Excels at dealing damage from the backline, possessing powerful attack capabilities and skills.",
+    "role_icon": "../assets/heroes/ui/role_3.webp",
     "camp_type": 1,
     "camp_name": "Tactical",
+    "faction_icon": "../assets/heroes/ui/faction_1.webp",
     "training_center": {
       "building_id": 5046,
       "building_name": "Tactical Training Center",
@@ -5852,6 +7634,38 @@ const HEROES_DATA = [
       "attack": 13642,
       "defense": 9252
     },
+    "stat_ranks": {
+      "peer_scope": "UR Backline",
+      "peers": {
+        "hp": {
+          "rank": 1,
+          "of": 9
+        },
+        "attack": {
+          "rank": 9,
+          "of": 9
+        },
+        "defense": {
+          "rank": 1,
+          "of": 9
+        }
+      },
+      "all": {
+        "hp": {
+          "rank": 13,
+          "of": 32
+        },
+        "attack": {
+          "rank": 9,
+          "of": 32
+        },
+        "defense": {
+          "rank": 8,
+          "of": 32
+        }
+      }
+    },
+    "level_curve_id": 2,
     "level_benefits": [
       {
         "source": 705,
@@ -5862,214 +7676,246 @@ const HEROES_DATA = [
     ],
     "max_level": 150,
     "image": "../assets/heroes/50008.png",
-    "story": "",
+    "head": "../assets/heroes/heads/50008.webp",
+    "head_sprite": "Icon_Hero_Katya",
+    "sprite_match": "name",
+    "story": null,
     "skills": [
       {
         "slot": 1,
+        "group_id": 5000810,
         "type": 1,
         "type_name": "Auto Attack",
         "name": "Gatling Gun",
+        "name_in_client": true,
         "description": "Attack enemies with a machine gun, dealing damage equal to {0} ATK.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": 1000,
         "cooldown": "1.00s",
         "unlock": "Hero Lv. 1",
-        "star_tiers": [
+        "unlock_level": 1,
+        "unlock_star": 0,
+        "icon": null,
+        "icon_sprite": null,
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3600,
-            "ability_display": "36%",
+            "weight": 3600,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 7200,
-            "ability_display": "72%",
+            "weight": 7200,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 12000,
-            "ability_display": "120%",
+            "weight": 12000,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 19200,
-            "ability_display": "192%",
+            "weight": 19200,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 28800,
-            "ability_display": "288%",
+            "weight": 28800,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 38400,
-            "ability_display": "384%",
+            "weight": 38400,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 2,
+        "group_id": 5000820,
         "type": 2,
-        "type_name": "Tactical Skill",
+        "type_name": "Battle Skills",
         "name": "Viper",
+        "name_in_client": true,
         "description": "Fires neurotoxin rounds at random enemies {2} times, dealing damage equal to {0} ATK and reducing their DEF by 5% (up to 25%) per hit for 9s.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": 10000,
         "cooldown": "10.00s",
         "unlock": "Hero Lv. 5",
-        "star_tiers": [
+        "unlock_level": 5,
+        "unlock_star": 0,
+        "icon": null,
+        "icon_sprite": null,
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3600,
-            "ability_display": "36%",
+            "weight": 3600,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 7200,
-            "ability_display": "72%",
+            "weight": 7200,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 12000,
-            "ability_display": "120%",
+            "weight": 12000,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 19200,
-            "ability_display": "192%",
+            "weight": 19200,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 28800,
-            "ability_display": "288%",
+            "weight": 28800,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 38400,
-            "ability_display": "384%",
+            "weight": 38400,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 3,
+        "group_id": 5000830,
         "type": 3,
-        "type_name": "Passive Skill",
+        "type_name": "Passive",
         "name": "War Machine",
+        "name_in_client": true,
         "description": "In combat, increases Physical DMG by {0}.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": null,
         "cooldown": "Passive",
         "unlock": "Hero Lv. 21",
-        "star_tiers": [
+        "unlock_level": 21,
+        "unlock_star": 0,
+        "icon": null,
+        "icon_sprite": null,
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3600,
-            "ability_display": "36%",
+            "weight": 3600,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 7200,
-            "ability_display": "72%",
+            "weight": 7200,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 12000,
-            "ability_display": "120%",
+            "weight": 12000,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 19200,
-            "ability_display": "192%",
+            "weight": 19200,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 28800,
-            "ability_display": "288%",
+            "weight": 28800,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 38400,
-            "ability_display": "384%",
+            "weight": 38400,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 4,
+        "group_id": 5000840,
         "type": 4,
-        "type_name": "Specialty / Leadership",
-        "name": "Troop Leadership",
-        "description": "Number of soldiers the hero can lead, providing additional attack, HP, and defense stats to the squad.",
+        "type_name": "Specialty",
+        "name": "Specialty",
+        "name_in_client": false,
+        "description": "Specialty slot. The client has no name or description for it; it unlocks at Hero Lv. 31 and 4★ and its weight does not grow with stars.",
+        "description_in_client": false,
+        "keywords": [],
+        "cooldown_ms": null,
         "cooldown": "Passive",
-        "unlock": "Hero Lv. 31 & 4★",
-        "star_tiers": [
+        "unlock": "Hero Lv. 31 · 4★",
+        "unlock_level": 31,
+        "unlock_star": 4,
+        "icon": null,
+        "icon_sprite": null,
+        "weights": [
           {
             "star": 0,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 3,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 4,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 5,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           }
-        ]
+        ],
+        "gear_upgrades": []
       }
     ],
     "exclusive_gear": null,
-    "role_type": 3,
-    "role_name": "Backline Hero",
-    "role_short": "Backline",
-    "role_icon": "🎯",
-    "role_description": "Excels at dealing damage from the backline with high attack and burst skills."
+    "insight": {
+      "focus": "both",
+      "tags": [
+        "DEF shred",
+        "Physical"
+      ],
+      "summary": "UR Tactical machine-gunner: Viper strips 5% DEF per hit (up to 25%) and War Machine boosts Physical damage.",
+      "tips": [
+        "Viper's DEF shred (up to -25% for 9s) helps every Physical damage dealer on the team; pair with Nicole's Physical passive in mixed teams or with Leah and Silas in Tactical.",
+        "Because DEF is the shield pool, shredding it makes shields break sooner."
+      ]
+    }
   },
   {
     "id": 50009,
     "name": "Vera",
     "display_name": "Vera",
+    "variant_note": null,
+    "text_source_id": 50009,
     "quality": 5,
     "quality_name": "UR",
     "army_type": 1,
     "army_name": "Frontline Hero",
+    "role_short": "Frontline",
+    "role_description": "Excels at absorbing enemy damage in the frontline, boasting formidable defense with significant HP and shield growth.",
+    "role_icon": "../assets/heroes/ui/role_1.webp",
     "camp_type": 2,
     "camp_name": "Assault",
+    "faction_icon": "../assets/heroes/ui/faction_2.webp",
     "training_center": {
       "building_id": 5045,
       "building_name": "Assault Training Center",
@@ -6080,6 +7926,38 @@ const HEROES_DATA = [
       "attack": 9665,
       "defense": 10085
     },
+    "stat_ranks": {
+      "peer_scope": "UR Frontline",
+      "peers": {
+        "hp": {
+          "rank": 6,
+          "of": 6
+        },
+        "attack": {
+          "rank": 1,
+          "of": 6
+        },
+        "defense": {
+          "rank": 6,
+          "of": 6
+        }
+      },
+      "all": {
+        "hp": {
+          "rank": 6,
+          "of": 32
+        },
+        "attack": {
+          "rank": 13,
+          "of": 32
+        },
+        "defense": {
+          "rank": 6,
+          "of": 32
+        }
+      }
+    },
+    "level_curve_id": 2,
     "level_benefits": [
       {
         "source": 705,
@@ -6090,214 +7968,251 @@ const HEROES_DATA = [
     ],
     "max_level": 150,
     "image": "../assets/heroes/50009.png",
-    "story": "",
+    "head": "../assets/heroes/heads/50009.webp",
+    "head_sprite": "Icon_Hero_Vera",
+    "sprite_match": "name",
+    "story": null,
     "skills": [
       {
         "slot": 1,
+        "group_id": 5000910,
         "type": 1,
         "type_name": "Auto Attack",
         "name": "Pulse Gun",
+        "name_in_client": true,
         "description": "Attacks 1 random enemy with dual pistols, dealing damage equal to {0} ATK.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": 1000,
         "cooldown": "1.00s",
         "unlock": "Hero Lv. 1",
-        "star_tiers": [
+        "unlock_level": 1,
+        "unlock_star": 0,
+        "icon": null,
+        "icon_sprite": null,
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3600,
-            "ability_display": "36%",
+            "weight": 3600,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 7200,
-            "ability_display": "72%",
+            "weight": 7200,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 12000,
-            "ability_display": "120%",
+            "weight": 12000,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 19200,
-            "ability_display": "192%",
+            "weight": 19200,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 28800,
-            "ability_display": "288%",
+            "weight": 28800,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 38400,
-            "ability_display": "384%",
+            "weight": 38400,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 2,
+        "group_id": 5000920,
         "type": 2,
-        "type_name": "Tactical Skill",
+        "type_name": "Battle Skills",
         "name": "Portable Sentry",
+        "name_in_client": true,
         "description": "Activates the Portable Sentry: enter [Guard] state for {0}s. Automatically counterattacks when hit, with a minimum interval of 1s.",
+        "description_in_client": true,
+        "keywords": [
+          {
+            "name": "Guard",
+            "text": "Counterattacks the attacker with an auto attack each time you are hit, up to once per second."
+          }
+        ],
+        "cooldown_ms": 10000,
         "cooldown": "10.00s",
         "unlock": "Hero Lv. 5",
-        "star_tiers": [
+        "unlock_level": 5,
+        "unlock_star": 0,
+        "icon": "../assets/heroes/skills/50009_2.webp",
+        "icon_sprite": "Hero_Vera_skill_02",
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3600,
-            "ability_display": "36%",
+            "weight": 3600,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 7200,
-            "ability_display": "72%",
+            "weight": 7200,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 12000,
-            "ability_display": "120%",
+            "weight": 12000,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 19200,
-            "ability_display": "192%",
+            "weight": 19200,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 28800,
-            "ability_display": "288%",
+            "weight": 28800,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 38400,
-            "ability_display": "384%",
+            "weight": 38400,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 3,
+        "group_id": 5000930,
         "type": 3,
-        "type_name": "Passive Skill",
+        "type_name": "Passive",
         "name": "Sentinel",
+        "name_in_client": true,
         "description": "In combat, reduces front-row allies' incoming damage by {0}. While in [Guard] state, Assault Heroes gain double the effect.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": null,
         "cooldown": "Passive",
         "unlock": "Hero Lv. 21",
-        "star_tiers": [
+        "unlock_level": 21,
+        "unlock_star": 0,
+        "icon": "../assets/heroes/skills/50009_3.webp",
+        "icon_sprite": "Hero_Vera_skill_03",
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3600,
-            "ability_display": "36%",
+            "weight": 3600,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 7200,
-            "ability_display": "72%",
+            "weight": 7200,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 12000,
-            "ability_display": "120%",
+            "weight": 12000,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 19200,
-            "ability_display": "192%",
+            "weight": 19200,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 28800,
-            "ability_display": "288%",
+            "weight": 28800,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 38400,
-            "ability_display": "384%",
+            "weight": 38400,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 4,
+        "group_id": 5000940,
         "type": 4,
-        "type_name": "Specialty / Leadership",
-        "name": "Troop Leadership",
-        "description": "Number of soldiers the hero can lead, providing additional attack, HP, and defense stats to the squad.",
+        "type_name": "Specialty",
+        "name": "Specialty",
+        "name_in_client": false,
+        "description": "Specialty slot. The client has no name or description for it; it unlocks at Hero Lv. 31 and 4★ and its weight does not grow with stars.",
+        "description_in_client": false,
+        "keywords": [],
+        "cooldown_ms": null,
         "cooldown": "Passive",
-        "unlock": "Hero Lv. 31 & 4★",
-        "star_tiers": [
+        "unlock": "Hero Lv. 31 · 4★",
+        "unlock_level": 31,
+        "unlock_star": 4,
+        "icon": null,
+        "icon_sprite": null,
+        "weights": [
           {
             "star": 0,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 3,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 4,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 5,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           }
-        ]
+        ],
+        "gear_upgrades": []
       }
     ],
     "exclusive_gear": null,
-    "role_type": 1,
-    "role_name": "Frontline Hero",
-    "role_short": "Frontline",
-    "role_icon": "🛡️",
-    "role_description": "Excels at absorbing enemy damage in the frontline with high HP and shield growth."
+    "insight": {
+      "focus": "both",
+      "tags": [
+        "Counter-attack tank",
+        "Assault synergy"
+      ],
+      "summary": "UR Assault frontliner with the highest ATK of any tank, built to counter-attack while in [Guard].",
+      "tips": [
+        "Portable Sentry puts her in [Guard]: she auto-attacks back each time she is hit (max once per second), so her high ATK (9,665, highest of any frontliner) is the point.",
+        "Sentinel's front-row damage reduction is doubled for Assault heroes while she is in [Guard]; she belongs with Vince and Jack."
+      ]
+    }
   },
   {
     "id": 50010,
     "name": "Vince",
     "display_name": "Vince",
+    "variant_note": null,
+    "text_source_id": 50010,
     "quality": 5,
     "quality_name": "UR",
     "army_type": 1,
     "army_name": "Frontline Hero",
+    "role_short": "Frontline",
+    "role_description": "Excels at absorbing enemy damage in the frontline, boasting formidable defense with significant HP and shield growth.",
+    "role_icon": "../assets/heroes/ui/role_1.webp",
     "camp_type": 2,
     "camp_name": "Assault",
+    "faction_icon": "../assets/heroes/ui/faction_2.webp",
     "training_center": {
       "building_id": 5045,
       "building_name": "Assault Training Center",
@@ -6308,6 +8223,38 @@ const HEROES_DATA = [
       "attack": 8488,
       "defense": 10418
     },
+    "stat_ranks": {
+      "peer_scope": "UR Frontline",
+      "peers": {
+        "hp": {
+          "rank": 5,
+          "of": 6
+        },
+        "attack": {
+          "rank": 2,
+          "of": 6
+        },
+        "defense": {
+          "rank": 5,
+          "of": 6
+        }
+      },
+      "all": {
+        "hp": {
+          "rank": 5,
+          "of": 32
+        },
+        "attack": {
+          "rank": 18,
+          "of": 32
+        },
+        "defense": {
+          "rank": 5,
+          "of": 32
+        }
+      }
+    },
+    "level_curve_id": 2,
     "level_benefits": [
       {
         "source": 705,
@@ -6318,214 +8265,246 @@ const HEROES_DATA = [
     ],
     "max_level": 150,
     "image": "../assets/heroes/50010.png",
-    "story": "",
+    "head": "../assets/heroes/heads/50010.webp",
+    "head_sprite": "Icon_Hero_Vince",
+    "sprite_match": "name",
+    "story": null,
     "skills": [
       {
         "slot": 1,
+        "group_id": 5001010,
         "type": 1,
         "type_name": "Auto Attack",
         "name": "Heavy Machine Gun",
+        "name_in_client": true,
         "description": "Attack enemies with a machine gun, dealing damage equal to {0} ATK.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": 1350,
         "cooldown": "1.35s",
         "unlock": "Hero Lv. 1",
-        "star_tiers": [
+        "unlock_level": 1,
+        "unlock_star": 0,
+        "icon": null,
+        "icon_sprite": null,
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3600,
-            "ability_display": "36%",
+            "weight": 3600,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 7200,
-            "ability_display": "72%",
+            "weight": 7200,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 12000,
-            "ability_display": "120%",
+            "weight": 12000,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 19200,
-            "ability_display": "192%",
+            "weight": 19200,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 28800,
-            "ability_display": "288%",
+            "weight": 28800,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 38400,
-            "ability_display": "384%",
+            "weight": 38400,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 2,
+        "group_id": 5001020,
         "type": 2,
-        "type_name": "Tactical Skill",
+        "type_name": "Battle Skills",
         "name": "Glaring Taunt",
+        "name_in_client": true,
         "description": "Flashes a blinding light, drawing aggro from the {2} front-row enemies and reducing their ATK by {0} for 8s.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": 10000,
         "cooldown": "10.00s",
         "unlock": "Hero Lv. 5",
-        "star_tiers": [
+        "unlock_level": 5,
+        "unlock_star": 0,
+        "icon": null,
+        "icon_sprite": null,
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3600,
-            "ability_display": "36%",
+            "weight": 3600,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 7200,
-            "ability_display": "72%",
+            "weight": 7200,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 12000,
-            "ability_display": "120%",
+            "weight": 12000,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 19200,
-            "ability_display": "192%",
+            "weight": 19200,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 28800,
-            "ability_display": "288%",
+            "weight": 28800,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 38400,
-            "ability_display": "384%",
+            "weight": 38400,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 3,
+        "group_id": 5001030,
         "type": 3,
-        "type_name": "Passive Skill",
+        "type_name": "Passive",
         "name": "Mountain Ranger",
+        "name_in_client": true,
         "description": "In combat, reduces incoming damage by {0}.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": null,
         "cooldown": "Passive",
         "unlock": "Hero Lv. 21",
-        "star_tiers": [
+        "unlock_level": 21,
+        "unlock_star": 0,
+        "icon": null,
+        "icon_sprite": null,
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3600,
-            "ability_display": "36%",
+            "weight": 3600,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 7200,
-            "ability_display": "72%",
+            "weight": 7200,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 12000,
-            "ability_display": "120%",
+            "weight": 12000,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 19200,
-            "ability_display": "192%",
+            "weight": 19200,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 28800,
-            "ability_display": "288%",
+            "weight": 28800,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 38400,
-            "ability_display": "384%",
+            "weight": 38400,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 4,
+        "group_id": 5001040,
         "type": 4,
-        "type_name": "Specialty / Leadership",
-        "name": "Troop Leadership",
-        "description": "Number of soldiers the hero can lead, providing additional attack, HP, and defense stats to the squad.",
+        "type_name": "Specialty",
+        "name": "Specialty",
+        "name_in_client": false,
+        "description": "Specialty slot. The client has no name or description for it; it unlocks at Hero Lv. 31 and 4★ and its weight does not grow with stars.",
+        "description_in_client": false,
+        "keywords": [],
+        "cooldown_ms": null,
         "cooldown": "Passive",
-        "unlock": "Hero Lv. 31 & 4★",
-        "star_tiers": [
+        "unlock": "Hero Lv. 31 · 4★",
+        "unlock_level": 31,
+        "unlock_star": 4,
+        "icon": null,
+        "icon_sprite": null,
+        "weights": [
           {
             "star": 0,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 3,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 4,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 5,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           }
-        ]
+        ],
+        "gear_upgrades": []
       }
     ],
     "exclusive_gear": null,
-    "role_type": 1,
-    "role_name": "Frontline Hero",
-    "role_short": "Frontline",
-    "role_icon": "🛡️",
-    "role_description": "Excels at absorbing enemy damage in the frontline with high HP and shield growth."
+    "insight": {
+      "focus": "both",
+      "tags": [
+        "Taunt",
+        "ATK debuff"
+      ],
+      "summary": "UR Assault taunt tank: Glaring Taunt pulls aggro from front-row enemies and lowers their ATK for 8s.",
+      "tips": [
+        "Taunting the enemy front row keeps damage off your backliners; with Vera, it gives Assault a full two-tank front.",
+        "Mountain Ranger reduces all incoming damage, so it is not PvE-only."
+      ]
+    }
   },
   {
     "id": 50011,
     "name": "Yana",
     "display_name": "Yana",
+    "variant_note": null,
+    "text_source_id": 50011,
     "quality": 5,
     "quality_name": "UR",
     "army_type": 3,
     "army_name": "Backline Hero",
+    "role_short": "Backline",
+    "role_description": "Excels at dealing damage from the backline, possessing powerful attack capabilities and skills.",
+    "role_icon": "../assets/heroes/ui/role_3.webp",
     "camp_type": 2,
     "camp_name": "Assault",
+    "faction_icon": "../assets/heroes/ui/faction_2.webp",
     "training_center": {
       "building_id": 5045,
       "building_name": "Assault Training Center",
@@ -6536,6 +8515,38 @@ const HEROES_DATA = [
       "attack": 15191,
       "defense": 9007
     },
+    "stat_ranks": {
+      "peer_scope": "UR Backline",
+      "peers": {
+        "hp": {
+          "rank": 8,
+          "of": 9
+        },
+        "attack": {
+          "rank": 2,
+          "of": 9
+        },
+        "defense": {
+          "rank": 8,
+          "of": 9
+        }
+      },
+      "all": {
+        "hp": {
+          "rank": 20,
+          "of": 32
+        },
+        "attack": {
+          "rank": 2,
+          "of": 32
+        },
+        "defense": {
+          "rank": 15,
+          "of": 32
+        }
+      }
+    },
+    "level_curve_id": 2,
     "level_benefits": [
       {
         "source": 705,
@@ -6546,240 +8557,319 @@ const HEROES_DATA = [
     ],
     "max_level": 150,
     "image": "../assets/heroes/50011.png",
-    "story": "",
+    "head": "../assets/heroes/heads/50011.webp",
+    "head_sprite": "Icon_Hero_Yana",
+    "sprite_match": "name",
+    "story": null,
     "skills": [
       {
         "slot": 1,
+        "group_id": 5001110,
         "type": 1,
         "type_name": "Auto Attack",
         "name": "Electromagnetic Gun",
+        "name_in_client": true,
         "description": "Fires electric bullets, dealing damage equal to {0} ATK.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": 1350,
         "cooldown": "1.35s",
         "unlock": "Hero Lv. 1",
-        "star_tiers": [
+        "unlock_level": 1,
+        "unlock_star": 0,
+        "icon": null,
+        "icon_sprite": null,
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3600,
-            "ability_display": "36%",
+            "weight": 3600,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 7200,
-            "ability_display": "72%",
+            "weight": 7200,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 12000,
-            "ability_display": "120%",
+            "weight": 12000,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 19200,
-            "ability_display": "192%",
+            "weight": 19200,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 28800,
-            "ability_display": "288%",
+            "weight": 28800,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 38400,
-            "ability_display": "384%",
+            "weight": 38400,
             "max_skill_level": 30
-          },
+          }
+        ],
+        "gear_upgrades": [
           {
-            "star": 5,
-            "ability_value": 38400,
-            "ability_display": "384%",
-            "max_skill_level": 20
+            "weapon_level": 1,
+            "gear_weight": 250000
           }
         ]
       },
       {
         "slot": 2,
+        "group_id": 5001120,
         "type": 2,
-        "type_name": "Tactical Skill",
+        "type_name": "Battle Skills",
         "name": "Condensed Plasma",
+        "name_in_client": true,
         "description": "Fires large spherical lightning continuously at the 3 back enemies, dealing damage equal to {0} ATK.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": 10000,
         "cooldown": "10.00s",
         "unlock": "Hero Lv. 5",
-        "star_tiers": [
+        "unlock_level": 5,
+        "unlock_star": 0,
+        "icon": "../assets/heroes/skills/50011_2.webp",
+        "icon_sprite": "Hero_Yana_skill_02",
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3600,
-            "ability_display": "36%",
+            "weight": 3600,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 7200,
-            "ability_display": "72%",
+            "weight": 7200,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 12000,
-            "ability_display": "120%",
+            "weight": 12000,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 19200,
-            "ability_display": "192%",
+            "weight": 19200,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 28800,
-            "ability_display": "288%",
+            "weight": 28800,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 38400,
-            "ability_display": "384%",
+            "weight": 38400,
             "max_skill_level": 30
+          }
+        ],
+        "gear_upgrades": [
+          {
+            "weapon_level": 10,
+            "gear_weight": 250000
           },
           {
-            "star": 5,
-            "ability_value": 38400,
-            "ability_display": "384%",
-            "max_skill_level": 1
-          },
-          {
-            "star": 5,
-            "ability_value": 38400,
-            "ability_display": "384%",
-            "max_skill_level": 1
+            "weapon_level": 30,
+            "gear_weight": 500000
           }
         ]
       },
       {
         "slot": 3,
+        "group_id": 5001130,
         "type": 3,
-        "type_name": "Passive Skill",
+        "type_name": "Passive",
         "name": "Torture Specialist",
+        "name_in_client": true,
         "description": "In combat, increases Radiation DMG by {0}.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": null,
         "cooldown": "Passive",
         "unlock": "Hero Lv. 21",
-        "star_tiers": [
+        "unlock_level": 21,
+        "unlock_star": 0,
+        "icon": null,
+        "icon_sprite": null,
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3600,
-            "ability_display": "36%",
+            "weight": 3600,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 7200,
-            "ability_display": "72%",
+            "weight": 7200,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 12000,
-            "ability_display": "120%",
+            "weight": 12000,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 19200,
-            "ability_display": "192%",
+            "weight": 19200,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 28800,
-            "ability_display": "288%",
+            "weight": 28800,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 38400,
-            "ability_display": "384%",
+            "weight": 38400,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 4,
+        "group_id": 5001140,
         "type": 4,
-        "type_name": "Specialty / Leadership",
-        "name": "Troop Leadership",
-        "description": "Number of soldiers the hero can lead, providing additional attack, HP, and defense stats to the squad.",
+        "type_name": "Specialty",
+        "name": "Specialty",
+        "name_in_client": false,
+        "description": "Specialty slot. The client has no name or description for it; it unlocks at Hero Lv. 31 and 4★ and its weight does not grow with stars.",
+        "description_in_client": false,
+        "keywords": [],
+        "cooldown_ms": null,
         "cooldown": "Passive",
-        "unlock": "Hero Lv. 31 & 4★",
-        "star_tiers": [
+        "unlock": "Hero Lv. 31 · 4★",
+        "unlock_level": 31,
+        "unlock_star": 4,
+        "icon": null,
+        "icon_sprite": null,
+        "weights": [
           {
             "star": 0,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 3,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 4,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 5,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           }
-        ]
+        ],
+        "gear_upgrades": []
       }
     ],
     "exclusive_gear": {
       "gear_id": 50011,
-      "shard_item_name": "item_exclusiveWeapon_50011",
-      "star_limit": 25,
-      "strength_limit": 30,
-      "strengthen_levels_count": 600,
-      "skill_enhancement_name": "[Skill Enhancement] Electromagnetic Judgment",
-      "skill_enhancement_desc": "Yana's auto attack applies 1 stack of [Overload Charge] to a random enemy in the back row, and Yana's skill deals an additional 1% damage per stack against enemies with [Overload Charge], up to 15%"
+      "season_day": 38,
+      "level_cap": 30,
+      "shards_per_level_curve": 2830,
+      "strengthen_levels": 200,
+      "strengthen_shards": 6000,
+      "max_level_bonus": {
+        "Hero HP": 702792.09,
+        "Hero ATK": 8365.5,
+        "Hero DEF": 4182.75,
+        "DMG Resistance": 0.05
+      },
+      "skill_caps_at_max": [
+        40,
+        40,
+        40,
+        1
+      ],
+      "max_strengthen_personal": {
+        "Hero HP": 168000,
+        "Hero ATK": 7000,
+        "Hero DEF": 600
+      },
+      "max_strengthen_all_heroes": {
+        "Hero HP": 40000,
+        "Hero ATK": 800,
+        "Hero DEF": 200
+      },
+      "keywords": [
+        {
+          "name": "Overload Charge",
+          "text": "Deals radiation damage equal to 3% of Yana's Attack per second, lasting 30s. Stacks up to 15 times"
+        }
+      ],
+      "skills": [
+        {
+          "name": "Electromagnetic Gun II",
+          "description": "Auto Attack applies 1 stack of [Overload Charge] to the target, max stacks equal to Assault Heroes in your team*3.",
+          "icon": "../assets/heroes/skills/50011_gear_1.webp"
+        },
+        {
+          "name": "Condensed Plasma II",
+          "description": "Yana's skill applies 2 stacks of [Overload Charge] to the target, max stacks equal to Assault Heroes in your team*3",
+          "icon": "../assets/heroes/skills/50011_gear_2.webp"
+        },
+        {
+          "name": "[Skill Enhancement] Electromagnetic Judgment",
+          "description": "Yana's auto attack applies 1 stack of [Overload Charge] to a random enemy in the back row, and Yana's skill deals an additional 1% damage per stack against enemies with [Overload Charge], up to 15%",
+          "icon": "../assets/heroes/skills/50011_gear_4.webp"
+        },
+        {
+          "name": "[Faction Boost] Assault Vanguard",
+          "description": "In battle, increase all Assault Heroes' HP, Attack, and Defense by {0}%",
+          "icon": "../assets/heroes/skills/50011_gear_talent.webp"
+        }
+      ]
     },
-    "role_type": 3,
-    "role_name": "Backline Hero",
-    "role_short": "Backline",
-    "role_icon": "🎯",
-    "role_description": "Excels at dealing damage from the backline with high attack and burst skills."
+    "insight": {
+      "focus": "both",
+      "tags": [
+        "Radiation DoT",
+        "Exclusive weapon",
+        "Assault synergy"
+      ],
+      "summary": "UR Assault lightning carry who hits the 3 back enemies and stacks Radiation damage-over-time through her exclusive weapon.",
+      "tips": [
+        "Exclusive weapon: auto attacks and skills apply [Overload Charge] (3% of her ATK as Radiation damage per second for 30s, up to 15 stacks); the cap is 3 per Assault hero on your team.",
+        "Her exclusive weapon upgrades her auto attack at weapon Lv. 1 and her battle skill at weapon Lv. 10 and Lv. 30, so weapon shards are her main growth path once she is 5★.",
+        "Exclusive weapon season gate: day 38, the latest of the three."
+      ]
+    }
   },
   {
     "id": 50012,
     "name": "Victor",
     "display_name": "Victor",
+    "variant_note": null,
+    "text_source_id": 50012,
     "quality": 5,
     "quality_name": "UR",
     "army_type": 3,
     "army_name": "Backline Hero",
+    "role_short": "Backline",
+    "role_description": "Excels at dealing damage from the backline, possessing powerful attack capabilities and skills.",
+    "role_icon": "../assets/heroes/ui/role_3.webp",
     "camp_type": 2,
     "camp_name": "Assault",
+    "faction_icon": "../assets/heroes/ui/faction_2.webp",
     "training_center": {
       "building_id": 5045,
       "building_name": "Assault Training Center",
@@ -6790,6 +8880,38 @@ const HEROES_DATA = [
       "attack": 14487,
       "defense": 9114
     },
+    "stat_ranks": {
+      "peer_scope": "UR Backline",
+      "peers": {
+        "hp": {
+          "rank": 4,
+          "of": 9
+        },
+        "attack": {
+          "rank": 6,
+          "of": 9
+        },
+        "defense": {
+          "rank": 4,
+          "of": 9
+        }
+      },
+      "all": {
+        "hp": {
+          "rank": 16,
+          "of": 32
+        },
+        "attack": {
+          "rank": 6,
+          "of": 32
+        },
+        "defense": {
+          "rank": 11,
+          "of": 32
+        }
+      }
+    },
+    "level_curve_id": 2,
     "level_benefits": [
       {
         "source": 705,
@@ -6800,214 +8922,246 @@ const HEROES_DATA = [
     ],
     "max_level": 150,
     "image": "../assets/heroes/50012.png",
-    "story": "",
+    "head": "../assets/heroes/heads/50012.webp",
+    "head_sprite": "Icon_Hero_Victor",
+    "sprite_match": "name",
+    "story": null,
     "skills": [
       {
         "slot": 1,
+        "group_id": 5001210,
         "type": 1,
         "type_name": "Auto Attack",
         "name": "Cartridge Submachine Gun",
+        "name_in_client": true,
         "description": "Attacks the enemy with the lowest HP percentage with an SMG, dealing damage equal to {0} ATK.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": 1350,
         "cooldown": "1.35s",
         "unlock": "Hero Lv. 1",
-        "star_tiers": [
+        "unlock_level": 1,
+        "unlock_star": 0,
+        "icon": "../assets/heroes/skills/50012_1.webp",
+        "icon_sprite": "Hero_Victor_skill_01",
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3600,
-            "ability_display": "36%",
+            "weight": 3600,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 7200,
-            "ability_display": "72%",
+            "weight": 7200,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 12000,
-            "ability_display": "120%",
+            "weight": 12000,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 19200,
-            "ability_display": "192%",
+            "weight": 19200,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 28800,
-            "ability_display": "288%",
+            "weight": 28800,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 38400,
-            "ability_display": "384%",
+            "weight": 38400,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 2,
+        "group_id": 5001220,
         "type": 2,
-        "type_name": "Tactical Skill",
+        "type_name": "Battle Skills",
         "name": "Clockwork Blade",
+        "name_in_client": true,
         "description": "Tosses blades at random enemies 3 times, dealing damage equal to {0} ATK.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": 10000,
         "cooldown": "10.00s",
         "unlock": "Hero Lv. 5",
-        "star_tiers": [
+        "unlock_level": 5,
+        "unlock_star": 0,
+        "icon": "../assets/heroes/skills/50012_2.webp",
+        "icon_sprite": "Hero_Victor_skill_02",
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3600,
-            "ability_display": "36%",
+            "weight": 3600,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 7200,
-            "ability_display": "72%",
+            "weight": 7200,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 12000,
-            "ability_display": "120%",
+            "weight": 12000,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 19200,
-            "ability_display": "192%",
+            "weight": 19200,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 28800,
-            "ability_display": "288%",
+            "weight": 28800,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 38400,
-            "ability_display": "384%",
+            "weight": 38400,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 3,
+        "group_id": 5001230,
         "type": 3,
-        "type_name": "Passive Skill",
+        "type_name": "Passive",
         "name": "Mechanic",
+        "name_in_client": true,
         "description": "In combat, increases Crit Rate by {0}.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": null,
         "cooldown": "Passive",
         "unlock": "Hero Lv. 21",
-        "star_tiers": [
+        "unlock_level": 21,
+        "unlock_star": 0,
+        "icon": null,
+        "icon_sprite": null,
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3600,
-            "ability_display": "36%",
+            "weight": 3600,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 7200,
-            "ability_display": "72%",
+            "weight": 7200,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 12000,
-            "ability_display": "120%",
+            "weight": 12000,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 19200,
-            "ability_display": "192%",
+            "weight": 19200,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 28800,
-            "ability_display": "288%",
+            "weight": 28800,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 38400,
-            "ability_display": "384%",
+            "weight": 38400,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 4,
+        "group_id": 5001240,
         "type": 4,
-        "type_name": "Specialty / Leadership",
-        "name": "Troop Leadership",
-        "description": "Number of soldiers the hero can lead, providing additional attack, HP, and defense stats to the squad.",
+        "type_name": "Specialty",
+        "name": "Specialty",
+        "name_in_client": false,
+        "description": "Specialty slot. The client has no name or description for it; it unlocks at Hero Lv. 31 and 4★ and its weight does not grow with stars.",
+        "description_in_client": false,
+        "keywords": [],
+        "cooldown_ms": null,
         "cooldown": "Passive",
-        "unlock": "Hero Lv. 31 & 4★",
-        "star_tiers": [
+        "unlock": "Hero Lv. 31 · 4★",
+        "unlock_level": 31,
+        "unlock_star": 4,
+        "icon": null,
+        "icon_sprite": null,
+        "weights": [
           {
             "star": 0,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 3,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 4,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 5,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           }
-        ]
+        ],
+        "gear_upgrades": []
       }
     ],
     "exclusive_gear": null,
-    "role_type": 3,
-    "role_name": "Backline Hero",
-    "role_short": "Backline",
-    "role_icon": "🎯",
-    "role_description": "Excels at dealing damage from the backline with high attack and burst skills."
+    "insight": {
+      "focus": "both",
+      "tags": [
+        "Execute",
+        "Crit"
+      ],
+      "summary": "UR Assault finisher: his SMG always targets the enemy with the lowest HP percentage.",
+      "tips": [
+        "Auto attacks go to the lowest-HP% enemy, so he finishes wounded targets and pairs well with AoE (Nicole, Yana).",
+        "Mechanic adds Crit Rate."
+      ]
+    }
   },
   {
     "id": 50013,
     "name": "Nicole",
     "display_name": "Nicole",
+    "variant_note": null,
+    "text_source_id": 50013,
     "quality": 5,
     "quality_name": "UR",
     "army_type": 3,
     "army_name": "Backline Hero",
+    "role_short": "Backline",
+    "role_description": "Excels at dealing damage from the backline, possessing powerful attack capabilities and skills.",
+    "role_icon": "../assets/heroes/ui/role_3.webp",
     "camp_type": 2,
     "camp_name": "Assault",
+    "faction_icon": "../assets/heroes/ui/faction_2.webp",
     "training_center": {
       "building_id": 5045,
       "building_name": "Assault Training Center",
@@ -7018,6 +9172,38 @@ const HEROES_DATA = [
       "attack": 14705,
       "defense": 9080
     },
+    "stat_ranks": {
+      "peer_scope": "UR Backline",
+      "peers": {
+        "hp": {
+          "rank": 6,
+          "of": 9
+        },
+        "attack": {
+          "rank": 4,
+          "of": 9
+        },
+        "defense": {
+          "rank": 6,
+          "of": 9
+        }
+      },
+      "all": {
+        "hp": {
+          "rank": 18,
+          "of": 32
+        },
+        "attack": {
+          "rank": 4,
+          "of": 32
+        },
+        "defense": {
+          "rank": 13,
+          "of": 32
+        }
+      }
+    },
+    "level_curve_id": 2,
     "level_benefits": [
       {
         "source": 705,
@@ -7028,202 +9214,711 @@ const HEROES_DATA = [
     ],
     "max_level": 150,
     "image": "../assets/heroes/50013.png",
-    "story": "",
+    "head": "../assets/heroes/heads/50013.webp",
+    "head_sprite": "Icon_Hero_Niko",
+    "sprite_match": "artwork",
+    "story": null,
     "skills": [
       {
         "slot": 1,
+        "group_id": 5001310,
         "type": 1,
         "type_name": "Auto Attack",
         "name": "Heavy Pulse Grenade Launcher",
+        "name_in_client": true,
         "description": "Fires grenades at enemies, dealing damage equal to {0} ATK.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": 1350,
         "cooldown": "1.35s",
         "unlock": "Hero Lv. 1",
-        "star_tiers": [
+        "unlock_level": 1,
+        "unlock_star": 0,
+        "icon": null,
+        "icon_sprite": null,
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3600,
-            "ability_display": "36%",
+            "weight": 3600,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 7200,
-            "ability_display": "72%",
+            "weight": 7200,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 12000,
-            "ability_display": "120%",
+            "weight": 12000,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 19200,
-            "ability_display": "192%",
+            "weight": 19200,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 28800,
-            "ability_display": "288%",
+            "weight": 28800,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 38400,
-            "ability_display": "384%",
+            "weight": 38400,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 2,
+        "group_id": 5001320,
         "type": 2,
-        "type_name": "Tactical Skill",
+        "type_name": "Battle Skills",
         "name": "Fine Firepower Net",
+        "name_in_client": true,
         "description": "Fires multiple grenades at all enemies, dealing damage equal to {0} ATK.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": 10000,
         "cooldown": "10.00s",
         "unlock": "Hero Lv. 5",
-        "star_tiers": [
+        "unlock_level": 5,
+        "unlock_star": 0,
+        "icon": "../assets/heroes/skills/50013_2.webp",
+        "icon_sprite": "Hero_Niko_skill_02",
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3600,
-            "ability_display": "36%",
+            "weight": 3600,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 7200,
-            "ability_display": "72%",
+            "weight": 7200,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 12000,
-            "ability_display": "120%",
+            "weight": 12000,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 19200,
-            "ability_display": "192%",
+            "weight": 19200,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 28800,
-            "ability_display": "288%",
+            "weight": 28800,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 38400,
-            "ability_display": "384%",
+            "weight": 38400,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 3,
+        "group_id": 5001330,
         "type": 3,
-        "type_name": "Passive Skill",
+        "type_name": "Passive",
         "name": "Actuary",
+        "name_in_client": true,
         "description": "During battle, own Physical DMG increases by {0}.",
+        "description_in_client": true,
+        "keywords": [],
+        "cooldown_ms": null,
         "cooldown": "Passive",
         "unlock": "Hero Lv. 21",
-        "star_tiers": [
+        "unlock_level": 21,
+        "unlock_star": 0,
+        "icon": null,
+        "icon_sprite": null,
+        "weights": [
           {
             "star": 0,
-            "ability_value": 3600,
-            "ability_display": "36%",
+            "weight": 3600,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 7200,
-            "ability_display": "72%",
+            "weight": 7200,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 12000,
-            "ability_display": "120%",
+            "weight": 12000,
             "max_skill_level": 5
           },
           {
             "star": 3,
-            "ability_value": 19200,
-            "ability_display": "192%",
+            "weight": 19200,
             "max_skill_level": 10
           },
           {
             "star": 4,
-            "ability_value": 28800,
-            "ability_display": "288%",
+            "weight": 28800,
             "max_skill_level": 20
           },
           {
             "star": 5,
-            "ability_value": 38400,
-            "ability_display": "384%",
+            "weight": 38400,
             "max_skill_level": 30
           }
-        ]
+        ],
+        "gear_upgrades": []
       },
       {
         "slot": 4,
+        "group_id": 5001340,
         "type": 4,
-        "type_name": "Specialty / Leadership",
-        "name": "Troop Leadership",
-        "description": "Number of soldiers the hero can lead, providing additional attack, HP, and defense stats to the squad.",
+        "type_name": "Specialty",
+        "name": "Specialty",
+        "name_in_client": false,
+        "description": "Specialty slot. The client has no name or description for it; it unlocks at Hero Lv. 31 and 4★ and its weight does not grow with stars.",
+        "description_in_client": false,
+        "keywords": [],
+        "cooldown_ms": null,
         "cooldown": "Passive",
-        "unlock": "Hero Lv. 31 & 4★",
-        "star_tiers": [
+        "unlock": "Hero Lv. 31 · 4★",
+        "unlock_level": 31,
+        "unlock_star": 4,
+        "icon": null,
+        "icon_sprite": null,
+        "weights": [
           {
             "star": 0,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 1,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 2,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 3,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 4,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           },
           {
             "star": 5,
-            "ability_value": 12000,
-            "ability_display": "+12,000 Soldiers",
+            "weight": 12000,
             "max_skill_level": 1
           }
-        ]
+        ],
+        "gear_upgrades": []
       }
     ],
     "exclusive_gear": null,
-    "role_type": 3,
-    "role_name": "Backline Hero",
-    "role_short": "Backline",
-    "role_icon": "🎯",
-    "role_description": "Excels at dealing damage from the backline with high attack and burst skills."
+    "insight": {
+      "focus": "both",
+      "tags": [
+        "AoE",
+        "Physical"
+      ],
+      "summary": "UR Assault grenadier: Fine Firepower Net hits ALL enemies and Actuary boosts her Physical damage.",
+      "tips": [
+        "One of three heroes whose battle skill hits every enemy (with Leah and Bekka), so she is strong against wide formations.",
+        "Physical damage: Katya's DEF shred helps her if you run a cross-faction team."
+      ]
+    }
   }
 ];
+const HEROES_META = {
+  "sources": {
+    "tables": "client 1.30.07 (catalog V202608062022): HeroInfo, HeroLevel, HeroStar, NewHeroSkill, NewHeroSkillLevel, HeroExclusive*",
+    "text": "lang_hero_en.json from client catalog V202610032200",
+    "sprites": "UI_HeroSkill, UI_HeroIcon and UI_Hero sprite atlases from client catalog V202610032200"
+  },
+  "level_curves": {
+    "1": [
+      {
+        "level": 1,
+        "hp": 1163,
+        "attack": 30,
+        "defense": 6,
+        "command": 52
+      },
+      {
+        "level": 10,
+        "hp": 3263,
+        "attack": 98,
+        "defense": 20,
+        "command": 70
+      },
+      {
+        "level": 20,
+        "hp": 7134,
+        "attack": 210,
+        "defense": 42,
+        "command": 90
+      },
+      {
+        "level": 30,
+        "hp": 14140,
+        "attack": 396,
+        "defense": 79,
+        "command": 110
+      },
+      {
+        "level": 40,
+        "hp": 25357,
+        "attack": 683,
+        "defense": 137,
+        "command": 130
+      },
+      {
+        "level": 50,
+        "hp": 41793,
+        "attack": 1094,
+        "defense": 219,
+        "command": 150
+      },
+      {
+        "level": 65,
+        "hp": 77818,
+        "attack": 1982,
+        "defense": 396,
+        "command": 180
+      },
+      {
+        "level": 80,
+        "hp": 129500,
+        "attack": 3242,
+        "defense": 648,
+        "command": 210
+      },
+      {
+        "level": 100,
+        "hp": 229721,
+        "attack": 5668,
+        "defense": 1134,
+        "command": 250
+      },
+      {
+        "level": 120,
+        "hp": 350195,
+        "attack": 8576,
+        "defense": 1715,
+        "command": 290
+      },
+      {
+        "level": 150,
+        "hp": 537095,
+        "attack": 13026,
+        "defense": 2605,
+        "command": 351
+      },
+      {
+        "level": 175,
+        "hp": 767891,
+        "attack": 18521,
+        "defense": 3704,
+        "command": 400
+      }
+    ],
+    "2": [
+      {
+        "level": 1,
+        "hp": 1703,
+        "attack": 43,
+        "defense": 9,
+        "command": 52
+      },
+      {
+        "level": 10,
+        "hp": 4478,
+        "attack": 126,
+        "defense": 25,
+        "command": 70
+      },
+      {
+        "level": 20,
+        "hp": 9868,
+        "attack": 275,
+        "defense": 55,
+        "command": 90
+      },
+      {
+        "level": 30,
+        "hp": 19960,
+        "attack": 535,
+        "defense": 107,
+        "command": 110
+      },
+      {
+        "level": 40,
+        "hp": 36369,
+        "attack": 945,
+        "defense": 189,
+        "command": 130
+      },
+      {
+        "level": 50,
+        "hp": 53081,
+        "attack": 1363,
+        "defense": 273,
+        "command": 150
+      },
+      {
+        "level": 65,
+        "hp": 77818,
+        "attack": 1982,
+        "defense": 396,
+        "command": 180
+      },
+      {
+        "level": 80,
+        "hp": 129500,
+        "attack": 3242,
+        "defense": 648,
+        "command": 210
+      },
+      {
+        "level": 100,
+        "hp": 229721,
+        "attack": 5668,
+        "defense": 1134,
+        "command": 250
+      },
+      {
+        "level": 120,
+        "hp": 350195,
+        "attack": 8576,
+        "defense": 1715,
+        "command": 290
+      },
+      {
+        "level": 150,
+        "hp": 537095,
+        "attack": 13026,
+        "defense": 2605,
+        "command": 351
+      },
+      {
+        "level": 175,
+        "hp": 767891,
+        "attack": 18521,
+        "defense": 3704,
+        "command": 400
+      }
+    ]
+  },
+  "star_steps": [
+    {
+      "step": 0,
+      "star": 0,
+      "shards": 0,
+      "hp": 0,
+      "attack": 0,
+      "defense": 0,
+      "skill_cap": 1
+    },
+    {
+      "step": 1,
+      "star": 0,
+      "shards": 5,
+      "hp": 3977.99,
+      "attack": 104.248,
+      "defense": 20.85,
+      "skill_cap": 1
+    },
+    {
+      "step": 2,
+      "star": 0,
+      "shards": 5,
+      "hp": 7955.98,
+      "attack": 208.496,
+      "defense": 41.7,
+      "skill_cap": 1
+    },
+    {
+      "step": 3,
+      "star": 0,
+      "shards": 5,
+      "hp": 11933.97,
+      "attack": 312.744,
+      "defense": 62.55,
+      "skill_cap": 1
+    },
+    {
+      "step": 4,
+      "star": 0,
+      "shards": 5,
+      "hp": 15911.96,
+      "attack": 416.992,
+      "defense": 83.4,
+      "skill_cap": 1
+    },
+    {
+      "step": 5,
+      "star": 1,
+      "shards": 5,
+      "hp": 19889.95,
+      "attack": 521.24,
+      "defense": 104.25,
+      "skill_cap": 1
+    },
+    {
+      "step": 6,
+      "star": 1,
+      "shards": 10,
+      "hp": 24762.44,
+      "attack": 646.778,
+      "defense": 129.36,
+      "skill_cap": 1
+    },
+    {
+      "step": 7,
+      "star": 1,
+      "shards": 10,
+      "hp": 29634.93,
+      "attack": 772.316,
+      "defense": 154.47,
+      "skill_cap": 1
+    },
+    {
+      "step": 8,
+      "star": 1,
+      "shards": 10,
+      "hp": 34507.42,
+      "attack": 897.854,
+      "defense": 179.58,
+      "skill_cap": 1
+    },
+    {
+      "step": 9,
+      "star": 1,
+      "shards": 10,
+      "hp": 39379.91,
+      "attack": 1023.392,
+      "defense": 204.69,
+      "skill_cap": 1
+    },
+    {
+      "step": 10,
+      "star": 2,
+      "shards": 10,
+      "hp": 44252.4,
+      "attack": 1148.93,
+      "defense": 229.8,
+      "skill_cap": 5
+    },
+    {
+      "step": 11,
+      "star": 2,
+      "shards": 20,
+      "hp": 50019.38,
+      "attack": 1295.768,
+      "defense": 259.17,
+      "skill_cap": 5
+    },
+    {
+      "step": 12,
+      "star": 2,
+      "shards": 20,
+      "hp": 55786.36,
+      "attack": 1442.606,
+      "defense": 288.54,
+      "skill_cap": 5
+    },
+    {
+      "step": 13,
+      "star": 2,
+      "shards": 20,
+      "hp": 61553.34,
+      "attack": 1589.444,
+      "defense": 317.91,
+      "skill_cap": 5
+    },
+    {
+      "step": 14,
+      "star": 2,
+      "shards": 20,
+      "hp": 67320.32,
+      "attack": 1736.282,
+      "defense": 347.28,
+      "skill_cap": 5
+    },
+    {
+      "step": 15,
+      "star": 3,
+      "shards": 20,
+      "hp": 73087.3,
+      "attack": 1883.12,
+      "defense": 376.65,
+      "skill_cap": 10
+    },
+    {
+      "step": 16,
+      "star": 3,
+      "shards": 60,
+      "hp": 80643.27,
+      "attack": 2072.558,
+      "defense": 414.54,
+      "skill_cap": 10
+    },
+    {
+      "step": 17,
+      "star": 3,
+      "shards": 60,
+      "hp": 88199.24,
+      "attack": 2261.996,
+      "defense": 452.43,
+      "skill_cap": 10
+    },
+    {
+      "step": 18,
+      "star": 3,
+      "shards": 60,
+      "hp": 95755.21,
+      "attack": 2451.434,
+      "defense": 490.32,
+      "skill_cap": 10
+    },
+    {
+      "step": 19,
+      "star": 3,
+      "shards": 60,
+      "hp": 103311.18,
+      "attack": 2640.872,
+      "defense": 528.21,
+      "skill_cap": 10
+    },
+    {
+      "step": 20,
+      "star": 4,
+      "shards": 60,
+      "hp": 110867.15,
+      "attack": 2830.31,
+      "defense": 566.1,
+      "skill_cap": 20
+    },
+    {
+      "step": 21,
+      "star": 4,
+      "shards": 100,
+      "hp": 120212.12,
+      "attack": 3062.338,
+      "defense": 612.51,
+      "skill_cap": 20
+    },
+    {
+      "step": 22,
+      "star": 4,
+      "shards": 100,
+      "hp": 129557.09,
+      "attack": 3294.366,
+      "defense": 658.92,
+      "skill_cap": 20
+    },
+    {
+      "step": 23,
+      "star": 4,
+      "shards": 100,
+      "hp": 138902.06,
+      "attack": 3526.394,
+      "defense": 705.33,
+      "skill_cap": 20
+    },
+    {
+      "step": 24,
+      "star": 4,
+      "shards": 100,
+      "hp": 148247.03,
+      "attack": 3758.422,
+      "defense": 751.74,
+      "skill_cap": 20
+    },
+    {
+      "step": 25,
+      "star": 5,
+      "shards": 100,
+      "hp": 157592,
+      "attack": 3990.45,
+      "defense": 798.15,
+      "skill_cap": 30
+    }
+  ],
+  "skill_books": {
+    "3": [
+      730,
+      3830,
+      44930,
+      176730,
+      176730
+    ],
+    "4": [
+      1000,
+      4600,
+      51200,
+      199500,
+      199500
+    ],
+    "5": [
+      1600,
+      6600,
+      59100,
+      226000,
+      576000
+    ]
+  },
+  "global_insights": [
+    {
+      "title": "Roles are set by the stat profile, and it shows",
+      "body": "Every UR frontliner has 10.5k–14.3k HP and 7.8k–9.7k ATK; every UR backliner flips that to 5.5k–6.5k HP and 13.6k–15.7k ATK. The outliers are the interesting heroes: Vera is the only tank built to deal damage (highest frontline ATK, lowest UR frontline HP), Lucian is the most fragile UR, and Bekka is the bulkiest hero in the game."
+    },
+    {
+      "title": "DEF is a shield, not armor",
+      "body": "The game's own stat help says DEF is a shield value that absorbs most incoming damage and stops working once broken. Front-row DEF buffs (Conan, Dirk) add shield HP, Katya's DEF shred breaks shields faster, and the flat damage-reduction passives (Arnold, Dirk, Vince, Virgilio) are a separate layer that keeps working after the shield is gone."
+    },
+    {
+      "title": "Half the SSR passives only work on monsters",
+      "body": "Nora, Zara, Kim Mina, Conan, Toxina, Aria, Lee Yu, Jack and Taylor all have passives (and often battle skills) worded 'damage to monsters' or 'damage from monsters'. They are strong for zombies, rallies and events, but in PvP those lines do nothing. Rachel, Logan, Celeste and Nora (#10011) carry unconditional ATK or Crit passives and are the SSRs to keep for PvP."
+    },
+    {
+      "title": "Exclusive weapons reward single-faction teams",
+      "body": "Monroe's stacks are capped by the Warrior heroes on your team, Leah's by Tactical heroes and Yana's by Assault heroes. Each weapon also unlocks a [Faction Boost] talent that raises HP/ATK/DEF for that faction. If you own one of these three, build the rest of the team around her faction."
+    },
+    {
+      "title": "An exclusive weapon is worth more than 150 levels",
+      "body": "At weapon level 30 the curve grants +702,792 HP, +8,366 ATK, +4,183 DEF and +5% DMG Resistance, more HP than the whole Lv. 150 level curve (+537,095). It also raises the hero's skill caps from 30 to 40 (levels 31–40 cost another 350,000 skill books). Strengthening the weapon also gives every hero up to +800 ATK, +40,000 HP and +200 DEF, so the shards help your whole roster."
+    },
+    {
+      "title": "Stars come before skill books",
+      "body": "Skill level caps are locked to whole stars: 1★ → Lv. 1, 2★ → 5, 3★ → 10, 4★ → 20, 5★ → 30. Books spent early are capped anyway, and the client skill weight for every combat skill multiplies about 10.6× from 0★ to 5★ (UR 3,600 → 38,400; SSR 3,250 → 34,600). Going from 0★ to 5★ costs 975 shards (25 steps at 5/10/20/60/100 shards)."
+    },
+    {
+      "title": "UR heroes start faster, but the curves meet at Lv. 65",
+      "body": "UR heroes (except UR Aria) use level curve 2, which grants 27–46% more HP/ATK/DEF than curve 1 between Lv. 1 and Lv. 50. From Lv. 65 the two curves are identical up to Lv. 175. Troop command grows identically on both curves: 52 at Lv. 1, 351 at Lv. 150 and 400 at Lv. 175."
+    },
+    {
+      "title": "Radiation vs Physical is a real matchup",
+      "body": "The game has two damage types (Physical and Radiation) with matching defenses. All three exclusive weapons deal Radiation damage, and Monroe and Yana also have Radiation passives. Bekka (enemy Radiation DMG down + Radiation DR) and Virgilio (team Radiation DR) are the counters. Arnold's Field Support only stops Physical damage, so a strong front row covers both."
+    },
+    {
+      "title": "Carter fits any team",
+      "body": "The only Support hero buffs ALL allies' ATK (Hawkeye), speeds skill cooldowns and protects your highest-ATK hero (Sheriff), and none of it is faction- or monster-gated."
+    },
+    {
+      "title": "SR heroes are your gatherers",
+      "body": "Jamal, Hank and Jackson are the only heroes whose levelBenefit is Soldier Load Increase rather than a faction stat bonus. They have no passive and the lowest skill weights, so give them gathering marches, not combat slots."
+    }
+  ],
+  "about": "Curated reading of the datamined client data (heroes.json from tables 1.30.07, English hero text from catalog V202610032200). Each claim cites the skill text or table field it comes from. Skill effect values ({0} in the game text) live in NewHeroSkillEffect, which is not extracted, so tips compare mechanics and stat profiles, not exact percentages."
+};

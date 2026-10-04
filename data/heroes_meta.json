@@ -1,0 +1,483 @@
+{
+  "sources": {
+    "tables": "client 1.30.07 (catalog V202608062022): HeroInfo, HeroLevel, HeroStar, NewHeroSkill, NewHeroSkillLevel, HeroExclusive*",
+    "text": "lang_hero_en.json from client catalog V202610032200",
+    "sprites": "UI_HeroSkill, UI_HeroIcon and UI_Hero sprite atlases from client catalog V202610032200"
+  },
+  "level_curves": {
+    "1": [
+      {
+        "level": 1,
+        "hp": 1163,
+        "attack": 30,
+        "defense": 6,
+        "command": 52
+      },
+      {
+        "level": 10,
+        "hp": 3263,
+        "attack": 98,
+        "defense": 20,
+        "command": 70
+      },
+      {
+        "level": 20,
+        "hp": 7134,
+        "attack": 210,
+        "defense": 42,
+        "command": 90
+      },
+      {
+        "level": 30,
+        "hp": 14140,
+        "attack": 396,
+        "defense": 79,
+        "command": 110
+      },
+      {
+        "level": 40,
+        "hp": 25357,
+        "attack": 683,
+        "defense": 137,
+        "command": 130
+      },
+      {
+        "level": 50,
+        "hp": 41793,
+        "attack": 1094,
+        "defense": 219,
+        "command": 150
+      },
+      {
+        "level": 65,
+        "hp": 77818,
+        "attack": 1982,
+        "defense": 396,
+        "command": 180
+      },
+      {
+        "level": 80,
+        "hp": 129500,
+        "attack": 3242,
+        "defense": 648,
+        "command": 210
+      },
+      {
+        "level": 100,
+        "hp": 229721,
+        "attack": 5668,
+        "defense": 1134,
+        "command": 250
+      },
+      {
+        "level": 120,
+        "hp": 350195,
+        "attack": 8576,
+        "defense": 1715,
+        "command": 290
+      },
+      {
+        "level": 150,
+        "hp": 537095,
+        "attack": 13026,
+        "defense": 2605,
+        "command": 351
+      },
+      {
+        "level": 175,
+        "hp": 767891,
+        "attack": 18521,
+        "defense": 3704,
+        "command": 400
+      }
+    ],
+    "2": [
+      {
+        "level": 1,
+        "hp": 1703,
+        "attack": 43,
+        "defense": 9,
+        "command": 52
+      },
+      {
+        "level": 10,
+        "hp": 4478,
+        "attack": 126,
+        "defense": 25,
+        "command": 70
+      },
+      {
+        "level": 20,
+        "hp": 9868,
+        "attack": 275,
+        "defense": 55,
+        "command": 90
+      },
+      {
+        "level": 30,
+        "hp": 19960,
+        "attack": 535,
+        "defense": 107,
+        "command": 110
+      },
+      {
+        "level": 40,
+        "hp": 36369,
+        "attack": 945,
+        "defense": 189,
+        "command": 130
+      },
+      {
+        "level": 50,
+        "hp": 53081,
+        "attack": 1363,
+        "defense": 273,
+        "command": 150
+      },
+      {
+        "level": 65,
+        "hp": 77818,
+        "attack": 1982,
+        "defense": 396,
+        "command": 180
+      },
+      {
+        "level": 80,
+        "hp": 129500,
+        "attack": 3242,
+        "defense": 648,
+        "command": 210
+      },
+      {
+        "level": 100,
+        "hp": 229721,
+        "attack": 5668,
+        "defense": 1134,
+        "command": 250
+      },
+      {
+        "level": 120,
+        "hp": 350195,
+        "attack": 8576,
+        "defense": 1715,
+        "command": 290
+      },
+      {
+        "level": 150,
+        "hp": 537095,
+        "attack": 13026,
+        "defense": 2605,
+        "command": 351
+      },
+      {
+        "level": 175,
+        "hp": 767891,
+        "attack": 18521,
+        "defense": 3704,
+        "command": 400
+      }
+    ]
+  },
+  "star_steps": [
+    {
+      "step": 0,
+      "star": 0,
+      "shards": 0,
+      "hp": 0,
+      "attack": 0,
+      "defense": 0,
+      "skill_cap": 1
+    },
+    {
+      "step": 1,
+      "star": 0,
+      "shards": 5,
+      "hp": 3977.99,
+      "attack": 104.248,
+      "defense": 20.85,
+      "skill_cap": 1
+    },
+    {
+      "step": 2,
+      "star": 0,
+      "shards": 5,
+      "hp": 7955.98,
+      "attack": 208.496,
+      "defense": 41.7,
+      "skill_cap": 1
+    },
+    {
+      "step": 3,
+      "star": 0,
+      "shards": 5,
+      "hp": 11933.97,
+      "attack": 312.744,
+      "defense": 62.55,
+      "skill_cap": 1
+    },
+    {
+      "step": 4,
+      "star": 0,
+      "shards": 5,
+      "hp": 15911.96,
+      "attack": 416.992,
+      "defense": 83.4,
+      "skill_cap": 1
+    },
+    {
+      "step": 5,
+      "star": 1,
+      "shards": 5,
+      "hp": 19889.95,
+      "attack": 521.24,
+      "defense": 104.25,
+      "skill_cap": 1
+    },
+    {
+      "step": 6,
+      "star": 1,
+      "shards": 10,
+      "hp": 24762.44,
+      "attack": 646.778,
+      "defense": 129.36,
+      "skill_cap": 1
+    },
+    {
+      "step": 7,
+      "star": 1,
+      "shards": 10,
+      "hp": 29634.93,
+      "attack": 772.316,
+      "defense": 154.47,
+      "skill_cap": 1
+    },
+    {
+      "step": 8,
+      "star": 1,
+      "shards": 10,
+      "hp": 34507.42,
+      "attack": 897.854,
+      "defense": 179.58,
+      "skill_cap": 1
+    },
+    {
+      "step": 9,
+      "star": 1,
+      "shards": 10,
+      "hp": 39379.91,
+      "attack": 1023.392,
+      "defense": 204.69,
+      "skill_cap": 1
+    },
+    {
+      "step": 10,
+      "star": 2,
+      "shards": 10,
+      "hp": 44252.4,
+      "attack": 1148.93,
+      "defense": 229.8,
+      "skill_cap": 5
+    },
+    {
+      "step": 11,
+      "star": 2,
+      "shards": 20,
+      "hp": 50019.38,
+      "attack": 1295.768,
+      "defense": 259.17,
+      "skill_cap": 5
+    },
+    {
+      "step": 12,
+      "star": 2,
+      "shards": 20,
+      "hp": 55786.36,
+      "attack": 1442.606,
+      "defense": 288.54,
+      "skill_cap": 5
+    },
+    {
+      "step": 13,
+      "star": 2,
+      "shards": 20,
+      "hp": 61553.34,
+      "attack": 1589.444,
+      "defense": 317.91,
+      "skill_cap": 5
+    },
+    {
+      "step": 14,
+      "star": 2,
+      "shards": 20,
+      "hp": 67320.32,
+      "attack": 1736.282,
+      "defense": 347.28,
+      "skill_cap": 5
+    },
+    {
+      "step": 15,
+      "star": 3,
+      "shards": 20,
+      "hp": 73087.3,
+      "attack": 1883.12,
+      "defense": 376.65,
+      "skill_cap": 10
+    },
+    {
+      "step": 16,
+      "star": 3,
+      "shards": 60,
+      "hp": 80643.27,
+      "attack": 2072.558,
+      "defense": 414.54,
+      "skill_cap": 10
+    },
+    {
+      "step": 17,
+      "star": 3,
+      "shards": 60,
+      "hp": 88199.24,
+      "attack": 2261.996,
+      "defense": 452.43,
+      "skill_cap": 10
+    },
+    {
+      "step": 18,
+      "star": 3,
+      "shards": 60,
+      "hp": 95755.21,
+      "attack": 2451.434,
+      "defense": 490.32,
+      "skill_cap": 10
+    },
+    {
+      "step": 19,
+      "star": 3,
+      "shards": 60,
+      "hp": 103311.18,
+      "attack": 2640.872,
+      "defense": 528.21,
+      "skill_cap": 10
+    },
+    {
+      "step": 20,
+      "star": 4,
+      "shards": 60,
+      "hp": 110867.15,
+      "attack": 2830.31,
+      "defense": 566.1,
+      "skill_cap": 20
+    },
+    {
+      "step": 21,
+      "star": 4,
+      "shards": 100,
+      "hp": 120212.12,
+      "attack": 3062.338,
+      "defense": 612.51,
+      "skill_cap": 20
+    },
+    {
+      "step": 22,
+      "star": 4,
+      "shards": 100,
+      "hp": 129557.09,
+      "attack": 3294.366,
+      "defense": 658.92,
+      "skill_cap": 20
+    },
+    {
+      "step": 23,
+      "star": 4,
+      "shards": 100,
+      "hp": 138902.06,
+      "attack": 3526.394,
+      "defense": 705.33,
+      "skill_cap": 20
+    },
+    {
+      "step": 24,
+      "star": 4,
+      "shards": 100,
+      "hp": 148247.03,
+      "attack": 3758.422,
+      "defense": 751.74,
+      "skill_cap": 20
+    },
+    {
+      "step": 25,
+      "star": 5,
+      "shards": 100,
+      "hp": 157592,
+      "attack": 3990.45,
+      "defense": 798.15,
+      "skill_cap": 30
+    }
+  ],
+  "skill_books": {
+    "3": [
+      730,
+      3830,
+      44930,
+      176730,
+      176730
+    ],
+    "4": [
+      1000,
+      4600,
+      51200,
+      199500,
+      199500
+    ],
+    "5": [
+      1600,
+      6600,
+      59100,
+      226000,
+      576000
+    ]
+  },
+  "global_insights": [
+    {
+      "title": "Roles are set by the stat profile, and it shows",
+      "body": "Every UR frontliner has 10.5k–14.3k HP and 7.8k–9.7k ATK; every UR backliner flips that to 5.5k–6.5k HP and 13.6k–15.7k ATK. The outliers are the interesting heroes: Vera is the only tank built to deal damage (highest frontline ATK, lowest UR frontline HP), Lucian is the most fragile UR, and Bekka is the bulkiest hero in the game."
+    },
+    {
+      "title": "DEF is a shield, not armor",
+      "body": "The game's own stat help says DEF is a shield value that absorbs most incoming damage and stops working once broken. Front-row DEF buffs (Conan, Dirk) add shield HP, Katya's DEF shred breaks shields faster, and the flat damage-reduction passives (Arnold, Dirk, Vince, Virgilio) are a separate layer that keeps working after the shield is gone."
+    },
+    {
+      "title": "Half the SSR passives only work on monsters",
+      "body": "Nora, Zara, Kim Mina, Conan, Toxina, Aria, Lee Yu, Jack and Taylor all have passives (and often battle skills) worded 'damage to monsters' or 'damage from monsters'. They are strong for zombies, rallies and events, but in PvP those lines do nothing. Rachel, Logan, Celeste and Nora (#10011) carry unconditional ATK or Crit passives and are the SSRs to keep for PvP."
+    },
+    {
+      "title": "Exclusive weapons reward single-faction teams",
+      "body": "Monroe's stacks are capped by the Warrior heroes on your team, Leah's by Tactical heroes and Yana's by Assault heroes. Each weapon also unlocks a [Faction Boost] talent that raises HP/ATK/DEF for that faction. If you own one of these three, build the rest of the team around her faction."
+    },
+    {
+      "title": "An exclusive weapon is worth more than 150 levels",
+      "body": "At weapon level 30 the curve grants +702,792 HP, +8,366 ATK, +4,183 DEF and +5% DMG Resistance, more HP than the whole Lv. 150 level curve (+537,095). It also raises the hero's skill caps from 30 to 40 (levels 31–40 cost another 350,000 skill books). Strengthening the weapon also gives every hero up to +800 ATK, +40,000 HP and +200 DEF, so the shards help your whole roster."
+    },
+    {
+      "title": "Stars come before skill books",
+      "body": "Skill level caps are locked to whole stars: 1★ → Lv. 1, 2★ → 5, 3★ → 10, 4★ → 20, 5★ → 30. Books spent early are capped anyway, and the client skill weight for every combat skill multiplies about 10.6× from 0★ to 5★ (UR 3,600 → 38,400; SSR 3,250 → 34,600). Going from 0★ to 5★ costs 975 shards (25 steps at 5/10/20/60/100 shards)."
+    },
+    {
+      "title": "UR heroes start faster, but the curves meet at Lv. 65",
+      "body": "UR heroes (except UR Aria) use level curve 2, which grants 27–46% more HP/ATK/DEF than curve 1 between Lv. 1 and Lv. 50. From Lv. 65 the two curves are identical up to Lv. 175. Troop command grows identically on both curves: 52 at Lv. 1, 351 at Lv. 150 and 400 at Lv. 175."
+    },
+    {
+      "title": "Radiation vs Physical is a real matchup",
+      "body": "The game has two damage types (Physical and Radiation) with matching defenses. All three exclusive weapons deal Radiation damage, and Monroe and Yana also have Radiation passives. Bekka (enemy Radiation DMG down + Radiation DR) and Virgilio (team Radiation DR) are the counters. Arnold's Field Support only stops Physical damage, so a strong front row covers both."
+    },
+    {
+      "title": "Carter fits any team",
+      "body": "The only Support hero buffs ALL allies' ATK (Hawkeye), speeds skill cooldowns and protects your highest-ATK hero (Sheriff), and none of it is faction- or monster-gated."
+    },
+    {
+      "title": "SR heroes are your gatherers",
+      "body": "Jamal, Hank and Jackson are the only heroes whose levelBenefit is Soldier Load Increase rather than a faction stat bonus. They have no passive and the lowest skill weights, so give them gathering marches, not combat slots."
+    }
+  ],
+  "about": "Curated reading of the datamined client data (heroes.json from tables 1.30.07, English hero text from catalog V202610032200). Each claim cites the skill text or table field it comes from. Skill effect values ({0} in the game text) live in NewHeroSkillEffect, which is not extracted, so tips compare mechanics and stat profiles, not exact percentages."
+}
