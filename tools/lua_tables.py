@@ -2,7 +2,7 @@
 
 Standard library only. It parses data literals; it never executes Lua."""
 import re
-TOK=re.compile(r'\s*(?:(--\[\[.*?\]\])|(--[^\n]*)|("(?:[^"\\]|\\.)*")|(\[\s*-?\d+(?:\.\d+)?\s*\]\s*=)|([A-Za-z_][A-Za-z0-9_]*\s*=(?!=))|(-?\d+(?:\.\d+)?(?:[eE][-+]?\d+)?)|([{},;])|([A-Za-z_][A-Za-z0-9_.]*))',re.S)
+TOK=re.compile(r'\s*(?:(--\[\[.*?\]\])|(--[^\n]*)|("(?:[^"\\]|\\.)*")|(\[\s*(?:-?\d+(?:\.\d+)?|"[^"]*")\s*\]\s*=)|([A-Za-z_][A-Za-z0-9_]*\s*=(?!=))|(-?\d+(?:\.\d+)?(?:[eE][-+]?\d+)?)|([{},;])|([A-Za-z_][A-Za-z0-9_.]*))',re.S)
 def tokens(s,pos):
     out=[]
     while pos<len(s):
@@ -37,7 +37,9 @@ def load_table(text, name):
                 if v2=='}': nxt(); break
                 if v2 in (',',';'): nxt(); continue
                 if g2==4:
-                    nxt(); k=float(re.sub(r'[\[\]=\s]','',v2)); k=int(k) if k==int(k) else k
+                    nxt(); kk=re.sub(r'[\[\]=\s]','',v2)
+                    if kk.startswith('"'): k=kk.strip('"')
+                    else: k=float(kk); k=int(k) if k==int(k) else k
                     d[k]=value(); isd=True
                 elif g2==5:
                     nxt(); k=v2.rstrip('= ').strip(); d[k]=value(); isd=True

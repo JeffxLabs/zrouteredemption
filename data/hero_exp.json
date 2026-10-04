@@ -1,0 +1,1625 @@
+{
+ "source": "HeroLevel, BFCastleBase, CastleBox, Item, PointSource, ActivityTarget (catalog V202610032200)",
+ "levels": [
+  {
+   "level": 1,
+   "cost": 0,
+   "cumulative": 0
+  },
+  {
+   "level": 2,
+   "cost": 90,
+   "cumulative": 90
+  },
+  {
+   "level": 3,
+   "cost": 180,
+   "cumulative": 270
+  },
+  {
+   "level": 4,
+   "cost": 270,
+   "cumulative": 540
+  },
+  {
+   "level": 5,
+   "cost": 360,
+   "cumulative": 900
+  },
+  {
+   "level": 6,
+   "cost": 450,
+   "cumulative": 1350
+  },
+  {
+   "level": 7,
+   "cost": 540,
+   "cumulative": 1890
+  },
+  {
+   "level": 8,
+   "cost": 630,
+   "cumulative": 2520
+  },
+  {
+   "level": 9,
+   "cost": 720,
+   "cumulative": 3240
+  },
+  {
+   "level": 10,
+   "cost": 800,
+   "cumulative": 4040
+  },
+  {
+   "level": 11,
+   "cost": 1000,
+   "cumulative": 5040
+  },
+  {
+   "level": 12,
+   "cost": 1100,
+   "cumulative": 6140
+  },
+  {
+   "level": 13,
+   "cost": 1200,
+   "cumulative": 7340
+  },
+  {
+   "level": 14,
+   "cost": 1300,
+   "cumulative": 8640
+  },
+  {
+   "level": 15,
+   "cost": 1400,
+   "cumulative": 10040
+  },
+  {
+   "level": 16,
+   "cost": 1500,
+   "cumulative": 11540
+  },
+  {
+   "level": 17,
+   "cost": 1600,
+   "cumulative": 13140
+  },
+  {
+   "level": 18,
+   "cost": 1800,
+   "cumulative": 14940
+  },
+  {
+   "level": 19,
+   "cost": 2000,
+   "cumulative": 16940
+  },
+  {
+   "level": 20,
+   "cost": 2200,
+   "cumulative": 19140
+  },
+  {
+   "level": 21,
+   "cost": 2500,
+   "cumulative": 21640
+  },
+  {
+   "level": 22,
+   "cost": 2700,
+   "cumulative": 24340
+  },
+  {
+   "level": 23,
+   "cost": 3000,
+   "cumulative": 27340
+  },
+  {
+   "level": 24,
+   "cost": 5000,
+   "cumulative": 32340
+  },
+  {
+   "level": 25,
+   "cost": 7000,
+   "cumulative": 39340
+  },
+  {
+   "level": 26,
+   "cost": 9000,
+   "cumulative": 48340
+  },
+  {
+   "level": 27,
+   "cost": 12000,
+   "cumulative": 60340
+  },
+  {
+   "level": 28,
+   "cost": 16000,
+   "cumulative": 76340
+  },
+  {
+   "level": 29,
+   "cost": 20000,
+   "cumulative": 96340
+  },
+  {
+   "level": 30,
+   "cost": 24000,
+   "cumulative": 120340
+  },
+  {
+   "level": 31,
+   "cost": 29000,
+   "cumulative": 149340
+  },
+  {
+   "level": 32,
+   "cost": 35000,
+   "cumulative": 184340
+  },
+  {
+   "level": 33,
+   "cost": 40000,
+   "cumulative": 224340
+  },
+  {
+   "level": 34,
+   "cost": 45000,
+   "cumulative": 269340
+  },
+  {
+   "level": 35,
+   "cost": 50000,
+   "cumulative": 319340
+  },
+  {
+   "level": 36,
+   "cost": 55000,
+   "cumulative": 374340
+  },
+  {
+   "level": 37,
+   "cost": 60000,
+   "cumulative": 434340
+  },
+  {
+   "level": 38,
+   "cost": 65000,
+   "cumulative": 499340
+  },
+  {
+   "level": 39,
+   "cost": 70000,
+   "cumulative": 569340
+  },
+  {
+   "level": 40,
+   "cost": 75000,
+   "cumulative": 644340
+  },
+  {
+   "level": 41,
+   "cost": 80000,
+   "cumulative": 724340
+  },
+  {
+   "level": 42,
+   "cost": 88000,
+   "cumulative": 812340
+  },
+  {
+   "level": 43,
+   "cost": 96000,
+   "cumulative": 908340
+  },
+  {
+   "level": 44,
+   "cost": 110000,
+   "cumulative": 1018340
+  },
+  {
+   "level": 45,
+   "cost": 129990,
+   "cumulative": 1148330
+  },
+  {
+   "level": 46,
+   "cost": 149990,
+   "cumulative": 1298320
+  },
+  {
+   "level": 47,
+   "cost": 179990,
+   "cumulative": 1478310
+  },
+  {
+   "level": 48,
+   "cost": 219990,
+   "cumulative": 1698300
+  },
+  {
+   "level": 49,
+   "cost": 259990,
+   "cumulative": 1958290
+  },
+  {
+   "level": 50,
+   "cost": 309990,
+   "cumulative": 2268280
+  },
+  {
+   "level": 51,
+   "cost": 369990,
+   "cumulative": 2638270
+  },
+  {
+   "level": 52,
+   "cost": 439990,
+   "cumulative": 3078260
+  },
+  {
+   "level": 53,
+   "cost": 529990,
+   "cumulative": 3608250
+  },
+  {
+   "level": 54,
+   "cost": 629990,
+   "cumulative": 4238240
+  },
+  {
+   "level": 55,
+   "cost": 759990,
+   "cumulative": 4998230
+  },
+  {
+   "level": 56,
+   "cost": 909990,
+   "cumulative": 5908220
+  },
+  {
+   "level": 57,
+   "cost": 1099990,
+   "cumulative": 7008210
+  },
+  {
+   "level": 58,
+   "cost": 1399990,
+   "cumulative": 8408200
+  },
+  {
+   "level": 59,
+   "cost": 1599990,
+   "cumulative": 10008190
+  },
+  {
+   "level": 60,
+   "cost": 1899990,
+   "cumulative": 11908180
+  },
+  {
+   "level": 61,
+   "cost": 2099990,
+   "cumulative": 14008170
+  },
+  {
+   "level": 62,
+   "cost": 2299990,
+   "cumulative": 16308160
+  },
+  {
+   "level": 63,
+   "cost": 2499990,
+   "cumulative": 18808150
+  },
+  {
+   "level": 64,
+   "cost": 2799990,
+   "cumulative": 21608140
+  },
+  {
+   "level": 65,
+   "cost": 3099990,
+   "cumulative": 24708130
+  },
+  {
+   "level": 66,
+   "cost": 3399990,
+   "cumulative": 28108120
+  },
+  {
+   "level": 67,
+   "cost": 3699990,
+   "cumulative": 31808110
+  },
+  {
+   "level": 68,
+   "cost": 4099990,
+   "cumulative": 35908100
+  },
+  {
+   "level": 69,
+   "cost": 4499990,
+   "cumulative": 40408090
+  },
+  {
+   "level": 70,
+   "cost": 4899990,
+   "cumulative": 45308080
+  },
+  {
+   "level": 71,
+   "cost": 5399990,
+   "cumulative": 50708070
+  },
+  {
+   "level": 72,
+   "cost": 5899990,
+   "cumulative": 56608060
+  },
+  {
+   "level": 73,
+   "cost": 6499990,
+   "cumulative": 63108050
+  },
+  {
+   "level": 74,
+   "cost": 7199990,
+   "cumulative": 70308040
+  },
+  {
+   "level": 75,
+   "cost": 7899990,
+   "cumulative": 78208030
+  },
+  {
+   "level": 76,
+   "cost": 8699990,
+   "cumulative": 86908020
+  },
+  {
+   "level": 77,
+   "cost": 9499990,
+   "cumulative": 96408010
+  },
+  {
+   "level": 78,
+   "cost": 10999990,
+   "cumulative": 107408000
+  },
+  {
+   "level": 79,
+   "cost": 11999990,
+   "cumulative": 119407990
+  },
+  {
+   "level": 80,
+   "cost": 12999990,
+   "cumulative": 132407980
+  },
+  {
+   "level": 81,
+   "cost": 12999990,
+   "cumulative": 145407970
+  },
+  {
+   "level": 82,
+   "cost": 13999990,
+   "cumulative": 159407960
+  },
+  {
+   "level": 83,
+   "cost": 13999990,
+   "cumulative": 173407950
+  },
+  {
+   "level": 84,
+   "cost": 14999990,
+   "cumulative": 188407940
+  },
+  {
+   "level": 85,
+   "cost": 15999990,
+   "cumulative": 204407930
+  },
+  {
+   "level": 86,
+   "cost": 16999990,
+   "cumulative": 221407920
+  },
+  {
+   "level": 87,
+   "cost": 16999990,
+   "cumulative": 238407910
+  },
+  {
+   "level": 88,
+   "cost": 17999990,
+   "cumulative": 256407900
+  },
+  {
+   "level": 89,
+   "cost": 18999990,
+   "cumulative": 275407890
+  },
+  {
+   "level": 90,
+   "cost": 19999990,
+   "cumulative": 295407880
+  },
+  {
+   "level": 91,
+   "cost": 20999990,
+   "cumulative": 316407870
+  },
+  {
+   "level": 92,
+   "cost": 21999990,
+   "cumulative": 338407860
+  },
+  {
+   "level": 93,
+   "cost": 22999990,
+   "cumulative": 361407850
+  },
+  {
+   "level": 94,
+   "cost": 23999990,
+   "cumulative": 385407840
+  },
+  {
+   "level": 95,
+   "cost": 25999990,
+   "cumulative": 411407830
+  },
+  {
+   "level": 96,
+   "cost": 26999990,
+   "cumulative": 438407820
+  },
+  {
+   "level": 97,
+   "cost": 27999990,
+   "cumulative": 466407810
+  },
+  {
+   "level": 98,
+   "cost": 29999990,
+   "cumulative": 496407800
+  },
+  {
+   "level": 99,
+   "cost": 30999990,
+   "cumulative": 527407790
+  },
+  {
+   "level": 100,
+   "cost": 32999990,
+   "cumulative": 560407780
+  },
+  {
+   "level": 101,
+   "cost": 34999990,
+   "cumulative": 595407770
+  },
+  {
+   "level": 102,
+   "cost": 36999990,
+   "cumulative": 632407760
+  },
+  {
+   "level": 103,
+   "cost": 38999990,
+   "cumulative": 671407750
+  },
+  {
+   "level": 104,
+   "cost": 40999990,
+   "cumulative": 712407740
+  },
+  {
+   "level": 105,
+   "cost": 42999990,
+   "cumulative": 755407730
+  },
+  {
+   "level": 106,
+   "cost": 44999990,
+   "cumulative": 800407720
+  },
+  {
+   "level": 107,
+   "cost": 46999990,
+   "cumulative": 847407710
+  },
+  {
+   "level": 108,
+   "cost": 48999990,
+   "cumulative": 896407700
+  },
+  {
+   "level": 109,
+   "cost": 50999990,
+   "cumulative": 947407690
+  },
+  {
+   "level": 110,
+   "cost": 52999990,
+   "cumulative": 1000407680
+  },
+  {
+   "level": 111,
+   "cost": 54999990,
+   "cumulative": 1055407670
+  },
+  {
+   "level": 112,
+   "cost": 56999990,
+   "cumulative": 1112407660
+  },
+  {
+   "level": 113,
+   "cost": 58999990,
+   "cumulative": 1171407650
+  },
+  {
+   "level": 114,
+   "cost": 60999990,
+   "cumulative": 1232407640
+  },
+  {
+   "level": 115,
+   "cost": 62999990,
+   "cumulative": 1295407630
+  },
+  {
+   "level": 116,
+   "cost": 64999990,
+   "cumulative": 1360407620
+  },
+  {
+   "level": 117,
+   "cost": 66999990,
+   "cumulative": 1427407610
+  },
+  {
+   "level": 118,
+   "cost": 68999990,
+   "cumulative": 1496407600
+  },
+  {
+   "level": 119,
+   "cost": 70999990,
+   "cumulative": 1567407590
+  },
+  {
+   "level": 120,
+   "cost": 72999990,
+   "cumulative": 1640407580
+  },
+  {
+   "level": 121,
+   "cost": 74999990,
+   "cumulative": 1715407570
+  },
+  {
+   "level": 122,
+   "cost": 76999990,
+   "cumulative": 1792407560
+  },
+  {
+   "level": 123,
+   "cost": 78999990,
+   "cumulative": 1871407550
+  },
+  {
+   "level": 124,
+   "cost": 80999990,
+   "cumulative": 1952407540
+  },
+  {
+   "level": 125,
+   "cost": 82999990,
+   "cumulative": 2035407530
+  },
+  {
+   "level": 126,
+   "cost": 84999990,
+   "cumulative": 2120407520
+  },
+  {
+   "level": 127,
+   "cost": 86999990,
+   "cumulative": 2207407510
+  },
+  {
+   "level": 128,
+   "cost": 88999990,
+   "cumulative": 2296407500
+  },
+  {
+   "level": 129,
+   "cost": 90999990,
+   "cumulative": 2387407490
+  },
+  {
+   "level": 130,
+   "cost": 92999990,
+   "cumulative": 2480407480
+  },
+  {
+   "level": 131,
+   "cost": 94999990,
+   "cumulative": 2575407470
+  },
+  {
+   "level": 132,
+   "cost": 96999990,
+   "cumulative": 2672407460
+  },
+  {
+   "level": 133,
+   "cost": 99999990,
+   "cumulative": 2772407450
+  },
+  {
+   "level": 134,
+   "cost": 104999990,
+   "cumulative": 2877407440
+  },
+  {
+   "level": 135,
+   "cost": 109999990,
+   "cumulative": 2987407430
+  },
+  {
+   "level": 136,
+   "cost": 114999990,
+   "cumulative": 3102407420
+  },
+  {
+   "level": 137,
+   "cost": 119999990,
+   "cumulative": 3222407410
+  },
+  {
+   "level": 138,
+   "cost": 124999990,
+   "cumulative": 3347407400
+  },
+  {
+   "level": 139,
+   "cost": 129999990,
+   "cumulative": 3477407390
+  },
+  {
+   "level": 140,
+   "cost": 134999990,
+   "cumulative": 3612407380
+  },
+  {
+   "level": 141,
+   "cost": 139999990,
+   "cumulative": 3752407370
+  },
+  {
+   "level": 142,
+   "cost": 144999990,
+   "cumulative": 3897407360
+  },
+  {
+   "level": 143,
+   "cost": 149999990,
+   "cumulative": 4047407350
+  },
+  {
+   "level": 144,
+   "cost": 154999990,
+   "cumulative": 4202407340
+  },
+  {
+   "level": 145,
+   "cost": 159999990,
+   "cumulative": 4362407330
+  },
+  {
+   "level": 146,
+   "cost": 164999990,
+   "cumulative": 4527407320
+  },
+  {
+   "level": 147,
+   "cost": 169999990,
+   "cumulative": 4697407310
+  },
+  {
+   "level": 148,
+   "cost": 174999990,
+   "cumulative": 4872407300
+  },
+  {
+   "level": 149,
+   "cost": 179999990,
+   "cumulative": 5052407290
+  },
+  {
+   "level": 150,
+   "cost": 184999990,
+   "cumulative": 5237407280
+  },
+  {
+   "level": 151,
+   "cost": 199999990,
+   "cumulative": 5437407270
+  },
+  {
+   "level": 152,
+   "cost": 214999990,
+   "cumulative": 5652407260
+  },
+  {
+   "level": 153,
+   "cost": 229999990,
+   "cumulative": 5882407250
+  },
+  {
+   "level": 154,
+   "cost": 244999990,
+   "cumulative": 6127407240
+  },
+  {
+   "level": 155,
+   "cost": 259999990,
+   "cumulative": 6387407230
+  },
+  {
+   "level": 156,
+   "cost": 274999990,
+   "cumulative": 6662407220
+  },
+  {
+   "level": 157,
+   "cost": 289999990,
+   "cumulative": 6952407210
+  },
+  {
+   "level": 158,
+   "cost": 304999990,
+   "cumulative": 7257407200
+  },
+  {
+   "level": 159,
+   "cost": 319999990,
+   "cumulative": 7577407190
+  },
+  {
+   "level": 160,
+   "cost": 334999990,
+   "cumulative": 7912407180
+  },
+  {
+   "level": 161,
+   "cost": 349999990,
+   "cumulative": 8262407170
+  },
+  {
+   "level": 162,
+   "cost": 364999990,
+   "cumulative": 8627407160
+  },
+  {
+   "level": 163,
+   "cost": 379999990,
+   "cumulative": 9007407150
+  },
+  {
+   "level": 164,
+   "cost": 394999990,
+   "cumulative": 9402407140
+  },
+  {
+   "level": 165,
+   "cost": 409999990,
+   "cumulative": 9812407130
+  },
+  {
+   "level": 166,
+   "cost": 434999990,
+   "cumulative": 10247407120
+  },
+  {
+   "level": 167,
+   "cost": 459999990,
+   "cumulative": 10707407110
+  },
+  {
+   "level": 168,
+   "cost": 484999990,
+   "cumulative": 11192407100
+  },
+  {
+   "level": 169,
+   "cost": 509999990,
+   "cumulative": 11702407090
+  },
+  {
+   "level": 170,
+   "cost": 534999990,
+   "cumulative": 12237407080
+  },
+  {
+   "level": 171,
+   "cost": 559999990,
+   "cumulative": 12797407070
+  },
+  {
+   "level": 172,
+   "cost": 584999990,
+   "cumulative": 13382407060
+  },
+  {
+   "level": 173,
+   "cost": 609999990,
+   "cumulative": 13992407050
+  },
+  {
+   "level": 174,
+   "cost": 634999990,
+   "cumulative": 14627407040
+  },
+  {
+   "level": 175,
+   "cost": 659999990,
+   "cumulative": 15287407030
+  }
+ ],
+ "hq_caps": [
+  {
+   "hq": 1,
+   "hero_level_cap": 5
+  },
+  {
+   "hq": 2,
+   "hero_level_cap": 10
+  },
+  {
+   "hq": 3,
+   "hero_level_cap": 15
+  },
+  {
+   "hq": 4,
+   "hero_level_cap": 20
+  },
+  {
+   "hq": 5,
+   "hero_level_cap": 25
+  },
+  {
+   "hq": 6,
+   "hero_level_cap": 30
+  },
+  {
+   "hq": 7,
+   "hero_level_cap": 35
+  },
+  {
+   "hq": 8,
+   "hero_level_cap": 40
+  },
+  {
+   "hq": 9,
+   "hero_level_cap": 45
+  },
+  {
+   "hq": 10,
+   "hero_level_cap": 50
+  },
+  {
+   "hq": 11,
+   "hero_level_cap": 55
+  },
+  {
+   "hq": 12,
+   "hero_level_cap": 60
+  },
+  {
+   "hq": 13,
+   "hero_level_cap": 65
+  },
+  {
+   "hq": 14,
+   "hero_level_cap": 70
+  },
+  {
+   "hq": 15,
+   "hero_level_cap": 75
+  },
+  {
+   "hq": 16,
+   "hero_level_cap": 80
+  },
+  {
+   "hq": 17,
+   "hero_level_cap": 85
+  },
+  {
+   "hq": 18,
+   "hero_level_cap": 90
+  },
+  {
+   "hq": 19,
+   "hero_level_cap": 95
+  },
+  {
+   "hq": 20,
+   "hero_level_cap": 100
+  },
+  {
+   "hq": 21,
+   "hero_level_cap": 105
+  },
+  {
+   "hq": 22,
+   "hero_level_cap": 110
+  },
+  {
+   "hq": 23,
+   "hero_level_cap": 115
+  },
+  {
+   "hq": 24,
+   "hero_level_cap": 120
+  },
+  {
+   "hq": 25,
+   "hero_level_cap": 125
+  },
+  {
+   "hq": 26,
+   "hero_level_cap": 130
+  },
+  {
+   "hq": 27,
+   "hero_level_cap": 135
+  },
+  {
+   "hq": 28,
+   "hero_level_cap": 140
+  },
+  {
+   "hq": 29,
+   "hero_level_cap": 145
+  },
+  {
+   "hq": 30,
+   "hero_level_cap": 150
+  }
+ ],
+ "max_hq": 30,
+ "chests": [
+  {
+   "item_id": "item_castleBox_HeroEXP_1",
+   "grade": "R",
+   "name": "R Hero EXP Chest",
+   "icon": "Icon_Item_Box_Resource_EXP",
+   "quality": 2,
+   "exp_by_hq": [
+    {
+     "hq": 1,
+     "exp": 2790
+    },
+    {
+     "hq": 2,
+     "exp": 2790
+    },
+    {
+     "hq": 3,
+     "exp": 2790
+    },
+    {
+     "hq": 4,
+     "exp": 2790
+    },
+    {
+     "hq": 5,
+     "exp": 2790
+    },
+    {
+     "hq": 6,
+     "exp": 2790
+    },
+    {
+     "hq": 7,
+     "exp": 2790
+    },
+    {
+     "hq": 8,
+     "exp": 2790
+    },
+    {
+     "hq": 9,
+     "exp": 3600
+    },
+    {
+     "hq": 10,
+     "exp": 4540
+    },
+    {
+     "hq": 11,
+     "exp": 5760
+    },
+    {
+     "hq": 12,
+     "exp": 7390
+    },
+    {
+     "hq": 13,
+     "exp": 9480
+    },
+    {
+     "hq": 14,
+     "exp": 12120
+    },
+    {
+     "hq": 15,
+     "exp": 15370
+    },
+    {
+     "hq": 16,
+     "exp": 19620
+    },
+    {
+     "hq": 17,
+     "exp": 24600
+    },
+    {
+     "hq": 18,
+     "exp": 30240
+    },
+    {
+     "hq": 19,
+     "exp": 36990
+    },
+    {
+     "hq": 20,
+     "exp": 42000
+    },
+    {
+     "hq": 21,
+     "exp": 46800
+    },
+    {
+     "hq": 22,
+     "exp": 51600
+    },
+    {
+     "hq": 23,
+     "exp": 55200
+    },
+    {
+     "hq": 24,
+     "exp": 60260
+    },
+    {
+     "hq": 25,
+     "exp": 67800
+    },
+    {
+     "hq": 26,
+     "exp": 74400
+    },
+    {
+     "hq": 27,
+     "exp": 81600
+    },
+    {
+     "hq": 28,
+     "exp": 89020
+    },
+    {
+     "hq": 29,
+     "exp": 98400
+    },
+    {
+     "hq": 30,
+     "exp": 108210
+    }
+   ]
+  },
+  {
+   "item_id": "item_castleBox_HeroEXP_2",
+   "grade": "SR",
+   "name": "SR Hero EXP Chest",
+   "icon": "Icon_Item_Box_Resource_EXP",
+   "quality": 3,
+   "exp_by_hq": [
+    {
+     "hq": 1,
+     "exp": 27900
+    },
+    {
+     "hq": 2,
+     "exp": 27900
+    },
+    {
+     "hq": 3,
+     "exp": 27900
+    },
+    {
+     "hq": 4,
+     "exp": 27900
+    },
+    {
+     "hq": 5,
+     "exp": 27900
+    },
+    {
+     "hq": 6,
+     "exp": 27900
+    },
+    {
+     "hq": 7,
+     "exp": 27900
+    },
+    {
+     "hq": 8,
+     "exp": 27900
+    },
+    {
+     "hq": 9,
+     "exp": 36000
+    },
+    {
+     "hq": 10,
+     "exp": 45400
+    },
+    {
+     "hq": 11,
+     "exp": 57600
+    },
+    {
+     "hq": 12,
+     "exp": 73900
+    },
+    {
+     "hq": 13,
+     "exp": 94800
+    },
+    {
+     "hq": 14,
+     "exp": 121200
+    },
+    {
+     "hq": 15,
+     "exp": 153700
+    },
+    {
+     "hq": 16,
+     "exp": 196200
+    },
+    {
+     "hq": 17,
+     "exp": 246000
+    },
+    {
+     "hq": 18,
+     "exp": 302400
+    },
+    {
+     "hq": 19,
+     "exp": 369900
+    },
+    {
+     "hq": 20,
+     "exp": 420000
+    },
+    {
+     "hq": 21,
+     "exp": 468000
+    },
+    {
+     "hq": 22,
+     "exp": 516000
+    },
+    {
+     "hq": 23,
+     "exp": 552000
+    },
+    {
+     "hq": 24,
+     "exp": 602600
+    },
+    {
+     "hq": 25,
+     "exp": 678000
+    },
+    {
+     "hq": 26,
+     "exp": 744000
+    },
+    {
+     "hq": 27,
+     "exp": 816000
+    },
+    {
+     "hq": 28,
+     "exp": 890200
+    },
+    {
+     "hq": 29,
+     "exp": 984000
+    },
+    {
+     "hq": 30,
+     "exp": 1082100
+    }
+   ]
+  },
+  {
+   "item_id": "item_castleBox_HeroEXP_3",
+   "grade": "SSR",
+   "name": "SSR Hero EXP Chest",
+   "icon": "Icon_Item_Box_Resource_EXP",
+   "quality": 4,
+   "exp_by_hq": [
+    {
+     "hq": 1,
+     "exp": 223200
+    },
+    {
+     "hq": 2,
+     "exp": 223200
+    },
+    {
+     "hq": 3,
+     "exp": 223200
+    },
+    {
+     "hq": 4,
+     "exp": 223200
+    },
+    {
+     "hq": 5,
+     "exp": 223200
+    },
+    {
+     "hq": 6,
+     "exp": 223200
+    },
+    {
+     "hq": 7,
+     "exp": 223200
+    },
+    {
+     "hq": 8,
+     "exp": 223200
+    },
+    {
+     "hq": 9,
+     "exp": 288000
+    },
+    {
+     "hq": 10,
+     "exp": 363200
+    },
+    {
+     "hq": 11,
+     "exp": 460800
+    },
+    {
+     "hq": 12,
+     "exp": 591200
+    },
+    {
+     "hq": 13,
+     "exp": 758400
+    },
+    {
+     "hq": 14,
+     "exp": 969600
+    },
+    {
+     "hq": 15,
+     "exp": 1229600
+    },
+    {
+     "hq": 16,
+     "exp": 1569600
+    },
+    {
+     "hq": 17,
+     "exp": 1968000
+    },
+    {
+     "hq": 18,
+     "exp": 2419200
+    },
+    {
+     "hq": 19,
+     "exp": 2959200
+    },
+    {
+     "hq": 20,
+     "exp": 3360000
+    },
+    {
+     "hq": 21,
+     "exp": 3744000
+    },
+    {
+     "hq": 22,
+     "exp": 4128000
+    },
+    {
+     "hq": 23,
+     "exp": 4416000
+    },
+    {
+     "hq": 24,
+     "exp": 4820800
+    },
+    {
+     "hq": 25,
+     "exp": 5424000
+    },
+    {
+     "hq": 26,
+     "exp": 5952000
+    },
+    {
+     "hq": 27,
+     "exp": 6528000
+    },
+    {
+     "hq": 28,
+     "exp": 7121600
+    },
+    {
+     "hq": 29,
+     "exp": 7872000
+    },
+    {
+     "hq": 30,
+     "exp": 8656800
+    }
+   ]
+  },
+  {
+   "item_id": "item_castleBox_HeroEXP_4",
+   "grade": "UR",
+   "name": "UR Hero EXP Chest",
+   "icon": "Icon_Item_Box_Resource_EXP",
+   "quality": 5,
+   "exp_by_hq": [
+    {
+     "hq": 1,
+     "exp": 669600
+    },
+    {
+     "hq": 2,
+     "exp": 669600
+    },
+    {
+     "hq": 3,
+     "exp": 669600
+    },
+    {
+     "hq": 4,
+     "exp": 669600
+    },
+    {
+     "hq": 5,
+     "exp": 669600
+    },
+    {
+     "hq": 6,
+     "exp": 669600
+    },
+    {
+     "hq": 7,
+     "exp": 669600
+    },
+    {
+     "hq": 8,
+     "exp": 669600
+    },
+    {
+     "hq": 9,
+     "exp": 864000
+    },
+    {
+     "hq": 10,
+     "exp": 1089600
+    },
+    {
+     "hq": 11,
+     "exp": 1382400
+    },
+    {
+     "hq": 12,
+     "exp": 1773600
+    },
+    {
+     "hq": 13,
+     "exp": 2275200
+    },
+    {
+     "hq": 14,
+     "exp": 2908800
+    },
+    {
+     "hq": 15,
+     "exp": 3688800
+    },
+    {
+     "hq": 16,
+     "exp": 4708800
+    },
+    {
+     "hq": 17,
+     "exp": 5904000
+    },
+    {
+     "hq": 18,
+     "exp": 7257600
+    },
+    {
+     "hq": 19,
+     "exp": 8877600
+    },
+    {
+     "hq": 20,
+     "exp": 10080000
+    },
+    {
+     "hq": 21,
+     "exp": 11232000
+    },
+    {
+     "hq": 22,
+     "exp": 12384000
+    },
+    {
+     "hq": 23,
+     "exp": 13248000
+    },
+    {
+     "hq": 24,
+     "exp": 14462400
+    },
+    {
+     "hq": 25,
+     "exp": 16272000
+    },
+    {
+     "hq": 26,
+     "exp": 17856000
+    },
+    {
+     "hq": 27,
+     "exp": 19584000
+    },
+    {
+     "hq": 28,
+     "exp": 21364800
+    },
+    {
+     "hq": 29,
+     "exp": 23616000
+    },
+    {
+     "hq": 30,
+     "exp": 25970400
+    }
+   ]
+  }
+ ],
+ "battle_exp_item": {
+  "item_id": "item_heroExp_1k",
+  "name": "1K Battle EXP",
+  "icon": "Icon_Item_EXPWater",
+  "exp": 1000
+ },
+ "alliance_competition": {
+  "activity_target": 5700104,
+  "day": 4,
+  "sources": [
+   {
+    "point_source": 1365,
+    "exp": 650,
+    "points": 1,
+    "boost_benefit": 6004
+   }
+  ],
+  "points_buff": {
+   "research_id": 9005,
+   "name": "Points Buff",
+   "levels": [
+    {
+     "level": 1,
+     "bonus": 0.05
+    },
+    {
+     "level": 2,
+     "bonus": 0.1
+    },
+    {
+     "level": 3,
+     "bonus": 0.15
+    },
+    {
+     "level": 4,
+     "bonus": 0.2
+    },
+    {
+     "level": 5,
+     "bonus": 0.25
+    },
+    {
+     "level": 6,
+     "bonus": 0.3
+    },
+    {
+     "level": 7,
+     "bonus": 0.35
+    },
+    {
+     "level": 8,
+     "bonus": 0.4
+    },
+    {
+     "level": 9,
+     "bonus": 0.45
+    },
+    {
+     "level": 10,
+     "bonus": 0.5
+    },
+    {
+     "level": 11,
+     "bonus": 0.55
+    },
+    {
+     "level": 12,
+     "bonus": 0.6
+    },
+    {
+     "level": 13,
+     "bonus": 0.65
+    },
+    {
+     "level": 14,
+     "bonus": 0.7
+    },
+    {
+     "level": 15,
+     "bonus": 0.75
+    },
+    {
+     "level": 16,
+     "bonus": 0.8
+    },
+    {
+     "level": 17,
+     "bonus": 0.85
+    },
+    {
+     "level": 18,
+     "bonus": 0.9
+    },
+    {
+     "level": 19,
+     "bonus": 0.95
+    },
+    {
+     "level": 20,
+     "bonus": 1
+    }
+   ]
+  }
+ }
+}

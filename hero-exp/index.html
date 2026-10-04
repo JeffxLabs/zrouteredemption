@@ -2,1274 +2,308 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-  <meta name="theme-color" content="#07101d">
-  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#000000">
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="Hero EXP Calculator">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Hero EXP">
+  <meta name="description" content="Z Route: Redemption Hero EXP calculator from the game's level table: EXP per level, HQ level caps, EXP chests and Alliance Competition points.">
   <link rel="manifest" href="../manifest.webmanifest">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
-  <title>Z Route Hero EXP Calculator · Progression &amp; Leveling Costs</title>
+  <link rel="icon" href="../assets/ui/hero_exp.webp" type="image/webp">
+  <link rel="stylesheet" href="../assets/app.css">
+  <title>Z Route Hero EXP</title>
   <style>
-    :root {
-      --bg: #07101d;
-      --card-bg: rgba(15, 29, 49, 0.88);
-      --card-inner: #0b1829;
-      --card-border: rgba(91, 202, 242, 0.14);
-      --line: #243c5d;
-      --text-main: #f4f7fc;
-      --text-muted: #95a8c4;
-      --accent: #5bcaf2;
-      --accent-gradient: linear-gradient(135deg, #0a84ff, #5bcaf2);
-      --green: #5ee6a8;
-      --amber: #ffc857;
-      --red: #ff6b75;
-      --purple: #c68cff;
-      --pill-bg: #13243b;
-      --pill-border: rgba(255, 255, 255, 0.12);
-      --nav-bg: rgba(7, 16, 29, 0.92);
-      --safe-top: env(safe-area-inset-top, 0px);
-      --safe-bottom: env(safe-area-inset-bottom, 0px);
-      --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
-    }
-
-    html.day, body.day {
-      --bg: #f8fafc;
-      --card-bg: rgba(255, 255, 255, 0.95);
-      --card-inner: #f1f5f9;
-      --card-border: #cbd5e1;
-      --line: #e2e8f0;
-      --text-main: #0f172a;
-      --text-muted: #64748b;
-      --accent: #0284c7;
-      --accent-gradient: linear-gradient(135deg, #0284c7, #0ea5e9);
-      --green: #059669;
-      --amber: #d97706;
-      --red: #dc2626;
-      --purple: #7c3aed;
-      --pill-bg: #e2e8f0;
-      --pill-border: #cbd5e1;
-      --nav-bg: rgba(255, 255, 255, 0.95);
-      --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    }
-
-    * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
-    html { background-color: var(--bg); color-scheme: dark; scroll-behavior: smooth; }
-    html.day { color-scheme: light; }
-    body {
-      margin: 0;
-      padding: 0;
-      background:
-        radial-gradient(circle at 85% -10%, rgba(46, 92, 148, .28), transparent 34rem),
-        radial-gradient(circle at 5% 95%, rgba(38, 126, 104, .16), transparent 30rem),
-        var(--bg);
-      color: var(--text-main);
-      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Segoe UI", Roboto, sans-serif;
-      min-height: 100vh;
-      padding-top: calc(var(--safe-top) + 64px);
-      padding-bottom: calc(var(--safe-bottom) + 80px);
-      line-height: 1.5;
-    }
-
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    button, input, select { font: inherit; color: inherit; }
-
-    /* Header */
-    .app-header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 100;
-      background: var(--nav-bg);
-      backdrop-filter: blur(25px) saturate(180%);
-      -webkit-backdrop-filter: blur(25px) saturate(180%);
-      border-bottom: 1px solid var(--line);
-      padding-top: var(--safe-top);
-    }
-    .header-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      height: 58px;
-      padding: 0 18px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-    }
-    .header-brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-weight: 800;
-      font-size: 1.05rem;
-      letter-spacing: -0.02em;
-    }
-    .header-logo {
-      width: 28px;
-      height: 28px;
-      border-radius: 9px;
-      background: var(--accent-gradient);
-      display: grid;
-      place-items: center;
-      font-size: 16px;
-      box-shadow: 0 0 18px rgba(91, 202, 242, 0.35);
-    }
-    .header-badge {
-      font-size: 11px;
-      font-weight: 700;
-      background: rgba(91, 202, 242, 0.15);
-      color: var(--accent);
-      padding: 3px 8px;
-      border-radius: 12px;
-    }
-    .desktop-nav {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .nav-btn {
-      padding: 6px 12px;
-      border-radius: 9px;
-      border: 1px solid transparent;
-      color: var(--text-muted);
-      font-size: 0.88rem;
-      font-weight: 600;
-      transition: all 0.15s;
-    }
-    .nav-btn:hover {
-      background: var(--pill-bg);
-      color: var(--text-main);
-    }
-    .nav-btn.active {
-      background: var(--pill-bg);
-      border-color: var(--line);
-      color: var(--accent);
-    }
-    .header-actions {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .icon-btn {
-      background: var(--pill-bg);
-      border: 1px solid var(--pill-border);
-      color: var(--text-main);
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      cursor: pointer;
-      font-size: 16px;
-      transition: transform 0.15s;
-    }
-    .icon-btn:hover { transform: scale(1.05); }
-
-    /* Layout */
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 18px;
-    }
-
-    .hero-banner {
-      padding: 24px 0 20px;
-    }
-    .eyebrow {
-      color: var(--green);
-      font-size: 0.8rem;
-      font-weight: 800;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      margin-bottom: 6px;
-    }
-    h1 {
-      margin: 0 0 10px;
-      font-size: clamp(1.8rem, 4vw, 2.6rem);
-      line-height: 1.1;
-      font-weight: 800;
-      letter-spacing: -0.04em;
-    }
-    .hero-lead {
-      color: var(--text-muted);
-      max-width: 760px;
-      margin: 0;
-      font-size: 1.05rem;
-    }
-
-    /* Presets */
-    .presets-bar {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin: 18px 0 24px;
-    }
-    .preset-chip {
-      background: var(--pill-bg);
-      border: 1px solid var(--pill-border);
-      color: var(--text-main);
-      padding: 6px 14px;
-      border-radius: 20px;
-      font-size: 0.82rem;
-      font-weight: 600;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      transition: all 0.15s ease;
-    }
-    .preset-chip:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-      transform: translateY(-1px);
-    }
-    .preset-chip.active {
-      background: var(--accent-gradient);
-      color: #000;
-      border-color: transparent;
-      box-shadow: 0 4px 14px rgba(91, 202, 242, 0.3);
-    }
-
-    /* Main Grid */
-    .calc-grid {
-      display: grid;
-      grid-template-columns: minmax(320px, 420px) 1fr;
-      gap: 22px;
-      margin-bottom: 34px;
-    }
-
-    .card {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 20px;
-      padding: 22px;
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(16px);
-    }
-
-    .card-title {
-      margin: 0 0 16px;
-      font-size: 1.15rem;
-      font-weight: 750;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    /* Inputs */
-    .control-group {
-      margin-bottom: 18px;
-    }
-    .control-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      margin-bottom: 6px;
-    }
-    .control-label {
-      font-size: 0.88rem;
-      font-weight: 700;
-    }
-    .control-value {
-      font-size: 0.95rem;
-      font-weight: 800;
-      color: var(--accent);
-    }
-    .slider-row {
-      display: grid;
-      grid-template-columns: 1fr 78px;
-      gap: 12px;
-      align-items: center;
-    }
-    input[type="range"] {
-      width: 100%;
-      height: 6px;
-      border-radius: 3px;
-      background: var(--line);
-      outline: none;
-      -webkit-appearance: none;
-      accent-color: var(--accent);
-    }
-    input[type="number"] {
-      width: 100%;
-      padding: 8px 10px;
-      background: var(--card-inner);
-      border: 1px solid var(--line);
-      border-radius: 10px;
-      font-size: 0.95rem;
-      font-weight: 700;
-      text-align: center;
-    }
-    input[type="number"]:focus {
-      border-color: var(--accent);
-      outline: 2px solid rgba(91, 202, 242, 0.25);
-    }
-
-    .squad-toggle {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 6px;
-      background: var(--card-inner);
-      padding: 4px;
-      border-radius: 12px;
-      border: 1px solid var(--line);
-    }
-    .squad-btn {
-      padding: 8px 4px;
-      border: none;
-      background: transparent;
-      color: var(--text-muted);
-      border-radius: 8px;
-      font-size: 0.82rem;
-      font-weight: 700;
-      cursor: pointer;
-      transition: all 0.15s;
-    }
-    .squad-btn.active {
-      background: var(--pill-bg);
-      color: var(--text-main);
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    /* Big Output Showcase */
-    .result-hero {
-      background: linear-gradient(145deg, rgba(20, 39, 64, 0.95), rgba(12, 26, 45, 0.95));
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      padding: 22px;
-      margin-bottom: 20px;
-      position: relative;
-      overflow: hidden;
-    }
-    html.day .result-hero {
-      background: linear-gradient(145deg, #f1f5f9, #e2e8f0);
-    }
-    .result-hero::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 4px;
-      height: 100%;
-      background: var(--accent);
-    }
-    .result-label {
-      font-size: 0.8rem;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      margin-bottom: 4px;
-    }
-    .result-number {
-      font-size: clamp(2rem, 5vw, 2.75rem);
-      font-weight: 900;
-      letter-spacing: -0.04em;
-      line-height: 1.05;
-      background: linear-gradient(135deg, #ffffff, var(--accent));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    html.day .result-number {
-      background: linear-gradient(135deg, #0f172a, var(--accent));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    .result-readable {
-      font-size: 1.15rem;
-      font-weight: 750;
-      color: var(--green);
-      margin-top: 4px;
-    }
-    .result-meta {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-top: 14px;
-      font-size: 0.85rem;
-      color: var(--text-muted);
-    }
-    .tag-badge {
-      display: inline-block;
-      padding: 3px 10px;
-      border-radius: 20px;
-      font-size: 0.76rem;
-      font-weight: 750;
-      background: rgba(94, 230, 168, 0.15);
-      color: var(--green);
-      border: 1px solid rgba(94, 230, 168, 0.25);
-    }
-
-    /* Stat Cards */
-    .stats-row {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 12px;
-      margin-bottom: 22px;
-    }
-    .stat-card {
-      background: var(--card-inner);
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      padding: 14px 16px;
-    }
-    .stat-label {
-      font-size: 0.74rem;
-      font-weight: 750;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      margin-bottom: 4px;
-    }
-    .stat-val {
-      font-size: 1.25rem;
-      font-weight: 850;
-      letter-spacing: -0.02em;
-    }
-    .stat-sub {
-      font-size: 0.78rem;
-      color: var(--text-muted);
-      margin-top: 2px;
-    }
-
-    /* Progress Bar */
-    .progress-box {
-      margin: 18px 0 10px;
-    }
-    .progress-labels {
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.78rem;
-      color: var(--text-muted);
-      margin-bottom: 6px;
-    }
-    .progress-track {
-      height: 8px;
-      background: var(--line);
-      border-radius: 4px;
-      overflow: hidden;
-      display: flex;
-    }
-    .progress-fill {
-      height: 100%;
-      background: var(--accent-gradient);
-      transition: width 0.3s ease;
-    }
-
-    /* Chest breakdown */
-    .items-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
-      gap: 8px;
-      margin-top: 14px;
-    }
-    .item-chip {
-      background: var(--card-inner);
-      border: 1px solid var(--line);
-      border-radius: 10px;
-      padding: 8px 10px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .item-icon { font-size: 18px; }
-    .item-text small { display: block; font-size: 0.7rem; color: var(--text-muted); }
-    .item-text strong { font-size: 0.9rem; font-weight: 800; }
-
-    /* Table & Tabs */
-    .table-section {
-      margin-top: 36px;
-    }
-    .section-head {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      margin-bottom: 16px;
-    }
-    .section-title {
-      font-size: 1.35rem;
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      margin: 0;
-    }
-    .filter-tabs {
-      display: flex;
-      gap: 4px;
-      background: var(--card-inner);
-      padding: 3px;
-      border-radius: 12px;
-      border: 1px solid var(--line);
-    }
-    .filter-btn {
-      padding: 6px 12px;
-      border: none;
-      background: transparent;
-      color: var(--text-muted);
-      border-radius: 9px;
-      font-size: 0.8rem;
-      font-weight: 700;
-      cursor: pointer;
-    }
-    .filter-btn.active {
-      background: var(--pill-bg);
-      color: var(--accent);
-    }
-
-    .table-wrap {
-      overflow-x: auto;
-      border: 1px solid var(--card-border);
-      border-radius: 16px;
-      background: var(--card-bg);
-      box-shadow: var(--shadow);
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      text-align: left;
-      font-size: 0.88rem;
-      white-space: nowrap;
-    }
-    th {
-      background: rgba(19, 36, 59, 0.9);
-      padding: 12px 16px;
-      color: var(--text-muted);
-      font-weight: 700;
-      font-size: 0.78rem;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      border-bottom: 1px solid var(--line);
-    }
-    html.day th {
-      background: #e2e8f0;
-      color: #334155;
-    }
-    td {
-      padding: 10px 16px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    }
-    html.day td {
-      border-bottom-color: #f1f5f9;
-    }
-    tr.in-range {
-      background: rgba(91, 202, 242, 0.06);
-    }
-    tr.is-breakpoint td:first-child {
-      font-weight: 800;
-      color: var(--green);
-    }
-    tr:hover {
-      background: rgba(255, 255, 255, 0.03);
-    }
-
-    /* Info Cards Grid */
-    .intel-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 18px;
-      margin-top: 36px;
-    }
-    .intel-card {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 18px;
-      padding: 20px;
-    }
-    .intel-card h3 {
-      margin: 0 0 10px;
-      font-size: 1.05rem;
-      font-weight: 750;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .intel-card p {
-      margin: 0 0 10px;
-      color: var(--text-muted);
-      font-size: 0.88rem;
-      line-height: 1.55;
-    }
-    .intel-card ul {
-      margin: 0;
-      padding-left: 18px;
-      color: var(--text-muted);
-      font-size: 0.86rem;
-      line-height: 1.6;
-    }
-
-    /* Bottom Navigation */
-    .bottom-nav {
-      display: none;
-    }
-
-    @media (max-width: 860px) {
-      .calc-grid { grid-template-columns: 1fr; }
-      .desktop-nav { display: none; }
-      .bottom-nav {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        z-index: 100;
-        background: var(--nav-bg);
-        backdrop-filter: blur(25px) saturate(180%);
-        -webkit-backdrop-filter: blur(25px) saturate(180%);
-        border-top: 1px solid var(--line);
-        padding-bottom: var(--safe-bottom);
-        display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        height: calc(56px + var(--safe-bottom));
-      }
-      .nav-item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        color: var(--text-muted);
-        text-decoration: none;
-        font-size: 10px;
-        font-weight: 600;
-        gap: 3px;
-        transition: color 0.15s;
-      }
-      .nav-item.active { color: var(--accent); }
-      .nav-item svg { width: 20px; height: 20px; }
-    }
-
-    footer {
-      margin-top: 50px;
-      padding-top: 24px;
-      border-top: 1px solid var(--line);
-      color: var(--text-muted);
-      font-size: 0.82rem;
-      text-align: center;
-    }
+    .layout { display: grid; gap: 12px; }
+    @media (min-width: 1000px) { .layout { grid-template-columns: minmax(0, 380px) minmax(0, 1fr); align-items: start; } .layout > .controls { position: sticky; top: calc(var(--header-h) + 12px); } }
+    .field { display: grid; gap: 6px; padding: 10px 0; border-top: 1px solid var(--line); }
+    .field:first-of-type { border-top: 0; padding-top: 2px; }
+    .field-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+    .field-head label, .field-head .lbl { font-weight: 650; font-size: 13px; }
+    .field-head .hint { font-size: 12px; color: var(--faint); }
+    .presets { margin-bottom: 10px; }
+    .total { display: flex; align-items: center; gap: 12px; }
+    .total img { width: 52px; height: 52px; flex: none; }
+    .total b { display: block; font-size: clamp(26px, 6vw, 38px); line-height: 1.05; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+    .total span { color: var(--muted); font-size: 13px; }
+    .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 8px; margin-top: 12px; }
+    .track { position: relative; height: 10px; border-radius: 6px; background: var(--s2); margin: 14px 0 4px; }
+    .track .fill { position: absolute; top: 0; bottom: 0; border-radius: 6px; background: linear-gradient(90deg, var(--accent), var(--ur)); }
+    .track .cap { position: absolute; top: -4px; bottom: -4px; width: 2px; background: var(--text); opacity: .6; }
+    .track-labels { display: flex; justify-content: space-between; font-size: 11px; color: var(--faint); }
+    .items { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 8px; }
+    .item { display: flex; align-items: center; gap: 10px; background: var(--s2); border-radius: 12px; padding: 8px 10px; min-width: 0; }
+    .item .ico { width: 44px; height: 44px; flex: none; border-radius: 10px; display: grid; place-items: center; background: radial-gradient(circle at 50% 35%, color-mix(in srgb, var(--q, var(--muted)) 38%, transparent), transparent 70%); box-shadow: inset 0 0 0 1.5px color-mix(in srgb, var(--q, var(--line2)) 70%, transparent); }
+    .item .ico img { width: 36px; height: 36px; object-fit: contain; }
+    .item b { display: block; font-size: 16px; font-variant-numeric: tabular-nums; }
+    .item small { display: block; font-size: 11.5px; color: var(--muted); line-height: 1.3; }
+    .duel { display: flex; align-items: center; gap: 12px; }
+    .duel img { width: 46px; height: 46px; flex: none; }
+    .chart-box { position: relative; }
+    .chart { width: 100%; height: auto; display: block; overflow: visible; }
+    .chart .grid line { stroke: var(--line); }
+    .chart text { fill: var(--faint); font-size: 11px; }
+    .chart-tip { position: absolute; pointer-events: none; background: var(--s3); border: 1px solid var(--line2); border-radius: 8px; padding: 6px 9px; font-size: 12px; white-space: nowrap; z-index: 5; }
+    .chart-tip[hidden] { display: none; }
+    table.data tbody tr { cursor: pointer; }
+    table.data tbody tr:hover td { background: var(--s2); }
+    .lock { color: var(--warn); font-size: 11px; font-weight: 700; }
   </style>
 </head>
 <body>
-  <!-- Fixed Header -->
   <header class="app-header">
     <div class="header-inner">
-      <div class="header-brand">
-        <div class="header-logo">⚡</div>
-        <span>Z Route Hero EXP</span>
-        <span class="header-badge">v1.30.07</span>
-      </div>
-
-      <nav class="desktop-nav">
-        <a href="../" class="nav-btn">Base Planner</a>
-        <a href="../#producer-roi" class="nav-btn">Producer ROI</a>
-        <a href="../heroes/" class="nav-btn">Heroes</a>
-        <a href="./" class="nav-btn active">Hero EXP</a>
-        <a href="../research/" class="nav-btn">Research</a>
-        <a href="../promo-codes/" class="nav-btn">Promo Codes</a>
-        <a href="https://github.com/JeffxLabs/zrouteredemption" target="_blank" rel="noopener" class="nav-btn">GitHub ↗</a>
+      <a class="brand" href="./"><img src="../assets/ui/hero_exp.webp" alt="" width="22" height="22">Z Route Hero EXP <span class="ver">v1.30.07</span></a>
+      <nav class="desktop-nav" aria-label="Site">
+        <a href="../">Base Planner</a>
+        <a href="../#producer-roi">Producer ROI</a>
+        <a href="../heroes/">Heroes</a>
+        <a href="./" class="active" aria-current="page">Hero EXP</a>
+        <a href="../research/">Research</a>
+        <a href="../promo-codes/">Promo Codes</a>
+        <a href="https://github.com/JeffxLabs/zrouteredemption" target="_blank" rel="noopener">GitHub ↗</a>
       </nav>
-
-      <div class="header-actions">
-        <button class="icon-btn" id="theme-toggle" title="Toggle theme" aria-label="Toggle theme">☾</button>
-      </div>
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch theme"></button>
     </div>
   </header>
 
-  <main class="container">
-    <!-- Hero Banner -->
-    <section class="hero-banner">
-      <div class="eyebrow">Hero Progression Intelligence</div>
-      <h1>Hero EXP Calculator</h1>
-      <p class="hero-lead">
-        Find out exactly how much Hero EXP is required to take any hero from brand new (Level 1) or your current level to Level 150 (Base Cap) or Level 175 (Extended Cap).
-      </p>
-
-      <!-- Quick Presets -->
-      <div class="presets-bar">
-        <button class="preset-chip active" data-start="1" data-target="150" data-squad="1">⚡ Brand New → Max 150</button>
-        <button class="preset-chip" data-start="1" data-target="175" data-squad="1">👑 Brand New → Ext 175</button>
-        <button class="preset-chip" data-start="1" data-target="100" data-squad="1">🛡️ Lv 1 → 100 (Mid-Game)</button>
-        <button class="preset-chip" data-start="100" data-target="150" data-squad="1">🚀 Lv 100 → 150 (HQ 30)</button>
-        <button class="preset-chip" data-start="120" data-target="150" data-squad="1">⚔️ Lv 120 → 150 (Final Push)</button>
-        <button class="preset-chip" data-start="150" data-target="175" data-squad="1">🛢️ Lv 150 → 175 (Age of Oil)</button>
-        <button class="preset-chip" data-start="1" data-target="150" data-squad="5">🎖️ Full Squad (×5) to 150</button>
-      </div>
-    </section>
-
-    <!-- Main Calculator Grid -->
-    <div class="calc-grid">
-      <!-- Input Controls Card -->
-      <aside class="card">
-        <h2 class="card-title">Level Parameters</h2>
-
-        <div class="control-group">
-          <div class="control-header">
-            <span class="control-label">Starting Level</span>
-            <span class="control-value" id="disp-start">Lv 1</span>
-          </div>
-          <div class="slider-row">
-            <input type="range" id="range-start" min="1" max="174" value="1">
-            <input type="number" id="num-start" min="1" max="174" value="1">
-          </div>
-        </div>
-
-        <div class="control-group">
-          <div class="control-header">
-            <span class="control-label">Target Level</span>
-            <span class="control-value" id="disp-target">Lv 150</span>
-          </div>
-          <div class="slider-row">
-            <input type="range" id="range-target" min="2" max="175" value="150">
-            <input type="number" id="num-target" min="2" max="175" value="150">
-          </div>
-        </div>
-
-        <div class="control-group">
-          <div class="control-header">
-            <span class="control-label">Squad Size</span>
-            <span class="control-value" id="disp-squad">1 Hero</span>
-          </div>
-          <div class="squad-toggle">
-            <button class="squad-btn active" data-multiplier="1">1 Hero</button>
-            <button class="squad-btn" data-multiplier="3">3 Heroes</button>
-            <button class="squad-btn" data-multiplier="5">5 Heroes (Squad)</button>
-          </div>
-        </div>
-
-        <!-- Progress to Cap -->
-        <div class="progress-box">
-          <div class="progress-labels">
-            <span>Progression Towards Cap</span>
-            <span id="progress-percent">100%</span>
-          </div>
-          <div class="progress-track">
-            <div class="progress-fill" id="progress-fill" style="width: 100%;"></div>
-          </div>
-        </div>
-
-        <div style="margin-top: 20px; font-size: 0.8rem; color: var(--text-muted); line-height: 1.5;">
-          💡 <strong>Tip:</strong> EXP requirements scale identically across all rarities (UR, SSR, SR). Leveling requires only Hero EXP; hero shards are reserved for star tier advancements.
-        </div>
-      </aside>
-
-      <!-- Results Display Card -->
-      <section class="card">
-        <h2 class="card-title">Required Hero EXP</h2>
-
-        <!-- Big Highlight Banner -->
-        <div class="result-hero">
-          <div class="result-label" id="hero-output-label">Total Hero EXP (1 Hero)</div>
-          <div class="result-number" id="hero-output-num">5,237,407,280</div>
-          <div class="result-readable" id="hero-output-words">5.24 Billion Hero EXP</div>
-          <div class="result-meta">
-            <span class="tag-badge" id="badge-cap">HQ 30 Base Cap</span>
-            <span id="badge-delta">+149 Levels</span>
-          </div>
-        </div>
-
-        <!-- Stat Row -->
-        <div class="stats-row">
-          <div class="stat-card">
-            <div class="stat-label">Per Hero Cost</div>
-            <div class="stat-val" id="stat-per-hero">5.24B</div>
-            <div class="stat-sub" id="stat-per-hero-sub">5,237,407,280 EXP</div>
-          </div>
-
-          <div class="stat-card">
-            <div class="stat-label">Total Squad Cost</div>
-            <div class="stat-val" id="stat-squad-total">5.24B</div>
-            <div class="stat-sub" id="stat-squad-sub">1 Hero selected</div>
-          </div>
-
-          <div class="stat-card">
-            <div class="stat-label">Alliance Duel VS Points</div>
-            <div class="stat-val" style="color: var(--amber);" id="stat-vs-pts">10.47B</div>
-            <div class="stat-sub">Day 4: 2 pts / EXP</div>
-          </div>
-        </div>
-
-        <!-- EXP Items Equivalent -->
-        <div class="card-title" style="font-size: 0.95rem; margin-top: 10px;">EXP Items Equivalent</div>
-        <div class="items-grid">
-          <div class="item-chip">
-            <span class="item-icon">📦</span>
-            <div class="item-text">
-              <small>10M Items</small>
-              <strong id="chest-10m">524</strong>
-            </div>
-          </div>
-          <div class="item-chip">
-            <span class="item-icon">📦</span>
-            <div class="item-text">
-              <small>2M Items</small>
-              <strong id="chest-2m">2,619</strong>
-            </div>
-          </div>
-          <div class="item-chip">
-            <span class="item-icon">📦</span>
-            <div class="item-text">
-              <small>500K Items</small>
-              <strong id="chest-500k">10,475</strong>
-            </div>
-          </div>
-          <div class="item-chip">
-            <span class="item-icon">📦</span>
-            <div class="item-text">
-              <small>100K Items</small>
-              <strong id="chest-100k">52,375</strong>
-            </div>
-          </div>
-        </div>
-      </section>
+  <main>
+    <div class="intro">
+      <h1>Hero EXP</h1>
+      <p>Exact costs from the game's hero level table. Hero level is capped at HQ level × 5.</p>
     </div>
 
-    <!-- HQ Level to Hero Cap Reference Matrix -->
-    <section class="card" style="margin-bottom: 34px;">
-      <h2 class="card-title">HQ Level to Hero Level Cap Matrix</h2>
-      <p style="color: var(--text-muted); font-size: 0.88rem; margin: 0 0 16px;">
-        Hero level is hard-gated by your Headquarters level (Hero Cap = HQ × 5). Click any tier to load it into the calculator.
-      </p>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>HQ Level</th>
-              <th>Hero Cap</th>
-              <th>Tier Scope</th>
-              <th>Cumulative EXP (From Lv 1)</th>
-              <th>EXP for +5 Level Bracket</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody id="hq-matrix-tbody">
-            <!-- Rendered by JS -->
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <!-- Full Level Breakdown Table -->
-    <section class="table-section">
-      <div class="section-head">
-        <h2 class="section-title">Level-by-Level EXP Breakdown</h2>
-        <div class="filter-tabs">
-          <button class="filter-btn active" data-filter="milestones">Milestones (10s)</button>
-          <button class="filter-btn" data-filter="breakpoints">HQ Caps (5s)</button>
-          <button class="filter-btn" data-filter="selected">Selected Range</button>
-          <button class="filter-btn" data-filter="all">All 175 Levels</button>
+    <div class="layout">
+      <section class="card controls" aria-label="Calculator inputs">
+        <div class="scroll-row presets" id="presets"></div>
+        <div class="field">
+          <div class="field-head"><label for="from-n">From level</label><div class="stepper"><button type="button" data-step="from" data-d="-1" aria-label="From level down">−</button><input id="from-n" type="number" min="1" max="174" inputmode="numeric"><button type="button" data-step="from" data-d="1" aria-label="From level up">+</button></div></div>
+          <input type="range" id="from-r" min="1" max="174" aria-label="From level">
         </div>
-      </div>
+        <div class="field">
+          <div class="field-head"><label for="to-n">To level</label><div class="stepper"><button type="button" data-step="to" data-d="-1" aria-label="To level down">−</button><input id="to-n" type="number" min="2" max="175" inputmode="numeric"><button type="button" data-step="to" data-d="1" aria-label="To level up">+</button></div></div>
+          <input type="range" id="to-r" min="2" max="175" aria-label="To level">
+        </div>
+        <div class="field">
+          <div class="field-head"><span class="lbl" id="heroes-lbl">Heroes</span><div class="seg" id="heroes" role="group" aria-labelledby="heroes-lbl"></div></div>
+        </div>
+        <div class="field">
+          <div class="field-head"><label for="hq-n">HQ level <span class="hint">for chest sizes</span></label><div class="stepper"><button type="button" data-step="hq" data-d="-1" aria-label="HQ level down">−</button><input id="hq-n" type="number" min="1" max="30" inputmode="numeric"><button type="button" data-step="hq" data-d="1" aria-label="HQ level up">+</button></div></div>
+        </div>
+        <div class="field">
+          <div class="field-head"><label for="buff-n">Points Buff research <span class="hint">Alliance Competition tree</span></label><div class="stepper"><button type="button" data-step="buff" data-d="-1" aria-label="Points Buff down">−</button><input id="buff-n" type="number" min="0" max="20" inputmode="numeric"><button type="button" data-step="buff" data-d="1" aria-label="Points Buff up">+</button></div></div>
+        </div>
+      </section>
 
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>Level</th>
-              <th>Min HQ</th>
-              <th>Level EXP (Cost to Upgrade)</th>
-              <th>Cumulative EXP (From Lv 1)</th>
-              <th>% of Base Cap (Lv 150)</th>
-            </tr>
-          </thead>
-          <tbody id="levels-tbody">
-            <!-- Populated by JS -->
-          </tbody>
-        </table>
+      <div class="stack">
+        <section class="card" aria-live="polite">
+          <div class="total"><img src="../assets/ui/hero_exp.webp" alt=""><div><b id="total"></b><span id="total-sub"></span></div></div>
+          <div class="chips" style="margin-top:10px" id="badges"></div>
+          <div class="track" aria-hidden="true"><div class="fill" id="fill"></div><div class="cap" style="left:calc(149 / 174 * 100%)" title="Lv 150: max with HQ 30"></div></div>
+          <div class="track-labels"><span>Lv 1</span><span>Lv 150 (HQ 30)</span><span>Lv 175</span></div>
+          <div class="tiles" id="tiles"></div>
+        </section>
+
+        <section class="card">
+          <div class="card-head"><h2>EXP items needed</h2><span class="faint" style="font-size:12px" id="items-note"></span></div>
+          <div class="items" id="items"></div>
+        </section>
+
+        <section class="card">
+          <div class="duel"><img src="../assets/ui/duel.webp" alt=""><div><h2 style="margin:0 0 2px">Alliance Competition points</h2><div class="muted" style="font-size:13px" id="duel-text"></div></div></div>
+        </section>
+
+        <section class="card">
+          <div class="card-head"><h2>EXP to reach each level</h2><span class="faint" style="font-size:12px">Highlighted: your range</span></div>
+          <div class="chart-box" id="chart"></div>
+        </section>
       </div>
+    </div>
+
+    <section class="card" style="margin-top:12px">
+      <div class="card-head"><h2>HQ level caps and chests</h2><span class="faint" style="font-size:12px">Tap a row to plan Lv 1 → cap</span></div>
+      <div class="table-wrap"><table class="data" id="hq-table"></table></div>
     </section>
 
-    <!-- Strategy & Mechanics Intel -->
-    <section class="intel-grid">
-      <div class="intel-card">
-        <h3><span>⚖️</span> Curve 1 vs Curve 2</h3>
-        <p>
-          In client data (<code>data/heroes.json</code>), heroes are assigned to Level Curve 1 or Curve 2. 
-        </p>
-        <ul>
-          <li><strong>Identical EXP:</strong> Both curves require the exact same EXP amounts per level.</li>
-          <li><strong>Curve 1:</strong> SR heroes, SSR heroes, and Support UR (Aria).</li>
-          <li><strong>Curve 2:</strong> Combat UR heroes (Kimberly, Murphy, Marshall, Carlie, Swift, Tesla, etc.) receive higher base stat multipliers (HP, ATK, DEF) per level.</li>
-        </ul>
-      </div>
-
-      <div class="intel-card">
-        <h3><span>🎯</span> Core Leveling Strategy</h3>
-        <p>
-          Hero EXP scaling accelerates dramatically past Level 100. Level 140 to 150 alone consumes over 1.62 billion EXP.
-        </p>
-        <ul>
-          <li><strong>DPS Focus:</strong> Maximize your primary damage dealer (e.g. Kimberly) to 150 first. One max-level DPS hero outperforms five evenly distributed heroes.</li>
-          <li><strong>Tank &amp; Support Next:</strong> Once your carry is maxed, advance your front-line tanks to survive enemy burst damage.</li>
-        </ul>
-      </div>
-
-      <div class="intel-card">
-        <h3><span>🏆</span> VS Event Optimization</h3>
-        <p>
-          Alliance Duel (VS) Day 4 is <strong>Hero Day</strong>. Every point of Hero EXP consumed awards event points (typically 2 points per 1 Hero EXP).
-        </p>
-        <ul>
-          <li><strong>Hoard EXP:</strong> Save your consumable Hero EXP chests and items during the week and pop them on Thursday.</li>
-          <li><strong>Tier Rewards:</strong> Pushing a single hero from Lv 100 to 150 on Thursday generates ~9.35 billion VS points, easily clearing all 9 reward chests.</li>
-        </ul>
-      </div>
+    <section class="card" style="margin-top:12px">
+      <div class="card-head"><h2>Level by level</h2><div class="seg" id="level-filter" role="group" aria-label="Rows to show"></div></div>
+      <div class="table-wrap"><table class="data" id="level-table"></table></div>
     </section>
 
-    <!-- Footer -->
     <footer>
-      <p>Data verified against Android client v1.30.07 tables (<code>HeroLevel.lua</code> in <code>data/heroes.json</code>).</p>
-      <p>All calculations run locally on your device. <a href="https://github.com/JeffxLabs/zrouteredemption" target="_blank" rel="noopener">View source repository on GitHub</a>.</p>
+      <p>Sources: HeroLevel (EXP per level), BFCastleBase (hero level cap per HQ), CastleBox (Hero EXP chest contents), Item, PointSource and ActivityTarget (Alliance Competition) from client catalog V202610032200.</p>
+      <p>The EXP table goes to Lv 175, but HQ currently stops at 30, which caps heroes at Lv 150.</p>
+      <p>Everything runs in your browser. <a href="https://github.com/JeffxLabs/zrouteredemption" target="_blank" rel="noopener">Source on GitHub</a></p>
     </footer>
   </main>
 
-  <!-- Mobile Bottom Navigation -->
-  <nav class="bottom-nav">
-    <a href="../" class="nav-item">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-      <span>Base</span>
-    </a>
-    <a href="../#producer-roi" class="nav-item">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
-      <span>ROI</span>
-    </a>
-    <a href="../heroes/" class="nav-item">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
-      <span>Heroes</span>
-    </a>
-    <a href="./" class="nav-item active">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
-      <span>Hero EXP</span>
-    </a>
-    <a href="../research/" class="nav-item">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
-      <span>Research</span>
-    </a>
-    <a href="../promo-codes/" class="nav-item">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
-      <span>Codes</span>
-    </a>
+  <nav class="bottom-nav" aria-label="Site">
+    <a href="../"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg><span>Base</span></a>
+    <a href="../#producer-roi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg><span>ROI</span></a>
+    <a href="../heroes/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><span>Heroes</span></a>
+    <a href="./" class="active" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg><span>Hero EXP</span></a>
+    <a href="../research/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.2 4.2l2.8 2.8M17 17l2.8 2.8M1 12h4M19 12h4M4.2 19.8 7 17M17 7l2.8-2.8"/></svg><span>Research</span></a>
+    <a href="../promo-codes/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg><span>Codes</span></a>
   </nav>
 
+  <script src="../assets/app.js"></script>
+  <script src="hero_exp_data.js"></script>
   <script>
-    // Embedded Level Data: [level, cost, cumulative_from_1]
-    const RAW_LEVELS = [[1, 0, 0], [2, 90, 90], [3, 180, 270], [4, 270, 540], [5, 360, 900], [6, 450, 1350], [7, 540, 1890], [8, 630, 2520], [9, 720, 3240], [10, 800, 4040], [11, 1000, 5040], [12, 1100, 6140], [13, 1200, 7340], [14, 1300, 8640], [15, 1400, 10040], [16, 1500, 11540], [17, 1600, 13140], [18, 1800, 14940], [19, 2000, 16940], [20, 2200, 19140], [21, 2500, 21640], [22, 2700, 24340], [23, 3000, 27340], [24, 5000, 32340], [25, 7000, 39340], [26, 9000, 48340], [27, 12000, 60340], [28, 16000, 76340], [29, 20000, 96340], [30, 24000, 120340], [31, 29000, 149340], [32, 35000, 184340], [33, 40000, 224340], [34, 45000, 269340], [35, 50000, 319340], [36, 55000, 374340], [37, 60000, 434340], [38, 65000, 499340], [39, 70000, 569340], [40, 75000, 644340], [41, 80000, 724340], [42, 88000, 812340], [43, 96000, 908340], [44, 110000, 1018340], [45, 129990, 1148330], [46, 149990, 1298320], [47, 179990, 1478310], [48, 219990, 1698300], [49, 259990, 1958290], [50, 309990, 2268280], [51, 369990, 2638270], [52, 439990, 3078260], [53, 529990, 3608250], [54, 629990, 4238240], [55, 759990, 4998230], [56, 909990, 5908220], [57, 1099990, 7008210], [58, 1399990, 8408200], [59, 1599990, 10008190], [60, 1899990, 11908180], [61, 2099990, 14008170], [62, 2299990, 16308160], [63, 2499990, 18808150], [64, 2799990, 21608140], [65, 3099990, 24708130], [66, 3399990, 28108120], [67, 3699990, 31808110], [68, 4099990, 35908100], [69, 4499990, 40408090], [70, 4899990, 45308080], [71, 5399990, 50708070], [72, 5899990, 56608060], [73, 6499990, 63108050], [74, 7199990, 70308040], [75, 7899990, 78208030], [76, 8699990, 86908020], [77, 9499990, 96408010], [78, 10999990, 107408000], [79, 11999990, 119407990], [80, 12999990, 132407980], [81, 12999990, 145407970], [82, 13999990, 159407960], [83, 13999990, 173407950], [84, 14999990, 188407940], [85, 15999990, 204407930], [86, 16999990, 221407920], [87, 16999990, 238407910], [88, 17999990, 256407900], [89, 18999990, 275407890], [90, 19999990, 295407880], [91, 20999990, 316407870], [92, 21999990, 338407860], [93, 22999990, 361407850], [94, 23999990, 385407840], [95, 25999990, 411407830], [96, 26999990, 438407820], [97, 27999990, 466407810], [98, 29999990, 496407800], [99, 30999990, 527407790], [100, 32999990, 560407780], [101, 34999990, 595407770], [102, 36999990, 632407760], [103, 38999990, 671407750], [104, 40999990, 712407740], [105, 42999990, 755407730], [106, 44999990, 800407720], [107, 46999990, 847407710], [108, 48999990, 896407700], [109, 50999990, 947407690], [110, 52999990, 1000407680], [111, 54999990, 1055407670], [112, 56999990, 1112407660], [113, 58999990, 1171407650], [114, 60999990, 1232407640], [115, 62999990, 1295407630], [116, 64999990, 1360407620], [117, 66999990, 1427407610], [118, 68999990, 1496407600], [119, 70999990, 1567407590], [120, 72999990, 1640407580], [121, 74999990, 1715407570], [122, 76999990, 1792407560], [123, 78999990, 1871407550], [124, 80999990, 1952407540], [125, 82999990, 2035407530], [126, 84999990, 2120407520], [127, 86999990, 2207407510], [128, 88999990, 2296407500], [129, 90999990, 2387407490], [130, 92999990, 2480407480], [131, 94999990, 2575407470], [132, 96999990, 2672407460], [133, 99999990, 2772407450], [134, 104999990, 2877407440], [135, 109999990, 2987407430], [136, 114999990, 3102407420], [137, 119999990, 3222407410], [138, 124999990, 3347407400], [139, 129999990, 3477407390], [140, 134999990, 3612407380], [141, 139999990, 3752407370], [142, 144999990, 3897407360], [143, 149999990, 4047407350], [144, 154999990, 4202407340], [145, 159999990, 4362407330], [146, 164999990, 4527407320], [147, 169999990, 4697407310], [148, 174999990, 4872407300], [149, 179999990, 5052407290], [150, 184999990, 5237407280], [151, 199999990, 5437407270], [152, 214999990, 5652407260], [153, 229999990, 5882407250], [154, 244999990, 6127407240], [155, 259999990, 6387407230], [156, 274999990, 6662407220], [157, 289999990, 6952407210], [158, 304999990, 7257407200], [159, 319999990, 7577407190], [160, 334999990, 7912407180], [161, 349999990, 8262407170], [162, 364999990, 8627407160], [163, 379999990, 9007407150], [164, 394999990, 9402407140], [165, 409999990, 9812407130], [166, 434999990, 10247407120], [167, 459999990, 10707407110], [168, 484999990, 11192407100], [169, 509999990, 11702407090], [170, 534999990, 12237407080], [171, 559999990, 12797407070], [172, 584999990, 13382407060], [173, 609999990, 13992407050], [174, 634999990, 14627407040], [175, 659999990, 15287407030]];
-
-    // State
-    let startLevel = 1;
-    let targetLevel = 150;
-    let squadSize = 1;
-    let tableFilter = "milestones";
-
-    // Elements
-    const rangeStart = document.getElementById("range-start");
-    const numStart = document.getElementById("num-start");
-    const dispStart = document.getElementById("disp-start");
-
-    const rangeTarget = document.getElementById("range-target");
-    const numTarget = document.getElementById("num-target");
-    const dispTarget = document.getElementById("disp-target");
-
-    const dispSquad = document.getElementById("disp-squad");
-    const squadBtns = document.querySelectorAll(".squad-btn");
-
-    const heroOutputLabel = document.getElementById("hero-output-label");
-    const heroOutputNum = document.getElementById("hero-output-num");
-    const heroOutputWords = document.getElementById("hero-output-words");
-    const badgeCap = document.getElementById("badge-cap");
-    const badgeDelta = document.getElementById("badge-delta");
-
-    const statPerHero = document.getElementById("stat-per-hero");
-    const statPerHeroSub = document.getElementById("stat-per-hero-sub");
-    const statSquadTotal = document.getElementById("stat-squad-total");
-    const statSquadSub = document.getElementById("stat-squad-sub");
-    const statVsPts = document.getElementById("stat-vs-pts");
-
-    const progressFill = document.getElementById("progress-fill");
-    const progressPercent = document.getElementById("progress-percent");
-
-    const chest10m = document.getElementById("chest-10m");
-    const chest2m = document.getElementById("chest-2m");
-    const chest500k = document.getElementById("chest-500k");
-    const chest100k = document.getElementById("chest-100k");
-
-    const levelsTbody = document.getElementById("levels-tbody");
-    const hqMatrixTbody = document.getElementById("hq-matrix-tbody");
-    const filterBtns = document.querySelectorAll(".filter-btn");
-    const presetChips = document.querySelectorAll(".preset-chip");
-    const themeBtn = document.getElementById("theme-toggle");
-
-    // Formatters
-    function formatNumber(n) {
-      return Number(n).toLocaleString("en-US");
+  (() => {
+    'use strict';
+    const D = window.HERO_EXP, { esc, fmt, short } = window.ZR;
+    const $ = s => document.querySelector(s);
+    const MAXL = D.levels[D.levels.length - 1].level, MAX_HQ = D.max_hq, HQ_CAP = MAX_HQ * 5;
+    const cum = new Map(D.levels.map(l => [l.level, l.cumulative]));
+    const costOf = new Map(D.levels.map(l => [l.level, l.cost]));
+    const QCOL = { 2: 'var(--r)', 3: 'var(--sr)', 4: 'var(--ssr)', 5: 'var(--ur)' };
+    const duelSrc = D.alliance_competition.sources[0];
+    const buffLv = D.alliance_competition.points_buff.levels;
+    const hqFor = lv => Math.ceil(lv / 5);
+    const chestExp = (c, hq) => (c.exp_by_hq.find(x => x.hq === hq) || c.exp_by_hq[c.exp_by_hq.length - 1]).exp;
+    function words(n) {
+      if (n >= 1e9) return `${+(n / 1e9).toFixed(2)} billion`;
+      if (n >= 1e6) return `${+(n / 1e6).toFixed(2)} million`;
+      if (n >= 1e3) return `${+(n / 1e3).toFixed(1)} thousand`;
+      return String(n);
     }
 
-    function formatShort(n) {
-      if (n >= 1e9) return (n / 1e9).toFixed(2) + "B";
-      if (n >= 1e6) return (n / 1e6).toFixed(2) + "M";
-      if (n >= 1e3) return (n / 1e3).toFixed(1) + "K";
-      return formatNumber(n);
+    const S = { from: 1, to: 150, heroes: 1, hq: 30, hqAuto: true, buff: 0, filter: 'milestones' };
+    const q = new URLSearchParams(location.search);
+    const int = (k, d) => { const v = parseInt(q.get(k), 10); return Number.isFinite(v) ? v : d; };
+    S.from = Math.min(MAXL - 1, Math.max(1, int('start', 1)));
+    S.to = Math.min(MAXL, Math.max(S.from + 1, int('target', 150)));
+    S.heroes = Math.min(5, Math.max(1, int('squad', 1)));
+    S.buff = Math.min(buffLv.length, Math.max(0, int('buff', 0)));
+    if (q.has('hq')) { S.hq = Math.min(MAX_HQ, Math.max(1, int('hq', 30))); S.hqAuto = false; }
+
+    const PRESETS = [
+      ['New → 150', 1, 150, 1], ['1 → 100', 1, 100, 1], ['100 → 150', 100, 150, 1], ['120 → 150', 120, 150, 1], ['5 heroes → 150', 1, 150, 5], ['150 → 175', 150, 175, 1]
+    ];
+    $('#presets').innerHTML = PRESETS.map(([l, f, t, h], i) => `<button type="button" class="chip" data-preset="${i}">${esc(l)}</button>`).join('');
+    $('#heroes').innerHTML = [1, 2, 3, 4, 5].map(n => `<button type="button" data-heroes="${n}">${n}</button>`).join('');
+    $('#level-filter').innerHTML = [['milestones', 'Every 10'], ['hq', 'HQ caps'], ['range', 'My range'], ['all', 'All']].map(([v, l]) => `<button type="button" data-filter="${v}">${l}</button>`).join('');
+
+    function clamp() {
+      S.from = Math.min(MAXL - 1, Math.max(1, S.from | 0));
+      S.to = Math.min(MAXL, Math.max(2, S.to | 0));
+      if (S.from >= S.to) S.from = S.to - 1;
+      S.buff = Math.min(buffLv.length, Math.max(0, S.buff | 0));
+      if (S.hqAuto) S.hq = Math.min(MAX_HQ, hqFor(S.to));
+      S.hq = Math.min(MAX_HQ, Math.max(1, S.hq | 0));
+    }
+    function render() {
+      clamp();
+      $('#from-n').value = S.from; $('#from-r').value = S.from;
+      $('#to-n').value = S.to; $('#to-r').value = S.to;
+      $('#hq-n').value = S.hq; $('#buff-n').value = S.buff;
+      document.querySelectorAll('[data-heroes]').forEach(b => b.setAttribute('aria-pressed', +b.dataset.heroes === S.heroes));
+      document.querySelectorAll('[data-filter]').forEach(b => b.setAttribute('aria-pressed', b.dataset.filter === S.filter));
+      document.querySelectorAll('[data-preset]').forEach(b => { const p = PRESETS[+b.dataset.preset]; b.setAttribute('aria-pressed', p[1] === S.from && p[2] === S.to && p[3] === S.heroes); });
+
+      const per = cum.get(S.to) - cum.get(S.from), total = per * S.heroes;
+      $('#total').textContent = fmt(total);
+      $('#total-sub').textContent = `${words(total)} Hero EXP · Lv ${S.from} → ${S.to}${S.heroes > 1 ? ` · ${S.heroes} heroes` : ''}`;
+      const needHq = hqFor(S.to);
+      $('#badges').innerHTML = S.to > HQ_CAP
+        ? `<span class="chip warn">Lv ${S.to} is not reachable yet: HQ stops at ${MAX_HQ} (Lv ${HQ_CAP})</span>`
+        : `<span class="chip good">Needs HQ ${needHq}</span><span class="chip">+${S.to - S.from} levels</span>`;
+      $('#fill').style.left = `${(S.from - 1) / (MAXL - 1) * 100}%`;
+      $('#fill').style.width = `${(S.to - S.from) / (MAXL - 1) * 100}%`;
+      $('#tiles').innerHTML = [
+        ['Per hero', short(per), `${fmt(per)} EXP`],
+        ['All heroes', short(total), S.heroes === 1 ? '1 hero' : `${S.heroes} heroes`],
+        ['Last level costs', short(costOf.get(S.to)), `Lv ${S.to - 1} → ${S.to}`],
+        ['Share of Lv 1 → 150', `${(per / cum.get(HQ_CAP) * 100).toFixed(1)}%`, 'per hero']
+      ].map(([l, v, s]) => `<div class="tile"><small>${l}</small><b>${v}</b><div class="sub">${esc(s)}</div></div>`).join('');
+
+      const battle = D.battle_exp_item;
+      $('#items-note').textContent = `Chest sizes at HQ ${S.hq}`;
+      $('#items').innerHTML = [
+        `<div class="item" style="--q:var(--sr)"><span class="ico"><img src="../assets/ui/hero_exp.webp" alt=""></span><div><b>${fmt(Math.ceil(total / battle.exp))}</b><small>${esc(battle.name)} (${fmt(battle.exp)} EXP each)</small></div></div>`,
+        ...D.chests.slice().reverse().map(c => { const e = chestExp(c, S.hq); return `<div class="item" style="--q:${QCOL[c.quality]}"><span class="ico"><img src="../assets/ui/exp_chest.webp" alt=""></span><div><b>${fmt(Math.ceil(total / e))}</b><small>${esc(c.name)} (${short(e)} EXP each)</small></div></div>`; })
+      ].join('');
+
+      const bonus = S.buff ? buffLv[S.buff - 1].bonus : 0;
+      const pts = Math.floor(total / duelSrc.exp) * duelSrc.points * (1 + bonus);
+      $('#duel-text').innerHTML = `Using this EXP on the hero day (day ${D.alliance_competition.day}) earns about <b style="color:var(--text)">${fmt(pts)}</b> points: ${duelSrc.points} point per ${fmt(duelSrc.exp)} Hero EXP${bonus ? `, +${Math.round(bonus * 100)}% from Points Buff Lv ${S.buff}` : ''}.`;
+
+      renderChart(); renderLevels(); highlightHq();
+      const p = new URLSearchParams();
+      if (S.from !== 1) p.set('start', S.from);
+      if (S.to !== 150) p.set('target', S.to);
+      if (S.heroes !== 1) p.set('squad', S.heroes);
+      if (!S.hqAuto) p.set('hq', S.hq);
+      if (S.buff) p.set('buff', S.buff);
+      history.replaceState(null, '', location.pathname + (p.toString() ? `?${p}` : ''));
     }
 
-    function formatWords(n) {
-      if (n >= 1e9) return (n / 1e9).toFixed(2) + " Billion Hero EXP";
-      if (n >= 1e6) return (n / 1e6).toFixed(2) + " Million Hero EXP";
-      if (n >= 1e3) return (n / 1e3).toFixed(1) + " Thousand Hero EXP";
-      return formatNumber(n) + " Hero EXP";
-    }
-
-    // Get EXP between start and target
-    function getExpDiff(start, target) {
-      const startEntry = RAW_LEVELS[start - 1];
-      const targetEntry = RAW_LEVELS[target - 1];
-      return targetEntry[2] - startEntry[2];
-    }
-
-    // Calculation core
-    function updateCalculator() {
-      // Enforce bounds
-      if (startLevel >= targetLevel) {
-        startLevel = Math.max(1, targetLevel - 1);
-        rangeStart.value = startLevel;
-        numStart.value = startLevel;
-      }
-
-      dispStart.textContent = "Lv " + startLevel;
-      dispTarget.textContent = "Lv " + targetLevel;
-      dispSquad.textContent = squadSize === 1 ? "1 Hero (Solo)" : squadSize + " Heroes";
-
-      const singleExp = getExpDiff(startLevel, targetLevel);
-      const totalExp = singleExp * squadSize;
-      const deltaLevels = targetLevel - startLevel;
-
-      // Hero highlight
-      heroOutputLabel.textContent = squadSize === 1 ? "Total Hero EXP (1 Hero)" : `Total Squad Hero EXP (${squadSize} Heroes)`;
-      heroOutputNum.textContent = formatNumber(totalExp);
-      heroOutputWords.textContent = formatWords(totalExp);
-
-      // Delta & Badges
-      badgeDelta.textContent = `+${deltaLevels} Level${deltaLevels > 1 ? "s" : ""}`;
-      if (targetLevel === 150) {
-        badgeCap.textContent = "HQ 30 Base Cap";
-        badgeCap.style.color = "var(--green)";
-      } else if (targetLevel === 175) {
-        badgeCap.textContent = "HQ 35 Extended Cap";
-        badgeCap.style.color = "var(--amber)";
-      } else if (targetLevel > 150) {
-        badgeCap.textContent = `HQ ${Math.ceil(targetLevel / 5)} Extended`;
-        badgeCap.style.color = "var(--amber)";
-      } else {
-        badgeCap.textContent = `HQ ${Math.ceil(targetLevel / 5)} Cap`;
-        badgeCap.style.color = "var(--accent)";
-      }
-
-      // Stats
-      statPerHero.textContent = formatShort(singleExp);
-      statPerHeroSub.textContent = formatNumber(singleExp) + " EXP";
-      statSquadTotal.textContent = formatShort(totalExp);
-      statSquadSub.textContent = squadSize === 1 ? "1 Hero selected" : `${squadSize} Heroes (×${squadSize})`;
-      statVsPts.textContent = formatShort(totalExp * 2) + " pts";
-
-      // Progress bar (relative to target level 150 or 175)
-      const capLevel = targetLevel > 150 ? 175 : 150;
-      const pct = Math.min(100, Math.round((targetLevel / capLevel) * 100));
-      progressFill.style.width = pct + "%";
-      progressPercent.textContent = `${targetLevel} / ${capLevel} (${pct}%)`;
-
-      // Chest equivalents
-      chest10m.textContent = formatNumber(Math.ceil(totalExp / 10000000));
-      chest2m.textContent = formatNumber(Math.ceil(totalExp / 2000000));
-      chest500k.textContent = formatNumber(Math.ceil(totalExp / 500000));
-      chest100k.textContent = formatNumber(Math.ceil(totalExp / 100000));
-
-      renderTable();
-      updateUrl();
-    }
-
-    function updateUrl() {
-      const params = new URLSearchParams();
-      if (startLevel !== 1) params.set("start", startLevel);
-      if (targetLevel !== 150) params.set("target", targetLevel);
-      if (squadSize !== 1) params.set("squad", squadSize);
-      const str = params.toString();
-      const newUrl = window.location.pathname + (str ? "?" + str : "");
-      window.history.replaceState(null, "", newUrl);
-    }
-
-    // Render HQ Matrix
-    function renderHqMatrix() {
-      const hqTiers = [
-        { hq: 20, cap: 100, scope: "Base Game" },
-        { hq: 25, cap: 125, scope: "Mid-to-Late" },
-        { hq: 26, cap: 130, scope: "Mid-to-Late" },
-        { hq: 27, cap: 135, scope: "Late Game" },
-        { hq: 28, cap: 140, scope: "Late Game" },
-        { hq: 29, cap: 145, scope: "Late Game" },
-        { hq: 30, cap: 150, scope: "Base Max Cap" },
-        { hq: 31, cap: 155, scope: "Age of Oil" },
-        { hq: 32, cap: 160, scope: "Age of Oil" },
-        { hq: 33, cap: 165, scope: "Age of Oil" },
-        { hq: 34, cap: 170, scope: "Age of Oil" },
-        { hq: 35, cap: 175, scope: "Extended Cap" }
-      ];
-
-      hqMatrixTbody.innerHTML = hqTiers.map(t => {
-        const cumExp = RAW_LEVELS[t.cap - 1][2];
-        const prevCap = t.cap - 5;
-        const bracketExp = cumExp - (prevCap > 0 ? RAW_LEVELS[prevCap - 1][2] : 0);
-        const isSelected = targetLevel === t.cap;
-
-        return `
-          <tr class="${isSelected ? 'in-range' : ''}">
-            <td><strong>HQ ${t.hq}</strong></td>
-            <td><span class="tag-badge" style="${t.cap === 150 ? 'color:var(--green); border-color:var(--green);' : (t.cap === 175 ? 'color:var(--amber); border-color:var(--amber);' : '')}">Lv ${t.cap}</span></td>
-            <td>${t.scope}</td>
-            <td><strong>${formatNumber(cumExp)}</strong> <small style="color:var(--text-muted)">(${formatShort(cumExp)})</small></td>
-            <td>+${formatShort(bracketExp)}</td>
-            <td>
-              <button class="preset-chip" style="padding:3px 10px; font-size:11px;" onclick="setRange(1, ${t.cap})">
-                Lv 1 → ${t.cap}
-              </button>
-            </td>
-          </tr>
-        `;
-      }).join("");
-    }
-
-    // Render Detailed Table
-    function renderTable() {
-      const base150Cum = RAW_LEVELS[149][2];
-
-      const rows = RAW_LEVELS.filter(entry => {
-        const lvl = entry[0];
-        if (tableFilter === "milestones") return lvl === 1 || lvl % 10 === 0 || lvl === 175;
-        if (tableFilter === "breakpoints") return lvl === 1 || lvl % 5 === 0;
-        if (tableFilter === "selected") return lvl >= startLevel && lvl <= targetLevel;
-        return true; // all
-      }).map(entry => {
-        const [lvl, cost, cum] = entry;
-        const minHq = Math.ceil(lvl / 5);
-        const inSelected = lvl > startLevel && lvl <= targetLevel;
-        const isBreakpoint = lvl % 5 === 0 || lvl === 150 || lvl === 175;
-        const pct150 = ((cum / base150Cum) * 100).toFixed(1);
-
-        return `
-          <tr class="${inSelected ? 'in-range' : ''} ${isBreakpoint ? 'is-breakpoint' : ''}">
-            <td><strong>Lv ${lvl}</strong></td>
-            <td>HQ ${minHq}</td>
-            <td>${lvl === 1 ? '—' : formatNumber(cost)}</td>
-            <td>${formatNumber(cum)} <small style="color:var(--text-muted);">(${formatShort(cum)})</small></td>
-            <td>${pct150}%</td>
-          </tr>
-        `;
-      });
-
-      levelsTbody.innerHTML = rows.join("");
-    }
-
-    // Helpers
-    function setRange(start, target, squad) {
-      startLevel = start;
-      targetLevel = target;
-      if (squad !== undefined) squadSize = squad;
-
-      rangeStart.value = startLevel;
-      numStart.value = startLevel;
-      rangeTarget.value = targetLevel;
-      numTarget.value = targetLevel;
-
-      squadBtns.forEach(b => {
-        b.classList.toggle("active", Number(b.dataset.multiplier) === squadSize);
-      });
-
-      presetChips.forEach(c => {
-        const match = Number(c.dataset.start) === startLevel &&
-                      Number(c.dataset.target) === targetLevel &&
-                      Number(c.dataset.squad) === squadSize;
-        c.classList.toggle("active", match);
-      });
-
-      updateCalculator();
-    }
-
-    // Theme handling
-    function setTheme(theme) {
-      const isDay = theme === 'day';
-      document.documentElement.classList.toggle('day', isDay);
-      document.body.classList.toggle('day', isDay);
-      themeBtn.textContent = isDay ? '☼' : '☾';
-      localStorage.setItem('zroute-theme', theme);
-    }
-
-    themeBtn.addEventListener('click', () => {
-      const isDay = document.documentElement.classList.contains('day');
-      setTheme(isDay ? 'night' : 'day');
+    // Inputs
+    const bind = (id, key) => {
+      const el = $(id);
+      el.addEventListener('input', () => { S[key] = parseInt(el.value, 10) || 0; if (key === 'hq') S.hqAuto = false; render(); });
+    };
+    bind('#from-n', 'from'); bind('#from-r', 'from'); bind('#to-n', 'to'); bind('#to-r', 'to'); bind('#hq-n', 'hq'); bind('#buff-n', 'buff');
+    document.addEventListener('click', e => {
+      const st = e.target.closest('[data-step]');
+      if (st) { const k = st.dataset.step; S[k] += +st.dataset.d; if (k === 'hq') S.hqAuto = false; if (k === 'to' && S.to <= S.from) S.from = S.to - 1; render(); return; }
+      const h = e.target.closest('[data-heroes]'); if (h) { S.heroes = +h.dataset.heroes; render(); return; }
+      const pr = e.target.closest('[data-preset]'); if (pr) { const p = PRESETS[+pr.dataset.preset]; S.from = p[1]; S.to = p[2]; S.heroes = p[3]; render(); return; }
+      const f = e.target.closest('[data-filter]'); if (f) { S.filter = f.dataset.filter; renderLevels(); document.querySelectorAll('[data-filter]').forEach(b => b.setAttribute('aria-pressed', b === f)); return; }
+      const row = e.target.closest('tr[data-hq]'); if (row) { S.from = 1; S.to = +row.dataset.cap; S.hq = +row.dataset.hq; S.hqAuto = true; render(); window.scrollTo({ top: 0, behavior: 'smooth' }); }
     });
 
-    // Input listeners
-    rangeStart.addEventListener("input", e => {
-      startLevel = Number(e.target.value);
-      numStart.value = startLevel;
-      updateCalculator();
-    });
-    numStart.addEventListener("change", e => {
-      startLevel = Math.max(1, Math.min(174, Number(e.target.value) || 1));
-      rangeStart.value = startLevel;
-      numStart.value = startLevel;
-      updateCalculator();
-    });
+    // HQ table
+    const chestCols = D.chests.slice().reverse();
+    $('#hq-table').innerHTML = `<thead><tr><th>HQ</th><th>Hero cap</th><th class="r">EXP to cap</th><th class="r">Last 5 levels</th>${chestCols.map(c => `<th class="r">${esc(c.grade)} chest</th>`).join('')}</tr></thead><tbody>${D.hq_caps.map(h => {
+      const cap = h.hero_level_cap, prev = Math.max(1, cap - 5);
+      return `<tr data-hq="${h.hq}" data-cap="${cap}" tabindex="0"><td><b>${h.hq}</b></td><td>Lv ${cap}</td><td class="r">${short(cum.get(cap))}</td><td class="r">+${short(cum.get(cap) - cum.get(prev))}</td>${chestCols.map(c => `<td class="r">${short(chestExp(c, h.hq))}</td>`).join('')}</tr>`;
+    }).join('')}<tr><td><span class="lock">Not in game</span></td><td>Lv 155–175</td><td class="r">${short(cum.get(MAXL))}</td><td class="r" colspan="${1 + chestCols.length}"><span class="faint">The EXP table continues to Lv 175, but no HQ level unlocks it yet.</span></td></tr></tbody>`;
+    $('#hq-table').addEventListener('keydown', e => { const r = e.target.closest('tr[data-hq]'); if (r && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); r.click(); } });
+    function highlightHq() { document.querySelectorAll('#hq-table tr[data-hq]').forEach(r => r.classList.toggle('hl', +r.dataset.hq === S.hq)); }
 
-    rangeTarget.addEventListener("input", e => {
-      targetLevel = Number(e.target.value);
-      numTarget.value = targetLevel;
-      updateCalculator();
-    });
-    numTarget.addEventListener("change", e => {
-      targetLevel = Math.max(2, Math.min(175, Number(e.target.value) || 150));
-      rangeTarget.value = targetLevel;
-      numTarget.value = targetLevel;
-      updateCalculator();
-    });
+    function renderLevels() {
+      const rows = D.levels.filter(l => S.filter === 'all' || (S.filter === 'milestones' && (l.level % 10 === 0 || l.level === 1 || l.level === MAXL)) || (S.filter === 'hq' && l.level % 5 === 0) || (S.filter === 'range' && l.level >= S.from && l.level <= S.to));
+      $('#level-table').innerHTML = `<thead><tr><th>Level</th><th>HQ needed</th><th class="r">EXP for level</th><th class="r">Total from Lv 1</th><th class="r">% of Lv 150</th></tr></thead><tbody>${rows.map(l => `<tr class="${l.level >= S.from && l.level <= S.to ? 'hl' : ''}"><td><b>Lv ${l.level}</b></td><td>${l.level > HQ_CAP ? '<span class="lock">Not in game</span>' : `HQ ${hqFor(l.level) || 1}`}</td><td class="r">${l.level === 1 ? '—' : fmt(l.cost)}</td><td class="r">${fmt(l.cumulative)}</td><td class="r">${(l.cumulative / cum.get(HQ_CAP) * 100).toFixed(1)}%</td></tr>`).join('')}</tbody>`;
+    }
 
-    squadBtns.forEach(btn => {
-      btn.addEventListener("click", () => {
-        squadBtns.forEach(b => b.classList.remove("active"));
-        btn.classList.add("active");
-        squadSize = Number(btn.dataset.multiplier);
-        updateCalculator();
-      });
-    });
+    // Chart: total EXP from Lv 1 by level, selected range highlighted
+    function renderChart() {
+      const box = $('#chart');
+      const W = Math.max(300, Math.min(900, box.clientWidth || 600)), H = 200, pad = { l: 44, r: 12, t: 10, b: 26 };
+      const maxV = cum.get(MAXL);
+      const X = l => pad.l + (l - 1) / (MAXL - 1) * (W - pad.l - pad.r), Y = v => H - pad.b - v / maxV * (H - pad.t - pad.b);
+      const path = D.levels.map((l, i) => `${i ? 'L' : 'M'}${X(l.level).toFixed(1)} ${Y(l.cumulative).toFixed(1)}`).join('');
+      const seg = D.levels.filter(l => l.level >= S.from && l.level <= S.to);
+      const area = `M${X(S.from)} ${Y(0)} ` + seg.map(l => `L${X(l.level).toFixed(1)} ${Y(l.cumulative).toFixed(1)}`).join(' ') + ` L${X(S.to)} ${Y(0)} Z`;
+      const yt = [0, 5e9, 10e9, 15e9].filter(v => v <= maxV * 1.02);
+      box.innerHTML = `<svg class="chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="Total Hero EXP from level 1 rises steeply after level 100; reaching level 150 takes ${short(cum.get(HQ_CAP))} EXP">
+        <g class="grid">${yt.map(v => `<line x1="${pad.l}" x2="${W - pad.r}" y1="${Y(v)}" y2="${Y(v)}"/>`).join('')}</g>
+        ${yt.map(v => `<text x="${pad.l - 6}" y="${Y(v) + 4}" text-anchor="end">${v ? v / 1e9 + 'B' : 0}</text>`).join('')}
+        ${[1, 50, 100, 150, 175].map(l => `<text x="${X(l)}" y="${H - 8}" text-anchor="middle">Lv ${l}</text>`).join('')}
+        <rect x="${X(HQ_CAP)}" y="${pad.t}" width="${X(MAXL) - X(HQ_CAP)}" height="${H - pad.t - pad.b}" fill="var(--warn)" opacity=".07"/>
+        <text x="${(X(HQ_CAP) + X(MAXL)) / 2}" y="${pad.t + 12}" text-anchor="middle" style="fill:var(--warn)">not in game</text>
+        <path d="${area}" fill="var(--accent)" opacity=".18"/>
+        <path d="${path}" fill="none" stroke="var(--accent)" stroke-width="2"/>
+        <circle cx="${X(S.to)}" cy="${Y(cum.get(S.to))}" r="4" fill="var(--accent)" stroke="var(--s1)" stroke-width="2"/>
+        <rect id="hit" x="${pad.l}" y="${pad.t}" width="${W - pad.l - pad.r}" height="${H - pad.t - pad.b}" fill="transparent"/>
+        <line id="cross" y1="${pad.t}" y2="${H - pad.b}" stroke="var(--muted)" stroke-dasharray="3 3" visibility="hidden"/>
+      </svg><div class="chart-tip" id="tip" hidden></div>`;
+      const svg = box.querySelector('svg'), tip = $('#tip'), cross = $('#cross');
+      svg.onpointermove = e => {
+        const r = svg.getBoundingClientRect(), x = (e.clientX - r.left) / r.width * W;
+        const lv = Math.min(MAXL, Math.max(1, Math.round((x - pad.l) / (W - pad.l - pad.r) * (MAXL - 1) + 1)));
+        cross.setAttribute('x1', X(lv)); cross.setAttribute('x2', X(lv)); cross.setAttribute('visibility', 'visible');
+        tip.innerHTML = `<b>Lv ${lv}</b> · ${short(cum.get(lv))} EXP total<br>${lv > 1 ? `+${short(costOf.get(lv))} for this level` : ''}`;
+        tip.hidden = false;
+        const px = X(lv) / W * r.width; tip.style.left = `${Math.min(Math.max(0, px - tip.offsetWidth / 2), r.width - tip.offsetWidth)}px`; tip.style.top = '0px';
+      };
+      svg.onpointerleave = () => { tip.hidden = true; cross.setAttribute('visibility', 'hidden'); };
+    }
+    let lastW = innerWidth;
+    addEventListener('resize', () => { if (Math.abs(innerWidth - lastW) > 40) { lastW = innerWidth; renderChart(); } });
 
-    presetChips.forEach(chip => {
-      chip.addEventListener("click", () => {
-        setRange(Number(chip.dataset.start), Number(chip.dataset.target), Number(chip.dataset.squad));
-      });
-    });
-
-    filterBtns.forEach(btn => {
-      btn.addEventListener("click", () => {
-        filterBtns.forEach(b => b.classList.remove("active"));
-        btn.classList.add("active");
-        tableFilter = btn.dataset.filter;
-        renderTable();
-      });
-    });
-
-    // Initialize state from URL params
-    const urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.has("start")) startLevel = Math.max(1, Math.min(174, Number(urlParams.get("start"))));
-    if (urlParams.has("target")) targetLevel = Math.max(2, Math.min(175, Number(urlParams.get("target"))));
-    if (urlParams.has("squad")) squadSize = Number(urlParams.get("squad")) || 1;
-
-    rangeStart.value = startLevel;
-    numStart.value = startLevel;
-    rangeTarget.value = targetLevel;
-    numTarget.value = targetLevel;
-    squadBtns.forEach(b => b.classList.toggle("active", Number(b.dataset.multiplier) === squadSize));
-
-    setTheme(localStorage.getItem('zroute-theme') || 'night');
-    renderHqMatrix();
-    updateCalculator();
+    render();
+  })();
   </script>
 </body>
 </html>

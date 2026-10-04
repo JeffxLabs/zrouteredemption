@@ -1,0 +1,5172 @@
+{
+ "source": "CollegeTechType, CollegeTech (catalog V202610032200)",
+ "trees": [
+  {
+   "id": 1,
+   "name": "Develop",
+   "sort": 1,
+   "icon": "icon_technologyType_build",
+   "squad": null,
+   "recommended": false,
+   "shown_when": [
+    {
+     "kind": "institute_level",
+     "level": 1,
+     "text": "Institute Lv. 1"
+    }
+   ],
+   "unlock": [
+    {
+     "kind": "institute_level",
+     "level": 1,
+     "text": "Institute Lv. 1"
+    }
+   ],
+   "techs": [
+    {
+     "id": 1001,
+     "name": "Quick Construction I",
+     "row": 1,
+     "col": 3,
+     "pos": "1_1_3",
+     "from": [],
+     "icon": "icon_technology_buildSpeed",
+     "max_level": 5,
+     "description": "Building Speed",
+     "frame": 0
+    },
+    {
+     "id": 1002,
+     "name": "Healing Capacity I",
+     "row": 5,
+     "col": 2,
+     "pos": "1_5_2",
+     "from": [
+      "1_4_1",
+      "1_4_2",
+      "1_4_3"
+     ],
+     "icon": "icon_technology_hospitalCapacity",
+     "max_level": 5,
+     "description": "Hospital Capacity",
+     "frame": 0
+    },
+    {
+     "id": 1003,
+     "name": "Barracks Expansion I",
+     "row": 5,
+     "col": 1,
+     "pos": "1_5_1",
+     "from": [
+      "1_4_1",
+      "1_4_2",
+      "1_4_3"
+     ],
+     "icon": "icon_technology_barrackCapacity",
+     "max_level": 5,
+     "description": "Soldier Training Limit",
+     "frame": 0
+    },
+    {
+     "id": 1004,
+     "name": "Research Enhancement I",
+     "row": 1,
+     "col": 1,
+     "pos": "1_1_1",
+     "from": [],
+     "icon": "icon_technology_researchSpeed",
+     "max_level": 5,
+     "description": "Tech Research Speed",
+     "frame": 0
+    },
+    {
+     "id": 1005,
+     "name": "Enhanced Healing I",
+     "row": 6,
+     "col": 1,
+     "pos": "1_6_1",
+     "from": [
+      "1_5_1",
+      "1_5_3"
+     ],
+     "icon": "icon_technology_healSpeed",
+     "max_level": 5,
+     "description": "Healing Speed",
+     "frame": 0
+    },
+    {
+     "id": 1006,
+     "name": "Accelerated Training I",
+     "row": 6,
+     "col": 3,
+     "pos": "1_6_3",
+     "from": [
+      "1_5_1",
+      "1_5_3"
+     ],
+     "icon": "icon_technology_trainSpeed",
+     "max_level": 5,
+     "description": "Training Speed",
+     "frame": 0
+    },
+    {
+     "id": 1007,
+     "name": "Master Builder",
+     "row": 8,
+     "col": 2,
+     "pos": "1_8_2",
+     "from": [
+      "1_7_2"
+     ],
+     "icon": "icon_technology_buildResourceReduce",
+     "max_level": 5,
+     "description": "Building Resource Cost -",
+     "frame": 1
+    },
+    {
+     "id": 1008,
+     "name": "Quick Construction II",
+     "row": 9,
+     "col": 2,
+     "pos": "1_9_2",
+     "from": [
+      "1_8_1",
+      "1_8_2",
+      "1_8_3"
+     ],
+     "icon": "icon_technology_buildSpeed",
+     "max_level": 5,
+     "description": "Building Speed",
+     "frame": 0
+    },
+    {
+     "id": 1009,
+     "name": "Healing Capacity II",
+     "row": 10,
+     "col": 1,
+     "pos": "1_10_1",
+     "from": [
+      "1_9_2"
+     ],
+     "icon": "icon_technology_hospitalCapacity",
+     "max_level": 5,
+     "description": "Hospital Capacity",
+     "frame": 0
+    },
+    {
+     "id": 1010,
+     "name": "Barracks Expansion II",
+     "row": 10,
+     "col": 3,
+     "pos": "1_10_3",
+     "from": [
+      "1_9_2"
+     ],
+     "icon": "icon_technology_barrackCapacity",
+     "max_level": 5,
+     "description": "Soldier Training Limit",
+     "frame": 0
+    },
+    {
+     "id": 1011,
+     "name": "Research Enhancement II",
+     "row": 11,
+     "col": 1,
+     "pos": "1_11_1",
+     "from": [
+      "1_10_1",
+      "1_10_3"
+     ],
+     "icon": "icon_technology_researchSpeed",
+     "max_level": 5,
+     "description": "Tech Research Speed",
+     "frame": 0
+    },
+    {
+     "id": 1012,
+     "name": "Enhanced Healing II",
+     "row": 12,
+     "col": 1,
+     "pos": "1_12_1",
+     "from": [
+      "1_11_1",
+      "1_11_3"
+     ],
+     "icon": "icon_technology_healSpeed",
+     "max_level": 5,
+     "description": "Healing Speed",
+     "frame": 0
+    },
+    {
+     "id": 1013,
+     "name": "Accelerated Training II",
+     "row": 12,
+     "col": 3,
+     "pos": "1_12_3",
+     "from": [
+      "1_11_1",
+      "1_11_3"
+     ],
+     "icon": "icon_technology_trainSpeed",
+     "max_level": 5,
+     "description": "Training Speed",
+     "frame": 0
+    },
+    {
+     "id": 1101,
+     "name": "Good Craftsmanship I",
+     "row": 2,
+     "col": 2,
+     "pos": "1_2_2",
+     "from": [
+      "1_1_1",
+      "1_1_3"
+     ],
+     "icon": "icon_technology_buildResourceReduce",
+     "max_level": 1,
+     "description": "Food Output",
+     "frame": 0
+    },
+    {
+     "id": 1102,
+     "name": "Advanced Officer I",
+     "row": 3,
+     "col": 1,
+     "pos": "1_3_1",
+     "from": [
+      "1_2_2"
+     ],
+     "icon": "icon_technology_resourceProtect",
+     "max_level": 1,
+     "description": "Food Output",
+     "frame": 0
+    },
+    {
+     "id": 1103,
+     "name": "Intensive Healing I",
+     "row": 3,
+     "col": 3,
+     "pos": "1_3_3",
+     "from": [
+      "1_2_2"
+     ],
+     "icon": "icon_technology_healResourceReduce",
+     "max_level": 1,
+     "description": "Food Output",
+     "frame": 0
+    },
+    {
+     "id": 1104,
+     "name": "Basic Barracks Expansion I",
+     "row": 4,
+     "col": 1,
+     "pos": "1_4_1",
+     "from": [
+      "1_3_1",
+      "1_3_3"
+     ],
+     "icon": "icon_technology_barrackCapacity",
+     "max_level": 1,
+     "description": "Food Output",
+     "frame": 0
+    },
+    {
+     "id": 1105,
+     "name": "Basic Healing Capacity I",
+     "row": 4,
+     "col": 2,
+     "pos": "1_4_2",
+     "from": [
+      "1_3_1",
+      "1_3_3"
+     ],
+     "icon": "icon_technology_hospitalCapacity",
+     "max_level": 1,
+     "description": "Food Output",
+     "frame": 0
+    },
+    {
+     "id": 1106,
+     "name": "Advanced Officer II",
+     "row": 4,
+     "col": 3,
+     "pos": "1_4_3",
+     "from": [
+      "1_3_1",
+      "1_3_3"
+     ],
+     "icon": "icon_technology_resourceProtect",
+     "max_level": 1,
+     "description": "Food Output",
+     "frame": 0
+    },
+    {
+     "id": 1107,
+     "name": "Good Craftsmanship II",
+     "row": 7,
+     "col": 2,
+     "pos": "1_7_2",
+     "from": [
+      "1_6_1",
+      "1_6_3"
+     ],
+     "icon": "icon_technology_buildResourceReduce",
+     "max_level": 1,
+     "description": "Food Output",
+     "frame": 0
+    },
+    {
+     "id": 1108,
+     "name": "Efficient Research I",
+     "row": 8,
+     "col": 1,
+     "pos": "1_8_1",
+     "from": [
+      "1_7_2"
+     ],
+     "icon": "icon_technology_resourceProtect",
+     "max_level": 1,
+     "description": "Food Output",
+     "frame": 0
+    },
+    {
+     "id": 1109,
+     "name": "Advanced Officer III",
+     "row": 8,
+     "col": 3,
+     "pos": "1_8_3",
+     "from": [
+      "1_7_2"
+     ],
+     "icon": "icon_technology_resourceProtect",
+     "max_level": 1,
+     "description": "Food Output",
+     "frame": 0
+    },
+    {
+     "id": 1110,
+     "name": "Advanced Officer IV",
+     "row": 11,
+     "col": 3,
+     "pos": "1_11_3",
+     "from": [
+      "1_10_1",
+      "1_10_3"
+     ],
+     "icon": "icon_technology_resourceProtect",
+     "max_level": 1,
+     "description": "Food Output",
+     "frame": 0
+    },
+    {
+     "id": 1111,
+     "name": "Efficient Research II",
+     "row": 12,
+     "col": 2,
+     "pos": "1_12_2",
+     "from": [
+      "1_11_1",
+      "1_11_3"
+     ],
+     "icon": "icon_technology_resourceProtect",
+     "max_level": 1,
+     "description": "Food Output",
+     "frame": 0
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "name": "Economy",
+   "sort": 2,
+   "icon": "icon_technologyType_resource",
+   "squad": null,
+   "recommended": false,
+   "shown_when": [
+    {
+     "kind": "institute_level",
+     "level": 1,
+     "text": "Institute Lv. 1"
+    }
+   ],
+   "unlock": [
+    {
+     "kind": "institute_level",
+     "level": 1,
+     "text": "Institute Lv. 1"
+    }
+   ],
+   "techs": [
+    {
+     "id": 2001,
+     "name": "Food Output I",
+     "row": 3,
+     "col": 1,
+     "pos": "1_3_1",
+     "from": [
+      "1_2_1"
+     ],
+     "icon": "icon_technology_foodProduce",
+     "max_level": 5,
+     "description": "Food Output",
+     "frame": 0
+    },
+    {
+     "id": 2002,
+     "name": "Metal Output I",
+     "row": 3,
+     "col": 2,
+     "pos": "1_3_2",
+     "from": [
+      "1_2_2"
+     ],
+     "icon": "icon_technology_metalProduce",
+     "max_level": 5,
+     "description": "Metal Output",
+     "frame": 0
+    },
+    {
+     "id": 2003,
+     "name": "Oil Output I",
+     "row": 3,
+     "col": 3,
+     "pos": "1_3_3",
+     "from": [
+      "1_2_3"
+     ],
+     "icon": "icon_technology_oilProduce",
+     "max_level": 5,
+     "description": "Oil Output",
+     "frame": 0
+    },
+    {
+     "id": 2004,
+     "name": "Food Collection I",
+     "row": 7,
+     "col": 1,
+     "pos": "1_7_1",
+     "from": [
+      "1_6_1",
+      "1_6_3"
+     ],
+     "icon": "icon_technology_foodGather",
+     "max_level": 5,
+     "description": "Food Gathering Speed",
+     "frame": 0
+    },
+    {
+     "id": 2005,
+     "name": "Metal Collection I",
+     "row": 7,
+     "col": 2,
+     "pos": "1_7_2",
+     "from": [
+      "1_6_1",
+      "1_6_3"
+     ],
+     "icon": "icon_technology_metalGather",
+     "max_level": 5,
+     "description": "Metal Gathering Speed +",
+     "frame": 0
+    },
+    {
+     "id": 2006,
+     "name": "Oil Collection I",
+     "row": 7,
+     "col": 3,
+     "pos": "1_7_3",
+     "from": [
+      "1_6_1",
+      "1_6_3"
+     ],
+     "icon": "icon_technology_oilGather",
+     "max_level": 5,
+     "description": "Oil Gathering Speed +",
+     "frame": 0
+    },
+    {
+     "id": 2007,
+     "name": "Extra Farm",
+     "row": 8,
+     "col": 2,
+     "pos": "1_8_2",
+     "from": [
+      "1_7_1",
+      "1_7_2",
+      "1_7_3"
+     ],
+     "icon": "icon_technology_moreFarmland",
+     "max_level": 1,
+     "description": "Farm Building Limit",
+     "frame": 2
+    },
+    {
+     "id": 2008,
+     "name": "Food Output II",
+     "row": 10,
+     "col": 1,
+     "pos": "1_10_1",
+     "from": [
+      "1_9_1"
+     ],
+     "icon": "icon_technology_foodProduce",
+     "max_level": 5,
+     "description": "Food Output",
+     "frame": 0
+    },
+    {
+     "id": 2009,
+     "name": "Metal Output II",
+     "row": 10,
+     "col": 2,
+     "pos": "1_10_2",
+     "from": [
+      "1_9_2"
+     ],
+     "icon": "icon_technology_metalProduce",
+     "max_level": 5,
+     "description": "Metal Output",
+     "frame": 0
+    },
+    {
+     "id": 2010,
+     "name": "Oil Output II",
+     "row": 10,
+     "col": 3,
+     "pos": "1_10_3",
+     "from": [
+      "1_9_3"
+     ],
+     "icon": "icon_technology_oilProduce",
+     "max_level": 5,
+     "description": "Oil Output",
+     "frame": 0
+    },
+    {
+     "id": 2011,
+     "name": "Food Collection II",
+     "row": 11,
+     "col": 1,
+     "pos": "1_11_1",
+     "from": [
+      "1_10_1"
+     ],
+     "icon": "icon_technology_foodGather",
+     "max_level": 5,
+     "description": "Food Gathering Speed",
+     "frame": 0
+    },
+    {
+     "id": 2012,
+     "name": "Metal Collection II",
+     "row": 11,
+     "col": 2,
+     "pos": "1_11_2",
+     "from": [
+      "1_10_2"
+     ],
+     "icon": "icon_technology_metalGather",
+     "max_level": 5,
+     "description": "Metal Gathering Speed +",
+     "frame": 0
+    },
+    {
+     "id": 2013,
+     "name": "Oil Collection II",
+     "row": 11,
+     "col": 3,
+     "pos": "1_11_3",
+     "from": [
+      "1_10_3"
+     ],
+     "icon": "icon_technology_oilGather",
+     "max_level": 5,
+     "description": "Oil Gathering Speed +",
+     "frame": 0
+    },
+    {
+     "id": 2014,
+     "name": "Extra Foundry",
+     "row": 12,
+     "col": 2,
+     "pos": "1_12_2",
+     "from": [
+      "1_11_1",
+      "1_11_2",
+      "1_11_3"
+     ],
+     "icon": "icon_technology_moreMetalStation",
+     "max_level": 1,
+     "description": "Metal Smelting Plant Building Limit",
+     "frame": 2
+    },
+    {
+     "id": 2101,
+     "name": "Farm Capacity I",
+     "row": 1,
+     "col": 1,
+     "pos": "1_1_1",
+     "from": [],
+     "icon": "icon_technology_foodProduce",
+     "max_level": 1,
+     "description": "Max Food Production Time",
+     "frame": 0
+    },
+    {
+     "id": 2102,
+     "name": "Foundry Capacity I",
+     "row": 1,
+     "col": 2,
+     "pos": "1_1_2",
+     "from": [],
+     "icon": "icon_technology_metalProduce",
+     "max_level": 1,
+     "description": "Max Metal Production Time",
+     "frame": 0
+    },
+    {
+     "id": 2103,
+     "name": "Oil Extraction Well Capacity I",
+     "row": 1,
+     "col": 3,
+     "pos": "1_1_3",
+     "from": [],
+     "icon": "icon_technology_oilProduce",
+     "max_level": 1,
+     "description": "Max Oil Production Time",
+     "frame": 0
+    },
+    {
+     "id": 2104,
+     "name": "Basic Food Output I",
+     "row": 2,
+     "col": 1,
+     "pos": "1_2_1",
+     "from": [
+      "1_1_1"
+     ],
+     "icon": "icon_technology_foodProduce",
+     "max_level": 1,
+     "description": "Food Output",
+     "frame": 0
+    },
+    {
+     "id": 2105,
+     "name": "Basic Metal Output I",
+     "row": 2,
+     "col": 2,
+     "pos": "1_2_2",
+     "from": [
+      "1_1_2"
+     ],
+     "icon": "icon_technology_metalProduce",
+     "max_level": 1,
+     "description": "Metal Output",
+     "frame": 0
+    },
+    {
+     "id": 2106,
+     "name": "Basic Oil Output I",
+     "row": 2,
+     "col": 3,
+     "pos": "1_2_3",
+     "from": [
+      "1_1_3"
+     ],
+     "icon": "icon_technology_oilProduce",
+     "max_level": 1,
+     "description": "Oil Output",
+     "frame": 0
+    },
+    {
+     "id": 2107,
+     "name": "Farm Load I",
+     "row": 4,
+     "col": 1,
+     "pos": "1_4_1",
+     "from": [
+      "1_3_1",
+      "1_3_2",
+      "1_3_3"
+     ],
+     "icon": "icon_technology_foodProduce",
+     "max_level": 1,
+     "description": "Carry Farmland Load Capacity Increase",
+     "frame": 0
+    },
+    {
+     "id": 2108,
+     "name": "Basic Food Collection I",
+     "row": 4,
+     "col": 3,
+     "pos": "1_4_3",
+     "from": [
+      "1_3_1",
+      "1_3_2",
+      "1_3_3"
+     ],
+     "icon": "icon_technology_foodProduce",
+     "max_level": 1,
+     "description": "Food Gathering Speed",
+     "frame": 0
+    },
+    {
+     "id": 2109,
+     "name": "Metal Load I",
+     "row": 5,
+     "col": 1,
+     "pos": "1_5_1",
+     "from": [
+      "1_4_1",
+      "1_4_3"
+     ],
+     "icon": "icon_technology_metalProduce",
+     "max_level": 1,
+     "description": "Metal Transport Capacity +",
+     "frame": 0
+    },
+    {
+     "id": 2110,
+     "name": "Basic Metal Collection I",
+     "row": 5,
+     "col": 3,
+     "pos": "1_5_3",
+     "from": [
+      "1_4_1",
+      "1_4_3"
+     ],
+     "icon": "icon_technology_metalProduce",
+     "max_level": 1,
+     "description": "Metal Gathering Speed +",
+     "frame": 0
+    },
+    {
+     "id": 2111,
+     "name": "Oil Load I",
+     "row": 6,
+     "col": 1,
+     "pos": "1_6_1",
+     "from": [
+      "1_5_1",
+      "1_5_3"
+     ],
+     "icon": "icon_technology_oilProduce",
+     "max_level": 1,
+     "description": "Oil Transport Capacity +",
+     "frame": 0
+    },
+    {
+     "id": 2112,
+     "name": "Basic Oil Collection I",
+     "row": 6,
+     "col": 3,
+     "pos": "1_6_3",
+     "from": [
+      "1_5_1",
+      "1_5_3"
+     ],
+     "icon": "icon_technology_oilProduce",
+     "max_level": 1,
+     "description": "Oil Gathering Speed +",
+     "frame": 0
+    },
+    {
+     "id": 2113,
+     "name": "Basic Metal Output II",
+     "row": 9,
+     "col": 2,
+     "pos": "1_9_2",
+     "from": [
+      "1_8_2"
+     ],
+     "icon": "icon_technology_metalProduce",
+     "max_level": 1,
+     "description": "Metal Output",
+     "frame": 0
+    },
+    {
+     "id": 2114,
+     "name": "Basic Food Output II",
+     "row": 9,
+     "col": 1,
+     "pos": "1_9_1",
+     "from": [
+      "1_8_2"
+     ],
+     "icon": "icon_technology_foodProduce",
+     "max_level": 1,
+     "description": "Food Output",
+     "frame": 0
+    },
+    {
+     "id": 2115,
+     "name": "Basic Oil Output II",
+     "row": 9,
+     "col": 3,
+     "pos": "1_9_3",
+     "from": [
+      "1_8_2"
+     ],
+     "icon": "icon_technology_oilProduce",
+     "max_level": 1,
+     "description": "Oil Output",
+     "frame": 0
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "name": "Hero",
+   "sort": 3,
+   "icon": "icon_technologyType_hero",
+   "squad": null,
+   "recommended": true,
+   "shown_when": [
+    {
+     "kind": "institute_level",
+     "level": 3,
+     "text": "Institute Lv. 3"
+    }
+   ],
+   "unlock": [
+    {
+     "kind": "institute_level",
+     "level": 5,
+     "text": "Institute Lv. 5"
+    }
+   ],
+   "techs": [
+    {
+     "id": 3001,
+     "name": "Warrior DMG I",
+     "row": 1,
+     "col": 1,
+     "pos": "1_1_1",
+     "from": [],
+     "icon": "icon_technology_braveHeroDmgUp",
+     "max_level": 5,
+     "description": "Warrior Hero DMG +",
+     "frame": 1
+    },
+    {
+     "id": 3002,
+     "name": "Warrior ATK I",
+     "row": 2,
+     "col": 1,
+     "pos": "1_2_1",
+     "from": [
+      "1_1_1"
+     ],
+     "icon": "icon_technology_braveHeroAtkUp",
+     "max_level": 5,
+     "description": "Warrior Hero ATK +",
+     "frame": 0
+    },
+    {
+     "id": 3003,
+     "name": "Warrior HP I",
+     "row": 4,
+     "col": 1,
+     "pos": "1_4_1",
+     "from": [
+      "1_3_1"
+     ],
+     "icon": "icon_technology_braveHeroHpUp",
+     "max_level": 5,
+     "description": "Warrior Hero HP +",
+     "frame": 0
+    },
+    {
+     "id": 3004,
+     "name": "Warrior DEF I",
+     "row": 3,
+     "col": 1,
+     "pos": "1_3_1",
+     "from": [
+      "1_2_1"
+     ],
+     "icon": "icon_technology_braveHeroDefUp",
+     "max_level": 5,
+     "description": "Warrior Hero DEF +",
+     "frame": 0
+    },
+    {
+     "id": 3005,
+     "name": "Tactical DMG I",
+     "row": 1,
+     "col": 2,
+     "pos": "1_1_2",
+     "from": [],
+     "icon": "icon_technology_adventureHeroDmgUp",
+     "max_level": 5,
+     "description": "Tactical Hero DMG +",
+     "frame": 1
+    },
+    {
+     "id": 3006,
+     "name": "Tactical ATK I",
+     "row": 2,
+     "col": 2,
+     "pos": "1_2_2",
+     "from": [
+      "1_1_2"
+     ],
+     "icon": "icon_technology_adventurebraveHeroAtkUp",
+     "max_level": 5,
+     "description": "Tactical Hero ATK +",
+     "frame": 0
+    },
+    {
+     "id": 3007,
+     "name": "Tactical DEF I",
+     "row": 3,
+     "col": 2,
+     "pos": "1_3_2",
+     "from": [
+      "1_2_2"
+     ],
+     "icon": "icon_technology_adventurebraveHeroDefUp",
+     "max_level": 5,
+     "description": "Tactical Hero DEF +",
+     "frame": 0
+    },
+    {
+     "id": 3008,
+     "name": "Tactical  HP I",
+     "row": 4,
+     "col": 2,
+     "pos": "1_4_2",
+     "from": [
+      "1_3_2"
+     ],
+     "icon": "icon_technology_adventurebraveHeroHpUp",
+     "max_level": 5,
+     "description": "Tactical Hero HP +",
+     "frame": 0
+    },
+    {
+     "id": 3009,
+     "name": "Assault DMG I",
+     "row": 1,
+     "col": 3,
+     "pos": "1_1_3",
+     "from": [],
+     "icon": "icon_technology_vigilantHeroDmgUp",
+     "max_level": 5,
+     "description": "Assault Hero DMG +",
+     "frame": 1
+    },
+    {
+     "id": 3010,
+     "name": "Assault ATK I",
+     "row": 2,
+     "col": 3,
+     "pos": "1_2_3",
+     "from": [
+      "1_1_3"
+     ],
+     "icon": "icon_technology_vigilantHeroAtkUp",
+     "max_level": 5,
+     "description": "Assault Hero ATK +",
+     "frame": 0
+    },
+    {
+     "id": 3011,
+     "name": "Assault DEF I",
+     "row": 3,
+     "col": 3,
+     "pos": "1_3_3",
+     "from": [
+      "1_2_3"
+     ],
+     "icon": "icon_technology_vigilantHeroDefUp",
+     "max_level": 5,
+     "description": "Assault Hero DEF +",
+     "frame": 0
+    },
+    {
+     "id": 3012,
+     "name": "Assault HP I",
+     "row": 4,
+     "col": 3,
+     "pos": "1_4_3",
+     "from": [
+      "1_3_3"
+     ],
+     "icon": "icon_technology_vigilantHeroHpUp",
+     "max_level": 5,
+     "description": "Assault Hero HP +",
+     "frame": 0
+    },
+    {
+     "id": 3013,
+     "name": "Warrior DMG II",
+     "row": 8,
+     "col": 3,
+     "pos": "1_8_3",
+     "from": [
+      "1_7_2"
+     ],
+     "icon": "icon_technology_braveHeroDmgUp",
+     "max_level": 5,
+     "description": "Warrior Hero DMG +",
+     "frame": 1
+    },
+    {
+     "id": 3014,
+     "name": "Warrior ATK II",
+     "row": 8,
+     "col": 1,
+     "pos": "1_8_1",
+     "from": [
+      "1_7_2"
+     ],
+     "icon": "icon_technology_braveHeroAtkUp",
+     "max_level": 5,
+     "description": "Warrior Hero ATK +",
+     "frame": 1
+    },
+    {
+     "id": 3015,
+     "name": "Warrior DEF II",
+     "row": 9,
+     "col": 1,
+     "pos": "1_9_1",
+     "from": [
+      "1_8_1",
+      "1_8_2",
+      "1_8_3"
+     ],
+     "icon": "icon_technology_braveHeroDefUp",
+     "max_level": 5,
+     "description": "Warrior Hero DEF +",
+     "frame": 0
+    },
+    {
+     "id": 3016,
+     "name": "Warrior HP II",
+     "row": 9,
+     "col": 3,
+     "pos": "1_9_3",
+     "from": [
+      "1_8_1",
+      "1_8_2",
+      "1_8_3"
+     ],
+     "icon": "icon_technology_braveHeroHpUp",
+     "max_level": 5,
+     "description": "Warrior Hero HP +",
+     "frame": 0
+    },
+    {
+     "id": 3017,
+     "name": "Tactical DMG II",
+     "row": 11,
+     "col": 3,
+     "pos": "1_11_3",
+     "from": [
+      "1_10_1",
+      "1_10_3"
+     ],
+     "icon": "icon_technology_adventureHeroDmgUp",
+     "max_level": 5,
+     "description": "Tactical Hero DMG +",
+     "frame": 1
+    },
+    {
+     "id": 3018,
+     "name": "Tactical ATK II",
+     "row": 11,
+     "col": 1,
+     "pos": "1_11_1",
+     "from": [
+      "1_10_1",
+      "1_10_3"
+     ],
+     "icon": "icon_technology_adventurebraveHeroAtkUp",
+     "max_level": 5,
+     "description": "Tactical Hero ATK +",
+     "frame": 1
+    },
+    {
+     "id": 3019,
+     "name": "Tactical DEF II",
+     "row": 12,
+     "col": 1,
+     "pos": "1_12_1",
+     "from": [
+      "1_11_1",
+      "1_11_2",
+      "1_11_3"
+     ],
+     "icon": "icon_technology_adventurebraveHeroDefUp",
+     "max_level": 5,
+     "description": "Tactical Hero DEF +",
+     "frame": 0
+    },
+    {
+     "id": 3020,
+     "name": "Tactical HP II",
+     "row": 12,
+     "col": 3,
+     "pos": "1_12_3",
+     "from": [
+      "1_11_1",
+      "1_11_2",
+      "1_11_3"
+     ],
+     "icon": "icon_technology_adventurebraveHeroHpUp",
+     "max_level": 5,
+     "description": "Tactical Hero HP +",
+     "frame": 0
+    },
+    {
+     "id": 3021,
+     "name": "Assault DMG II",
+     "row": 14,
+     "col": 3,
+     "pos": "1_14_3",
+     "from": [
+      "1_13_1",
+      "1_13_3"
+     ],
+     "icon": "icon_technology_vigilantHeroDmgUp",
+     "max_level": 5,
+     "description": "Assault Hero DMG +",
+     "frame": 1
+    },
+    {
+     "id": 3022,
+     "name": "Assault ATK II",
+     "row": 14,
+     "col": 1,
+     "pos": "1_14_1",
+     "from": [
+      "1_13_1",
+      "1_13_3"
+     ],
+     "icon": "icon_technology_vigilantHeroAtkUp",
+     "max_level": 5,
+     "description": "Assault Hero ATK +",
+     "frame": 1
+    },
+    {
+     "id": 3023,
+     "name": "Assault DEF II",
+     "row": 15,
+     "col": 1,
+     "pos": "1_15_1",
+     "from": [
+      "1_14_1",
+      "1_14_2",
+      "1_14_3"
+     ],
+     "icon": "icon_technology_vigilantHeroDefUp",
+     "max_level": 5,
+     "description": "Assault Hero DEF +",
+     "frame": 0
+    },
+    {
+     "id": 3024,
+     "name": "Assault HP II",
+     "row": 15,
+     "col": 3,
+     "pos": "1_15_3",
+     "from": [
+      "1_14_1",
+      "1_14_2",
+      "1_14_3"
+     ],
+     "icon": "icon_technology_vigilantHeroHpUp",
+     "max_level": 5,
+     "description": "Assault Hero HP +",
+     "frame": 0
+    },
+    {
+     "id": 3025,
+     "name": "Damage dealt by all heroes +",
+     "row": 17,
+     "col": 2,
+     "pos": "1_17_2",
+     "from": [
+      "1_16_1",
+      "1_16_3"
+     ],
+     "icon": "icon_technology_heroDmgUp",
+     "max_level": 5,
+     "description": "Hero Damage",
+     "frame": 1
+    },
+    {
+     "id": 3026,
+     "name": "ATK of all heroes +",
+     "row": 18,
+     "col": 1,
+     "pos": "1_18_1",
+     "from": [
+      "1_17_2"
+     ],
+     "icon": "icon_technology_heroAtkUp",
+     "max_level": 5,
+     "description": "Hero ATK",
+     "frame": 0
+    },
+    {
+     "id": 3027,
+     "name": "DEF of all heroes +",
+     "row": 18,
+     "col": 2,
+     "pos": "1_18_2",
+     "from": [
+      "1_17_2"
+     ],
+     "icon": "icon_technology_heroDefUp",
+     "max_level": 5,
+     "description": "Hero DEF",
+     "frame": 0
+    },
+    {
+     "id": 3028,
+     "name": "HP of all heroes +",
+     "row": 18,
+     "col": 3,
+     "pos": "1_18_3",
+     "from": [
+      "1_17_2"
+     ],
+     "icon": "icon_technology_heroHpUp",
+     "max_level": 5,
+     "description": "Hero HP",
+     "frame": 0
+    },
+    {
+     "id": 3101,
+     "name": "Ambush Warrior ATK I",
+     "row": 5,
+     "col": 2,
+     "pos": "1_5_2",
+     "from": [
+      "1_4_1",
+      "1_4_2",
+      "1_4_3"
+     ],
+     "icon": "icon_technology_braveHeroAtkUp",
+     "max_level": 1,
+     "description": "During Zombie Ambush, Warrior Hero ATK +",
+     "frame": 0
+    },
+    {
+     "id": 3102,
+     "name": "Ambush Tactical ATK I",
+     "row": 6,
+     "col": 2,
+     "pos": "1_6_2",
+     "from": [
+      "1_5_2"
+     ],
+     "icon": "icon_technology_adventurebraveHeroAtkUp",
+     "max_level": 1,
+     "description": "During Zombie Ambush, Tactical Hero ATK +",
+     "frame": 0
+    },
+    {
+     "id": 3103,
+     "name": "Ambush Assault ATK I",
+     "row": 7,
+     "col": 2,
+     "pos": "1_7_2",
+     "from": [
+      "1_6_2"
+     ],
+     "icon": "icon_technology_vigilantHeroAtkUp",
+     "max_level": 1,
+     "description": "During Zombie Ambush, Assault Hero ATK +",
+     "frame": 0
+    },
+    {
+     "id": 3104,
+     "name": "Ambush Warrior ATK II",
+     "row": 8,
+     "col": 2,
+     "pos": "1_8_2",
+     "from": [
+      "1_7_2"
+     ],
+     "icon": "icon_technology_braveHeroAtkUp",
+     "max_level": 1,
+     "description": "During Zombie Ambush, Warrior Hero ATK +",
+     "frame": 1
+    },
+    {
+     "id": 3105,
+     "name": "Ambush Warrior DMG I",
+     "row": 10,
+     "col": 1,
+     "pos": "1_10_1",
+     "from": [
+      "1_9_1",
+      "1_9_3"
+     ],
+     "icon": "icon_technology_braveHeroDmgUp",
+     "max_level": 1,
+     "description": "During Zombie Ambush, Warrior Hero DMG +",
+     "frame": 0
+    },
+    {
+     "id": 3106,
+     "name": "Ambush Warrior DEF",
+     "row": 10,
+     "col": 3,
+     "pos": "1_10_3",
+     "from": [
+      "1_9_1",
+      "1_9_3"
+     ],
+     "icon": "icon_technology_braveHeroHpUp",
+     "max_level": 1,
+     "description": "During Zombie Ambush, Warrior Hero HP +",
+     "frame": 0
+    },
+    {
+     "id": 3107,
+     "name": "Ambush Tactical ATK II",
+     "row": 11,
+     "col": 2,
+     "pos": "1_11_2",
+     "from": [
+      "1_10_1",
+      "1_10_3"
+     ],
+     "icon": "icon_technology_adventurebraveHeroAtkUp",
+     "max_level": 1,
+     "description": "During Zombie Ambush, Tactical Hero ATK +",
+     "frame": 1
+    },
+    {
+     "id": 3108,
+     "name": "Ambush Tactical DMG I",
+     "row": 13,
+     "col": 1,
+     "pos": "1_13_1",
+     "from": [
+      "1_12_1",
+      "1_12_3"
+     ],
+     "icon": "icon_technology_adventureHeroDmgUp",
+     "max_level": 1,
+     "description": "During Zombie Ambush, Tactical Hero DMG +",
+     "frame": 0
+    },
+    {
+     "id": 3109,
+     "name": "Ambush Tactical DEF",
+     "row": 13,
+     "col": 3,
+     "pos": "1_13_3",
+     "from": [
+      "1_12_1",
+      "1_12_3"
+     ],
+     "icon": "icon_technology_adventurebraveHeroHpUp",
+     "max_level": 1,
+     "description": "During Zombie Ambush, Tactical Hero HP +",
+     "frame": 0
+    },
+    {
+     "id": 3110,
+     "name": "Ambush Assault ATK II",
+     "row": 14,
+     "col": 2,
+     "pos": "1_14_2",
+     "from": [
+      "1_13_1",
+      "1_13_3"
+     ],
+     "icon": "icon_technology_vigilantHeroAtkUp",
+     "max_level": 1,
+     "description": "During Zombie Ambush, Assault Hero ATK +",
+     "frame": 1
+    },
+    {
+     "id": 3111,
+     "name": "Ambush Assault DMG I",
+     "row": 16,
+     "col": 1,
+     "pos": "1_16_1",
+     "from": [
+      "1_15_1",
+      "1_15_3"
+     ],
+     "icon": "icon_technology_vigilantHeroDmgUp",
+     "max_level": 1,
+     "description": "During Zombie Ambush, Assault Hero DMG +",
+     "frame": 0
+    },
+    {
+     "id": 3112,
+     "name": "Ambush Assault DEF",
+     "row": 16,
+     "col": 3,
+     "pos": "1_16_3",
+     "from": [
+      "1_15_1",
+      "1_15_3"
+     ],
+     "icon": "icon_technology_vigilantHeroHpUp",
+     "max_level": 1,
+     "description": "During Zombie Ambush, Assault Hero HP +",
+     "frame": 0
+    },
+    {
+     "id": 3113,
+     "name": "Ambush Hero DMG I",
+     "row": 19,
+     "col": 2,
+     "pos": "1_19_2",
+     "from": [
+      "1_18_1",
+      "1_18_2",
+      "1_18_3"
+     ],
+     "icon": "icon_technology_heroDmgUp",
+     "max_level": 1,
+     "description": "During Zombie Ambush, Hero DMG +",
+     "frame": 0
+    },
+    {
+     "id": 3114,
+     "name": "Ambush Hero ATK I",
+     "row": 20,
+     "col": 1,
+     "pos": "1_20_1",
+     "from": [
+      "1_19_2"
+     ],
+     "icon": "icon_technology_heroAtkUp",
+     "max_level": 1,
+     "description": "During Zombie Ambush, Hero ATK +",
+     "frame": 0
+    },
+    {
+     "id": 3115,
+     "name": "Ambush Hero DEF I",
+     "row": 20,
+     "col": 2,
+     "pos": "1_20_2",
+     "from": [
+      "1_19_2"
+     ],
+     "icon": "icon_technology_heroDefUp",
+     "max_level": 1,
+     "description": "During Zombie Ambush, Hero DEF +",
+     "frame": 0
+    },
+    {
+     "id": 3116,
+     "name": "Ambush Hero HP I",
+     "row": 20,
+     "col": 3,
+     "pos": "1_20_3",
+     "from": [
+      "1_19_2"
+     ],
+     "icon": "icon_technology_heroHpUp",
+     "max_level": 1,
+     "description": "During Zombie Ambush, Hero HP +",
+     "frame": 0
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "name": "Soldier",
+   "sort": 4,
+   "icon": "icon_technologyType_soldier",
+   "squad": null,
+   "recommended": true,
+   "shown_when": [
+    {
+     "kind": "institute_level",
+     "level": 5,
+     "text": "Institute Lv. 5"
+    }
+   ],
+   "unlock": [
+    {
+     "kind": "institute_level",
+     "level": 7,
+     "text": "Institute Lv. 7"
+    }
+   ],
+   "techs": [
+    {
+     "id": 4001,
+     "name": "Soldier ATK Up I",
+     "row": 2,
+     "col": 1,
+     "pos": "1_2_1",
+     "from": [
+      "1_1_2"
+     ],
+     "icon": "icon_technology_soldierAtkUp",
+     "max_level": 5,
+     "description": "Soldier ATK +",
+     "frame": 0
+    },
+    {
+     "id": 4002,
+     "name": "Soldier DEF Up I",
+     "row": 2,
+     "col": 3,
+     "pos": "1_2_3",
+     "from": [
+      "1_1_2"
+     ],
+     "icon": "icon_technology_soldieDefUp",
+     "max_level": 5,
+     "description": "Soldier DEF +",
+     "frame": 0
+    },
+    {
+     "id": 4003,
+     "name": "Soldier HP Up I",
+     "row": 1,
+     "col": 2,
+     "pos": "1_1_2",
+     "from": [],
+     "icon": "icon_technology_soldieHpUp",
+     "max_level": 5,
+     "description": "Soldier HP +",
+     "frame": 0
+    },
+    {
+     "id": 4004,
+     "name": "Soldier Load Up I",
+     "row": 3,
+     "col": 2,
+     "pos": "1_3_2",
+     "from": [
+      "1_2_1",
+      "1_2_3"
+     ],
+     "icon": "icon_technology_soldieWeightBearingUp",
+     "max_level": 5,
+     "description": "Soldier Load Increase",
+     "frame": 0
+    },
+    {
+     "id": 4005,
+     "name": "Soldier ATK Up II",
+     "row": 4,
+     "col": 1,
+     "pos": "1_4_1",
+     "from": [
+      "1_3_2"
+     ],
+     "icon": "icon_technology_soldierAtkUp",
+     "max_level": 5,
+     "description": "Soldier ATK +",
+     "frame": 0
+    },
+    {
+     "id": 4006,
+     "name": "Soldier DEF Up II",
+     "row": 4,
+     "col": 3,
+     "pos": "1_4_3",
+     "from": [
+      "1_3_2"
+     ],
+     "icon": "icon_technology_soldieDefUp",
+     "max_level": 5,
+     "description": "Soldier DEF +",
+     "frame": 0
+    },
+    {
+     "id": 4007,
+     "name": "Soldier HP Up II",
+     "row": 5,
+     "col": 2,
+     "pos": "1_5_2",
+     "from": [
+      "1_4_1",
+      "1_4_3"
+     ],
+     "icon": "icon_technology_soldieHpUp",
+     "max_level": 5,
+     "description": "Soldier HP +",
+     "frame": 0
+    },
+    {
+     "id": 4008,
+     "name": "Soldier Load Up II",
+     "row": 6,
+     "col": 2,
+     "pos": "1_6_2",
+     "from": [
+      "1_5_2"
+     ],
+     "icon": "icon_technology_soldieWeightBearingUp",
+     "max_level": 5,
+     "description": "Soldier Load Increase",
+     "frame": 0
+    },
+    {
+     "id": 4009,
+     "name": "Soldier ATK Up III",
+     "row": 7,
+     "col": 1,
+     "pos": "1_7_1",
+     "from": [
+      "1_6_2"
+     ],
+     "icon": "icon_technology_soldierAtkUp",
+     "max_level": 5,
+     "description": "Soldier ATK +",
+     "frame": 0
+    },
+    {
+     "id": 4010,
+     "name": "Soldier DEF Up III",
+     "row": 7,
+     "col": 3,
+     "pos": "1_7_3",
+     "from": [
+      "1_6_2"
+     ],
+     "icon": "icon_technology_soldieDefUp",
+     "max_level": 5,
+     "description": "Soldier DEF +",
+     "frame": 0
+    },
+    {
+     "id": 4011,
+     "name": "Soldier HP Up III",
+     "row": 8,
+     "col": 2,
+     "pos": "1_8_2",
+     "from": [
+      "1_7_1",
+      "1_7_3"
+     ],
+     "icon": "icon_technology_soldieHpUp",
+     "max_level": 5,
+     "description": "Soldier HP +",
+     "frame": 0
+    },
+    {
+     "id": 4012,
+     "name": "Soldier Load Up III",
+     "row": 9,
+     "col": 2,
+     "pos": "1_9_2",
+     "from": [
+      "1_8_2"
+     ],
+     "icon": "icon_technology_soldieWeightBearingUp",
+     "max_level": 5,
+     "description": "Soldier Load Increase",
+     "frame": 0
+    },
+    {
+     "id": 4013,
+     "name": "Soldier ATK Up IV",
+     "row": 10,
+     "col": 1,
+     "pos": "1_10_1",
+     "from": [
+      "1_9_2"
+     ],
+     "icon": "icon_technology_soldierAtkUp",
+     "max_level": 5,
+     "description": "Soldier ATK +",
+     "frame": 0
+    },
+    {
+     "id": 4014,
+     "name": "Soldier DEF Up IV",
+     "row": 10,
+     "col": 3,
+     "pos": "1_10_3",
+     "from": [
+      "1_9_2"
+     ],
+     "icon": "icon_technology_soldieDefUp",
+     "max_level": 5,
+     "description": "Soldier DEF +",
+     "frame": 0
+    },
+    {
+     "id": 4015,
+     "name": "Soldier HP Up IV",
+     "row": 11,
+     "col": 2,
+     "pos": "1_11_2",
+     "from": [
+      "1_10_1",
+      "1_10_3"
+     ],
+     "icon": "icon_technology_soldieHpUp",
+     "max_level": 5,
+     "description": "Soldier HP +",
+     "frame": 0
+    },
+    {
+     "id": 4016,
+     "name": "Soldier Load Up IV",
+     "row": 12,
+     "col": 2,
+     "pos": "1_12_2",
+     "from": [
+      "1_11_2"
+     ],
+     "icon": "icon_technology_soldieWeightBearingUp",
+     "max_level": 5,
+     "description": "Soldier Load Increase",
+     "frame": 0
+    },
+    {
+     "id": 4017,
+     "name": "Soldier ATK Up V",
+     "row": 13,
+     "col": 1,
+     "pos": "1_13_1",
+     "from": [
+      "1_12_2"
+     ],
+     "icon": "icon_technology_soldierAtkUp",
+     "max_level": 5,
+     "description": "Soldier ATK +",
+     "frame": 0
+    },
+    {
+     "id": 4018,
+     "name": "Soldier DEF Up V",
+     "row": 13,
+     "col": 3,
+     "pos": "1_13_3",
+     "from": [
+      "1_12_2"
+     ],
+     "icon": "icon_technology_soldieDefUp",
+     "max_level": 5,
+     "description": "Soldier DEF +",
+     "frame": 0
+    },
+    {
+     "id": 4019,
+     "name": "Soldier HP Up V",
+     "row": 14,
+     "col": 1,
+     "pos": "1_14_1",
+     "from": [
+      "1_13_1"
+     ],
+     "icon": "icon_technology_soldieHpUp",
+     "max_level": 5,
+     "description": "Soldier HP +",
+     "frame": 0
+    },
+    {
+     "id": 4020,
+     "name": "Soldier Load Up V",
+     "row": 14,
+     "col": 3,
+     "pos": "1_14_3",
+     "from": [
+      "1_13_3"
+     ],
+     "icon": "icon_technology_soldieWeightBearingUp",
+     "max_level": 5,
+     "description": "Soldier Load Increase",
+     "frame": 0
+    }
+   ]
+  },
+  {
+   "id": 14,
+   "name": "Full Development",
+   "sort": 5,
+   "icon": "icon_technologyType_build",
+   "squad": null,
+   "recommended": false,
+   "shown_when": [
+    {
+     "kind": "institute_level",
+     "level": 1,
+     "text": "Institute Lv. 1"
+    }
+   ],
+   "unlock": [
+    {
+     "kind": "institute_level",
+     "level": 1,
+     "text": "Institute Lv. 1"
+    },
+    {
+     "kind": "tree_progress",
+     "tree": 1,
+     "percent": 40,
+     "text": "Develop 40% complete"
+    }
+   ],
+   "techs": [
+    {
+     "id": 1014,
+     "name": "Training Camp Addition",
+     "row": 1,
+     "col": 2,
+     "pos": "1_1_2",
+     "from": [],
+     "icon": "icon_technology_moreBarrack",
+     "max_level": 1,
+     "description": "Barracks Building Limit",
+     "frame": 2
+    },
+    {
+     "id": 1015,
+     "name": "Quick Construction III",
+     "row": 4,
+     "col": 1,
+     "pos": "1_4_1",
+     "from": [
+      "1_3_1",
+      "1_3_2",
+      "1_3_3"
+     ],
+     "icon": "icon_technology_buildSpeed",
+     "max_level": 5,
+     "description": "Building Speed",
+     "frame": 0
+    },
+    {
+     "id": 1016,
+     "name": "Healing Capacity III",
+     "row": 6,
+     "col": 1,
+     "pos": "1_6_1",
+     "from": [
+      "1_5_1",
+      "1_5_2",
+      "1_5_3"
+     ],
+     "icon": "icon_technology_hospitalCapacity",
+     "max_level": 5,
+     "description": "Hospital Capacity",
+     "frame": 0
+    },
+    {
+     "id": 1017,
+     "name": "Barracks Expansion III",
+     "row": 6,
+     "col": 3,
+     "pos": "1_6_3",
+     "from": [
+      "1_5_1",
+      "1_5_2",
+      "1_5_3"
+     ],
+     "icon": "icon_technology_barrackCapacity",
+     "max_level": 5,
+     "description": "Soldier Training Limit",
+     "frame": 0
+    },
+    {
+     "id": 1018,
+     "name": "Research Enhancement III",
+     "row": 8,
+     "col": 2,
+     "pos": "1_8_2",
+     "from": [
+      "1_7_1",
+      "1_7_3"
+     ],
+     "icon": "icon_technology_researchSpeed",
+     "max_level": 5,
+     "description": "Tech Research Speed",
+     "frame": 0
+    },
+    {
+     "id": 1019,
+     "name": "Enhanced Healing III",
+     "row": 11,
+     "col": 3,
+     "pos": "1_11_3",
+     "from": [
+      "1_10_1",
+      "1_10_2",
+      "1_10_3"
+     ],
+     "icon": "icon_technology_healSpeed",
+     "max_level": 5,
+     "description": "Healing Speed",
+     "frame": 0
+    },
+    {
+     "id": 1020,
+     "name": "Accelerated Training III",
+     "row": 10,
+     "col": 2,
+     "pos": "1_10_2",
+     "from": [
+      "1_9_1",
+      "1_9_3"
+     ],
+     "icon": "icon_technology_trainSpeed",
+     "max_level": 5,
+     "description": "Training Speed",
+     "frame": 0
+    },
+    {
+     "id": 1021,
+     "name": "Reduced Healing Cost",
+     "row": 11,
+     "col": 1,
+     "pos": "1_11_1",
+     "from": [
+      "1_10_1",
+      "1_10_2",
+      "1_10_3"
+     ],
+     "icon": "icon_technology_healResourceReduce",
+     "max_level": 5,
+     "description": "Healing Cost -",
+     "frame": 0
+    },
+    {
+     "id": 1022,
+     "name": "Quick Construction IV",
+     "row": 12,
+     "col": 1,
+     "pos": "1_12_1",
+     "from": [
+      "1_11_1",
+      "1_11_3"
+     ],
+     "icon": "icon_technology_buildSpeed",
+     "max_level": 5,
+     "description": "Building Speed",
+     "frame": 0
+    },
+    {
+     "id": 1023,
+     "name": "Healing Capacity IV",
+     "row": 13,
+     "col": 1,
+     "pos": "1_13_1",
+     "from": [
+      "1_12_1",
+      "1_12_3"
+     ],
+     "icon": "icon_technology_hospitalCapacity",
+     "max_level": 5,
+     "description": "Hospital Capacity",
+     "frame": 0
+    },
+    {
+     "id": 1024,
+     "name": "Barracks Expansion IV",
+     "row": 13,
+     "col": 3,
+     "pos": "1_13_3",
+     "from": [
+      "1_12_1",
+      "1_12_3"
+     ],
+     "icon": "icon_technology_barrackCapacity",
+     "max_level": 5,
+     "description": "Soldier Training Limit",
+     "frame": 0
+    },
+    {
+     "id": 1025,
+     "name": "Research Enhancement IV",
+     "row": 14,
+     "col": 2,
+     "pos": "1_14_2",
+     "from": [
+      "1_13_1",
+      "1_13_3"
+     ],
+     "icon": "icon_technology_researchSpeed",
+     "max_level": 5,
+     "description": "Tech Research Speed",
+     "frame": 0
+    },
+    {
+     "id": 1026,
+     "name": "Enhanced Healing IV",
+     "row": 15,
+     "col": 1,
+     "pos": "1_15_1",
+     "from": [
+      "1_14_2"
+     ],
+     "icon": "icon_technology_healSpeed",
+     "max_level": 5,
+     "description": "Healing Speed",
+     "frame": 0
+    },
+    {
+     "id": 1027,
+     "name": "Accelerated Training IV",
+     "row": 15,
+     "col": 3,
+     "pos": "1_15_3",
+     "from": [
+      "1_14_2"
+     ],
+     "icon": "icon_technology_trainSpeed",
+     "max_level": 5,
+     "description": "Training Speed",
+     "frame": 0
+    },
+    {
+     "id": 1028,
+     "name": "Drill Ground Expansion",
+     "row": 15,
+     "col": 2,
+     "pos": "1_15_2",
+     "from": [
+      "1_14_2"
+     ],
+     "icon": "icon_technology_paradeGroundCapacity",
+     "max_level": 5,
+     "description": "Drill Ground Capacity",
+     "frame": 0
+    },
+    {
+     "id": 1029,
+     "name": "Battlefield Medic",
+     "row": 16,
+     "col": 2,
+     "pos": "1_16_2",
+     "from": [
+      "1_15_1",
+      "1_15_2",
+      "1_15_3"
+     ],
+     "icon": "icon_technology_deathReduce",
+     "max_level": 5,
+     "description": "Your Soldier Death Rate in PVP Battle -",
+     "frame": 2
+    },
+    {
+     "id": 1112,
+     "name": "Good Craftsmanship III",
+     "row": 2,
+     "col": 1,
+     "pos": "1_2_1",
+     "from": [
+      "1_1_2"
+     ],
+     "icon": "icon_technology_buildResourceReduce",
+     "max_level": 1,
+     "description": "Food Output",
+     "frame": 0
+    },
+    {
+     "id": 1113,
+     "name": "Efficient Research III",
+     "row": 2,
+     "col": 3,
+     "pos": "1_2_3",
+     "from": [
+      "1_1_2"
+     ],
+     "icon": "icon_technology_resourceProtect",
+     "max_level": 1,
+     "description": "Food Output",
+     "frame": 0
+    },
+    {
+     "id": 1114,
+     "name": "Intensive Healing II",
+     "row": 3,
+     "col": 1,
+     "pos": "1_3_1",
+     "from": [
+      "1_2_1",
+      "1_2_3"
+     ],
+     "icon": "icon_technology_healResourceReduce",
+     "max_level": 1,
+     "description": "Food Output",
+     "frame": 0
+    },
+    {
+     "id": 1115,
+     "name": "Advanced Officer V",
+     "row": 3,
+     "col": 2,
+     "pos": "1_3_2",
+     "from": [
+      "1_2_1",
+      "1_2_3"
+     ],
+     "icon": "icon_technology_resourceProtect",
+     "max_level": 1,
+     "description": "Food Output",
+     "frame": 0
+    },
+    {
+     "id": 1116,
+     "name": "Good Craftsmanship IV",
+     "row": 3,
+     "col": 3,
+     "pos": "1_3_3",
+     "from": [
+      "1_2_1",
+      "1_2_3"
+     ],
+     "icon": "icon_technology_buildResourceReduce",
+     "max_level": 1,
+     "description": "Food Output",
+     "frame": 0
+    },
+    {
+     "id": 1117,
+     "name": "Good Craftsmanship V",
+     "row": 4,
+     "col": 3,
+     "pos": "1_4_3",
+     "from": [
+      "1_3_1",
+      "1_3_2",
+      "1_3_3"
+     ],
+     "icon": "icon_technology_buildResourceReduce",
+     "max_level": 1,
+     "description": "Food Output",
+     "frame": 0
+    },
+    {
+     "id": 1118,
+     "name": "Basic Healing Capacity II",
+     "row": 5,
+     "col": 1,
+     "pos": "1_5_1",
+     "from": [
+      "1_4_1",
+      "1_4_3"
+     ],
+     "icon": "icon_technology_hospitalCapacity",
+     "max_level": 1,
+     "description": "Food Output",
+     "frame": 0
+    },
+    {
+     "id": 1119,
+     "name": "Basic Barracks Expansion II",
+     "row": 5,
+     "col": 2,
+     "pos": "1_5_2",
+     "from": [
+      "1_4_1",
+      "1_4_3"
+     ],
+     "icon": "icon_technology_barrackCapacity",
+     "max_level": 1,
+     "description": "Food Output",
+     "frame": 0
+    },
+    {
+     "id": 1120,
+     "name": "Advanced Officer VI",
+     "row": 5,
+     "col": 3,
+     "pos": "1_5_3",
+     "from": [
+      "1_4_1",
+      "1_4_3"
+     ],
+     "icon": "icon_technology_resourceProtect",
+     "max_level": 1,
+     "description": "Food Output",
+     "frame": 0
+    },
+    {
+     "id": 1121,
+     "name": "Basic Research I",
+     "row": 7,
+     "col": 1,
+     "pos": "1_7_1",
+     "from": [
+      "1_6_1",
+      "1_6_3"
+     ],
+     "icon": "icon_technology_resourceProtect",
+     "max_level": 1,
+     "description": "Food Output",
+     "frame": 0
+    },
+    {
+     "id": 1122,
+     "name": "Efficient Research IV",
+     "row": 7,
+     "col": 3,
+     "pos": "1_7_3",
+     "from": [
+      "1_6_1",
+      "1_6_3"
+     ],
+     "icon": "icon_technology_resourceProtect",
+     "max_level": 1,
+     "description": "Food Output",
+     "frame": 0
+    },
+    {
+     "id": 1123,
+     "name": "Advanced Officer VII",
+     "row": 9,
+     "col": 1,
+     "pos": "1_9_1",
+     "from": [
+      "1_8_2"
+     ],
+     "icon": "icon_technology_resourceProtect",
+     "max_level": 1,
+     "description": "Food Output",
+     "frame": 0
+    },
+    {
+     "id": 1124,
+     "name": "Intensive Healing III",
+     "row": 9,
+     "col": 3,
+     "pos": "1_9_3",
+     "from": [
+      "1_8_2"
+     ],
+     "icon": "icon_technology_healResourceReduce",
+     "max_level": 1,
+     "description": "Food Output",
+     "frame": 0
+    },
+    {
+     "id": 1125,
+     "name": "Reduced Healing Cost I",
+     "row": 10,
+     "col": 1,
+     "pos": "1_10_1",
+     "from": [
+      "1_9_1",
+      "1_9_3"
+     ],
+     "icon": "icon_technology_healResourceReduce",
+     "max_level": 1,
+     "description": "Food Output",
+     "frame": 0
+    },
+    {
+     "id": 1126,
+     "name": "Intensive Healing IV",
+     "row": 10,
+     "col": 3,
+     "pos": "1_10_3",
+     "from": [
+      "1_9_1",
+      "1_9_3"
+     ],
+     "icon": "icon_technology_healResourceReduce",
+     "max_level": 1,
+     "description": "Food Output",
+     "frame": 0
+    },
+    {
+     "id": 1127,
+     "name": "Advanced Officer VIII",
+     "row": 12,
+     "col": 3,
+     "pos": "1_12_3",
+     "from": [
+      "1_11_1",
+      "1_11_3"
+     ],
+     "icon": "icon_technology_resourceProtect",
+     "max_level": 1,
+     "description": "Food Output",
+     "frame": 0
+    }
+   ]
+  },
+  {
+   "id": 15,
+   "name": "Prosperous Economy",
+   "sort": 6,
+   "icon": "icon_technologyType_resource",
+   "squad": null,
+   "recommended": false,
+   "shown_when": [
+    {
+     "kind": "institute_level",
+     "level": 1,
+     "text": "Institute Lv. 1"
+    }
+   ],
+   "unlock": [
+    {
+     "kind": "institute_level",
+     "level": 1,
+     "text": "Institute Lv. 1"
+    },
+    {
+     "kind": "tree_progress",
+     "tree": 2,
+     "percent": 45,
+     "text": "Economy 45% complete"
+    }
+   ],
+   "techs": [
+    {
+     "id": 2015,
+     "name": "Food Output III",
+     "row": 2,
+     "col": 1,
+     "pos": "1_2_1",
+     "from": [
+      "1_1_1"
+     ],
+     "icon": "icon_technology_foodProduce",
+     "max_level": 5,
+     "description": "Food Output",
+     "frame": 0
+    },
+    {
+     "id": 2016,
+     "name": "Metal Output III",
+     "row": 2,
+     "col": 2,
+     "pos": "1_2_2",
+     "from": [
+      "1_1_2"
+     ],
+     "icon": "icon_technology_metalProduce",
+     "max_level": 5,
+     "description": "Metal Output",
+     "frame": 0
+    },
+    {
+     "id": 2017,
+     "name": "Oil Output III",
+     "row": 2,
+     "col": 3,
+     "pos": "1_2_3",
+     "from": [
+      "1_1_3"
+     ],
+     "icon": "icon_technology_oilProduce",
+     "max_level": 5,
+     "description": "Oil Output",
+     "frame": 0
+    },
+    {
+     "id": 2018,
+     "name": "Food Collection III",
+     "row": 3,
+     "col": 1,
+     "pos": "1_3_1",
+     "from": [
+      "1_2_1"
+     ],
+     "icon": "icon_technology_foodGather",
+     "max_level": 5,
+     "description": "Food Gathering Speed",
+     "frame": 0
+    },
+    {
+     "id": 2019,
+     "name": "Metal Collection III",
+     "row": 3,
+     "col": 2,
+     "pos": "1_3_2",
+     "from": [
+      "1_2_2"
+     ],
+     "icon": "icon_technology_metalGather",
+     "max_level": 5,
+     "description": "Metal Gathering Speed +",
+     "frame": 0
+    },
+    {
+     "id": 2020,
+     "name": "Oil Collection III",
+     "row": 3,
+     "col": 3,
+     "pos": "1_3_3",
+     "from": [
+      "1_2_3"
+     ],
+     "icon": "icon_technology_oilGather",
+     "max_level": 5,
+     "description": "Oil Gathering Speed +",
+     "frame": 0
+    },
+    {
+     "id": 2021,
+     "name": "Additional Oil Extraction Plant",
+     "row": 4,
+     "col": 2,
+     "pos": "1_4_2",
+     "from": [
+      "1_3_1",
+      "1_3_2",
+      "1_3_3"
+     ],
+     "icon": "icon_technology_moreOilPlant",
+     "max_level": 1,
+     "description": "Oil Extraction Well Building Limit",
+     "frame": 2
+    },
+    {
+     "id": 2022,
+     "name": "Food Output IV",
+     "row": 9,
+     "col": 1,
+     "pos": "1_9_1",
+     "from": [
+      "1_8_2"
+     ],
+     "icon": "icon_technology_foodProduce",
+     "max_level": 5,
+     "description": "Food Output",
+     "frame": 0
+    },
+    {
+     "id": 2023,
+     "name": "Metal Output IV",
+     "row": 9,
+     "col": 2,
+     "pos": "1_9_2",
+     "from": [
+      "1_8_2"
+     ],
+     "icon": "icon_technology_metalProduce",
+     "max_level": 5,
+     "description": "Metal Output",
+     "frame": 0
+    },
+    {
+     "id": 2024,
+     "name": "Oil Output IV",
+     "row": 9,
+     "col": 3,
+     "pos": "1_9_3",
+     "from": [
+      "1_8_2"
+     ],
+     "icon": "icon_technology_oilProduce",
+     "max_level": 5,
+     "description": "Oil Output",
+     "frame": 0
+    },
+    {
+     "id": 2025,
+     "name": "Food Collection IV",
+     "row": 10,
+     "col": 2,
+     "pos": "1_10_2",
+     "from": [
+      "1_9_1",
+      "1_9_2",
+      "1_9_3"
+     ],
+     "icon": "icon_technology_foodGather",
+     "max_level": 5,
+     "description": "Food Gathering Speed",
+     "frame": 0
+    },
+    {
+     "id": 2026,
+     "name": "Metal Collection IV",
+     "row": 11,
+     "col": 2,
+     "pos": "1_11_2",
+     "from": [
+      "1_10_2"
+     ],
+     "icon": "icon_technology_metalGather",
+     "max_level": 5,
+     "description": "Metal Gathering Speed +",
+     "frame": 0
+    },
+    {
+     "id": 2027,
+     "name": "Oil Collection IV",
+     "row": 12,
+     "col": 2,
+     "pos": "1_12_2",
+     "from": [
+      "1_11_2"
+     ],
+     "icon": "icon_technology_oilGather",
+     "max_level": 5,
+     "description": "Oil Gathering Speed +",
+     "frame": 0
+    },
+    {
+     "id": 2028,
+     "name": "Food Protection",
+     "row": 13,
+     "col": 1,
+     "pos": "1_13_1",
+     "from": [
+      "1_12_2"
+     ],
+     "icon": "icon_technology_foodProtect",
+     "max_level": 5,
+     "description": "Food Protection Capacity",
+     "frame": 0
+    },
+    {
+     "id": 2029,
+     "name": "Metal Protection",
+     "row": 13,
+     "col": 2,
+     "pos": "1_13_2",
+     "from": [
+      "1_12_2"
+     ],
+     "icon": "icon_technology_metalProtect",
+     "max_level": 5,
+     "description": "Metal Protection Capacity",
+     "frame": 0
+    },
+    {
+     "id": 2030,
+     "name": "Oil Protection",
+     "row": 13,
+     "col": 3,
+     "pos": "1_13_3",
+     "from": [
+      "1_12_2"
+     ],
+     "icon": "icon_technology_oilProtect",
+     "max_level": 5,
+     "description": "Oil Protection Capacity",
+     "frame": 0
+    },
+    {
+     "id": 2116,
+     "name": "Farm Capacity II",
+     "row": 1,
+     "col": 1,
+     "pos": "1_1_1",
+     "from": [],
+     "icon": "icon_technology_foodProduce",
+     "max_level": 1,
+     "description": "Max Food Production Time",
+     "frame": 0
+    },
+    {
+     "id": 2117,
+     "name": "Foundry Capacity II",
+     "row": 1,
+     "col": 2,
+     "pos": "1_1_2",
+     "from": [],
+     "icon": "icon_technology_metalProduce",
+     "max_level": 1,
+     "description": "Max Metal Production Time",
+     "frame": 0
+    },
+    {
+     "id": 2118,
+     "name": "Oil Extraction Well Capacity II",
+     "row": 1,
+     "col": 3,
+     "pos": "1_1_3",
+     "from": [],
+     "icon": "icon_technology_oilProduce",
+     "max_level": 1,
+     "description": "Max Oil Production Time",
+     "frame": 0
+    },
+    {
+     "id": 2119,
+     "name": "Basic General Resources I",
+     "row": 5,
+     "col": 1,
+     "pos": "1_5_1",
+     "from": [
+      "1_4_2"
+     ],
+     "icon": "icon_technology_foodProduce",
+     "max_level": 1,
+     "description": "Food Output",
+     "frame": 0
+    },
+    {
+     "id": 2120,
+     "name": "Basic General Resources II",
+     "row": 5,
+     "col": 3,
+     "pos": "1_5_3",
+     "from": [
+      "1_4_2"
+     ],
+     "icon": "icon_technology_metalProduce",
+     "max_level": 1,
+     "description": "Oil Output",
+     "frame": 0
+    },
+    {
+     "id": 2121,
+     "name": "Basic General Resources III",
+     "row": 6,
+     "col": 2,
+     "pos": "1_6_2",
+     "from": [
+      "1_5_1",
+      "1_5_3"
+     ],
+     "icon": "icon_technology_oilProduce",
+     "max_level": 1,
+     "description": "Metal Output",
+     "frame": 0
+    },
+    {
+     "id": 2122,
+     "name": "General Carrying Capacity I",
+     "row": 7,
+     "col": 1,
+     "pos": "1_7_1",
+     "from": [
+      "1_6_2"
+     ],
+     "icon": "icon_technology_foodProduce",
+     "max_level": 1,
+     "description": "Carry Farmland Load Capacity Increase",
+     "frame": 0
+    },
+    {
+     "id": 2123,
+     "name": "General Carrying Capacity II",
+     "row": 7,
+     "col": 3,
+     "pos": "1_7_3",
+     "from": [
+      "1_6_2"
+     ],
+     "icon": "icon_technology_metalProduce",
+     "max_level": 1,
+     "description": "Metal Transport Capacity +",
+     "frame": 0
+    },
+    {
+     "id": 2124,
+     "name": "General Carrying Capacity III",
+     "row": 8,
+     "col": 2,
+     "pos": "1_8_2",
+     "from": [
+      "1_7_1",
+      "1_7_3"
+     ],
+     "icon": "icon_technology_oilProduce",
+     "max_level": 1,
+     "description": "Oil Transport Capacity +",
+     "frame": 0
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "name": "Squad 1",
+   "sort": 7,
+   "icon": "icon_technologyType_team",
+   "squad": 1,
+   "recommended": true,
+   "shown_when": [
+    {
+     "kind": "institute_level",
+     "level": 6,
+     "text": "Institute Lv. 6"
+    }
+   ],
+   "unlock": [
+    {
+     "kind": "institute_level",
+     "level": 8,
+     "text": "Institute Lv. 8"
+    }
+   ],
+   "techs": [
+    {
+     "id": 5001,
+     "name": "Zombie Slayer I",
+     "row": 1,
+     "col": 1,
+     "pos": "1_1_1",
+     "from": [],
+     "icon": "icon_technology_teamHeroDmgUpToZombies",
+     "max_level": 5,
+     "description": "Squad 1's DMG to Monsters +",
+     "frame": 0
+    },
+    {
+     "id": 5002,
+     "name": "Zombie Defense I",
+     "row": 1,
+     "col": 3,
+     "pos": "1_1_3",
+     "from": [],
+     "icon": "icon_technology_teamHeroDmgDownToZombies",
+     "max_level": 5,
+     "description": "Squad 1 Hero's DMG from Monsters -",
+     "frame": 0
+    },
+    {
+     "id": 5003,
+     "name": "Squad Hero ATK I",
+     "row": 2,
+     "col": 1,
+     "pos": "1_2_1",
+     "from": [
+      "1_1_1"
+     ],
+     "icon": "icon_technology_teamHeroAtkUp",
+     "max_level": 5,
+     "description": "Squad 1 Hero ATK +",
+     "frame": 0
+    },
+    {
+     "id": 5004,
+     "name": "Squad Hero DEF I",
+     "row": 2,
+     "col": 3,
+     "pos": "1_2_3",
+     "from": [
+      "1_1_3"
+     ],
+     "icon": "icon_technology_teamHeroDefUp",
+     "max_level": 5,
+     "description": "Squad 1 Hero DEF +",
+     "frame": 0
+    },
+    {
+     "id": 5005,
+     "name": "Squad Hero HP I",
+     "row": 3,
+     "col": 2,
+     "pos": "1_3_2",
+     "from": [
+      "1_2_1",
+      "1_2_3"
+     ],
+     "icon": "icon_technology_teamHeroHpUp",
+     "max_level": 5,
+     "description": "Squad 1 Hero HP +",
+     "frame": 0
+    },
+    {
+     "id": 5006,
+     "name": "Squad Gathering Speed I",
+     "row": 4,
+     "col": 1,
+     "pos": "1_4_1",
+     "from": [
+      "1_3_2"
+     ],
+     "icon": "icon_technology_teamGather",
+     "max_level": 5,
+     "description": "Squad 1 Gathering Speed +",
+     "frame": 0
+    },
+    {
+     "id": 5007,
+     "name": "Vehicle Load I",
+     "row": 4,
+     "col": 3,
+     "pos": "1_4_3",
+     "from": [
+      "1_3_2"
+     ],
+     "icon": "icon_technology_teamWeightBearing",
+     "max_level": 5,
+     "description": "Soldier Load Increase",
+     "frame": 0
+    },
+    {
+     "id": 5008,
+     "name": "March Against Zombies I",
+     "row": 5,
+     "col": 1,
+     "pos": "1_5_1",
+     "from": [
+      "1_4_1",
+      "1_4_3"
+     ],
+     "icon": "icon_technology_teamMarchingSpeedToZombies",
+     "max_level": 5,
+     "description": "Squad 1's March Speed (to Monsters) +",
+     "frame": 0
+    },
+    {
+     "id": 5009,
+     "name": "March Against Enemies I",
+     "row": 5,
+     "col": 2,
+     "pos": "1_5_2",
+     "from": [
+      "1_4_1",
+      "1_4_3"
+     ],
+     "icon": "icon_technology_teamMarchingSpeedToCommander",
+     "max_level": 5,
+     "description": "Squad 1's March Speed (to Commanders) +",
+     "frame": 0
+    },
+    {
+     "id": 5010,
+     "name": "March to Resources I",
+     "row": 5,
+     "col": 3,
+     "pos": "1_5_3",
+     "from": [
+      "1_4_1",
+      "1_4_3"
+     ],
+     "icon": "icon_technology_teamMarchingSpeedToField",
+     "max_level": 5,
+     "description": "Squad 1's March Speed (to Resource Sites) +",
+     "frame": 0
+    },
+    {
+     "id": 5011,
+     "name": "Vehicle Power I",
+     "row": 6,
+     "col": 2,
+     "pos": "1_6_2",
+     "from": [
+      "1_5_1",
+      "1_5_2",
+      "1_5_3"
+     ],
+     "icon": "icon_technology_teamMarchingSpeed",
+     "max_level": 5,
+     "description": "Squad 1's Overall March Speed +",
+     "frame": 0
+    },
+    {
+     "id": 5012,
+     "name": "Enemy Nest Raid I",
+     "row": 7,
+     "col": 1,
+     "pos": "1_7_1",
+     "from": [
+      "1_6_2"
+     ],
+     "icon": "icon_technology_teamHeroAttackAtkUp",
+     "max_level": 5,
+     "description": "When Squad 1 attacks the city, Hero ATK +",
+     "frame": 0
+    },
+    {
+     "id": 5013,
+     "name": "Fierce Counterattack I",
+     "row": 7,
+     "col": 3,
+     "pos": "1_7_3",
+     "from": [
+      "1_6_2"
+     ],
+     "icon": "icon_technology_teamHeroDefenseAtkUp",
+     "max_level": 5,
+     "description": "When Squad 1 defends the city, Hero ATK +",
+     "frame": 0
+    },
+    {
+     "id": 5014,
+     "name": "Steady Advance I",
+     "row": 8,
+     "col": 1,
+     "pos": "1_8_1",
+     "from": [
+      "1_7_1"
+     ],
+     "icon": "icon_technology_teamHeroAttackDefUp",
+     "max_level": 5,
+     "description": "When Squad 1 attacks the city, Hero DEF +",
+     "frame": 0
+    },
+    {
+     "id": 5015,
+     "name": "Base Defense I",
+     "row": 8,
+     "col": 3,
+     "pos": "1_8_3",
+     "from": [
+      "1_7_3"
+     ],
+     "icon": "icon_technology_teamHeroDefenseDefUp",
+     "max_level": 5,
+     "description": "When Squad 1 defends the city, Hero DEF +",
+     "frame": 0
+    },
+    {
+     "id": 5016,
+     "name": "Battle Ready I",
+     "row": 9,
+     "col": 1,
+     "pos": "1_9_1",
+     "from": [
+      "1_8_1"
+     ],
+     "icon": "icon_technology_teamHeroAttackHpUp",
+     "max_level": 5,
+     "description": "When Squad 1 attacks the city, Hero HP +",
+     "frame": 0
+    },
+    {
+     "id": 5017,
+     "name": "Supply Advantage I",
+     "row": 9,
+     "col": 3,
+     "pos": "1_9_3",
+     "from": [
+      "1_8_3"
+     ],
+     "icon": "icon_technology_teamHeroDefenseHpUp",
+     "max_level": 5,
+     "description": "When Squad 1 defends the city, Hero HP +",
+     "frame": 0
+    },
+    {
+     "id": 5018,
+     "name": "Physical DMG I",
+     "row": 10,
+     "col": 2,
+     "pos": "1_10_2",
+     "from": [
+      "1_9_1",
+      "1_9_3"
+     ],
+     "icon": "icon_technology_teamHeroPhysicalDamageUp",
+     "max_level": 5,
+     "description": "Squad 1 Hero's Physical DMG +",
+     "frame": 0
+    },
+    {
+     "id": 5019,
+     "name": "Radiation DMG I",
+     "row": 11,
+     "col": 2,
+     "pos": "1_11_2",
+     "from": [
+      "1_10_2"
+     ],
+     "icon": "icon_technology_teamHeroAbilityDamageUp",
+     "max_level": 5,
+     "description": "Squad 1 Hero's Radiation DMG +",
+     "frame": 0
+    },
+    {
+     "id": 5020,
+     "name": "Killing Instinct I",
+     "row": 12,
+     "col": 2,
+     "pos": "1_12_2",
+     "from": [
+      "1_11_2"
+     ],
+     "icon": "icon_technology_teamDeathRaise",
+     "max_level": 5,
+     "description": "Enemy Soldier Death Rate for Squad 1 in World PVP Battle +",
+     "frame": 1
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "name": "Squad 2",
+   "sort": 8,
+   "icon": "icon_technologyType_team1",
+   "squad": 2,
+   "recommended": true,
+   "shown_when": [
+    {
+     "kind": "institute_level",
+     "level": 13,
+     "text": "Institute Lv. 13"
+    }
+   ],
+   "unlock": [
+    {
+     "kind": "institute_level",
+     "level": 15,
+     "text": "Institute Lv. 15"
+    },
+    {
+     "kind": "tree_progress",
+     "tree": 5,
+     "percent": 25,
+     "text": "Squad 1 25% complete"
+    }
+   ],
+   "techs": [
+    {
+     "id": 6001,
+     "name": "Zombie Slayer II",
+     "row": 1,
+     "col": 1,
+     "pos": "1_1_1",
+     "from": [],
+     "icon": "icon_technology_teamHeroDmgUpToZombies",
+     "max_level": 5,
+     "description": "Squad 2's DMG to Monsters +",
+     "frame": 0
+    },
+    {
+     "id": 6002,
+     "name": "Zombie Defense II",
+     "row": 1,
+     "col": 3,
+     "pos": "1_1_3",
+     "from": [],
+     "icon": "icon_technology_teamHeroDmgDownToZombies",
+     "max_level": 5,
+     "description": "Squad 2 Hero's DMG from Monsters -",
+     "frame": 0
+    },
+    {
+     "id": 6003,
+     "name": "Squad Hero ATK II",
+     "row": 2,
+     "col": 1,
+     "pos": "1_2_1",
+     "from": [
+      "1_1_1"
+     ],
+     "icon": "icon_technology_teamHeroAtkUp",
+     "max_level": 5,
+     "description": "Squad 2 Hero ATK +",
+     "frame": 0
+    },
+    {
+     "id": 6004,
+     "name": "Squad Hero DEF II",
+     "row": 2,
+     "col": 3,
+     "pos": "1_2_3",
+     "from": [
+      "1_1_3"
+     ],
+     "icon": "icon_technology_teamHeroDefUp",
+     "max_level": 5,
+     "description": "Squad 2 Hero DEF +",
+     "frame": 0
+    },
+    {
+     "id": 6005,
+     "name": "Squad Hero HP II",
+     "row": 3,
+     "col": 2,
+     "pos": "1_3_2",
+     "from": [
+      "1_2_1",
+      "1_2_3"
+     ],
+     "icon": "icon_technology_teamHeroHpUp",
+     "max_level": 5,
+     "description": "Squad 2 Hero HP +",
+     "frame": 0
+    },
+    {
+     "id": 6006,
+     "name": "Squad Gathering Speed II",
+     "row": 4,
+     "col": 1,
+     "pos": "1_4_1",
+     "from": [
+      "1_3_2"
+     ],
+     "icon": "icon_technology_teamGather",
+     "max_level": 5,
+     "description": "Squad 2 Gathering Speed +",
+     "frame": 0
+    },
+    {
+     "id": 6007,
+     "name": "Vehicle Load II",
+     "row": 4,
+     "col": 3,
+     "pos": "1_4_3",
+     "from": [
+      "1_3_2"
+     ],
+     "icon": "icon_technology_teamWeightBearing",
+     "max_level": 5,
+     "description": "Squad 2's Transport Truck Load +",
+     "frame": 0
+    },
+    {
+     "id": 6008,
+     "name": "March Against Zombies II",
+     "row": 5,
+     "col": 1,
+     "pos": "1_5_1",
+     "from": [
+      "1_4_1",
+      "1_4_3"
+     ],
+     "icon": "icon_technology_teamMarchingSpeedToZombies",
+     "max_level": 5,
+     "description": "Squad 2's March Speed (to Monsters) +",
+     "frame": 0
+    },
+    {
+     "id": 6009,
+     "name": "March Against Enemies II",
+     "row": 5,
+     "col": 2,
+     "pos": "1_5_2",
+     "from": [
+      "1_4_1",
+      "1_4_3"
+     ],
+     "icon": "icon_technology_teamMarchingSpeedToCommander",
+     "max_level": 5,
+     "description": "Squad 2's March Speed (to Commanders) +",
+     "frame": 0
+    },
+    {
+     "id": 6010,
+     "name": "March to Resources II",
+     "row": 5,
+     "col": 3,
+     "pos": "1_5_3",
+     "from": [
+      "1_4_1",
+      "1_4_3"
+     ],
+     "icon": "icon_technology_teamMarchingSpeedToField",
+     "max_level": 5,
+     "description": "Squad 2's March Speed (to Resource Sites) +",
+     "frame": 0
+    },
+    {
+     "id": 6011,
+     "name": "Vehicle Power II",
+     "row": 6,
+     "col": 2,
+     "pos": "1_6_2",
+     "from": [
+      "1_5_1",
+      "1_5_2",
+      "1_5_3"
+     ],
+     "icon": "icon_technology_teamMarchingSpeed",
+     "max_level": 5,
+     "description": "Squad 2's Overall March Speed +",
+     "frame": 0
+    },
+    {
+     "id": 6012,
+     "name": "Enemy Nest Raid II",
+     "row": 7,
+     "col": 1,
+     "pos": "1_7_1",
+     "from": [
+      "1_6_2"
+     ],
+     "icon": "icon_technology_teamHeroAttackAtkUp",
+     "max_level": 5,
+     "description": "When Squad 2 attacks the city, Hero ATK +",
+     "frame": 0
+    },
+    {
+     "id": 6013,
+     "name": "Fierce Counterattack II",
+     "row": 7,
+     "col": 3,
+     "pos": "1_7_3",
+     "from": [
+      "1_6_2"
+     ],
+     "icon": "icon_technology_teamHeroDefenseAtkUp",
+     "max_level": 5,
+     "description": "When Squad 2 defends the city, Hero ATK +",
+     "frame": 0
+    },
+    {
+     "id": 6014,
+     "name": "Steady Advance II",
+     "row": 8,
+     "col": 1,
+     "pos": "1_8_1",
+     "from": [
+      "1_7_1"
+     ],
+     "icon": "icon_technology_teamHeroAttackDefUp",
+     "max_level": 5,
+     "description": "When Squad 2 attacks the city, Hero DEF +",
+     "frame": 0
+    },
+    {
+     "id": 6015,
+     "name": "Base Defense II",
+     "row": 8,
+     "col": 3,
+     "pos": "1_8_3",
+     "from": [
+      "1_7_3"
+     ],
+     "icon": "icon_technology_teamHeroDefenseDefUp",
+     "max_level": 5,
+     "description": "When Squad 2 defends the city, Hero DEF +",
+     "frame": 0
+    },
+    {
+     "id": 6016,
+     "name": "Battle Ready II",
+     "row": 9,
+     "col": 1,
+     "pos": "1_9_1",
+     "from": [
+      "1_8_1"
+     ],
+     "icon": "icon_technology_teamHeroAttackHpUp",
+     "max_level": 5,
+     "description": "When Squad 2 attacks the city, Hero HP +",
+     "frame": 0
+    },
+    {
+     "id": 6017,
+     "name": "Supply Advantage II",
+     "row": 9,
+     "col": 3,
+     "pos": "1_9_3",
+     "from": [
+      "1_8_3"
+     ],
+     "icon": "icon_technology_teamHeroDefenseHpUp",
+     "max_level": 5,
+     "description": "When Squad 2 defends the city, Hero HP +",
+     "frame": 0
+    },
+    {
+     "id": 6018,
+     "name": "Physical DMG II",
+     "row": 10,
+     "col": 2,
+     "pos": "1_10_2",
+     "from": [
+      "1_9_1",
+      "1_9_3"
+     ],
+     "icon": "icon_technology_teamHeroPhysicalDamageUp",
+     "max_level": 5,
+     "description": "Squad 2 Hero's Physical DMG +",
+     "frame": 0
+    },
+    {
+     "id": 6019,
+     "name": "Radiation DMG II",
+     "row": 11,
+     "col": 2,
+     "pos": "1_11_2",
+     "from": [
+      "1_10_2"
+     ],
+     "icon": "icon_technology_teamHeroAbilityDamageUp",
+     "max_level": 5,
+     "description": "Squad 2 Hero's Radiation DMG +",
+     "frame": 0
+    },
+    {
+     "id": 6020,
+     "name": "Killing Instinct II",
+     "row": 12,
+     "col": 2,
+     "pos": "1_12_2",
+     "from": [
+      "1_11_2"
+     ],
+     "icon": "icon_technology_teamDeathRaise",
+     "max_level": 5,
+     "description": "Enemy Soldier Death Rate for Squad 2 in World PVP Battle +",
+     "frame": 1
+    }
+   ]
+  },
+  {
+   "id": 7,
+   "name": "Squad 3",
+   "sort": 9,
+   "icon": "icon_technologyType_team2",
+   "squad": 3,
+   "recommended": true,
+   "shown_when": [
+    {
+     "kind": "institute_level",
+     "level": 18,
+     "text": "Institute Lv. 18"
+    }
+   ],
+   "unlock": [
+    {
+     "kind": "institute_level",
+     "level": 20,
+     "text": "Institute Lv. 20"
+    },
+    {
+     "kind": "tree_progress",
+     "tree": 6,
+     "percent": 25,
+     "text": "Squad 2 25% complete"
+    }
+   ],
+   "techs": [
+    {
+     "id": 7001,
+     "name": "Zombie Slayer III",
+     "row": 1,
+     "col": 1,
+     "pos": "1_1_1",
+     "from": [],
+     "icon": "icon_technology_teamHeroDmgUpToZombies",
+     "max_level": 5,
+     "description": "Squad 3's DMG to Monsters +",
+     "frame": 0
+    },
+    {
+     "id": 7002,
+     "name": "Zombie Defense III",
+     "row": 1,
+     "col": 3,
+     "pos": "1_1_3",
+     "from": [],
+     "icon": "icon_technology_teamHeroDmgDownToZombies",
+     "max_level": 5,
+     "description": "Squad 3 Hero's DMG from Monsters -",
+     "frame": 0
+    },
+    {
+     "id": 7003,
+     "name": "Squad Hero ATK III",
+     "row": 2,
+     "col": 1,
+     "pos": "1_2_1",
+     "from": [
+      "1_1_1"
+     ],
+     "icon": "icon_technology_teamHeroAtkUp",
+     "max_level": 5,
+     "description": "Squad 3 Hero ATK +",
+     "frame": 0
+    },
+    {
+     "id": 7004,
+     "name": "Squad Hero DEF III",
+     "row": 2,
+     "col": 3,
+     "pos": "1_2_3",
+     "from": [
+      "1_1_3"
+     ],
+     "icon": "icon_technology_teamHeroDefUp",
+     "max_level": 5,
+     "description": "Squad 3 Hero DEF +",
+     "frame": 0
+    },
+    {
+     "id": 7005,
+     "name": "Squad Hero HP III",
+     "row": 3,
+     "col": 2,
+     "pos": "1_3_2",
+     "from": [
+      "1_2_1",
+      "1_2_3"
+     ],
+     "icon": "icon_technology_teamHeroHpUp",
+     "max_level": 5,
+     "description": "Squad 3 Hero HP +",
+     "frame": 0
+    },
+    {
+     "id": 7006,
+     "name": "Squad Gathering Speed III",
+     "row": 4,
+     "col": 1,
+     "pos": "1_4_1",
+     "from": [
+      "1_3_2"
+     ],
+     "icon": "icon_technology_teamGather",
+     "max_level": 5,
+     "description": "Squad 3 Gathering Speed +",
+     "frame": 0
+    },
+    {
+     "id": 7007,
+     "name": "Vehicle Load III",
+     "row": 4,
+     "col": 3,
+     "pos": "1_4_3",
+     "from": [
+      "1_3_2"
+     ],
+     "icon": "icon_technology_teamWeightBearing",
+     "max_level": 5,
+     "description": "Squad 3's Transport Truck Load +",
+     "frame": 0
+    },
+    {
+     "id": 7008,
+     "name": "March Against Zombies III",
+     "row": 5,
+     "col": 1,
+     "pos": "1_5_1",
+     "from": [
+      "1_4_1",
+      "1_4_3"
+     ],
+     "icon": "icon_technology_teamMarchingSpeedToZombies",
+     "max_level": 5,
+     "description": "Squad 3's March Speed (to Monsters) +",
+     "frame": 0
+    },
+    {
+     "id": 7009,
+     "name": "March Against Enemies III",
+     "row": 5,
+     "col": 2,
+     "pos": "1_5_2",
+     "from": [
+      "1_4_1",
+      "1_4_3"
+     ],
+     "icon": "icon_technology_teamMarchingSpeedToCommander",
+     "max_level": 5,
+     "description": "Squad 3's March Speed (to Commanders) +",
+     "frame": 0
+    },
+    {
+     "id": 7010,
+     "name": "March to Resources III",
+     "row": 5,
+     "col": 3,
+     "pos": "1_5_3",
+     "from": [
+      "1_4_1",
+      "1_4_3"
+     ],
+     "icon": "icon_technology_teamMarchingSpeedToField",
+     "max_level": 5,
+     "description": "Squad 3's March Speed (to Resource Sites) +",
+     "frame": 0
+    },
+    {
+     "id": 7011,
+     "name": "Vehicle Power III",
+     "row": 6,
+     "col": 2,
+     "pos": "1_6_2",
+     "from": [
+      "1_5_1",
+      "1_5_2",
+      "1_5_3"
+     ],
+     "icon": "icon_technology_teamMarchingSpeed",
+     "max_level": 5,
+     "description": "Squad 3's Overall March Speed +",
+     "frame": 0
+    },
+    {
+     "id": 7012,
+     "name": "Enemy Nest Raid III",
+     "row": 7,
+     "col": 1,
+     "pos": "1_7_1",
+     "from": [
+      "1_6_2"
+     ],
+     "icon": "icon_technology_teamHeroAttackAtkUp",
+     "max_level": 5,
+     "description": "When Squad 3 attacks the city, Hero ATK +",
+     "frame": 0
+    },
+    {
+     "id": 7013,
+     "name": "Fierce Counterattack III",
+     "row": 7,
+     "col": 3,
+     "pos": "1_7_3",
+     "from": [
+      "1_6_2"
+     ],
+     "icon": "icon_technology_teamHeroDefenseAtkUp",
+     "max_level": 5,
+     "description": "When Squad 3 defends the city, Hero ATK +",
+     "frame": 0
+    },
+    {
+     "id": 7014,
+     "name": "Steady Advance III",
+     "row": 8,
+     "col": 1,
+     "pos": "1_8_1",
+     "from": [
+      "1_7_1"
+     ],
+     "icon": "icon_technology_teamHeroAttackDefUp",
+     "max_level": 5,
+     "description": "When Squad 3 attacks the city, Hero DEF +",
+     "frame": 0
+    },
+    {
+     "id": 7015,
+     "name": "Base Defense III",
+     "row": 8,
+     "col": 3,
+     "pos": "1_8_3",
+     "from": [
+      "1_7_3"
+     ],
+     "icon": "icon_technology_teamHeroDefenseDefUp",
+     "max_level": 5,
+     "description": "When Squad 3 defends the city, Hero DEF +",
+     "frame": 0
+    },
+    {
+     "id": 7016,
+     "name": "Battle Ready III",
+     "row": 9,
+     "col": 1,
+     "pos": "1_9_1",
+     "from": [
+      "1_8_1"
+     ],
+     "icon": "icon_technology_teamHeroAttackHpUp",
+     "max_level": 5,
+     "description": "When Squad 3 attacks the city, Hero HP +",
+     "frame": 0
+    },
+    {
+     "id": 7017,
+     "name": "Supply Advantage III",
+     "row": 9,
+     "col": 3,
+     "pos": "1_9_3",
+     "from": [
+      "1_8_3"
+     ],
+     "icon": "icon_technology_teamHeroDefenseHpUp",
+     "max_level": 5,
+     "description": "When Squad 3 defends the city, Hero HP +",
+     "frame": 0
+    },
+    {
+     "id": 7018,
+     "name": "Physical DMG III",
+     "row": 10,
+     "col": 2,
+     "pos": "1_10_2",
+     "from": [
+      "1_9_1",
+      "1_9_3"
+     ],
+     "icon": "icon_technology_teamHeroPhysicalDamageUp",
+     "max_level": 5,
+     "description": "Squad 3 Hero's Physical DMG +",
+     "frame": 0
+    },
+    {
+     "id": 7019,
+     "name": "Radiation DMG III",
+     "row": 11,
+     "col": 2,
+     "pos": "1_11_2",
+     "from": [
+      "1_10_2"
+     ],
+     "icon": "icon_technology_teamHeroAbilityDamageUp",
+     "max_level": 5,
+     "description": "Squad 3 Hero's Radiation DMG +",
+     "frame": 0
+    },
+    {
+     "id": 7020,
+     "name": "Killing Instinct III",
+     "row": 12,
+     "col": 2,
+     "pos": "1_12_2",
+     "from": [
+      "1_11_2"
+     ],
+     "icon": "icon_technology_teamDeathRaise",
+     "max_level": 5,
+     "description": "Enemy Soldier Death Rate for Squad 3 in World PVP Battle +",
+     "frame": 1
+    }
+   ]
+  },
+  {
+   "id": 8,
+   "name": "Squad 4",
+   "sort": 10,
+   "icon": "icon_technologyType_team3",
+   "squad": 4,
+   "recommended": true,
+   "shown_when": [
+    {
+     "kind": "institute_level",
+     "level": 6,
+     "text": "Institute Lv. 6"
+    }
+   ],
+   "unlock": [
+    {
+     "kind": "institute_level",
+     "level": 8,
+     "text": "Institute Lv. 8"
+    },
+    {
+     "kind": "monthly_card",
+     "text": "Monthly Card purchased"
+    }
+   ],
+   "techs": [
+    {
+     "id": 8001,
+     "name": "Zombie Slayer IV",
+     "row": 1,
+     "col": 1,
+     "pos": "1_1_1",
+     "from": [],
+     "icon": "icon_technology_teamHeroDmgUpToZombies",
+     "max_level": 5,
+     "description": "Squad 4's DMG to Monsters +",
+     "frame": 0
+    },
+    {
+     "id": 8002,
+     "name": "Zombie Defense IV",
+     "row": 1,
+     "col": 3,
+     "pos": "1_1_3",
+     "from": [],
+     "icon": "icon_technology_teamHeroDmgDownToZombies",
+     "max_level": 5,
+     "description": "Squad 4 Hero's DMG from Monsters -",
+     "frame": 0
+    },
+    {
+     "id": 8003,
+     "name": "Squad Hero ATK IV",
+     "row": 2,
+     "col": 1,
+     "pos": "1_2_1",
+     "from": [
+      "1_1_1"
+     ],
+     "icon": "icon_technology_teamHeroAtkUp",
+     "max_level": 5,
+     "description": "Squad 4 Hero ATK +",
+     "frame": 0
+    },
+    {
+     "id": 8004,
+     "name": "Squad Hero DEF IV",
+     "row": 2,
+     "col": 3,
+     "pos": "1_2_3",
+     "from": [
+      "1_1_3"
+     ],
+     "icon": "icon_technology_teamHeroDefUp",
+     "max_level": 5,
+     "description": "Squad 4 Hero DEF +",
+     "frame": 0
+    },
+    {
+     "id": 8005,
+     "name": "Squad Hero HP IV",
+     "row": 3,
+     "col": 2,
+     "pos": "1_3_2",
+     "from": [
+      "1_2_1",
+      "1_2_3"
+     ],
+     "icon": "icon_technology_teamHeroHpUp",
+     "max_level": 5,
+     "description": "Squad 4 Hero HP +",
+     "frame": 0
+    },
+    {
+     "id": 8006,
+     "name": "Squad Gathering Speed IV",
+     "row": 4,
+     "col": 1,
+     "pos": "1_4_1",
+     "from": [
+      "1_3_2"
+     ],
+     "icon": "icon_technology_teamGather",
+     "max_level": 5,
+     "description": "Squad 4 Gathering Speed +",
+     "frame": 0
+    },
+    {
+     "id": 8007,
+     "name": "Vehicle Load IV",
+     "row": 4,
+     "col": 3,
+     "pos": "1_4_3",
+     "from": [
+      "1_3_2"
+     ],
+     "icon": "icon_technology_teamWeightBearing",
+     "max_level": 5,
+     "description": "Squad 4's Transport Truck Load +",
+     "frame": 0
+    },
+    {
+     "id": 8008,
+     "name": "March Against Zombies IV",
+     "row": 5,
+     "col": 1,
+     "pos": "1_5_1",
+     "from": [
+      "1_4_1",
+      "1_4_3"
+     ],
+     "icon": "icon_technology_teamMarchingSpeedToZombies",
+     "max_level": 5,
+     "description": "Squad 4's March Speed (to Monsters) +",
+     "frame": 0
+    },
+    {
+     "id": 8009,
+     "name": "March Against Enemies IV",
+     "row": 5,
+     "col": 2,
+     "pos": "1_5_2",
+     "from": [
+      "1_4_1",
+      "1_4_3"
+     ],
+     "icon": "icon_technology_teamMarchingSpeedToCommander",
+     "max_level": 5,
+     "description": "Squad 4's March Speed (to Commanders) +",
+     "frame": 0
+    },
+    {
+     "id": 8010,
+     "name": "March to Resources IV",
+     "row": 5,
+     "col": 3,
+     "pos": "1_5_3",
+     "from": [
+      "1_4_1",
+      "1_4_3"
+     ],
+     "icon": "icon_technology_teamMarchingSpeedToField",
+     "max_level": 5,
+     "description": "Squad 4's March Speed (to Resource Sites) +",
+     "frame": 0
+    },
+    {
+     "id": 8011,
+     "name": "Vehicle Power IV",
+     "row": 6,
+     "col": 2,
+     "pos": "1_6_2",
+     "from": [
+      "1_5_1",
+      "1_5_2",
+      "1_5_3"
+     ],
+     "icon": "icon_technology_teamMarchingSpeed",
+     "max_level": 5,
+     "description": "Squad 4's Overall March Speed +",
+     "frame": 0
+    },
+    {
+     "id": 8012,
+     "name": "Enemy Nest Raid IV",
+     "row": 7,
+     "col": 1,
+     "pos": "1_7_1",
+     "from": [
+      "1_6_2"
+     ],
+     "icon": "icon_technology_teamHeroAttackAtkUp",
+     "max_level": 5,
+     "description": "When Squad 4 attacks the city, Hero ATK +",
+     "frame": 0
+    },
+    {
+     "id": 8013,
+     "name": "Fierce Counterattack IV",
+     "row": 7,
+     "col": 3,
+     "pos": "1_7_3",
+     "from": [
+      "1_6_2"
+     ],
+     "icon": "icon_technology_teamHeroDefenseAtkUp",
+     "max_level": 5,
+     "description": "When Squad 4 defends the city, Hero ATK +",
+     "frame": 0
+    },
+    {
+     "id": 8014,
+     "name": "Steady Advance IV",
+     "row": 8,
+     "col": 1,
+     "pos": "1_8_1",
+     "from": [
+      "1_7_1"
+     ],
+     "icon": "icon_technology_teamHeroAttackDefUp",
+     "max_level": 5,
+     "description": "When Squad 4 attacks the city, Hero DEF +",
+     "frame": 0
+    },
+    {
+     "id": 8015,
+     "name": "Base Defense IV",
+     "row": 8,
+     "col": 3,
+     "pos": "1_8_3",
+     "from": [
+      "1_7_3"
+     ],
+     "icon": "icon_technology_teamHeroDefenseDefUp",
+     "max_level": 5,
+     "description": "When Squad 4 defends the city, Hero DEF +",
+     "frame": 0
+    },
+    {
+     "id": 8016,
+     "name": "Battle Ready IV",
+     "row": 9,
+     "col": 1,
+     "pos": "1_9_1",
+     "from": [
+      "1_8_1"
+     ],
+     "icon": "icon_technology_teamHeroAttackHpUp",
+     "max_level": 5,
+     "description": "When Squad 4 attacks the city, Hero HP +",
+     "frame": 0
+    },
+    {
+     "id": 8017,
+     "name": "Supply Advantage IV",
+     "row": 9,
+     "col": 3,
+     "pos": "1_9_3",
+     "from": [
+      "1_8_3"
+     ],
+     "icon": "icon_technology_teamHeroDefenseHpUp",
+     "max_level": 5,
+     "description": "When Squad 4 defends the city, Hero HP +",
+     "frame": 0
+    },
+    {
+     "id": 8018,
+     "name": "Physical DMG IV",
+     "row": 10,
+     "col": 2,
+     "pos": "1_10_2",
+     "from": [
+      "1_9_1",
+      "1_9_3"
+     ],
+     "icon": "icon_technology_teamHeroPhysicalDamageUp",
+     "max_level": 5,
+     "description": "Squad 4 Hero's Physical DMG +",
+     "frame": 0
+    },
+    {
+     "id": 8019,
+     "name": "Radiation DMG IV",
+     "row": 11,
+     "col": 2,
+     "pos": "1_11_2",
+     "from": [
+      "1_10_2"
+     ],
+     "icon": "icon_technology_teamHeroAbilityDamageUp",
+     "max_level": 5,
+     "description": "Squad 4 Hero's Radiation DMG +",
+     "frame": 0
+    },
+    {
+     "id": 8020,
+     "name": "Killing Instinct IV",
+     "row": 12,
+     "col": 2,
+     "pos": "1_12_2",
+     "from": [
+      "1_11_2"
+     ],
+     "icon": "icon_technology_teamDeathRaise",
+     "max_level": 5,
+     "description": "Enemy Soldier Death Rate for Squad 4 in World PVP Battle +",
+     "frame": 1
+    }
+   ]
+  },
+  {
+   "id": 9,
+   "name": "Alliance Competition",
+   "sort": 11,
+   "icon": "icon_technologyType_allianceShowdown",
+   "squad": null,
+   "recommended": false,
+   "shown_when": [
+    {
+     "kind": "institute_level",
+     "level": 13,
+     "text": "Institute Lv. 13"
+    }
+   ],
+   "unlock": [
+    {
+     "kind": "institute_level",
+     "level": 15,
+     "text": "Institute Lv. 15"
+    }
+   ],
+   "techs": [
+    {
+     "id": 9001,
+     "name": "Radar Points Buff",
+     "row": 1,
+     "col": 2,
+     "pos": "1_1_2",
+     "from": [],
+     "icon": "icon_technology_scoreRadar",
+     "max_level": 10,
+     "description": "Alliance Competition: More Radar Quest Points",
+     "frame": 0
+    },
+    {
+     "id": 9002,
+     "name": "Speedup Points Buff",
+     "row": 2,
+     "col": 1,
+     "pos": "1_2_1",
+     "from": [
+      "1_1_2"
+     ],
+     "icon": "icon_technology_scoreSpeed",
+     "max_level": 10,
+     "description": "Alliance Competition: More Speedup Points",
+     "frame": 0
+    },
+    {
+     "id": 9003,
+     "name": "Recruit Points Buff",
+     "row": 2,
+     "col": 3,
+     "pos": "1_2_3",
+     "from": [
+      "1_1_2"
+     ],
+     "icon": "icon_technology_scoreRecruit",
+     "max_level": 10,
+     "description": "Alliance Competition: More Hero Recruitment Points",
+     "frame": 0
+    },
+    {
+     "id": 9004,
+     "name": "Medium Reward",
+     "row": 3,
+     "col": 2,
+     "pos": "1_3_2",
+     "from": [
+      "1_2_1",
+      "1_2_3"
+     ],
+     "icon": "icon_technology_intermediateRewards",
+     "max_level": 1,
+     "description": null,
+     "frame": 1
+    },
+    {
+     "id": 9005,
+     "name": "Points Buff",
+     "row": 4,
+     "col": 2,
+     "pos": "1_4_2",
+     "from": [
+      "1_3_2"
+     ],
+     "icon": "icon_technology_score",
+     "max_level": 20,
+     "description": "Alliance Competition: More Points for All Actions (except Diamond Purchases)",
+     "frame": 0
+    },
+    {
+     "id": 9006,
+     "name": "Building Points Buff",
+     "row": 5,
+     "col": 1,
+     "pos": "1_5_1",
+     "from": [
+      "1_4_2"
+     ],
+     "icon": "icon_technology_scoreBuild",
+     "max_level": 10,
+     "description": "Alliance Competition: More Building Power Points",
+     "frame": 0
+    },
+    {
+     "id": 9007,
+     "name": "Research Points Buff",
+     "row": 5,
+     "col": 3,
+     "pos": "1_5_3",
+     "from": [
+      "1_4_2"
+     ],
+     "icon": "icon_technology_scoreResearch",
+     "max_level": 10,
+     "description": "Alliance Competition: More Tech Power Points",
+     "frame": 0
+    },
+    {
+     "id": 9008,
+     "name": "Training Points Buff",
+     "row": 6,
+     "col": 1,
+     "pos": "1_6_1",
+     "from": [
+      "1_5_1"
+     ],
+     "icon": "icon_technology_scoreTrain",
+     "max_level": 10,
+     "description": "Alliance Competition: More Soldier Training Points",
+     "frame": 0
+    },
+    {
+     "id": 9009,
+     "name": "Kill Points Buff",
+     "row": 6,
+     "col": 3,
+     "pos": "1_6_3",
+     "from": [
+      "1_5_3"
+     ],
+     "icon": "icon_technology_scoreKill",
+     "max_level": 10,
+     "description": "Alliance Competition: More Kill Points",
+     "frame": 0
+    },
+    {
+     "id": 9010,
+     "name": "Ultimate Reward",
+     "row": 7,
+     "col": 2,
+     "pos": "1_7_2",
+     "from": [
+      "1_6_1",
+      "1_4_2",
+      "1_6_3"
+     ],
+     "icon": "icon_technology_premiumRewards",
+     "max_level": 1,
+     "description": null,
+     "frame": 2
+    },
+    {
+     "id": 9011,
+     "name": "Convoy Points Buff",
+     "row": 8,
+     "col": 1,
+     "pos": "1_8_1",
+     "from": [
+      "1_7_2"
+     ],
+     "icon": "icon_technology_scoreTruck",
+     "max_level": 10,
+     "description": "Alliance Competition: More Transport Truck Points",
+     "frame": 0
+    },
+    {
+     "id": 9012,
+     "name": "Special Ops Points Buff",
+     "row": 8,
+     "col": 2,
+     "pos": "1_8_2",
+     "from": [
+      "1_7_2"
+     ],
+     "icon": "icon_technology_scoreRangers",
+     "max_level": 10,
+     "description": "Alliance Competition: More Special Quest Points",
+     "frame": 0
+    },
+    {
+     "id": 9013,
+     "name": "Recruit Points Buff II",
+     "row": 8,
+     "col": 3,
+     "pos": "1_8_3",
+     "from": [
+      "1_7_2"
+     ],
+     "icon": "icon_technology_score",
+     "max_level": 10,
+     "description": "Alliance Competition: More Points for All Actions (except Diamond Purchases)",
+     "frame": 0
+    },
+    {
+     "id": 9014,
+     "name": "Points Buff II",
+     "row": 9,
+     "col": 2,
+     "pos": "1_9_2",
+     "from": [
+      "1_8_1",
+      "1_8_2",
+      "1_8_3"
+     ],
+     "icon": "icon_technology_score",
+     "max_level": 10,
+     "description": "Alliance Competition: More Points for All Actions (except Diamond Purchases)",
+     "frame": 0
+    }
+   ]
+  },
+  {
+   "id": 10,
+   "name": "Convoy",
+   "sort": 12,
+   "icon": "icon_technologyType_convoys",
+   "squad": null,
+   "recommended": false,
+   "shown_when": [
+    {
+     "kind": "institute_level",
+     "level": 15,
+     "text": "Institute Lv. 15"
+    }
+   ],
+   "unlock": [
+    {
+     "kind": "institute_level",
+     "level": 15,
+     "text": "Institute Lv. 15"
+    }
+   ],
+   "techs": [
+    {
+     "id": 10001,
+     "name": "Basic Capacity",
+     "row": 1,
+     "col": 2,
+     "pos": "1_1_2",
+     "from": [],
+     "icon": "icon_technology_truckResource",
+     "max_level": 5,
+     "description": "Personal Transport Truck Basic Cargo Capacity +",
+     "frame": 0
+    },
+    {
+     "id": 10002,
+     "name": "Pillage Knowledge",
+     "row": 3,
+     "col": 1,
+     "pos": "1_3_1",
+     "from": [
+      "1_2_2"
+     ],
+     "icon": "icon_technology_truckAttackHeroAttrUp",
+     "max_level": 10,
+     "description": "When pillaging other Transport Trucks, Hero HP/ATK/DEF +",
+     "frame": 0
+    },
+    {
+     "id": 10003,
+     "name": "Transport Truck Armament",
+     "row": 3,
+     "col": 3,
+     "pos": "1_3_3",
+     "from": [
+      "1_2_2"
+     ],
+     "icon": "icon_technology_truckDefenseHeroAttrUp",
+     "max_level": 10,
+     "description": "When defending your Transport Truck, Hero HP/ATK/DEF +",
+     "frame": 0
+    },
+    {
+     "id": 10004,
+     "name": "Transport Truck Power",
+     "row": 2,
+     "col": 2,
+     "pos": "1_2_2",
+     "from": [
+      "1_1_2"
+     ],
+     "icon": "icon_technology_truckSpeed",
+     "max_level": 5,
+     "description": "Convoy Movement Speed +",
+     "frame": 0
+    },
+    {
+     "id": 10005,
+     "name": "More Pillage",
+     "row": 4,
+     "col": 1,
+     "pos": "1_4_1",
+     "from": [
+      "1_3_1"
+     ],
+     "icon": "icon_technology_truckSnatch",
+     "max_level": 5,
+     "description": "Chance to get an extra cargo from a successful pillage",
+     "frame": 0
+    },
+    {
+     "id": 10006,
+     "name": "Emergency Procedure",
+     "row": 4,
+     "col": 3,
+     "pos": "1_4_3",
+     "from": [
+      "1_3_3"
+     ],
+     "icon": "icon_technology_truckRecapture",
+     "max_level": 5,
+     "description": "Chance to retrieve a cargo from a failed defense",
+     "frame": 0
+    },
+    {
+     "id": 10007,
+     "name": "Additional Transport Truck",
+     "row": 5,
+     "col": 2,
+     "pos": "1_5_2",
+     "from": [
+      "1_4_1",
+      "1_4_3"
+     ],
+     "icon": "icon_technology_moreTruck",
+     "max_level": 1,
+     "description": "Daily Shipment +",
+     "frame": 0
+    },
+    {
+     "id": 10008,
+     "name": "Anti-Pillage",
+     "row": 6,
+     "col": 2,
+     "pos": "1_6_2",
+     "from": [
+      "1_5_2"
+     ],
+     "icon": "icon_technology_failedLimit",
+     "max_level": 1,
+     "description": "Number of Failed Pillages (Same Player)",
+     "frame": 0
+    },
+    {
+     "id": 10009,
+     "name": "Elite Hauler",
+     "row": 7,
+     "col": 2,
+     "pos": "1_7_2",
+     "from": [
+      "1_6_2"
+     ],
+     "icon": "icon_technology_superTruck",
+     "max_level": 1,
+     "description": "When refreshing cargo, there's a chance for an Elite Hauler to appear, which can be pillaged once upon a failed defense",
+     "frame": 0
+    }
+   ]
+  },
+  {
+   "id": 11,
+   "name": "Super Soldiers",
+   "sort": 13,
+   "icon": "icon_technologyType_superSoldier",
+   "squad": null,
+   "recommended": true,
+   "shown_when": [
+    {
+     "kind": "institute_level",
+     "level": 17,
+     "text": "Institute Lv. 17"
+    }
+   ],
+   "unlock": [
+    {
+     "kind": "institute_level",
+     "level": 17,
+     "text": "Institute Lv. 17"
+    }
+   ],
+   "techs": [
+    {
+     "id": 11001,
+     "name": "Enhanced HP I",
+     "row": 1,
+     "col": 2,
+     "pos": "1_1_2",
+     "from": [],
+     "icon": "icon_technology_soldieHpUp",
+     "max_level": 10,
+     "description": "Soldier HP",
+     "frame": 0
+    },
+    {
+     "id": 11002,
+     "name": "Enhanced ATK I",
+     "row": 2,
+     "col": 1,
+     "pos": "1_2_1",
+     "from": [
+      "1_1_2"
+     ],
+     "icon": "icon_technology_soldierAtkUp",
+     "max_level": 10,
+     "description": "Soldier ATK",
+     "frame": 0
+    },
+    {
+     "id": 11003,
+     "name": "Enhanced DEF I",
+     "row": 2,
+     "col": 3,
+     "pos": "1_2_3",
+     "from": [
+      "1_1_2"
+     ],
+     "icon": "icon_technology_soldieDefUp",
+     "max_level": 10,
+     "description": "Soldier DEF",
+     "frame": 0
+    },
+    {
+     "id": 11004,
+     "name": "Combat Defense",
+     "row": 3,
+     "col": 2,
+     "pos": "1_3_2",
+     "from": [
+      "1_2_1",
+      "1_2_3"
+     ],
+     "icon": "icon_technology_heroDmgDown",
+     "max_level": 10,
+     "description": "DMG to Heroes -",
+     "frame": 1
+    },
+    {
+     "id": 11005,
+     "name": "Defense Training VII",
+     "row": 4,
+     "col": 1,
+     "pos": "1_4_1",
+     "from": [
+      "1_3_2"
+     ],
+     "icon": "icon_technology_soldieDefUp",
+     "max_level": 10,
+     "description": "Soldier DEF +",
+     "frame": 0
+    },
+    {
+     "id": 11006,
+     "name": "Weapon Training VII",
+     "row": 4,
+     "col": 2,
+     "pos": "1_4_2",
+     "from": [
+      "1_3_2"
+     ],
+     "icon": "icon_technology_soldierAtkUp",
+     "max_level": 10,
+     "description": "Soldier ATK +",
+     "frame": 0
+    },
+    {
+     "id": 11007,
+     "name": "Advanced Armor VII",
+     "row": 4,
+     "col": 3,
+     "pos": "1_4_3",
+     "from": [
+      "1_3_2"
+     ],
+     "icon": "icon_technology_soldieHpUp",
+     "max_level": 10,
+     "description": "Soldier HP +",
+     "frame": 0
+    },
+    {
+     "id": 11008,
+     "name": "Accelerated Training I",
+     "row": 5,
+     "col": 1,
+     "pos": "1_5_1",
+     "from": [
+      "1_4_1",
+      "1_4_2",
+      "1_4_3"
+     ],
+     "icon": "icon_technology_trainSpeed",
+     "max_level": 10,
+     "description": "Training Speed",
+     "frame": 0
+    },
+    {
+     "id": 11009,
+     "name": "Barracks Expansion I",
+     "row": 5,
+     "col": 3,
+     "pos": "1_5_3",
+     "from": [
+      "1_4_1",
+      "1_4_2",
+      "1_4_3"
+     ],
+     "icon": "icon_technology_barrackCapacity",
+     "max_level": 10,
+     "description": "Soldier Training Limit",
+     "frame": 0
+    },
+    {
+     "id": 11010,
+     "name": "Enhanced HP II",
+     "row": 6,
+     "col": 1,
+     "pos": "1_6_1",
+     "from": [
+      "1_5_1",
+      "1_5_3"
+     ],
+     "icon": "icon_technology_soldieHpUp",
+     "max_level": 10,
+     "description": "Soldier HP",
+     "frame": 0
+    },
+    {
+     "id": 11011,
+     "name": "Enhanced ATK II",
+     "row": 6,
+     "col": 2,
+     "pos": "1_6_2",
+     "from": [
+      "1_5_1",
+      "1_5_3"
+     ],
+     "icon": "icon_technology_soldierAtkUp",
+     "max_level": 10,
+     "description": "Soldier ATK",
+     "frame": 0
+    },
+    {
+     "id": 11012,
+     "name": "Enhanced DEF II",
+     "row": 6,
+     "col": 3,
+     "pos": "1_6_3",
+     "from": [
+      "1_5_1",
+      "1_5_3"
+     ],
+     "icon": "icon_technology_soldieDefUp",
+     "max_level": 10,
+     "description": "Soldier DEF",
+     "frame": 0
+    },
+    {
+     "id": 11013,
+     "name": "Morale",
+     "row": 7,
+     "col": 2,
+     "pos": "1_7_2",
+     "from": [
+      "1_6_1",
+      "1_6_2",
+      "1_6_3"
+     ],
+     "icon": "icon_technology_soldierMorale",
+     "max_level": 10,
+     "description": "Soldier Morale +",
+     "frame": 2
+    },
+    {
+     "id": 11014,
+     "name": "Defense Training VIII",
+     "row": 8,
+     "col": 1,
+     "pos": "1_8_1",
+     "from": [
+      "1_7_2"
+     ],
+     "icon": "icon_technology_soldieDefUp",
+     "max_level": 10,
+     "description": "Soldier DEF +",
+     "frame": 0
+    },
+    {
+     "id": 11015,
+     "name": "Weapon Training VIII",
+     "row": 8,
+     "col": 2,
+     "pos": "1_8_2",
+     "from": [
+      "1_7_2"
+     ],
+     "icon": "icon_technology_soldierAtkUp",
+     "max_level": 10,
+     "description": "Soldier ATK +",
+     "frame": 0
+    },
+    {
+     "id": 11016,
+     "name": "Advanced Armor VIII",
+     "row": 8,
+     "col": 3,
+     "pos": "1_8_3",
+     "from": [
+      "1_7_2"
+     ],
+     "icon": "icon_technology_soldieHpUp",
+     "max_level": 10,
+     "description": "Soldier HP +",
+     "frame": 0
+    },
+    {
+     "id": 11017,
+     "name": "Enhanced Healing I",
+     "row": 9,
+     "col": 1,
+     "pos": "1_9_1",
+     "from": [
+      "1_8_1",
+      "1_8_2",
+      "1_8_3"
+     ],
+     "icon": "icon_technology_healSpeed",
+     "max_level": 10,
+     "description": "Healing Speed",
+     "frame": 0
+    },
+    {
+     "id": 11018,
+     "name": "Healing Capacity I",
+     "row": 9,
+     "col": 3,
+     "pos": "1_9_3",
+     "from": [
+      "1_8_1",
+      "1_8_2",
+      "1_8_3"
+     ],
+     "icon": "icon_technology_hospitalCapacity",
+     "max_level": 10,
+     "description": "Hospital Capacity",
+     "frame": 0
+    },
+    {
+     "id": 11019,
+     "name": "Advanced Defense",
+     "row": 10,
+     "col": 2,
+     "pos": "1_10_2",
+     "from": [
+      "1_9_1",
+      "1_9_3"
+     ],
+     "icon": "icon_technology_heroDmgDown",
+     "max_level": 10,
+     "description": "DMG to Heroes -",
+     "frame": 1
+    },
+    {
+     "id": 11020,
+     "name": "Enhanced HP III",
+     "row": 12,
+     "col": 2,
+     "pos": "1_12_2",
+     "from": [
+      "1_11_1",
+      "1_11_3"
+     ],
+     "icon": "icon_technology_soldieHpUp",
+     "max_level": 10,
+     "description": "Soldier HP",
+     "frame": 0
+    },
+    {
+     "id": 11021,
+     "name": "Enhanced ATK III",
+     "row": 11,
+     "col": 1,
+     "pos": "1_11_1",
+     "from": [
+      "1_10_2"
+     ],
+     "icon": "icon_technology_soldierAtkUp",
+     "max_level": 10,
+     "description": "Soldier ATK",
+     "frame": 0
+    },
+    {
+     "id": 11022,
+     "name": "Enhanced DEF III",
+     "row": 11,
+     "col": 3,
+     "pos": "1_11_3",
+     "from": [
+      "1_10_2"
+     ],
+     "icon": "icon_technology_soldieDefUp",
+     "max_level": 10,
+     "description": "Soldier DEF",
+     "frame": 0
+    },
+    {
+     "id": 11023,
+     "name": "Super Soldiers",
+     "row": 13,
+     "col": 2,
+     "pos": "1_13_2",
+     "from": [
+      "1_12_2"
+     ],
+     "icon": "icon_technology_soldierLevel10",
+     "max_level": 1,
+     "description": null,
+     "frame": 2
+    }
+   ]
+  },
+  {
+   "id": 12,
+   "name": "Offense Strategy",
+   "sort": 14,
+   "icon": "icon_technologyType_offensiveStrategy",
+   "squad": null,
+   "recommended": true,
+   "shown_when": [
+    {
+     "kind": "institute_level",
+     "level": 19,
+     "text": "Institute Lv. 19"
+    }
+   ],
+   "unlock": [
+    {
+     "kind": "institute_level",
+     "level": 21,
+     "text": "Institute Lv. 21"
+    },
+    {
+     "kind": "tree_progress",
+     "tree": 11,
+     "percent": 40,
+     "text": "Super Soldiers 40% complete"
+    }
+   ],
+   "techs": [
+    {
+     "id": 12001,
+     "name": "Power Upgrade I",
+     "row": 1,
+     "col": 2,
+     "pos": "1_1_2",
+     "from": [],
+     "icon": "icon_technology_soldieWeightBearingUp",
+     "max_level": 10,
+     "description": "Soldier Load Increase",
+     "frame": 0
+    },
+    {
+     "id": 12002,
+     "name": "Do or Die I",
+     "row": 2,
+     "col": 1,
+     "pos": "1_2_1",
+     "from": [
+      "1_1_2"
+     ],
+     "icon": "icon_technology_teamHeroAttackHpUp",
+     "max_level": 10,
+     "description": "As the Attacker in PvP Battle, Hero HP +",
+     "frame": 0
+    },
+    {
+     "id": 12003,
+     "name": "Swift Raid I",
+     "row": 2,
+     "col": 2,
+     "pos": "1_2_2",
+     "from": [
+      "1_1_2"
+     ],
+     "icon": "icon_technology_teamHeroAttackAtkUp",
+     "max_level": 10,
+     "description": "As the Attacker in PvP Battle, Hero ATK +",
+     "frame": 0
+    },
+    {
+     "id": 12004,
+     "name": "Alert Formation I",
+     "row": 2,
+     "col": 3,
+     "pos": "1_2_3",
+     "from": [
+      "1_1_2"
+     ],
+     "icon": "icon_technology_teamHeroAttackDefUp",
+     "max_level": 10,
+     "description": "As the Attacker in PvP Battle, Hero DEF +",
+     "frame": 0
+    },
+    {
+     "id": 12005,
+     "name": "Drill Ground Addition",
+     "row": 3,
+     "col": 2,
+     "pos": "1_3_2",
+     "from": [
+      "1_2_1",
+      "1_2_2",
+      "1_2_3"
+     ],
+     "icon": "Icon_Build_DrillGround",
+     "max_level": 1,
+     "description": "Drill Ground Building Limit",
+     "frame": 2
+    },
+    {
+     "id": 12006,
+     "name": "Barracks Expansion I",
+     "row": 4,
+     "col": 1,
+     "pos": "1_4_1",
+     "from": [
+      "1_3_2"
+     ],
+     "icon": "icon_technology_barrackCapacity",
+     "max_level": 10,
+     "description": "Soldier Training Limit",
+     "frame": 0
+    },
+    {
+     "id": 12007,
+     "name": "Accelerated Training I",
+     "row": 4,
+     "col": 3,
+     "pos": "1_4_3",
+     "from": [
+      "1_3_2"
+     ],
+     "icon": "icon_technology_trainSpeed",
+     "max_level": 10,
+     "description": "Training Speed",
+     "frame": 0
+    },
+    {
+     "id": 12008,
+     "name": "Do or Die II",
+     "row": 5,
+     "col": 1,
+     "pos": "1_5_1",
+     "from": [
+      "1_4_1",
+      "1_4_3"
+     ],
+     "icon": "icon_technology_teamHeroAttackHpUp",
+     "max_level": 10,
+     "description": "As the Attacker in PvP Battle, Hero HP +",
+     "frame": 0
+    },
+    {
+     "id": 12009,
+     "name": "Swift Raid II",
+     "row": 5,
+     "col": 2,
+     "pos": "1_5_2",
+     "from": [
+      "1_4_1",
+      "1_4_3"
+     ],
+     "icon": "icon_technology_teamHeroAttackAtkUp",
+     "max_level": 10,
+     "description": "As the Attacker in PvP Battle, Hero ATK +",
+     "frame": 0
+    },
+    {
+     "id": 12010,
+     "name": "Alert Formation II",
+     "row": 5,
+     "col": 3,
+     "pos": "1_5_3",
+     "from": [
+      "1_4_1",
+      "1_4_3"
+     ],
+     "icon": "icon_technology_teamHeroAttackDefUp",
+     "max_level": 10,
+     "description": "As the Attacker in PvP Battle, Hero DEF +",
+     "frame": 0
+    },
+    {
+     "id": 12011,
+     "name": "Drill Ground Expansion",
+     "row": 6,
+     "col": 2,
+     "pos": "1_6_2",
+     "from": [
+      "1_5_1",
+      "1_5_2",
+      "1_5_3"
+     ],
+     "icon": "icon_technology_paradeGroundCapacity",
+     "max_level": 10,
+     "description": "Drill Ground Capacity",
+     "frame": 1
+    },
+    {
+     "id": 12012,
+     "name": "Rapid March I",
+     "row": 7,
+     "col": 2,
+     "pos": "1_7_2",
+     "from": [
+      "1_6_2"
+     ],
+     "icon": "icon_technology_teamMarchingSpeed",
+     "max_level": 10,
+     "description": "Overall March Speed +",
+     "frame": 0
+    },
+    {
+     "id": 12013,
+     "name": "Do or Die III",
+     "row": 8,
+     "col": 1,
+     "pos": "1_8_1",
+     "from": [
+      "1_7_2"
+     ],
+     "icon": "icon_technology_teamHeroAttackHpUp",
+     "max_level": 10,
+     "description": "As the Attacker in PvP Battle, Hero HP +",
+     "frame": 0
+    },
+    {
+     "id": 12014,
+     "name": "Swift Raid III",
+     "row": 8,
+     "col": 2,
+     "pos": "1_8_2",
+     "from": [
+      "1_7_2"
+     ],
+     "icon": "icon_technology_teamHeroAttackAtkUp",
+     "max_level": 10,
+     "description": "As the Attacker in PvP Battle, Hero ATK +",
+     "frame": 0
+    },
+    {
+     "id": 12015,
+     "name": "Alert Formation III",
+     "row": 8,
+     "col": 3,
+     "pos": "1_8_3",
+     "from": [
+      "1_7_2"
+     ],
+     "icon": "icon_technology_teamHeroAttackDefUp",
+     "max_level": 10,
+     "description": "As the Attacker in PvP Battle, Hero DEF +",
+     "frame": 0
+    },
+    {
+     "id": 12016,
+     "name": "Lethal Strike I",
+     "row": 9,
+     "col": 2,
+     "pos": "1_9_2",
+     "from": [
+      "1_8_1",
+      "1_8_2",
+      "1_8_3"
+     ],
+     "icon": "icon_technology_teamDeathRaise",
+     "max_level": 10,
+     "description": "Enemy Soldier Death Rate in PvP Battle +",
+     "frame": 2
+    }
+   ]
+  },
+  {
+   "id": 13,
+   "name": "Defense Strategy",
+   "sort": 15,
+   "icon": "icon_technologyType_defensiveStrategy",
+   "squad": null,
+   "recommended": true,
+   "shown_when": [
+    {
+     "kind": "institute_level",
+     "level": 19,
+     "text": "Institute Lv. 19"
+    }
+   ],
+   "unlock": [
+    {
+     "kind": "institute_level",
+     "level": 21,
+     "text": "Institute Lv. 21"
+    },
+    {
+     "kind": "tree_progress",
+     "tree": 11,
+     "percent": 40,
+     "text": "Super Soldiers 40% complete"
+    }
+   ],
+   "techs": [
+    {
+     "id": 13001,
+     "name": "Hospital Expansion",
+     "row": 1,
+     "col": 2,
+     "pos": "1_1_2",
+     "from": [],
+     "icon": "Icon_Build_Hospital",
+     "max_level": 1,
+     "description": "Hospital Building Limit",
+     "frame": 2
+    },
+    {
+     "id": 13002,
+     "name": "Hold the Line I",
+     "row": 2,
+     "col": 1,
+     "pos": "1_2_1",
+     "from": [
+      "1_1_2"
+     ],
+     "icon": "icon_technology_teamHeroDefenseHpUp",
+     "max_level": 10,
+     "description": "As the Defender in PvP Battle, Hero HP +",
+     "frame": 0
+    },
+    {
+     "id": 13003,
+     "name": "Defensive Counterattack I",
+     "row": 2,
+     "col": 2,
+     "pos": "1_2_2",
+     "from": [
+      "1_1_2"
+     ],
+     "icon": "icon_technology_teamHeroDefenseAtkUp",
+     "max_level": 10,
+     "description": "As the Defender in PvP Battle, Hero ATK +",
+     "frame": 0
+    },
+    {
+     "id": 13004,
+     "name": "Steady Defense I",
+     "row": 2,
+     "col": 3,
+     "pos": "1_2_3",
+     "from": [
+      "1_1_2"
+     ],
+     "icon": "icon_technology_teamHeroDefenseDefUp",
+     "max_level": 10,
+     "description": "As the Defender in PvP Battle, Hero DEF +",
+     "frame": 0
+    },
+    {
+     "id": 13005,
+     "name": "Emergency Care",
+     "row": 3,
+     "col": 2,
+     "pos": "1_3_2",
+     "from": [
+      "1_2_1",
+      "1_2_2",
+      "1_2_3"
+     ],
+     "icon": "icon_technology_deathReduce",
+     "max_level": 10,
+     "description": "When Base is breached, Soldier Death Rate at Drill Ground -",
+     "frame": 2
+    },
+    {
+     "id": 13006,
+     "name": "Healing Capacity I",
+     "row": 4,
+     "col": 1,
+     "pos": "1_4_1",
+     "from": [
+      "1_3_2"
+     ],
+     "icon": "icon_technology_hospitalCapacity",
+     "max_level": 10,
+     "description": "Hospital Capacity",
+     "frame": 0
+    },
+    {
+     "id": 13007,
+     "name": "Reduced Healing Cost",
+     "row": 4,
+     "col": 3,
+     "pos": "1_4_3",
+     "from": [
+      "1_3_2"
+     ],
+     "icon": "icon_technology_healResourceReduce",
+     "max_level": 10,
+     "description": "Healing Cost -",
+     "frame": 0
+    },
+    {
+     "id": 13008,
+     "name": "Hold the Line II",
+     "row": 5,
+     "col": 1,
+     "pos": "1_5_1",
+     "from": [
+      "1_4_1",
+      "1_4_3"
+     ],
+     "icon": "icon_technology_teamHeroDefenseHpUp",
+     "max_level": 10,
+     "description": "As the Defender in PvP Battle, Hero HP +",
+     "frame": 0
+    },
+    {
+     "id": 13009,
+     "name": "Defensive Counterattack II",
+     "row": 5,
+     "col": 2,
+     "pos": "1_5_2",
+     "from": [
+      "1_4_1",
+      "1_4_3"
+     ],
+     "icon": "icon_technology_teamHeroDefenseAtkUp",
+     "max_level": 10,
+     "description": "As the Defender in PvP Battle, Hero ATK +",
+     "frame": 0
+    },
+    {
+     "id": 13010,
+     "name": "Steady Defense II",
+     "row": 5,
+     "col": 3,
+     "pos": "1_5_3",
+     "from": [
+      "1_4_1",
+      "1_4_3"
+     ],
+     "icon": "icon_technology_teamHeroDefenseDefUp",
+     "max_level": 10,
+     "description": "As the Defender in PvP Battle, Hero DEF +",
+     "frame": 0
+    },
+    {
+     "id": 13011,
+     "name": "Resource Protection",
+     "row": 6,
+     "col": 2,
+     "pos": "1_6_2",
+     "from": [
+      "1_5_1",
+      "1_5_2",
+      "1_5_3"
+     ],
+     "icon": "icon_technology_resourceProtect",
+     "max_level": 10,
+     "description": "Increased Max Protection Capacity (Food, Metal, Oil)",
+     "frame": 0
+    },
+    {
+     "id": 13012,
+     "name": "Rapid March I",
+     "row": 7,
+     "col": 2,
+     "pos": "1_7_2",
+     "from": [
+      "1_6_2"
+     ],
+     "icon": "icon_technology_teamMarchingSpeed",
+     "max_level": 10,
+     "description": "Overall March Speed +",
+     "frame": 0
+    },
+    {
+     "id": 13013,
+     "name": "Hold the Line III",
+     "row": 8,
+     "col": 1,
+     "pos": "1_8_1",
+     "from": [
+      "1_7_2"
+     ],
+     "icon": "icon_technology_teamHeroDefenseHpUp",
+     "max_level": 10,
+     "description": "As the Defender in PvP Battle, Hero HP +",
+     "frame": 0
+    },
+    {
+     "id": 13014,
+     "name": "Defensive Counterattack III",
+     "row": 8,
+     "col": 2,
+     "pos": "1_8_2",
+     "from": [
+      "1_7_2"
+     ],
+     "icon": "icon_technology_teamHeroDefenseAtkUp",
+     "max_level": 10,
+     "description": "As the Defender in PvP Battle, Hero ATK +",
+     "frame": 0
+    },
+    {
+     "id": 13015,
+     "name": "Steady Defense III",
+     "row": 8,
+     "col": 3,
+     "pos": "1_8_3",
+     "from": [
+      "1_7_2"
+     ],
+     "icon": "icon_technology_teamHeroDefenseDefUp",
+     "max_level": 10,
+     "description": "As the Defender in PvP Battle, Hero DEF +",
+     "frame": 0
+    },
+    {
+     "id": 13016,
+     "name": "Battlefield Medic",
+     "row": 9,
+     "col": 2,
+     "pos": "1_9_2",
+     "from": [
+      "1_8_1",
+      "1_8_2",
+      "1_8_3"
+     ],
+     "icon": "icon_technology_deathReduce",
+     "max_level": 10,
+     "description": "Your Soldier Death Rate in PVP Battle -",
+     "frame": 1
+    }
+   ]
+  }
+ ]
+}

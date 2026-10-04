@@ -1,93 +1,76 @@
-# Z Route: Hero EXP & Leveling Guide
+# Hero EXP guide
 
-This guide details the exact Hero Experience (EXP) costs and progression mechanics derived directly from the static Android client version `1.30.07` plaintext data ([`data/heroes.json`](../data/heroes.json)).
+Facts from the client tables (catalog V202610032200): `HeroLevel` (EXP per level), `BFCastleBase` (hero level cap per HQ level), `CastleBox` (Hero EXP chest contents), `Item`, and `PointSource`/`ActivityTarget` (Alliance Competition). Generated from [`data/hero_exp.json`](../data/hero_exp.json). Use the [Hero EXP calculator](https://jeffxlabs.github.io/zrouteredemption/hero-exp/) for any range.
 
-An interactive calculator is published on GitHub Pages at **[Z Route Hero EXP Calculator](https://jeffxlabs.github.io/zrouteredemption/hero-exp/)**.
+## Key numbers
 
----
+- Lv 1 → 150 costs **5,237,407,280** Hero EXP per hero (5.24B); a squad of 5 needs 26,187,036,400.
+- Hero level cap = HQ level × 5. HQ stops at 30, so heroes cap at **Lv 150**.
+- The EXP table continues to Lv 175 (15,287,407,030 from Lv 1), but no HQ level unlocks Lv 151–175 in the current client.
+- Alliance Competition, day 4 (hero day): **1 point per 650 Hero EXP used**, raised by the *Points Buff* research (+5% per level, up to +100%). Lv 1 → 150 for one hero is worth about 8,057,549 points before buffs.
+- 1K Battle EXP gives 1,000 EXP. Hero EXP chests scale with HQ level: at HQ 30 an R chest gives 108,210, SR 1,082,100, SSR 8,656,800 and UR 25,970,400 EXP. Open chests after upgrading HQ.
 
-## 1. Summary: Brand New to Max Level
+## HQ level caps
 
-Heroes begin brand new at **Level 1** (0 EXP). There are two definitions of "max level" depending on game progression:
+| HQ | Hero cap | Total EXP from Lv 1 | Cost of the last 5 levels | R chest | SR chest | SSR chest | UR chest |
+|---:|---:|---:|---:|---:|---:|---:|---:|
+| 1 | Lv 5 | 900 | 900 | 2,790 | 27,900 | 223,200 | 669,600 |
+| 2 | Lv 10 | 4,040 | 3,140 | 2,790 | 27,900 | 223,200 | 669,600 |
+| 3 | Lv 15 | 10,040 | 6,000 | 2,790 | 27,900 | 223,200 | 669,600 |
+| 4 | Lv 20 | 19,140 | 9,100 | 2,790 | 27,900 | 223,200 | 669,600 |
+| 5 | Lv 25 | 39,340 | 20,200 | 2,790 | 27,900 | 223,200 | 669,600 |
+| 6 | Lv 30 | 120,340 | 81,000 | 2,790 | 27,900 | 223,200 | 669,600 |
+| 7 | Lv 35 | 319,340 | 199,000 | 2,790 | 27,900 | 223,200 | 669,600 |
+| 8 | Lv 40 | 644,340 | 325,000 | 2,790 | 27,900 | 223,200 | 669,600 |
+| 9 | Lv 45 | 1,148,330 | 503,990 | 3,600 | 36,000 | 288,000 | 864,000 |
+| 10 | Lv 50 | 2,268,280 | 1,119,950 | 4,540 | 45,400 | 363,200 | 1,089,600 |
+| 11 | Lv 55 | 4,998,230 | 2,729,950 | 5,760 | 57,600 | 460,800 | 1,382,400 |
+| 12 | Lv 60 | 11,908,180 | 6,909,950 | 7,390 | 73,900 | 591,200 | 1,773,600 |
+| 13 | Lv 65 | 24,708,130 | 12,799,950 | 9,480 | 94,800 | 758,400 | 2,275,200 |
+| 14 | Lv 70 | 45,308,080 | 20,599,950 | 12,120 | 121,200 | 969,600 | 2,908,800 |
+| 15 | Lv 75 | 78,208,030 | 32,899,950 | 15,370 | 153,700 | 1,229,600 | 3,688,800 |
+| 16 | Lv 80 | 132,407,980 | 54,199,950 | 19,620 | 196,200 | 1,569,600 | 4,708,800 |
+| 17 | Lv 85 | 204,407,930 | 71,999,950 | 24,600 | 246,000 | 1,968,000 | 5,904,000 |
+| 18 | Lv 90 | 295,407,880 | 90,999,950 | 30,240 | 302,400 | 2,419,200 | 7,257,600 |
+| 19 | Lv 95 | 411,407,830 | 115,999,950 | 36,990 | 369,900 | 2,959,200 | 8,877,600 |
+| 20 | Lv 100 | 560,407,780 | 148,999,950 | 42,000 | 420,000 | 3,360,000 | 10,080,000 |
+| 21 | Lv 105 | 755,407,730 | 194,999,950 | 46,800 | 468,000 | 3,744,000 | 11,232,000 |
+| 22 | Lv 110 | 1,000,407,680 | 244,999,950 | 51,600 | 516,000 | 4,128,000 | 12,384,000 |
+| 23 | Lv 115 | 1,295,407,630 | 294,999,950 | 55,200 | 552,000 | 4,416,000 | 13,248,000 |
+| 24 | Lv 120 | 1,640,407,580 | 344,999,950 | 60,260 | 602,600 | 4,820,800 | 14,462,400 |
+| 25 | Lv 125 | 2,035,407,530 | 394,999,950 | 67,800 | 678,000 | 5,424,000 | 16,272,000 |
+| 26 | Lv 130 | 2,480,407,480 | 444,999,950 | 74,400 | 744,000 | 5,952,000 | 17,856,000 |
+| 27 | Lv 135 | 2,987,407,430 | 506,999,950 | 81,600 | 816,000 | 6,528,000 | 19,584,000 |
+| 28 | Lv 140 | 3,612,407,380 | 624,999,950 | 89,020 | 890,200 | 7,121,600 | 21,364,800 |
+| 29 | Lv 145 | 4,362,407,330 | 749,999,950 | 98,400 | 984,000 | 7,872,000 | 23,616,000 |
+| 30 | Lv 150 | 5,237,407,280 | 874,999,950 | 108,210 | 1,082,100 | 8,656,800 | 25,970,400 |
 
-| Milestone | Target Level | Headquarters Req | Total EXP (1 Hero) | Full Squad (×5 Heroes) | VS Points (Day 4) |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **Base Game Max Cap** | **Level 150** | **HQ 30** | **5,237,407,280** (~5.24 Billion) | **26,187,036,400** (~26.19B) | **10.47 Billion** |
-| **Extended Curve Cap** | **Level 175** | **HQ 35** (*Age of Oil*) | **15,287,407,030** (~15.29 Billion) | **76,437,035,150** (~76.44B) | **30.57 Billion** |
+## Every 10 levels
 
-> [!NOTE]
-> All 32 playable heroes in [`data/heroes.json`](../data/heroes.json) have their base hero record configured with `"max_level": 150`. The `level_curves` dataset in the client defines upgrade costs up through **Level 175**, unlocking with HQ 31–35 in later season expansions (*Age of Oil*).
+| Level | EXP for this level | Total from Lv 1 | % of Lv 150 |
+|---:|---:|---:|---:|
+| 1 | — | 0 | 0.0% |
+| 10 | 800 | 4,040 | 0.0% |
+| 20 | 2,200 | 19,140 | 0.0% |
+| 30 | 24,000 | 120,340 | 0.0% |
+| 40 | 75,000 | 644,340 | 0.0% |
+| 50 | 309,990 | 2,268,280 | 0.0% |
+| 60 | 1,899,990 | 11,908,180 | 0.2% |
+| 70 | 4,899,990 | 45,308,080 | 0.9% |
+| 80 | 12,999,990 | 132,407,980 | 2.5% |
+| 90 | 19,999,990 | 295,407,880 | 5.6% |
+| 100 | 32,999,990 | 560,407,780 | 10.7% |
+| 110 | 52,999,990 | 1,000,407,680 | 19.1% |
+| 120 | 72,999,990 | 1,640,407,580 | 31.3% |
+| 130 | 92,999,990 | 2,480,407,480 | 47.4% |
+| 140 | 134,999,990 | 3,612,407,380 | 69.0% |
+| 150 | 184,999,990 | 5,237,407,280 | 100.0% |
+| 160 (not reachable yet) | 334,999,990 | 7,912,407,180 | 151.1% |
+| 170 (not reachable yet) | 534,999,990 | 12,237,407,080 | 233.7% |
+| 175 (not reachable yet) | 659,999,990 | 15,287,407,030 | 291.9% |
 
----
+## Notes
 
-## 2. Headquarters Gating (HQ × 5)
-
-Hero level cap is hard-gated by your Headquarters (HQ) level:
-$$\text{Hero Level Cap} = \text{HQ Level} \times 5$$
-
-| HQ Level | Hero Cap | Total EXP from Lv 1 | Incremental Bracket Cost (+5 Lvls) | VS Event Points (Day 4) |
-| :--- | :--- | :--- | :--- | :--- |
-| **HQ 20** | Lv 100 | **560,407,780** (~560.4M) | +265,000,000 (Lv 95→100) | 1.12B |
-| **HQ 21** | Lv 105 | **760,407,730** (~760.4M) | +200,000,000 | 1.52B |
-| **HQ 22** | Lv 110 | **1,000,407,680** (~1.00B) | +240,000,000 | 2.00B |
-| **HQ 23** | Lv 115 | **1,290,407,630** (~1.29B) | +290,000,000 | 2.58B |
-| **HQ 24** | Lv 120 | **1,640,407,580** (~1.64B) | +350,000,000 | 3.28B |
-| **HQ 25** | Lv 125 | **2,030,407,530** (~2.03B) | +390,000,000 | 4.06B |
-| **HQ 26** | Lv 130 | **2,480,407,480** (~2.48B) | +450,000,000 | 4.96B |
-| **HQ 27** | Lv 135 | **3,010,407,430** (~3.01B) | +530,000,000 | 6.02B |
-| **HQ 28** | Lv 140 | **3,612,407,380** (~3.61B) | +602,000,000 | 7.22B |
-| **HQ 29** | Lv 145 | **4,362,407,330** (~4.36B) | +750,000,000 | 8.72B |
-| **HQ 30** | **Lv 150** | **5,237,407,280** (~5.24B) | **+875,000,000** | **10.47B** |
-| **HQ 31** | Lv 155 | **6,387,407,230** (~6.39B) | +1,150,000,000 | 12.77B |
-| **HQ 32** | Lv 160 | **7,912,407,180** (~7.91B) | +1,525,000,000 | 15.82B |
-| **HQ 33** | Lv 165 | **9,812,407,130** (~9.81B) | +1,900,000,000 | 19.62B |
-| **HQ 34** | Lv 170 | **12,237,407,080** (~12.24B) | +2,425,000,000 | 24.47B |
-| **HQ 35** | **Lv 175** | **15,287,407,030** (~15.29B) | **+3,050,000,000** | **30.57B** |
-
----
-
-## 3. Progression Milestones
-
-The table below tracks key levels from brand new (Level 1) through Level 175:
-
-| Level | HQ Req | EXP to Reach That Level | Cumulative EXP (From Lv 1) | % of Base Cap (Lv 150) |
-| :--- | :--- | :--- | :--- | :--- |
-| **Lv 1** | HQ 1 | 0 | **0** | 0.0% |
-| **Lv 10** | HQ 2 | 800 | **4,040** | 0.0001% |
-| **Lv 20** | HQ 4 | 2,200 | **19,140** | 0.0004% |
-| **Lv 30** | HQ 6 | 24,000 | **120,340** | 0.002% |
-| **Lv 40** | HQ 8 | 75,000 | **644,340** | 0.012% |
-| **Lv 50** | HQ 10 | 309,990 | **2,268,280** | 0.043% |
-| **Lv 60** | HQ 12 | 1,899,990 | **11,908,180** | 0.23% |
-| **Lv 70** | HQ 14 | 4,899,990 | **45,308,080** | 0.86% |
-| **Lv 80** | HQ 16 | 12,999,990 | **132,407,980** | 2.53% |
-| **Lv 90** | HQ 18 | 19,999,990 | **295,407,880** | 5.64% |
-| **Lv 100** | HQ 20 | 32,999,990 | **560,407,780** | 10.70% |
-| **Lv 110** | HQ 22 | 52,999,990 | **1,000,407,680** | 19.10% |
-| **Lv 120** | HQ 24 | 72,999,990 | **1,640,407,580** | 31.32% |
-| **Lv 130** | HQ 26 | 92,999,990 | **2,480,407,480** | 47.36% |
-| **Lv 140** | HQ 28 | 134,999,990 | **3,612,407,380** | 68.97% |
-| **Lv 145** | HQ 29 | 159,999,990 | **4,362,407,330** | 83.29% |
-| **Lv 150** | **HQ 30** | **184,999,990** | **5,237,407,280** | **100.0%** |
-| **Lv 155** | HQ 31 | 259,999,990 | **6,387,407,230** | 121.96% |
-| **Lv 160** | HQ 32 | 334,999,990 | **7,912,407,180** | 151.07% |
-| **Lv 165** | HQ 33 | 409,999,990 | **9,812,407,130** | 187.35% |
-| **Lv 170** | HQ 34 | 534,999,990 | **12,237,407,080** | 233.65% |
-| **Lv 175** | **HQ 35** | **659,999,990** | **15,287,407,030** | **291.89%** |
-
----
-
-## 4. Key Strategic Mechanics
-
-### Level Curve 1 vs Curve 2
-In [`data/heroes.json`](../data/heroes.json), heroes belong to either `level_curve_id: 1` or `level_curve_id: 2`:
-* **Cost is Identical**: Both curves have zero difference in Hero EXP costs across all 175 levels.
-* **Benefit Multipliers**: Curve 2 heroes (UR combat heroes like Murphy, Kimberly, Marshall, Carlie, Tesla, Swift, etc.) gain larger base HP, ATK, and DEF stat increases per level compared to Curve 1 heroes (SR, SSR, and Support UR Aria).
-
-### Hero EXP vs Hero Shards
-* **Leveling**: Consumes only `Hero EXP` (`type: 5`). No gold, food, metal, oil, or shards are required to level up.
-* **Star Promotion**: Gated by star tiers and substeps (0 to 5 whole stars, 25 steps total in `star_curve`), which consume hero fragments/shards (`item_Material_universalFragment_*`).
-
-### Resource Allocation
-* **Concentrate on Main DPS**: Because EXP scaling accelerates so sharply (Level 120→150 requires 3.6 billion EXP, more than twice the entire cost of Level 1→120), bringing one primary damage dealer (e.g. Kimberly) to Level 150 is vastly more impactful than leveling an entire squad evenly to Level 130.
-* **VS Event Timing (Thursday)**: Alliance Duel Day 4 is Hero Day. Saving your Hero EXP items and applying them on Thursday grants 2 VS points per 1 Hero EXP spent, easily completing all event reward milestones.
+- Every hero, whatever its rarity, uses the same EXP cost per level. Rarity changes the stats gained (UR heroes use a stronger stat curve until Lv 65), not the EXP needed.
+- Hero EXP only raises level. Stars use hero shards, and skills use Skill EXP Books.
+- Half of all EXP to Lv 150 goes into the last 19 levels (Lv 131 → 150), and Lv 130 → 150 alone is 53%.

@@ -2,1906 +2,369 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-  <meta name="theme-color" content="#07101d">
-  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#000000">
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="Research Trees">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Research">
+  <meta name="description" content="Z Route: Redemption research trees laid out like the in-game Institute, with costs, research chips, times, benefits and a level planner.">
   <link rel="manifest" href="../manifest.webmanifest">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔬</text></svg>">
-  <title>Z Route Research Trees &amp; Tech Planner · Chips &amp; Resource Calculator</title>
+  <link rel="icon" href="../assets/ui/chips.webp" type="image/webp">
+  <link rel="stylesheet" href="../assets/app.css">
+  <title>Z Route Research</title>
   <style>
-    :root {
-      --bg: #07101d;
-      --card-bg: rgba(15, 29, 49, 0.88);
-      --card-inner: #0b1829;
-      --card-border: rgba(91, 202, 242, 0.14);
-      --line: #243c5d;
-      --text-main: #f4f7fc;
-      --text-muted: #95a8c4;
-      --accent: #5bcaf2;
-      --accent-gradient: linear-gradient(135deg, #0a84ff, #5bcaf2);
-      --green: #5ee6a8;
-      --amber: #ffc857;
-      --red: #ff6b75;
-      --purple: #c68cff;
-      --chip-gold: #fbbf24;
-      --chip-bg: rgba(251, 191, 36, 0.12);
-      --chip-border: rgba(251, 191, 36, 0.35);
-      --food-color: #4ade80;
-      --metal-color: #94a3b8;
-      --oil-color: #f59e0b;
-      --pill-bg: #13243b;
-      --pill-border: rgba(255, 255, 255, 0.12);
-      --nav-bg: rgba(7, 16, 29, 0.94);
-      --safe-top: env(safe-area-inset-top, 0px);
-      --safe-bottom: env(safe-area-inset-bottom, 0px);
-      --shadow: 0 20px 60px rgba(0, 0, 0, 0.38);
-    }
+    .toolbar { display: flex; gap: 8px; align-items: center; margin-bottom: 10px; position: relative; }
+    .results { position: absolute; left: 0; right: 0; top: 44px; z-index: 30; background: var(--s3); border: 1px solid var(--line2); border-radius: 12px; padding: 4px; box-shadow: 0 12px 40px rgba(0,0,0,.5); max-height: 360px; overflow: auto; }
+    .results[hidden] { display: none; }
+    .results button { display: flex; align-items: center; gap: 10px; width: 100%; text-align: left; border: 0; background: none; padding: 7px 8px; border-radius: 8px; cursor: pointer; }
+    .results button:hover, .results button:focus-visible { background: var(--s2); }
+    .results img { width: 30px; height: 30px; object-fit: contain; flex: none; }
+    .results small { display: block; color: var(--muted); font-size: 11.5px; }
 
-    html.day, body.day {
-      --bg: #f8fafc;
-      --card-bg: rgba(255, 255, 255, 0.95);
-      --card-inner: #f1f5f9;
-      --card-border: #cbd5e1;
-      --line: #e2e8f0;
-      --text-main: #0f172a;
-      --text-muted: #64748b;
-      --accent: #0284c7;
-      --accent-gradient: linear-gradient(135deg, #0284c7, #0ea5e9);
-      --green: #059669;
-      --amber: #d97706;
-      --red: #dc2626;
-      --purple: #7c3aed;
-      --chip-gold: #b45309;
-      --chip-bg: rgba(217, 119, 6, 0.12);
-      --chip-border: rgba(217, 119, 6, 0.35);
-      --food-color: #16a34a;
-      --metal-color: #475569;
-      --oil-color: #d97706;
-      --pill-bg: #e2e8f0;
-      --pill-border: #cbd5e1;
-      --nav-bg: rgba(255, 255, 255, 0.95);
-      --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    }
+    .trees { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; margin: 0 -16px 12px; padding: 2px 16px; }
+    .trees::-webkit-scrollbar { display: none; }
+    @media (min-width: 1000px) { .trees { display: grid; grid-template-columns: repeat(auto-fill, minmax(168px, 1fr)); overflow: visible; margin: 0 0 12px; padding: 0; } }
+    .ttile { flex: none; width: 128px; display: grid; grid-template-columns: 40px 1fr; gap: 2px 8px; align-items: center; text-align: left; border: 1px solid var(--line); background: var(--s1); border-radius: 12px; padding: 7px 8px; cursor: pointer; }
+    @media (min-width: 1000px) { .ttile { width: auto; } }
+    .ttile img { width: 40px; height: 40px; object-fit: contain; grid-row: span 2; }
+    .ttile b { font-size: 12.5px; line-height: 1.2; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .ttile small { font-size: 11px; color: var(--faint); display: flex; align-items: center; gap: 4px; white-space: nowrap; }
+    .ttile small img { width: 13px; height: 13px; grid-row: auto; }
+    .ttile .bar { grid-column: 1 / -1; height: 3px; border-radius: 2px; background: var(--line2); overflow: hidden; margin-top: 3px; }
+    .ttile .bar i { display: block; height: 100%; background: var(--accent); }
+    .ttile[aria-pressed="true"] { border-color: var(--text); background: var(--s2); }
 
-    * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
-    html { background-color: var(--bg); color-scheme: dark; scroll-behavior: smooth; }
-    html.day { color-scheme: light; }
-    body {
-      margin: 0;
-      padding: 0;
-      background:
-        radial-gradient(circle at 90% -5%, rgba(46, 92, 148, 0.35), transparent 36rem),
-        radial-gradient(circle at 5% 95%, rgba(38, 126, 104, 0.2), transparent 32rem),
-        var(--bg);
-      color: var(--text-main);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
+    .main { display: grid; gap: 12px; }
+    @media (min-width: 1000px) { .main { grid-template-columns: minmax(0, 1fr) 400px; align-items: start; } .side { position: sticky; top: calc(var(--header-h) + 12px); max-height: calc(100vh - var(--header-h) - 24px); overflow: auto; } }
+    .thead { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 10px; }
+    .thead > img { width: 52px; height: 52px; object-fit: contain; }
+    .thead h2 { margin: 0; font-size: 19px; }
+    .thead .grow { flex: 1; min-width: 160px; display: grid; gap: 4px; }
+    .legend { display: flex; gap: 12px; flex-wrap: wrap; font-size: 11.5px; color: var(--muted); margin-bottom: 8px; }
+    .legend span { display: inline-flex; align-items: center; gap: 5px; }
+    .legend img { width: 18px; height: 18px; }
 
-    /* Fixed App Header */
-    .app-header {
-      position: sticky;
-      top: 0;
-      z-index: 90;
-      background: var(--nav-bg);
-      backdrop-filter: blur(20px) saturate(180%);
-      -webkit-backdrop-filter: blur(20px) saturate(180%);
-      border-bottom: 1px solid var(--line);
-      padding-top: var(--safe-top);
-    }
-    .header-inner {
-      max-width: 1440px;
-      margin: 0 auto;
-      height: 56px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 16px;
-    }
-    .header-brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-weight: 800;
-      font-size: 1.05rem;
-      letter-spacing: -0.02em;
-    }
-    .header-logo {
-      width: 32px;
-      height: 32px;
-      border-radius: 9px;
-      background: var(--accent-gradient);
-      display: grid;
-      place-items: center;
-      color: white;
-      font-weight: 900;
-      font-size: 16px;
-      box-shadow: 0 0 18px rgba(91, 202, 242, 0.3);
-    }
-    .header-badge {
-      font-size: 11px;
-      font-weight: 700;
-      background: rgba(91, 202, 242, 0.15);
-      color: var(--accent);
-      padding: 3px 8px;
-      border-radius: 12px;
-    }
-    .desktop-nav {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .nav-btn {
-      padding: 6px 12px;
-      border-radius: 9px;
-      border: 1px solid transparent;
-      color: var(--text-muted);
-      font-size: 0.88rem;
-      font-weight: 600;
-      text-decoration: none;
-      transition: all 0.15s;
-    }
-    .nav-btn:hover {
-      background: var(--pill-bg);
-      color: var(--text-main);
-    }
-    .nav-btn.active {
-      background: var(--pill-bg);
-      border-color: var(--line);
-      color: var(--accent);
-    }
-    .header-actions {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .icon-btn {
-      background: var(--pill-bg);
-      border: 1px solid var(--pill-border);
-      color: var(--text-main);
-      width: 36px;
-      height: 36px;
-      border-radius: 9px;
-      display: grid;
-      place-items: center;
-      cursor: pointer;
-      font-size: 16px;
-      transition: all 0.15s;
-    }
-    .icon-btn:hover { border-color: var(--accent); color: var(--accent); }
+    /* Tree canvas: the client's grid (row, column) layout */
+    .tree { --rowh: 112px; position: relative; display: grid; grid-template-columns: repeat(var(--cols), minmax(0, 1fr)); grid-auto-rows: var(--rowh); background: radial-gradient(ellipse at 50% 0%, color-mix(in srgb, var(--accent) 7%, var(--s1)), var(--s1) 60%); border-radius: 12px; padding: 4px 0; }
+    @media (max-width: 420px) { .tree { --rowh: 104px; } }
+    .tree svg.links { position: absolute; inset: 4px 0; width: 100%; height: calc(100% - 8px); pointer-events: none; }
+    .links path { fill: none; stroke: var(--line2); stroke-width: 2; vector-effect: non-scaling-stroke; opacity: .9; }
+    .links path.on { stroke: var(--ur); }
+    .node { position: relative; z-index: 1; border: 0; background: none; padding: 4px 2px 0; display: flex; flex-direction: column; align-items: center; gap: 0; cursor: pointer; min-width: 0; }
+    .ring { position: relative; width: 62px; height: 62px; display: grid; place-items: center; background: url(../assets/research/node.webp) center/contain no-repeat; }
+    .ring img { width: 40px; height: 40px; object-fit: contain; filter: saturate(.85) brightness(.9); }
+    .node.planned .ring { background-image: url(../assets/research/node_on.webp); }
+    .node.planned .ring img, .node.maxed .ring img, .node.started .ring img { filter: none; }
+    .node.maxed .ring { background-image: url(../assets/research/node_max.webp); background-size: 112%; }
+    .node.sel .ring::after { content: ""; position: absolute; inset: -5px; border-radius: 50%; box-shadow: 0 0 0 2px var(--accent); }
+    .node .lv { position: relative; margin-top: -9px; min-width: 42px; height: 16px; padding: 0 6px; display: grid; place-items: center; font-size: 10.5px; font-weight: 800; font-variant-numeric: tabular-nums; color: #fff; background: url(../assets/research/num_bg.webp) center/100% 100% no-repeat; border-radius: 4px; }
+    .node.planned .lv { color: #ffd27a; }
+    .node .nm { margin-top: 3px; font-size: 11px; line-height: 1.2; font-weight: 600; text-align: center; color: var(--muted); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; max-width: 100%; padding: 0 2px; }
+    .node.planned .nm, .node.sel .nm { color: var(--text); }
+    .node.nodata .lv { opacity: .5; }
 
-    /* Main Container */
-    .container {
-      max-width: 1440px;
-      margin: 0 auto;
-      padding: 24px 16px 80px;
-      flex: 1;
-      width: 100%;
-    }
-
-    /* Hero / Banner Section */
-    .hero-banner {
-      position: relative;
-      border-radius: 20px;
-      border: 1px solid var(--card-border);
-      background:
-        linear-gradient(135deg, rgba(15, 29, 49, 0.94) 0%, rgba(11, 24, 41, 0.96) 100%),
-        url('../assets/research/banner_tech.png') center right / cover no-repeat;
-      padding: 28px 24px;
-      margin-bottom: 24px;
-      box-shadow: var(--shadow);
-      overflow: hidden;
-    }
-    body.day .hero-banner {
-      background:
-        linear-gradient(135deg, rgba(255, 255, 255, 0.94) 0%, rgba(241, 245, 249, 0.96) 100%),
-        url('../assets/research/banner_tech.png') center right / cover no-repeat;
-    }
-    .eyebrow {
-      font-size: 0.76rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--accent);
-      margin-bottom: 6px;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .hero-banner h1 {
-      margin: 0 0 10px;
-      font-size: clamp(1.6rem, 2.8vw, 2.3rem);
-      font-weight: 900;
-      letter-spacing: -0.03em;
-      line-height: 1.15;
-    }
-    .hero-lead {
-      color: var(--text-muted);
-      max-width: 820px;
-      margin: 0 0 20px;
-      font-size: 0.98rem;
-      line-height: 1.55;
-    }
-
-    /* Overall Summary Stats Bar */
-    .stats-summary-bar {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      align-items: center;
-    }
-    .stat-pill {
-      background: rgba(7, 16, 29, 0.7);
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      padding: 8px 14px;
-      font-size: 0.84rem;
-      font-weight: 700;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      backdrop-filter: blur(8px);
-    }
-    body.day .stat-pill {
-      background: rgba(255, 255, 255, 0.8);
-    }
-    .stat-pill.chip-highlight {
-      background: var(--chip-bg);
-      border-color: var(--chip-border);
-      color: var(--chip-gold);
-    }
-    .stat-pill img.icon-sm {
-      width: 20px;
-      height: 20px;
-      object-fit: contain;
-    }
-    .stat-pill .val {
-      font-weight: 900;
-      color: var(--text-main);
-    }
-    .stat-pill.chip-highlight .val {
-      color: var(--chip-gold);
-    }
-
-    /* Research Chips (Courage Medals) Callout Card */
-    .chips-callout-card {
-      background: linear-gradient(135deg, rgba(251, 191, 36, 0.08) 0%, rgba(217, 119, 6, 0.04) 100%);
-      border: 1px solid var(--chip-border);
-      border-radius: 18px;
-      padding: 20px;
-      margin-bottom: 24px;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
-    .callout-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-    .callout-title-wrap {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-    .callout-title-wrap img {
-      width: 42px;
-      height: 42px;
-      filter: drop-shadow(0 0 10px rgba(251, 191, 36, 0.4));
-    }
-    .callout-title-wrap h3 {
-      margin: 0;
-      font-size: 1.15rem;
-      font-weight: 800;
-      color: var(--chip-gold);
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .callout-title-wrap p {
-      margin: 3px 0 0;
-      color: var(--text-muted);
-      font-size: 0.84rem;
-    }
-    .chip-grand-total {
-      background: var(--chip-bg);
-      border: 1px solid var(--chip-border);
-      border-radius: 12px;
-      padding: 8px 16px;
-      text-align: right;
-    }
-    .chip-grand-total .num {
-      font-size: 1.4rem;
-      font-weight: 900;
-      color: var(--chip-gold);
-      line-height: 1;
-    }
-    .chip-grand-total .lbl {
-      font-size: 0.72rem;
-      text-transform: uppercase;
-      font-weight: 700;
-      color: var(--text-muted);
-      letter-spacing: 0.06em;
-    }
-
-    /* Chips Tree Grid inside Callout */
-    .chips-breakdown-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 10px;
-    }
-    .chip-tree-card {
-      background: var(--card-inner);
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      padding: 12px 14px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-      cursor: pointer;
-      transition: all 0.18s ease;
-    }
-    .chip-tree-card:hover {
-      border-color: var(--chip-gold);
-      transform: translateY(-2px);
-    }
-    .chip-tree-info {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .chip-tree-info img {
-      width: 32px;
-      height: 32px;
-      object-fit: contain;
-    }
-    .chip-tree-name {
-      font-size: 0.86rem;
-      font-weight: 750;
-      color: var(--text-main);
-    }
-    .chip-tree-count {
-      font-size: 0.95rem;
-      font-weight: 900;
-      color: var(--chip-gold);
-      white-space: nowrap;
-    }
-
-    /* Filter Controls & Search */
-    .controls-card {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 18px;
-      padding: 16px 20px;
-      margin-bottom: 24px;
-      box-shadow: var(--shadow);
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
-    .search-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .search-input-wrap {
-      flex: 1;
-      min-width: 260px;
-      position: relative;
-    }
-    .search-icon {
-      position: absolute;
-      left: 14px;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 15px;
-      opacity: 0.6;
-      pointer-events: none;
-    }
-    .search-input-wrap input {
-      width: 100%;
-      height: 42px;
-      padding: 0 14px 0 40px;
-      border-radius: 10px;
-      border: 1px solid var(--line);
-      background: var(--card-inner);
-      color: var(--text-main);
-      font-size: 0.92rem;
-      outline: none;
-      transition: border-color 0.15s;
-    }
-    .search-input-wrap input:focus {
-      border-color: var(--accent);
-    }
-    .filter-pills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      align-items: center;
-    }
-    .filter-chip {
-      background: var(--pill-bg);
-      border: 1px solid var(--pill-border);
-      color: var(--text-muted);
-      border-radius: 8px;
-      padding: 6px 12px;
-      font-size: 0.82rem;
-      font-weight: 650;
-      cursor: pointer;
-      transition: all 0.15s;
-    }
-    .filter-chip:hover {
-      background: var(--line);
-      color: var(--text-main);
-    }
-    .filter-chip.active {
-      background: var(--accent-gradient);
-      border-color: transparent;
-      color: #fff;
-    }
-    .filter-chip.chip-filter.active {
-      background: linear-gradient(135deg, #d97706, #fbbf24);
-      color: #000;
-      font-weight: 800;
-    }
-
-    /* Research Trees Grid */
-    .trees-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      gap: 16px;
-      margin-bottom: 32px;
-    }
-    .tree-card {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 18px;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 16px;
-      box-shadow: var(--shadow);
-      transition: transform 0.2s ease, border-color 0.2s ease;
-      cursor: pointer;
-      position: relative;
-      overflow: hidden;
-    }
-    .tree-card:hover {
-      transform: translateY(-3px);
-      border-color: var(--accent);
-    }
-    .tree-card.active-tree {
-      border-color: var(--accent);
-      box-shadow: 0 0 0 2px rgba(91, 202, 242, 0.3), var(--shadow);
-    }
-    .tree-card-top {
-      display: flex;
-      align-items: flex-start;
-      gap: 14px;
-    }
-    .tree-icon-frame {
-      width: 64px;
-      height: 64px;
-      border-radius: 16px;
-      background: var(--card-inner);
-      border: 1px solid var(--line);
-      display: grid;
-      place-items: center;
-      flex-shrink: 0;
-      position: relative;
-      padding: 6px;
-      box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.4);
-    }
-    .tree-icon-frame img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
-    .tree-header-text {
-      flex: 1;
-      min-width: 0;
-    }
-    .tree-category-tag {
-      font-size: 0.72rem;
-      font-weight: 750;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--accent);
-      margin-bottom: 2px;
-    }
-    .tree-name {
-      margin: 0 0 4px;
-      font-size: 1.12rem;
-      font-weight: 850;
-      letter-spacing: -0.02em;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-    .tree-prereq {
-      font-size: 0.78rem;
-      color: var(--text-muted);
-      display: flex;
-      align-items: center;
-      gap: 4px;
-    }
-    .tree-desc {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      line-height: 1.45;
-      margin: 0;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-
-    /* Tree Card Metrics Bar */
-    .tree-metrics {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 8px;
-      background: var(--card-inner);
-      border-radius: 12px;
-      padding: 10px 12px;
-      border: 1px solid var(--line);
-    }
-    .metric-item {
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-    }
-    .metric-lbl {
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      font-weight: 700;
-      color: var(--text-muted);
-      letter-spacing: 0.05em;
-    }
-    .metric-val {
-      font-size: 0.88rem;
-      font-weight: 800;
-      color: var(--text-main);
-      display: flex;
-      align-items: center;
-      gap: 5px;
-    }
-    .metric-val.chips {
-      color: var(--chip-gold);
-    }
-    .metric-val img.icon-xs {
-      width: 15px;
-      height: 15px;
-      object-fit: contain;
-    }
-
-    /* Card Progress & Button */
-    .tree-card-actions {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .plan-btn {
-      flex: 1;
-      height: 38px;
-      border-radius: 10px;
-      background: var(--accent-gradient);
-      border: none;
-      color: #fff;
-      font-weight: 750;
-      font-size: 0.88rem;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 6px;
-      transition: opacity 0.15s, transform 0.15s;
-    }
-    .plan-btn:hover { opacity: 0.92; transform: translateY(-1px); }
-    .quick-preset-btn {
-      height: 38px;
-      padding: 0 12px;
-      border-radius: 10px;
-      background: var(--pill-bg);
-      border: 1px solid var(--pill-border);
-      color: var(--text-main);
-      font-weight: 700;
-      font-size: 0.82rem;
-      cursor: pointer;
-      transition: all 0.15s;
-    }
-    .quick-preset-btn:hover { border-color: var(--accent); color: var(--accent); }
-
-    /* Interactive Planner Section */
-    .planner-section {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 24px;
-      padding: 24px;
-      margin-top: 10px;
-      box-shadow: var(--shadow);
-      scroll-margin-top: 70px;
-    }
-    .planner-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 16px;
-      margin-bottom: 20px;
-      padding-bottom: 16px;
-      border-bottom: 1px solid var(--line);
-    }
-    .planner-title-group {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-    .planner-title-group img {
-      width: 48px;
-      height: 48px;
-      object-fit: contain;
-    }
-    .planner-title-group h2 {
-      margin: 0;
-      font-size: 1.4rem;
-      font-weight: 900;
-      letter-spacing: -0.02em;
-    }
-    .planner-title-group p {
-      margin: 3px 0 0;
-      color: var(--text-muted);
-      font-size: 0.88rem;
-    }
-
-    /* Sticky Plan Totals Dashboard */
-    .planner-totals-dashboard {
-      position: sticky;
-      top: 66px;
-      z-index: 80;
-      background: rgba(11, 24, 41, 0.94);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border: 1px solid var(--card-border);
-      border-radius: 18px;
-      padding: 16px 20px;
-      margin-bottom: 24px;
-      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4);
-    }
-    body.day .planner-totals-dashboard {
-      background: rgba(255, 255, 255, 0.94);
-    }
-    .totals-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 14px;
-      margin-bottom: 14px;
-    }
-    .total-box {
-      display: flex;
-      flex-direction: column;
-      gap: 3px;
-    }
-    .total-box .lbl {
-      font-size: 0.72rem;
-      font-weight: 750;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      color: var(--text-muted);
-      display: flex;
-      align-items: center;
-      gap: 5px;
-    }
-    .total-box .val {
-      font-size: 1.35rem;
-      font-weight: 900;
-      color: var(--text-main);
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .total-box.chips-box .val {
-      color: var(--chip-gold);
-      text-shadow: 0 0 12px rgba(251, 191, 36, 0.35);
-    }
-    .total-box.food-box .val { color: var(--food-color); }
-    .total-box.metal-box .val { color: var(--metal-color); }
-    .total-box.oil-box .val { color: var(--oil-color); }
-
-    /* Time & Speedup Control Row */
-    .speed-controls-row {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      padding-top: 12px;
-      border-top: 1px solid var(--line);
-    }
-    .speed-slider-group {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      flex: 1;
-      min-width: 280px;
-    }
-    .speed-slider-group label {
-      font-size: 0.82rem;
-      font-weight: 750;
-      color: var(--text-muted);
-      white-space: nowrap;
-    }
-    .speed-slider-group input[type="range"] {
-      flex: 1;
-      height: 6px;
-      accent-color: var(--accent);
-      cursor: pointer;
-    }
-    .speed-num-input {
-      width: 72px;
-      height: 32px;
-      text-align: center;
-      border-radius: 8px;
-      border: 1px solid var(--line);
-      background: var(--card-inner);
-      color: var(--accent);
-      font-weight: 850;
-      font-size: 0.9rem;
-    }
-    .planner-actions-group {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .action-btn {
-      padding: 7px 12px;
-      border-radius: 8px;
-      font-size: 0.82rem;
-      font-weight: 750;
-      border: 1px solid var(--pill-border);
-      background: var(--pill-bg);
-      color: var(--text-main);
-      cursor: pointer;
-      transition: all 0.15s;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .action-btn:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-    }
-    .action-btn.primary {
-      background: var(--accent-gradient);
-      border-color: transparent;
-      color: #fff;
-    }
-
-    /* Technology Items List */
-    .tech-list {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-    .tech-item-card {
-      background: var(--card-inner);
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      padding: 16px 20px;
-      transition: all 0.15s ease;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-    .tech-item-card:hover {
-      border-color: rgba(91, 202, 242, 0.3);
-    }
-    .tech-item-card.has-target {
-      border-color: var(--accent);
-      background: linear-gradient(135deg, rgba(91, 202, 242, 0.04) 0%, var(--card-inner) 100%);
-    }
-    .tech-item-card.has-warning {
-      border-color: var(--amber);
-    }
-    .tech-item-top {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-    .tech-info-wrap {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-    .tech-node-badge {
-      width: 44px;
-      height: 44px;
-      border-radius: 12px;
-      background: #040810;
-      border: 1px solid var(--line);
-      display: grid;
-      place-items: center;
-      font-weight: 900;
-      font-size: 1.1rem;
-      color: var(--accent);
-      box-shadow: inset 0 2px 6px rgba(0,0,0,0.5);
-      flex-shrink: 0;
-    }
-    .tech-item-title-col {
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-    }
-    .tech-title-row {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .tech-title {
-      margin: 0;
-      font-size: 1.05rem;
-      font-weight: 850;
-    }
-    .max-level-tag {
-      font-size: 0.72rem;
-      font-weight: 750;
-      background: var(--pill-bg);
-      border: 1px solid var(--line);
-      padding: 2px 8px;
-      border-radius: 10px;
-      color: var(--text-muted);
-    }
-
-    /* Level Selector & Stepper Controls */
-    .level-control-group {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
-    .stepper-box {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      background: var(--card-bg);
-      border: 1px solid var(--line);
-      border-radius: 10px;
-      padding: 3px 6px;
-    }
-    .stepper-lbl {
-      font-size: 0.74rem;
-      font-weight: 750;
-      color: var(--text-muted);
-      margin-right: 4px;
-    }
-    .step-btn {
-      width: 26px;
-      height: 26px;
-      border-radius: 6px;
-      border: 1px solid var(--pill-border);
-      background: var(--pill-bg);
-      color: var(--text-main);
-      font-weight: 800;
-      font-size: 14px;
-      display: grid;
-      place-items: center;
-      cursor: pointer;
-      transition: all 0.12s;
-    }
-    .step-btn:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-    }
-    .stepper-val {
-      min-width: 28px;
-      text-align: center;
-      font-weight: 900;
-      font-size: 0.92rem;
-    }
-    .quick-tech-btn {
-      padding: 4px 10px;
-      border-radius: 7px;
-      font-size: 0.75rem;
-      font-weight: 750;
-      border: 1px solid var(--pill-border);
-      background: var(--pill-bg);
-      color: var(--text-muted);
-      cursor: pointer;
-      transition: all 0.12s;
-    }
-    .quick-tech-btn:hover {
-      border-color: var(--accent);
-      color: var(--text-main);
-    }
-
-    /* Prerequisite Warning & Auto-Fix Banner */
-    .prereq-alert {
-      background: rgba(251, 191, 36, 0.1);
-      border: 1px solid rgba(251, 191, 36, 0.3);
-      border-radius: 10px;
-      padding: 8px 12px;
-      font-size: 0.8rem;
-      color: var(--amber);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-    .fix-prereq-btn {
-      background: var(--amber);
-      color: #000;
-      border: none;
-      border-radius: 6px;
-      padding: 3px 10px;
-      font-size: 0.74rem;
-      font-weight: 800;
-      cursor: pointer;
-    }
-
-    /* Tech Cost & Benefit Footer Row */
-    .tech-item-bottom {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 12px;
-      padding-top: 10px;
-      border-top: 1px dashed var(--line);
-      font-size: 0.82rem;
-    }
-    .tech-cost-summary {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 10px;
-    }
-    .cost-badge {
-      display: flex;
-      align-items: center;
-      gap: 4px;
-      font-weight: 750;
-    }
-    .cost-badge.chips { color: var(--chip-gold); }
-    .cost-badge.food { color: var(--food-color); }
-    .cost-badge.metal { color: var(--metal-color); }
-    .cost-badge.oil { color: var(--oil-color); }
-    .cost-badge.time { color: var(--accent); }
-    .cost-badge.power { color: var(--purple); }
-
-    .tech-benefits-preview {
-      color: var(--green);
-      font-weight: 650;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-    .benefit-tag {
-      background: rgba(94, 230, 168, 0.1);
-      border: 1px solid rgba(94, 230, 168, 0.25);
-      border-radius: 6px;
-      padding: 2px 7px;
-      font-size: 0.74rem;
-    }
-
-    /* Toast Notification */
-    .toast {
-      position: fixed;
-      bottom: 24px;
-      left: 50%;
-      transform: translateX(-50%) translateY(80px);
-      background: var(--card-bg);
-      border: 1px solid var(--accent);
-      color: var(--text-main);
-      padding: 10px 20px;
-      border-radius: 12px;
-      font-size: 0.9rem;
-      font-weight: 750;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-      z-index: 300;
-      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s;
-      opacity: 0;
-      pointer-events: none;
-    }
-    .toast.show {
-      transform: translateX(-50%) translateY(0);
-      opacity: 1;
-    }
-
-    /* Mobile Bottom Navigation */
-    .bottom-nav {
-      display: none;
-    }
-    @media (max-width: 860px) {
-      .desktop-nav { display: none; }
-      .bottom-nav {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        z-index: 100;
-        background: var(--nav-bg);
-        backdrop-filter: blur(25px) saturate(180%);
-        -webkit-backdrop-filter: blur(25px) saturate(180%);
-        border-top: 1px solid var(--line);
-        padding-bottom: var(--safe-bottom);
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        height: calc(56px + var(--safe-bottom));
-      }
-      .nav-item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        color: var(--text-muted);
-        text-decoration: none;
-        font-size: 10px;
-        font-weight: 600;
-        gap: 3px;
-        transition: color 0.15s;
-      }
-      .nav-item.active { color: var(--accent); }
-      .nav-item svg { width: 20px; height: 20px; }
-      .planner-totals-dashboard { top: 56px; }
-    }
-
-    /* Footer */
-    footer {
-      margin-top: 50px;
-      padding-top: 24px;
-      border-top: 1px solid var(--line);
-      color: var(--text-muted);
-      font-size: 0.82rem;
-      text-align: center;
-    }
+    /* Side: totals and detail */
+    .totals { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+    .totals .tile b { font-size: 15px; }
+    .totals .tile small { display: flex; align-items: center; gap: 4px; }
+    .totals .tile small img { width: 14px; height: 14px; }
+    .speed { display: flex; align-items: center; gap: 8px; margin-top: 10px; font-size: 13px; }
+    .speed input[type=range] { flex: 1; }
+    .speed .input { width: 64px; height: 30px; text-align: right; }
+    .detail-head { display: flex; gap: 12px; align-items: center; margin-bottom: 8px; }
+    .detail-head .ring { flex: none; }
+    .detail-head h3 { margin: 0; font-size: 16px; }
+    .levels-ctl { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; margin: 8px 0; }
+    .levels-ctl label { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; }
+    .reqs { display: grid; gap: 4px; margin: 6px 0; }
+    .req { display: flex; align-items: center; gap: 8px; font-size: 12.5px; }
+    .req.unmet { color: var(--warn); }
+    .req img { width: 20px; height: 20px; }
+    table.data td.ben { white-space: normal; color: var(--muted); font-size: 12px; padding-top: 0; }
+    table.lvt tr.top td { border-bottom: 0; padding-bottom: 2px; }
+    .th-ic { width: 16px; height: 16px; vertical-align: -3px; }
+    table.data tr.plan td { background: color-mix(in srgb, var(--ur) 9%, transparent); }
+    table.data tr.done td { opacity: .55; }
+    .sheet-backdrop { display: none; }
+    @media (max-width: 999px) {
+      .detail.open { position: fixed; left: 0; right: 0; bottom: 0; z-index: 70; max-height: 82vh; overflow: auto; border-radius: 18px 18px 0 0; padding-bottom: calc(18px + var(--safe-b)); box-shadow: 0 -20px 60px rgba(0,0,0,.6); }
+      .detail:not(.open) { display: none; }
+      .sheet-backdrop.open { display: block; position: fixed; inset: 0; z-index: 69; background: rgba(0,0,0,.6); }
+    }
+    .close-x { margin-left: auto; width: 32px; height: 32px; border-radius: 50%; border: 1px solid var(--line2); background: var(--s2); cursor: pointer; display: grid; place-items: center; }
+    @media (min-width: 1000px) { .close-x { display: none; } }
   </style>
 </head>
 <body>
-  <!-- Header -->
   <header class="app-header">
     <div class="header-inner">
-      <div class="header-brand">
-        <div class="header-logo">🔬</div>
-        <span>Z Route Research</span>
-        <span class="header-badge">v1.30.07</span>
-      </div>
-
-      <nav class="desktop-nav">
-        <a href="../" class="nav-btn">Base Planner</a>
-        <a href="../#producer-roi" class="nav-btn">Producer ROI</a>
-        <a href="../heroes/" class="nav-btn">Heroes</a>
-        <a href="../hero-exp/" class="nav-btn">Hero EXP</a>
-        <a href="./" class="nav-btn active">Research</a>
-        <a href="../promo-codes/" class="nav-btn">Promo Codes</a>
-        <a href="https://github.com/JeffxLabs/zrouteredemption" target="_blank" rel="noopener" class="nav-btn">GitHub ↗</a>
+      <a class="brand" href="./"><img src="../assets/ui/chips.webp" alt="" width="22" height="22">Z Route Research <span class="ver">v1.30.07</span></a>
+      <nav class="desktop-nav" aria-label="Site">
+        <a href="../">Base Planner</a>
+        <a href="../#producer-roi">Producer ROI</a>
+        <a href="../heroes/">Heroes</a>
+        <a href="../hero-exp/">Hero EXP</a>
+        <a href="./" class="active" aria-current="page">Research</a>
+        <a href="../promo-codes/">Promo Codes</a>
+        <a href="https://github.com/JeffxLabs/zrouteredemption" target="_blank" rel="noopener">GitHub ↗</a>
       </nav>
-
-      <div class="header-actions">
-        <button class="icon-btn" id="theme-toggle" title="Toggle theme" aria-label="Toggle theme">☾</button>
-      </div>
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch theme"></button>
     </div>
   </header>
 
-  <main class="container">
-    <!-- Hero / Banner -->
-    <section class="hero-banner">
-      <div class="eyebrow">
-        <span>🔬</span> Official Mined Game Intel &amp; Tech Calculator
-      </div>
-      <h1>Research Trees &amp; Tech Planner</h1>
-      <p class="hero-lead">
-        Explore all 15 Institute Research Trees and 328 technologies. Plan current to target levels with live calculation of Food, Metal, Oil, Research Time with speed bonuses, and track the exact Research Chips (Valor Badges / Courage Medals) required for Alliance Competition, Convoys, Super Soldiers, and Strategy trees.
-      </p>
+  <main>
+    <div class="intro">
+      <h1>Research</h1>
+      <p>Every Institute tree laid out as in the game. Tap a tech to plan its levels.</p>
+    </div>
+    <div class="scroll-row" id="pills" style="margin-bottom:12px"></div>
 
-      <!-- Overall Stats Summary -->
-      <div class="stats-summary-bar">
-        <div class="stat-pill">
-          <span>🏛️</span> 15 Research Trees
-        </div>
-        <div class="stat-pill">
-          <span>🧪</span> 328 Technologies
-        </div>
-        <div class="stat-pill chip-highlight">
-          <img src="../assets/research/item_research_info.png" alt="Research Chips" class="icon-sm">
-          <span><span class="val">714,690</span> Total Chips</span>
-        </div>
-        <div class="stat-pill">
-          <span style="color:var(--food-color)">🌾</span> 38.0B Food &amp; Metal
-        </div>
-        <div class="stat-pill">
-          <span style="color:var(--oil-color)">🛢️</span> 114.2B Oil
-        </div>
-        <div class="stat-pill">
-          <span>⚔️</span> Squads 1–4 Formations
-        </div>
-      </div>
-    </section>
+    <div class="toolbar">
+      <label class="search"><span class="sr-only">Search techs</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg>
+        <input class="input" id="q" type="search" placeholder="Search techs and benefits (e.g. march speed)" autocomplete="off" aria-controls="results">
+      </label>
+      <div class="results" id="results" hidden role="listbox" aria-label="Search results"></div>
+    </div>
 
-    <!-- Research Chips Master Callout -->
-    <section class="chips-callout-card">
-      <div class="callout-header">
-        <div class="callout-title-wrap">
-          <img src="../assets/research/item_research_info.png" alt="Research Chip">
-          <div>
-            <h3>Research Chips / Courage Medals Master Cheat Sheet</h3>
-            <p>Confidential research data (<code style="color:var(--chip-gold)">item_research_info</code>) obtained via Alliance Competition. Required for 5 advanced trees.</p>
+    <div class="trees" id="trees" role="group" aria-label="Research trees"></div>
+
+    <div class="main">
+      <section class="card" aria-labelledby="tree-name">
+        <div class="thead" id="thead"></div>
+        <div class="legend">
+          <span><img src="../assets/research/node.webp" alt="">Not planned</span>
+          <span><img src="../assets/research/node_on.webp" alt="">Planned</span>
+          <span><img src="../assets/research/node_max.webp" alt="">Max level</span>
+          <span>Badge: current → target / max</span>
+        </div>
+        <div class="tree" id="tree"></div>
+      </section>
+
+      <aside class="side stack">
+        <section class="card">
+          <div class="card-head"><h2>Plan cost</h2><div class="seg" id="scope" role="group" aria-label="Scope"><button type="button" data-scope="tree">This tree</button><button type="button" data-scope="all">All trees</button></div></div>
+          <div class="totals" id="totals"></div>
+          <div class="speed"><label for="speed-r" style="white-space:nowrap">Research speed</label><input type="range" id="speed-r" min="0" max="300" step="1"><input class="input num" id="speed-n" type="number" min="0" max="1000" inputmode="numeric" aria-label="Research speed bonus percent"><span>%</span></div>
+          <div class="m-actions" style="display:flex;gap:6px;flex-wrap:wrap;margin-top:10px">
+            <button class="btn sm" type="button" id="max-tree">Plan whole tree</button>
+            <button class="btn sm" type="button" id="reset-tree">Reset tree</button>
+            <button class="btn sm" type="button" id="copy-plan">Copy plan</button>
           </div>
-        </div>
-        <div class="chip-grand-total">
-          <div class="num">714,690</div>
-          <div class="lbl">Total Chips To Max Game</div>
-        </div>
-      </div>
+        </section>
+        <div class="sheet-backdrop" id="backdrop"></div>
+        <section class="card detail" id="detail" aria-live="polite"></section>
+      </aside>
+    </div>
 
-      <div class="chips-breakdown-grid" id="chips-breakdown-grid">
-        <!-- Rendered by JS -->
-      </div>
-    </section>
-
-    <!-- Controls: Filter & Search -->
-    <section class="controls-card">
-      <div class="search-row">
-        <div class="search-input-wrap">
-          <span class="search-icon">🔍</span>
-          <input type="text" id="tech-search" placeholder="Search any technology by name, perk, or benefit (e.g., T10, Hospital, Plunder, Speed)..." autocomplete="off">
-        </div>
-        <div class="filter-pills" id="category-filters">
-          <button class="filter-chip active" data-cat="all">All (15)</button>
-          <button class="filter-chip" data-cat="Development">Development (2)</button>
-          <button class="filter-chip" data-cat="Economy">Economy (2)</button>
-          <button class="filter-chip" data-cat="Military">Military (3)</button>
-          <button class="filter-chip" data-cat="Squads">Squads (4)</button>
-          <button class="filter-chip" data-cat="Strategy">Strategy (2)</button>
-          <button class="filter-chip" data-cat="Special">Special / Duel (2)</button>
-          <button class="filter-chip chip-filter" id="chips-only-toggle" data-chips="false">⚡ Requires Chips Only (5)</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- Trees Grid Section -->
-    <section>
-      <div class="trees-grid" id="trees-grid">
-        <!-- Rendered by JS -->
-      </div>
-    </section>
-
-    <!-- Interactive Tree Planner Workspace -->
-    <section class="planner-section" id="planner-section" style="display: none;">
-      <div class="planner-header">
-        <div class="planner-title-group">
-          <img id="planner-tree-icon" src="" alt="Tree Icon">
-          <div>
-            <div id="planner-tree-cat" class="tree-category-tag">Category</div>
-            <h2 id="planner-tree-name">Selected Tree</h2>
-            <p id="planner-tree-req">Requirements</p>
-          </div>
-        </div>
-        <div class="planner-actions-group">
-          <button class="action-btn" id="btn-max-tree">⚡ Max Tree</button>
-          <button class="action-btn" id="btn-reset-tree">↺ Reset Tree</button>
-          <button class="action-btn primary" id="btn-copy-plan">📋 Copy Plan Summary</button>
-        </div>
-      </div>
-
-      <!-- Sticky Live Totals Dashboard -->
-      <div class="planner-totals-dashboard">
-        <div class="totals-grid">
-          <div class="total-box chips-box">
-            <span class="lbl"><img src="../assets/research/item_research_info.png" alt="" style="width:16px;height:16px;"> Chips Required</span>
-            <span class="val" id="total-chips-val">0</span>
-          </div>
-          <div class="total-box food-box">
-            <span class="lbl">🌾 Food</span>
-            <span class="val" id="total-food-val">0</span>
-          </div>
-          <div class="total-box metal-box">
-            <span class="lbl">⛏️ Metal</span>
-            <span class="val" id="total-metal-val">0</span>
-          </div>
-          <div class="total-box oil-box">
-            <span class="lbl">🛢️ Oil</span>
-            <span class="val" id="total-oil-val">0</span>
-          </div>
-          <div class="total-box">
-            <span class="lbl">⏳ Effective Time</span>
-            <span class="val" id="total-time-val" style="font-size:1.15rem;">0s</span>
-          </div>
-          <div class="total-box">
-            <span class="lbl">⭐ Ability Power</span>
-            <span class="val" id="total-power-val" style="color:var(--purple);font-size:1.15rem;">+0</span>
-          </div>
-        </div>
-
-        <div class="speed-controls-row">
-          <div class="speed-slider-group">
-            <label for="speed-slider">Research Speed Bonus:</label>
-            <input type="range" id="speed-slider" min="0" max="600" step="5" value="0">
-            <input type="number" id="speed-input" class="speed-num-input" min="0" max="2000" step="1" value="0">
-            <span style="font-weight:750;font-size:0.88rem;color:var(--accent);">%</span>
-          </div>
-          <div id="time-comparison-note" style="font-size:0.82rem;color:var(--text-muted);">
-            Base Time: <span id="base-time-display" style="color:var(--text-main);font-weight:700;">0s</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Tech List -->
-      <div class="tech-list" id="tech-list">
-        <!-- Rendered by JS -->
-      </div>
-    </section>
-
-    <!-- Toast Notification -->
-    <div class="toast" id="toast">Plan summary copied to clipboard!</div>
-
-    <!-- Footer -->
     <footer>
-      <p>Z Route Redemption · Research Trees &amp; Progression Intel v1.30.07</p>
-      <p>Confidential client data mined directly from official tables · Static progression model</p>
+      <p>Layout, names, icons and unlock rules: CollegeTechType and CollegeTech (client catalog V202610032200). Costs, times, research chips, prerequisites and benefits: client tables 1.30.07 (data/progression.json). Research time shown = base time ÷ (1 + speed bonus).</p>
+      <p>Your plan is saved in this browser only. <a href="https://github.com/JeffxLabs/zrouteredemption" target="_blank" rel="noopener">Source on GitHub</a></p>
     </footer>
   </main>
 
-  <!-- Mobile Bottom Navigation -->
-  <nav class="bottom-nav">
-    <a href="../" class="nav-item">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-      <span>Base</span>
-    </a>
-    <a href="../heroes/" class="nav-item">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
-      <span>Heroes</span>
-    </a>
-    <a href="../hero-exp/" class="nav-item">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
-      <span>Hero EXP</span>
-    </a>
-    <a href="./" class="nav-item active">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
-      <span>Research</span>
-    </a>
-    <a href="../promo-codes/" class="nav-item">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
-      <span>Codes</span>
-    </a>
+  <nav class="bottom-nav" aria-label="Site">
+    <a href="../"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg><span>Base</span></a>
+    <a href="../#producer-roi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg><span>ROI</span></a>
+    <a href="../heroes/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><span>Heroes</span></a>
+    <a href="../hero-exp/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg><span>Hero EXP</span></a>
+    <a href="./" class="active" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.2 4.2l2.8 2.8M17 17l2.8 2.8M1 12h4M19 12h4M4.2 19.8 7 17M17 7l2.8-2.8"/></svg><span>Research</span></a>
+    <a href="../promo-codes/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg><span>Codes</span></a>
   </nav>
 
+  <script src="../assets/app.js"></script>
   <script src="research_data.js"></script>
   <script>
-    // State
-    const data = (typeof window !== "undefined" ? window : global).RESEARCH_DATA;
-    let activeCategory = "all";
-    let filterChipsOnly = false;
-    let searchQuery = "";
-    let selectedTreeId = null;
-    let researchSpeed = 0; // percent bonus
+  (() => {
+    'use strict';
+    const D = window.RESEARCH_DATA, { store, esc, fmt, short, duration, copy, toast } = window.ZR;
+    const $ = s => document.querySelector(s);
+    const UI = '../assets/ui/';
+    const trees = D.trees;
+    const techById = new Map(), treeOf = new Map();
+    trees.forEach(t => t.techs.forEach(x => { techById.set(x.id, x); treeOf.set(x.id, t); }));
+    const RES = [['chips', 'Chips', 'chips'], ['food', 'Food', 'food'], ['metal', 'Metal', 'metal'], ['oil', 'Oil', 'oil']];
 
-    // Planner state: { [techId]: { current: 0, target: 0 } }
-    const plannerState = {};
+    // ---------- State (saved per browser) ----------
+    let saved = {};
+    try { saved = JSON.parse(store.get('zr-research-plan') || '{}'); } catch (_) { saved = {}; }
+    const plan = saved.plan || {};
+    const S = { tree: saved.tree || trees[0].id, tech: null, speed: saved.speed || 0, scope: 'tree' };
+    const hashTree = +(location.hash.match(/^#tree-(\d+)/) || [])[1];
+    if (hashTree && trees.some(t => t.id === hashTree)) S.tree = hashTree;
+    if (!trees.some(t => t.id === S.tree)) S.tree = trees[0].id;
+    const st = id => plan[id] || (plan[id] = { c: 0, t: 0 });
+    function save() { store.set('zr-research-plan', JSON.stringify({ plan, tree: S.tree, speed: S.speed })); }
 
-    // Theme Management
-    const themeBtn = document.getElementById("theme-toggle");
-    function applyTheme(day) {
-      document.documentElement.classList.toggle("day", day);
-      document.body.classList.toggle("day", day);
-      themeBtn.textContent = day ? "☼" : "☾";
-      localStorage.setItem("theme", day ? "day" : "night");
-    }
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme === "day" || (!savedTheme && window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)) {
-      applyTheme(true);
-    } else {
-      applyTheme(false);
-    }
-    themeBtn.addEventListener("click", () => {
-      const isDay = document.documentElement.classList.contains("day");
-      applyTheme(!isDay);
-    });
-
-    // Formatting helpers
-    function formatNumber(num) {
-      return Number(num).toLocaleString();
-    }
-
-    function formatCompact(num) {
-      if (num >= 1e9) return (num / 1e9).toFixed(2).replace(/\.00$/, "") + "B";
-      if (num >= 1e6) return (num / 1e6).toFixed(2).replace(/\.00$/, "") + "M";
-      if (num >= 1e3) return (num / 1e3).toFixed(1).replace(/\.0$/, "") + "K";
-      return String(num);
-    }
-
-    function formatTime(seconds) {
-      if (!seconds || seconds <= 0) return "0s";
-      const days = Math.floor(seconds / 86400);
-      const hours = Math.floor((seconds % 86400) / 3600);
-      const mins = Math.floor((seconds % 3600) / 60);
-      const secs = Math.floor(seconds % 60);
-
-      const parts = [];
-      if (days > 0) parts.push(days + "d");
-      if (hours > 0) parts.push(hours + "h");
-      if (mins > 0 && days < 7) parts.push(mins + "m");
-      if (secs > 0 && days === 0 && hours === 0) parts.push(secs + "s");
-      return parts.join(" ") || "0s";
-    }
-
-    function showToast(msg) {
-      const t = document.getElementById("toast");
-      t.textContent = msg;
-      t.classList.add("show");
-      setTimeout(() => t.classList.remove("show"), 2500);
-    }
-
-    // Initialize planner state for all techs
-    function initPlannerState() {
-      data.trees.forEach(t => {
-        t.techs.forEach(tech => {
-          if (!plannerState[tech.id]) {
-            plannerState[tech.id] = { current: 0, target: 0 };
-          }
-        });
-      });
-    }
-
-    // Render Research Chips Breakdown in Callout
-    function renderChipsCallout() {
-      const grid = document.getElementById("chips-breakdown-grid");
-      const chipTrees = data.trees.filter(t => t.total_chips > 0);
-      grid.innerHTML = chipTrees.map(t => `
-        <div class="chip-tree-card" onclick="selectTree(${t.id})">
-          <div class="chip-tree-info">
-            <img src="../assets/research/${t.icon}" alt="${t.name}">
-            <div>
-              <div class="chip-tree-name">${t.name}</div>
-              <div style="font-size:0.75rem;color:var(--text-muted);">${t.unlock_requirements[0] || ""}</div>
-            </div>
-          </div>
-          <div class="chip-tree-count">
-            <span style="font-size:0.75rem;opacity:0.7;">⚡</span> ${formatNumber(t.total_chips)}
-          </div>
-        </div>
-      `).join("");
-    }
-
-    // Render Trees Grid
-    function renderTreesGrid() {
-      const grid = document.getElementById("trees-grid");
-      let filtered = data.trees;
-
-      if (activeCategory !== "all") {
-        filtered = filtered.filter(t => t.category === activeCategory);
+    // ---------- Cost helpers ----------
+    function cost(tech, from, to) {
+      const out = { chips: 0, food: 0, metal: 0, oil: 0, time: 0, power: 0 };
+      for (let l = from + 1; l <= to; l++) {
+        const L = tech.levels[l - 1]; if (!L) continue;
+        out.chips += L.chips; out.food += L.food; out.metal += L.metal; out.oil += L.oil; out.time += L.time; out.power += L.power;
       }
+      return out;
+    }
+    function add(a, b) { for (const k in b) a[k] = (a[k] || 0) + b[k]; return a; }
+    function planCost(list) { const o = { chips: 0, food: 0, metal: 0, oil: 0, time: 0, power: 0, techs: 0, levels: 0 }; list.forEach(x => { const s = st(x.id); if (s.t > s.c) { add(o, cost(x, s.c, s.t)); o.techs++; o.levels += s.t - s.c; } }); return o; }
+    const totalLevels = t => t.techs.reduce((a, x) => a + x.max_level, 0);
+    const doneLevels = t => t.techs.reduce((a, x) => a + Math.max(st(x.id).c, st(x.id).t), 0);
+    const treeMax = new Map(trees.map(t => [t.id, t.techs.reduce((a, x) => add(a, cost(x, 0, x.max_level)), {})]));
+    const effTime = s => s / (1 + S.speed / 100);
 
-      if (filterChipsOnly) {
-        filtered = filtered.filter(t => t.total_chips > 0);
-      }
+    // ---------- Pills ----------
+    const allMax = trees.reduce((a, t) => add(a, treeMax.get(t.id)), {});
+    $('#pills').innerHTML = [
+      `<span class="chip">${trees.length} trees</span>`,
+      `<span class="chip">${fmt(techById.size)} techs</span>`,
+      `<span class="chip"><img src="${UI}chips.webp" alt="">${fmt(allMax.chips)} chips to max all</span>`,
+      `<span class="chip"><img src="${UI}food.webp" alt="">${short(allMax.food)}</span>`,
+      `<span class="chip"><img src="${UI}metal.webp" alt="">${short(allMax.metal)}</span>`,
+      `<span class="chip"><img src="${UI}oil.webp" alt="">${short(allMax.oil)}</span>`,
+      `<span class="chip">${duration(allMax.time)} base time</span>`
+    ].join('');
 
-      if (searchQuery.trim()) {
-        const q = searchQuery.toLowerCase().trim();
-        filtered = filtered.filter(t => {
-          if (t.name.toLowerCase().includes(q) || t.category.toLowerCase().includes(q)) return true;
-          return t.techs.some(tech => {
-            if (tech.name.toLowerCase().includes(q)) return true;
-            return tech.levels.some(l => l.benefits.some(b => b.toLowerCase().includes(q)));
-          });
-        });
-      }
+    // ---------- Tree strip ----------
+    function renderTrees() {
+      $('#trees').innerHTML = trees.map(t => {
+        const pct = doneLevels(t) / totalLevels(t) * 100, mx = treeMax.get(t.id);
+        return `<button type="button" class="ttile" data-tree="${t.id}" aria-pressed="${t.id === S.tree}" title="${esc(t.unlock.map(u => u.text).join(' · '))}"><img src="${esc(t.icon)}" alt=""><b>${esc(t.name)}</b><small>${t.techs.length} techs${mx.chips ? ` · <img src="${UI}chips.webp" alt="">${short(mx.chips)}` : ''}</small><span class="bar"><i style="width:${pct.toFixed(1)}%"></i></span></button>`;
+      }).join('');
+    }
+    $('#trees').addEventListener('click', e => { const b = e.target.closest('[data-tree]'); if (b) selectTree(+b.dataset.tree); });
 
-      if (filtered.length === 0) {
-        grid.innerHTML = `
-          <div style="grid-column: 1 / -1; text-align: center; padding: 40px; color: var(--text-muted);">
-            <h3>No research trees match your filter or search.</h3>
-            <p>Try clearing filters or search terms.</p>
-          </div>
-        `;
+    // ---------- Tree canvas ----------
+    function nodeState(x) { const s = st(x.id); if (s.c >= x.max_level) return 'maxed'; if (s.t > s.c) return 'planned'; if (s.c > 0) return 'started'; return ''; }
+    function renderTree() {
+      const t = trees.find(x => x.id === S.tree);
+      const mx = treeMax.get(t.id);
+      $('#thead').innerHTML = `<img src="${esc(t.icon)}" alt=""><div class="grow"><h2 id="tree-name">${esc(t.name)}</h2><div class="chips">${t.unlock.map(u => `<span class="chip sm">${u.kind === 'institute_level' ? `<img src="../assets/buildings/research.svg" alt="">` : u.kind === 'tree_progress' ? `<img src="${esc((trees.find(z => z.id === u.tree) || {}).icon || '')}" alt="">` : ''}${esc(u.text)}</span>`).join('')}</div></div>
+        <div class="chips">${mx.chips ? `<span class="chip" title="Research chips to max this tree"><img src="${UI}chips.webp" alt="">${fmt(mx.chips)}</span>` : ''}<span class="chip" title="Base research time to max this tree">${duration(mx.time)}</span></div>`;
+      const pos = new Map(t.techs.map(x => [x.pos, x]));
+      const rowh = 100, links = [];
+      t.techs.forEach(x => x.from.forEach(p => {
+        const a = pos.get(p); if (!a) return;
+        const ax = (a.col - .5) * 100, ay = (a.row - 1) * rowh + 97, bx = (x.col - .5) * 100, by = (x.row - 1) * rowh + 4;
+        const mid = by - 10;
+        const on = Math.max(st(a.id).c, st(a.id).t) > 0 && Math.max(st(x.id).c, st(x.id).t) > 0;
+        links.push(`<path class="${on ? 'on' : ''}" d="M${ax} ${ay} V${mid} H${bx} V${by}"/>`);
+      }));
+      const el = $('#tree');
+      el.style.setProperty('--cols', t.cols);
+      el.innerHTML = `<svg class="links" viewBox="0 0 ${t.cols * 100} ${t.rows * rowh}" preserveAspectRatio="none" aria-hidden="true">${links.join('')}</svg>` +
+        t.techs.map(x => {
+          const s = st(x.id), cls = nodeState(x);
+          const badge = s.t > s.c ? `${s.c}→${s.t}/${x.max_level}` : `${s.c}/${x.max_level}`;
+          return `<button type="button" class="node ${cls} ${x.id === S.tech ? 'sel' : ''} ${x.has_costs ? '' : 'nodata'}" data-tech="${x.id}" style="grid-row:${x.row};grid-column:${x.col}" aria-label="${esc(x.name)}, level ${s.c} of ${x.max_level}${s.t > s.c ? `, planned to ${s.t}` : ''}"><span class="ring"><img src="${esc(x.icon)}" alt="" loading="lazy"></span><span class="lv">${badge}</span><span class="nm">${esc(x.name)}</span></button>`;
+        }).join('');
+    }
+    $('#tree').addEventListener('click', e => { const n = e.target.closest('[data-tech]'); if (n) selectTech(+n.dataset.tech); });
+
+    // ---------- Totals ----------
+    function renderTotals() {
+      const t = trees.find(x => x.id === S.tree);
+      const c = planCost(S.scope === 'all' ? [...techById.values()] : t.techs);
+      document.querySelectorAll('[data-scope]').forEach(b => b.setAttribute('aria-pressed', b.dataset.scope === S.scope));
+      $('#totals').innerHTML = [
+        ...RES.map(([k, l, ic]) => `<div class="tile"><small><img src="${UI}${ic}.webp" alt="">${l}</small><b>${short(c[k])}</b></div>`),
+        `<div class="tile"><small>Time</small><b>${duration(effTime(c.time))}</b>${S.speed ? `<div class="sub">${duration(c.time)} base</div>` : ''}</div>`,
+        `<div class="tile"><small><img src="${UI}power.webp" alt="">Power</small><b>+${short(c.power)}</b><div class="sub">${c.techs} techs · ${c.levels} levels</div></div>`
+      ].join('');
+      $('#speed-r').value = Math.min(300, S.speed); $('#speed-n').value = S.speed;
+    }
+    $('#scope').addEventListener('click', e => { const b = e.target.closest('[data-scope]'); if (b) { S.scope = b.dataset.scope; renderTotals(); } });
+    const setSpeed = v => { S.speed = Math.max(0, Math.min(1000, +v || 0)); save(); renderTotals(); renderDetail(); };
+    $('#speed-r').addEventListener('input', e => setSpeed(e.target.value));
+    $('#speed-n').addEventListener('input', e => setSpeed(e.target.value));
+
+    // ---------- Detail ----------
+    function unmetReqs(x, upto) {
+      const out = new Map();
+      for (let l = 1; l <= upto; l++) (x.levels[l - 1]?.req || []).forEach(r => { const s = st(r.tech); if (Math.max(s.c, s.t) < r.level) out.set(r.tech, Math.max(out.get(r.tech) || 0, r.level)); });
+      return out;
+    }
+    function renderDetail() {
+      const box = $('#detail');
+      const x = S.tech && techById.get(S.tech);
+      if (!x) {
+        const t = trees.find(z => z.id === S.tree);
+        box.innerHTML = `<h2>${esc(t.name)}</h2><p class="muted" style="font-size:13px;margin:0">Tap a tech in the tree to see its levels, costs and benefits and to plan it. The cost box adds up every planned level.</p>`;
+        box.classList.remove('open'); $('#backdrop').classList.remove('open');
         return;
       }
-
-      grid.innerHTML = filtered.map(t => {
-        // Calculate progress in this tree
-        let plannedTechs = 0;
-        let totalMaxLevels = 0;
-        let plannedTargetLevels = 0;
-        t.techs.forEach(tech => {
-          totalMaxLevels += tech.max_lvl;
-          const st = plannerState[tech.id];
-          if (st && st.target > 0) {
-            plannedTechs++;
-            plannedTargetLevels += st.target;
-          }
-        });
-        const pct = totalMaxLevels > 0 ? Math.round((plannedTargetLevels / totalMaxLevels) * 100) : 0;
-        const isActive = selectedTreeId === t.id;
-
-        return `
-          <div class="tree-card ${isActive ? 'active-tree' : ''}" onclick="selectTree(${t.id})">
-            <div>
-              <div class="tree-card-top">
-                <div class="tree-icon-frame">
-                  <img src="../assets/research/${t.icon}" alt="${t.name}">
-                </div>
-                <div class="tree-header-text">
-                  <div class="tree-category-tag">${t.category}</div>
-                  <h3 class="tree-name" title="${t.name}">${t.name}</h3>
-                  <div class="tree-prereq">
-                    <span>🏛️</span> ${t.unlock_requirements[0] || 'Available early'}
-                  </div>
-                </div>
-              </div>
-              <p class="tree-desc" style="margin-top:10px;">${t.description}</p>
-            </div>
-
-            <div class="tree-metrics">
-              <div class="metric-item">
-                <span class="metric-lbl">Technologies</span>
-                <span class="metric-val">🧪 ${t.tech_count} Techs</span>
-              </div>
-              <div class="metric-item">
-                <span class="metric-lbl">Research Chips</span>
-                <span class="metric-val ${t.total_chips > 0 ? 'chips' : ''}">
-                  <img src="../assets/research/item_research_info.png" alt="" class="icon-xs">
-                  ${t.total_chips > 0 ? formatNumber(t.total_chips) : '0'}
-                </span>
-              </div>
-              <div class="metric-item">
-                <span class="metric-lbl">Core Resources</span>
-                <span class="metric-val">🌾 ${formatCompact(t.total_food)} / 🛢️ ${formatCompact(t.total_oil)}</span>
-              </div>
-              <div class="metric-item">
-                <span class="metric-lbl">Base Time</span>
-                <span class="metric-val">⏳ ${formatTime(t.total_time_seconds)}</span>
-              </div>
-            </div>
-
-            <!-- Progress bar -->
-            <div>
-              <div style="display:flex;justify-content:space-between;font-size:0.75rem;font-weight:700;margin-bottom:4px;color:var(--text-muted);">
-                <span>Plan: ${plannedTargetLevels}/${totalMaxLevels} levels</span>
-                <span style="color:var(--accent);">${pct}%</span>
-              </div>
-              <div style="height:6px;border-radius:4px;background:var(--card-inner);border:1px solid var(--line);overflow:hidden;">
-                <div style="height:100%;width:${pct}%;background:var(--accent-gradient);transition:width 0.25s;"></div>
-              </div>
-            </div>
-
-            <div class="tree-card-actions">
-              <button class="plan-btn" onclick="event.stopPropagation(); selectTree(${t.id})">
-                <span>📋</span> Plan Tree
-              </button>
-              <button class="quick-preset-btn" onclick="event.stopPropagation(); maxTreePreset(${t.id})" title="Set all to max">
-                Max
-              </button>
-              <button class="quick-preset-btn" onclick="event.stopPropagation(); resetTreePreset(${t.id})" title="Reset to 0">
-                ↺
-              </button>
-            </div>
-          </div>
-        `;
-      }).join("");
+      const s = st(x.id), t = treeOf.get(x.id);
+      const hasChips = x.levels.some(l => l.chips);
+      const upto = Math.max(s.c, s.t);
+      const unmet = unmetReqs(x, upto);
+      const reqs = new Map();
+      x.levels.forEach(l => l.req.forEach(r => reqs.set(r.tech, Math.max(reqs.get(r.tech) || 0, r.level))));
+      const c = cost(x, s.c, s.t);
+      box.innerHTML = `<div class="detail-head"><span class="ring"><img src="${esc(x.icon)}" alt=""></span><div><h3>${esc(x.name)}</h3><div class="muted" style="font-size:12.5px">${esc(x.description || '')} · ${esc(t.name)} · max Lv ${x.max_level}</div></div><button class="close-x" type="button" id="close-detail" aria-label="Close">✕</button></div>
+        ${x.has_costs ? '' : '<div class="note warn">This tech is newer than the cost tables in this site (client 1.30.07), so its costs are not shown.</div>'}
+        <div class="levels-ctl">
+          <label>Current <span class="stepper"><button type="button" data-lv="c" data-d="-1" aria-label="Current level down">−</button><input type="number" id="lv-c" value="${s.c}" min="0" max="${x.max_level}" inputmode="numeric" aria-label="Current level"><button type="button" data-lv="c" data-d="1" aria-label="Current level up">+</button></span></label>
+          <label>Target <span class="stepper"><button type="button" data-lv="t" data-d="-1" aria-label="Target level down">−</button><input type="number" id="lv-t" value="${Math.max(s.t, s.c)}" min="0" max="${x.max_level}" inputmode="numeric" aria-label="Target level"><button type="button" data-lv="t" data-d="1" aria-label="Target level up">+</button></span></label>
+          <button class="btn sm" type="button" data-lv-max>Max</button>
+        </div>
+        ${s.t > s.c ? `<div class="chips" style="margin-bottom:8px">${RES.filter(([k]) => c[k]).map(([k, l, ic]) => `<span class="chip sm"><img src="${UI}${ic}.webp" alt="">${fmt(c[k])}</span>`).join('')}<span class="chip sm">${duration(effTime(c.time))}</span><span class="chip sm"><img src="${UI}power.webp" alt="">+${fmt(c.power)}</span></div>` : ''}
+        ${reqs.size ? `<div class="reqs">${[...reqs].map(([id, lv]) => { const r = techById.get(id), rs = st(id), bad = unmet.has(id); return `<div class="req ${bad ? 'unmet' : ''}">${r ? `<img src="${esc(r.icon)}" alt="">` : ''}<span>Needs ${esc(r ? r.name : `Tech ${id}`)} Lv ${lv}${bad ? ' (not planned)' : ' ✓'}</span></div>`; }).join('')}${unmet.size ? `<button class="btn sm" type="button" id="fix-reqs" style="justify-self:start">Plan missing prerequisites</button>` : ''}</div>` : ''}
+        <div class="table-wrap"><table class="data lvt"><thead><tr><th>Lv</th><th class="r">Time</th>${hasChips ? `<th class="r"><img class="th-ic" src="${UI}chips.webp" alt="Chips"></th>` : ''}<th class="r"><img class="th-ic" src="${UI}food.webp" alt="Food"></th><th class="r"><img class="th-ic" src="${UI}metal.webp" alt="Metal"></th><th class="r"><img class="th-ic" src="${UI}oil.webp" alt="Oil"></th></tr></thead><tbody>${x.levels.map(l => { const cls = l.level <= s.c ? 'done' : l.level <= s.t ? 'plan' : ''; return `<tr class="${cls} top"><td><b>${l.level}</b></td><td class="r">${duration(effTime(l.time))}</td>${hasChips ? `<td class="r">${l.chips ? fmt(l.chips) : '—'}</td>` : ''}<td class="r">${short(l.food)}</td><td class="r">${short(l.metal)}</td><td class="r">${short(l.oil)}</td></tr><tr class="${cls} sub"><td></td><td colspan="${hasChips ? 5 : 4}" class="ben">${l.benefits.map(esc).join(' · ')}<span class="faint"> · Institute Lv ${l.institute || 1} · Power +${fmt(l.power)}</span></td></tr>`; }).join('')}</tbody></table></div>`;
+      box.classList.add('open'); $('#backdrop').classList.add('open');
+    }
+    function setLevel(which, v) {
+      const x = techById.get(S.tech); if (!x) return;
+      const s = st(x.id);
+      v = Math.max(0, Math.min(x.max_level, v | 0));
+      if (which === 'c') { s.c = v; if (s.t < s.c) s.t = s.c; } else { s.t = Math.max(v, s.c); }
+      save(); refresh();
+    }
+    $('#detail').addEventListener('click', e => {
+      const b = e.target.closest('[data-lv]'); if (b) { const s = st(S.tech); setLevel(b.dataset.lv, (b.dataset.lv === 'c' ? s.c : Math.max(s.t, s.c)) + +b.dataset.d); return; }
+      if (e.target.closest('[data-lv-max]')) { setLevel('t', techById.get(S.tech).max_level); return; }
+      if (e.target.closest('#fix-reqs')) { raiseReqs(S.tech); toast('Prerequisites added to plan'); return; }
+      if (e.target.closest('#close-detail')) { S.tech = null; refresh(); }
+    });
+    $('#detail').addEventListener('change', e => { if (e.target.id === 'lv-c') setLevel('c', +e.target.value); if (e.target.id === 'lv-t') setLevel('t', +e.target.value); });
+    $('#backdrop').addEventListener('click', () => { S.tech = null; refresh(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && S.tech) { S.tech = null; refresh(); } });
+    function raiseReqs(id, seen = new Set()) {
+      if (seen.has(id)) return; seen.add(id);
+      const x = techById.get(id); if (!x) return;
+      const s = st(id);
+      for (let l = 1; l <= Math.max(s.c, s.t); l++) (x.levels[l - 1]?.req || []).forEach(r => { const rs = st(r.tech); if (Math.max(rs.c, rs.t) < r.level) { rs.t = r.level; } raiseReqs(r.tech, seen); });
+      save(); refresh();
     }
 
-    // Select Tree and Open Planner
-    function selectTree(treeId) {
-      selectedTreeId = treeId;
-      renderTreesGrid();
-
-      const tree = data.trees.find(t => t.id === treeId);
-      if (!tree) return;
-
-      const pSec = document.getElementById("planner-section");
-      pSec.style.display = "block";
-
-      document.getElementById("planner-tree-icon").src = `../assets/research/${tree.icon}`;
-      document.getElementById("planner-tree-name").textContent = tree.name;
-      document.getElementById("planner-tree-cat").textContent = `${tree.category} · ${tree.tech_count} Technologies`;
-      document.getElementById("planner-tree-req").textContent = `Unlock: ${tree.unlock_requirements.join(" · ")}`;
-
-      renderTechList(tree);
-      updatePlannerTotals();
-
-      pSec.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-
-    // Render Tech List for the Selected Tree
-    function renderTechList(tree) {
-      const list = document.getElementById("tech-list");
-      const techLookup = {};
-      tree.techs.forEach(t => techLookup[t.id] = t);
-
-      list.innerHTML = tree.techs.map((tech, idx) => {
-        const state = plannerState[tech.id] || { current: 0, target: 0 };
-        const maxLvl = tech.max_lvl;
-
-        // Calculate costs between current and target
-        let costFood = 0, costMetal = 0, costOil = 0, costChips = 0, costTime = 0, powerGained = 0;
-        let missingPrereqs = [];
-
-        if (state.target > state.current) {
-          for (let l = state.current + 1; l <= state.target; l++) {
-            const lvlObj = tech.levels[l - 1];
-            if (lvlObj) {
-              costFood += lvlObj.food;
-              costMetal += lvlObj.metal;
-              costOil += lvlObj.oil;
-              costChips += lvlObj.chips;
-              costTime += lvlObj.time;
-            }
-          }
-          const targetObj = tech.levels[state.target - 1];
-          const currObj = state.current > 0 ? tech.levels[state.current - 1] : null;
-          powerGained = (targetObj ? targetObj.power : 0) - (currObj ? currObj.power : 0);
-
-          // Check prereqs for the target level
-          if (targetObj && targetObj.prereq_techs) {
-            targetObj.prereq_techs.forEach(p => {
-              const prereqState = plannerState[p.id];
-              const curLvl = prereqState ? prereqState.target : 0;
-              if (curLvl < p.lvl) {
-                missingPrereqs.push({
-                  id: p.id,
-                  name: p.name,
-                  required: p.lvl,
-                  current: curLvl
-                });
-              }
-            });
-          }
-        }
-
-        // Preview benefits at target level vs current
-        const targetObj = state.target > 0 ? tech.levels[state.target - 1] : null;
-        const benefitsPreview = targetObj ? targetObj.benefits : (tech.levels[0] ? tech.levels[0].benefits : []);
-
-        const hasTarget = state.target > 0;
-        const hasWarning = missingPrereqs.length > 0;
-
-        return `
-          <div class="tech-item-card ${hasTarget ? 'has-target' : ''} ${hasWarning ? 'has-warning' : ''}" id="tech-card-${tech.id}">
-            <div class="tech-item-top">
-              <div class="tech-info-wrap">
-                <div class="tech-node-badge">${idx + 1}</div>
-                <div class="tech-item-title-col">
-                  <div class="tech-title-row">
-                    <h4 class="tech-title">${tech.name}</h4>
-                    <span class="max-level-tag">Max Lv. ${maxLvl}</span>
-                  </div>
-                  <div style="font-size:0.78rem;color:var(--text-muted);">
-                    ${tech.req_institute > 1 ? `Requires Institute Lv. ${tech.req_institute}` : 'Basic Tech'}
-                  </div>
-                </div>
-              </div>
-
-              <!-- Controls -->
-              <div class="level-control-group">
-                <div class="stepper-box">
-                  <span class="stepper-lbl">Start</span>
-                  <button class="step-btn" onclick="changeTechLevel(${tech.id}, 'current', -1)">−</button>
-                  <span class="stepper-val" id="cur-val-${tech.id}">${state.current}</span>
-                  <button class="step-btn" onclick="changeTechLevel(${tech.id}, 'current', 1)">+</button>
-                </div>
-
-                <div class="stepper-box" style="border-color:var(--accent);">
-                  <span class="stepper-lbl" style="color:var(--accent);">Target</span>
-                  <button class="step-btn" onclick="changeTechLevel(${tech.id}, 'target', -1)">−</button>
-                  <span class="stepper-val" id="tgt-val-${tech.id}" style="color:var(--accent);">${state.target}</span>
-                  <button class="step-btn" onclick="changeTechLevel(${tech.id}, 'target', 1)">+</button>
-                </div>
-
-                <button class="quick-tech-btn" onclick="setTechTarget(${tech.id}, ${maxLvl})">Max</button>
-                <button class="quick-tech-btn" onclick="setTechTarget(${tech.id}, 0)">Reset</button>
-              </div>
-            </div>
-
-            <!-- Missing Prereqs Warning -->
-            ${hasWarning ? `
-              <div class="prereq-alert">
-                <span>⚠️ Missing Prerequisite: <strong>${missingPrereqs.map(p => `${p.name} Lv. ${p.required} (have ${p.current})`).join(", ")}</strong></span>
-                <button class="fix-prereq-btn" onclick="autoFixPrereqs(${tech.id})">Auto-Raise Prereqs</button>
-              </div>
-            ` : ''}
-
-            <!-- Costs & Benefit Summary for Target Range -->
-            <div class="tech-item-bottom">
-              <div class="tech-cost-summary">
-                ${costChips > 0 ? `
-                  <span class="cost-badge chips">
-                    <img src="../assets/research/item_research_info.png" alt="" style="width:14px;height:14px;">
-                    ${formatNumber(costChips)} Chips
-                  </span>
-                ` : ''}
-                ${costFood > 0 ? `<span class="cost-badge food">🌾 ${formatCompact(costFood)}</span>` : ''}
-                ${costMetal > 0 ? `<span class="cost-badge metal">⛏️ ${formatCompact(costMetal)}</span>` : ''}
-                ${costOil > 0 ? `<span class="cost-badge oil">🛢️ ${formatCompact(costOil)}</span>` : ''}
-                ${costTime > 0 ? `<span class="cost-badge time">⏳ ${formatTime(costTime)}</span>` : ''}
-                ${powerGained > 0 ? `<span class="cost-badge power">⭐ +${formatNumber(powerGained)}</span>` : ''}
-                ${state.target <= state.current ? `<span style="color:var(--text-muted);font-style:italic;">No upgrade planned</span>` : ''}
-              </div>
-
-              <div class="tech-benefits-preview">
-                ${benefitsPreview.map(b => `<span class="benefit-tag">${b}</span>`).join("")}
-              </div>
-            </div>
-          </div>
-        `;
-      }).join("");
-    }
-
-    // Change individual tech levels
-    function changeTechLevel(techId, type, delta) {
-      const tree = data.trees.find(t => t.id === selectedTreeId);
-      if (!tree) return;
-      const tech = tree.techs.find(t => t.id === techId);
-      if (!tech) return;
-
-      const st = plannerState[techId];
-      if (type === "current") {
-        st.current = Math.max(0, Math.min(tech.max_lvl, st.current + delta));
-        if (st.target < st.current) st.target = st.current;
-      } else {
-        st.target = Math.max(st.current, Math.min(tech.max_lvl, st.target + delta));
-      }
-
-      renderTechList(tree);
-      updatePlannerTotals();
-      renderTreesGrid();
-    }
-
-    function setTechTarget(techId, lvl) {
-      const tree = data.trees.find(t => t.id === selectedTreeId);
-      if (!tree) return;
-      const tech = tree.techs.find(t => t.id === techId);
-      if (!tech) return;
-
-      const st = plannerState[techId];
-      st.target = Math.max(st.current, Math.min(tech.max_lvl, lvl));
-
-      renderTechList(tree);
-      updatePlannerTotals();
-      renderTreesGrid();
-    }
-
-    // Recursively resolve prerequisites
-    function autoFixPrereqs(techId) {
-      const tree = data.trees.find(t => t.id === selectedTreeId);
-      if (!tree) return;
-      const tech = tree.techs.find(t => t.id === techId);
-      if (!tech) return;
-
-      const st = plannerState[techId];
-      if (st.target <= 0) return;
-
-      function resolveRecursive(tId, targetLvl) {
-        const tObj = tree.techs.find(x => x.id === tId);
-        if (!tObj) return;
-
-        // Iterate levels 1 to targetLvl
-        for (let l = 1; l <= targetLvl; l++) {
-          const lObj = tObj.levels[l - 1];
-          if (lObj && lObj.prereq_techs) {
-            lObj.prereq_techs.forEach(pr => {
-              if (!plannerState[pr.id]) plannerState[pr.id] = { current: 0, target: 0 };
-              if (plannerState[pr.id].target < pr.lvl) {
-                plannerState[pr.id].target = pr.lvl;
-                resolveRecursive(pr.id, pr.lvl);
-              }
-            });
-          }
-        }
-      }
-
-      resolveRecursive(techId, st.target);
-      renderTechList(tree);
-      updatePlannerTotals();
-      renderTreesGrid();
-      showToast("Prerequisites raised!");
-    }
-
-    // Tree Presets: Max Entire Tree
-    function maxTreePreset(treeId) {
-      const tree = data.trees.find(t => t.id === treeId);
-      if (!tree) return;
-      tree.techs.forEach(tech => {
-        plannerState[tech.id].target = tech.max_lvl;
-      });
-      if (selectedTreeId === treeId) {
-        renderTechList(tree);
-        updatePlannerTotals();
-      }
-      renderTreesGrid();
-      showToast(`Maxed all techs in ${tree.name}`);
-    }
-
-    // Tree Presets: Reset Entire Tree
-    function resetTreePreset(treeId) {
-      const tree = data.trees.find(t => t.id === treeId);
-      if (!tree) return;
-      tree.techs.forEach(tech => {
-        plannerState[tech.id].target = 0;
-        plannerState[tech.id].current = 0;
-      });
-      if (selectedTreeId === treeId) {
-        renderTechList(tree);
-        updatePlannerTotals();
-      }
-      renderTreesGrid();
-      showToast(`Reset ${tree.name}`);
-    }
-
-    // Update Live Plan Totals
-    function updatePlannerTotals() {
-      const tree = data.trees.find(t => t.id === selectedTreeId);
-      if (!tree) return;
-
-      let totalFood = 0;
-      let totalMetal = 0;
-      let totalOil = 0;
-      let totalChips = 0;
-      let totalTimeSecs = 0;
-      let totalPower = 0;
-
-      tree.techs.forEach(tech => {
-        const st = plannerState[tech.id];
-        if (st && st.target > st.current) {
-          for (let l = st.current + 1; l <= st.target; l++) {
-            const lvlObj = tech.levels[l - 1];
-            if (lvlObj) {
-              totalFood += lvlObj.food;
-              totalMetal += lvlObj.metal;
-              totalOil += lvlObj.oil;
-              totalChips += lvlObj.chips;
-              totalTimeSecs += lvlObj.time;
-            }
-          }
-          const targetObj = tech.levels[st.target - 1];
-          const currObj = st.current > 0 ? tech.levels[st.current - 1] : null;
-          totalPower += (targetObj ? targetObj.power : 0) - (currObj ? currObj.power : 0);
-        }
-      });
-
-      // Effective time calculation
-      const effectiveSecs = Math.max(0, Math.ceil(totalTimeSecs / (1 + researchSpeed / 100)));
-
-      document.getElementById("total-chips-val").textContent = formatNumber(totalChips);
-      document.getElementById("total-food-val").textContent = formatCompact(totalFood);
-      document.getElementById("total-food-val").title = `${formatNumber(totalFood)} Food`;
-      document.getElementById("total-metal-val").textContent = formatCompact(totalMetal);
-      document.getElementById("total-metal-val").title = `${formatNumber(totalMetal)} Metal`;
-      document.getElementById("total-oil-val").textContent = formatCompact(totalOil);
-      document.getElementById("total-oil-val").title = `${formatNumber(totalOil)} Oil`;
-
-      document.getElementById("total-time-val").textContent = formatTime(effectiveSecs);
-      document.getElementById("base-time-display").textContent = formatTime(totalTimeSecs);
-
-      document.getElementById("total-power-val").textContent = `+${formatNumber(totalPower)}`;
-
-      if (researchSpeed > 0 && totalTimeSecs > 0) {
-        const saved = totalTimeSecs - effectiveSecs;
-        document.getElementById("time-comparison-note").innerHTML = `
-          Base Time: <strong>${formatTime(totalTimeSecs)}</strong> (Saved: <span style="color:var(--green)">${formatTime(saved)}</span>)
-        `;
-      } else {
-        document.getElementById("time-comparison-note").innerHTML = `
-          Base Time: <strong id="base-time-display">${formatTime(totalTimeSecs)}</strong>
-        `;
-      }
-    }
-
-    // Speed controls listeners
-    const speedSlider = document.getElementById("speed-slider");
-    const speedInput = document.getElementById("speed-input");
-
-    speedSlider.addEventListener("input", (e) => {
-      researchSpeed = Number(e.target.value);
-      speedInput.value = researchSpeed;
-      updatePlannerTotals();
+    // ---------- Tree actions ----------
+    $('#max-tree').addEventListener('click', () => { trees.find(t => t.id === S.tree).techs.forEach(x => { st(x.id).t = x.max_level; }); save(); refresh(); toast('Whole tree planned'); });
+    $('#reset-tree').addEventListener('click', () => { trees.find(t => t.id === S.tree).techs.forEach(x => { plan[x.id] = { c: 0, t: 0 }; }); save(); refresh(); toast('Tree reset'); });
+    $('#copy-plan').addEventListener('click', () => {
+      const list = S.scope === 'all' ? [...techById.values()] : trees.find(t => t.id === S.tree).techs;
+      const c = planCost(list);
+      const lines = list.filter(x => st(x.id).t > st(x.id).c).map(x => `• ${x.name}: Lv ${st(x.id).c} → ${st(x.id).t}`);
+      copy([`Z Route research plan: ${S.scope === 'all' ? 'all trees' : trees.find(t => t.id === S.tree).name}`,
+        c.chips ? `Research chips: ${fmt(c.chips)}` : null, `Food: ${fmt(c.food)}`, `Metal: ${fmt(c.metal)}`, `Oil: ${fmt(c.oil)}`,
+        `Time: ${duration(effTime(c.time))}${S.speed ? ` (+${S.speed}% speed; ${duration(c.time)} base)` : ''}`, `Power: +${fmt(c.power)}`, '', ...(lines.length ? lines : ['• Nothing planned'])].filter(v => v !== null).join('\n'), 'Plan copied');
     });
 
-    speedInput.addEventListener("input", (e) => {
-      researchSpeed = Math.max(0, Number(e.target.value) || 0);
-      speedSlider.value = Math.min(600, researchSpeed);
-      updatePlannerTotals();
+    // ---------- Search ----------
+    const index = [...techById.values()].map(x => ({ x, s: `${x.name} ${x.description || ''} ${x.levels.map(l => l.benefits.join(' ')).join(' ')}`.toLowerCase() }));
+    $('#q').addEventListener('input', e => {
+      const q = e.target.value.trim().toLowerCase(), box = $('#results');
+      if (q.length < 2) { box.hidden = true; return; }
+      const hits = index.filter(i => i.s.includes(q)).slice(0, 12);
+      box.innerHTML = hits.length ? hits.map(({ x }) => `<button type="button" role="option" data-hit="${x.id}"><img src="${esc(x.icon)}" alt=""><span>${esc(x.name)}<small>${esc(treeOf.get(x.id).name)} · ${esc(x.description || '')}</small></span></button>`).join('') : '<div class="muted" style="padding:8px">No matches</div>';
+      box.hidden = false;
     });
+    $('#results').addEventListener('click', e => { const b = e.target.closest('[data-hit]'); if (!b) return; const id = +b.dataset.hit; $('#results').hidden = true; $('#q').value = ''; selectTree(treeOf.get(id).id); selectTech(id); document.querySelector(`[data-tech="${id}"]`)?.scrollIntoView({ block: 'center', behavior: 'smooth' }); });
+    document.addEventListener('click', e => { if (!e.target.closest('.toolbar')) $('#results').hidden = true; });
 
-    // Planner Global Buttons
-    document.getElementById("btn-max-tree").addEventListener("click", () => {
-      if (selectedTreeId) maxTreePreset(selectedTreeId);
-    });
-    document.getElementById("btn-reset-tree").addEventListener("click", () => {
-      if (selectedTreeId) resetTreePreset(selectedTreeId);
-    });
-    document.getElementById("btn-copy-plan").addEventListener("click", () => {
-      const tree = data.trees.find(t => t.id === selectedTreeId);
-      if (!tree) return;
-
-      let plannedCount = 0;
-      let totalFood = 0, totalMetal = 0, totalOil = 0, totalChips = 0, totalTimeSecs = 0, totalPower = 0;
-      const techLines = [];
-
-      tree.techs.forEach(tech => {
-        const st = plannerState[tech.id];
-        if (st && st.target > st.current) {
-          plannedCount++;
-          let f = 0, m = 0, o = 0, ch = 0, s = 0;
-          for (let l = st.current + 1; l <= st.target; l++) {
-            const lvlObj = tech.levels[l - 1];
-            if (lvlObj) {
-              f += lvlObj.food; m += lvlObj.metal; o += lvlObj.oil; ch += lvlObj.chips; s += lvlObj.time;
-            }
-          }
-          totalFood += f; totalMetal += m; totalOil += o; totalChips += ch; totalTimeSecs += s;
-          techLines.push(`• ${tech.name}: Lv ${st.current} → Lv ${st.target}${ch > 0 ? ` (${formatNumber(ch)} chips)` : ''}`);
-        }
-      });
-
-      const effectiveSecs = Math.max(0, Math.ceil(totalTimeSecs / (1 + researchSpeed / 100)));
-
-      const summaryText = [
-        `=== Z ROUTE RESEARCH PLAN: ${tree.name.toUpperCase()} ===`,
-        `Planned Upgrades: ${plannedCount} technologies`,
-        totalChips > 0 ? `Research Chips Required: ${formatNumber(totalChips)}` : null,
-        `Food: ${formatNumber(totalFood)}`,
-        `Metal: ${formatNumber(totalMetal)}`,
-        `Oil: ${formatNumber(totalOil)}`,
-        `Base Time: ${formatTime(totalTimeSecs)}`,
-        researchSpeed > 0 ? `Time with +${researchSpeed}% Speed: ${formatTime(effectiveSecs)}` : null,
-        `\nUpgraded Technologies:`,
-        techLines.length > 0 ? techLines.join("\n") : "• None selected",
-        `\nGenerated via Z Route Redemption Research Planner`
-      ].filter(Boolean).join("\n");
-
-      navigator.clipboard.writeText(summaryText).then(() => {
-        showToast("Plan summary copied to clipboard!");
-      }).catch(() => {
-        showToast("Could not access clipboard");
-      });
-    });
-
-    // Category Filter Chips
-    document.querySelectorAll("#category-filters .filter-chip").forEach(btn => {
-      btn.addEventListener("click", () => {
-        if (btn.id === "chips-only-toggle") {
-          filterChipsOnly = !filterChipsOnly;
-          btn.classList.toggle("active", filterChipsOnly);
-          renderTreesGrid();
-          return;
-        }
-
-        document.querySelectorAll("#category-filters .filter-chip:not(#chips-only-toggle)").forEach(b => b.classList.remove("active"));
-        btn.classList.add("active");
-        activeCategory = btn.dataset.cat;
-        renderTreesGrid();
-      });
-    });
-
-    // Search Input Listener
-    const searchInput = document.getElementById("tech-search");
-    searchInput.addEventListener("input", (e) => {
-      searchQuery = e.target.value;
-      renderTreesGrid();
-    });
-
-    // Initialize Page
-    initPlannerState();
-    renderChipsCallout();
-    renderTreesGrid();
-
-    // Auto-select first tree by default
-    if (data.trees.length > 0) {
-      selectTree(data.trees[0].id);
-    }
+    // ---------- Flow ----------
+    function selectTree(id) { S.tree = id; S.tech = null; history.replaceState(null, '', `#tree-${id}`); save(); refresh(); document.querySelector(`[data-tree="${id}"]`)?.scrollIntoView({ inline: 'center', block: 'nearest' }); }
+    function selectTech(id) { S.tech = id; refresh(); }
+    function refresh() { renderTrees(); renderTree(); renderTotals(); renderDetail(); }
+    refresh();
+  })();
   </script>
 </body>
 </html>
