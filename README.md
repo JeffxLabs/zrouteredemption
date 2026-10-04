@@ -107,3 +107,7 @@ The relevant bundles are bytewise XOR-obfuscated with `0x10`. After UnityFS extr
 Only derived facts and the generator are checked in—no APK, bundle, native library, raw localization file, or decrypted client table is included.
 
 The planner accepts `?current=N` to open directly at a Base level, for example `https://jeffxlabs.github.io/zrouteredemption/?current=26`. Changing the current level updates the shareable URL.
+
+## Localization
+
+Heroes, Hero EXP and Research are available in English, French, Russian, Turkish, Polish, Spanish, Portuguese, German, Korean and Simplified Chinese (the Capitol event site's languages); the language choice is shared site-wide through `i18n.js`. Game text (hero names, skills, keywords, benefits, research techs, squad rules, items) uses the client's official translations; Simplified Chinese is converted from the client's Traditional Chinese. Our own text is translated in `data/ui_i18n/`, `data/hero_insights_i18n/`, `data/hero_notes_i18n.json` and `data/hero_skill_template_i18n.json`. Rebuild with `python3 tools/build_heroes_directory.py`, `python3 tools/build_research_data.py`, `python3 tools/build_hero_exp_i18n.py` and `python3 tools/build_page_i18n.py` (the game-text steps need the client language files in a local, git-ignored `.i18n-src/`), then check with `node tools/check_localization.js`.

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-i18n-page-only="true" data-i18n-languages="en,fr,ru,tr,pl,es,pt,de,ko,zh">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -11,6 +11,8 @@
   <link rel="manifest" href="../manifest.webmanifest">
   <link rel="icon" href="../assets/ui/chips.webp" type="image/webp">
   <link rel="stylesheet" href="../assets/app.css">
+  <script src="../i18n.js"></script>
+  <script src="../i18n/research.js"></script>
   <title>Z Route Research</title>
   <style>
     .toolbar { display: flex; gap: 8px; align-items: center; margin-bottom: 10px; position: relative; }
@@ -108,6 +110,10 @@
         <a href="../promo-codes/">Promo Codes</a>
         <a href="https://github.com/JeffxLabs/zrouteredemption" target="_blank" rel="noopener">GitHub ↗</a>
       </nav>
+      <label class="language-control">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
+        <select id="language-select" data-i18n-languages="en,fr,ru,tr,pl,es,pt,de,ko,zh" aria-label="Language"></select>
+      </label>
       <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch theme"></button>
     </div>
   </header>
@@ -175,14 +181,80 @@
   <script src="../assets/app.js"></script>
   <script src="research_data.js"></script>
   <script>
-  (() => {
+  (async () => {
     'use strict';
     const D = window.RESEARCH_DATA, { store, esc, fmt, short, duration, copy, toast } = window.ZR;
     const $ = s => document.querySelector(s);
     const UI = '../assets/ui/';
-    const trees = D.trees;
-    const techById = new Map(), treeOf = new Map();
-    trees.forEach(t => t.techs.forEach(x => { techById.set(x.id, x); treeOf.set(x.id, t); }));
+    const withHash = hash => `${location.pathname}${location.search}${hash}`;
+    const SUPPORTED = new Set(['en', 'fr', 'ru', 'tr', 'pl', 'es', 'pt', 'de', 'ko', 'zh']);
+    const LOCALES = new Map();
+    async function loadLocale(code) {
+      if (!SUPPORTED.has(code) || code === 'en') return null;
+      if (window.RESEARCH_I18N?.[code]) return window.RESEARCH_I18N[code];
+      if (LOCALES.has(code)) return LOCALES.get(code);
+      const pending = new Promise((resolve, reject) => {
+        const script = document.createElement('script');
+        script.src = `research_i18n/${code}.js`;
+        script.onload = () => resolve(window.RESEARCH_I18N?.[code] || null);
+        script.onerror = () => reject(new Error(`Could not load ${code} research strings`));
+        document.head.appendChild(script);
+      });
+      LOCALES.set(code, pending);
+      try { return await pending; } catch (error) { LOCALES.delete(code); throw error; }
+    }
+    function formatBenefits(level) {
+      if (!level.benefit_data) return level.benefits || [];
+      return level.benefit_data.map(item => {
+        const type = item.parameter_type;
+        const value = type === 1 ? item.value * 100 : item.value;
+        const decimals = type === 1 || type === 3 || !Number.isInteger(value) ? 3 : 0;
+        const formatted = new Intl.NumberFormat(I18N.locale, { maximumFractionDigits: decimals }).format(value);
+        return `${item.name} ${item.sign}${type === 1 ? `${formatted}%` : formatted}`;
+      });
+    }
+    function buildTrees(locale) {
+      const copy = JSON.parse(JSON.stringify(D.trees));
+      if (locale) {
+        const names = new Map();
+        locale.trees.forEach(t => t.techs.forEach(x => names.set(x.id, x.name)));
+        copy.forEach(t => {
+          const translatedTree = locale.trees.find(x => x.id === t.id);
+          if (!translatedTree) return;
+          t.name = translatedTree.name;
+          t.techs.forEach(x => {
+            const translated = translatedTree.techs.find(y => y.id === x.id);
+            if (!translated) return;
+            x.name = translated.name;
+            x.description = translated.description || x.description;
+            x.levels.forEach((level, index) => {
+              if (translated.levels[index]) {
+                level.benefit_data = translated.levels[index].benefit_data;
+                level.benefits = translated.levels[index].benefits;
+              }
+            });
+            x.levels.forEach(level => level.req.forEach(req => { if (names.has(req.tech)) req.name = names.get(req.tech); }));
+          });
+        });
+      }
+      copy.forEach(t => t.techs.forEach(x => x.levels.forEach(level => { level.benefits = formatBenefits(level); })));
+      return copy;
+    }
+    function unlockText(unlock) {
+      if (unlock.kind === 'institute_level') return I18N.t('Institute Lv. {0}', [fmt(unlock.level)]);
+      if (unlock.kind === 'tree_progress') return I18N.t('{0} {1}% complete', [trees.find(tree => tree.id === unlock.tree)?.name || unlock.text.split(' ')[0], fmt(unlock.percent)]);
+      return I18N.t(unlock.text);
+    }
+    let selectedLanguage = I18N.language;
+    let localeData = await loadLocale(selectedLanguage);
+    if (selectedLanguage !== I18N.language) { selectedLanguage = I18N.language; localeData = await loadLocale(selectedLanguage); }
+    let trees = buildTrees(localeData);
+    let techById = new Map(), treeOf = new Map();
+    function rebuildIndexes() {
+      techById = new Map(); treeOf = new Map();
+      trees.forEach(t => t.techs.forEach(x => { techById.set(x.id, x); treeOf.set(x.id, t); }));
+    }
+    rebuildIndexes();
     const RES = [['chips', 'Chips', 'chips'], ['food', 'Food', 'food'], ['metal', 'Metal', 'metal'], ['oil', 'Oil', 'oil']];
 
     // ---------- State (saved per browser) ----------
@@ -214,21 +286,24 @@
 
     // ---------- Pills ----------
     const allMax = trees.reduce((a, t) => add(a, treeMax.get(t.id)), {});
-    $('#pills').innerHTML = [
-      `<span class="chip">${trees.length} trees</span>`,
-      `<span class="chip">${fmt(techById.size)} techs</span>`,
-      `<span class="chip"><img src="${UI}chips.webp" alt="">${fmt(allMax.chips)} chips to max all</span>`,
-      `<span class="chip"><img src="${UI}food.webp" alt="">${short(allMax.food)}</span>`,
-      `<span class="chip"><img src="${UI}metal.webp" alt="">${short(allMax.metal)}</span>`,
-      `<span class="chip"><img src="${UI}oil.webp" alt="">${short(allMax.oil)}</span>`,
-      `<span class="chip">${duration(allMax.time)} base time</span>`
-    ].join('');
+    function renderPills() {
+      $('#pills').innerHTML = [
+        `<span class="chip">${I18N.t('{0} trees', [fmt(trees.length)])}</span>`,
+        `<span class="chip">${I18N.t('{0} techs', [fmt(techById.size)])}</span>`,
+        `<span class="chip"><img src="${UI}chips.webp" alt="">${fmt(allMax.chips)} chips to max all</span>`,
+        `<span class="chip"><img src="${UI}food.webp" alt="">${short(allMax.food)}</span>`,
+        `<span class="chip"><img src="${UI}metal.webp" alt="">${short(allMax.metal)}</span>`,
+        `<span class="chip"><img src="${UI}oil.webp" alt="">${short(allMax.oil)}</span>`,
+        `<span class="chip">${duration(allMax.time)} base time</span>`
+      ].join('');
+    }
+    renderPills();
 
     // ---------- Tree strip ----------
     function renderTrees() {
       $('#trees').innerHTML = trees.map(t => {
         const pct = doneLevels(t) / totalLevels(t) * 100, mx = treeMax.get(t.id);
-        return `<button type="button" class="ttile" data-tree="${t.id}" aria-pressed="${t.id === S.tree}" title="${esc(t.unlock.map(u => u.text).join(' · '))}"><img src="${esc(t.icon)}" alt=""><b>${esc(t.name)}</b><small>${t.techs.length} techs${mx.chips ? ` · <img src="${UI}chips.webp" alt="">${short(mx.chips)}` : ''}</small><span class="bar"><i style="width:${pct.toFixed(1)}%"></i></span></button>`;
+        return `<button type="button" class="ttile" data-tree="${t.id}" aria-pressed="${t.id === S.tree}" title="${esc(t.name)} · ${esc(t.unlock.map(unlockText).join(' · '))}"><img src="${esc(t.icon)}" alt=""><b title="${esc(t.name)}">${esc(t.name)}</b><small>${I18N.t('{0} techs', [fmt(t.techs.length)])}${mx.chips ? ` · <img src="${UI}chips.webp" alt="">${short(mx.chips)}` : ''}</small><span class="bar"><i style="width:${pct.toFixed(1)}%"></i></span></button>`;
       }).join('');
     }
     $('#trees').addEventListener('click', e => { const b = e.target.closest('[data-tree]'); if (b) selectTree(+b.dataset.tree); });
@@ -238,7 +313,7 @@
     function renderTree() {
       const t = trees.find(x => x.id === S.tree);
       const mx = treeMax.get(t.id);
-      $('#thead').innerHTML = `<img src="${esc(t.icon)}" alt=""><div class="grow"><h2 id="tree-name">${esc(t.name)}</h2><div class="chips">${t.unlock.map(u => `<span class="chip sm">${u.kind === 'institute_level' ? `<img src="../assets/buildings/research.svg" alt="">` : u.kind === 'tree_progress' ? `<img src="${esc((trees.find(z => z.id === u.tree) || {}).icon || '')}" alt="">` : ''}${esc(u.text)}</span>`).join('')}</div></div>
+      $('#thead').innerHTML = `<img src="${esc(t.icon)}" alt=""><div class="grow"><h2 id="tree-name">${esc(t.name)}</h2><div class="chips">${t.unlock.map(u => `<span class="chip sm">${u.kind === 'institute_level' ? `<img src="../assets/buildings/research.svg" alt="">` : u.kind === 'tree_progress' ? `<img src="${esc((trees.find(z => z.id === u.tree) || {}).icon || '')}" alt="">` : ''}${esc(unlockText(u))}</span>`).join('')}</div></div>
         <div class="chips">${mx.chips ? `<span class="chip" title="Research chips to max this tree"><img src="${UI}chips.webp" alt="">${fmt(mx.chips)}</span>` : ''}<span class="chip" title="Base research time to max this tree">${duration(mx.time)}</span></div>`;
       const pos = new Map(t.techs.map(x => [x.pos, x]));
       const rowh = 100, links = [];
@@ -254,8 +329,9 @@
       el.innerHTML = `<svg class="links" viewBox="0 0 ${t.cols * 100} ${t.rows * rowh}" preserveAspectRatio="none" aria-hidden="true">${links.join('')}</svg>` +
         t.techs.map(x => {
           const s = st(x.id), cls = nodeState(x);
-          const badge = s.t > s.c ? `${s.c}→${s.t}/${x.max_level}` : `${s.c}/${x.max_level}`;
-          return `<button type="button" class="node ${cls} ${x.id === S.tech ? 'sel' : ''} ${x.has_costs ? '' : 'nodata'}" data-tech="${x.id}" style="grid-row:${x.row};grid-column:${x.col}" aria-label="${esc(x.name)}, level ${s.c} of ${x.max_level}${s.t > s.c ? `, planned to ${s.t}` : ''}"><span class="ring"><img src="${esc(x.icon)}" alt="" loading="lazy"></span><span class="lv">${badge}</span><span class="nm">${esc(x.name)}</span></button>`;
+          const badge = s.t > s.c ? `${fmt(s.c)}→${fmt(s.t)}/${fmt(x.max_level)}` : `${fmt(s.c)}/${fmt(x.max_level)}`;
+          const aria = `${x.name}${I18N.t(', level {0} of {1}', [fmt(s.c), fmt(x.max_level)])}${s.t > s.c ? I18N.t(', planned to {0}', [fmt(s.t)]) : ''}`;
+          return `<button type="button" class="node ${cls} ${x.id === S.tech ? 'sel' : ''} ${x.has_costs ? '' : 'nodata'}" data-tech="${x.id}" style="grid-row:${x.row};grid-column:${x.col}" title="${esc(x.name)}" aria-label="${esc(aria)}"><span class="ring"><img src="${esc(x.icon)}" alt="" loading="lazy"></span><span class="lv">${badge}</span><span class="nm">${esc(x.name)}</span></button>`;
         }).join('');
     }
     $('#tree').addEventListener('click', e => { const n = e.target.closest('[data-tech]'); if (n) selectTech(+n.dataset.tech); });
@@ -268,7 +344,7 @@
       $('#totals').innerHTML = [
         ...RES.map(([k, l, ic]) => `<div class="tile"><small><img src="${UI}${ic}.webp" alt="">${l}</small><b>${short(c[k])}</b></div>`),
         `<div class="tile"><small>Time</small><b>${duration(effTime(c.time))}</b>${S.speed ? `<div class="sub">${duration(c.time)} base</div>` : ''}</div>`,
-        `<div class="tile"><small><img src="${UI}power.webp" alt="">Power</small><b>+${short(c.power)}</b><div class="sub">${c.techs} techs · ${c.levels} levels</div></div>`
+        `<div class="tile"><small><img src="${UI}power.webp" alt="">Power</small><b>+${short(c.power)}</b><div class="sub">${I18N.t('{0} techs · {1} levels', [fmt(c.techs), fmt(c.levels)])}</div></div>`
       ].join('');
       $('#speed-r').value = Math.min(300, S.speed); $('#speed-n').value = S.speed;
     }
@@ -299,7 +375,7 @@
       const reqs = new Map();
       x.levels.forEach(l => l.req.forEach(r => reqs.set(r.tech, Math.max(reqs.get(r.tech) || 0, r.level))));
       const c = cost(x, s.c, s.t);
-      box.innerHTML = `<div class="detail-head"><span class="ring"><img src="${esc(x.icon)}" alt=""></span><div><h3>${esc(x.name)}</h3><div class="muted" style="font-size:12.5px">${esc(x.description || '')} · ${esc(t.name)} · max Lv ${x.max_level}</div></div><button class="close-x" type="button" id="close-detail" aria-label="Close">✕</button></div>
+      box.innerHTML = `<div class="detail-head"><span class="ring"><img src="${esc(x.icon)}" alt=""></span><div><h3>${esc(x.name)}</h3><div class="muted" style="font-size:12.5px">${esc(x.description || '')} · ${esc(t.name)} · ${I18N.t('max Lv {0}', [fmt(x.max_level)])}</div></div><button class="close-x" type="button" id="close-detail" aria-label="Close">✕</button></div>
         ${x.has_costs ? '' : '<div class="note warn">This tech is newer than the cost tables in this site (client 1.30.07), so its costs are not shown.</div>'}
         <div class="levels-ctl">
           <label>Current <span class="stepper"><button type="button" data-lv="c" data-d="-1" aria-label="Current level down">−</button><input type="number" id="lv-c" value="${s.c}" min="0" max="${x.max_level}" inputmode="numeric" aria-label="Current level"><button type="button" data-lv="c" data-d="1" aria-label="Current level up">+</button></span></label>
@@ -308,7 +384,7 @@
         </div>
         ${s.t > s.c ? `<div class="chips" style="margin-bottom:8px">${RES.filter(([k]) => c[k]).map(([k, l, ic]) => `<span class="chip sm"><img src="${UI}${ic}.webp" alt="">${fmt(c[k])}</span>`).join('')}<span class="chip sm">${duration(effTime(c.time))}</span><span class="chip sm"><img src="${UI}power.webp" alt="">+${fmt(c.power)}</span></div>` : ''}
         ${reqs.size ? `<div class="reqs">${[...reqs].map(([id, lv]) => { const r = techById.get(id), rs = st(id), bad = unmet.has(id); return `<div class="req ${bad ? 'unmet' : ''}">${r ? `<img src="${esc(r.icon)}" alt="">` : ''}<span>Needs ${esc(r ? r.name : `Tech ${id}`)} Lv ${lv}${bad ? ' (not planned)' : ' ✓'}</span></div>`; }).join('')}${unmet.size ? `<button class="btn sm" type="button" id="fix-reqs" style="justify-self:start">Plan missing prerequisites</button>` : ''}</div>` : ''}
-        <div class="table-wrap"><table class="data lvt"><thead><tr><th>Lv</th><th class="r">Time</th>${hasChips ? `<th class="r"><img class="th-ic" src="${UI}chips.webp" alt="Chips"></th>` : ''}<th class="r"><img class="th-ic" src="${UI}food.webp" alt="Food"></th><th class="r"><img class="th-ic" src="${UI}metal.webp" alt="Metal"></th><th class="r"><img class="th-ic" src="${UI}oil.webp" alt="Oil"></th></tr></thead><tbody>${x.levels.map(l => { const cls = l.level <= s.c ? 'done' : l.level <= s.t ? 'plan' : ''; return `<tr class="${cls} top"><td><b>${l.level}</b></td><td class="r">${duration(effTime(l.time))}</td>${hasChips ? `<td class="r">${l.chips ? fmt(l.chips) : '—'}</td>` : ''}<td class="r">${short(l.food)}</td><td class="r">${short(l.metal)}</td><td class="r">${short(l.oil)}</td></tr><tr class="${cls} sub"><td></td><td colspan="${hasChips ? 5 : 4}" class="ben">${l.benefits.map(esc).join(' · ')}<span class="faint"> · Institute Lv ${l.institute || 1} · Power +${fmt(l.power)}</span></td></tr>`; }).join('')}</tbody></table></div>`;
+        <div class="table-wrap"><table class="data lvt"><thead><tr><th>Lv</th><th class="r">Time</th>${hasChips ? `<th class="r"><img class="th-ic" src="${UI}chips.webp" alt="Chips"></th>` : ''}<th class="r"><img class="th-ic" src="${UI}food.webp" alt="Food"></th><th class="r"><img class="th-ic" src="${UI}metal.webp" alt="Metal"></th><th class="r"><img class="th-ic" src="${UI}oil.webp" alt="Oil"></th></tr></thead><tbody>${x.levels.map(l => { const cls = l.level <= s.c ? 'done' : l.level <= s.t ? 'plan' : ''; return `<tr class="${cls} top"><td><b>${fmt(l.level)}</b></td><td class="r">${duration(effTime(l.time))}</td>${hasChips ? `<td class="r">${l.chips ? fmt(l.chips) : '—'}</td>` : ''}<td class="r">${short(l.food)}</td><td class="r">${short(l.metal)}</td><td class="r">${short(l.oil)}</td></tr><tr class="${cls} sub"><td></td><td colspan="${hasChips ? 5 : 4}" class="ben">${l.benefits.map(esc).join(' · ')}<span class="faint"> · ${I18N.t('Institute Lv {0}', [fmt(l.institute || 1)])} · Power +${fmt(l.power)}</span></td></tr>`; }).join('')}</tbody></table></div>`;
       box.classList.add('open'); $('#backdrop').classList.add('open');
     }
     function setLevel(which, v) {
@@ -341,16 +417,29 @@
     $('#copy-plan').addEventListener('click', () => {
       const list = S.scope === 'all' ? [...techById.values()] : trees.find(t => t.id === S.tree).techs;
       const c = planCost(list);
-      const lines = list.filter(x => st(x.id).t > st(x.id).c).map(x => `• ${x.name}: Lv ${st(x.id).c} → ${st(x.id).t}`);
-      copy([`Z Route research plan: ${S.scope === 'all' ? 'all trees' : trees.find(t => t.id === S.tree).name}`,
-        c.chips ? `Research chips: ${fmt(c.chips)}` : null, `Food: ${fmt(c.food)}`, `Metal: ${fmt(c.metal)}`, `Oil: ${fmt(c.oil)}`,
-        `Time: ${duration(effTime(c.time))}${S.speed ? ` (+${S.speed}% speed; ${duration(c.time)} base)` : ''}`, `Power: +${fmt(c.power)}`, '', ...(lines.length ? lines : ['• Nothing planned'])].filter(v => v !== null).join('\n'), 'Plan copied');
+      const lines = list.filter(x => st(x.id).t > st(x.id).c).map(x => I18N.t('• {0}: Lv {1} → {2}', [x.name, st(x.id).c, st(x.id).t]));
+      const scopeLabel = S.scope === 'all' ? I18N.t('all trees') : trees.find(t => t.id === S.tree).name;
+      const timeLabel = S.speed
+        ? I18N.t('Time: {0} (+{1}% speed; {2} base)', [duration(effTime(c.time)), S.speed, duration(c.time)])
+        : I18N.t('Time: {0}', [duration(effTime(c.time))]);
+      copy([I18N.t('Z Route research plan: {0}', [scopeLabel]),
+        c.chips ? I18N.t('Research chips: {0}', [fmt(c.chips)]) : null,
+        I18N.t('Food: {0}', [fmt(c.food)]), I18N.t('Metal: {0}', [fmt(c.metal)]), I18N.t('Oil: {0}', [fmt(c.oil)]),
+        timeLabel, I18N.t('Power: +{0}', [fmt(c.power)]), '', ...(lines.length ? lines : [I18N.t('• Nothing planned')])].filter(v => v !== null).join('\n'), 'Plan copied');
     });
 
     // ---------- Search ----------
-    const index = [...techById.values()].map(x => ({ x, s: `${x.name} ${x.description || ''} ${x.levels.map(l => l.benefits.join(' ')).join(' ')}`.toLowerCase() }));
+    function buildSearchIndex() {
+      const english = new Map(D.trees.flatMap(t => t.techs.map(x => [x.id, x])));
+      return [...techById.values()].map(x => {
+        const e = english.get(x.id);
+        const words = [x.name, x.description || '', ...x.levels.flatMap(l => l.benefits), e?.name, e?.description || '', ...(e?.levels || []).flatMap(l => l.benefits)];
+        return { x, s: words.join(' ').toLocaleLowerCase(I18N.locale) };
+      });
+    }
+    let index = buildSearchIndex();
     $('#q').addEventListener('input', e => {
-      const q = e.target.value.trim().toLowerCase(), box = $('#results');
+      const q = e.target.value.trim().toLocaleLowerCase(I18N.locale), box = $('#results');
       if (q.length < 2) { box.hidden = true; return; }
       const hits = index.filter(i => i.s.includes(q)).slice(0, 12);
       box.innerHTML = hits.length ? hits.map(({ x }) => `<button type="button" role="option" data-hit="${x.id}"><img src="${esc(x.icon)}" alt=""><span>${esc(x.name)}<small>${esc(treeOf.get(x.id).name)} · ${esc(x.description || '')}</small></span></button>`).join('') : '<div class="muted" style="padding:8px">No matches</div>';
@@ -360,10 +449,25 @@
     document.addEventListener('click', e => { if (!e.target.closest('.toolbar')) $('#results').hidden = true; });
 
     // ---------- Flow ----------
-    function selectTree(id) { S.tree = id; S.tech = null; history.replaceState(null, '', `#tree-${id}`); save(); refresh(); document.querySelector(`[data-tree="${id}"]`)?.scrollIntoView({ inline: 'center', block: 'nearest' }); }
+    function selectTree(id) { S.tree = id; S.tech = null; history.replaceState(null, '', withHash(`#tree-${id}`)); save(); refresh(); document.querySelector(`[data-tree="${id}"]`)?.scrollIntoView({ inline: 'center', block: 'nearest' }); }
     function selectTech(id) { S.tech = id; refresh(); }
-    function refresh() { renderTrees(); renderTree(); renderTotals(); renderDetail(); }
+    function refresh() { renderTrees(); renderTree(); renderTotals(); renderDetail(); I18N.apply(document.body); }
     refresh();
+    document.addEventListener('languagechange', async () => {
+      const code = I18N.language;
+      let next;
+      try { next = await loadLocale(code); } catch (_) { next = null; }
+      if (code !== I18N.language) return;
+      selectedLanguage = code;
+      localeData = next;
+      trees = buildTrees(localeData);
+      rebuildIndexes();
+      renderPills();
+      index = buildSearchIndex();
+      refresh();
+      if ($('#q').value.trim().length >= 2) $('#q').dispatchEvent(new Event('input', { bubbles: true }));
+      I18N.apply(document.body);
+    });
   })();
   </script>
 </body>

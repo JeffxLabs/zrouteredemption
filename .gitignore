@@ -8,3 +8,4 @@
 __pycache__/
 artifacts/
 lang_building
+.i18n-src/

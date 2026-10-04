@@ -87,6 +87,8 @@ const HEROES_DATA = [
         "name": "Heavy Rifle",
         "name_in_client": true,
         "effect_type": "Physical DMG",
+        "effect_type_source": "Physical DMG",
+        "is_pve_only": false,
         "cooldown_s": 1.85,
         "cooldown_ms": 1550,
         "cooldown": "1.85s",
@@ -164,22 +166,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Deals {0}% more damage.",
+            "args": [
+              "25"
+            ],
             "text": "Deals 25% more damage."
           },
           {
             "star": 2,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "40"
+            ],
             "text": "Bonus damage is increased to 40%."
           },
           {
             "star": 3,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "75"
+            ],
             "text": "Bonus damage is increased to 75%."
           },
           {
             "star": 4,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "105"
+            ],
             "text": "Bonus damage is increased to 105%."
           },
           {
             "star": 5,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "155"
+            ],
             "text": "Bonus damage is increased to 155%."
           }
         ],
@@ -193,6 +215,8 @@ const HEROES_DATA = [
         "name": "Grenadier",
         "name_in_client": true,
         "effect_type": "Physical DMG",
+        "effect_type_source": "Physical DMG",
+        "is_pve_only": false,
         "cooldown_s": 9.2,
         "cooldown_ms": 9000,
         "cooldown": "9.2s",
@@ -270,22 +294,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Deals {0}% more damage.",
+            "args": [
+              "25"
+            ],
             "text": "Deals 25% more damage."
           },
           {
             "star": 2,
+            "template": "Increases the number of attacks to {0}.",
+            "args": [
+              "6"
+            ],
             "text": "Increases the number of attacks to 6."
           },
           {
             "star": 3,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "45"
+            ],
             "text": "Bonus damage is increased to 45%."
           },
           {
             "star": 4,
+            "template": "Increases the number of attacks to {0}.",
+            "args": [
+              "8"
+            ],
             "text": "Increases the number of attacks to 8."
           },
           {
             "star": 5,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "70"
+            ],
             "text": "Bonus damage is increased to 70%."
           }
         ],
@@ -299,6 +343,8 @@ const HEROES_DATA = [
         "name": "Caliber Modification",
         "name_in_client": true,
         "effect_type": null,
+        "effect_type_source": null,
+        "is_pve_only": false,
         "cooldown_s": 0.0,
         "cooldown_ms": null,
         "cooldown": "Passive",
@@ -370,22 +416,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Increases ATK by {0}%.",
+            "args": [
+              "3"
+            ],
             "text": "Increases ATK by 3%."
           },
           {
             "star": 2,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "6"
+            ],
             "text": "Increases bonus effect to 6%."
           },
           {
             "star": 3,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "9"
+            ],
             "text": "Increases bonus effect to 9%."
           },
           {
             "star": 4,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "12"
+            ],
             "text": "Increases bonus effect to 12%."
           },
           {
             "star": 5,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "15"
+            ],
             "text": "Increases bonus effect to 15%."
           }
         ],
@@ -399,6 +465,8 @@ const HEROES_DATA = [
         "name": "Wasteland Wanderer",
         "name_in_client": true,
         "effect_type": null,
+        "effect_type_source": null,
+        "is_pve_only": false,
         "cooldown_s": 0.0,
         "cooldown_ms": null,
         "cooldown": "Passive",
@@ -515,6 +583,8 @@ const HEROES_DATA = [
         "name": "Militia Rocket Launcher",
         "name_in_client": true,
         "effect_type": "Physical DMG",
+        "effect_type_source": "Physical DMG",
+        "is_pve_only": false,
         "cooldown_s": 1.2,
         "cooldown_ms": 1000,
         "cooldown": "1.2s",
@@ -592,22 +662,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Deals {0}% more damage.",
+            "args": [
+              "25"
+            ],
             "text": "Deals 25% more damage."
           },
           {
             "star": 2,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "40"
+            ],
             "text": "Bonus damage is increased to 40%."
           },
           {
             "star": 3,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "75"
+            ],
             "text": "Bonus damage is increased to 75%."
           },
           {
             "star": 4,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "105"
+            ],
             "text": "Bonus damage is increased to 105%."
           },
           {
             "star": 5,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "155"
+            ],
             "text": "Bonus damage is increased to 155%."
           }
         ],
@@ -621,6 +711,8 @@ const HEROES_DATA = [
         "name": "Scavenger",
         "name_in_client": true,
         "effect_type": "Physical DMG",
+        "effect_type_source": "Physical DMG",
+        "is_pve_only": true,
         "cooldown_s": 9.3,
         "cooldown_ms": 9000,
         "cooldown": "9.3s",
@@ -698,22 +790,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Deals {0}% more damage.",
+            "args": [
+              "25"
+            ],
             "text": "Deals 25% more damage."
           },
           {
             "star": 2,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "40"
+            ],
             "text": "Bonus damage is increased to 40%."
           },
           {
             "star": 3,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "75"
+            ],
             "text": "Bonus damage is increased to 75%."
           },
           {
             "star": 4,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "105"
+            ],
             "text": "Bonus damage is increased to 105%."
           },
           {
             "star": 5,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "155"
+            ],
             "text": "Bonus damage is increased to 155%."
           }
         ],
@@ -727,6 +839,8 @@ const HEROES_DATA = [
         "name": "Treasure Hunter",
         "name_in_client": true,
         "effect_type": null,
+        "effect_type_source": null,
+        "is_pve_only": true,
         "cooldown_s": 0.0,
         "cooldown_ms": null,
         "cooldown": "Passive",
@@ -798,22 +912,43 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Increases damage to monsters by {0}% and resource gain by {1}%.",
+            "args": [
+              "3",
+              "5"
+            ],
             "text": "Increases damage to monsters by 3% and resource gain by 5%."
           },
           {
             "star": 2,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "6% and 10"
+            ],
             "text": "Increases bonus effect to 6% and 10%."
           },
           {
             "star": 3,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "9% and 15"
+            ],
             "text": "Increases bonus effect to 9% and 15%."
           },
           {
             "star": 4,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "12% and 20"
+            ],
             "text": "Increases bonus effect to 12% and 20%."
           },
           {
             "star": 5,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "15% and 25"
+            ],
             "text": "Increases bonus effect to 15% and 25%."
           }
         ],
@@ -827,6 +962,8 @@ const HEROES_DATA = [
         "name": "Wasteland Wanderer",
         "name_in_client": true,
         "effect_type": null,
+        "effect_type_source": null,
+        "is_pve_only": false,
         "cooldown_s": 0.0,
         "cooldown_ms": null,
         "cooldown": "Passive",
@@ -945,6 +1082,8 @@ const HEROES_DATA = [
         "name": "Tactical Shotgun",
         "name_in_client": true,
         "effect_type": "Physical DMG",
+        "effect_type_source": "Physical DMG",
+        "is_pve_only": false,
         "cooldown_s": 1.7,
         "cooldown_ms": 1600,
         "cooldown": "1.7s",
@@ -1022,22 +1161,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Deals {0}% more damage.",
+            "args": [
+              "35"
+            ],
             "text": "Deals 35% more damage."
           },
           {
             "star": 2,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "75"
+            ],
             "text": "Bonus damage is increased to 75%."
           },
           {
             "star": 3,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "130"
+            ],
             "text": "Bonus damage is increased to 130%."
           },
           {
             "star": 4,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "190"
+            ],
             "text": "Bonus damage is increased to 190%."
           },
           {
             "star": 5,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "265"
+            ],
             "text": "Bonus damage is increased to 265%."
           }
         ],
@@ -1051,6 +1210,8 @@ const HEROES_DATA = [
         "name": "Field Support",
         "name_in_client": true,
         "effect_type": "Physical DEF",
+        "effect_type_source": "Physical DEF",
+        "is_pve_only": false,
         "cooldown_s": 10.2,
         "cooldown_ms": 10000,
         "cooldown": "10.2s",
@@ -1128,22 +1289,40 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Increases duration to {0} second(s).",
+            "args": [
+              "6"
+            ],
             "text": "Increases duration to 6 second(s)."
           },
           {
             "star": 2,
+            "template": "Reduces Physical DMG taken by {0}%.",
+            "args": [
+              "5"
+            ],
             "text": "Reduces Physical DMG taken by 5%."
           },
           {
             "star": 3,
+            "template": "Increases duration to {0} second(s).",
+            "args": [
+              "7"
+            ],
             "text": "Increases duration to 7 second(s)."
           },
           {
             "star": 4,
+            "template": "Affects all allies.",
+            "args": [],
             "text": "Affects all allies."
           },
           {
             "star": 5,
+            "template": "Increases duration to {0} second(s).",
+            "args": [
+              "8"
+            ],
             "text": "Increases duration to 8 second(s)."
           }
         ],
@@ -1157,6 +1336,8 @@ const HEROES_DATA = [
         "name": "Tactical Shield",
         "name_in_client": true,
         "effect_type": null,
+        "effect_type_source": null,
+        "is_pve_only": false,
         "cooldown_s": 0.0,
         "cooldown_ms": null,
         "cooldown": "Passive",
@@ -1228,22 +1409,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Reduces damage taken by {0}%.",
+            "args": [
+              "2"
+            ],
             "text": "Reduces damage taken by 2%."
           },
           {
             "star": 2,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "4"
+            ],
             "text": "Increases bonus effect to 4%."
           },
           {
             "star": 3,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "6"
+            ],
             "text": "Increases bonus effect to 6%."
           },
           {
             "star": 4,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "8"
+            ],
             "text": "Increases bonus effect to 8%."
           },
           {
             "star": 5,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "10"
+            ],
             "text": "Increases bonus effect to 10%."
           }
         ],
@@ -1257,6 +1458,8 @@ const HEROES_DATA = [
         "name": "Doomsday Judgment",
         "name_in_client": true,
         "effect_type": null,
+        "effect_type_source": null,
+        "is_pve_only": false,
         "cooldown_s": 0.0,
         "cooldown_ms": null,
         "cooldown": "Passive",
@@ -1373,6 +1576,8 @@ const HEROES_DATA = [
         "name": "Flamethrower",
         "name_in_client": true,
         "effect_type": "Physical DMG",
+        "effect_type_source": "Physical DMG",
+        "is_pve_only": false,
         "cooldown_s": 4.2,
         "cooldown_ms": 4000,
         "cooldown": "4.2s",
@@ -1450,22 +1655,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Deals {0}% more damage.",
+            "args": [
+              "25"
+            ],
             "text": "Deals 25% more damage."
           },
           {
             "star": 2,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "40"
+            ],
             "text": "Bonus damage is increased to 40%."
           },
           {
             "star": 3,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "70"
+            ],
             "text": "Bonus damage is increased to 70%."
           },
           {
             "star": 4,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "105"
+            ],
             "text": "Bonus damage is increased to 105%."
           },
           {
             "star": 5,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "155"
+            ],
             "text": "Bonus damage is increased to 155%."
           }
         ],
@@ -1479,6 +1704,8 @@ const HEROES_DATA = [
         "name": "Roar",
         "name_in_client": true,
         "effect_type": "Buff",
+        "effect_type_source": "Buff",
+        "is_pve_only": true,
         "cooldown_s": 9.1,
         "cooldown_ms": 9000,
         "cooldown": "9.1s",
@@ -1556,22 +1783,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Takes {0}% less damage from monsters.",
+            "args": [
+              "5"
+            ],
             "text": "Takes 5% less damage from monsters."
           },
           {
             "star": 2,
+            "template": "Increases duration to {0} second(s).",
+            "args": [
+              "8"
+            ],
             "text": "Increases duration to 8 second(s)."
           },
           {
             "star": 3,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "10"
+            ],
             "text": "Increases bonus effect to 10%."
           },
           {
             "star": 4,
+            "template": "Increases duration to {0} second(s).",
+            "args": [
+              "9"
+            ],
             "text": "Increases duration to 9 second(s)."
           },
           {
             "star": 5,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "15"
+            ],
             "text": "Increases bonus effect to 15%."
           }
         ],
@@ -1585,6 +1832,8 @@ const HEROES_DATA = [
         "name": "Robust Physique",
         "name_in_client": true,
         "effect_type": null,
+        "effect_type_source": null,
+        "is_pve_only": false,
         "cooldown_s": 0.0,
         "cooldown_ms": null,
         "cooldown": "Passive",
@@ -1656,22 +1905,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Increases DEF by {0}%.",
+            "args": [
+              "10"
+            ],
             "text": "Increases DEF by 10%."
           },
           {
             "star": 2,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "20"
+            ],
             "text": "Increases bonus effect to 20%."
           },
           {
             "star": 3,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "30"
+            ],
             "text": "Increases bonus effect to 30%."
           },
           {
             "star": 4,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "40"
+            ],
             "text": "Increases bonus effect to 40%."
           },
           {
             "star": 5,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "50"
+            ],
             "text": "Increases bonus effect to 50%."
           }
         ],
@@ -1685,6 +1954,8 @@ const HEROES_DATA = [
         "name": "Wasteland Wanderer",
         "name_in_client": true,
         "effect_type": null,
+        "effect_type_source": null,
+        "is_pve_only": false,
         "cooldown_s": 0.0,
         "cooldown_ms": null,
         "cooldown": "Passive",
@@ -1801,6 +2072,8 @@ const HEROES_DATA = [
         "name": "Recurve Bow",
         "name_in_client": true,
         "effect_type": "Physical DMG",
+        "effect_type_source": "Physical DMG",
+        "is_pve_only": false,
         "cooldown_s": 1.3,
         "cooldown_ms": 1000,
         "cooldown": "1.3s",
@@ -1878,22 +2151,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Deals {0}% more damage.",
+            "args": [
+              "25"
+            ],
             "text": "Deals 25% more damage."
           },
           {
             "star": 2,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "40"
+            ],
             "text": "Bonus damage is increased to 40%."
           },
           {
             "star": 3,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "75"
+            ],
             "text": "Bonus damage is increased to 75%."
           },
           {
             "star": 4,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "105"
+            ],
             "text": "Bonus damage is increased to 105%."
           },
           {
             "star": 5,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "155"
+            ],
             "text": "Bonus damage is increased to 155%."
           }
         ],
@@ -1907,6 +2200,8 @@ const HEROES_DATA = [
         "name": "Cheer Captain",
         "name_in_client": true,
         "effect_type": "Buff",
+        "effect_type_source": "Buff",
+        "is_pve_only": true,
         "cooldown_s": 9.2,
         "cooldown_ms": 9000,
         "cooldown": "9.2s",
@@ -1984,22 +2279,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Increases duration to {0} second(s).",
+            "args": [
+              "6"
+            ],
             "text": "Increases duration to 6 second(s)."
           },
           {
             "star": 2,
+            "template": "Deals {0}% more damage to monsters.",
+            "args": [
+              "2"
+            ],
             "text": "Deals 2% more damage to monsters."
           },
           {
             "star": 3,
+            "template": "Increases duration to {0} second(s).",
+            "args": [
+              "7"
+            ],
             "text": "Increases duration to 7 second(s)."
           },
           {
             "star": 4,
+            "template": "Deals {0}% more damage to monsters.",
+            "args": [
+              "4"
+            ],
             "text": "Deals 4% more damage to monsters."
           },
           {
             "star": 5,
+            "template": "Increases duration to {0} second(s).",
+            "args": [
+              "8"
+            ],
             "text": "Increases duration to 8 second(s)."
           }
         ],
@@ -2013,6 +2328,8 @@ const HEROES_DATA = [
         "name": "Agile Stance",
         "name_in_client": true,
         "effect_type": null,
+        "effect_type_source": null,
+        "is_pve_only": true,
         "cooldown_s": 0.0,
         "cooldown_ms": null,
         "cooldown": "Passive",
@@ -2084,22 +2401,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Takes {0}% less damage from monsters.",
+            "args": [
+              "2"
+            ],
             "text": "Takes 2% less damage from monsters."
           },
           {
             "star": 2,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "4"
+            ],
             "text": "Increases bonus effect to 4%."
           },
           {
             "star": 3,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "6"
+            ],
             "text": "Increases bonus effect to 6%."
           },
           {
             "star": 4,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "8"
+            ],
             "text": "Increases bonus effect to 8%."
           },
           {
             "star": 5,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "10"
+            ],
             "text": "Increases bonus effect to 10%."
           }
         ],
@@ -2113,6 +2450,8 @@ const HEROES_DATA = [
         "name": "Wasteland Wanderer",
         "name_in_client": true,
         "effect_type": null,
+        "effect_type_source": null,
+        "is_pve_only": false,
         "cooldown_s": 0.0,
         "cooldown_ms": null,
         "cooldown": "Passive",
@@ -2229,6 +2568,8 @@ const HEROES_DATA = [
         "name": "Spear Launcher",
         "name_in_client": true,
         "effect_type": "Radiation DMG",
+        "effect_type_source": "Radiation DMG",
+        "is_pve_only": false,
         "cooldown_s": 1.1,
         "cooldown_ms": 1000,
         "cooldown": "1.1s",
@@ -2306,22 +2647,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Deals {0}% more damage.",
+            "args": [
+              "25"
+            ],
             "text": "Deals 25% more damage."
           },
           {
             "star": 2,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "40"
+            ],
             "text": "Bonus damage is increased to 40%."
           },
           {
             "star": 3,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "75"
+            ],
             "text": "Bonus damage is increased to 75%."
           },
           {
             "star": 4,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "105"
+            ],
             "text": "Bonus damage is increased to 105%."
           },
           {
             "star": 5,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "155"
+            ],
             "text": "Bonus damage is increased to 155%."
           }
         ],
@@ -2335,6 +2696,8 @@ const HEROES_DATA = [
         "name": "Battle Anthem",
         "name_in_client": true,
         "effect_type": "Buff",
+        "effect_type_source": "Buff",
+        "is_pve_only": false,
         "cooldown_s": 9.2,
         "cooldown_ms": 9000,
         "cooldown": "9.2s",
@@ -2412,22 +2775,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Increases duration to {0} second(s).",
+            "args": [
+              "7"
+            ],
             "text": "Increases duration to 7 second(s)."
           },
           {
             "star": 2,
+            "template": "Increases DEF by {0}%.",
+            "args": [
+              "5"
+            ],
             "text": "Increases DEF by 5%."
           },
           {
             "star": 3,
+            "template": "Increases duration to {0} second(s).",
+            "args": [
+              "8"
+            ],
             "text": "Increases duration to 8 second(s)."
           },
           {
             "star": 4,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "10"
+            ],
             "text": "Increases bonus effect to 10%."
           },
           {
             "star": 5,
+            "template": "Increases duration to {0} second(s).",
+            "args": [
+              "9"
+            ],
             "text": "Increases duration to 9 second(s)."
           }
         ],
@@ -2441,6 +2824,8 @@ const HEROES_DATA = [
         "name": "Athlete",
         "name_in_client": true,
         "effect_type": null,
+        "effect_type_source": null,
+        "is_pve_only": true,
         "cooldown_s": 0.0,
         "cooldown_ms": null,
         "cooldown": "Passive",
@@ -2512,22 +2897,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Takes {0}% less damage from monsters.",
+            "args": [
+              "2"
+            ],
             "text": "Takes 2% less damage from monsters."
           },
           {
             "star": 2,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "4"
+            ],
             "text": "Increases bonus effect to 4%."
           },
           {
             "star": 3,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "6"
+            ],
             "text": "Increases bonus effect to 6%."
           },
           {
             "star": 4,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "8"
+            ],
             "text": "Increases bonus effect to 8%."
           },
           {
             "star": 5,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "10"
+            ],
             "text": "Increases bonus effect to 10%."
           }
         ],
@@ -2541,6 +2946,8 @@ const HEROES_DATA = [
         "name": "Wasteland Wanderer",
         "name_in_client": true,
         "effect_type": null,
+        "effect_type_source": null,
+        "is_pve_only": false,
         "cooldown_s": 0.0,
         "cooldown_ms": null,
         "cooldown": "Passive",
@@ -2657,6 +3064,8 @@ const HEROES_DATA = [
         "name": "Pneumatic Launcher",
         "name_in_client": true,
         "effect_type": "Physical DMG",
+        "effect_type_source": "Physical DMG",
+        "is_pve_only": false,
         "cooldown_s": 1.7,
         "cooldown_ms": 1600,
         "cooldown": "1.7s",
@@ -2734,22 +3143,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Deals {0}% more damage.",
+            "args": [
+              "25"
+            ],
             "text": "Deals 25% more damage."
           },
           {
             "star": 2,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "40"
+            ],
             "text": "Bonus damage is increased to 40%."
           },
           {
             "star": 3,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "75"
+            ],
             "text": "Bonus damage is increased to 75%."
           },
           {
             "star": 4,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "105"
+            ],
             "text": "Bonus damage is increased to 105%."
           },
           {
             "star": 5,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "155"
+            ],
             "text": "Bonus damage is increased to 155%."
           }
         ],
@@ -2763,6 +3192,8 @@ const HEROES_DATA = [
         "name": "Multiple Loading",
         "name_in_client": true,
         "effect_type": "Physical DMG",
+        "effect_type_source": "Physical DMG",
+        "is_pve_only": false,
         "cooldown_s": 9.3,
         "cooldown_ms": 9000,
         "cooldown": "9.3s",
@@ -2840,22 +3271,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Deals {0}% more damage.",
+            "args": [
+              "25"
+            ],
             "text": "Deals 25% more damage."
           },
           {
             "star": 2,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "40"
+            ],
             "text": "Bonus damage is increased to 40%."
           },
           {
             "star": 3,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "75"
+            ],
             "text": "Bonus damage is increased to 75%."
           },
           {
             "star": 4,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "105"
+            ],
             "text": "Bonus damage is increased to 105%."
           },
           {
             "star": 5,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "155"
+            ],
             "text": "Bonus damage is increased to 155%."
           }
         ],
@@ -2869,6 +3320,8 @@ const HEROES_DATA = [
         "name": "High Pressure Air Pump",
         "name_in_client": true,
         "effect_type": null,
+        "effect_type_source": null,
+        "is_pve_only": false,
         "cooldown_s": 0.0,
         "cooldown_ms": null,
         "cooldown": "Passive",
@@ -2940,22 +3393,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Increases ATK by {0}%.",
+            "args": [
+              "3"
+            ],
             "text": "Increases ATK by 3%."
           },
           {
             "star": 2,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "6"
+            ],
             "text": "Increases bonus effect to 6%."
           },
           {
             "star": 3,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "9"
+            ],
             "text": "Increases bonus effect to 9%."
           },
           {
             "star": 4,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "12"
+            ],
             "text": "Increases bonus effect to 12%."
           },
           {
             "star": 5,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "15"
+            ],
             "text": "Increases bonus effect to 15%."
           }
         ],
@@ -2969,6 +3442,8 @@ const HEROES_DATA = [
         "name": "Wasteland Wanderer",
         "name_in_client": true,
         "effect_type": null,
+        "effect_type_source": null,
+        "is_pve_only": false,
         "cooldown_s": 0.0,
         "cooldown_ms": null,
         "cooldown": "Passive",
@@ -3085,6 +3560,8 @@ const HEROES_DATA = [
         "name": "Liquid Injector",
         "name_in_client": true,
         "effect_type": "Physical DMG",
+        "effect_type_source": "Physical DMG",
+        "is_pve_only": false,
         "cooldown_s": 1.7,
         "cooldown_ms": 1600,
         "cooldown": "1.7s",
@@ -3162,22 +3639,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Deals {0}% more damage.",
+            "args": [
+              "25"
+            ],
             "text": "Deals 25% more damage."
           },
           {
             "star": 2,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "40"
+            ],
             "text": "Bonus damage is increased to 40%."
           },
           {
             "star": 3,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "75"
+            ],
             "text": "Bonus damage is increased to 75%."
           },
           {
             "star": 4,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "105"
+            ],
             "text": "Bonus damage is increased to 105%."
           },
           {
             "star": 5,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "155"
+            ],
             "text": "Bonus damage is increased to 155%."
           }
         ],
@@ -3191,6 +3688,8 @@ const HEROES_DATA = [
         "name": "Venom Burst",
         "name_in_client": true,
         "effect_type": "Debuff",
+        "effect_type_source": "Debuff",
+        "is_pve_only": false,
         "cooldown_s": 9.3,
         "cooldown_ms": 9000,
         "cooldown": "9.3s",
@@ -3268,22 +3767,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Deals {0}% more damage.",
+            "args": [
+              "25"
+            ],
             "text": "Deals 25% more damage."
           },
           {
             "star": 2,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "40"
+            ],
             "text": "Bonus damage is increased to 40%."
           },
           {
             "star": 3,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "75"
+            ],
             "text": "Bonus damage is increased to 75%."
           },
           {
             "star": 4,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "105"
+            ],
             "text": "Bonus damage is increased to 105%."
           },
           {
             "star": 5,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "155"
+            ],
             "text": "Bonus damage is increased to 155%."
           }
         ],
@@ -3298,6 +3817,8 @@ const HEROES_DATA = [
         "name": "Nimble Steps",
         "name_in_client": true,
         "effect_type": null,
+        "effect_type_source": null,
+        "is_pve_only": true,
         "cooldown_s": 0.0,
         "cooldown_ms": null,
         "cooldown": "Passive",
@@ -3369,22 +3890,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Takes {0}% less damage from monsters.",
+            "args": [
+              "3"
+            ],
             "text": "Takes 3% less damage from monsters."
           },
           {
             "star": 2,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "6"
+            ],
             "text": "Increases bonus effect to 6%."
           },
           {
             "star": 3,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "9"
+            ],
             "text": "Increases bonus effect to 9%."
           },
           {
             "star": 4,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "12"
+            ],
             "text": "Increases bonus effect to 12%."
           },
           {
             "star": 5,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "15"
+            ],
             "text": "Increases bonus effect to 15%."
           }
         ],
@@ -3398,6 +3939,8 @@ const HEROES_DATA = [
         "name": "Wasteland Wanderer",
         "name_in_client": true,
         "effect_type": null,
+        "effect_type_source": null,
+        "is_pve_only": false,
         "cooldown_s": 0.0,
         "cooldown_ms": null,
         "cooldown": "Passive",
@@ -3514,6 +4057,8 @@ const HEROES_DATA = [
         "name": "Automatic Rifle",
         "name_in_client": true,
         "effect_type": "Physical DMG",
+        "effect_type_source": "Physical DMG",
+        "is_pve_only": false,
         "cooldown_s": 1.4,
         "cooldown_ms": 1100,
         "cooldown": "1.4s",
@@ -3591,22 +4136,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Deals {0}% more damage.",
+            "args": [
+              "25"
+            ],
             "text": "Deals 25% more damage."
           },
           {
             "star": 2,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "40"
+            ],
             "text": "Bonus damage is increased to 40%."
           },
           {
             "star": 3,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "75"
+            ],
             "text": "Bonus damage is increased to 75%."
           },
           {
             "star": 4,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "105"
+            ],
             "text": "Bonus damage is increased to 105%."
           },
           {
             "star": 5,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "155"
+            ],
             "text": "Bonus damage is increased to 155%."
           }
         ],
@@ -3620,6 +4185,8 @@ const HEROES_DATA = [
         "name": "Unload Magazine",
         "name_in_client": true,
         "effect_type": "Physical DMG",
+        "effect_type_source": "Physical DMG",
+        "is_pve_only": false,
         "cooldown_s": 9.1,
         "cooldown_ms": 9000,
         "cooldown": "9.1s",
@@ -3697,22 +4264,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Deals {0}% more damage.",
+            "args": [
+              "25"
+            ],
             "text": "Deals 25% more damage."
           },
           {
             "star": 2,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "40"
+            ],
             "text": "Bonus damage is increased to 40%."
           },
           {
             "star": 3,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "75"
+            ],
             "text": "Bonus damage is increased to 75%."
           },
           {
             "star": 4,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "105"
+            ],
             "text": "Bonus damage is increased to 105%."
           },
           {
             "star": 5,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "155"
+            ],
             "text": "Bonus damage is increased to 155%."
           }
         ],
@@ -3726,6 +4313,8 @@ const HEROES_DATA = [
         "name": "Zombie Hunter",
         "name_in_client": true,
         "effect_type": null,
+        "effect_type_source": null,
+        "is_pve_only": true,
         "cooldown_s": 0.0,
         "cooldown_ms": null,
         "cooldown": "Passive",
@@ -3797,22 +4386,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Deals {0}% more damage to monsters.",
+            "args": [
+              "2"
+            ],
             "text": "Deals 2% more damage to monsters."
           },
           {
             "star": 2,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "4"
+            ],
             "text": "Increases bonus effect to 4%."
           },
           {
             "star": 3,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "6"
+            ],
             "text": "Increases bonus effect to 6%."
           },
           {
             "star": 4,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "8"
+            ],
             "text": "Increases bonus effect to 8%."
           },
           {
             "star": 5,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "10"
+            ],
             "text": "Increases bonus effect to 10%."
           }
         ],
@@ -3826,6 +4435,8 @@ const HEROES_DATA = [
         "name": "Wasteland Wanderer",
         "name_in_client": true,
         "effect_type": null,
+        "effect_type_source": null,
+        "is_pve_only": false,
         "cooldown_s": 0.0,
         "cooldown_ms": null,
         "cooldown": "Passive",
@@ -3942,6 +4553,8 @@ const HEROES_DATA = [
         "name": "Rocket Launcher",
         "name_in_client": true,
         "effect_type": "Radiation DMG",
+        "effect_type_source": "Radiation DMG",
+        "is_pve_only": false,
         "cooldown_s": 1.2,
         "cooldown_ms": 1000,
         "cooldown": "1.2s",
@@ -4019,22 +4632,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Deals {0}% more damage.",
+            "args": [
+              "25"
+            ],
             "text": "Deals 25% more damage."
           },
           {
             "star": 2,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "40"
+            ],
             "text": "Bonus damage is increased to 40%."
           },
           {
             "star": 3,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "75"
+            ],
             "text": "Bonus damage is increased to 75%."
           },
           {
             "star": 4,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "105"
+            ],
             "text": "Bonus damage is increased to 105%."
           },
           {
             "star": 5,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "155"
+            ],
             "text": "Bonus damage is increased to 155%."
           }
         ],
@@ -4048,6 +4681,8 @@ const HEROES_DATA = [
         "name": "White Phosphorus Munition",
         "name_in_client": true,
         "effect_type": "Radiation DMG",
+        "effect_type_source": "Radiation DMG",
+        "is_pve_only": false,
         "cooldown_s": 9.2,
         "cooldown_ms": 9000,
         "cooldown": "9.2s",
@@ -4125,22 +4760,43 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Deals {0}% more damage.",
+            "args": [
+              "20"
+            ],
             "text": "Deals 20% more damage."
           },
           {
             "star": 2,
+            "template": "Reduces target's DEF by {0}% for {1}s.",
+            "args": [
+              "10",
+              "6"
+            ],
             "text": "Reduces target's DEF by 10% for 6s."
           },
           {
             "star": 3,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "45"
+            ],
             "text": "Bonus damage is increased to 45%."
           },
           {
             "star": 4,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "15"
+            ],
             "text": "Increases bonus effect to 15%."
           },
           {
             "star": 5,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "70"
+            ],
             "text": "Bonus damage is increased to 70%."
           }
         ],
@@ -4154,6 +4810,8 @@ const HEROES_DATA = [
         "name": "Disciple",
         "name_in_client": true,
         "effect_type": null,
+        "effect_type_source": null,
+        "is_pve_only": false,
         "cooldown_s": 0.0,
         "cooldown_ms": null,
         "cooldown": "Passive",
@@ -4225,22 +4883,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Increases ATK by {0}%.",
+            "args": [
+              "3"
+            ],
             "text": "Increases ATK by 3%."
           },
           {
             "star": 2,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "6"
+            ],
             "text": "Increases bonus effect to 6%."
           },
           {
             "star": 3,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "9"
+            ],
             "text": "Increases bonus effect to 9%."
           },
           {
             "star": 4,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "12"
+            ],
             "text": "Increases bonus effect to 12%."
           },
           {
             "star": 5,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "15"
+            ],
             "text": "Increases bonus effect to 15%."
           }
         ],
@@ -4254,6 +4932,8 @@ const HEROES_DATA = [
         "name": "Wasteland Wanderer",
         "name_in_client": true,
         "effect_type": null,
+        "effect_type_source": null,
+        "is_pve_only": false,
         "cooldown_s": 0.0,
         "cooldown_ms": null,
         "cooldown": "Passive",
@@ -4370,6 +5050,8 @@ const HEROES_DATA = [
         "name": "Dual Pistols",
         "name_in_client": true,
         "effect_type": "Physical DMG",
+        "effect_type_source": "Physical DMG",
+        "is_pve_only": false,
         "cooldown_s": 1.3,
         "cooldown_ms": 1550,
         "cooldown": "1.3s",
@@ -4447,22 +5129,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Deals {0}% more damage.",
+            "args": [
+              "25"
+            ],
             "text": "Deals 25% more damage."
           },
           {
             "star": 2,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "40"
+            ],
             "text": "Bonus damage is increased to 40%."
           },
           {
             "star": 3,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "75"
+            ],
             "text": "Bonus damage is increased to 75%."
           },
           {
             "star": 4,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "105"
+            ],
             "text": "Bonus damage is increased to 105%."
           },
           {
             "star": 5,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "155"
+            ],
             "text": "Bonus damage is increased to 155%."
           }
         ],
@@ -4476,6 +5178,8 @@ const HEROES_DATA = [
         "name": "Frag Grenade",
         "name_in_client": true,
         "effect_type": "Physical DMG",
+        "effect_type_source": "Physical DMG",
+        "is_pve_only": false,
         "cooldown_s": 9.1,
         "cooldown_ms": 9000,
         "cooldown": "9.1s",
@@ -4553,22 +5257,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Deals {0}% more damage.",
+            "args": [
+              "20"
+            ],
             "text": "Deals 20% more damage."
           },
           {
             "star": 2,
+            "template": "Increases the number of attacks to {0}.",
+            "args": [
+              "7"
+            ],
             "text": "Increases the number of attacks to 7."
           },
           {
             "star": 3,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "45"
+            ],
             "text": "Bonus damage is increased to 45%."
           },
           {
             "star": 4,
+            "template": "Increases the number of attacks to {0}.",
+            "args": [
+              "9"
+            ],
             "text": "Increases the number of attacks to 9."
           },
           {
             "star": 5,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "70"
+            ],
             "text": "Bonus damage is increased to 70%."
           }
         ],
@@ -4582,6 +5306,8 @@ const HEROES_DATA = [
         "name": "Martial Arts Family",
         "name_in_client": true,
         "effect_type": null,
+        "effect_type_source": null,
+        "is_pve_only": true,
         "cooldown_s": 0.0,
         "cooldown_ms": null,
         "cooldown": "Passive",
@@ -4653,22 +5379,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Deals {0}% more damage to monsters.",
+            "args": [
+              "3"
+            ],
             "text": "Deals 3% more damage to monsters."
           },
           {
             "star": 2,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "6"
+            ],
             "text": "Increases bonus effect to 6%."
           },
           {
             "star": 3,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "9"
+            ],
             "text": "Increases bonus effect to 9%."
           },
           {
             "star": 4,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "12"
+            ],
             "text": "Increases bonus effect to 12%."
           },
           {
             "star": 5,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "15"
+            ],
             "text": "Increases bonus effect to 15%."
           }
         ],
@@ -4682,6 +5428,8 @@ const HEROES_DATA = [
         "name": "Wasteland Wanderer",
         "name_in_client": true,
         "effect_type": null,
+        "effect_type_source": null,
+        "is_pve_only": false,
         "cooldown_s": 0.0,
         "cooldown_ms": null,
         "cooldown": "Passive",
@@ -4798,6 +5546,8 @@ const HEROES_DATA = [
         "name": "Tactical Sniper Rifle",
         "name_in_client": true,
         "effect_type": "Radiation DMG",
+        "effect_type_source": "Radiation DMG",
+        "is_pve_only": false,
         "cooldown_s": 1.65,
         "cooldown_ms": 1550,
         "cooldown": "1.65s",
@@ -4879,22 +5629,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Deals {0}% more damage.",
+            "args": [
+              "35"
+            ],
             "text": "Deals 35% more damage."
           },
           {
             "star": 2,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "75"
+            ],
             "text": "Bonus damage is increased to 75%."
           },
           {
             "star": 3,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "130"
+            ],
             "text": "Bonus damage is increased to 130%."
           },
           {
             "star": 4,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "185"
+            ],
             "text": "Bonus damage is increased to 185%."
           },
           {
             "star": 5,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "270"
+            ],
             "text": "Bonus damage is increased to 270%."
           }
         ],
@@ -4908,6 +5678,8 @@ const HEROES_DATA = [
         "name": "Strong Reinforcement",
         "name_in_client": true,
         "effect_type": "Radiation DMG",
+        "effect_type_source": "Radiation DMG",
+        "is_pve_only": false,
         "cooldown_s": 10.3,
         "cooldown_ms": 10000,
         "cooldown": "10.3s",
@@ -4992,22 +5764,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Deals {0}% more damage.",
+            "args": [
+              "30"
+            ],
             "text": "Deals 30% more damage."
           },
           {
             "star": 2,
+            "template": "Increases the number of attacks to {0}.",
+            "args": [
+              "12"
+            ],
             "text": "Increases the number of attacks to 12."
           },
           {
             "star": 3,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "75"
+            ],
             "text": "Bonus damage is increased to 75%."
           },
           {
             "star": 4,
+            "template": "Increases the number of attacks to {0}.",
+            "args": [
+              "16"
+            ],
             "text": "Increases the number of attacks to 16."
           },
           {
             "star": 5,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "120"
+            ],
             "text": "Bonus damage is increased to 120%."
           }
         ],
@@ -5021,6 +5813,8 @@ const HEROES_DATA = [
         "name": "Scout",
         "name_in_client": true,
         "effect_type": null,
+        "effect_type_source": null,
+        "is_pve_only": false,
         "cooldown_s": 0.0,
         "cooldown_ms": null,
         "cooldown": "Passive",
@@ -5092,22 +5886,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Increases Radiation DMG by {0}%",
+            "args": [
+              "3"
+            ],
             "text": "Increases Radiation DMG by 3%"
           },
           {
             "star": 2,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "6"
+            ],
             "text": "Increases bonus effect to 6%."
           },
           {
             "star": 3,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "9"
+            ],
             "text": "Increases bonus effect to 9%."
           },
           {
             "star": 4,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "12"
+            ],
             "text": "Increases bonus effect to 12%."
           },
           {
             "star": 5,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "15"
+            ],
             "text": "Increases bonus effect to 15%."
           }
         ],
@@ -5121,6 +5935,8 @@ const HEROES_DATA = [
         "name": "Doomsday Judgment",
         "name_in_client": true,
         "effect_type": null,
+        "effect_type_source": null,
+        "is_pve_only": false,
         "cooldown_s": 0.0,
         "cooldown_ms": null,
         "cooldown": "Passive",
@@ -5313,6 +6129,8 @@ const HEROES_DATA = [
         "name": "Tactical Grenade",
         "name_in_client": true,
         "effect_type": "Radiation DMG",
+        "effect_type_source": "Radiation DMG",
+        "is_pve_only": false,
         "cooldown_s": 1.75,
         "cooldown_ms": 1000,
         "cooldown": "1.75s",
@@ -5390,22 +6208,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Deals {0}% more damage.",
+            "args": [
+              "25"
+            ],
             "text": "Deals 25% more damage."
           },
           {
             "star": 2,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "40"
+            ],
             "text": "Bonus damage is increased to 40%."
           },
           {
             "star": 3,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "75"
+            ],
             "text": "Bonus damage is increased to 75%."
           },
           {
             "star": 4,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "105"
+            ],
             "text": "Bonus damage is increased to 105%."
           },
           {
             "star": 5,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "155"
+            ],
             "text": "Bonus damage is increased to 155%."
           }
         ],
@@ -5420,6 +6258,8 @@ const HEROES_DATA = [
         "name": "Pincer Tactic",
         "name_in_client": true,
         "effect_type": "Buff",
+        "effect_type_source": "Buff",
+        "is_pve_only": true,
         "cooldown_s": 9.2,
         "cooldown_ms": 9000,
         "cooldown": "9.2s",
@@ -5497,22 +6337,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Increases duration to {0} second(s).",
+            "args": [
+              "8"
+            ],
             "text": "Increases duration to 8 second(s)."
           },
           {
             "star": 2,
+            "template": "Takes {0}% less damage from monsters.",
+            "args": [
+              "2"
+            ],
             "text": "Takes 2% less damage from monsters."
           },
           {
             "star": 3,
+            "template": "Increases duration to {0} second(s).",
+            "args": [
+              "9"
+            ],
             "text": "Increases duration to 9 second(s)."
           },
           {
             "star": 4,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "4"
+            ],
             "text": "Increases bonus effect to 4%."
           },
           {
             "star": 5,
+            "template": "Increases duration to {0} second(s).",
+            "args": [
+              "10"
+            ],
             "text": "Increases duration to 10 second(s)."
           }
         ],
@@ -5527,6 +6387,8 @@ const HEROES_DATA = [
         "name": "Zombie Nemesis",
         "name_in_client": true,
         "effect_type": null,
+        "effect_type_source": null,
+        "is_pve_only": true,
         "cooldown_s": 0.0,
         "cooldown_ms": null,
         "cooldown": "Passive",
@@ -5598,22 +6460,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Takes {0}% less damage from monsters.",
+            "args": [
+              "2"
+            ],
             "text": "Takes 2% less damage from monsters."
           },
           {
             "star": 2,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "4"
+            ],
             "text": "Increases bonus effect to 4%."
           },
           {
             "star": 3,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "6"
+            ],
             "text": "Increases bonus effect to 6%."
           },
           {
             "star": 4,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "8"
+            ],
             "text": "Increases bonus effect to 8%."
           },
           {
             "star": 5,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "10"
+            ],
             "text": "Increases bonus effect to 10%."
           }
         ],
@@ -5627,6 +6509,8 @@ const HEROES_DATA = [
         "name": "Wasteland Wanderer",
         "name_in_client": true,
         "effect_type": null,
+        "effect_type_source": null,
+        "is_pve_only": false,
         "cooldown_s": 0.0,
         "cooldown_ms": null,
         "cooldown": "Passive",
@@ -5744,6 +6628,8 @@ const HEROES_DATA = [
         "name": "Charge Detonator",
         "name_in_client": true,
         "effect_type": "Physical DMG",
+        "effect_type_source": "Physical DMG",
+        "is_pve_only": false,
         "cooldown_s": 1.65,
         "cooldown_ms": 1350,
         "cooldown": "1.65s",
@@ -5821,22 +6707,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Deals {0}% more damage.",
+            "args": [
+              "20"
+            ],
             "text": "Deals 20% more damage."
           },
           {
             "star": 2,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "35"
+            ],
             "text": "Bonus damage is increased to 35%."
           },
           {
             "star": 3,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "55"
+            ],
             "text": "Bonus damage is increased to 55%."
           },
           {
             "star": 4,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "80"
+            ],
             "text": "Bonus damage is increased to 80%."
           },
           {
             "star": 5,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "105"
+            ],
             "text": "Bonus damage is increased to 105%."
           }
         ],
@@ -5850,6 +6756,8 @@ const HEROES_DATA = [
         "name": "Blast Maniac",
         "name_in_client": true,
         "effect_type": "Physical DMG",
+        "effect_type_source": "Physical DMG",
+        "is_pve_only": false,
         "cooldown_s": 10.2,
         "cooldown_ms": 10000,
         "cooldown": "10.2s",
@@ -5927,22 +6835,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Deals {0}% more damage.",
+            "args": [
+              "20"
+            ],
             "text": "Deals 20% more damage."
           },
           {
             "star": 2,
+            "template": "Attacks {0} more target(s), but reduces damage.",
+            "args": [
+              "1"
+            ],
             "text": "Attacks 1 more target(s), but reduces damage."
           },
           {
             "star": 3,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "30"
+            ],
             "text": "Bonus damage is increased to 30%."
           },
           {
             "star": 4,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "55"
+            ],
             "text": "Bonus damage is increased to 55%."
           },
           {
             "star": 5,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "80"
+            ],
             "text": "Bonus damage is increased to 80%."
           }
         ],
@@ -5956,6 +6884,8 @@ const HEROES_DATA = [
         "name": "Survival Expert",
         "name_in_client": true,
         "effect_type": null,
+        "effect_type_source": null,
+        "is_pve_only": false,
         "cooldown_s": 0.0,
         "cooldown_ms": null,
         "cooldown": "Passive",
@@ -6072,6 +7002,8 @@ const HEROES_DATA = [
         "name": "Enhanced Pulse",
         "name_in_client": true,
         "effect_type": "Physical DMG",
+        "effect_type_source": "Physical DMG",
+        "is_pve_only": false,
         "cooldown_s": 1.4,
         "cooldown_ms": 1100,
         "cooldown": "1.4s",
@@ -6149,22 +7081,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Deals {0}% more damage.",
+            "args": [
+              "35"
+            ],
             "text": "Deals 35% more damage."
           },
           {
             "star": 2,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "75"
+            ],
             "text": "Bonus damage is increased to 75%."
           },
           {
             "star": 3,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "125"
+            ],
             "text": "Bonus damage is increased to 125%."
           },
           {
             "star": 4,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "190"
+            ],
             "text": "Bonus damage is increased to 190%."
           },
           {
             "star": 5,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "275"
+            ],
             "text": "Bonus damage is increased to 275%."
           }
         ],
@@ -6178,6 +7130,8 @@ const HEROES_DATA = [
         "name": "Barrage Storm",
         "name_in_client": true,
         "effect_type": "Physical DMG",
+        "effect_type_source": "Physical DMG",
+        "is_pve_only": false,
         "cooldown_s": 9.1,
         "cooldown_ms": 9000,
         "cooldown": "9.1s",
@@ -6255,22 +7209,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Deals {0}% more damage.",
+            "args": [
+              "35"
+            ],
             "text": "Deals 35% more damage."
           },
           {
             "star": 2,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "75"
+            ],
             "text": "Bonus damage is increased to 75%."
           },
           {
             "star": 3,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "125"
+            ],
             "text": "Bonus damage is increased to 125%."
           },
           {
             "star": 4,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "190"
+            ],
             "text": "Bonus damage is increased to 190%."
           },
           {
             "star": 5,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "275"
+            ],
             "text": "Bonus damage is increased to 275%."
           }
         ],
@@ -6284,6 +7258,8 @@ const HEROES_DATA = [
         "name": "Zombie Terminator",
         "name_in_client": true,
         "effect_type": null,
+        "effect_type_source": null,
+        "is_pve_only": true,
         "cooldown_s": 0.0,
         "cooldown_ms": null,
         "cooldown": "Passive",
@@ -6355,22 +7331,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Deals {0}% more damage to monsters.",
+            "args": [
+              "3"
+            ],
             "text": "Deals 3% more damage to monsters."
           },
           {
             "star": 2,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "6"
+            ],
             "text": "Increases bonus effect to 6%."
           },
           {
             "star": 3,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "9"
+            ],
             "text": "Increases bonus effect to 9%."
           },
           {
             "star": 4,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "12"
+            ],
             "text": "Increases bonus effect to 12%."
           },
           {
             "star": 5,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "15"
+            ],
             "text": "Increases bonus effect to 15%."
           }
         ],
@@ -6384,6 +7380,8 @@ const HEROES_DATA = [
         "name": "Doomsday Judgment",
         "name_in_client": true,
         "effect_type": null,
+        "effect_type_source": null,
+        "is_pve_only": false,
         "cooldown_s": 0.0,
         "cooldown_ms": null,
         "cooldown": "Passive",
@@ -6501,6 +7499,8 @@ const HEROES_DATA = [
         "name": "Nail Gun",
         "name_in_client": true,
         "effect_type": "Physical DMG",
+        "effect_type_source": "Physical DMG",
+        "is_pve_only": false,
         "cooldown_s": 1.55,
         "cooldown_ms": 1350,
         "cooldown": "1.55s",
@@ -6578,22 +7578,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Deals {0}% more damage.",
+            "args": [
+              "20"
+            ],
             "text": "Deals 20% more damage."
           },
           {
             "star": 2,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "35"
+            ],
             "text": "Bonus damage is increased to 35%."
           },
           {
             "star": 3,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "55"
+            ],
             "text": "Bonus damage is increased to 55%."
           },
           {
             "star": 4,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "80"
+            ],
             "text": "Bonus damage is increased to 80%."
           },
           {
             "star": 5,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "105"
+            ],
             "text": "Bonus damage is increased to 105%."
           }
         ],
@@ -6607,6 +7627,8 @@ const HEROES_DATA = [
         "name": "Quick Repair",
         "name_in_client": true,
         "effect_type": "Physical DMG",
+        "effect_type_source": "Physical DMG",
+        "is_pve_only": false,
         "cooldown_s": 10.3,
         "cooldown_ms": 10000,
         "cooldown": "10.3s",
@@ -6684,22 +7706,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Deals {0}% more damage.",
+            "args": [
+              "20"
+            ],
             "text": "Deals 20% more damage."
           },
           {
             "star": 2,
+            "template": "Attacks {0} more target(s), but reduces damage.",
+            "args": [
+              "1"
+            ],
             "text": "Attacks 1 more target(s), but reduces damage."
           },
           {
             "star": 3,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "30"
+            ],
             "text": "Bonus damage is increased to 30%."
           },
           {
             "star": 4,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "55"
+            ],
             "text": "Bonus damage is increased to 55%."
           },
           {
             "star": 5,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "80"
+            ],
             "text": "Bonus damage is increased to 80%."
           }
         ],
@@ -6713,6 +7755,8 @@ const HEROES_DATA = [
         "name": "Survival Expert",
         "name_in_client": true,
         "effect_type": null,
+        "effect_type_source": null,
+        "is_pve_only": false,
         "cooldown_s": 0.0,
         "cooldown_ms": null,
         "cooldown": "Passive",
@@ -6829,6 +7873,8 @@ const HEROES_DATA = [
         "name": "Custom Spray Gun",
         "name_in_client": true,
         "effect_type": "Physical DMG",
+        "effect_type_source": "Physical DMG",
+        "is_pve_only": false,
         "cooldown_s": 4.2,
         "cooldown_ms": 4000,
         "cooldown": "4.2s",
@@ -6906,22 +7952,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Deals {0}% more damage.",
+            "args": [
+              "20"
+            ],
             "text": "Deals 20% more damage."
           },
           {
             "star": 2,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "35"
+            ],
             "text": "Bonus damage is increased to 35%."
           },
           {
             "star": 3,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "55"
+            ],
             "text": "Bonus damage is increased to 55%."
           },
           {
             "star": 4,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "80"
+            ],
             "text": "Bonus damage is increased to 80%."
           },
           {
             "star": 5,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "105"
+            ],
             "text": "Bonus damage is increased to 105%."
           }
         ],
@@ -6935,6 +8001,8 @@ const HEROES_DATA = [
         "name": "High Pressure Gas Tank",
         "name_in_client": true,
         "effect_type": "Physical DMG",
+        "effect_type_source": "Physical DMG",
+        "is_pve_only": false,
         "cooldown_s": 10.2,
         "cooldown_ms": 10000,
         "cooldown": "10.2s",
@@ -7012,22 +8080,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Deals {0}% more damage.",
+            "args": [
+              "20"
+            ],
             "text": "Deals 20% more damage."
           },
           {
             "star": 2,
+            "template": "Attacks {0} more target(s), but reduces damage.",
+            "args": [
+              "1"
+            ],
             "text": "Attacks 1 more target(s), but reduces damage."
           },
           {
             "star": 3,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "30"
+            ],
             "text": "Bonus damage is increased to 30%."
           },
           {
             "star": 4,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "55"
+            ],
             "text": "Bonus damage is increased to 55%."
           },
           {
             "star": 5,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "80"
+            ],
             "text": "Bonus damage is increased to 80%."
           }
         ],
@@ -7041,6 +8129,8 @@ const HEROES_DATA = [
         "name": "Survival Expert",
         "name_in_client": true,
         "effect_type": null,
+        "effect_type_source": null,
+        "is_pve_only": false,
         "cooldown_s": 0.0,
         "cooldown_ms": null,
         "cooldown": "Passive",
@@ -7157,6 +8247,8 @@ const HEROES_DATA = [
         "name": "Composite Bow",
         "name_in_client": true,
         "effect_type": "Physical DMG",
+        "effect_type_source": "Physical DMG",
+        "is_pve_only": false,
         "cooldown_s": 1.65,
         "cooldown_ms": 1550,
         "cooldown": "1.65s",
@@ -7234,22 +8326,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Deals {0}% more damage.",
+            "args": [
+              "25"
+            ],
             "text": "Deals 25% more damage."
           },
           {
             "star": 2,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "40"
+            ],
             "text": "Bonus damage is increased to 40%."
           },
           {
             "star": 3,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "75"
+            ],
             "text": "Bonus damage is increased to 75%."
           },
           {
             "star": 4,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "105"
+            ],
             "text": "Bonus damage is increased to 105%."
           },
           {
             "star": 5,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "155"
+            ],
             "text": "Bonus damage is increased to 155%."
           }
         ],
@@ -7263,6 +8375,8 @@ const HEROES_DATA = [
         "name": "Heavy Arrow",
         "name_in_client": true,
         "effect_type": "Physical DMG",
+        "effect_type_source": "Physical DMG",
+        "is_pve_only": false,
         "cooldown_s": 9.3,
         "cooldown_ms": 9000,
         "cooldown": "9.3s",
@@ -7340,22 +8454,43 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Deals {0}% more damage.",
+            "args": [
+              "20"
+            ],
             "text": "Deals 20% more damage."
           },
           {
             "star": 2,
+            "template": "Has a {0}% chance to stun the target for {1}s.",
+            "args": [
+              "50",
+              "1"
+            ],
             "text": "Has a 50% chance to stun the target for 1s."
           },
           {
             "star": 3,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "45"
+            ],
             "text": "Bonus damage is increased to 45%."
           },
           {
             "star": 4,
+            "template": "Increases Stun Chance to {0}%.",
+            "args": [
+              "100"
+            ],
             "text": "Increases Stun Chance to 100%."
           },
           {
             "star": 5,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "70"
+            ],
             "text": "Bonus damage is increased to 70%."
           }
         ],
@@ -7369,6 +8504,8 @@ const HEROES_DATA = [
         "name": "Professional Hunter",
         "name_in_client": true,
         "effect_type": null,
+        "effect_type_source": null,
+        "is_pve_only": true,
         "cooldown_s": 0.0,
         "cooldown_ms": null,
         "cooldown": "Passive",
@@ -7440,22 +8577,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Deals {0}% more damage to monsters.",
+            "args": [
+              "3"
+            ],
             "text": "Deals 3% more damage to monsters."
           },
           {
             "star": 2,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "6"
+            ],
             "text": "Increases bonus effect to 6%."
           },
           {
             "star": 3,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "9"
+            ],
             "text": "Increases bonus effect to 9%."
           },
           {
             "star": 4,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "12"
+            ],
             "text": "Increases bonus effect to 12%."
           },
           {
             "star": 5,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "15"
+            ],
             "text": "Increases bonus effect to 15%."
           }
         ],
@@ -7469,6 +8626,8 @@ const HEROES_DATA = [
         "name": "Wasteland Wanderer",
         "name_in_client": true,
         "effect_type": null,
+        "effect_type_source": null,
+        "is_pve_only": false,
         "cooldown_s": 0.0,
         "cooldown_ms": null,
         "cooldown": "Passive",
@@ -7585,6 +8744,8 @@ const HEROES_DATA = [
         "name": "Modified Grenade",
         "name_in_client": true,
         "effect_type": "Physical DMG",
+        "effect_type_source": "Physical DMG",
+        "is_pve_only": false,
         "cooldown_s": 1.45,
         "cooldown_ms": 1350,
         "cooldown": "1.45s",
@@ -7662,22 +8823,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Deals {0}% more damage.",
+            "args": [
+              "35"
+            ],
             "text": "Deals 35% more damage."
           },
           {
             "star": 2,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "75"
+            ],
             "text": "Bonus damage is increased to 75%."
           },
           {
             "star": 3,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "130"
+            ],
             "text": "Bonus damage is increased to 130%."
           },
           {
             "star": 4,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "190"
+            ],
             "text": "Bonus damage is increased to 190%."
           },
           {
             "star": 5,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "265"
+            ],
             "text": "Bonus damage is increased to 265%."
           }
         ],
@@ -7691,6 +8872,8 @@ const HEROES_DATA = [
         "name": "Iron Will",
         "name_in_client": true,
         "effect_type": "Buff",
+        "effect_type_source": "Buff",
+        "is_pve_only": false,
         "cooldown_s": 10.3,
         "cooldown_ms": 10000,
         "cooldown": "10.3s",
@@ -7768,22 +8951,40 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Increases DEF by {0}%.",
+            "args": [
+              "10"
+            ],
             "text": "Increases DEF by 10%."
           },
           {
             "star": 2,
+            "template": "Increases duration to {0} second(s).",
+            "args": [
+              "8"
+            ],
             "text": "Increases duration to 8 second(s)."
           },
           {
             "star": 3,
+            "template": "Affects all allies.",
+            "args": [],
             "text": "Affects all allies."
           },
           {
             "star": 4,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "20"
+            ],
             "text": "Increases bonus effect to 20%."
           },
           {
             "star": 5,
+            "template": "Increases duration to {0} second(s).",
+            "args": [
+              "10"
+            ],
             "text": "Increases duration to 10 second(s)."
           }
         ],
@@ -7797,6 +8998,8 @@ const HEROES_DATA = [
         "name": "Heavy Armor",
         "name_in_client": true,
         "effect_type": null,
+        "effect_type_source": null,
+        "is_pve_only": false,
         "cooldown_s": 0.0,
         "cooldown_ms": null,
         "cooldown": "Passive",
@@ -7868,22 +9071,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Reduces damage taken by {0}%.",
+            "args": [
+              "3"
+            ],
             "text": "Reduces damage taken by 3%."
           },
           {
             "star": 2,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "6"
+            ],
             "text": "Increases bonus effect to 6%."
           },
           {
             "star": 3,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "9"
+            ],
             "text": "Increases bonus effect to 9%."
           },
           {
             "star": 4,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "12"
+            ],
             "text": "Increases bonus effect to 12%."
           },
           {
             "star": 5,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "15"
+            ],
             "text": "Increases bonus effect to 15%."
           }
         ],
@@ -7897,6 +9120,8 @@ const HEROES_DATA = [
         "name": "Doomsday Judgment",
         "name_in_client": true,
         "effect_type": null,
+        "effect_type_source": null,
+        "is_pve_only": false,
         "cooldown_s": 0.0,
         "cooldown_ms": null,
         "cooldown": "Passive",
@@ -8013,6 +9238,8 @@ const HEROES_DATA = [
         "name": "Heavy Revolver",
         "name_in_client": true,
         "effect_type": "Radiation DMG",
+        "effect_type_source": "Radiation DMG",
+        "is_pve_only": false,
         "cooldown_s": 1.35,
         "cooldown_ms": 1250,
         "cooldown": "1.35s",
@@ -8090,22 +9317,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Deals {0}% more damage.",
+            "args": [
+              "35"
+            ],
             "text": "Deals 35% more damage."
           },
           {
             "star": 2,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "75"
+            ],
             "text": "Bonus damage is increased to 75%."
           },
           {
             "star": 3,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "130"
+            ],
             "text": "Bonus damage is increased to 130%."
           },
           {
             "star": 4,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "190"
+            ],
             "text": "Bonus damage is increased to 190%."
           },
           {
             "star": 5,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "265"
+            ],
             "text": "Bonus damage is increased to 265%."
           }
         ],
@@ -8119,6 +9366,8 @@ const HEROES_DATA = [
         "name": "Hawkeye",
         "name_in_client": true,
         "effect_type": "Buff",
+        "effect_type_source": "Buff",
+        "is_pve_only": false,
         "cooldown_s": 12.3,
         "cooldown_ms": 12000,
         "cooldown": "12.3s",
@@ -8196,22 +9445,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Increases duration to {0} second(s).",
+            "args": [
+              "7"
+            ],
             "text": "Increases duration to 7 second(s)."
           },
           {
             "star": 2,
+            "template": "Increases Crit Rate by {0}%.",
+            "args": [
+              "10"
+            ],
             "text": "Increases Crit Rate by 10%."
           },
           {
             "star": 3,
+            "template": "Increases ATK by {0}%.",
+            "args": [
+              "3"
+            ],
             "text": "Increases ATK by 3%."
           },
           {
             "star": 4,
+            "template": "Increases duration to {0} second(s).",
+            "args": [
+              "8"
+            ],
             "text": "Increases duration to 8 second(s)."
           },
           {
             "star": 5,
+            "template": "Increases ATK Boost to {0}%.",
+            "args": [
+              "6"
+            ],
             "text": "Increases ATK Boost to 6%."
           }
         ],
@@ -8225,6 +9494,8 @@ const HEROES_DATA = [
         "name": "Sheriff",
         "name_in_client": true,
         "effect_type": null,
+        "effect_type_source": null,
+        "is_pve_only": false,
         "cooldown_s": 0.0,
         "cooldown_ms": null,
         "cooldown": "Passive",
@@ -8296,22 +9567,43 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Increases Skill Cooldown by {0}% and reduces incoming damage by {1}%.",
+            "args": [
+              "3",
+              "1"
+            ],
             "text": "Increases Skill Cooldown by 3% and reduces incoming damage by 1%."
           },
           {
             "star": 2,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "6% and 2"
+            ],
             "text": "Increases bonus effect to 6% and 2%."
           },
           {
             "star": 3,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "9% and 3"
+            ],
             "text": "Increases bonus effect to 9% and 3%."
           },
           {
             "star": 4,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "12% and 4"
+            ],
             "text": "Increases bonus effect to 12% and 4%."
           },
           {
             "star": 5,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "15% and 5"
+            ],
             "text": "Increases bonus effect to 15% and 5%."
           }
         ],
@@ -8325,6 +9617,8 @@ const HEROES_DATA = [
         "name": "Doomsday Judgment",
         "name_in_client": true,
         "effect_type": null,
+        "effect_type_source": null,
+        "is_pve_only": false,
         "cooldown_s": 0.0,
         "cooldown_ms": null,
         "cooldown": "Passive",
@@ -8443,6 +9737,8 @@ const HEROES_DATA = [
         "name": "Stun Gun",
         "name_in_client": true,
         "effect_type": "Radiation DMG",
+        "effect_type_source": "Radiation DMG",
+        "is_pve_only": false,
         "cooldown_s": 1.55,
         "cooldown_ms": 1450,
         "cooldown": "1.55s",
@@ -8520,22 +9816,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Deals {0}% more damage.",
+            "args": [
+              "35"
+            ],
             "text": "Deals 35% more damage."
           },
           {
             "star": 2,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "75"
+            ],
             "text": "Bonus damage is increased to 75%."
           },
           {
             "star": 3,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "130"
+            ],
             "text": "Bonus damage is increased to 130%."
           },
           {
             "star": 4,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "190"
+            ],
             "text": "Bonus damage is increased to 190%."
           },
           {
             "star": 5,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "265"
+            ],
             "text": "Bonus damage is increased to 265%."
           }
         ],
@@ -8549,6 +9865,8 @@ const HEROES_DATA = [
         "name": "Tesla Coil",
         "name_in_client": true,
         "effect_type": "Radiation DMG",
+        "effect_type_source": "Radiation DMG",
+        "is_pve_only": false,
         "cooldown_s": 10.1,
         "cooldown_ms": 10000,
         "cooldown": "10.1s",
@@ -8626,22 +9944,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Deals {0}% more damage.",
+            "args": [
+              "35"
+            ],
             "text": "Deals 35% more damage."
           },
           {
             "star": 2,
+            "template": "Increases the number of attacks to {0}.",
+            "args": [
+              "4"
+            ],
             "text": "Increases the number of attacks to 4."
           },
           {
             "star": 3,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "70"
+            ],
             "text": "Bonus damage is increased to 70%."
           },
           {
             "star": 4,
+            "template": "Increases the number of attacks to {0}.",
+            "args": [
+              "5"
+            ],
             "text": "Increases the number of attacks to 5."
           },
           {
             "star": 5,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "120"
+            ],
             "text": "Bonus damage is increased to 120%."
           }
         ],
@@ -8655,6 +9993,8 @@ const HEROES_DATA = [
         "name": "Frankenstein",
         "name_in_client": true,
         "effect_type": null,
+        "effect_type_source": null,
+        "is_pve_only": false,
         "cooldown_s": 0.0,
         "cooldown_ms": null,
         "cooldown": "Passive",
@@ -8726,22 +10066,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Increases Crit Rate by {0}%.",
+            "args": [
+              "3"
+            ],
             "text": "Increases Crit Rate by 3%."
           },
           {
             "star": 2,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "6"
+            ],
             "text": "Increases bonus effect to 6%."
           },
           {
             "star": 3,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "9"
+            ],
             "text": "Increases bonus effect to 9%."
           },
           {
             "star": 4,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "12"
+            ],
             "text": "Increases bonus effect to 12%."
           },
           {
             "star": 5,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "15"
+            ],
             "text": "Increases bonus effect to 15%."
           }
         ],
@@ -8755,6 +10115,8 @@ const HEROES_DATA = [
         "name": "Doomsday Judgment",
         "name_in_client": true,
         "effect_type": null,
+        "effect_type_source": null,
+        "is_pve_only": false,
         "cooldown_s": 0.0,
         "cooldown_ms": null,
         "cooldown": "Passive",
@@ -8871,6 +10233,8 @@ const HEROES_DATA = [
         "name": "Tactical Submachine Gun",
         "name_in_client": true,
         "effect_type": "Physical DMG",
+        "effect_type_source": "Physical DMG",
+        "is_pve_only": false,
         "cooldown_s": 1.08,
         "cooldown_ms": 1000,
         "cooldown": "1.08s",
@@ -8948,22 +10312,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Deals {0}% more damage.",
+            "args": [
+              "35"
+            ],
             "text": "Deals 35% more damage."
           },
           {
             "star": 2,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "75"
+            ],
             "text": "Bonus damage is increased to 75%."
           },
           {
             "star": 3,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "130"
+            ],
             "text": "Bonus damage is increased to 130%."
           },
           {
             "star": 4,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "190"
+            ],
             "text": "Bonus damage is increased to 190%."
           },
           {
             "star": 5,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "265"
+            ],
             "text": "Bonus damage is increased to 265%."
           }
         ],
@@ -8977,6 +10361,8 @@ const HEROES_DATA = [
         "name": "Sonic Boom",
         "name_in_client": true,
         "effect_type": "Debuff",
+        "effect_type_source": "Debuff",
+        "is_pve_only": false,
         "cooldown_s": 10.3,
         "cooldown_ms": 10000,
         "cooldown": "10.3s",
@@ -9054,22 +10440,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Deals {0}% more damage.",
+            "args": [
+              "35"
+            ],
             "text": "Deals 35% more damage."
           },
           {
             "star": 2,
+            "template": "Reduces Radiation DMG by {0}%",
+            "args": [
+              "3"
+            ],
             "text": "Reduces Radiation DMG by 3%"
           },
           {
             "star": 3,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "70"
+            ],
             "text": "Bonus damage is increased to 70%."
           },
           {
             "star": 4,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "6"
+            ],
             "text": "Increases bonus effect to 6%."
           },
           {
             "star": 5,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "120"
+            ],
             "text": "Bonus damage is increased to 120%."
           }
         ],
@@ -9084,6 +10490,8 @@ const HEROES_DATA = [
         "name": "Ion Shield",
         "name_in_client": true,
         "effect_type": null,
+        "effect_type_source": null,
+        "is_pve_only": false,
         "cooldown_s": 0.0,
         "cooldown_ms": null,
         "cooldown": "Passive",
@@ -9155,22 +10563,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Reduces incoming Radiation DMG by {0}%",
+            "args": [
+              "4"
+            ],
             "text": "Reduces incoming Radiation DMG by 4%"
           },
           {
             "star": 2,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "8"
+            ],
             "text": "Increases bonus effect to 8%."
           },
           {
             "star": 3,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "12"
+            ],
             "text": "Increases bonus effect to 12%."
           },
           {
             "star": 4,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "16"
+            ],
             "text": "Increases bonus effect to 16%."
           },
           {
             "star": 5,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "20"
+            ],
             "text": "Increases bonus effect to 20%."
           }
         ],
@@ -9184,6 +10612,8 @@ const HEROES_DATA = [
         "name": "Doomsday Judgment",
         "name_in_client": true,
         "effect_type": null,
+        "effect_type_source": null,
+        "is_pve_only": false,
         "cooldown_s": 0.0,
         "cooldown_ms": null,
         "cooldown": "Passive",
@@ -9301,6 +10731,8 @@ const HEROES_DATA = [
         "name": "Light Submachine Gun",
         "name_in_client": true,
         "effect_type": "Physical DMG",
+        "effect_type_source": "Physical DMG",
+        "is_pve_only": false,
         "cooldown_s": 1.08,
         "cooldown_ms": 1000,
         "cooldown": "1.08s",
@@ -9378,22 +10810,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Deals {0}% more damage.",
+            "args": [
+              "35"
+            ],
             "text": "Deals 35% more damage."
           },
           {
             "star": 2,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "75"
+            ],
             "text": "Bonus damage is increased to 75%."
           },
           {
             "star": 3,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "130"
+            ],
             "text": "Bonus damage is increased to 130%."
           },
           {
             "star": 4,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "190"
+            ],
             "text": "Bonus damage is increased to 190%."
           },
           {
             "star": 5,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "265"
+            ],
             "text": "Bonus damage is increased to 265%."
           }
         ],
@@ -9407,6 +10859,8 @@ const HEROES_DATA = [
         "name": "Magnetic Coil",
         "name_in_client": true,
         "effect_type": "Energy DEF",
+        "effect_type_source": "Energy DEF",
+        "is_pve_only": false,
         "cooldown_s": 10.1,
         "cooldown_ms": 10000,
         "cooldown": "10.1s",
@@ -9484,22 +10938,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Increases duration to {0} second(s).",
+            "args": [
+              "6"
+            ],
             "text": "Increases duration to 6 second(s)."
           },
           {
             "star": 2,
+            "template": "Reduces Radiation DMG taken by {0}% for tactical allies",
+            "args": [
+              "7"
+            ],
             "text": "Reduces Radiation DMG taken by 7% for tactical allies"
           },
           {
             "star": 3,
+            "template": "Increases duration to {0} second(s).",
+            "args": [
+              "7"
+            ],
             "text": "Increases duration to 7 second(s)."
           },
           {
             "star": 4,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "15"
+            ],
             "text": "Increases bonus effect to 15%."
           },
           {
             "star": 5,
+            "template": "Increases duration to {0} second(s).",
+            "args": [
+              "8"
+            ],
             "text": "Increases duration to 8 second(s)."
           }
         ],
@@ -9513,6 +10987,8 @@ const HEROES_DATA = [
         "name": "Magnetic Armor",
         "name_in_client": true,
         "effect_type": null,
+        "effect_type_source": null,
+        "is_pve_only": false,
         "cooldown_s": 0.0,
         "cooldown_ms": null,
         "cooldown": "Passive",
@@ -9584,22 +11060,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Reduces damage taken by {0}%.",
+            "args": [
+              "1.5"
+            ],
             "text": "Reduces damage taken by 1.5%."
           },
           {
             "star": 2,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "3"
+            ],
             "text": "Increases bonus effect to 3%."
           },
           {
             "star": 3,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "4.5"
+            ],
             "text": "Increases bonus effect to 4.5%."
           },
           {
             "star": 4,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "6"
+            ],
             "text": "Increases bonus effect to 6%."
           },
           {
             "star": 5,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "7.5"
+            ],
             "text": "Increases bonus effect to 7.5%."
           }
         ],
@@ -9613,6 +11109,8 @@ const HEROES_DATA = [
         "name": "Doomsday Judgment",
         "name_in_client": true,
         "effect_type": null,
+        "effect_type_source": null,
+        "is_pve_only": false,
         "cooldown_s": 0.0,
         "cooldown_ms": null,
         "cooldown": "Passive",
@@ -9729,6 +11227,8 @@ const HEROES_DATA = [
         "name": "Rapid-Fire Sniper Rifle",
         "name_in_client": true,
         "effect_type": "Radiation DMG",
+        "effect_type_source": "Radiation DMG",
+        "is_pve_only": false,
         "cooldown_s": 1.45,
         "cooldown_ms": 1350,
         "cooldown": "1.45s",
@@ -9810,22 +11310,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Deals {0}% more damage.",
+            "args": [
+              "35"
+            ],
             "text": "Deals 35% more damage."
           },
           {
             "star": 2,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "75"
+            ],
             "text": "Bonus damage is increased to 75%."
           },
           {
             "star": 3,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "130"
+            ],
             "text": "Bonus damage is increased to 130%."
           },
           {
             "star": 4,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "190"
+            ],
             "text": "Bonus damage is increased to 190%."
           },
           {
             "star": 5,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "265"
+            ],
             "text": "Bonus damage is increased to 265%."
           }
         ],
@@ -9839,6 +11359,8 @@ const HEROES_DATA = [
         "name": "Black Hawk Call",
         "name_in_client": true,
         "effect_type": "Radiation DMG",
+        "effect_type_source": "Radiation DMG",
+        "is_pve_only": false,
         "cooldown_s": 10.2,
         "cooldown_ms": 10000,
         "cooldown": "10.2s",
@@ -9920,22 +11442,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Deals {0}% more damage.",
+            "args": [
+              "35"
+            ],
             "text": "Deals 35% more damage."
           },
           {
             "star": 2,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "75"
+            ],
             "text": "Bonus damage is increased to 75%."
           },
           {
             "star": 3,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "130"
+            ],
             "text": "Bonus damage is increased to 130%."
           },
           {
             "star": 4,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "185"
+            ],
             "text": "Bonus damage is increased to 185%."
           },
           {
             "star": 5,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "265"
+            ],
             "text": "Bonus damage is increased to 265%."
           }
         ],
@@ -9949,6 +11491,8 @@ const HEROES_DATA = [
         "name": "Box Breathing",
         "name_in_client": true,
         "effect_type": null,
+        "effect_type_source": null,
+        "is_pve_only": false,
         "cooldown_s": 0.0,
         "cooldown_ms": null,
         "cooldown": "Passive",
@@ -10020,22 +11564,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Increases Crit Rate by {0}%.",
+            "args": [
+              "3"
+            ],
             "text": "Increases Crit Rate by 3%."
           },
           {
             "star": 2,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "6"
+            ],
             "text": "Increases bonus effect to 6%."
           },
           {
             "star": 3,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "9"
+            ],
             "text": "Increases bonus effect to 9%."
           },
           {
             "star": 4,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "12"
+            ],
             "text": "Increases bonus effect to 12%."
           },
           {
             "star": 5,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "15"
+            ],
             "text": "Increases bonus effect to 15%."
           }
         ],
@@ -10049,6 +11613,8 @@ const HEROES_DATA = [
         "name": "Doomsday Judgment",
         "name_in_client": true,
         "effect_type": null,
+        "effect_type_source": null,
+        "is_pve_only": false,
         "cooldown_s": 0.0,
         "cooldown_ms": null,
         "cooldown": "Passive",
@@ -10244,6 +11810,8 @@ const HEROES_DATA = [
         "name": "Powered Submachine Gun",
         "name_in_client": true,
         "effect_type": "Radiation DMG",
+        "effect_type_source": "Radiation DMG",
+        "is_pve_only": false,
         "cooldown_s": 1.08,
         "cooldown_ms": 1000,
         "cooldown": "1.08s",
@@ -10321,22 +11889,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Deals {0}% more damage.",
+            "args": [
+              "35"
+            ],
             "text": "Deals 35% more damage."
           },
           {
             "star": 2,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "75"
+            ],
             "text": "Bonus damage is increased to 75%."
           },
           {
             "star": 3,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "130"
+            ],
             "text": "Bonus damage is increased to 130%."
           },
           {
             "star": 4,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "190"
+            ],
             "text": "Bonus damage is increased to 190%."
           },
           {
             "star": 5,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "265"
+            ],
             "text": "Bonus damage is increased to 265%."
           }
         ],
@@ -10350,6 +11938,8 @@ const HEROES_DATA = [
         "name": "Suicide Robot",
         "name_in_client": true,
         "effect_type": "Radiation DMG",
+        "effect_type_source": "Radiation DMG",
+        "is_pve_only": false,
         "cooldown_s": 10,
         "cooldown_ms": 10000,
         "cooldown": "10s",
@@ -10427,22 +12017,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Deals {0}% more damage.",
+            "args": [
+              "35"
+            ],
             "text": "Deals 35% more damage."
           },
           {
             "star": 2,
+            "template": "Attacks {0} more target(s).",
+            "args": [
+              "1"
+            ],
             "text": "Attacks 1 more target(s)."
           },
           {
             "star": 3,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "70"
+            ],
             "text": "Bonus damage is increased to 70%."
           },
           {
             "star": 4,
+            "template": "Increases the number of attack targets to {0}.",
+            "args": [
+              "3"
+            ],
             "text": "Increases the number of attack targets to 3."
           },
           {
             "star": 5,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "120"
+            ],
             "text": "Bonus damage is increased to 120%."
           }
         ],
@@ -10461,6 +12071,8 @@ const HEROES_DATA = [
         "name": "Overload",
         "name_in_client": true,
         "effect_type": null,
+        "effect_type_source": null,
+        "is_pve_only": false,
         "cooldown_s": 0.0,
         "cooldown_ms": null,
         "cooldown": "Passive",
@@ -10532,22 +12144,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Increases ATK by {0}%.",
+            "args": [
+              "4"
+            ],
             "text": "Increases ATK by 4%."
           },
           {
             "star": 2,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "8"
+            ],
             "text": "Increases bonus effect to 8%."
           },
           {
             "star": 3,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "12"
+            ],
             "text": "Increases bonus effect to 12%."
           },
           {
             "star": 4,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "16"
+            ],
             "text": "Increases bonus effect to 16%."
           },
           {
             "star": 5,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "20"
+            ],
             "text": "Increases bonus effect to 20%."
           }
         ],
@@ -10561,6 +12193,8 @@ const HEROES_DATA = [
         "name": "Doomsday Judgment",
         "name_in_client": true,
         "effect_type": null,
+        "effect_type_source": null,
+        "is_pve_only": false,
         "cooldown_s": 0.0,
         "cooldown_ms": null,
         "cooldown": "Passive",
@@ -10678,6 +12312,8 @@ const HEROES_DATA = [
         "name": "Gatling Gun",
         "name_in_client": true,
         "effect_type": "Physical DMG",
+        "effect_type_source": "Physical DMG",
+        "is_pve_only": false,
         "cooldown_s": 1.08,
         "cooldown_ms": 1000,
         "cooldown": "1.08s",
@@ -10755,22 +12391,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Deals {0}% more damage.",
+            "args": [
+              "35"
+            ],
             "text": "Deals 35% more damage."
           },
           {
             "star": 2,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "75"
+            ],
             "text": "Bonus damage is increased to 75%."
           },
           {
             "star": 3,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "130"
+            ],
             "text": "Bonus damage is increased to 130%."
           },
           {
             "star": 4,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "190"
+            ],
             "text": "Bonus damage is increased to 190%."
           },
           {
             "star": 5,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "265"
+            ],
             "text": "Bonus damage is increased to 265%."
           }
         ],
@@ -10784,6 +12440,8 @@ const HEROES_DATA = [
         "name": "Viper",
         "name_in_client": true,
         "effect_type": "Physical DMG",
+        "effect_type_source": "Physical DMG",
+        "is_pve_only": false,
         "cooldown_s": 10,
         "cooldown_ms": 10000,
         "cooldown": "10s",
@@ -10861,22 +12519,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Deals {0}% more damage.",
+            "args": [
+              "35"
+            ],
             "text": "Deals 35% more damage."
           },
           {
             "star": 2,
+            "template": "Increases the number of attacks to {0}.",
+            "args": [
+              "15"
+            ],
             "text": "Increases the number of attacks to 15."
           },
           {
             "star": 3,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "70"
+            ],
             "text": "Bonus damage is increased to 70%."
           },
           {
             "star": 4,
+            "template": "Increases the number of attacks to {0}.",
+            "args": [
+              "20"
+            ],
             "text": "Increases the number of attacks to 20."
           },
           {
             "star": 5,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "120"
+            ],
             "text": "Bonus damage is increased to 120%."
           }
         ],
@@ -10891,6 +12569,8 @@ const HEROES_DATA = [
         "name": "War Machine",
         "name_in_client": true,
         "effect_type": null,
+        "effect_type_source": null,
+        "is_pve_only": false,
         "cooldown_s": 0.0,
         "cooldown_ms": null,
         "cooldown": "Passive",
@@ -10962,22 +12642,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Increases Physical DMG by {0}%.",
+            "args": [
+              "3"
+            ],
             "text": "Increases Physical DMG by 3%."
           },
           {
             "star": 2,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "6"
+            ],
             "text": "Increases bonus effect to 6%."
           },
           {
             "star": 3,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "9"
+            ],
             "text": "Increases bonus effect to 9%."
           },
           {
             "star": 4,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "12"
+            ],
             "text": "Increases bonus effect to 12%."
           },
           {
             "star": 5,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "15"
+            ],
             "text": "Increases bonus effect to 15%."
           }
         ],
@@ -10991,6 +12691,8 @@ const HEROES_DATA = [
         "name": "Doomsday Judgment",
         "name_in_client": true,
         "effect_type": null,
+        "effect_type_source": null,
+        "is_pve_only": false,
         "cooldown_s": 0.0,
         "cooldown_ms": null,
         "cooldown": "Passive",
@@ -11107,6 +12809,8 @@ const HEROES_DATA = [
         "name": "Pulse Gun",
         "name_in_client": true,
         "effect_type": "Physical DMG",
+        "effect_type_source": "Physical DMG",
+        "is_pve_only": false,
         "cooldown_s": 1.08,
         "cooldown_ms": 1000,
         "cooldown": "1.08s",
@@ -11184,22 +12888,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Deals {0}% more damage.",
+            "args": [
+              "35"
+            ],
             "text": "Deals 35% more damage."
           },
           {
             "star": 2,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "75"
+            ],
             "text": "Bonus damage is increased to 75%."
           },
           {
             "star": 3,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "130"
+            ],
             "text": "Bonus damage is increased to 130%."
           },
           {
             "star": 4,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "190"
+            ],
             "text": "Bonus damage is increased to 190%."
           },
           {
             "star": 5,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "265"
+            ],
             "text": "Bonus damage is increased to 265%."
           }
         ],
@@ -11213,6 +12937,8 @@ const HEROES_DATA = [
         "name": "Portable Sentry",
         "name_in_client": true,
         "effect_type": "Buff",
+        "effect_type_source": "Buff",
+        "is_pve_only": false,
         "cooldown_s": 10,
         "cooldown_ms": 10000,
         "cooldown": "10s",
@@ -11290,22 +13016,40 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Increases duration to {0} second(s).",
+            "args": [
+              "6"
+            ],
             "text": "Increases duration to 6 second(s)."
           },
           {
             "star": 2,
+            "template": "Deals {0}% more Retaliation DMG.",
+            "args": [
+              "15"
+            ],
             "text": "Deals 15% more Retaliation DMG."
           },
           {
             "star": 3,
+            "template": "Increases duration to {0} second(s).",
+            "args": [
+              "7"
+            ],
             "text": "Increases duration to 7 second(s)."
           },
           {
             "star": 4,
+            "template": "Affects front-row allies.",
+            "args": [],
             "text": "Affects front-row allies."
           },
           {
             "star": 5,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "30"
+            ],
             "text": "Bonus damage is increased to 30%."
           }
         ],
@@ -11324,6 +13068,8 @@ const HEROES_DATA = [
         "name": "Sentinel",
         "name_in_client": true,
         "effect_type": null,
+        "effect_type_source": null,
+        "is_pve_only": false,
         "cooldown_s": 0.0,
         "cooldown_ms": null,
         "cooldown": "Passive",
@@ -11395,22 +13141,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Reduces damage taken by {0}%.",
+            "args": [
+              "1.5"
+            ],
             "text": "Reduces damage taken by 1.5%."
           },
           {
             "star": 2,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "3"
+            ],
             "text": "Increases bonus effect to 3%."
           },
           {
             "star": 3,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "4.5"
+            ],
             "text": "Increases bonus effect to 4.5%."
           },
           {
             "star": 4,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "6"
+            ],
             "text": "Increases bonus effect to 6%."
           },
           {
             "star": 5,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "7.5"
+            ],
             "text": "Increases bonus effect to 7.5%."
           }
         ],
@@ -11424,6 +13190,8 @@ const HEROES_DATA = [
         "name": "Doomsday Judgment",
         "name_in_client": true,
         "effect_type": null,
+        "effect_type_source": null,
+        "is_pve_only": false,
         "cooldown_s": 0.0,
         "cooldown_ms": null,
         "cooldown": "Passive",
@@ -11540,6 +13308,8 @@ const HEROES_DATA = [
         "name": "Heavy Machine Gun",
         "name_in_client": true,
         "effect_type": "Physical DMG",
+        "effect_type_source": "Physical DMG",
+        "is_pve_only": false,
         "cooldown_s": 1.45,
         "cooldown_ms": 1350,
         "cooldown": "1.45s",
@@ -11617,22 +13387,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Deals {0}% more damage.",
+            "args": [
+              "35"
+            ],
             "text": "Deals 35% more damage."
           },
           {
             "star": 2,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "75"
+            ],
             "text": "Bonus damage is increased to 75%."
           },
           {
             "star": 3,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "130"
+            ],
             "text": "Bonus damage is increased to 130%."
           },
           {
             "star": 4,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "190"
+            ],
             "text": "Bonus damage is increased to 190%."
           },
           {
             "star": 5,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "265"
+            ],
             "text": "Bonus damage is increased to 265%."
           }
         ],
@@ -11646,6 +13436,8 @@ const HEROES_DATA = [
         "name": "Glaring Taunt",
         "name_in_client": true,
         "effect_type": "Debuff",
+        "effect_type_source": "Debuff",
+        "is_pve_only": false,
         "cooldown_s": 10,
         "cooldown_ms": 10000,
         "cooldown": "10s",
@@ -11723,22 +13515,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Reduces ATK by {0}%.",
+            "args": [
+              "2"
+            ],
             "text": "Reduces ATK by 2%."
           },
           {
             "star": 2,
+            "template": "Increases the number of taunt targets to {0}.",
+            "args": [
+              "3"
+            ],
             "text": "Increases the number of taunt targets to 3."
           },
           {
             "star": 3,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "4"
+            ],
             "text": "Increases bonus effect to 4%."
           },
           {
             "star": 4,
+            "template": "Increases the number of taunt targets to {0}.",
+            "args": [
+              "4"
+            ],
             "text": "Increases the number of taunt targets to 4."
           },
           {
             "star": 5,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "6"
+            ],
             "text": "Increases bonus effect to 6%."
           }
         ],
@@ -11752,6 +13564,8 @@ const HEROES_DATA = [
         "name": "Mountain Ranger",
         "name_in_client": true,
         "effect_type": null,
+        "effect_type_source": null,
+        "is_pve_only": false,
         "cooldown_s": 0.0,
         "cooldown_ms": null,
         "cooldown": "Passive",
@@ -11823,22 +13637,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Reduces damage taken by {0}%.",
+            "args": [
+              "3"
+            ],
             "text": "Reduces damage taken by 3%."
           },
           {
             "star": 2,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "6"
+            ],
             "text": "Increases bonus effect to 6%."
           },
           {
             "star": 3,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "9"
+            ],
             "text": "Increases bonus effect to 9%."
           },
           {
             "star": 4,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "12"
+            ],
             "text": "Increases bonus effect to 12%."
           },
           {
             "star": 5,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "15"
+            ],
             "text": "Increases bonus effect to 15%."
           }
         ],
@@ -11852,6 +13686,8 @@ const HEROES_DATA = [
         "name": "Doomsday Judgment",
         "name_in_client": true,
         "effect_type": null,
+        "effect_type_source": null,
+        "is_pve_only": false,
         "cooldown_s": 0.0,
         "cooldown_ms": null,
         "cooldown": "Passive",
@@ -11968,6 +13804,8 @@ const HEROES_DATA = [
         "name": "Electromagnetic Gun",
         "name_in_client": true,
         "effect_type": "Radiation DMG",
+        "effect_type_source": "Radiation DMG",
+        "is_pve_only": false,
         "cooldown_s": 1.45,
         "cooldown_ms": 1350,
         "cooldown": "1.45s",
@@ -12049,22 +13887,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Deals {0}% more damage.",
+            "args": [
+              "35"
+            ],
             "text": "Deals 35% more damage."
           },
           {
             "star": 2,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "75"
+            ],
             "text": "Bonus damage is increased to 75%."
           },
           {
             "star": 3,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "130"
+            ],
             "text": "Bonus damage is increased to 130%."
           },
           {
             "star": 4,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "190"
+            ],
             "text": "Bonus damage is increased to 190%."
           },
           {
             "star": 5,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "265"
+            ],
             "text": "Bonus damage is increased to 265%."
           }
         ],
@@ -12078,6 +13936,8 @@ const HEROES_DATA = [
         "name": "Condensed Plasma",
         "name_in_client": true,
         "effect_type": "Radiation DMG",
+        "effect_type_source": "Radiation DMG",
+        "is_pve_only": false,
         "cooldown_s": 10.1,
         "cooldown_ms": 10000,
         "cooldown": "10.1s",
@@ -12162,22 +14022,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Deals {0}% more damage.",
+            "args": [
+              "35"
+            ],
             "text": "Deals 35% more damage."
           },
           {
             "star": 2,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "70"
+            ],
             "text": "Bonus damage is increased to 70%."
           },
           {
             "star": 3,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "130"
+            ],
             "text": "Bonus damage is increased to 130%."
           },
           {
             "star": 4,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "190"
+            ],
             "text": "Bonus damage is increased to 190%."
           },
           {
             "star": 5,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "265"
+            ],
             "text": "Bonus damage is increased to 265%."
           }
         ],
@@ -12191,6 +14071,8 @@ const HEROES_DATA = [
         "name": "Torture Specialist",
         "name_in_client": true,
         "effect_type": null,
+        "effect_type_source": null,
+        "is_pve_only": false,
         "cooldown_s": 0.0,
         "cooldown_ms": null,
         "cooldown": "Passive",
@@ -12262,22 +14144,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Increases Radiation DMG by {0}%",
+            "args": [
+              "3"
+            ],
             "text": "Increases Radiation DMG by 3%"
           },
           {
             "star": 2,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "6"
+            ],
             "text": "Increases bonus effect to 6%."
           },
           {
             "star": 3,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "9"
+            ],
             "text": "Increases bonus effect to 9%."
           },
           {
             "star": 4,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "12"
+            ],
             "text": "Increases bonus effect to 12%."
           },
           {
             "star": 5,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "15"
+            ],
             "text": "Increases bonus effect to 15%."
           }
         ],
@@ -12291,6 +14193,8 @@ const HEROES_DATA = [
         "name": "Doomsday Judgment",
         "name_in_client": true,
         "effect_type": null,
+        "effect_type_source": null,
+        "is_pve_only": false,
         "cooldown_s": 0.0,
         "cooldown_ms": null,
         "cooldown": "Passive",
@@ -12482,6 +14386,8 @@ const HEROES_DATA = [
         "name": "Cartridge Submachine Gun",
         "name_in_client": true,
         "effect_type": "Physical DMG",
+        "effect_type_source": "Physical DMG",
+        "is_pve_only": false,
         "cooldown_s": 1.45,
         "cooldown_ms": 1350,
         "cooldown": "1.45s",
@@ -12559,22 +14465,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Deals {0}% more damage.",
+            "args": [
+              "35"
+            ],
             "text": "Deals 35% more damage."
           },
           {
             "star": 2,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "75"
+            ],
             "text": "Bonus damage is increased to 75%."
           },
           {
             "star": 3,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "130"
+            ],
             "text": "Bonus damage is increased to 130%."
           },
           {
             "star": 4,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "190"
+            ],
             "text": "Bonus damage is increased to 190%."
           },
           {
             "star": 5,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "265"
+            ],
             "text": "Bonus damage is increased to 265%."
           }
         ],
@@ -12588,6 +14514,8 @@ const HEROES_DATA = [
         "name": "Clockwork Blade",
         "name_in_client": true,
         "effect_type": "Physical DMG",
+        "effect_type_source": "Physical DMG",
+        "is_pve_only": false,
         "cooldown_s": 10.3,
         "cooldown_ms": 10000,
         "cooldown": "10.3s",
@@ -12665,22 +14593,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Deals {0}% more damage.",
+            "args": [
+              "35"
+            ],
             "text": "Deals 35% more damage."
           },
           {
             "star": 2,
+            "template": "Increases ATK by {0}% (with no stack limit) until the battle ends.",
+            "args": [
+              "5"
+            ],
             "text": "Increases ATK by 5% (with no stack limit) until the battle ends."
           },
           {
             "star": 3,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "70"
+            ],
             "text": "Bonus damage is increased to 70%."
           },
           {
             "star": 4,
+            "template": "Increases ATK by {0}% (with no stack limit) until the battle ends.",
+            "args": [
+              "10"
+            ],
             "text": "Increases ATK by 10% (with no stack limit) until the battle ends."
           },
           {
             "star": 5,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "120"
+            ],
             "text": "Bonus damage is increased to 120%."
           }
         ],
@@ -12694,6 +14642,8 @@ const HEROES_DATA = [
         "name": "Mechanic",
         "name_in_client": true,
         "effect_type": null,
+        "effect_type_source": null,
+        "is_pve_only": false,
         "cooldown_s": 0.0,
         "cooldown_ms": null,
         "cooldown": "Passive",
@@ -12765,22 +14715,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "3"
+            ],
             "text": "Increases bonus effect to 3%."
           },
           {
             "star": 2,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "6"
+            ],
             "text": "Increases bonus effect to 6%."
           },
           {
             "star": 3,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "9"
+            ],
             "text": "Increases bonus effect to 9%."
           },
           {
             "star": 4,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "12"
+            ],
             "text": "Increases bonus effect to 12%."
           },
           {
             "star": 5,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "15"
+            ],
             "text": "Increases bonus effect to 15%."
           }
         ],
@@ -12794,6 +14764,8 @@ const HEROES_DATA = [
         "name": "Doomsday Judgment",
         "name_in_client": true,
         "effect_type": null,
+        "effect_type_source": null,
+        "is_pve_only": false,
         "cooldown_s": 0.0,
         "cooldown_ms": null,
         "cooldown": "Passive",
@@ -12910,6 +14882,8 @@ const HEROES_DATA = [
         "name": "Heavy Pulse Grenade Launcher",
         "name_in_client": true,
         "effect_type": "Physical DMG",
+        "effect_type_source": "Physical DMG",
+        "is_pve_only": false,
         "cooldown_s": 1.45,
         "cooldown_ms": 1350,
         "cooldown": "1.45s",
@@ -12987,22 +14961,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Deals {0}% more damage.",
+            "args": [
+              "35"
+            ],
             "text": "Deals 35% more damage."
           },
           {
             "star": 2,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "75"
+            ],
             "text": "Bonus damage is increased to 75%."
           },
           {
             "star": 3,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "130"
+            ],
             "text": "Bonus damage is increased to 130%."
           },
           {
             "star": 4,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "190"
+            ],
             "text": "Bonus damage is increased to 190%."
           },
           {
             "star": 5,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "265"
+            ],
             "text": "Bonus damage is increased to 265%."
           }
         ],
@@ -13016,6 +15010,8 @@ const HEROES_DATA = [
         "name": "Fine Firepower Net",
         "name_in_client": true,
         "effect_type": "Physical DMG",
+        "effect_type_source": "Physical DMG",
+        "is_pve_only": false,
         "cooldown_s": 10,
         "cooldown_ms": 10000,
         "cooldown": "10s",
@@ -13093,22 +15089,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Deals {0}% more damage.",
+            "args": [
+              "35"
+            ],
             "text": "Deals 35% more damage."
           },
           {
             "star": 2,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "75"
+            ],
             "text": "Bonus damage is increased to 75%."
           },
           {
             "star": 3,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "130"
+            ],
             "text": "Bonus damage is increased to 130%."
           },
           {
             "star": 4,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "190"
+            ],
             "text": "Bonus damage is increased to 190%."
           },
           {
             "star": 5,
+            "template": "Bonus damage is increased to {0}%.",
+            "args": [
+              "265"
+            ],
             "text": "Bonus damage is increased to 265%."
           }
         ],
@@ -13122,6 +15138,8 @@ const HEROES_DATA = [
         "name": "Actuary",
         "name_in_client": true,
         "effect_type": null,
+        "effect_type_source": null,
+        "is_pve_only": false,
         "cooldown_s": 0.0,
         "cooldown_ms": null,
         "cooldown": "Passive",
@@ -13193,22 +15211,42 @@ const HEROES_DATA = [
         "star_upgrades": [
           {
             "star": 1,
+            "template": "Increases Physical DMG by {0}%.",
+            "args": [
+              "3"
+            ],
             "text": "Increases Physical DMG by 3%."
           },
           {
             "star": 2,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "6"
+            ],
             "text": "Increases bonus effect to 6%."
           },
           {
             "star": 3,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "9"
+            ],
             "text": "Increases bonus effect to 9%."
           },
           {
             "star": 4,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "12"
+            ],
             "text": "Increases bonus effect to 12%."
           },
           {
             "star": 5,
+            "template": "Increases bonus effect to {0}%.",
+            "args": [
+              "15"
+            ],
             "text": "Increases bonus effect to 15%."
           }
         ],
@@ -13222,6 +15260,8 @@ const HEROES_DATA = [
         "name": "Doomsday Judgment",
         "name_in_client": true,
         "effect_type": null,
+        "effect_type_source": null,
+        "is_pve_only": false,
         "cooldown_s": 0.0,
         "cooldown_ms": null,
         "cooldown": "Passive",

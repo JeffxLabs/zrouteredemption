@@ -229,6 +229,19 @@
     return LANGUAGES.find(language => language.code === code) || LANGUAGES[0];
   }
 
+  function allowedPageLanguages(doc = documentObject()) {
+    const raw = doc?.documentElement?.getAttribute("data-i18n-languages")
+      || doc?.getElementById("language-select")?.getAttribute("data-i18n-languages")
+      || "";
+    return raw.split(",").map(value => value.trim()).filter(Boolean);
+  }
+
+  function contentLanguage(code = currentLanguage, doc = documentObject()) {
+    if (doc?.documentElement?.dataset.i18nPageOnly !== "true") return code;
+    const allowed = allowedPageLanguages(doc);
+    return allowed.length && !allowed.includes(code) ? "en" : code;
+  }
+
   function readStorage() {
     try {
       for (const key of STORAGE_KEYS) {
@@ -264,9 +277,27 @@
     return queryLanguage() || readStorage() || browserLanguage() || "en";
   }
 
-  function t(english) {
+  function t(english, values) {
     if (typeof english !== "string") return english;
-    return dictionaries[currentLanguage]?.[english] || english;
+    const pageDictionary = global.PAGE_I18N?.[currentLanguage];
+    let pageTranslation = pageDictionary?.[english];
+    if (!pageTranslation && pageDictionary) {
+      for (const [pattern, translated] of Object.entries(pageDictionary)) {
+        if (!pattern.includes("{")) continue;
+        const pieces = pattern.split(/\{\d+\}/g);
+        const expression = new RegExp("^" + pieces.map(piece => piece.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("([\\s\\S]*?)") + "$");
+        const match = english.match(expression);
+        if (!match) continue;
+        const indexes = [...pattern.matchAll(/\{(\d+)\}/g)].map(token => token[1]);
+        const values = Object.fromEntries(indexes.map((index, part) => [index, match[part + 1] ?? ""]));
+        pageTranslation = translated.replace(/\{(\d+)\}/g, (_, index) => values[index] ?? "");
+        break;
+      }
+    }
+    const pageOnly = documentObject()?.documentElement?.dataset.i18nPageOnly === "true";
+    const translated = pageTranslation || (!pageOnly ? dictionaries[currentLanguage]?.[english] : undefined) || english;
+    if (Array.isArray(values)) return translated.replace(/\{(\d+)\}/g, (_, index) => values[+index] ?? "");
+    return translated;
   }
 
   function ignored(node) {
@@ -404,10 +435,17 @@
     currentLanguage = code;
     const info = languageInfo(code);
     const doc = documentObject();
-    if (doc?.documentElement) doc.documentElement.lang = code;
+    if (doc?.documentElement) {
+      doc.documentElement.lang = languageInfo(contentLanguage(code, doc)).locale;
+      doc.documentElement.dir = "ltr";
+    }
 
     const selector = doc?.getElementById("language-select");
-    if (selector && selector.value !== code) selector.value = code;
+    if (selector) {
+      const allowed = allowedPageLanguages(doc);
+      const selected = allowed.length && !allowed.includes(code) ? "en" : code;
+      if (selector.value !== selected) selector.value = selected;
+    }
     if (options.persist !== false) persist(code);
     if (options.updateUrl !== false) updateUrl(code);
 
@@ -424,9 +462,11 @@
     const doc = documentObject();
     const selector = doc?.getElementById("language-select");
     if (!selector) return false;
+    const allowed = allowedPageLanguages(doc);
     if (!selectorReady) {
       while (selector.firstChild) selector.removeChild(selector.firstChild);
-      for (const language of LANGUAGES) {
+      const choices = allowed.length ? LANGUAGES.filter(language => allowed.includes(language.code)) : LANGUAGES;
+      for (const language of choices) {
         const option = doc.createElement("option");
         option.value = language.code;
         option.textContent = language.label;
@@ -436,8 +476,9 @@
       selector.addEventListener("change", event => setLanguage(event.target.value));
       selectorReady = true;
     }
-    selector.value = currentLanguage;
+    selector.value = contentLanguage(currentLanguage, doc);
     if (!selector.getAttribute("aria-label")) selector.setAttribute("aria-label", "Language");
+    if (doc.documentElement) doc.documentElement.lang = languageInfo(contentLanguage(currentLanguage, doc)).locale;
     return true;
   }
 
@@ -469,7 +510,10 @@
     currentLanguage = initialLanguage();
     initSelector();
     const doc = documentObject();
-    if (doc?.documentElement) doc.documentElement.lang = currentLanguage;
+    if (doc?.documentElement) {
+      doc.documentElement.lang = languageInfo(contentLanguage(currentLanguage, doc)).locale;
+      doc.documentElement.dir = "ltr";
+    }
     apply();
     observe();
     return languageInfo();
@@ -480,8 +524,8 @@
     languageNames: Object.fromEntries(LANGUAGES.map(language => [language.code, language.label])),
     get language() { return currentLanguage; },
     get lang() { return currentLanguage; },
-    get locale() { return languageInfo().locale; },
-    get numberLocale() { return languageInfo().locale; },
+    get locale() { return languageInfo(contentLanguage()).locale; },
+    get numberLocale() { return languageInfo(contentLanguage()).locale; },
     t,
     apply,
     init,

@@ -1,0 +1,20 @@
+{
+  "heroSkillDes_50003_2": {
+    "ru": "Поражает случайных врагов высоковольтными дугами {2} раза, нанося урон в размере {0} от АТК.",
+    "de": "Entfesselt Hochspannungsbögen auf zufällige Gegner {2}-mal und verursacht Schaden in Höhe von {0} ANG."
+  },
+  "heroSkillDes_50010_2": {
+    "ru": "Испускает ослепительный свет, провоцируя врагов переднего ряда ({2}) и снижая их АТК на {0} на 8 сек."
+  },
+  "heroSkillName_10006_3_chushi": {
+    "fr": "En combat, inflige {0} de dégâts supplémentaires aux monstres. Après avoir vaincu des zombies de métal, de nourriture et de pétrole, ainsi que des hordes de zombies d’élite, les quantités de minerai de fer, de nourriture et de pétrole obtenues augmentent de {1}.",
+    "ru": "В бою наносит монстрам на {0} больше урона. После победы над металлическими, пищевыми и нефтяными зомби, а также элитными ордами зомби, количество получаемой железной руды, еды и нефти увеличивается на {1}.",
+    "tr": "Savaşta canavarlara verilen hasarı {0} artırır. Metal Zombiler, Yiyecek Zombileri, Petrol Zombileri ve Elit Zombi Sürüleri yenildiğinde kazanılan Demir Cevheri, Yiyecek ve Petrol miktarı {1} artar.",
+    "pl": "W walce zadaje potworom o {0} większe obrażenia. Po pokonaniu metalowych zombie, zombie żywności, zombie ropy i elitarnych hord zombie ilość zdobywanej rudy żelaza, żywności i ropy wzrasta o {1}.",
+    "es": "En combate, inflige un {0} más de daño a los monstruos. Al derrotar zombis de metal, de comida y de petróleo, y hordas de zombis de élite, aumenta un {1} la cantidad de mineral de hierro, comida y petróleo obtenidos.",
+    "pt": "Em combate, causa mais {0} de dano aos monstros. Ao derrotar Zumbis de Metal, Zumbis de Comida, Zumbis de Petróleo e Hordas de Zumbis de Elite, aumenta em {1} a quantidade obtida de minério de ferro, comida e petróleo.",
+    "de": "Im Kampf verursacht er {0} mehr Schaden an Monstern. Nach dem Besiegen von Metall-Zombies, Nahrungs-Zombies, Öl-Zombies und Elite-Zombiehorden erhöht sich die Menge an Eisenerz, Nahrung und Öl, die du erhältst, um {1}.",
+    "ko": "전투 중 몬스터에게 주는 피해가 {0} 증가합니다. 금속 좀비, 식량 좀비, 석유 좀비 및 정예 좀비 무리를 처치하면 획득하는 철광석, 식량, 석유가 {1} 증가합니다.",
+    "zh": "战斗中，对怪物造成的伤害提高{0}。击败金属丧尸、食物丧尸、石油丧尸和精英尸群后，获得的铁矿、食物和石油数量提高{1}。"
+  }
+}

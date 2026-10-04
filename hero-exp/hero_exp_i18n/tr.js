@@ -1,0 +1,1 @@
+window.HERO_EXP_I18N = window.HERO_EXP_I18N || {}; window.HERO_EXP_I18N["tr"] = {"items":{"item_heroExp_1k":"1K Savaş Tecrübesi","item_castleBox_HeroEXP_1":"R Kahraman DP Sandığı","item_castleBox_HeroEXP_2":"SR Kahraman DP Sandığı","item_castleBox_HeroEXP_3":"SSR Kahraman DP Sandığı","item_castleBox_HeroEXP_4":"UR Kahraman DP Sandığı"},"points_buff_name":"Puan Güçlendirmesi"};

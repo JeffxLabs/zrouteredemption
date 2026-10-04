@@ -1,0 +1,1 @@
+window.HERO_EXP_I18N = window.HERO_EXP_I18N || {}; window.HERO_EXP_I18N["fr"] = {"items":{"item_heroExp_1k":"1K EXP de combat","item_castleBox_HeroEXP_1":"Coffre d'EXP de héros R","item_castleBox_HeroEXP_2":"Coffre d'EXP de héros SR","item_castleBox_HeroEXP_3":"Coffre d'EXP de héros SSR","item_castleBox_HeroEXP_4":"Coffre d'EXP de héros UR"},"points_buff_name":"Bonus de Points"};

@@ -1,0 +1,1 @@
+window.HERO_EXP_I18N = window.HERO_EXP_I18N || {}; window.HERO_EXP_I18N["ko"] = {"items":{"item_heroExp_1k":"전투 경험치 1,000","item_castleBox_HeroEXP_1":"영웅 경험치 보물 상자(R)","item_castleBox_HeroEXP_2":"영웅 경험치 보물 상자(SR)","item_castleBox_HeroEXP_3":"영웅 경험치 보물 상자(SSR)","item_castleBox_HeroEXP_4":"영웅 경험치 보물 상자(UR)"},"points_buff_name":"포인트 버프"};

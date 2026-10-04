@@ -1,0 +1,469 @@
+{
+  "_about": "Przystępne omówienie danych z klienta gry: tabele bohaterów z klienta 1.30.07, wartości umiejętności i zasady oddziałów z odszyfrowanych tabel katalogu V202610032200 oraz angielskie teksty gry z tego samego katalogu. Liczby w poradach to wartości wyświetlane w grze przy 5★ i umiejętności na poz. 30, o ile nie zaznaczono inaczej.",
+  "heroes": {
+    "10005": {
+      "focus": "pvp",
+      "position": "back",
+      "tags": [
+        "Obrażenia wybuchowe",
+        "Wzmocnienie ATK"
+      ],
+      "summary": "Delikatna strzelczyni frakcji Wojownik: wystrzeliwuje salwę 4 granatów i zwiększa własny ATK.",
+      "tips": [
+        "Miłośniczka granatów trafia losowych wrogów (do 8 granatów przy 5★), więc najlepiej sprawdza się przeciw pełnym oddziałom, a nie pojedynczemu bossowi.",
+        "Modyfikacja kalibru zapewnia stałe +28.2% ATK w każdej walce, więc Rachel nadal przydaje się w PvP, nawet wśród SSR-ów."
+      ]
+    },
+    "10006": {
+      "focus": "pve",
+      "position": "back",
+      "tags": [
+        "Farmienie zombie",
+        "Dodatkowe zasoby",
+        "Premia dla całego oddziału"
+      ],
+      "summary": "Przebudzona Nora (po zadaniach z antidotum) specjalizuje się w farmieniu zombie. Zdobywa więcej zasobów z zombie surowcowych i wzmacnia każdy twój oddział.",
+      "tips": [
+        "Sama jej obecność daje WSZYSTKIM twoim oddziałom +5% obrażeń zadawanych dzikim potworom i potworom rajdowym, nawet gdy nie bierze udziału w walce.",
+        "Wystaw ją w oddziale do farmienia zombie z metalem, jedzeniem i ropą oraz elitarnych hord zombie: ten oddział zdobędzie więcej rudy żelaza, jedzenia i ropy za pokonane cele.",
+        "Jej umiejętności działają tylko przeciw potworom, więc nie zabieraj jej do oddziałów PvP."
+      ]
+    },
+    "10007": {
+      "focus": "pvp",
+      "position": "front",
+      "tags": [
+        "Ochrona przedniego rzędu",
+        "Obrona przed obrażeniami fizycznymi"
+      ],
+      "summary": "Obrończyni frakcji Wojownik, która zmniejsza obrażenia otrzymywane przez cały przedni rząd.",
+      "tips": [
+        "Wsparcie polowe przez 8 s zmniejsza obrażenia fizyczne przedniego rzędu nawet o 30%, a Osłona taktyczna zapewnia stałą redukcję o 17.7%.",
+        "Wsparcie polowe blokuje tylko obrażenia fizyczne. Przeciw oddziałom z dużą ilością obrażeń od promieniowania (Monroe, Yana, Leah, Lucian, Silas) dodaj Virgilio lub Bekkę."
+      ]
+    },
+    "10008": {
+      "focus": "pve",
+      "position": "front",
+      "tags": [
+        "Obrończyni przeciw zombie",
+        "Miotacz ognia"
+      ],
+      "summary": "Obrończyni frakcji Wojownik do walki z zombie: jej ryk zmniejsza obrażenia od potworów, a umiejętność pasywna zwiększa OBR.",
+      "tips": [
+        "Jej miotacz ognia strzela powoli (raz na 4 sekundy), ale zadaje duże obrażenia.",
+        "Jej ryk zmniejsza tylko obrażenia od potworów, więc w PvP wybierz Arnolda lub Dirka."
+      ]
+    },
+    "20005": {
+      "focus": "pve",
+      "position": "back",
+      "tags": [
+        "Wzmacnia tylny rząd",
+        "Obrona przed zombie"
+      ],
+      "summary": "Taktyczna łuczniczka i cheerleaderka: jej taniec zwiększa obrażenia zadawane potworom przez tylny rząd.",
+      "tips": [
+        "Im silniejszy tylny rząd, tym cenniejsze jej wzmocnienie. Dobierz ją do Leah, Silasa lub Katyi na wydarzenia z zombie.",
+        "Jej wzmocnienie i umiejętność pasywna działają tylko przeciw potworom, więc w PvP zostaw ją na ławce."
+      ]
+    },
+    "20006": {
+      "focus": "pve",
+      "position": "front",
+      "tags": [
+        "Tarcza dla przedniego rzędu",
+        "Obrona przed zombie"
+      ],
+      "summary": "Taktyczny obrońca: jego pieśń bojowa zwiększa OBR (tarczę) przedniego rzędu na 6 sekund.",
+      "tips": [
+        "W tej grze OBR działa jak tarcza, która pochłania obrażenia aż do zniszczenia. Jego pieśń dodaje więc tarczę przedniej linii.",
+        "Jego umiejętność pasywna zmniejsza tylko obrażenia od potworów. W PvP lepiej sprawdzi się Bekka lub Virgilio."
+      ]
+    },
+    "20009": {
+      "focus": "pvp",
+      "position": "back",
+      "tags": [
+        "Wzmocnienie ATK",
+        "Trafia 2 cele"
+      ],
+      "summary": "Wojownik rzucający koktajlami Mołotowa, ze stałym wzmocnieniem ataku i bombami zapalającymi trafiającymi 2 cele.",
+      "tips": [
+        "Wzmocnienie ataku działa w każdej walce, także w PvP.",
+        "Jego umiejętność bojowa rozdziela obrażenia między 2 losowych wrogów, zamiast skupiać je na jednym celu."
+      ]
+    },
+    "30001": {
+      "focus": "pve",
+      "position": "front",
+      "tags": [
+        "Obniża ATK wrogów",
+        "Obrona przed zombie"
+      ],
+      "summary": "Zatruty obrońca frakcji Wojownik: jego strzał jadem trafia 2 wrogów z przedniego rzędu i obniża ich ATK o 6% na 4 s.",
+      "tips": [
+        "Obniżenie ATK o 6% działa na każdego wroga, również graczy.",
+        "Jej umiejętność pasywna zmniejsza tylko obrażenia od potworów, więc to przede wszystkim obrończyni przeciw zombie."
+      ]
+    },
+    "30003": {
+      "focus": "pve",
+      "position": "back",
+      "tags": [
+        "Wzmacnia tylny rząd Wojowników",
+        "Obrażenia zombie"
+      ],
+      "summary": "SSR Aria: szybko strzela z karabinu, a jej umiejętność pasywna sprawia, że Wojownicy z tylnego rzędu mocniej ranią potwory.",
+      "tips": [
+        "W sezonie 1 zostanie ulepszona do UR Arii (#31003), która ją zastąpi.",
+        "Jej umiejętność pasywna daje Wojownikom z tylnego rzędu do +22.9% obrażeń przeciw potworom — świetnie pasuje do Monroe, Luciana, Rachel i Logana w zawartości z zombie."
+      ]
+    },
+    "30004": {
+      "focus": "pvp",
+      "position": "back",
+      "tags": [
+        "Najwyższy ATK wśród SSR",
+        "Trafia przedni rząd"
+      ],
+      "summary": "Najmocniej uderzająca SSR (i najdelikatniejsza): rakietniczka frakcji Szturm.",
+      "tips": [
+        "Jej pociski fosforowe trafiają 2 wrogów z przedniego rzędu i rozbijają obrońców.",
+        "Ma najmniej HP ze wszystkich SSR-ów, więc ustaw przed nią dwóch solidnych obrońców."
+      ]
+    },
+    "30005": {
+      "focus": "pve",
+      "position": "back",
+      "tags": [
+        "5 granatów",
+        "Obrażenia zombie"
+      ],
+      "summary": "Miłośniczka granatów frakcji Szturm: 5 granatów w umiejętności bojowej i dodatkowe obrażenia przeciw potworom.",
+      "tips": [
+        "Pięć losowych granatów czyni go jednym z najlepszych SSR-ów do czyszczenia fal zombie.",
+        "Jego umiejętność pasywna działa tylko przeciw potworom. Do PvP lepsza będzie Celeste, SSR frakcji Szturm."
+      ]
+    },
+    "30006": {
+      "focus": "pvp",
+      "position": "back",
+      "tags": [
+        "Obrażenia od promieniowania",
+        "Broń ekskluzywna",
+        "Oddziały Wojowników"
+      ],
+      "summary": "Snajper frakcji Wojownik z bronią ekskluzywną, która zyskuje moc wraz z każdym Wojownikiem w oddziale.",
+      "tips": [
+        "Z jej bronią każdy jej trafiony cios krytyczny dodaje ładunek +3% obrażeń od promieniowania (maks. 15%). Limit ładunków zależy od liczby Wojowników w oddziale, więc zapełnij nim oddział.",
+        "Przy 4 ładunkach wystrzeliwuje też Niszczycielską rakietę w 3 wrogów.",
+        "Jej umiejętność bojowa jest dostępna od poz. bohatera 1; pozostali odblokowują ją dopiero na poz. 5.",
+        "Jej broń odblokowuje się najwcześniej w sezonie (dzień 3; Leah — dzień 17, Yana — dzień 38)."
+      ]
+    },
+    "30007": {
+      "focus": "pve",
+      "position": "front",
+      "tags": [
+        "Spowalnia wrogów",
+        "Obrona przed zombie"
+      ],
+      "summary": "Obrońca frakcji Szturm: jego granaty spowalniają wrogów, a taktyka zmniejsza obrażenia potworów zadawane przedniemu rzędowi.",
+      "tips": [
+        "Granat taktyczny także spowalnia wrogów, dając ci czas przeciw szarżującym zombie.",
+        "Redukcja obrażeń działa tylko przeciw potworom. Do przedniego rzędu w PvP wybierz Verę lub Vince’a.",
+        "W tabeli klienta Manewr okrążający ma niemożliwą wartość: redukcję obrażeń o 295% przy 5★. Wygląda to na błąd danych gry."
+      ]
+    },
+    "30011": {
+      "focus": "utility",
+      "position": "back",
+      "tags": [
+        "Zbieranie zasobów",
+        "Udźwig"
+      ],
+      "summary": "Bombardier SR, którego głównym zadaniem jest zbieranie: zwiększa ładowność twojego marszu.",
+      "tips": [
+        "Tylko trzech bohaterów SR (Jackson, Jamal i Hank) zwiększa udźwig żołnierzy, więc wysyłaj ich na marsze po zasoby.",
+        "Nie ma umiejętności pasywnej, więc słabo walczy."
+      ]
+    },
+    "31003": {
+      "focus": "pve",
+      "position": "back",
+      "tags": [
+        "Ulepszenie do UR",
+        "Wzmacnia tylny rząd Wojowników"
+      ],
+      "summary": "UR Aria to ulepszenie SSR Arii w sezonie 1, z mocniejszymi wersjami wszystkich jej umiejętności.",
+      "tips": [
+        "W sezonie 1 SSR Aria zmieni się w tę wersję UR, która ją zastąpi, więc inwestycje zostaną z tobą.",
+        "Gwałtowny Ostrzał to długi atak kanałowany: łącznie ok. 3,032% ATK przy 5★ i poz. 30 wobec 1,754% u SSR Arii.",
+        "Zabójca Zombie daje Wojownikom z tylnego rzędu +25.5% obrażeń przeciw potworom przy 5★."
+      ]
+    },
+    "40001": {
+      "focus": "utility",
+      "position": "back",
+      "tags": [
+        "Zbieranie zasobów",
+        "Udźwig"
+      ],
+      "summary": "Zbieracz SR. Jest przypisany do przedniego rzędu, ale jego statystyki przypominają delikatnego zadającego obrażenia.",
+      "tips": [
+        "Używaj go do zbierania (większy udźwig żołnierzy), nie jako obrońcy: ma zdecydowanie najmniej HP ze wszystkich bohaterów przedniego rzędu.",
+        "Jeśli musi walczyć, umieść go w tylnym rzędzie."
+      ]
+    },
+    "40002": {
+      "focus": "utility",
+      "position": "front",
+      "tags": [
+        "Zbieranie zasobów",
+        "Udźwig"
+      ],
+      "summary": "Zbieracz SR z miotaczem ognia i solidnymi statystykami obrońcy.",
+      "tips": [
+        "Najwytrzymalszy z trzech zbieraczy; dobry wybór, jeśli twój marsz po zasoby może zostać zaatakowany.",
+        "Atakuje powoli (raz na 4 sekundy) i nie ma umiejętności pasywnej."
+      ]
+    },
+    "40010": {
+      "focus": "pve",
+      "position": "back",
+      "tags": [
+        "Trafia przedni rząd",
+        "Obrażenia zombie"
+      ],
+      "summary": "Taktyczna łuczniczka: jej potężna strzała trafia wrogów z przedniego rzędu, a umiejętność pasywna zwiększa obrażenia przeciw potworom.",
+      "tips": [
+        "Tani bohater do tylnego rzędu taktycznego oddziału przeciw zombie, dopóki twoi bohaterowie UR frakcji Taktyczny nie zdobędą gwiazdek.",
+        "Jej umiejętność pasywna działa tylko przeciw potworom."
+      ]
+    },
+    "50001": {
+      "focus": "pvp",
+      "position": "front",
+      "tags": [
+        "Tarcza dla przedniego rzędu",
+        "Redukcja obrażeń"
+      ],
+      "summary": "Obrońca UR frakcji Wojownik: jego okrzyk dodaje OBR (tarczę) przedniemu rzędowi, a pancerz zmniejsza wszystkie otrzymywane przez niego obrażenia.",
+      "tips": [
+        "Ciężki pancerz zmniejsza wszystkie otrzymywane przez niego obrażenia nawet o 30.3%, więc dobrze sprawdza się w PvP.",
+        "Żelazna wola zwiększa OBR (tarczę) przedniego rzędu nawet o 50.5% na 10 s. Połącz go z Arnoldem: Dirk dodaje tarczę, a Arnold zmniejsza obrażenia."
+      ]
+    },
+    "50002": {
+      "focus": "pvp",
+      "position": "back",
+      "tags": [
+        "Wzmacnia cały oddział",
+        "Szybsze umiejętności",
+        "Jedyny bohater wsparcia"
+      ],
+      "summary": "Jedyny bohater wsparcia: zwiększa atak całego oddziału i przyspiesza odnowienie umiejętności u wszystkich.",
+      "tips": [
+        "Sokole oko zwiększa ATK WSZYSTKICH sojuszników nawet o 16.8% na 8 s, a Szeryf przyspiesza odnowienie umiejętności nawet o 30.3%. Efekty nie zależą od frakcji ani typu wroga.",
+        "Szeryf zmniejsza też obrażenia otrzymywane przez sojusznika z najwyższym ATK nawet o 12.2%, więc najpierw rozwijaj głównego zadającego obrażenia.",
+        "Jego własna umiejętność bojowa odnawia się powoli (12.3 s), co rekompensuje jego pasywne przyspieszenie odnowienia."
+      ]
+    },
+    "50003": {
+      "focus": "pvp",
+      "position": "back",
+      "tags": [
+        "Najwyższy ATK",
+        "Cios krytyczny"
+      ],
+      "summary": "Najwyższy ATK w grze i najmniej HP wśród UR: Wojownik nastawiony wyłącznie na zadawanie obrażeń.",
+      "tips": [
+        "Cewka Tesli przeskakuje między 5 losowymi wrogami, a Frankenstein dodaje do 30.3% szansy na cios krytyczny.",
+        "Ma najmniej HP ze wszystkich UR-ów, więc ustaw przed nim Arnolda lub Dirka."
+      ]
+    },
+    "50004": {
+      "focus": "pvp",
+      "position": "front",
+      "tags": [
+        "Trafia wszystkich wrogów",
+        "Ochrona przed promieniowaniem",
+        "Najwięcej HP"
+      ],
+      "summary": "Najwytrzymalszy bohater w grze. Jej granat soniczny trafia wszystkich wrogów i osłabia ich ataki od promieniowania.",
+      "tips": [
+        "Osłona jonowa zmniejsza otrzymywane przez nią obrażenia od promieniowania nawet o 40.6%, a Granat hukowy obniża obrażenia od promieniowania WSZYSTKICH wrogów o 15.3% na 5 s.",
+        "To skuteczna kontra na zadających obrażenia od promieniowania (Monroe, Yana, Leah, Lucian, Silas). Z Virgiliem tworzy przednią linię niemal odporną na promieniowanie."
+      ]
+    },
+    "50005": {
+      "focus": "pvp",
+      "position": "front",
+      "tags": [
+        "Osłona oddziału przed promieniowaniem",
+        "Ochrona przedniego rzędu"
+      ],
+      "summary": "Taktyczny obrońca, który osłania cały oddział przed obrażeniami od promieniowania i wzmacnia przedni rząd.",
+      "tips": [
+        "Cewka magnetyczna zmniejsza obrażenia od promieniowania otrzymywane przez WSZYSTKICH sojuszników nawet o 20.4% na 8 s.",
+        "Pancerz magnetyczny daje przedniemu rzędowi 13.5% redukcji obrażeń oraz dodatkowe 13.5% redukcji obrażeń od promieniowania."
+      ]
+    },
+    "50006": {
+      "focus": "pvp",
+      "position": "back",
+      "tags": [
+        "Trafia wszystkich wrogów",
+        "Broń ekskluzywna",
+        "Oddziały Taktycznych"
+      ],
+      "summary": "Snajper frakcji Taktyczny, której helikopter trafia każdego wroga. Jej broń ekskluzywna zyskuje moc od bohaterów Taktycznych.",
+      "tips": [
+        "Z bronią rozpoczyna każdą walkę z 2 ładunkami po +3% obrażeń od promieniowania za każdego bohatera Taktycznego (maks. 10) i zyskuje do +100% szybkości ataku w miarę trafiania.",
+        "Broń sprawia też, że od razu na początku walki używa umiejętności bojowej na 2 wrogów z przedniego rzędu.",
+        "Jej broń odblokowuje się 17. dnia sezonu."
+      ]
+    },
+    "50007": {
+      "focus": "pvp",
+      "position": "back",
+      "tags": [
+        "Trafia tylny rząd",
+        "Ogłuszenie",
+        "Wzmocnienie ATK"
+      ],
+      "summary": "Taktyczny zadający obrażenia: jego robot-pająk atakuje tylny rząd wroga i ma 20% szans na ogłuszenie.",
+      "tips": [
+        "Robot-pająk trafia 3 wrogów z tylnego rzędu, zadając do 934% ATK i mając 20% szans na ogłuszenie.",
+        "Przeciążenie zapewnia stałe +40.5% ATK, największe samowzmocnienie w całej ekipie."
+      ]
+    },
+    "50008": {
+      "focus": "pvp",
+      "position": "back",
+      "tags": [
+        "Przebija tarcze",
+        "Obrażenia fizyczne"
+      ],
+      "summary": "Taktyczny strzelec z karabinu maszynowego: jego pociski z toksyną odbierają celowi do 25% OBR.",
+      "tips": [
+        "Żmija wystrzeliwuje 20 pocisków neurotoksynowych (przy 5★); każdy odbiera 5% OBR, łącznie do −25% na 9 s.",
+        "OBR to tarcza wroga, więc jej przebicie pomaga przy każdym trafieniu twojego oddziału. Machina wojenna dodaje +30.2% obrażeń fizycznych."
+      ]
+    },
+    "50009": {
+      "focus": "pvp",
+      "position": "front",
+      "tags": [
+        "Kontrataki",
+        "Oddziały Szturmu"
+      ],
+      "summary": "Obrończyni frakcji Szturm, która oddaje cios: w stanie „Czujność” kontratakuje za każdym razem, gdy zostanie trafiona.",
+      "tips": [
+        "Przenośny wartownik wprowadza ją w stan „Czujność” na maks. 8.8 s: Vera kontratakuje za każdym trafieniem (najwyżej raz na sekundę). Przy 4★ Straż obejmuje też przedni rząd.",
+        "Strażnik zmniejsza obrażenia przedniego rzędu nawet o 13.2%; gdy Vera jest w stanie „Czujność”, premia dla bohaterów Szturmu jest podwojona. Wystaw ją z Vincem i Jackiem."
+      ]
+    },
+    "50010": {
+      "focus": "pvp",
+      "position": "front",
+      "tags": [
+        "Prowokuje",
+        "Obniża ATK wrogów"
+      ],
+      "summary": "Obrońca frakcji Szturm, który prowokuje przedni rząd wroga i obniża jego ATK na 8 sekund.",
+      "tips": [
+        "Oślepiająca prowokacja przyciąga uwagę do 4 wrogów z przedniego rzędu i obniża ich ATK o 16.8% na 8 s.",
+        "Strażnik górski zmniejsza wszystkie otrzymywane przez niego obrażenia nawet o 30.3%, więc sprawdza się także w PvP."
+      ]
+    },
+    "50011": {
+      "focus": "pvp",
+      "position": "back",
+      "tags": [
+        "Obrażenia od promieniowania w czasie",
+        "Broń ekskluzywna",
+        "Oddziały Szturmu"
+      ],
+      "summary": "Władczyni błyskawic frakcji Szturm, która trafia 3 wrogów z tylnego rzędu; jej broń ekskluzywna nakłada kumulujące się oparzenie od promieniowania.",
+      "tips": [
+        "Z bronią jej trafienia nakładają efekt „Nadmierny ładunek”, który przez 30 s zadaje obrażenia równe 3% jej ATK na sekundę. Limit to 3 ładunki na każdego bohatera Szturmu w oddziale.",
+        "Broń ulepsza atak podstawowy na poz. 1, a umiejętność bojową na poz. 10 i 30. Gdy osiągnie 5★, odłamki broni stają się jej główną ścieżką rozwoju.",
+        "Jej broń odblokowuje się najpóźniej w sezonie (dzień 38)."
+      ]
+    },
+    "50012": {
+      "focus": "pvp",
+      "position": "back",
+      "tags": [
+        "Dobija osłabionych wrogów",
+        "Cios krytyczny"
+      ],
+      "summary": "Dobijający Szturmowiec: jego pistolet maszynowy zawsze wybiera wroga z najniższym procentem HP.",
+      "tips": [
+        "Jego pistolet maszynowy zawsze celuje we wroga z najniższym procentem HP, więc dobija rannych przeciwników.",
+        "Mechanik dodaje do 30.3% szansy na cios krytyczny. Połącz go z bohaterami atakującymi wszystkich (Nicole, Yana)."
+      ]
+    },
+    "50013": {
+      "focus": "pvp",
+      "position": "back",
+      "tags": [
+        "Trafia wszystkich wrogów",
+        "Obrażenia fizyczne"
+      ],
+      "summary": "Miłośniczka granatów frakcji Szturm: jego sieć ognia trafia każdego wroga, a umiejętność pasywna zwiększa obrażenia fizyczne.",
+      "tips": [
+        "Precyzyjna sieć ogniowa trafia WSZYSTKICH wrogów, zadając do 716% ATK. To jedna z zaledwie trzech umiejętności bojowych trafiających cały oddział wroga (pozostałe mają Leah i Bekka).",
+        "Analityk ryzyka dodaje +30.3% obrażeń fizycznych, więc dobrze współgra z Katją, która obniża OBR."
+      ]
+    }
+  },
+  "global": [
+    {
+      "title": "Zbierz oddział jednej frakcji",
+      "body": "Oddział składa się z 5 bohaterów. Bohaterowie tej samej frakcji odblokowują premię do HP, ATK i OBR: 3 z jednej frakcji dają +5%, układ 3+2 z dwóch frakcji daje +10%, 4 z jednej dają +15%, a 5 z jednej — +20%."
+    },
+    {
+      "title": "Poznaj trójkąt kontr",
+      "body": "Wojownik pokonuje Szturm, Szturm pokonuje Taktyczny, a Taktyczny pokonuje Wojownika. Gdy twoja frakcja kontruje wrogą, twoi bohaterowie otrzymują od niej o 20% mniej obrażeń. Raport z bitwy informuje, czy twój oddział kontrował wroga, czy sam został skontrowany."
+    },
+    {
+      "title": "Obrońcy z przodu, zadający obrażenia z tyłu",
+      "body": "Oddział ma 2 miejsca w przednim rzędzie i 3 w tylnym. Bohaterowie pierwszej linii mają dość HP i OBR, by przyjmować ciosy, więc gra zaleca wystawić ich z przodu. Bohaterowie tylnej linii zadają obrażenia zza ich pleców. Carter (wsparcie) powinien stać z tyłu."
+    },
+    {
+      "title": "Wielu SSR-ów błyszczy tylko przeciw zombie",
+      "body": "Umiejętności około połowy bohaterów SSR działają tylko przeciw potworom („obrażenia przeciw potworom” lub „obrażenia od potworów”). Są świetni na zombie, rajdy i wydarzenia, ale słabi w PvP. Wzmocnienia Rachel, Logana i Celeste działają w każdej walce."
+    },
+    {
+      "title": "OBR to tarcza",
+      "body": "Gra opisuje OBR jako tarczę, która pochłania większość obrażeń, aż pęknie. Wzmocnienia OBR (Conan, Dirk) dodają tarczę; Katya szybciej ją przebija; pasywne redukcje obrażeń (Arnold, Dirk, Vince, Virgilio) działają dalej, gdy tarcza już zniknie."
+    },
+    {
+      "title": "Obrażenia fizyczne a promieniowanie",
+      "body": "W grze są dwa typy obrażeń. Obrażenia od promieniowania zadają Monroe, Leah, Yana, Lucian, Silas, Celeste i Carter (oraz ataki podstawowe Conana i Jacka). Wszyscy pozostali zadają obrażenia fizyczne. Bekka i Virgilio zmniejszają obrażenia od promieniowania; Wsparcie polowe Arnolda blokuje tylko obrażenia fizyczne. Linia frontu z oboma rodzajami ochrony zabezpieczy cię w każdej sytuacji."
+    },
+    {
+      "title": "Broń ekskluzywna daje ogromny zastrzyk mocy",
+      "body": "Broń ekskluzywna na poz. 30 dodaje bohaterowi ok. 703 tys. HP, 8.4 tys. ATK, 4.2 tys. OBR i 5% odporności na obrażenia. To więcej HP niż po awansie bohatera na poz. 150. Zwiększa też maks. poziom umiejętności z 30 do 40. Ulepszanie broni daje każdemu bohaterowi do +40 tys. HP, +800 ATK i +200 OBR, więc odłamki wzmacniają całą ekipę."
+    },
+    {
+      "title": "Przy 4★ odblokowuje się potężny talent",
+      "body": "Na poz. bohatera 31 i przy 4★ w 4. slocie odblokowuje się stały talent: UR dostają Sąd Dnia Zagłady (+20% HP, ATK i OBR, +10% szybkości odnowienia umiejętności), SSR — Wędrowiec pustkowi (+10%), a SR — Ekspert przetrwania (+5%). Awans do 4★ to jedno z największych pojedynczych ulepszeń."
+    },
+    {
+      "title": "Najpierw gwiazdki, potem księgi umiejętności",
+      "body": "Poziom gwiazdek ogranicza poziom umiejętności: 1★ → poz. 1, 2★ → 5, 3★ → 10, 4★ → 20, 5★ → 30. Gwiazdki zwiększają też obrażenia umiejętności (np. strzał snajperski Monroe: 70% ATK przy 0★, 486% przy 5★). Księgi ponad limit się zmarnują, więc najpierw awansuj bohatera. Od 0 do 5★ potrzeba 975 odłamków."
+    },
+    {
+      "title": "Bohaterowie UR szybciej rosną na początku",
+      "body": "Na poz. 1–50 bohaterowie UR zyskują około 27–46% więcej HP, ATK i OBR. Od poz. 65 wszyscy bohaterowie otrzymują taki sam przyrost za poziomy, a różnicę robią ich własne statystyki bazowe. Dowodzenie oddziałami rośnie z 52 na poz. 1 do 351 na poz. 150."
+    },
+    {
+      "title": "Carter pasuje wszędzie; bohaterowie SR zbierają zasoby",
+      "body": "Wzmocnienia Cartera działają w każdym oddziale i przeciw każdemu wrogowi. Jamal, Hank i Jackson słabo walczą, ale jako jedyni zwiększają udźwig żołnierzy, więc wysyłaj ich na zbieranie."
+    }
+  ]
+}

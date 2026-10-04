@@ -1,0 +1,469 @@
+{
+  "_about": "Oyun istemci verilerinin anlaşılır özeti: 1.30.07 istemcisindeki kahraman tabloları, V202610032200 kataloğunun şifresi çözülmüş tablolarındaki yetenek değerleri ve takım kuralları, ayrıca aynı katalogdaki İngilizce oyun metinleri. Aksi belirtilmedikçe ipuçlarındaki sayılar, oyunda 5★ ve yetenek seviyesi 30 için gösterilen değerlerdir.",
+  "heroes": {
+    "10005": {
+      "focus": "pvp",
+      "position": "back",
+      "tags": [
+        "Ani hasar",
+        "SALDIRI artışı"
+      ],
+      "summary": "Dayanıksız Savaşçı nişancısı: 4 bombalık salvo atar ve kendi SALDIRI değerini artırır.",
+      "tips": [
+        "Bombacı rastgele düşmanları vurur (5★ seviyesinde en fazla 8 bomba); bu yüzden tek bir boss yerine tam düşman takımlarına karşı en etkilidir.",
+        "Kalibre Modifikasyonu her savaşta kalıcı +28.2% SALDIRI sağlar; bu nedenle SSR kahramanlar arasında bile PvP için hâlâ değerlidir."
+      ]
+    },
+    "10006": {
+      "focus": "pve",
+      "position": "back",
+      "tags": [
+        "Zombi avı",
+        "Ek kaynak",
+        "Tüm takıma güçlendirme"
+      ],
+      "summary": "Uyanmış Nora (panzehir görev zincirinden sonra) zombi avında uzmandır. Kaynak zombilerinden daha fazla kaynak kazandırır ve her takımını güçlendirir.",
+      "tips": [
+        "Nora takımda olmasa bile ona sahip olmak TÜM takımlarına Vahşi Canavarlara ve Toplanma Canavarlarına karşı +5% hasar kazandırır.",
+        "Onu Metal, Yiyecek ve Petrol zombileriyle Elit Zombi Sürülerini avlayan takıma koy: bu takım öldürdüklerinden daha fazla Demir Cevheri, Yiyecek ve Petrol kazanır.",
+        "Yetenekleri yalnızca canavarlara karşı çalışır; bu yüzden PvP takımlarına alma."
+      ]
+    },
+    "10007": {
+      "focus": "pvp",
+      "position": "front",
+      "tags": [
+        "Ön sırayı korur",
+        "Fiziksel savunma"
+      ],
+      "summary": "Tüm ön sıranın aldığı hasarı azaltan Savaşçı tankı.",
+      "tips": [
+        "Saha Desteği, 8 saniye boyunca ön sıranın aldığı Fiziksel hasarı en fazla 30% azaltır; Taktiksel Kalkan ise kalıcı 17.7% hasar azaltımı sağlar.",
+        "Saha Desteği yalnızca Fiziksel hasarı engeller. Radyasyon hasarı ağırlıklı takımlara (Monroe, Yana, Leah, Lucian, Silas) karşı Virgilio veya Bekka ekle."
+      ]
+    },
+    "10008": {
+      "focus": "pve",
+      "position": "front",
+      "tags": [
+        "Zombi tankı",
+        "Alev makinesi"
+      ],
+      "summary": "Zombi savaşları için tasarlanmış Savaşçı tankı: kükremesi canavarların verdiği hasarı azaltır, pasifi ise SAVUNMA değerini yükseltir.",
+      "tips": [
+        "Alev makinesi yavaş ateş eder (4 saniyede bir saldırı) ama sert vurur.",
+        "Kükremesi yalnızca canavarların hasarını azaltır; PvP için Arnold veya Dirk kullan."
+      ]
+    },
+    "20005": {
+      "focus": "pve",
+      "position": "back",
+      "tags": [
+        "Arka sırayı güçlendirir",
+        "Zombi savunması"
+      ],
+      "summary": "Taktiksel okçu ve amigo: dansı, arka sıranın canavarlara verdiği hasarı artırır.",
+      "tips": [
+        "Arka sıran ne kadar güçlüyse güçlendirmesi o kadar değerlidir. Zombi etkinliklerinde onu Leah, Silas veya Katya ile eşleştir.",
+        "Güçlendirmesi ve pasifi yalnızca canavarlara karşı işler; PvP için yedeğe al."
+      ]
+    },
+    "20006": {
+      "focus": "pve",
+      "position": "front",
+      "tags": [
+        "Ön sıraya kalkan",
+        "Zombi savunması"
+      ],
+      "summary": "Taktiksel tank: savaş şarkısı 6 saniyeliğine ön sıranın SAVUNMA (kalkan) değerini artırır.",
+      "tips": [
+        "Bu oyunda SAVUNMA, kırılana kadar hasarı emen bir kalkan gibi çalışır. Şarkısı ön saflara kalkan ekler.",
+        "Pasifi yalnızca canavar hasarını azaltır. PvP’de Bekka veya Virgilio daha iyi iş çıkarır."
+      ]
+    },
+    "20009": {
+      "focus": "pvp",
+      "position": "back",
+      "tags": [
+        "SALDIRI artışı",
+        "2 hedefi vurur"
+      ],
+      "summary": "Kalıcı SALDIRI artışı ve 2 hedefe isabet eden ateş bombaları olan Savaşçı Molotofçusu.",
+      "tips": [
+        "SALDIRI artışı PvP dâhil her savaşta çalışır.",
+        "Savaş yeteneği hasarı tek hedefe yoğunlaştırmak yerine 2 rastgele düşmana paylaştırır."
+      ]
+    },
+    "30001": {
+      "focus": "pve",
+      "position": "front",
+      "tags": [
+        "Düşman SALDIRI değerini düşürür",
+        "Zombi savunması"
+      ],
+      "summary": "Zehirli atış kullanan Savaşçı tankı: ön sıradaki 2 düşmanı vurur ve 4 saniyeliğine SALDIRI değerlerini 6% düşürür.",
+      "tips": [
+        "−6% SALDIRI her düşmana, oyunculara karşı da işler.",
+        "Pasifi yalnızca canavarlardan alınan hasarı azaltır; bu yüzden başlıca bir zombi tankıdır."
+      ]
+    },
+    "30003": {
+      "focus": "pve",
+      "position": "back",
+      "tags": [
+        "Savaşçı arka sırasını güçlendirir",
+        "Zombi hasarı"
+      ],
+      "summary": "SSR Aria: hızlı tüfeği ve pasifiyle arka sıradaki Savaşçıların canavarlara daha fazla hasar vermesini sağlar.",
+      "tips": [
+        "1. Sezonda UR Aria’ya (#31003) yükseltilir ve onun yerini alır.",
+        "Pasifi arka sıradaki Savaşçılara canavarlara karşı en fazla +22.9% hasar verir; zombi içeriklerinde Monroe, Lucian, Rachel ve Logan ile iyi uyum sağlar."
+      ]
+    },
+    "30004": {
+      "focus": "pvp",
+      "position": "back",
+      "tags": [
+        "En yüksek SSR SALDIRI değeri",
+        "Ön sırayı vurur"
+      ],
+      "summary": "En sert vuran SSR (ve en dayanıksız olanı): Saldırı roketçisi.",
+      "tips": [
+        "Fosfor mermileri ön sıradaki 2 düşmanı vurur; tankları hızla eritir.",
+        "Tüm SSR’ler içinde en düşük HP değerine sahip; önüne iki sağlam tank koy."
+      ]
+    },
+    "30005": {
+      "focus": "pve",
+      "position": "back",
+      "tags": [
+        "5 bomba",
+        "Zombi hasarı"
+      ],
+      "summary": "Saldırı bombacısı: savaş yeteneğinde 5 bomba ve canavarlara karşı ek hasar.",
+      "tips": [
+        "Rastgele hedeflere giden beş bomba onu zombi dalgalarını temizleyen en iyi SSR’lerden biri yapar.",
+        "Pasifi yalnızca canavarlara karşı çalışır. PvP’de Saldırı SSR kahramanı Celeste daha iyidir."
+      ]
+    },
+    "30006": {
+      "focus": "pvp",
+      "position": "back",
+      "tags": [
+        "Radyasyon hasarı",
+        "Özel silah",
+        "Savaşçı takımları"
+      ],
+      "summary": "Takımdaki her Savaşçıyla güçlenen özel silaha sahip Savaşçı keskin nişancısı.",
+      "tips": [
+        "Silahıyla her kritik vuruşu +3% Radyasyon hasarı sağlayan bir yük ekler (en fazla 15%). Yük sınırı takımındaki Savaşçı sayısına eşittir; bu yüzden takımı Savaşçılarla doldur.",
+        "4 yükte 3 düşmana Yıkıcı Roket de fırlatır.",
+        "Savaş yeteneği Kahraman Sv. 1’den itibaren kullanılabilir; diğer herkes için Sv. 5 gerekir.",
+        "Silahı sezonda en erken açılır (3. gün; Leah 17. gün, Yana 38. gün)."
+      ]
+    },
+    "30007": {
+      "focus": "pve",
+      "position": "front",
+      "tags": [
+        "Düşmanları yavaşlatır",
+        "Zombi savunması"
+      ],
+      "summary": "Bombalarıyla düşmanları yavaşlatan ve taktikleriyle ön sıranın canavarlardan aldığı hasarı azaltan Saldırı tankı.",
+      "tips": [
+        "Taktiksel El Bombası düşmanları da yavaşlatarak hücum eden zombilere karşı zaman kazandırır.",
+        "Hasar azaltımı yalnızca canavarlara karşı çalışır. PvP ön sırası için Vera veya Vince’i kullan.",
+        "İstemcinin tablosunda Kıskaç Taktiği için imkânsız bir değer yazıyor (5★ seviyesinde 295% hasar azaltımı); bu bir oyun verisi hatası gibi görünüyor."
+      ]
+    },
+    "30011": {
+      "focus": "utility",
+      "position": "back",
+      "tags": [
+        "Kaynak toplama",
+        "Taşıma kapasitesi"
+      ],
+      "summary": "Asıl işi kaynak toplamak olan SR bombacısı: yürüyüş kolunun taşıyabileceği yükü artırır.",
+      "tips": [
+        "Asker Yükünü artıran tek kahramanlar üç SR kahramanıdır (Jackson, Jamal, Hank); onları kaynak toplama yürüyüşlerine gönder.",
+        "Pasif yeteneği olmadığı için savaşta zayıftır."
+      ]
+    },
+    "31003": {
+      "focus": "pve",
+      "position": "back",
+      "tags": [
+        "UR yükseltmesi",
+        "Savaşçı arka sırasını güçlendirir"
+      ],
+      "summary": "UR Aria, 1. Sezonda SSR Aria’nın yükseltilmiş hâlidir ve tüm yeteneklerinin daha güçlü sürümlerine sahiptir.",
+      "tips": [
+        "1. Sezonda SSR Aria bu UR sürümüne dönüşür ve onun yerini alır; yani yatırımın boşa gitmez.",
+        "Yoğun Ateş Fırtınası uzun süreli bir saldırıdır: 5★ Sv. 30’da toplam yaklaşık 3,032% SALDIRI; SSR Aria’da 1,754%.",
+        "Zombi İmha Uzmanı 5★ seviyesinde arka sıradaki Savaşçılara canavarlara karşı +25.5% hasar verir."
+      ]
+    },
+    "40001": {
+      "focus": "utility",
+      "position": "back",
+      "tags": [
+        "Kaynak toplama",
+        "Taşıma kapasitesi"
+      ],
+      "summary": "SR kaynak toplayıcısı. Ön Hat olarak listelenmiş olsa da istatistikleri dayanıksız bir hasar verene benzer.",
+      "tips": [
+        "Onu tank olarak değil kaynak toplamak için kullan (daha yüksek Asker Yükü): Ön Hat kahramanları arasında açık ara en düşük HP onda.",
+        "Savaşması gerekirse arka sıraya koy."
+      ]
+    },
+    "40002": {
+      "focus": "utility",
+      "position": "front",
+      "tags": [
+        "Kaynak toplama",
+        "Taşıma kapasitesi"
+      ],
+      "summary": "Gerçek tank istatistiklerine sahip, alev makineli SR kaynak toplayıcısı.",
+      "tips": [
+        "Üç toplayıcı içinde en dayanıklısı; kaynak yürüyüşün saldırıya uğrayabilirse iyi bir seçim.",
+        "Yavaş saldırır (4 saniyede bir) ve pasif yeteneği yoktur."
+      ]
+    },
+    "40010": {
+      "focus": "pve",
+      "position": "back",
+      "tags": [
+        "Ön sırayı vurur",
+        "Zombi hasarı"
+      ],
+      "summary": "Güçlü oku ön sıradaki düşmanları vuran ve pasifi canavar hasarını artıran Taktiksel okçu.",
+      "tips": [
+        "UR Taktiksel kahramanların yıldızları tamamlanana kadar Taktiksel zombi takımlarının arka sırası için uygun fiyatlı bir tamamlayıcıdır.",
+        "Pasifi yalnızca canavarlara karşı çalışır."
+      ]
+    },
+    "50001": {
+      "focus": "pvp",
+      "position": "front",
+      "tags": [
+        "Ön sıraya kalkan",
+        "Hasar azaltımı"
+      ],
+      "summary": "UR Savaşçı tankı: haykırışı ön sıraya SAVUNMA (kalkan) ekler, zırhı ise aldığı tüm hasarı azaltır.",
+      "tips": [
+        "Ağır Zırh aldığı TÜM hasarı en fazla 30.3% azaltır; bu sayede PvP’de de dayanır.",
+        "Demir İrade 10 saniyeliğine ön sıranın SAVUNMA (kalkan) değerini en fazla +50.5% artırır. Onu Arnold ile eşleştir: Dirk kalkan ekler, Arnold hasarı azaltır."
+      ]
+    },
+    "50002": {
+      "focus": "pvp",
+      "position": "back",
+      "tags": [
+        "Tüm takımı güçlendirir",
+        "Yetenekleri hızlandırır",
+        "Tek Destek kahramanı"
+      ],
+      "summary": "Tek Destek kahramanı: tüm takımın SALDIRI değerini artırır ve herkesin yeteneklerinin daha hızlı dolmasını sağlar.",
+      "tips": [
+        "Şahin Göz 8 saniye boyunca TÜM müttefiklerin SALDIRI değerini en fazla 16.8% artırır; Şerif ise yetenek bekleme süresini en fazla 30.3% hızlandırır. Etkiler fraksiyona veya düşman türüne bağlı değildir.",
+        "Şerif ayrıca en yüksek SALDIRI değerine sahip müttefikin aldığı hasarı en fazla 12.2% azaltır; bu yüzden önce ana hasar vereni geliştir.",
+        "Kendi savaş yeteneği yavaş dolar (12.3 saniye); pasif bekleme süresi hızlandırması bunu dengeler."
+      ]
+    },
+    "50003": {
+      "focus": "pvp",
+      "position": "back",
+      "tags": [
+        "En yüksek SALDIRI",
+        "Kritik"
+      ],
+      "summary": "Oyundaki en yüksek SALDIRI ve UR’ler arasındaki en düşük HP: tamamen hasar vermeye odaklı bir Savaşçı.",
+      "tips": [
+        "Tesla Bobini 5 rastgele düşman arasında sıçrar, Frankenstein ise Kritik Oranını en fazla 30.3% artırır.",
+        "Tüm UR’ler içinde en düşük HP onda; önüne Arnold veya Dirk koy."
+      ]
+    },
+    "50004": {
+      "focus": "pvp",
+      "position": "front",
+      "tags": [
+        "Tüm düşmanları vurur",
+        "Radyasyonu durdurur",
+        "En yüksek HP"
+      ],
+      "summary": "Oyunun en dayanıklı kahramanı. Sonik bombası tüm düşmanları vurur ve Radyasyon saldırılarını zayıflatır.",
+      "tips": [
+        "İyon Kalkanı aldığı Radyasyon hasarını en fazla 40.6% azaltır; Ses Patlaması ise 5 saniyeliğine TÜM düşmanların Radyasyon hasarını 15.3% düşürür.",
+        "Radyasyon hasarı verenlere (Monroe, Yana, Leah, Lucian, Silas) karşı güçlü bir karşılıktır. Virgilio ile neredeyse Radyasyona dayanıklı bir ön hat kurar."
+      ]
+    },
+    "50005": {
+      "focus": "pvp",
+      "position": "front",
+      "tags": [
+        "Takıma Radyasyon kalkanı",
+        "Ön sırayı korur"
+      ],
+      "summary": "Tüm takımı Radyasyon hasarından koruyan ve ön sırayı sağlamlaştıran Taktiksel tank.",
+      "tips": [
+        "Manyetik Bobin 8 saniyeliğine TÜM müttefiklerin aldığı Radyasyon hasarını en fazla 20.4% azaltır.",
+        "Manyetik Zırh ön sıranın aldığı hasarı 13.5% ve Radyasyon hasarını ayrıca 13.5% azaltır."
+      ]
+    },
+    "50006": {
+      "focus": "pvp",
+      "position": "back",
+      "tags": [
+        "Tüm düşmanları vurur",
+        "Özel silah",
+        "Taktiksel takımları"
+      ],
+      "summary": "Helikopteri her düşmanı vuran Taktiksel keskin nişancı. Özel silahı Taktiksel kahramanlarla güçlenir.",
+      "tips": [
+        "Silahıyla savaşa her Taktiksel kahraman başına +3% Radyasyon hasarı veren 2 yükle başlar (en fazla 10) ve isabet ettikçe saldırı hızını en fazla +100% artırır.",
+        "Silahı, savaş başlar başlamaz ön sıradaki 2 düşmana savaş yeteneği kullanmasını da sağlar.",
+        "Silahı sezonun 17. gününde açılır."
+      ]
+    },
+    "50007": {
+      "focus": "pvp",
+      "position": "back",
+      "tags": [
+        "Arka sırayı vurur",
+        "Sersemletme",
+        "SALDIRI artışı"
+      ],
+      "summary": "Örümcek robotu düşmanın arka sırasına dalan ve 20% ihtimalle sersemleten Taktiksel hasar vereni.",
+      "tips": [
+        "Örümcek robotu arka sıradaki 3 düşmanı 934% SALDIRI değerine kadar hasarla vurur ve 20% sersemletme şansı taşır.",
+        "Aşırı Yükleme ona sabit +40.5% SALDIRI kazandırır; kadrodaki en büyük kişisel güçlendirmedir."
+      ]
+    },
+    "50008": {
+      "focus": "pvp",
+      "position": "back",
+      "tags": [
+        "Kalkanları parçalar",
+        "Fiziksel hasar"
+      ],
+      "summary": "Toksin mermileri hedefin SAVUNMA değerini en fazla 25% azaltan Taktiksel makineli tüfekçisi.",
+      "tips": [
+        "Engerek, 5★ seviyesinde 20 nörotoksin mermisi ateşler; her biri SAVUNMA’i 5% düşürür ve 9 saniyeliğine toplam −25%’e kadar iner.",
+        "SAVUNMA düşman kalkanıdır; onu parçalamak takımının her vuruşuna yardımcı olur. Savaş Makinesi +30.2% Fiziksel hasar sağlar."
+      ]
+    },
+    "50009": {
+      "focus": "pvp",
+      "position": "front",
+      "tags": [
+        "Karşı saldırı",
+        "Saldırı takımları"
+      ],
+      "summary": "Vurana karşılık veren Saldırı tankı: Nöbet durumundayken her darbe aldığında karşı saldırı yapar.",
+      "tips": [
+        "Taşınabilir Taret onu en fazla 8.8 saniyeliğine Tetikte durumuna sokar: her darbe aldığında karşılık verir (saniyede en fazla bir kez). 4★ seviyesinde Tetikte durumu ön sırayı da kapsar.",
+        "Gözcü ön sıranın aldığı hasarı en fazla 13.2% azaltır; Vera Tetikte durumundayken Saldırı kahramanları için bu değer iki katına çıkar. Onu Vince ve Jack ile kullan."
+      ]
+    },
+    "50010": {
+      "focus": "pvp",
+      "position": "front",
+      "tags": [
+        "Alay eder",
+        "Düşman SALDIRI değerini düşürür"
+      ],
+      "summary": "Düşmanın ön sırasını kışkırtan ve 8 saniyeliğine SALDIRI değerlerini düşüren Saldırı tankı.",
+      "tips": [
+        "Parlak Kışkırtma en fazla 4 ön sıra düşmanının dikkatini çeker ve SALDIRI değerlerini 8 saniyeliğine 16.8% azaltır.",
+        "Dağ Korucusu aldığı tüm hasarı en fazla 30.3% azaltır; PvP’de de iş görür."
+      ]
+    },
+    "50011": {
+      "focus": "pvp",
+      "position": "back",
+      "tags": [
+        "Zamanla Radyasyon hasarı",
+        "Özel silah",
+        "Saldırı takımları"
+      ],
+      "summary": "Ön sıradaki 3 düşmanı vuran Saldırı yıldırım büyücüsü; özel silahı biriken Radyasyon yanığı ekler.",
+      "tips": [
+        "Silahıyla isabet ettikçe “Aşırı Yükleme” etkisi uygular; 30 saniye boyunca saniyede SALDIRI’sının 3%’ü kadar hasar verir. Yük sınırı, takımdaki her Saldırı kahramanı için 3’tür.",
+        "Silahı normal saldırısını Sv. 1’de, savaş yeteneğini Sv. 10 ve 30’da yükseltir. 5★ olduktan sonra ana geliştirme yolu silah parçalarıdır.",
+        "Silahı sezonun en son günü açılır (38. gün)."
+      ]
+    },
+    "50012": {
+      "focus": "pvp",
+      "position": "back",
+      "tags": [
+        "Zayıf düşmanları bitirir",
+        "Kritik"
+      ],
+      "summary": "Saldırı bitiricisi: SMG’si her zaman HP yüzdesi en düşük düşmanı hedef alır.",
+      "tips": [
+        "SMG’si HP yüzdesi en düşük düşmana ateş ederek yaralı düşmanları bitirir.",
+        "Tamirci Kritik Oranını en fazla 30.3% artırır. Herkesi vuran kahramanlarla (Nicole, Yana) eşleştir."
+      ]
+    },
+    "50013": {
+      "focus": "pvp",
+      "position": "back",
+      "tags": [
+        "Tüm düşmanları vurur",
+        "Fiziksel hasar"
+      ],
+      "summary": "Ateş gücü ağı tüm düşmanları vuran ve pasifi Fiziksel hasarı artıran Saldırı bombacısı.",
+      "tips": [
+        "Hassas Ateş Gücü Ağı tüm düşmanları 716% SALDIRI değerine kadar hasarla vurur; tüm düşman takımına isabet eden yalnızca üç savaş yeteneğinden biridir (Leah ve Bekka’nınkiyle birlikte).",
+        "Aktüer +30.3% Fiziksel hasar sağlar; bu yüzden Katya’nın SAVUNMA azaltımıyla iyi eşleşir."
+      ]
+    }
+  },
+  "global": [
+    {
+      "title": "Takımı tek bir fraksiyondan kur",
+      "body": "Bir takımda 5 kahraman bulunur. Aynı fraksiyondaki kahramanlar HP, SALDIRI ve SAVUNMA bonusu açar: aynı fraksiyondan 3 kişi +5%, bir fraksiyondan 3 ve diğerinden 2 kişi +10%, 4 kişi +15%, 5 kişi ise +20% verir."
+    },
+    {
+      "title": "Fraksiyon karşıtlık üçgenini öğren",
+      "body": "Savaşçı, Saldırı’yı; Saldırı, Taktiksel’i; Taktiksel de Savaşçı’yı yener. Fraksiyonun düşmanınkine karşı üstünse kahramanların onlardan 20% daha az hasar alır. Savaş raporu takımının düşmana karşı üstün mü yoksa dezavantajlı mı olduğunu gösterir."
+    },
+    {
+      "title": "Tanklar önde, hasar verenler arkada",
+      "body": "Takımda ön sıra için 2, arka sıra için 3 yer vardır. Ön Hat kahramanlarının darbeleri karşılayacak HP ve SAVUNMA değerleri bulunur; bu yüzden oyun onları öne koymanı söyler. Arka Hat kahramanları arkadan hasar verir. Carter (Destek) arka sırada olmalıdır."
+    },
+    {
+      "title": "SSR’lerin çoğu yalnızca zombilere karşı parlar",
+      "body": "SSR kahramanların yaklaşık yarısının yetenekleri yalnızca canavarlara karşı çalışır (“canavarlara verilen hasar”, “canavarlardan alınan hasar”). Zombiler, baskınlar ve etkinliklerde iyidirler ama PvP’de zayıftırlar. Rachel, Logan ve Celeste’in güçlendirmeleri her yerde çalışır."
+    },
+    {
+      "title": "SAVUNMA bir kalkandır",
+      "body": "Oyun SAVUNMA’i, kırılana kadar hasarın çoğunu emen bir kalkan olarak tanımlar. SAVUNMA güçlendirmeleri (Conan, Dirk) kalkan ekler; Katya kalkanları daha hızlı parçalar; hasar azaltan pasifler (Arnold, Dirk, Vince, Virgilio) kalkan yok olduktan sonra da çalışır."
+    },
+    {
+      "title": "Fiziksel hasar ve Radyasyon",
+      "body": "İki hasar türü vardır. Radyasyon hasarı verenler: Monroe, Leah, Yana, Lucian, Silas, Celeste ve Carter (ayrıca Conan ile Jack’in normal saldırıları). Diğer herkes Fiziksel hasar verir. Bekka ve Virgilio Radyasyon hasarını azaltır; Arnold’un Saha Desteği yalnızca Fiziksel hasarı engeller. Her iki türe karşı korunan bir ön hat iki durumda da işini görür."
+    },
+    {
+      "title": "Özel silahlar büyük güç kazandırır",
+      "body": "Sv. 30 özel silah kahramanına yaklaşık 703 bin HP, 8.4 bin SALDIRI, 4.2 bin SAVUNMA ve 5% hasar direnci ekler. Bu, kahramanı Sv. 150’ye yükseltmekten daha fazla HP demektir. Ayrıca yetenek sınırını 30’dan 40’a çıkarır. Silahı geliştirmek her kahramana en fazla +40 bin HP, +800 SALDIRI ve +200 SAVUNMA kazandırır; yani silah parçaları tüm kadrona yarar."
+    },
+    {
+      "title": "4★ büyük bir stat yeteneği açar",
+      "body": "Kahraman Sv. 31 ve 4★ seviyesinde 4. yuvada kalıcı bir yetenek açılır: UR kahramanlar Kıyamet Hükmü (+20% HP, SALDIRI ve SAVUNMA, +10% yetenek dolum hızı), SSR kahramanlar Çorak Topraklar Gezgini (+10%), SR kahramanlar Hayatta Kalma Uzmanı (+5%) kazanır. Kahramanı 4★ yapmak tek seferlik en büyük yükseltmelerden biridir."
+    },
+    {
+      "title": "Önce yıldızları, sonra yetenek kitaplarını yükselt",
+      "body": "Yıldız seviyesi yetenek seviyesini sınırlar: 1★ → Sv. 1, 2★ → 5, 3★ → 10, 4★ → 20, 5★ → 30. Yıldızlar yetenek hasarını da katlar (ör. Monroe’nun keskin nişancı atışı: 0★ seviyesinde 70% SALDIRI, 5★ seviyesinde 486%). Sınırın üzerindeki kitaplar boşa gider; önce kahramanı yıldızlandır. 0’dan 5★’a çıkmak 975 parça gerektirir."
+    },
+    {
+      "title": "UR kahramanlar daha hızlı başlar",
+      "body": "UR kahramanlar 1–50. seviyelerde yaklaşık 27–46% daha fazla HP, SALDIRI ve SAVUNMA kazanır. 65. seviyeden itibaren herkes seviye atladığında aynı kazancı alır; farkı kahramanın temel değerleri yaratır. Birlik komutası 1. seviyedeki 52’den 150. seviyede 351’e çıkar."
+    },
+    {
+      "title": "Carter her takıma uyar; SR kahramanlar kaynak toplar",
+      "body": "Carter’ın güçlendirmeleri her takımda ve her düşmana karşı çalışır. Jamal, Hank ve Jackson savaşta zayıftır ancak Asker Yükünü artıran tek kahramanlardır; onları kaynak toplamaya gönder."
+    }
+  ]
+}

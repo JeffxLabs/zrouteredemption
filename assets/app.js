@@ -25,25 +25,33 @@
     t.textContent = msg; t.hidden = false; clearTimeout(toastTimer); toastTimer = setTimeout(() => { t.hidden = true; }, 1800);
   }
   const esc = v => String(v ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-  const fmt = v => Number(v).toLocaleString('en-US', { maximumFractionDigits: 0 });
+  const locale = () => window.I18N?.locale || 'en-US';
+  const fmt = v => new Intl.NumberFormat(locale(), { maximumFractionDigits: 0 }).format(Number(v));
   function short(n) {
-    const a = Math.abs(n);
-    if (a >= 1e9) return `${+(n / 1e9).toFixed(2)}B`;
-    if (a >= 1e6) return `${+(n / 1e6).toFixed(2)}M`;
-    if (a >= 1e4) return `${+(n / 1e3).toFixed(1)}K`;
+    const a = Math.abs(Number(n));
+    if (a >= 1e4) return new Intl.NumberFormat(locale(), { notation: 'compact', compactDisplay: 'short', maximumFractionDigits: 2 }).format(Number(n));
     return fmt(n);
   }
   function duration(sec) {
     sec = Math.round(sec);
-    if (sec <= 0) return '0s';
+    const code = window.I18N?.language || 'en';
+    const unit = ({
+      en: { d: 'd', h: 'h', m: 'm', s: 's' }, fr: { d: 'j', h: 'h', m: 'min', s: 's' },
+      ru: { d: 'д', h: 'ч', m: 'м', s: 'с' }, tr: { d: 'g', h: 'sa', m: 'dk', s: 'sn' },
+      pl: { d: 'd', h: 'godz.', m: 'min', s: 's' }, es: { d: 'd', h: 'h', m: 'min', s: 's' },
+      pt: { d: 'd', h: 'h', m: 'min', s: 's' }, de: { d: 'T', h: 'Std.', m: 'Min.', s: 'Sek.' },
+      ko: { d: '일', h: '시간', m: '분', s: '초' }, zh: { d: '天', h: '小时', m: '分钟', s: '秒' }
+    })[code] || { d: 'd', h: 'h', m: 'm', s: 's' };
+    if (sec <= 0) return `0${unit.s}`;
     const d = Math.floor(sec / 86400), h = Math.floor(sec % 86400 / 3600), m = Math.floor(sec % 3600 / 60), s = sec % 60;
-    if (d) return `${d}d ${h}h`;
-    if (h) return `${h}h ${m}m`;
-    if (m) return `${m}m ${s}s`;
-    return `${s}s`;
+    const n = v => new Intl.NumberFormat(locale(), { maximumFractionDigits: 0 }).format(v);
+    if (d) return `${n(d)}${unit.d} ${n(h)}${unit.h}`;
+    if (h) return `${n(h)}${unit.h} ${n(m)}${unit.m}`;
+    if (m) return `${n(m)}${unit.m} ${n(s)}${unit.s}`;
+    return `${n(s)}${unit.s}`;
   }
   function copy(text, label = 'Copied') {
-    const done = () => toast(label);
+    const done = () => toast(window.I18N?.t(label) || label);
     if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(done, () => prompt('Copy this', text));
     else prompt('Copy this', text);
   }

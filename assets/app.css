@@ -43,6 +43,10 @@ a { color: var(--accent); }
 .icon-btn { margin-left: auto; width: 34px; height: 34px; display: grid; place-items: center; border-radius: 10px; border: 1px solid var(--line2); background: var(--s1); cursor: pointer; }
 .icon-btn svg { width: 17px; height: 17px; }
 @media (min-width: 900px) { .desktop-nav { display: flex; } .icon-btn { margin-left: 8px; } }
+.language-control { height: 34px; display: inline-flex; align-items: center; gap: 5px; flex: none; padding: 0 7px; border: 1px solid var(--line2); border-radius: 10px; background: var(--s1); color: var(--muted); }
+.language-control svg { width: 15px; height: 15px; flex: none; }
+.language-control select { width: 83px; min-width: 0; height: 30px; padding: 0; border: 0; outline: 0; background: transparent; color: var(--text); font-size: 12px; font-weight: 650; }
+@media (max-width: 520px) { .header-inner { gap: 8px; } .language-control { padding: 0 6px; gap: 3px; } .language-control select { width: 68px; font-size: 11px; } .brand { min-width: 0; overflow: hidden; text-overflow: ellipsis; } .ver { display: none; } }
 
 main { max-width: 1440px; margin: 0 auto; padding: 14px 16px 24px; }
 .intro { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; margin-bottom: 12px; }

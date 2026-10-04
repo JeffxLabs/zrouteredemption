@@ -1,0 +1,469 @@
+{
+  "_about": "Lecture simplifiée des données extraites du client : tableaux de héros du client 1.30.07, valeurs de compétences et règles d'escouade des tables décryptées V202610032200, et textes anglais du jeu issus du même catalogue. Sauf indication contraire, les chiffres des astuces correspondent aux valeurs affichées par le client à 5★ et au niveau de compétence 30.",
+  "heroes": {
+    "10005": {
+      "focus": "pvp",
+      "position": "back",
+      "tags": [
+        "Dégâts en rafale",
+        "Bonus d'ATQ"
+      ],
+      "summary": "Tireuse Guerrière fragile : elle lance une salve de 4 grenades et augmente sa propre ATQ.",
+      "tips": [
+        "Grenadier touche des ennemis au hasard (jusqu’à 8 grenades à 5★) : elle est donc idéale contre une escouade ennemie complète, pas contre un boss seul.",
+        "Modification de Calibre accorde +28,2 % d’ATQ fixe à chaque combat : Rachel reste donc une SSR intéressante en PvP."
+      ]
+    },
+    "10006": {
+      "focus": "pve",
+      "position": "back",
+      "tags": [
+        "Chasse aux zombies",
+        "Ressources bonus",
+        "Bonus pour tout le compte"
+      ],
+      "summary": "Nora éveillée (après la quête de l’antidote) est la spécialiste de la chasse aux zombies : elle rapporte plus de ressources sur les zombies de ressources et renforce chaque escouade.",
+      "tips": [
+        "Sa simple possession donne à TOUTES vos escouades +5 % de dégâts contre les monstres sauvages et de ralliement, même si elle n’est pas déployée.",
+        "Placez-la dans l’escouade qui chasse les zombies de métal, de nourriture et de pétrole ainsi que les hordes de zombies d’élite : son escouade récupère plus de minerai de fer, de nourriture et de pétrole.",
+        "Ses compétences ne fonctionnent que contre les monstres : gardez-la hors de vos escouades PvP."
+      ]
+    },
+    "10007": {
+      "focus": "pvp",
+      "position": "front",
+      "tags": [
+        "Protège la première ligne",
+        "Défense physique"
+      ],
+      "summary": "Tank Guerrier qui réduit les dégâts subis par toute la première ligne.",
+      "tips": [
+        "Soutien de terrain réduit jusqu’à 30 % les dégâts physiques subis par la première ligne pendant 8 s, et Bouclier tactique ajoute une réduction permanente de 17,7 %.",
+        "Soutien de terrain ne bloque que les dégâts physiques. Face aux escouades axées Radiation (Monroe, Yana, Leah, Lucian, Silas), ajoutez Virgilio ou Bekka."
+      ]
+    },
+    "10008": {
+      "focus": "pve",
+      "position": "front",
+      "tags": [
+        "Tank anti-zombies",
+        "Lance-flammes"
+      ],
+      "summary": "Tank Guerrière conçue pour combattre les zombies : son rugissement réduit les dégâts des monstres et sa compétence passive augmente sa DÉF.",
+      "tips": [
+        "Son lance-flammes tire lentement (une attaque toutes les 4 s), mais frappe fort.",
+        "Son rugissement ne réduit que les dégâts des monstres : utilisez Arnold ou Dirk en PvP."
+      ]
+    },
+    "20005": {
+      "focus": "pve",
+      "position": "back",
+      "tags": [
+        "Renforce la ligne arrière",
+        "Défense anti-zombies"
+      ],
+      "summary": "Archer tactique et meneuse de revue : sa danse augmente les dégâts de votre ligne arrière contre les monstres.",
+      "tips": [
+        "Plus votre ligne arrière est puissante, plus son bonus est utile. Associez-la à Leah, Silas ou Katya pendant les événements zombies.",
+        "Son bonus et sa compétence passive ne fonctionnent que contre les monstres : laissez-la sur le banc en PvP."
+      ]
+    },
+    "20006": {
+      "focus": "pve",
+      "position": "front",
+      "tags": [
+        "Protège la première ligne",
+        "Défense anti-zombies"
+      ],
+      "summary": "Tank tactique dont le chant de guerre donne à la première ligne un bonus de DÉF (bouclier) pendant 6 s.",
+      "tips": [
+        "Dans ce jeu, la DÉF sert de bouclier et absorbe les dégâts jusqu’à sa rupture : son chant ajoute donc du bouclier à votre première ligne.",
+        "Sa compétence passive ne réduit que les dégâts des monstres. En PvP, Bekka ou Virgilio font mieux."
+      ]
+    },
+    "20009": {
+      "focus": "pvp",
+      "position": "back",
+      "tags": [
+        "Bonus d'ATQ",
+        "Touche 2 cibles"
+      ],
+      "summary": "Lanceur de cocktails Molotov Guerrier : il profite d’un bonus d’attaque permanent et lance des bombes incendiaires sur 2 cibles.",
+      "tips": [
+        "Son bonus d’attaque fonctionne dans tous les combats, y compris en PvP.",
+        "Sa compétence de combat répartit les dégâts entre 2 ennemis aléatoires au lieu d’en viser un seul."
+      ]
+    },
+    "30001": {
+      "focus": "pve",
+      "position": "front",
+      "tags": [
+        "Réduit l'ATQ ennemie",
+        "Défense anti-zombies"
+      ],
+      "summary": "Tank Guerrière empoisonneuse : son tir de venin touche 2 ennemis de première ligne et réduit leur ATQ de 6 % pendant 4 s.",
+      "tips": [
+        "La réduction de 6 % d’ATQ s’applique à tous les ennemis, joueurs compris.",
+        "Sa compétence passive ne réduit que les dégâts des monstres : elle sert surtout de tank contre les zombies."
+      ]
+    },
+    "30003": {
+      "focus": "pve",
+      "position": "back",
+      "tags": [
+        "Renforce la ligne arrière Guerrière",
+        "Dégâts contre les zombies"
+      ],
+      "summary": "Aria SSR : son fusil à tir rapide s’accompagne d’une compétence passive qui aide vos Guerriers de la ligne arrière à infliger plus de dégâts aux monstres.",
+      "tips": [
+        "En saison 1, elle devient Aria UR (#31003), qui la remplace.",
+        "Sa compétence passive donne aux Guerriers de la ligne arrière jusqu’à +22,9 % de dégâts contre les monstres : elle forme un duo naturel avec Monroe, Lucian, Rachel et Logan dans les contenus zombies."
+      ]
+    },
+    "30004": {
+      "focus": "pvp",
+      "position": "back",
+      "tags": [
+        "ATQ SSR la plus élevée",
+        "Touche la première ligne"
+      ],
+      "summary": "La SSR qui frappe le plus fort (et la plus fragile) : une tireuse de roquettes Assaut.",
+      "tips": [
+        "Ses obus au phosphore touchent les 2 ennemis de première ligne et déchiquettent les tanks.",
+        "Elle a moins de PV que toute autre SSR : protégez-la avec deux tanks solides devant elle."
+      ]
+    },
+    "30005": {
+      "focus": "pve",
+      "position": "back",
+      "tags": [
+        "5 grenades",
+        "Dégâts contre les zombies"
+      ],
+      "summary": "lance-grenades Assaut : 5 grenades par compétence de combat et des dégâts supplémentaires contre les monstres.",
+      "tips": [
+        "Ses cinq grenades aléatoires en font l’une des meilleures SSR pour éliminer des vagues de zombies.",
+        "Sa compétence passive ne fonctionne que contre les monstres. En PvP, Celeste est la meilleure SSR Assaut."
+      ]
+    },
+    "30006": {
+      "focus": "pvp",
+      "position": "back",
+      "tags": [
+        "Dégâts Radiation",
+        "Arme exclusive",
+        "Escouades Guerrières"
+      ],
+      "summary": "Tireuse d’élite Guerrière dont l’arme exclusive devient plus puissante avec chaque Guerrier de l’escouade.",
+      "tips": [
+        "Avec son arme, chacun de ses coups critiques ajoute une charge de +3 % de dégâts Radiation (maximum 15 %). Le nombre maximal de charges dépend du nombre de Guerriers dans l’escouade : remplissez-la de Guerriers.",
+        "À 4 charges, elle tire aussi une roquette dévastatrice sur 3 ennemis.",
+        "Sa compétence de combat est disponible dès le niveau de héros 1 ; les autres doivent attendre le niveau 5.",
+        "Son arme se débloque le plus tôt dans la saison (jour 3 ; Leah au jour 17, Yana au jour 38)."
+      ]
+    },
+    "30007": {
+      "focus": "pve",
+      "position": "front",
+      "tags": [
+        "Ralentit les ennemis",
+        "Défense anti-zombies"
+      ],
+      "summary": "Tank Assaut dont les grenades ralentissent les ennemis et dont les tactiques réduisent les dégâts des monstres sur la première ligne.",
+      "tips": [
+        "Grenade Tactique ralentit aussi les ennemis, ce qui vous fait gagner du temps contre les zombies qui chargent.",
+        "Sa réduction de dégâts ne fonctionne que contre les monstres. Pour la première ligne en PvP, choisissez Vera ou Vince.",
+        "La table du client attribue à Tactique en tenaille une valeur impossible (295 % de réduction des dégâts à 5★), ce qui ressemble à une erreur de données du jeu."
+      ]
+    },
+    "30011": {
+      "focus": "utility",
+      "position": "back",
+      "tags": [
+        "Collecte",
+        "Capacité de charge"
+      ],
+      "summary": "Bombardier SR dont le vrai rôle est la collecte : il augmente la charge que votre marche peut transporter.",
+      "tips": [
+        "Les trois héros SR (Jackson, Jamal et Hank) sont les seuls à augmenter la charge des soldats : envoyez-les en marche de collecte.",
+        "Il n’a pas de compétence passive et se bat donc mal."
+      ]
+    },
+    "31003": {
+      "focus": "pve",
+      "position": "back",
+      "tags": [
+        "Évolution UR",
+        "Renforce la ligne arrière Guerrière"
+      ],
+      "summary": "Aria UR : l’évolution saison 1 d’Aria SSR, avec des versions plus puissantes de toutes ses compétences.",
+      "tips": [
+        "En saison 1, Aria SSR évolue vers cette version UR qui la remplace : investissez en sachant que votre progression est conservée.",
+        "Tempête de barrage est une attaque canalisée longue : environ 3 032 % d’ATQ au total à 5★, niveau 30, contre 1 754 % pour Aria SSR.",
+        "Exterminateur de zombies donne aux Guerriers de la ligne arrière +25,5 % de dégâts contre les monstres à 5★."
+      ]
+    },
+    "40001": {
+      "focus": "utility",
+      "position": "back",
+      "tags": [
+        "Collecte",
+        "Capacité de charge"
+      ],
+      "summary": "Collecteur SR. Il est classé en première ligne, mais ses stats sont celles d’un combattant fragile axé dégâts.",
+      "tips": [
+        "Utilisez-le pour la collecte (charge des soldats accrue), pas comme tank : il a de loin le moins de PV parmi les héros de première ligne.",
+        "S’il doit combattre, placez-le en ligne arrière."
+      ]
+    },
+    "40002": {
+      "focus": "utility",
+      "position": "front",
+      "tags": [
+        "Collecte",
+        "Capacité de charge"
+      ],
+      "summary": "Collecteur SR au lance-flammes avec de vraies stats de tank.",
+      "tips": [
+        "Le plus robuste des trois collecteurs : un bon choix si votre marche de collecte risque d’être attaquée.",
+        "Attaques lentes (toutes les 4 s) et aucune compétence passive."
+      ]
+    },
+    "40010": {
+      "focus": "pve",
+      "position": "back",
+      "tags": [
+        "Touche la première ligne",
+        "Dégâts contre les zombies"
+      ],
+      "summary": "Archer tactique dont la flèche lourde frappe les ennemis de première ligne et dont la compétence passive augmente les dégâts contre les monstres.",
+      "tips": [
+        "Une option économique pour compléter la ligne arrière des escouades tactiques anti-zombies, en attendant que vos héros tactiques UR aient assez d’étoiles.",
+        "Sa compétence passive ne fonctionne que contre les monstres."
+      ]
+    },
+    "50001": {
+      "focus": "pvp",
+      "position": "front",
+      "tags": [
+        "Protège la première ligne",
+        "Réduction des dégâts"
+      ],
+      "summary": "Tank Guerrier UR : son cri ajoute de la DÉF (bouclier) à la première ligne et son armure réduit tous les dégâts qu’il subit.",
+      "tips": [
+        "Armure lourde réduit jusqu’à 30,3 % TOUS les dégâts qu’il subit : il tient donc bien en PvP.",
+        "Volonté de Fer donne jusqu’à +50,5 % de DÉF (bouclier) à la première ligne pendant 10 s. Associez-le à Arnold : Dirk ajoute du bouclier, tandis qu’Arnold réduit les dégâts."
+      ]
+    },
+    "50002": {
+      "focus": "pvp",
+      "position": "back",
+      "tags": [
+        "Renforce toute l’escouade",
+        "Compétences plus rapides",
+        "Seul héros Soutien"
+      ],
+      "summary": "L’unique héros Soutien : il augmente l’attaque de toute l’escouade et accélère la recharge des compétences de chacun.",
+      "tips": [
+        "Hawkeye augmente jusqu’à 16,8 % l’ATQ de TOUS les alliés pendant 8 s, et Shérif accélère la recharge des compétences jusqu’à 30,3 %. Ces effets ne dépendent ni de la faction ni du type d’ennemi.",
+        "Shérif réduit aussi jusqu’à 12,2 % les dégâts subis par votre allié ayant l’ATQ la plus élevée : améliorez donc d’abord votre principal donneur de dégâts.",
+        "Sa propre compétence de combat se recharge lentement (12,3 s), mais sa compétence passive d’accélération compense."
+      ]
+    },
+    "50003": {
+      "focus": "pvp",
+      "position": "back",
+      "tags": [
+        "ATQ la plus élevée",
+        "Critique"
+      ],
+      "summary": "L’ATQ la plus élevée du jeu et les PV les plus bas de tous les UR : un Guerrier spécialisé dans les dégâts à tout prix.",
+      "tips": [
+        "Bobine Tesla rebondit entre 5 ennemis aléatoires, et Frankenstein ajoute jusqu’à 30,3 % de taux de critique.",
+        "Il a moins de PV que tout autre UR : placez Arnold ou Dirk devant lui."
+      ]
+    },
+    "50004": {
+      "focus": "pvp",
+      "position": "front",
+      "tags": [
+        "Touche tous les ennemis",
+        "Bloque la Radiation",
+        "PV les plus élevés"
+      ],
+      "summary": "Le héros le plus résistant du jeu. Sa grenade sonique touche tous les ennemis et affaiblit leurs attaques Radiation.",
+      "tips": [
+        "Bouclier Ionique réduit jusqu’à 40,6 % les dégâts Radiation qu’elle subit, et Boom Sonique réduit de 15,3 % les dégâts Radiation de TOUS les ennemis pendant 5 s.",
+        "C’est la réponse idéale aux spécialistes des dégâts Radiation (Monroe, Yana, Leah, Lucian, Silas). Avec Virgilio, elle forme une première ligne presque immunisée à la Radiation."
+      ]
+    },
+    "50005": {
+      "focus": "pvp",
+      "position": "front",
+      "tags": [
+        "Bouclier Radiation pour l’escouade",
+        "Protège la première ligne"
+      ],
+      "summary": "Tank tactique qui protège toute l’escouade des dégâts Radiation et renforce la première ligne.",
+      "tips": [
+        "Bobine magnétique réduit jusqu’à 20,4 % les dégâts Radiation subis par TOUS les alliés pendant 8 s.",
+        "Armure Magnétique réduit de 13,5 % les dégâts subis par la première ligne et ajoute 13,5 % de réduction supplémentaire contre la Radiation."
+      ]
+    },
+    "50006": {
+      "focus": "pvp",
+      "position": "back",
+      "tags": [
+        "Touche tous les ennemis",
+        "Arme exclusive",
+        "Escouades tactiques"
+      ],
+      "summary": "Tireuse d’élite tactique dont l’hélicoptère frappe chaque ennemi. Son arme exclusive gagne en puissance avec les héros tactiques.",
+      "tips": [
+        "Avec son arme, elle commence chaque combat avec 2 charges de +3 % de dégâts Radiation par héros tactique (maximum 10), et gagne jusqu’à +100 % de vitesse d’attaque à mesure qu’elle touche ses cibles.",
+        "Son arme lui fait aussi lancer sa compétence de combat sur 2 ennemis de première ligne dès le début du combat.",
+        "Son arme se débloque au jour 17 de la saison."
+      ]
+    },
+    "50007": {
+      "focus": "pvp",
+      "position": "back",
+      "tags": [
+        "Touche la ligne arrière",
+        "Étourdit",
+        "Bonus d'ATQ"
+      ],
+      "summary": "Combattant tactique qui envoie son robot-araignée plonger sur la ligne arrière ennemie, avec 20 % de chances d’étourdir.",
+      "tips": [
+        "Son robot-araignée frappe 3 ennemis de la ligne arrière pour jusqu’à 934 % d’ATQ, avec 20 % de chances d’étourdir.",
+        "Surcharge lui donne un bonus fixe de +40,5 % d’ATQ, le plus gros bonus personnel de l’effectif."
+      ]
+    },
+    "50008": {
+      "focus": "pvp",
+      "position": "back",
+      "tags": [
+        "Brise les boucliers",
+        "Dégâts physiques"
+      ],
+      "summary": "Mitrailleur tactique dont les balles toxiques réduisent jusqu’à 25 % la DÉF de la cible.",
+      "tips": [
+        "Viper tire 20 balles neurotoxiques (à 5★), chacune retirant 5 % de DÉF, jusqu’à −25 % pendant 9 s.",
+        "La DÉF est le bouclier ennemi : la réduire aide chaque attaque de votre escouade. Machine de Guerre ajoute +30,2 % de dégâts physiques."
+      ]
+    },
+    "50009": {
+      "focus": "pvp",
+      "position": "front",
+      "tags": [
+        "Contre-attaque",
+        "Escouades Assaut"
+      ],
+      "summary": "Tank Assaut qui riposte : en état de garde, elle contre-attaque chaque fois qu’elle est touchée.",
+      "tips": [
+        "Tourelle Portative la place en garde pendant jusqu’à 8,8 s : elle contre-attaque à chaque coup reçu (au maximum une fois par seconde). À 4★, la garde protège aussi la première ligne.",
+        "Sentinelle réduit jusqu’à 13,2 % les dégâts subis par la première ligne. Cette réduction est doublée pour les héros Assaut tant qu’elle est en garde : déployez-la avec Vince et Jack."
+      ]
+    },
+    "50010": {
+      "focus": "pvp",
+      "position": "front",
+      "tags": [
+        "Provoque",
+        "Réduit l'ATQ ennemie"
+      ],
+      "summary": "Tank Assaut qui provoque la première ligne ennemie et réduit son attaque pendant 8 s.",
+      "tips": [
+        "Provocation Éclatante attire jusqu’à 4 ennemis de première ligne et réduit leur ATQ de 16,8 % pendant 8 s.",
+        "Ranger des Montagnes réduit jusqu’à 30,3 % tous les dégâts qu’il subit : il est aussi efficace en PvP."
+      ]
+    },
+    "50011": {
+      "focus": "pvp",
+      "position": "back",
+      "tags": [
+        "Dégâts Radiation sur la durée",
+        "Arme exclusive",
+        "Escouades Assaut"
+      ],
+      "summary": "Lanceuse d’éclairs Assaut qui frappe les 3 ennemis de la ligne arrière ; son arme exclusive ajoute un embrasement Radiation cumulable.",
+      "tips": [
+        "Avec son arme, ses coups appliquent Surcharge Charge, qui inflige chaque seconde des dégâts équivalents à 3 % de son ATQ pendant 30 s. Le maximum de charges est de 3 par héros Assaut dans l’escouade.",
+        "Son arme améliore son attaque automatique au niveau 1, puis sa compétence de combat aux niveaux 10 et 30. Une fois à 5★, les fragments d’arme sont donc sa principale voie d’amélioration.",
+        "Son arme se débloque en dernier dans la saison (jour 38)."
+      ]
+    },
+    "50012": {
+      "focus": "pvp",
+      "position": "back",
+      "tags": [
+        "Achève les ennemis affaiblis",
+        "Critique"
+      ],
+      "summary": "Finisseur Assaut : son SMG vise toujours l’ennemi dont le pourcentage de PV est le plus bas.",
+      "tips": [
+        "Son SMG vise toujours l’ennemi dont le pourcentage de PV est le plus bas : il achève les cibles blessées.",
+        "Mécanicien ajoute jusqu’à 30,3 % de taux de critique. Associez-le à des héros qui touchent tout le monde (Nicole, Yana)."
+      ]
+    },
+    "50013": {
+      "focus": "pvp",
+      "position": "back",
+      "tags": [
+        "Touche tous les ennemis",
+        "Dégâts physiques"
+      ],
+      "summary": "Grenadière Assaut dont le filet de feu frappe chaque ennemi, avec une compétence passive qui augmente les dégâts physiques.",
+      "tips": [
+        "Bien Filet de Puissance de Feu touche TOUS les ennemis et inflige jusqu’à 716 % d’ATQ : c’est l’une des trois seules compétences de combat à frapper toute l’escouade ennemie, avec celles de Leah et Bekka.",
+        "Actuaire ajoute +30,3 % de dégâts physiques : la réduction de DÉF de Katya se combine donc très bien avec elle."
+      ]
+    }
+  },
+  "global": [
+    {
+      "title": "Remplissez l’escouade avec une faction",
+      "body": "Une escouade compte 5 héros. Les héros d’une même faction débloquent un bonus de PV, d’ATQ et de DÉF : 3 héros d’une faction donnent +5 %, 3 plus 2 d’une autre faction donnent +10 %, 4 d’une faction donnent +15 %, et 5 donnent +20 %."
+    },
+    {
+      "title": "Maîtrisez le triangle des contres",
+      "body": "Les Guerriers battent les héros Assaut, l’Assaut bat les héros tactiques, et les héros tactiques battent les Guerriers. Quand votre faction contre la leur, vos héros subissent 20 % de dégâts en moins. Le rapport de combat indique si votre formation contre l’ennemi ou si elle est contrée."
+    },
+    {
+      "title": "Des tanks devant, les dégâts derrière",
+      "body": "Une escouade dispose de 2 places en première ligne et de 3 en ligne arrière. Les héros de première ligne ont les PV et la DÉF nécessaires pour encaisser : le jeu recommande donc de les placer devant. Les héros d’arrière-garde infligent les dégâts depuis l’arrière. Carter (Soutien) doit rester en ligne arrière."
+    },
+    {
+      "title": "Beaucoup de SSR brillent seulement contre les zombies",
+      "body": "Environ la moitié des héros SSR ont des compétences qui ne fonctionnent que contre les monstres (« dégâts contre les monstres », « dégâts subis de la part des monstres »). Ils sont excellents contre les zombies, en ralliement et lors des événements, mais faibles en PvP. Rachel, Logan et Celeste ont des bonus actifs partout."
+    },
+    {
+      "title": "La DÉF est un bouclier",
+      "body": "Le jeu présente la DÉF comme un bouclier qui absorbe la plupart des dégâts jusqu’à ce qu’il se brise. Les bonus de DÉF (Conan, Dirk) ajoutent du bouclier ; Katya brise les boucliers plus vite ; les compétences passives de réduction des dégâts (Arnold, Dirk, Vince, Virgilio) restent actives une fois le bouclier détruit."
+    },
+    {
+      "title": "Dégâts physiques ou Radiation",
+      "body": "Il existe deux types de dégâts. Spécialistes de la Radiation : Monroe, Leah, Yana, Lucian, Silas, Celeste et Carter (ainsi que les attaques automatiques de Conan et Jack). Tous les autres infligent des dégâts physiques. Bekka et Virgilio réduisent les dégâts Radiation ; le Soutien de terrain d’Arnold ne bloque que les dégâts physiques. Une première ligne avec les deux types de protection vous couvre dans les deux cas."
+    },
+    {
+      "title": "Les armes exclusives changent tout",
+      "body": "Une arme exclusive de niveau 30 ajoute environ 703k PV, 8,4k ATQ, 4,2k DÉF et 5 % de résistance aux dégâts à son héros. Cela représente plus de PV que de monter le héros au niveau 150. Elle augmente aussi le niveau maximal des compétences de 30 à 40. Son amélioration donne à chaque héros jusqu’à +40k PV, +800 ATQ et +200 DÉF : les fragments d’arme profitent donc à toute votre équipe."
+    },
+    {
+      "title": "À 4★, un gros talent de stats se débloque",
+      "body": "Au niveau de héros 31 et à 4★, le 4e emplacement débloque un talent permanent : les héros UR obtiennent Jugement de l'Apocalypse (+20 % de PV, d’ATQ et de DÉF, +10 % de vitesse de recharge des compétences), les SSR obtiennent Nomade des Terres Désolées (+10 %), et les SR Expert en Survie (+5 %). Passer un héros à 4★ est l’une des améliorations individuelles les plus importantes."
+    },
+    {
+      "title": "Montez les étoiles avant les livres de compétence",
+      "body": "Le niveau d’étoile fixe le niveau maximal des compétences : 1★ → niv. 1, 2★ → 5, 3★ → 10, 4★ → 20, 5★ → 30. Les étoiles multiplient aussi les dégâts des compétences (par exemple, le tir de précision de Monroe passe de 70 % d’ATQ à 0★ à 486 % à 5★). Les livres au-delà du maximum sont perdus : augmentez d’abord les étoiles. Passer de 0 à 5 étoiles demande 975 fragments."
+    },
+    {
+      "title": "Les héros UR progressent plus vite au début",
+      "body": "Du niveau 1 au niveau 50, les héros UR gagnent environ 27–46 % de PV, d’ATQ et de DÉF supplémentaires grâce aux niveaux. À partir du niveau 65, tous les héros gagnent la même chose en montant de niveau : ce sont leurs stats de base qui font la différence. Le commandement des troupes passe de 52 au niveau 1 à 351 au niveau 150."
+    },
+    {
+      "title": "Carter s’intègre partout ; les SR sont faits pour la collecte",
+      "body": "Les bonus de Carter fonctionnent dans toutes les escouades et contre tous les ennemis. Jamal, Hank et Jackson combattent mal, mais ce sont les seuls héros qui augmentent la charge des soldats : utilisez-les pour la collecte."
+    }
+  ]
+}

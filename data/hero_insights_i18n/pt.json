@@ -1,0 +1,469 @@
+{
+  "_about": "Leitura simples dos dados extraídos do cliente: tabelas de heróis do cliente 1.30.07, valores de habilidades e regras de esquadrão das tabelas desencriptadas V202610032200, e textos ingleses do jogo do mesmo catálogo. Salvo indicação em contrário, os valores dos conselhos são os apresentados pelo cliente com 5★ e a habilidade no nível 30.",
+  "heroes": {
+    "10005": {
+      "focus": "pvp",
+      "position": "back",
+      "tags": [
+        "Dano explosivo",
+        "Aumento de ATQ"
+      ],
+      "summary": "Artilheira Guerreira frágil que lança uma salva de 4 granadas e aumenta o próprio ATQ.",
+      "tips": [
+        "Granadeiro atinge inimigos aleatórios (até 8 granadas com 5★), por isso é melhor contra esquadrões inimigos completos do que contra um único chefe.",
+        "Modificação de Calibre concede um aumento fixo de +28,2 % de ATQ em todos os combates, por isso Rachel continua a ser uma SSR útil em PvP."
+      ]
+    },
+    "10006": {
+      "focus": "pve",
+      "position": "back",
+      "tags": [
+        "Caça aos zombies",
+        "Recursos extra",
+        "Bónus para toda a conta"
+      ],
+      "summary": "Nora Desperta (após a missão do antídoto) é especialista em caçar zombies: obtém mais recursos dos zombies de recursos e melhora todos os esquadrões.",
+      "tips": [
+        "Só por a teres, TODOS os teus esquadrões recebem +5 % de dano contra Monstros Selvagens e de Rally, mesmo que ela não esteja destacada.",
+        "Coloca-a no esquadrão que caça zombies de Metal, Comida e Petróleo e hordas de zombies de elite: o esquadrão recebe mais minério de ferro, comida e petróleo dessas baixas.",
+        "As habilidades dela só funcionam contra monstros, por isso deixa-a fora dos esquadrões PvP."
+      ]
+    },
+    "10007": {
+      "focus": "pvp",
+      "position": "front",
+      "tags": [
+        "Protege a linha da frente",
+        "Defesa física"
+      ],
+      "summary": "Tanque Guerreira que reduz o dano recebido por toda a linha da frente.",
+      "tips": [
+        "Apoio de Campo reduz até 30 % do dano físico recebido pela linha da frente durante 8 s, e Escudo Tático acrescenta uma redução permanente de 17,7 %.",
+        "Apoio de Campo só bloqueia dano físico. Contra esquadrões focados em Radiação (Monroe, Yana, Leah, Lucian, Silas), junta Virgilio ou Bekka."
+      ]
+    },
+    "10008": {
+      "focus": "pve",
+      "position": "front",
+      "tags": [
+        "Tanque contra zombies",
+        "Lança-chamas"
+      ],
+      "summary": "Tanque Guerreira feita para combates contra zombies: o seu rugido reduz o dano dos monstros e a passiva aumenta a DEF.",
+      "tips": [
+        "O lança-chamas dispara devagar (um ataque a cada 4 s), mas bate forte.",
+        "O rugido só reduz o dano dos monstros, por isso usa Arnold ou Dirk em PvP."
+      ]
+    },
+    "20005": {
+      "focus": "pve",
+      "position": "back",
+      "tags": [
+        "Reforça a retaguarda",
+        "Defesa contra zombies"
+      ],
+      "summary": "Arqueira Tática e líder de claque: a dança aumenta o dano causado pela tua retaguarda aos monstros.",
+      "tips": [
+        "Quanto mais forte for a tua retaguarda, mais vale o reforço. Junta-a a Leah, Silas ou Katya nos eventos de zombies.",
+        "O reforço e a passiva só funcionam contra monstros, por isso deixa-a de fora em PvP."
+      ]
+    },
+    "20006": {
+      "focus": "pve",
+      "position": "front",
+      "tags": [
+        "Protege a linha da frente",
+        "Defesa contra zombies"
+      ],
+      "summary": "Tanque Tático cuja canção de batalha dá DEF (escudo) extra à linha da frente durante 6 s.",
+      "tips": [
+        "Neste jogo, a DEF funciona como um escudo que absorve dano até se partir, por isso a canção acrescenta escudo à tua linha da frente.",
+        "A passiva só reduz o dano dos monstros. Em PvP, Bekka ou Virgilio fazem melhor o trabalho."
+      ]
+    },
+    "20009": {
+      "focus": "pvp",
+      "position": "back",
+      "tags": [
+        "Aumento de ATQ",
+        "Atinge 2 alvos"
+      ],
+      "summary": "Lançador de cocktails Molotov Guerreiro com um aumento permanente de ataque e bombas incendiárias que atingem 2 alvos.",
+      "tips": [
+        "O aumento de ataque funciona em todos os combates, incluindo PvP.",
+        "A habilidade de batalha divide o dano por 2 inimigos aleatórios em vez de se focar num só."
+      ]
+    },
+    "30001": {
+      "focus": "pve",
+      "position": "front",
+      "tags": [
+        "Reduz o ATQ inimigo",
+        "Defesa contra zombies"
+      ],
+      "summary": "Tanque Guerreira que usa veneno: o disparo de veneno atinge 2 inimigos da linha da frente e reduz o ATQ deles em 6 % durante 4 s.",
+      "tips": [
+        "A redução de 6 % do ATQ funciona contra qualquer inimigo, incluindo jogadores.",
+        "A passiva só reduz o dano dos monstros, por isso é sobretudo um tanque contra zombies."
+      ]
+    },
+    "30003": {
+      "focus": "pve",
+      "position": "back",
+      "tags": [
+        "Reforça a retaguarda Guerreira",
+        "Dano contra zombies"
+      ],
+      "summary": "Aria SSR: o rifle de disparo rápido vem acompanhado de uma passiva que faz os Guerreiros da tua retaguarda causarem mais dano aos monstros.",
+      "tips": [
+        "Na Temporada 1, evolui para Aria UR (#31003), que a substitui.",
+        "A passiva dá aos Guerreiros da retaguarda até +22,9 % de dano contra monstros; combina na perfeição com Monroe, Lucian, Rachel e Logan nos conteúdos de zombies."
+      ]
+    },
+    "30004": {
+      "focus": "pvp",
+      "position": "back",
+      "tags": [
+        "ATQ mais alto entre SSR",
+        "Atinge a linha da frente"
+      ],
+      "summary": "A SSR com os golpes mais fortes (e também a mais frágil): uma artilheira de rockets de Ataque.",
+      "tips": [
+        "Os projéteis de fósforo atingem os 2 inimigos da linha da frente e destroem tanques.",
+        "Tem menos HP do que qualquer outra SSR, por isso protege-a com dois tanques sólidos à frente."
+      ]
+    },
+    "30005": {
+      "focus": "pve",
+      "position": "back",
+      "tags": [
+        "5 granadas",
+        "Dano contra zombies"
+      ],
+      "summary": "Granadeiro de Ataque: 5 granadas por habilidade de batalha e dano extra contra monstros.",
+      "tips": [
+        "As cinco granadas aleatórias fazem dele uma das melhores SSR para limpar vagas de zombies.",
+        "A passiva só funciona contra monstros. Para PvP, Celeste é a melhor SSR de Ataque."
+      ]
+    },
+    "30006": {
+      "focus": "pvp",
+      "position": "back",
+      "tags": [
+        "Dano de Radiação",
+        "Arma exclusiva",
+        "Esquadrões Guerreiros"
+      ],
+      "summary": "Atiradora furtiva Guerreira cuja arma exclusiva fica mais forte com cada Guerreiro no esquadrão.",
+      "tips": [
+        "Com a arma, cada acerto crítico acrescenta uma acumulação de +3 % de dano de Radiação (máximo de 15 %). O limite de acumulações é igual ao número de Guerreiros no esquadrão, por isso enche-o de Guerreiros.",
+        "Com 4 acumulações, também dispara um Míssil Devastador contra 3 inimigos.",
+        "A habilidade de batalha fica disponível logo no nível 1 de Herói; os restantes só a desbloqueiam no nível 5.",
+        "A arma desbloqueia mais cedo na temporada (dia 3; Leah no dia 17 e Yana no dia 38)."
+      ]
+    },
+    "30007": {
+      "focus": "pve",
+      "position": "front",
+      "tags": [
+        "Abranda inimigos",
+        "Defesa contra zombies"
+      ],
+      "summary": "Tanque de Ataque cujas granadas abrandam os inimigos e cujas táticas reduzem o dano dos monstros à linha da frente.",
+      "tips": [
+        "Granada Tática também abranda inimigos, o que dá tempo contra zombies em investida.",
+        "A redução de dano só funciona contra monstros. Para uma linha da frente PvP, usa Vera ou Vince.",
+        "A tabela do cliente atribui a Tática de Pinça um valor impossível (295 % de redução de dano com 5★), o que parece ser um erro nos dados do jogo."
+      ]
+    },
+    "30011": {
+      "focus": "utility",
+      "position": "back",
+      "tags": [
+        "Recolha",
+        "Capacidade de carga"
+      ],
+      "summary": "Bombardeiro SR cuja verdadeira função é a recolha: aumenta a carga que a tua marcha consegue transportar.",
+      "tips": [
+        "Os três heróis SR (Jackson, Jamal e Hank) são os únicos que aumentam a Carga de Soldados, por isso envia-os em marchas de recolha.",
+        "Não tem habilidade passiva, por isso é fraco em combate."
+      ]
+    },
+    "31003": {
+      "focus": "pve",
+      "position": "back",
+      "tags": [
+        "Evolução UR",
+        "Reforça a retaguarda Guerreira"
+      ],
+      "summary": "Aria UR: a evolução da Aria SSR na Temporada 1, com versões mais fortes de todas as habilidades.",
+      "tips": [
+        "Na Temporada 1, Aria SSR evolui para esta versão UR e é substituída por ela, por isso investe sabendo que o progresso transita.",
+        "Tempestade de Rajada é uma canalização longa: cerca de 3032 % de ATQ no total com 5★ e nível 30, contra 1754 % da Aria SSR.",
+        "Exterminador de Zumbis dá aos Guerreiros da retaguarda +25,5 % de dano contra monstros com 5★."
+      ]
+    },
+    "40001": {
+      "focus": "utility",
+      "position": "back",
+      "tags": [
+        "Recolha",
+        "Capacidade de carga"
+      ],
+      "summary": "Recolhedor SR. Está classificado como herói de linha da frente, mas tem atributos de um atacante frágil.",
+      "tips": [
+        "Usa-o na recolha (aumenta a Carga de Soldados), não como tanque: tem muito menos HP do que qualquer outro herói de linha da frente.",
+        "Se tiver de lutar, coloca-o na retaguarda."
+      ]
+    },
+    "40002": {
+      "focus": "utility",
+      "position": "front",
+      "tags": [
+        "Recolha",
+        "Capacidade de carga"
+      ],
+      "summary": "Recolhedor SR com lança-chamas e atributos de tanque a sério.",
+      "tips": [
+        "É o mais resistente dos três recolhedores; boa escolha se a tua marcha de recolha puder ser atacada.",
+        "Ataques lentos (a cada 4 s) e sem habilidade passiva."
+      ]
+    },
+    "40010": {
+      "focus": "pve",
+      "position": "back",
+      "tags": [
+        "Atinge a linha da frente",
+        "Dano contra zombies"
+      ],
+      "summary": "Arqueira Tática cuja flecha pesada atinge os inimigos da linha da frente e cuja passiva aumenta o dano contra monstros.",
+      "tips": [
+        "Uma opção económica para completar a retaguarda dos esquadrões Táticos contra zombies até os teus heróis Táticos UR terem estrelas suficientes.",
+        "A passiva só funciona contra monstros."
+      ]
+    },
+    "50001": {
+      "focus": "pvp",
+      "position": "front",
+      "tags": [
+        "Protege a linha da frente",
+        "Redução de dano"
+      ],
+      "summary": "Tanque Guerreiro UR: o grito acrescenta DEF (escudo) à linha da frente e a armadura reduz todo o dano recebido.",
+      "tips": [
+        "Armadura Pesada reduz até 30,3 % de TODO o dano que recebe, por isso aguenta-se bem em PvP.",
+        "Vontade de Ferro dá até +50,5 % de DEF (escudo) à linha da frente durante 10 s. Junta-o a Arnold: Dirk acrescenta escudo enquanto Arnold reduz o dano."
+      ]
+    },
+    "50002": {
+      "focus": "pvp",
+      "position": "back",
+      "tags": [
+        "Reforça todo o esquadrão",
+        "Habilidades mais rápidas",
+        "Único herói de Suporte"
+      ],
+      "summary": "O único herói de Suporte: aumenta o ataque de todo o esquadrão e acelera a recarga das habilidades de todos.",
+      "tips": [
+        "Olho de Falcão aumenta o ATQ de TODOS os aliados até 16,8 % durante 8 s, e Xerife acelera a recarga das habilidades até 30,3 %. Nada disto depende da facção ou do tipo de inimigo.",
+        "Xerife também reduz até 12,2 % do dano recebido pelo aliado com mais ATQ, por isso melhora primeiro o teu principal causador de dano.",
+        "A habilidade de batalha dele recarrega devagar (12,3 s), compensada pela passiva de velocidade de recarga."
+      ]
+    },
+    "50003": {
+      "focus": "pvp",
+      "position": "back",
+      "tags": [
+        "ATQ mais alto",
+        "Crítico"
+      ],
+      "summary": "O ATQ mais alto do jogo e o HP mais baixo entre os UR: um causador de dano Guerreiro que aposta tudo no ataque.",
+      "tips": [
+        "Bobina de Tesla salta entre 5 inimigos aleatórios, e Frankenstein acrescenta até 30,3 % de Taxa Crítica.",
+        "Tem menos HP do que qualquer outro UR, por isso coloca Arnold ou Dirk à frente."
+      ]
+    },
+    "50004": {
+      "focus": "pvp",
+      "position": "front",
+      "tags": [
+        "Atinge todos os inimigos",
+        "Trava a Radiação",
+        "HP mais alto"
+      ],
+      "summary": "O herói mais resistente do jogo. A granada sónica atinge todos os inimigos e enfraquece os ataques de Radiação deles.",
+      "tips": [
+        "Escudo de Íons reduz até 40,6 % do dano de Radiação que recebe, e Estrondo Sônico reduz em 15,3 % o dano de Radiação de TODOS os inimigos durante 5 s.",
+        "É o contra-ataque ideal aos causadores de dano de Radiação (Monroe, Yana, Leah, Lucian, Silas). Com Virgilio, forma uma linha da frente quase imune à Radiação."
+      ]
+    },
+    "50005": {
+      "focus": "pvp",
+      "position": "front",
+      "tags": [
+        "Escudo de Radiação para o esquadrão",
+        "Protege a linha da frente"
+      ],
+      "summary": "Tanque Tática que protege todo o esquadrão do dano de Radiação e reforça a linha da frente.",
+      "tips": [
+        "Bobina Magnética reduz até 20,4 % do dano de Radiação recebido por TODOS os aliados durante 8 s.",
+        "Armadura Magnética reduz em 13,5 % o dano recebido pela linha da frente e acrescenta mais 13,5 % de redução contra Radiação."
+      ]
+    },
+    "50006": {
+      "focus": "pvp",
+      "position": "back",
+      "tags": [
+        "Atinge todos os inimigos",
+        "Arma exclusiva",
+        "Esquadrões Táticos"
+      ],
+      "summary": "Atiradora furtiva Tática cujo helicóptero atinge todos os inimigos. A arma exclusiva ganha força com os heróis Táticos.",
+      "tips": [
+        "Com a arma, começa cada combate com 2 acumulações de +3 % de dano de Radiação por herói Tático (máximo de 10) e ganha até +100 % de velocidade de ataque à medida que acerta golpes.",
+        "A arma também faz com que dispare a habilidade de batalha contra 2 inimigos da linha da frente assim que o combate começa.",
+        "A arma desbloqueia no dia 17 da temporada."
+      ]
+    },
+    "50007": {
+      "focus": "pvp",
+      "position": "back",
+      "tags": [
+        "Atinge a retaguarda",
+        "Atordoa",
+        "Aumento de ATQ"
+      ],
+      "summary": "Causador de dano Tático cujo robô-aranha investe sobre a retaguarda inimiga, com 20 % de probabilidade de atordoar.",
+      "tips": [
+        "O robô-aranha atinge 3 inimigos da retaguarda, causando até 934 % de ATQ, com 20 % de probabilidade de atordoar.",
+        "Sobrecarga dá-lhe um aumento fixo de +40,5 % de ATQ, o maior reforço próprio de todo o elenco."
+      ]
+    },
+    "50008": {
+      "focus": "pvp",
+      "position": "back",
+      "tags": [
+        "Parte escudos",
+        "Dano físico"
+      ],
+      "summary": "Metralhador Tático cujas balas tóxicas reduzem até 25 % da DEF do alvo.",
+      "tips": [
+        "Víbora dispara 20 balas neurotóxicas (com 5★); cada uma reduz 5 % da DEF, até −25 % durante 9 s.",
+        "A DEF é o escudo do inimigo, por isso reduzi-la ajuda todos os ataques do teu esquadrão. Máquina de Guerra acrescenta +30,2 % de dano físico."
+      ]
+    },
+    "50009": {
+      "focus": "pvp",
+      "position": "front",
+      "tags": [
+        "Contra-ataca",
+        "Esquadrões de Ataque"
+      ],
+      "summary": "Tanque de Ataque que riposta: em estado de Guarda, contra-ataca sempre que é atingida.",
+      "tips": [
+        "Sentinelaa Portátil coloca-a em Guarda durante até 8,8 s: contra-ataca sempre que é atingida (no máximo uma vez por segundo). Com 4★, a Guarda também protege a linha da frente.",
+        "Sentinela reduz até 13,2 % do dano recebido pela linha da frente; a redução duplica para heróis de Ataque enquanto ela estiver em Guarda. Destaca-a com Vince e Jack."
+      ]
+    },
+    "50010": {
+      "focus": "pvp",
+      "position": "front",
+      "tags": [
+        "Provoca",
+        "Reduz o ATQ inimigo"
+      ],
+      "summary": "Tanque de Ataque que provoca a linha da frente inimiga e reduz o ataque durante 8 s.",
+      "tips": [
+        "Provocação Ofuscante atrai até 4 inimigos da linha da frente e reduz o ATQ deles em 16,8 % durante 8 s.",
+        "Guarda Montês reduz até 30,3 % de todo o dano que recebe, por isso também resulta em PvP."
+      ]
+    },
+    "50011": {
+      "focus": "pvp",
+      "position": "back",
+      "tags": [
+        "Dano de Radiação contínuo",
+        "Arma exclusiva",
+        "Esquadrões de Ataque"
+      ],
+      "summary": "Lançadora de raios de Ataque que atinge os 3 inimigos da retaguarda; a arma exclusiva acrescenta queimadura de Radiação cumulativa.",
+      "tips": [
+        "Com a arma, os golpes aplicam Sobrecarga Charge, que causa dano equivalente a 3 % do ATQ por segundo durante 30 s. O limite é de 3 acumulações por cada herói de Ataque no esquadrão.",
+        "A arma melhora o ataque automático no nível 1 e a habilidade de batalha nos níveis 10 e 30. Depois de chegar a 5★, os fragmentos de arma são a principal forma de a melhorar.",
+        "A arma desbloqueia por último na temporada (dia 38)."
+      ]
+    },
+    "50012": {
+      "focus": "pvp",
+      "position": "back",
+      "tags": [
+        "Finaliza inimigos feridos",
+        "Crítico"
+      ],
+      "summary": "Finalizador de Ataque: a submetralhadora aponta sempre ao inimigo com a percentagem de HP mais baixa.",
+      "tips": [
+        "A submetralhadora aponta sempre ao inimigo com a percentagem de HP mais baixa, por isso finaliza inimigos feridos.",
+        "Mecânico acrescenta até 30,3 % de Taxa Crítica. Junta-o a heróis que atingem todos (Nicole, Yana)."
+      ]
+    },
+    "50013": {
+      "focus": "pvp",
+      "position": "back",
+      "tags": [
+        "Atinge todos os inimigos",
+        "Dano físico"
+      ],
+      "summary": "Granadeira de Ataque cujo fogo em rede atinge todos os inimigos e cuja passiva aumenta o dano físico.",
+      "tips": [
+        "Rede de Poder de Fogo Bom atinge TODOS os inimigos e causa até 716 % de ATQ. É uma das únicas três habilidades de batalha que atingem todo o esquadrão inimigo, juntamente com as de Leah e Bekka.",
+        "Atuário acrescenta +30,3 % de dano físico, por isso combina bem com a redução de DEF de Katya."
+      ]
+    }
+  },
+  "global": [
+    {
+      "title": "Enche o esquadrão com uma facção",
+      "body": "Um esquadrão tem 5 heróis. Heróis da mesma facção desbloqueiam um bónus de HP, ATQ e DEF: 3 da mesma facção dão +5 %, 3 mais 2 de outra facção dão +10 %, 4 da mesma facção dão +15 % e os 5 dão +20 %."
+    },
+    {
+      "title": "Conhece o triângulo de contras",
+      "body": "Os Guerreiros vencem os heróis de Ataque, os de Ataque vencem os Táticos e os Táticos vencem os Guerreiros. Quando a tua facção tem vantagem sobre a deles, os teus heróis recebem menos 20 % de dano. O relatório de batalha diz se a tua formação tem vantagem ou desvantagem contra o inimigo."
+    },
+    {
+      "title": "Tanques à frente, dano atrás",
+      "body": "Um esquadrão tem 2 lugares na linha da frente e 3 na retaguarda. Os heróis da linha da frente têm HP e DEF para absorver golpes, por isso o jogo recomenda colocá-los à frente. Os heróis de retaguarda causam dano a partir de trás. Carter (Suporte) deve ficar na retaguarda."
+    },
+    {
+      "title": "Muitas SSR só brilham contra zombies",
+      "body": "Cerca de metade dos heróis SSR tem habilidades que só funcionam contra monstros («dano contra monstros», «dano recebido de monstros»). São ótimos contra zombies, em rallies e eventos, mas fracos em PvP. Rachel, Logan e Celeste têm reforços que funcionam em qualquer combate."
+    },
+    {
+      "title": "DEF é um escudo",
+      "body": "O jogo descreve a DEF como um escudo que absorve a maior parte do dano até se partir. Os bónus de DEF (Conan, Dirk) acrescentam escudo; Katya parte escudos mais depressa; as passivas de redução de dano (Arnold, Dirk, Vince, Virgilio) continuam a funcionar depois de o escudo desaparecer."
+    },
+    {
+      "title": "Dano físico ou Radiação",
+      "body": "Há dois tipos de dano. Especialistas em Radiação: Monroe, Leah, Yana, Lucian, Silas, Celeste e Carter (além dos ataques automáticos de Conan e Jack). Todos os outros causam dano físico. Bekka e Virgilio reduzem o dano de Radiação; Apoio de Campo de Arnold só bloqueia dano físico. Uma linha da frente com ambos os tipos de proteção cobre-te nas duas situações."
+    },
+    {
+      "title": "As armas exclusivas fazem a diferença",
+      "body": "Uma arma exclusiva de nível 30 acrescenta ao herói cerca de 703k HP, 8,4k ATQ, 4,2k DEF e 5 % de resistência a dano. É mais HP do que levar o herói ao nível 150. Também aumenta o limite das habilidades de 30 para 40. Melhorá-la dá a todos os heróis até +40k HP, +800 ATQ e +200 DEF, por isso os fragmentos de arma ajudam todo o elenco."
+    },
+    {
+      "title": "Com 4★ desbloqueias um grande talento de atributos",
+      "body": "No nível 31 de Herói e com 4★, o 4.º espaço desbloqueia um talento permanente: os UR recebem Julgamento do Juízo Final (+20 % de HP, ATQ e DEF, +10 % de velocidade de recarga de habilidade), as SSR recebem Andarilho do Ermo (+10 %) e os SR recebem Especialista em Sobrevivência (+5 %). Levar um herói a 4★ é uma das maiores melhorias individuais."
+    },
+    {
+      "title": "Aumenta as estrelas antes de gastar livros de habilidade",
+      "body": "O nível de estrelas limita o nível da habilidade: 1★ → nível 1, 2★ → 5, 3★ → 10, 4★ → 20, 5★ → 30. As estrelas também multiplicam o dano das habilidades (por exemplo, o tiro de sniper da Monroe: 70 % de ATQ com 0★ e 486 % com 5★). Os livros acima do limite são desperdiçados, por isso aumenta primeiro as estrelas. Passar de 0 para 5 estrelas custa 975 fragmentos."
+    },
+    {
+      "title": "Os heróis UR começam mais depressa",
+      "body": "Entre os níveis 1 e 50, os heróis UR recebem cerca de mais 27–46 % de HP, ATQ e DEF por nível. A partir do nível 65, todos os heróis ganham o mesmo ao subir de nível; são os atributos base que fazem a diferença. O comando de tropas passa de 52 no nível 1 para 351 no nível 150."
+    },
+    {
+      "title": "Carter encaixa em qualquer lado; os SR servem para recolher",
+      "body": "Os reforços de Carter funcionam em qualquer esquadrão e contra qualquer inimigo. Jamal, Hank e Jackson são fracos em combate, mas os únicos heróis que aumentam a Carga de Soldados, por isso usa-os na recolha."
+    }
+  ]
+}

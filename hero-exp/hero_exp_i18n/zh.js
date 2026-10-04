@@ -1,0 +1,1 @@
+window.HERO_EXP_I18N = window.HERO_EXP_I18N || {}; window.HERO_EXP_I18N["zh"] = {"items":{"item_heroExp_1k":"作战经验1,000","item_castleBox_HeroEXP_1":"R英雄经验宝箱","item_castleBox_HeroEXP_2":"SR英雄经验宝箱","item_castleBox_HeroEXP_3":"SSR英雄经验宝箱","item_castleBox_HeroEXP_4":"UR英雄经验宝箱"},"points_buff_name":"积分增益"};

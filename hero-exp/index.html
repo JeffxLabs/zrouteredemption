@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-i18n-page-only="true" data-i18n-languages="en,fr,ru,tr,pl,es,pt,de,ko,zh">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -11,6 +11,8 @@
   <link rel="manifest" href="../manifest.webmanifest">
   <link rel="icon" href="../assets/ui/hero_exp.webp" type="image/webp">
   <link rel="stylesheet" href="../assets/app.css">
+  <script src="../i18n.js"></script>
+  <script src="../i18n/hero-exp.js"></script>
   <title>Z Route Hero EXP</title>
   <style>
     .layout { display: grid; gap: 12px; }
@@ -62,6 +64,10 @@
         <a href="../promo-codes/">Promo Codes</a>
         <a href="https://github.com/JeffxLabs/zrouteredemption" target="_blank" rel="noopener">GitHub ↗</a>
       </nav>
+      <label class="language-control">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
+        <select id="language-select" data-i18n-languages="en,fr,ru,tr,pl,es,pt,de,ko,zh" aria-label="Language"></select>
+      </label>
       <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch theme"></button>
     </div>
   </header>
@@ -148,10 +154,32 @@
   <script src="../assets/app.js"></script>
   <script src="hero_exp_data.js"></script>
   <script>
-  (() => {
+  (async () => {
     'use strict';
     const D = window.HERO_EXP, { esc, fmt, short } = window.ZR;
     const $ = s => document.querySelector(s);
+    const percent = value => `${new Intl.NumberFormat(I18N.locale, { minimumFractionDigits: 1, maximumFractionDigits: 1 }).format(value)}%`;
+    const SUPPORTED = new Set(['en', 'fr', 'ru', 'tr', 'pl', 'es', 'pt', 'de', 'ko', 'zh']);
+    const LOCALES = new Map();
+    async function loadLocale(code) {
+      if (!SUPPORTED.has(code) || code === 'en') return null;
+      if (window.HERO_EXP_I18N?.[code]) return window.HERO_EXP_I18N[code];
+      if (LOCALES.has(code)) return LOCALES.get(code);
+      const pending = new Promise((resolve, reject) => {
+        const script = document.createElement('script');
+        script.src = `hero_exp_i18n/${code}.js`;
+        script.onload = () => resolve(window.HERO_EXP_I18N?.[code] || null);
+        script.onerror = () => reject(new Error(`Could not load ${code} Hero EXP names`));
+        document.head.appendChild(script);
+      });
+      LOCALES.set(code, pending);
+      try { return await pending; } catch (error) { LOCALES.delete(code); throw error; }
+    }
+    let selectedLanguage = I18N.language;
+    let localeNames = await loadLocale(selectedLanguage);
+    if (selectedLanguage !== I18N.language) { selectedLanguage = I18N.language; localeNames = await loadLocale(selectedLanguage); }
+    const itemName = id => localeNames?.items?.[id] || [...D.chests, D.battle_exp_item].find(item => item.item_id === id)?.name || '';
+    const eachExp = formattedValue => I18N.t('{0} EXP each', [formattedValue]);
     const MAXL = D.levels[D.levels.length - 1].level, MAX_HQ = D.max_hq, HQ_CAP = MAX_HQ * 5;
     const cum = new Map(D.levels.map(l => [l.level, l.cumulative]));
     const costOf = new Map(D.levels.map(l => [l.level, l.cost]));
@@ -160,13 +188,6 @@
     const buffLv = D.alliance_competition.points_buff.levels;
     const hqFor = lv => Math.ceil(lv / 5);
     const chestExp = (c, hq) => (c.exp_by_hq.find(x => x.hq === hq) || c.exp_by_hq[c.exp_by_hq.length - 1]).exp;
-    function words(n) {
-      if (n >= 1e9) return `${+(n / 1e9).toFixed(2)} billion`;
-      if (n >= 1e6) return `${+(n / 1e6).toFixed(2)} million`;
-      if (n >= 1e3) return `${+(n / 1e3).toFixed(1)} thousand`;
-      return String(n);
-    }
-
     const S = { from: 1, to: 150, heroes: 1, hq: 30, hqAuto: true, buff: 0, filter: 'milestones' };
     const q = new URLSearchParams(location.search);
     const int = (k, d) => { const v = parseInt(q.get(k), 10); return Number.isFinite(v) ? v : d; };
@@ -202,7 +223,7 @@
 
       const per = cum.get(S.to) - cum.get(S.from), total = per * S.heroes;
       $('#total').textContent = fmt(total);
-      $('#total-sub').textContent = `${words(total)} Hero EXP · Lv ${S.from} → ${S.to}${S.heroes > 1 ? ` · ${S.heroes} heroes` : ''}`;
+      $('#total-sub').textContent = `${short(total)} Hero EXP · Lv ${S.from} → ${S.to}${S.heroes > 1 ? ` · ${S.heroes} heroes` : ''}`;
       const needHq = hqFor(S.to);
       $('#badges').innerHTML = S.to > HQ_CAP
         ? `<span class="chip warn">Lv ${S.to} is not reachable yet: HQ stops at ${MAX_HQ} (Lv ${HQ_CAP})</span>`
@@ -213,19 +234,22 @@
         ['Per hero', short(per), `${fmt(per)} EXP`],
         ['All heroes', short(total), S.heroes === 1 ? '1 hero' : `${S.heroes} heroes`],
         ['Last level costs', short(costOf.get(S.to)), `Lv ${S.to - 1} → ${S.to}`],
-        ['Share of Lv 1 → 150', `${(per / cum.get(HQ_CAP) * 100).toFixed(1)}%`, 'per hero']
+        ['Share of Lv 1 → 150', percent(per / cum.get(HQ_CAP) * 100), 'per hero']
       ].map(([l, v, s]) => `<div class="tile"><small>${l}</small><b>${v}</b><div class="sub">${esc(s)}</div></div>`).join('');
 
       const battle = D.battle_exp_item;
       $('#items-note').textContent = `Chest sizes at HQ ${S.hq}`;
       $('#items').innerHTML = [
-        `<div class="item" style="--q:var(--sr)"><span class="ico"><img src="../assets/ui/hero_exp.webp" alt=""></span><div><b>${fmt(Math.ceil(total / battle.exp))}</b><small>${esc(battle.name)} (${fmt(battle.exp)} EXP each)</small></div></div>`,
-        ...D.chests.slice().reverse().map(c => { const e = chestExp(c, S.hq); return `<div class="item" style="--q:${QCOL[c.quality]}"><span class="ico"><img src="../assets/ui/exp_chest.webp" alt=""></span><div><b>${fmt(Math.ceil(total / e))}</b><small>${esc(c.name)} (${short(e)} EXP each)</small></div></div>`; })
+        `<div class="item" style="--q:var(--sr)"><span class="ico"><img src="../assets/ui/hero_exp.webp" alt=""></span><div><b>${fmt(Math.ceil(total / battle.exp))}</b><small>${esc(itemName(battle.item_id))} (${esc(eachExp(fmt(battle.exp)))})</small></div></div>`,
+        ...D.chests.slice().reverse().map(c => { const e = chestExp(c, S.hq); return `<div class="item" style="--q:${QCOL[c.quality]}"><span class="ico"><img src="../assets/ui/exp_chest.webp" alt=""></span><div><b>${fmt(Math.ceil(total / e))}</b><small>${esc(itemName(c.item_id))} (${esc(eachExp(short(e)))})</small></div></div>`; })
       ].join('');
 
       const bonus = S.buff ? buffLv[S.buff - 1].bonus : 0;
       const pts = Math.floor(total / duelSrc.exp) * duelSrc.points * (1 + bonus);
-      $('#duel-text').innerHTML = `Using this EXP on the hero day (day ${D.alliance_competition.day}) earns about <b style="color:var(--text)">${fmt(pts)}</b> points: ${duelSrc.points} point per ${fmt(duelSrc.exp)} Hero EXP${bonus ? `, +${Math.round(bonus * 100)}% from Points Buff Lv ${S.buff}` : ''}.`;
+      const bonusLabel = bonus ? I18N.t(', +{0}% from Points Buff Lv {1}', [Math.round(bonus * 100), S.buff]) : '';
+      $('#duel-text').innerHTML = I18N.t('Using this EXP on the hero day (day {0}) earns about {1} points: {2} point per {3} Hero EXP{4}.', [
+        D.alliance_competition.day, `<b style="color:var(--text)">${fmt(pts)}</b>`, duelSrc.points, fmt(duelSrc.exp), bonusLabel
+      ]);
 
       renderChart(); renderLevels(); highlightHq();
       const p = new URLSearchParams();
@@ -234,7 +258,9 @@
       if (S.heroes !== 1) p.set('squad', S.heroes);
       if (!S.hqAuto) p.set('hq', S.hq);
       if (S.buff) p.set('buff', S.buff);
+      if (new URLSearchParams(location.search).has('lang')) p.set('lang', I18N.language);
       history.replaceState(null, '', location.pathname + (p.toString() ? `?${p}` : ''));
+      I18N.apply(document.body);
     }
 
     // Inputs
@@ -263,7 +289,7 @@
 
     function renderLevels() {
       const rows = D.levels.filter(l => S.filter === 'all' || (S.filter === 'milestones' && (l.level % 10 === 0 || l.level === 1 || l.level === MAXL)) || (S.filter === 'hq' && l.level % 5 === 0) || (S.filter === 'range' && l.level >= S.from && l.level <= S.to));
-      $('#level-table').innerHTML = `<thead><tr><th>Level</th><th>HQ needed</th><th class="r">EXP for level</th><th class="r">Total from Lv 1</th><th class="r">% of Lv 150</th></tr></thead><tbody>${rows.map(l => `<tr class="${l.level >= S.from && l.level <= S.to ? 'hl' : ''}"><td><b>Lv ${l.level}</b></td><td>${l.level > HQ_CAP ? '<span class="lock">Not in game</span>' : `HQ ${hqFor(l.level) || 1}`}</td><td class="r">${l.level === 1 ? '—' : fmt(l.cost)}</td><td class="r">${fmt(l.cumulative)}</td><td class="r">${(l.cumulative / cum.get(HQ_CAP) * 100).toFixed(1)}%</td></tr>`).join('')}</tbody>`;
+      $('#level-table').innerHTML = `<thead><tr><th>Level</th><th>HQ needed</th><th class="r">EXP for level</th><th class="r">Total from Lv 1</th><th class="r">% of Lv 150</th></tr></thead><tbody>${rows.map(l => `<tr class="${l.level >= S.from && l.level <= S.to ? 'hl' : ''}"><td><b>Lv ${l.level}</b></td><td>${l.level > HQ_CAP ? '<span class="lock">Not in game</span>' : `HQ ${hqFor(l.level) || 1}`}</td><td class="r">${l.level === 1 ? '—' : fmt(l.cost)}</td><td class="r">${fmt(l.cumulative)}</td><td class="r">${percent(l.cumulative / cum.get(HQ_CAP) * 100)}</td></tr>`).join('')}</tbody>`;
     }
 
     // Chart: total EXP from Lv 1 by level, selected range highlighted
@@ -278,7 +304,7 @@
       const yt = [0, 5e9, 10e9, 15e9].filter(v => v <= maxV * 1.02);
       box.innerHTML = `<svg class="chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="Total Hero EXP from level 1 rises steeply after level 100; reaching level 150 takes ${short(cum.get(HQ_CAP))} EXP">
         <g class="grid">${yt.map(v => `<line x1="${pad.l}" x2="${W - pad.r}" y1="${Y(v)}" y2="${Y(v)}"/>`).join('')}</g>
-        ${yt.map(v => `<text x="${pad.l - 6}" y="${Y(v) + 4}" text-anchor="end">${v ? v / 1e9 + 'B' : 0}</text>`).join('')}
+        ${yt.map(v => `<text x="${pad.l - 6}" y="${Y(v) + 4}" text-anchor="end">${v ? short(v) : fmt(0)}</text>`).join('')}
         ${[1, 50, 100, 150, 175].map(l => `<text x="${X(l)}" y="${H - 8}" text-anchor="middle">Lv ${l}</text>`).join('')}
         <rect x="${X(HQ_CAP)}" y="${pad.t}" width="${X(MAXL) - X(HQ_CAP)}" height="${H - pad.t - pad.b}" fill="var(--warn)" opacity=".07"/>
         <text x="${(X(HQ_CAP) + X(MAXL)) / 2}" y="${pad.t + 12}" text-anchor="middle" style="fill:var(--warn)">not in game</text>
@@ -303,6 +329,14 @@
     addEventListener('resize', () => { if (Math.abs(innerWidth - lastW) > 40) { lastW = innerWidth; renderChart(); } });
 
     render();
+    document.addEventListener('languagechange', async () => {
+      const code = I18N.language;
+      try { localeNames = await loadLocale(code); } catch (_) { localeNames = null; }
+      if (code !== I18N.language) return;
+      selectedLanguage = code;
+      render();
+      I18N.apply(document.body);
+    });
   })();
   </script>
 </body>

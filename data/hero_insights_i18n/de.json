@@ -1,0 +1,469 @@
+{
+  "_about": "Einfach erklärte Auswertung der ausgelesenen Clientdaten: Heldentabellen aus Client 1.30.07, Skillwerte und Truppregeln aus den entschlüsselten Katalogtabellen V202610032200 sowie englische Spieltexte aus demselben Katalog. Zahlen in Tipps entsprechen den angezeigten Werten des Clients bei 5★ und Skill-Level 30, sofern nicht anders angegeben.",
+  "heroes": {
+    "10005": {
+      "focus": "pvp",
+      "position": "back",
+      "tags": [
+        "Explosionsschaden",
+        "ATK-Bonus"
+      ],
+      "summary": "Zerbrechliche Krieger-Schützin: Sie feuert eine Salve aus 4 Granaten ab und steigert ihre eigene ATK.",
+      "tips": [
+        "Grenadier trifft zufällige Gegner (bei 5★ bis zu 8 Granaten) und eignet sich daher am besten gegen volle gegnerische Trupps, nicht gegen einen einzelnen Boss.",
+        "Caliber Modification gewährt in jedem Kampf dauerhaft +28,2% ATK. Deshalb lohnt sie sich auch in PvP noch als SSR."
+      ]
+    },
+    "10006": {
+      "focus": "pve",
+      "position": "back",
+      "tags": [
+        "Zombie-Farming",
+        "Bonusressourcen",
+        "Accountweiter Bonus"
+      ],
+      "summary": "Die erwachte Nora (nach der Gegengift-Questreihe) ist auf Zombie-Farming spezialisiert: Sie bringt mehr Ressourcen von Ressourcen-Zombies und stärkt jeden Trupp.",
+      "tips": [
+        "Alle deine Trupps verursachen +5% Schaden an Wild- und Rally-Monstern, solange du sie besitzt – auch wenn sie nicht eingesetzt ist.",
+        "Setze sie in den Trupp, der Metall-, Nahrungs- und Öl-Zombies sowie Elite-Zombiehorden farmt: Dieser Trupp erhält von diesen Kills mehr Eisenerz, Nahrung und Öl.",
+        "Ihre Skills wirken nur gegen Monster. Lass sie daher aus PvP-Trupps heraus."
+      ]
+    },
+    "10007": {
+      "focus": "pvp",
+      "position": "front",
+      "tags": [
+        "Schützt die Vorderreihe",
+        "Physische Verteidigung"
+      ],
+      "summary": "Krieger-Tank, der den erlittenen Schaden der gesamten Vorderreihe senkt.",
+      "tips": [
+        "Field Support verringert den erlittenen physischen Schaden der Vorderreihe 8 Sekunden lang um bis zu 30%; Tactical Shield gewährt zusätzlich dauerhaft 17,7% Schadensreduktion.",
+        "Field Support blockt nur physischen Schaden. Gegen strahlungslastige Trupps (Monroe, Yana, Leah, Lucian, Silas) solltest du Virgilio oder Bekka mitnehmen."
+      ]
+    },
+    "10008": {
+      "focus": "pve",
+      "position": "front",
+      "tags": [
+        "Zombie-Tank",
+        "Flammenwerfer"
+      ],
+      "summary": "Krieger-Tank für Zombie-Kämpfe: Ihr Brüllen senkt den Schaden von Monstern und ihr Passiv erhöht ihre VER.",
+      "tips": [
+        "Ihr Flammenwerfer feuert langsam (ein Angriff alle 4 Sekunden), trifft dafür aber hart.",
+        "Ihr Brüllen senkt nur den Schaden von Monstern. Nutze im PvP stattdessen Arnold oder Dirk."
+      ]
+    },
+    "20005": {
+      "focus": "pve",
+      "position": "back",
+      "tags": [
+        "Stärkt die Hinterreihe",
+        "Zombieschutz"
+      ],
+      "summary": "Taktische Bogenschützin und Cheerleaderin: Ihr Tanz erhöht den Schaden deiner Hinterreihe gegen Monster.",
+      "tips": [
+        "Je stärker deine Hinterreihe ist, desto mehr bringt ihr Bonus. Kombiniere sie bei Zombie-Events mit Leah, Silas oder Katya.",
+        "Ihr Bonus und ihr Passiv wirken nur gegen Monster. Lass sie für PvP auf der Bank."
+      ]
+    },
+    "20006": {
+      "focus": "pve",
+      "position": "front",
+      "tags": [
+        "Schild für Vorderreihe",
+        "Zombieschutz"
+      ],
+      "summary": "Taktik-Tank, dessen Schlachtlied der Vorderreihe 6 Sekunden lang zusätzliche VER (Schild) gewährt.",
+      "tips": [
+        "In diesem Spiel funktioniert VER wie ein Schild, das Schaden abfängt, bis es zerbricht. Sein Lied gibt deiner Vorderreihe also zusätzliche Schilde.",
+        "Sein Passiv senkt nur Monsterschaden. In PvP erledigen Bekka oder Virgilio den Job besser."
+      ]
+    },
+    "20009": {
+      "focus": "pvp",
+      "position": "back",
+      "tags": [
+        "ATK-Bonus",
+        "Trifft 2 Ziele"
+      ],
+      "summary": "Krieger mit Molotowcocktails, dauerhaftem ATK-Bonus und Brandbomben, die 2 Ziele treffen.",
+      "tips": [
+        "Sein ATK-Bonus wirkt in jedem Kampf, auch in PvP.",
+        "Sein Kampfskill verteilt den Schaden auf 2 zufällige Gegner, statt einen einzelnen ins Visier zu nehmen."
+      ]
+    },
+    "30001": {
+      "focus": "pve",
+      "position": "front",
+      "tags": [
+        "Senkt feindliche ATK",
+        "Zombieschutz"
+      ],
+      "summary": "Kriegerin und Gift-Tank: Ihr Giftschuss trifft 2 Gegner in der Vorderreihe und senkt deren ATK 4 Sekunden lang um 6%.",
+      "tips": [
+        "Die -6% ATK gelten für jeden Gegner, auch für Spieler.",
+        "Ihr Passiv senkt nur Monsterschaden. Sie ist also vor allem ein Zombie-Tank."
+      ]
+    },
+    "30003": {
+      "focus": "pve",
+      "position": "back",
+      "tags": [
+        "Stärkt hintere Kriegerreihe",
+        "Schaden gegen Zombies"
+      ],
+      "summary": "SSR Aria: ein schnell feuerndes Gewehr und ein Passiv, durch das deine Krieger in der Hinterreihe Monstern mehr Schaden zufügen.",
+      "tips": [
+        "In Saison 1 wird sie zu UR Aria (#31003) aufgewertet, die sie ersetzt.",
+        "Ihr Passiv erhöht den Monsterschaden der hinteren Kriegerreihe um bis zu +22,9%. In Zombie-Inhalten passt sie perfekt zu Monroe, Lucian, Rachel und Logan."
+      ]
+    },
+    "30004": {
+      "focus": "pvp",
+      "position": "back",
+      "tags": [
+        "Höchste SSR-ATK",
+        "Trifft Vorderreihe"
+      ],
+      "summary": "Die härteste zuschlagende SSR (und zugleich die zerbrechlichste): eine Raketenkanonierin der Assault-Fraktion.",
+      "tips": [
+        "Ihre Phosphorgeschosse treffen die 2 Gegner in der Vorderreihe und zerlegen damit Tanks.",
+        "Sie hat die wenigsten LP aller SSR. Schütze sie daher mit zwei soliden Tanks in der Vorderreihe."
+      ]
+    },
+    "30005": {
+      "focus": "pve",
+      "position": "back",
+      "tags": [
+        "5 Granaten",
+        "Schaden gegen Zombies"
+      ],
+      "summary": "Assault-Granatwerfer: 5 Granaten pro Kampfskill und zusätzlicher Schaden gegen Monster.",
+      "tips": [
+        "Fünf zufällige Granaten machen ihn zu einer der besten SSR, um Zombie-Wellen zu räumen.",
+        "Sein Passiv wirkt nur gegen Monster. Für PvP ist Celeste die bessere Assault-SSR."
+      ]
+    },
+    "30006": {
+      "focus": "pvp",
+      "position": "back",
+      "tags": [
+        "Strahlungsschaden",
+        "Exklusivwaffe",
+        "Kriegertrupps"
+      ],
+      "summary": "Krieger-Scharfschützin mit einer Exklusivwaffe, die mit jedem Krieger in ihrem Trupp stärker wird.",
+      "tips": [
+        "Mit ihrer Waffe erzeugt jeder ihrer eigenen kritischen Treffer einen Stapel von +3% Strahlungsschaden (max. 15%). Die Stapelgrenze entspricht der Zahl der Krieger in deinem Trupp – setze also möglichst viele Krieger ein.",
+        "Bei 4 Stapeln feuert sie zusätzlich eine Devastating Rocket auf 3 Gegner.",
+        "Ihr Kampfskill ist bereits ab Helden-Lv. 1 verfügbar; alle anderen müssen bis Lv. 5 warten.",
+        "Ihre Waffe wird am frühesten in der Saison freigeschaltet (Tag 3; Leah an Tag 17, Yana an Tag 38)."
+      ]
+    },
+    "30007": {
+      "focus": "pve",
+      "position": "front",
+      "tags": [
+        "Verlangsamt Gegner",
+        "Zombieschutz"
+      ],
+      "summary": "Assault-Tank, dessen Granaten Gegner verlangsamen und dessen Taktik den Monsterschaden an der Vorderreihe senkt.",
+      "tips": [
+        "Tactical Grenade verlangsamt Gegner ebenfalls und verschafft dir so Zeit gegen anstürmende Zombies.",
+        "Seine Schadensreduktion wirkt nur gegen Monster. Nutze an der PvP-Front Vera oder Vince.",
+        "Die Tabelle des Clients weist Pincer Tactic einen unmöglichen Wert zu (295% Schadensreduktion bei 5★). Das sieht nach einem Fehler in den Spieldaten aus."
+      ]
+    },
+    "30011": {
+      "focus": "utility",
+      "position": "back",
+      "tags": [
+        "Ressourcensammeln",
+        "Traglast"
+      ],
+      "summary": "SR-Bomber, dessen eigentliche Aufgabe das Sammeln ist: Er erhöht die Traglast deines Marsches.",
+      "tips": [
+        "Die drei SR-Helden Jackson, Jamal und Hank sind die einzigen, die die Soldaten-Traglast erhöhen. Schicke sie daher auf Sammelmärsche.",
+        "Er hat keine passive Fähigkeit und ist deshalb im Kampf schwach."
+      ]
+    },
+    "31003": {
+      "focus": "pve",
+      "position": "back",
+      "tags": [
+        "UR-Aufwertung",
+        "Stärkt hintere Kriegerreihe"
+      ],
+      "summary": "UR Aria: die Saison-1-Aufwertung von SSR Aria mit stärkeren Versionen all ihrer Skills.",
+      "tips": [
+        "In Saison 1 wird SSR Aria zu dieser UR-Version aufgewertet und ersetzt. Investiere also in sie, wenn du weißt, dass sie übernommen wird.",
+        "Barrage Storm ist ein langer Kanal: insgesamt etwa 3.032% ATK bei 5★ Lv. 30, gegenüber 1.754% bei SSR Aria.",
+        "Zombie Terminator gewährt der hinteren Kriegerreihe bei 5★ +25,5% Schaden gegen Monster."
+      ]
+    },
+    "40001": {
+      "focus": "utility",
+      "position": "back",
+      "tags": [
+        "Ressourcensammeln",
+        "Traglast"
+      ],
+      "summary": "SR-Sammler. Er wird als Frontkämpfer geführt, hat aber die Werte eines zerbrechlichen Schadensausteilers.",
+      "tips": [
+        "Nutze ihn zum Sammeln (höhere Soldaten-Traglast), nicht als Tank: Kein anderer Frontkämpfer hat so wenig LP.",
+        "Wenn er kämpfen muss, stelle ihn in die Hinterreihe."
+      ]
+    },
+    "40002": {
+      "focus": "utility",
+      "position": "front",
+      "tags": [
+        "Ressourcensammeln",
+        "Traglast"
+      ],
+      "summary": "SR-Flammenwerfer und Sammler mit echten Tank-Werten.",
+      "tips": [
+        "Der robusteste der drei Sammler – eine gute Wahl, wenn dein Sammelmarsch angegriffen werden könnte.",
+        "Langsame Angriffe (alle 4 Sekunden) und keine passive Fähigkeit."
+      ]
+    },
+    "40010": {
+      "focus": "pve",
+      "position": "back",
+      "tags": [
+        "Trifft Vorderreihe",
+        "Schaden gegen Zombies"
+      ],
+      "summary": "Taktische Bogenschützin: Ihr schwerer Pfeil trifft Gegner in der Vorderreihe, und ihr Passiv erhöht den Schaden gegen Monster.",
+      "tips": [
+        "Eine günstige Besetzung für die hintere Reihe in taktischen Zombie-Trupps, bis deine UR-Taktik-Helden genug Sterne haben.",
+        "Ihr Passiv wirkt nur gegen Monster."
+      ]
+    },
+    "50001": {
+      "focus": "pvp",
+      "position": "front",
+      "tags": [
+        "Schild für Vorderreihe",
+        "Schadensreduktion"
+      ],
+      "summary": "Krieger-UR-Tank: Sein Ruf gibt der Vorderreihe VER (Schild), und seine Rüstung senkt sämtlichen erlittenen Schaden.",
+      "tips": [
+        "Heavy Armor senkt sämtlichen erlittenen Schaden um bis zu 30,3% und macht ihn damit PvP-tauglich.",
+        "Iron Will gibt der Vorderreihe 10 Sekunden lang bis zu +50,5% VER (Schild). Kombiniere ihn mit Arnold: Dirk gibt Schilde, während Arnold den Schaden senkt."
+      ]
+    },
+    "50002": {
+      "focus": "pvp",
+      "position": "back",
+      "tags": [
+        "Stärkt den ganzen Trupp",
+        "Schnellere Skills",
+        "Einziger Support"
+      ],
+      "summary": "Der einzige Support-Held: Er erhöht die ATK des ganzen Trupps und lädt die Skills aller schneller wieder auf.",
+      "tips": [
+        "Hawkeye erhöht die ATK aller Verbündeten 8 Sekunden lang um bis zu 16,8%, und Sheriff verkürzt die Skill-Abklingzeit um bis zu 30,3%. Beides hängt weder von der Fraktion noch vom Gegnertyp ab.",
+        "Sheriff senkt außerdem den erlittenen Schaden des Verbündeten mit der höchsten ATK um bis zu 12,2%. Baue also zuerst deinen Haupt-Schadensausteiler aus.",
+        "Sein eigener Kampfskill lädt sich langsam auf (12,3 Sekunden); sein Passiv zum Abklingtempo gleicht das aus."
+      ]
+    },
+    "50003": {
+      "focus": "pvp",
+      "position": "back",
+      "tags": [
+        "Höchste ATK",
+        "Krit"
+      ],
+      "summary": "Die höchste ATK im Spiel und die wenigsten LP aller UR: ein Krieger-Schadensausteiler, der alles auf Angriff setzt.",
+      "tips": [
+        "Tesla Coil springt zwischen 5 zufälligen Gegnern über, und Frankenstein erhöht die Krit-Rate um bis zu 30,3%.",
+        "Er hat die wenigsten LP aller UR. Stelle Arnold oder Dirk vor ihn."
+      ]
+    },
+    "50004": {
+      "focus": "pvp",
+      "position": "front",
+      "tags": [
+        "Trifft alle Gegner",
+        "Stoppt Strahlung",
+        "Höchste LP"
+      ],
+      "summary": "Der robusteste Held im Spiel. Ihre Schallgranate trifft alle Gegner und schwächt deren Strahlungsangriffe.",
+      "tips": [
+        "Ion Shield senkt den erlittenen Strahlungsschaden um bis zu 40,6%, und Sonic Boom verringert den Strahlungsschaden aller Gegner 5 Sekunden lang um 15,3%.",
+        "Sie ist der direkte Konter gegen Strahlungsschadensausteiler (Monroe, Yana, Leah, Lucian, Silas). Mit Virgilio bildet sie eine fast strahlungssichere Vorderreihe."
+      ]
+    },
+    "50005": {
+      "focus": "pvp",
+      "position": "front",
+      "tags": [
+        "Strahlungsschutz für Trupp",
+        "Schützt die Vorderreihe"
+      ],
+      "summary": "Taktik-Tank, der den ganzen Trupp vor Strahlungsschaden schützt und die Vorderreihe stärkt.",
+      "tips": [
+        "Magnetic Coil senkt den erlittenen Strahlungsschaden aller Verbündeten 8 Sekunden lang um bis zu 20,4%.",
+        "Magnetic Armor gewährt der Vorderreihe 13,5% weniger Schaden sowie weitere 13,5% weniger Strahlungsschaden."
+      ]
+    },
+    "50006": {
+      "focus": "pvp",
+      "position": "back",
+      "tags": [
+        "Trifft alle Gegner",
+        "Exklusivwaffe",
+        "Taktiktrupps"
+      ],
+      "summary": "Taktik-Scharfschützin, deren Helikopter jeden Gegner trifft. Ihre Exklusivwaffe wird mit Taktik-Helden stärker.",
+      "tips": [
+        "Mit ihrer Waffe startet sie jeden Kampf mit 2 Stapeln von +3% Strahlungsschaden pro Taktik-Helden (max. 10) und erhält mit jedem Treffer bis zu +100% Angriffstempo.",
+        "Ihre Waffe lässt sie außerdem direkt zu Kampfbeginn ihren Kampfskill auf 2 Gegner in der Vorderreihe abfeuern.",
+        "Ihre Waffe wird an Saisontag 17 freigeschaltet."
+      ]
+    },
+    "50007": {
+      "focus": "pvp",
+      "position": "back",
+      "tags": [
+        "Trifft Hinterreihe",
+        "Betäubung",
+        "ATK-Bonus"
+      ],
+      "summary": "Taktischer Schadensausteiler, dessen Spinnenroboter in die gegnerische Hinterreihe springt und mit 20% Chance betäubt.",
+      "tips": [
+        "Sein Spinnenroboter trifft 3 Gegner in der Hinterreihe mit bis zu 934% ATK und hat eine Betäubungschance von 20%.",
+        "Overload gewährt ihm dauerhaft +40,5% ATK – der größte Eigenbonus im Kader."
+      ]
+    },
+    "50008": {
+      "focus": "pvp",
+      "position": "back",
+      "tags": [
+        "Durchbricht Schilde",
+        "Physischer Schaden"
+      ],
+      "summary": "Taktischer Maschinengewehrschütze, dessen Giftgeschosse bis zu 25% der VER des Ziels entfernen.",
+      "tips": [
+        "Viper feuert (bei 5★) 20 Neurotoxin-Geschosse ab. Jedes senkt die VER 9 Sekunden lang um 5%, insgesamt um bis zu -25%.",
+        "VER ist der Schild des Gegners. Wenn du ihn schwächst, trifft jeder Angriff deines Trupps härter. War Machine gewährt zusätzlich +30,2% physischen Schaden."
+      ]
+    },
+    "50009": {
+      "focus": "pvp",
+      "position": "front",
+      "tags": [
+        "Kontert Angriffe",
+        "Sturmtrupps"
+      ],
+      "summary": "Assault-Tank, der zurückschlägt: Im Guard-Zustand kontert sie jeden Treffer.",
+      "tips": [
+        "Portable Sentry versetzt sie bis zu 8,8 Sekunden lang in Guard. Sie kontert bei jedem Treffer, höchstens einmal pro Sekunde. Ab 4★ schützt Guard auch die Vorderreihe.",
+        "Sentinel senkt den erlittenen Schaden der Vorderreihe um bis zu 13,2%; während sie Guard nutzt, ist der Wert für Assault-Helden doppelt so hoch. Setze sie daher mit Vince und Jack ein."
+      ]
+    },
+    "50010": {
+      "focus": "pvp",
+      "position": "front",
+      "tags": [
+        "Verspottet",
+        "Senkt feindliche ATK"
+      ],
+      "summary": "Assault-Tank, der die gegnerische Vorderreihe verspottet und deren ATK 8 Sekunden lang senkt.",
+      "tips": [
+        "Glaring Taunt zieht die Aufmerksamkeit von bis zu 4 Gegnern in der Vorderreihe auf sich und senkt deren ATK 8 Sekunden lang um 16,8%.",
+        "Mountain Ranger senkt sämtlichen erlittenen Schaden um bis zu 30,3% und ist damit auch in PvP stark."
+      ]
+    },
+    "50011": {
+      "focus": "pvp",
+      "position": "back",
+      "tags": [
+        "Strahlungsschaden über Zeit",
+        "Exklusivwaffe",
+        "Sturmtrupps"
+      ],
+      "summary": "Assault-Blitzwirkerin, die die 3 Gegner in der Hinterreihe trifft. Ihre Exklusivwaffe fügt stapelnden Strahlungsbrand hinzu.",
+      "tips": [
+        "Mit ihrer Waffe lösen ihre Treffer Overload Charge aus: 30 Sekunden lang verursacht der Effekt pro Sekunde 3% ihrer ATK als Schaden. Die Stapelgrenze beträgt 3 pro Assault-Held im Trupp.",
+        "Ihre Waffe verbessert den normalen Angriff auf Lv. 1 sowie den Kampfskill auf Lv. 10 und Lv. 30. Sobald sie 5★ erreicht hat, sind Waffenfragmente daher ihr wichtigster Ausbauweg.",
+        "Ihre Waffe wird zuletzt in der Saison freigeschaltet (Tag 38)."
+      ]
+    },
+    "50012": {
+      "focus": "pvp",
+      "position": "back",
+      "tags": [
+        "Erledigt angeschlagene Gegner",
+        "Krit"
+      ],
+      "summary": "Assault-Finisher: Seine MP zielt immer auf den Gegner mit dem niedrigsten LP-Prozentsatz.",
+      "tips": [
+        "Seine MP zielt immer auf den Gegner mit dem niedrigsten LP-Prozentsatz und erledigt so verwundete Gegner.",
+        "Mechanic erhöht die Krit-Rate um bis zu 30,3%. Kombiniere ihn mit Helden, die alle Gegner treffen (Nicole, Yana)."
+      ]
+    },
+    "50013": {
+      "focus": "pvp",
+      "position": "back",
+      "tags": [
+        "Trifft alle Gegner",
+        "Physischer Schaden"
+      ],
+      "summary": "Assault-Granatwerferin, deren Feuerkraftnetz alle Gegner trifft und deren Passiv physischen Schaden erhöht.",
+      "tips": [
+        "Fine Firepower Net trifft ALLE Gegner mit bis zu 716% ATK. Nur drei Kampfskills treffen den ganzen gegnerischen Trupp: dieser, Leahs und Bekkas.",
+        "Actuary erhöht den physischen Schaden um +30,3%. Deshalb passt Katyas VER-Zerreißen gut zu ihr."
+      ]
+    }
+  },
+  "global": [
+    {
+      "title": "Fülle den Trupp mit einer Fraktion",
+      "body": "Ein Trupp besteht aus 5 Helden. Helden derselben Fraktion schalten einen Bonus auf LP, ATK und VER frei: 3 derselben Fraktion geben +5%, 3 plus 2 einer anderen Fraktion +10%, 4 derselben Fraktion +15% und alle 5 +20%."
+    },
+    {
+      "title": "Denk ans Konter-Dreieck",
+      "body": "Krieger schlagen Assault, Assault schlägt Taktik, Taktik schlägt Krieger. Kontert deine Fraktion die gegnerische, erleiden deine Helden durch sie 20% weniger Schaden. Im Kampfbericht steht, ob deine Aufstellung den Gegner kontert oder selbst gekontert wird."
+    },
+    {
+      "title": "Tanks nach vorn, Schaden nach hinten",
+      "body": "Ein Trupp hat 2 Plätze in der Vorderreihe und 3 in der Hinterreihe. Frontkämpfer haben genug LP und VER, um Treffer abzufangen – deshalb empfiehlt das Spiel, sie nach vorn zu stellen. Helden der Hinterreihe teilen von hinten Schaden aus. Carter (Support) gehört in die Hinterreihe."
+    },
+    {
+      "title": "Viele SSR glänzen nur gegen Zombies",
+      "body": "Etwa die Hälfte der SSR-Helden hat Skills, die nur gegen Monster wirken („Schaden gegen Monster“, „Schaden durch Monster“). Sie sind stark gegen Zombies, in Rallys und bei Events, aber schwach in PvP. Rachel, Logan und Celeste haben Boni, die überall wirken."
+    },
+    {
+      "title": "VER ist ein Schild",
+      "body": "Laut Spielbeschreibung fängt VER den Großteil des Schadens ab, bis das Schild zerbricht. VER-Boni (Conan, Dirk) fügen Schilde hinzu; Katya zerstört Schilde schneller. Schadensreduktion durch Passivs (Arnold, Dirk, Vince, Virgilio) wirkt auch weiter, wenn das Schild weg ist."
+    },
+    {
+      "title": "Physisch oder Strahlung",
+      "body": "Es gibt zwei Schadensarten. Strahlungsschaden verursachen Monroe, Leah, Yana, Lucian, Silas, Celeste und Carter (sowie Conans und Jacks normale Angriffe). Alle anderen verursachen physischen Schaden. Bekka und Virgilio senken Strahlungsschaden; Arnolds Field Support blockt nur physischen Schaden. Mit beiden in der Vorderreihe bist du gegen beides gewappnet."
+    },
+    {
+      "title": "Exklusivwaffen sind enorm stark",
+      "body": "Eine Exklusivwaffe auf Lv. 30 gewährt ihrem Helden etwa 703k LP, 8,4k ATK, 4,2k VER und 5% Schadensresistenz. Das sind mehr LP, als der Held durch Aufleveln bis 150 erhält. Außerdem steigt das Skill-Limit von 30 auf 40. Waffen-Upgrades geben jedem Helden bis zu +40k LP, +800 ATK und +200 VER. Waffenfragmente helfen also deinem ganzen Kader."
+    },
+    {
+      "title": "4★ schaltet ein starkes Stat-Talent frei",
+      "body": "Auf Helden-Lv. 31 und bei 4★ wird der 4. Slot mit einem permanenten Talent freigeschaltet: UR-Helden erhalten Doomsday Judgment (+20% LP, ATK und VER, +10% Skill-Abklingtempo), SSR-Helden Wasteland Wanderer (+10%) und SR-Helden Survival Expert (+5%). Ein Held auf 4★ zu bringen, ist eines der größten Einzel-Upgrades."
+    },
+    {
+      "title": "Erst Sterne, dann Skill-Bücher",
+      "body": "Der Sternrang begrenzt das Skill-Level: 1★ → Lv. 1, 2★ → 5, 3★ → 10, 4★ → 20, 5★ → 30. Sterne erhöhen auch den Skillschaden (Monroes Scharfschützenschuss steigt zum Beispiel von 70% ATK bei 0★ auf 486% bei 5★). Bücher über dem Limit sind verschwendet – erhöhe zuerst den Sternrang. Von 0 auf 5 Sterne brauchst du 975 Fragmente."
+    },
+    {
+      "title": "UR-Helden legen schneller los",
+      "body": "UR-Helden erhalten auf Lv. 1–50 etwa 27–46% mehr LP, ATK und VER. Ab Lv. 65 erhalten alle Helden durch Levelaufstiege gleich viel; dann machen die jeweiligen Basiswerte den Unterschied. Das Truppenlimit steigt von 52 bei Lv. 1 auf 351 bei Lv. 150."
+    },
+    {
+      "title": "Carter passt überall; SR-Helden sammeln",
+      "body": "Carters Boni wirken in jedem Trupp und gegen jeden Gegner. Jamal, Hank und Jackson sind schwache Kämpfer, aber die einzigen, die die Soldaten-Traglast erhöhen. Nutze sie daher zum Sammeln."
+    }
+  ]
+}

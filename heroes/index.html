@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-i18n-page-only="true" data-i18n-languages="en,fr,ru,tr,pl,es,pt,de,ko,zh">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -11,6 +11,8 @@
   <meta name="description" content="Z Route: Redemption heroes from datamined client data: skills, stats, squad bonuses, faction counters and plain-language tips.">
   <link rel="manifest" href="../manifest.webmanifest">
   <link rel="icon" href="../assets/heroes/ui/star.webp" type="image/webp">
+  <script src="../i18n.js"></script>
+  <script src="../i18n/heroes.js"></script>
   <title>Z Route Heroes</title>
   <style>
     :root {
@@ -87,6 +89,10 @@
     .desktop-nav a.active { color: var(--text); background: var(--s3); }
     .icon-btn { margin-left: auto; width: 34px; height: 34px; display: grid; place-items: center; border-radius: 10px; border: 1px solid var(--line2); background: var(--s1); cursor: pointer; }
     .icon-btn svg { width: 17px; height: 17px; }
+    .language-control { height: 34px; display: inline-flex; align-items: center; gap: 5px; flex: none; padding: 0 7px; border: 1px solid var(--line2); border-radius: 10px; background: var(--s1); color: var(--muted); }
+    .language-control svg { width: 15px; height: 15px; flex: none; }
+    .language-control select { width: 83px; min-width: 0; height: 30px; padding: 0; border: 0; outline: 0; background: transparent; color: var(--text); font: inherit; font-size: 12px; font-weight: 650; }
+    @media (max-width: 520px) { .header-inner { gap: 8px; } .brand { max-width: 140px; overflow: hidden; text-overflow: ellipsis; } .ver { display: none; } .language-control { padding: 0 6px; gap: 3px; } .language-control select { width: 68px; font-size: 11px; } }
     @media (min-width: 900px) { .desktop-nav { display: flex; } .icon-btn { margin-left: 8px; } }
 
     main { max-width: 1440px; margin: 0 auto; padding: 14px 16px 24px; }
@@ -435,6 +441,10 @@
         <a href="../promo-codes/">Promo Codes</a>
         <a href="https://github.com/JeffxLabs/zrouteredemption" target="_blank" rel="noopener">GitHub ↗</a>
       </nav>
+      <label class="language-control">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
+        <select id="language-select" data-i18n-languages="en,fr,ru,tr,pl,es,pt,de,ko,zh" aria-label="Language"></select>
+      </label>
       <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch to light theme"></button>
     </div>
   </header>
@@ -442,7 +452,7 @@
   <main>
     <div class="intro">
       <h1>Heroes</h1>
-      <p id="intro-sub">Datamined from the game client. Tap <span class="term" style="cursor:default">underlined terms</span> for details.</p>
+      <p id="intro-sub">Datamined from the game client. Tap underlined terms for details.</p>
     </div>
     <div class="pill-row" id="pills" aria-label="Roster summary"></div>
 
@@ -563,12 +573,32 @@
 
   <script src="heroes_data.js"></script>
   <script>
-  (() => {
+  (async () => {
     'use strict';
-    const H = HEROES_DATA, M = HEROES_META;
-    const byId = new Map(H.map(h => [h.id, h]));
+    const supportedLanguages = new Set(['en', 'fr', 'ru', 'tr', 'pl', 'es', 'pt', 'de', 'ko', 'zh']);
+    const localePromises = new Map();
+    const englishPayload = { heroes: HEROES_DATA, meta: HEROES_META };
+    function loadHeroLocale(code) {
+      if (!supportedLanguages.has(code) || code === 'en') return Promise.resolve(englishPayload);
+      if (!localePromises.has(code)) localePromises.set(code, new Promise(resolve => {
+        const script = document.createElement('script');
+        script.src = `heroes_i18n/${encodeURIComponent(code)}.js`;
+        script.onload = () => resolve(window.HEROES_LOCALES?.[code] || englishPayload);
+        script.onerror = () => resolve(englishPayload);
+        document.head.appendChild(script);
+      }));
+      return localePromises.get(code);
+    }
+    let initialLanguage, initialPayload;
+    do {
+      initialLanguage = I18N.language;
+      initialPayload = await loadHeroLocale(initialLanguage);
+    } while (initialLanguage !== I18N.language);
+    let H = initialPayload.heroes, M = initialPayload.meta;
+    let byId = new Map(H.map(h => [h.id, h]));
     const $ = (s, r = document) => r.querySelector(s);
     const UI = '../assets/heroes/ui/';
+    const withHash = hash => `${location.pathname}${location.search}${hash}`;
     const FACTIONS = ['Warrior', 'Tactical', 'Assault'];
     const ROLES = ['Frontline', 'Backline', 'Support'];
     const ROLE_ID = { Frontline: 1, Support: 2, Backline: 3 };
@@ -579,13 +609,29 @@
       set(k, v) { try { localStorage.setItem(k, v); } catch (_) { /* storage unavailable */ } }
     };
     const esc = v => String(v ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-    const fmt = v => Number(v).toLocaleString('en-US', { maximumFractionDigits: 0 });
-    const pct = v => `${Number((v * 100).toFixed(2))}%`;
+    const fmt = v => Number(v).toLocaleString(I18N.locale, { maximumFractionDigits: 0 });
+    const compact = v => new Intl.NumberFormat(I18N.locale, { notation: 'compact', maximumSignificantDigits: 3 }).format(Number(v));
+    const pct = v => `${new Intl.NumberFormat(I18N.locale, { maximumFractionDigits: 2 }).format(Number(v) * 100)}%`;
+    const formatSkillArg = value => {
+      const match = String(value ?? '').match(/^([+-]?\d+(?:\.\d+)?)(%?)$/);
+      return match ? `${new Intl.NumberFormat(I18N.locale, { maximumFractionDigits: 6, useGrouping: false }).format(Number(match[1]))}${match[2]}` : String(value ?? '');
+    };
+    const localizeInlineNumbers = value => String(value ?? '').replace(/(?<![\w.#])\d+(?:\.\d+)?(?![\w.])/gu, value => formatSkillArg(value));
+    const fillSkillTemplate = (template, args = []) => String(template ?? '').replace(/\{(\d+)\}/g, (_, index) => formatSkillArg(args[+index]));
+    const cooldownTime = seconds => {
+      const units = { en: 's', fr: 's', ru: 'с', tr: 'sn', pl: 's', es: 's', pt: 's', de: 'Sek.', ko: '초', zh: '秒' };
+      return `${new Intl.NumberFormat(I18N.locale, { maximumFractionDigits: 2 }).format(seconds)} ${units[I18N.language] || 's'}`;
+    };
+    const unlockLabel = skill => `${I18N.t('Hero Lv. {0}', [fmt(skill.unlock_level)])}${skill.unlock_star ? ` · ${fmt(skill.unlock_star)}★` : ''}`;
+    const tr = text => I18N.t(text);
+    const factionLabel = name => M.faction_labels?.[name] || tr(name);
+    const roleLabel = name => tr(name);
+    const damageLabel = name => tr(name);
     const focusOf = h => { const f = (h.insight && h.insight.focus) || 'pvp'; return f === 'both' ? 'pvp' : f; };
     const campIcon = name => M.faction_icons[name].shield;
     const roleTile = role => M.role_icons[role].tile;
     const roleRing = role => M.role_icons[role].ring;
-    const factionMeta = Object.fromEntries(M.squad.counters.map(c => [c.faction, c]));
+    let factionMeta = Object.fromEntries(M.squad.counters.map(c => [c.faction, c]));
     const beats = f => factionMeta[f].beats;
     const weakTo = f => M.squad.counters.find(c => c.beats === f).faction;
 
@@ -606,19 +652,40 @@
     themeBtn.addEventListener('click', () => applyTheme(!document.documentElement.classList.contains('day')));
 
     // ---------- Glossary & interactive terms ----------
-    const GLOSS = { ...M.glossary };
+    let GLOSS = { ...M.glossary };
     for (const f of FACTIONS) {
       GLOSS[f] = { kind: 'term', match: [f], source: 'faction_counter_guide',
         text: `Hero faction. ${f} beats ${beats(f)}: ${f} heroes take 20% less damage from ${beats(f)} heroes. ${weakTo(f)} beats ${f}.` };
     }
     delete GLOSS.ATK.match; // too common to underline everywhere; still available by name
-    const TERM_OF = {};
+    let TERM_OF = {};
     for (const [k, g] of Object.entries(GLOSS)) for (const m of (g.match || [])) TERM_OF[m] = k;
-    const TERM_RE = new RegExp('(?<![\\w-])(' + Object.keys(TERM_OF).sort((a, b) => b.length - a.length)
+    let TERM_RE = new RegExp('(?<![\\w-])(' + Object.keys(TERM_OF).sort((a, b) => b.length - a.length)
       .map(s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|') + ')(?![\\w-])', 'g');
+
+    function rebuildGlossary() {
+      GLOSS = { ...M.glossary };
+      for (const [key, entry] of Object.entries({ ...GLOSS })) {
+        if (entry.name && entry.name !== key) GLOSS[entry.name] = entry;
+        for (const match of entry.match || []) if (match && match !== key) GLOSS[match] = entry;
+      }
+      for (const f of FACTIONS) if (!GLOSS[f]) {
+        const localized = factionLabel(f), counter = factionLabel(beats(f)), weakness = factionLabel(weakTo(f));
+        GLOSS[f] = { kind: 'term', id: f, name: localized, match: [localized], source: 'faction_counter_guide',
+          text: `Hero faction. ${localized} beats ${counter}: ${localized} heroes take 20% less damage from ${counter} heroes. ${weakness} beats ${localized}.` };
+      }
+      if (GLOSS.ATK) delete GLOSS.ATK.match;
+      TERM_OF = {};
+      for (const [key, entry] of Object.entries(GLOSS)) for (const match of entry.match || []) TERM_OF[match] = entry.id || key;
+      const meta = new Set(['.', '*', '+', '?', '^', '$', '{', '}', '(', ')', '|', '[', ']', String.fromCharCode(92)]);
+      const escaped = value => [...value].map(char => meta.has(char) ? String.fromCharCode(92) + char : char).join('');
+      TERM_RE = new RegExp('(?<![\\w-])(' + Object.keys(TERM_OF).sort((a, b) => b.length - a.length).map(escaped).join('|') + ')(?![\\w-])', 'g');
+    }
+    rebuildGlossary();
 
     let termSeq = 0;
     const termBtn = (key, label, cls = '') => `<button type="button" class="term ${cls}" data-term="${esc(key)}" aria-expanded="false" aria-controls="pop">${esc(label)}</button>`;
+    const termLabel = key => GLOSS[key]?.name || tr(key);
     const EFF = '<span class="eff" title="Effect value not in extracted tables yet" aria-label="unknown value">?</span>';
     function linkPlain(s, used) {
       let out = '', last = 0, m;
@@ -627,20 +694,20 @@
         const key = TERM_OF[m[1]];
         if (used.has(key)) continue;
         used.add(key);
-        out += esc(s.slice(last, m.index)) + termBtn(key, m[1]);
+        out += esc(localizeInlineNumbers(s.slice(last, m.index))) + termBtn(key, m[1]);
         last = m.index + m[1].length;
       }
-      return out + esc(s.slice(last));
+      return out + esc(localizeInlineNumbers(s.slice(last)));
     }
     function linkify(text, used = new Set(), args = null) {
       return String(text ?? '').split(/(\{\d+\}|\[[^\]]+\])/g).map(part => {
-        if (/^\{\d+\}$/.test(part)) { const v = args && args[+part.slice(1, -1)]; return v != null ? `<b class="val">${esc(v)}</b>` : EFF; }
+        if (/^\{\d+\}$/.test(part)) { const v = args && args[+part.slice(1, -1)]; return v != null ? `<b class="val">${esc(formatSkillArg(v))}</b>` : EFF; }
         if (/^\[[^\]]+\]$/.test(part)) {
           const k = part.slice(1, -1);
           if (GLOSS[k]) { used.add(k); return termBtn(k, part, 'kw'); }
           return `<span class="kw">${esc(part)}</span>`;
         }
-        return linkPlain(part, used);
+        return linkPlain(localizeInlineNumbers(part), used);
       }).join('');
     }
 
@@ -662,8 +729,8 @@
       if (popAnchor && popAnchor !== btn) popAnchor.setAttribute('aria-expanded', 'false');
       popAnchor = btn; popPinned = pinned;
       pop.setAttribute('role', pinned ? 'dialog' : 'tooltip');
-      pop.setAttribute('aria-label', key);
-      pop.innerHTML = `<strong>${esc(key)}</strong><p>${linkify(g.text, new Set([key]))}</p>`;
+      pop.setAttribute('aria-label', g.name || key);
+      pop.innerHTML = `<strong>${esc(g.name || key)}</strong><p>${linkify(g.text, new Set([key]))}</p>`;
       pop.hidden = false;
       btn.setAttribute('aria-expanded', 'true');
       placePop();
@@ -715,38 +782,47 @@
       return `<span class="${cls}" title="No hero-specific icon in the client atlas"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true">${DEFAULT_ICONS[s.type] || DEFAULT_ICONS[4]}</svg></span>`;
     }
     const combat = h => h.skills.filter(s => s.type !== 4);
-    const isPveOnly = s => /monster/i.test(s.description || '');
-    const focusChip = (h, sm = true) => `<span class="chip focus f-${focusOf(h)} ${sm ? 'sm' : ''}"><span class="dot"></span>${esc(FOCUS[focusOf(h)])}</span>`;
-    const rowChip = (h, sm = true) => h.position ? `<span class="chip ${sm ? 'sm' : ''}"><img src="${roleRing(h.position === 'front' ? 'Frontline' : 'Backline')}" alt="">${h.position === 'front' ? 'Front row' : 'Back row'}</span>` : '';
-    const starImgs = n => `<span class="stars" aria-label="${n} stars">${Array.from({ length: 5 }, (_, i) => `<img src="${UI}${i < n ? 'star' : 'star_off'}.webp" alt="">`).join('')}</span>`;
+    const isPveOnly = s => s.is_pve_only === true || /monster/i.test(s.description || '');
+    const focusChip = (h, sm = true) => `<span class="chip focus f-${focusOf(h)} ${sm ? 'sm' : ''}"><span class="dot"></span>${esc(tr(FOCUS[focusOf(h)]))}</span>`;
+    const rowChip = (h, sm = true) => h.position ? `<span class="chip ${sm ? 'sm' : ''}"><img src="${roleRing(h.position === 'front' ? 'Frontline' : 'Backline')}" alt="">${esc(tr(h.position === 'front' ? 'Front row' : 'Back row'))}</span>` : '';
+    const starImgs = n => `<span class="stars" aria-label="${esc(I18N.t('{0} stars', [fmt(n)]))}">${Array.from({ length: 5 }, (_, i) => `<img src="${UI}${i < n ? 'star' : 'star_off'}.webp" alt="">`).join('')}</span>`;
     let toastTimer = 0;
     function toast(msg) { const t = $('#toast'); t.textContent = msg; t.hidden = false; clearTimeout(toastTimer); toastTimer = setTimeout(() => { t.hidden = true; }, 1800); }
 
     // ---------- Pills & intro ----------
     const count = fn => H.filter(fn).length;
-    $('#pills').innerHTML = [
+    function renderPills() {
+      $('#pills').innerHTML = [
       `<span class="chip"><img class="logo" src="${UI}rarity_5.webp" alt="UR"><span class="count">${count(h => h.quality === 5)}</span></span>`,
       `<span class="chip"><img class="logo" src="${UI}rarity_4.webp" alt="SSR"><span class="count">${count(h => h.quality === 4)}</span></span>`,
       `<span class="chip"><img class="logo" src="${UI}rarity_3.webp" alt="SR"><span class="count">${count(h => h.quality === 3)}</span></span>`,
-      ...ROLES.map(r => `<span class="chip"><img src="${roleTile(r)}" alt="">${r}<span class="count">${count(h => h.role_short === r)}</span></span>`),
-      ...FACTIONS.map(f => `<span class="chip"><img src="${campIcon(f)}" alt="">${f}<span class="count">${count(h => h.camp_name === f)}</span></span>`),
+      ...ROLES.map(r => `<span class="chip"><img src="${roleTile(r)}" alt="">${esc(roleLabel(r))}<span class="count">${count(h => h.role_short === r)}</span></span>`),
+      ...FACTIONS.map(f => `<span class="chip"><img src="${campIcon(f)}" alt="">${esc(factionLabel(f))}<span class="count">${count(h => h.camp_name === f)}</span></span>`),
       `<span class="chip"><img src="${UI}weapon_30006.webp" alt="">Exclusive weapons<span class="count">${count(h => h.exclusive_gear)}</span></span>`
-    ].join('');
-    $('#tab-count').textContent = H.length;
+      ].join('');
+      $('#tab-count').textContent = H.length;
+    }
+    renderPills();
 
     // ---------- Filters ----------
     const state = { q: '', sort: 'rarity', quality: 'all', faction: 'all', role: 'all', focus: 'all', damage: 'all', gear: 'all' };
     const FILTERS = [
       { key: 'quality', label: 'Rarity', opts: [['all', 'All'], ['5', `<img class="logo" src="${UI}rarity_5.webp" alt="UR">`], ['4', `<img class="logo" src="${UI}rarity_4.webp" alt="SSR">`], ['3', `<img class="logo" src="${UI}rarity_3.webp" alt="SR">`]], test: (h, v) => String(h.quality) === v },
-      { key: 'faction', label: 'Faction', opts: [['all', 'All'], ...FACTIONS.map(f => [f, `<img src="${campIcon(f)}" alt="">${f}`])], test: (h, v) => h.camp_name === v },
-      { key: 'role', label: 'Role', opts: [['all', 'All'], ...ROLES.map(r => [r, `<img src="${roleTile(r)}" alt="">${r}`])], test: (h, v) => h.role_short === v },
+      { key: 'faction', label: 'Faction', opts: [['all', 'All'], ...FACTIONS.map(f => [f, `<img src="${campIcon(f)}" alt="">${esc(factionLabel(f))}`])], test: (h, v) => h.camp_name === v },
+      { key: 'role', label: 'Role', opts: [['all', 'All'], ...ROLES.map(r => [r, `<img src="${roleTile(r)}" alt="">${esc(roleLabel(r))}`])], test: (h, v) => h.role_short === v },
       { key: 'focus', label: 'Best for', opts: [['all', 'All'], ...Object.entries(FOCUS).map(([k, l]) => [k, `<span class="dot"></span>${l}`, `focus f-${k}`])], test: (h, v) => focusOf(h) === v },
-      { key: 'damage', label: 'Damage', opts: [['all', 'All'], ['Physical', `<img src="${UI}dmg_physical.webp" alt="">Physical`], ['Radiation', `<img src="${UI}dmg_radiation.webp" alt="">Radiation`]], test: (h, v) => h.damage_type === v },
+      { key: 'damage', label: 'Damage', opts: [['all', 'All'], ['Physical', `<img src="${UI}dmg_physical.webp" alt="">${esc(damageLabel('Physical'))}`], ['Radiation', `<img src="${UI}dmg_radiation.webp" alt="">${esc(damageLabel('Radiation'))}`]], test: (h, v) => h.damage_type === v },
       { key: 'sort', label: 'Sort', sort: true, opts: [['rarity', 'Rarity'], ['name', 'Name'], ['hp', 'HP'], ['attack', 'ATK'], ['defense', 'DEF']] },
       { key: 'gear', label: 'Weapon', opts: [['all', 'All'], ['yes', `<img src="${UI}weapon_50006.webp" alt="">Exclusive weapon`]], test: h => !!h.exclusive_gear }
     ];
+    function filterOptions(f) {
+      if (f.key === 'faction') return [['all', 'All'], ...FACTIONS.map(name => [name, `<img src="${campIcon(name)}" alt="">${esc(factionLabel(name))}`])];
+      if (f.key === 'role') return [['all', 'All'], ...ROLES.map(name => [name, `<img src="${roleTile(name)}" alt="">${esc(roleLabel(name))}`])];
+      if (f.key === 'damage') return [['all', 'All'], ['Physical', `<img src="${UI}dmg_physical.webp" alt="">${esc(damageLabel('Physical'))}`], ['Radiation', `<img src="${UI}dmg_radiation.webp" alt="">${esc(damageLabel('Radiation'))}`]];
+      return f.opts;
+    }
     function renderFilters() {
-      $('#filters').innerHTML = FILTERS.map(f => `<div class="frow"><span class="lbl" id="fl-${f.key}">${f.label}</span><div class="chips" role="group" aria-labelledby="fl-${f.key}">${f.opts.map(([v, html, cls]) => `<button type="button" class="chip ${cls || ''}" data-f="${f.key}" data-v="${esc(v)}" aria-pressed="${state[f.key] === v}">${html}${f.sort || v === 'all' ? '' : `<span class="count">${H.filter(h => f.test(h, v)).length}</span>`}</button>`).join('')}</div></div>`).join('');
+      $('#filters').innerHTML = FILTERS.map(f => `<div class="frow"><span class="lbl" id="fl-${f.key}">${f.label}</span><div class="chips" role="group" aria-labelledby="fl-${f.key}">${filterOptions(f).map(([v, html, cls]) => `<button type="button" class="chip ${cls || ''}" data-f="${f.key}" data-v="${esc(v)}" aria-pressed="${state[f.key] === v}">${html}${f.sort || v === 'all' ? '' : `<span class="count">${H.filter(h => f.test(h, v)).length}</span>`}</button>`).join('')}</div></div>`).join('');
       const active = FILTERS.filter(f => !f.sort && state[f.key] !== 'all').length;
       const b = $('#filter-badge'); b.hidden = !active; b.textContent = active;
     }
@@ -761,14 +837,24 @@
       e.currentTarget.setAttribute('aria-expanded', open);
     });
     let qTimer = 0;
-    $('#q').addEventListener('input', e => { clearTimeout(qTimer); qTimer = setTimeout(() => { state.q = e.target.value.trim().toLowerCase(); renderGrid(); }, 120); });
+    $('#q').addEventListener('input', e => { clearTimeout(qTimer); qTimer = setTimeout(() => { state.q = e.target.value.trim().toLocaleLowerCase(I18N.locale); renderGrid(); }, 120); });
     $('#legend').innerHTML = Object.entries(FOCUS).map(([k, l]) => `<span class="f-${k}"><i></i>${l}</span>`).join('');
 
-    const searchText = new Map(H.map(h => [h.id, [h.display_name, h.camp_name, h.role_short, h.quality_name, ...(h.insight.tags || []), h.insight.summary, ...(h.insight.tips || []), ...h.skills.map(s => `${s.name} ${s.description}`), ...(h.exclusive_gear ? h.exclusive_gear.skills.map(s => `${s.name} ${s.description}`) : [])].join(' ').toLowerCase()]));
+    let searchText = new Map();
+    function rebuildSearchIndex() {
+      searchText = new Map(H.map(h => {
+        const english = HEROES_DATA.find(item => item.id === h.id) || h;
+        const fields = hero => [hero.display_name, hero.camp_name, hero.camp_label, hero.army_name, hero.role_short, hero.quality_name, ...(hero.insight.tags || []), hero.insight.summary,
+          ...(hero.insight.tips || []), ...hero.skills.flatMap(s => [s.name, s.description, ...(s.by_star || []).flatMap(b => [b.text, fillSkillTemplate(s.template, b.args)]), ...(s.star_upgrades || []).flatMap(u => [u.text, fillSkillTemplate(u.template, u.args)])]),
+          ...(hero.exclusive_gear ? hero.exclusive_gear.skills.flatMap(s => [s.name, s.description]) : [])];
+        return [h.id, [...fields(h), ...fields(english)].filter(Boolean).join(' ').toLocaleLowerCase(I18N.locale)];
+      }));
+    }
+    rebuildSearchIndex();
     function filtered() {
       let list = H.filter(h => FILTERS.every(f => f.sort || state[f.key] === 'all' || f.test(h, state[f.key])) && (!state.q || searchText.get(h.id).includes(state.q)));
       const s = state.sort;
-      list.sort((a, b) => s === 'name' ? a.display_name.localeCompare(b.display_name)
+      list.sort((a, b) => s === 'name' ? a.display_name.localeCompare(b.display_name, I18N.locale)
         : s === 'rarity' ? (b.quality - a.quality) || (a.army_type - b.army_type) || (b.base_stats.attack + b.base_stats.hp - a.base_stats.attack - a.base_stats.hp)
         : b.base_stats[s] - a.base_stats[s]);
       return list;
@@ -779,11 +865,11 @@
         return `<span><small>${k === 'attack' ? 'ATK' : k === 'defense' ? 'DEF' : 'HP'}${rk <= 3 ? `<em>#${rk}</em>` : ''}</small><b>${fmt(h.base_stats[k])}</b></span>`;
       }).join('');
       const sk = combat(h).map(s => `<span class="hc-skill" title="${esc(s.name_in_client ? s.name : s.type_name)}">${skillIcon(s)}<span class="nm">${esc(s.name_in_client ? s.name : s.type_name)}</span></span>`).join('');
-      return `<button type="button" class="hcard f-${focusOf(h)}" data-id="${h.id}" style="--q:${QCOL[h.quality]}" aria-label="${esc(h.display_name)}, ${esc(h.quality_name)} ${esc(h.camp_name)} ${esc(h.role_short)}, best for ${esc(FOCUS[focusOf(h)])}">
+      return `<button type="button" class="hcard f-${focusOf(h)}" data-id="${h.id}" style="--q:${QCOL[h.quality]}" aria-label="${esc(h.display_name)}, ${esc(h.quality_name)} ${esc(h.camp_label || factionLabel(h.camp_name))} ${esc(roleLabel(h.role_short))}, best for ${esc(tr(FOCUS[focusOf(h)]))}">
         <span class="hc-art"><img class="portrait" src="${esc(h.image)}" alt="" loading="lazy" decoding="async" width="320" height="440"><img class="camp" src="${esc(h.camp_shield)}" alt="">${h.exclusive_gear ? `<span class="wpn" title="Exclusive weapon"><img src="${esc(h.exclusive_gear.weapon_icon)}" alt=""></span>` : ''}</span>
         <span class="hc-body">
           <span class="hc-title"><img class="rar" src="${esc(h.rarity_logo)}" alt="${esc(h.quality_name)}"><span class="hc-name">${esc(h.display_name)}</span></span>
-          <span class="hc-sub"><img src="${esc(roleTile(h.role_short))}" alt="">${esc(h.camp_name)} · ${esc(h.role_short)}${h.damage_type ? ` · <img src="${UI}dmg_${h.damage_type === 'Radiation' ? 'radiation' : 'physical'}.webp" alt="">${esc(h.damage_type)}` : ''}</span>
+          <span class="hc-sub"><img src="${esc(roleTile(h.role_short))}" alt="">${esc(h.camp_label || factionLabel(h.camp_name))} · ${esc(roleLabel(h.role_short))}${h.damage_type ? ` · <img src="${UI}dmg_${h.damage_type === 'Radiation' ? 'radiation' : 'physical'}.webp" alt="">${esc(damageLabel(h.damage_type))}` : ''}</span>
           <span class="hc-chips">${focusChip(h)}${(h.position === 'back') === (h.army_type === 1) ? rowChip(h) : ''}</span>
           <span class="hc-stats">${st}</span>
           <span class="hc-skills">${sk}</span>
@@ -791,7 +877,7 @@
     }
     function renderGrid() {
       const list = filtered();
-      $('#roster-title').textContent = list.length === H.length ? `${H.length} heroes` : `${list.length} of ${H.length} heroes`;
+      $('#roster-title').textContent = list.length === H.length ? I18N.t('{0} heroes', [fmt(H.length)]) : I18N.t('{0} of {1} heroes', [fmt(list.length), fmt(H.length)]);
       $('#grid').innerHTML = list.length ? list.map(card).join('') : `<div class="empty">No heroes match. <button class="reset" type="button" id="reset">Reset filters</button></div>`;
     }
     $('#grid').addEventListener('click', e => {
@@ -812,7 +898,7 @@
       if (!rendered.has(t)) { rendered.add(t); ({ squads: renderSquads, tips: renderTips, stats: renderStats, unreleased: renderUnreleased }[t] || (() => {}))(); }
       if (t === 'squads') renderSquadState();
       store.set('heroes-tab', t);
-      if (push) history.replaceState(null, '', t === 'squads' && squad.some(Boolean) ? `#squad=${squadIds()}` : `#${t}`);
+      if (push) history.replaceState(null, '', withHash(t === 'squads' && squad.some(Boolean) ? `#squad=${squadIds()}` : `#${t}`));
     }
     document.querySelector('.tabs').addEventListener('click', e => { const b = e.target.closest('.tab'); if (b) setTab(b.dataset.tab); });
     document.querySelector('.tabs').addEventListener('keydown', e => {
@@ -831,18 +917,18 @@
       return `<div class="mstat"><small>${label}</small><b>${fmt(h.base_stats[k])}</b><div class="bar"><i style="width:${(h.base_stats[k] / max * 100).toFixed(1)}%"></i></div><div class="rk">#${a.rank} of ${a.of} heroes</div><div class="rk">#${p.rank} of ${p.of} ${esc(h.stat_ranks.peer_scope)}</div></div>`;
     }
     const EFFECT_ICON = { 'Physical DMG': 'dmg_physical', 'Radiation DMG': 'dmg_radiation', 'Physical DEF': 'def_physical', 'Energy DEF': 'def_radiation' };
-    const effectChip = t => !t ? '' : `<span class="chip sm">${EFFECT_ICON[t] ? `<img src="${UI}${EFFECT_ICON[t]}.webp" alt="">` : ''}${esc(t === 'Energy DEF' ? 'Radiation DEF' : t)}</span>`;
+    const effectChip = (t, source = t) => !t ? '' : `<span class="chip sm">${EFFECT_ICON[source] ? `<img src="${UI}${EFFECT_ICON[source]}.webp" alt="">` : ''}${esc(t)}</span>`;
     let modalStar = 5;
     function skillRow(s) {
-      if (s.type === 4) return `<div class="spec">${skillIcon(s)}<span><b>${esc(s.name)}</b> <span class="chip sm">${esc(s.type_name)}</span> · unlocks at ${esc(s.unlock)}<br>${linkify(s.description)}</span></div>`;
+      if (s.type === 4) return `<div class="spec">${skillIcon(s)}<span><b>${esc(s.name)}</b> <span class="chip sm">${esc(s.type_name)}</span> · ${I18N.t('unlocks at {0}', [unlockLabel(s)])}<br>${linkify(s.description)}</span></div>`;
       const b = s.by_star && s.by_star[modalStar];
       const desc = b && s.template ? linkify(s.template, new Set(), b.args) : linkify(s.description);
-      const gear = s.gear_upgrades.length ? `<span class="chip sm" style="color:var(--ur)"><img src="${UI}weapon_frame.webp" alt="">Weapon upgrade at Lv. ${s.gear_upgrades.map(g => g.weapon_level).join(', ')}</span>` : '';
-      const ups = (s.star_upgrades || []).length ? `<details class="ups"><summary>Star upgrades</summary><ol>${s.star_upgrades.map(u => `<li class="${u.star <= modalStar ? 'on' : ''}"><span>${u.star}★</span>${esc(u.text)}</li>`).join('')}</ol></details>` : '';
+      const gear = s.gear_upgrades.length ? `<span class="chip sm" style="color:var(--ur)"><img src="${UI}weapon_frame.webp" alt="">${I18N.t('Weapon upgrade at Lv. {0}', [s.gear_upgrades.map(g => fmt(g.weapon_level)).join(', ')])}</span>` : '';
+      const ups = (s.star_upgrades || []).length ? `<details class="ups"><summary>Star upgrades</summary><ol>${s.star_upgrades.map(u => `<li class="${u.star <= modalStar ? 'on' : ''}"><span>${u.star}★</span>${linkify(u.template || u.text, new Set(), u.args || null)}</li>`).join('')}</ol></details>` : '';
       return `<div class="skill">${skillIcon(s)}<div>
-        <div class="sk-head"><b>${linkify(s.name)}</b><span class="chip sm">${esc(s.type_name)}</span>${effectChip(s.effect_type)}${isPveOnly(s) ? '<span class="chip sm focus f-pve"><span class="dot"></span>PvE only</span>' : ''}${gear}</div>
-        <div class="sk-head"><span class="meta">${s.cooldown_s ? `Cooldown ${esc(s.cooldown)}` : 'Passive'} · Unlocks at ${esc(s.unlock)}${b ? ` · shown at ${modalStar}★, skill Lv. ${b.skill_level}` : ''}</span></div>
-        <p class="sk-desc">${desc}</p>${s.value_note ? `<div class="vnote">${esc(s.value_note)}</div>` : ''}${ups}</div></div>`;
+        <div class="sk-head"><b>${linkify(s.name)}</b><span class="chip sm">${esc(s.type_name)}</span>${effectChip(s.effect_type, s.effect_type_source)}${isPveOnly(s) ? `<span class="chip sm focus f-pve"><span class="dot"></span>${esc(tr('PvE only'))}</span>` : ''}${gear}</div>
+        <div class="sk-head"><span class="meta">${s.cooldown_s ? I18N.t('Cooldown {0}', [cooldownTime(s.cooldown_s)]) : tr('Passive')} · ${I18N.t('Unlocks at {0}', [unlockLabel(s)])}${b ? ` · ${I18N.t('shown at {0}★, skill Lv. {1}', [fmt(modalStar), fmt(b.skill_level)])}` : ''}</span></div>
+        <p class="sk-desc">${desc}</p>${s.value_note ? `<div class="vnote">${esc(localizeInlineNumbers(s.value_note))}</div>` : ''}${ups}</div></div>`;
     }
     function skillsSection(h) {
       return `<div class="sec-head"><h3>Skills</h3><div class="star-pick" role="group" aria-label="Show values at star level">${[0, 1, 2, 3, 4, 5].map(n => `<button type="button" data-star="${n}" aria-pressed="${n === modalStar}">${n}<img src="${UI}star.webp" alt=" stars"></button>`).join('')}</div></div>${h.skills.map(skillRow).join('')}`;
@@ -850,7 +936,7 @@
     function weaponSection(h) {
       const g = h.exclusive_gear; if (!g) return '';
       const b = g.max_level_bonus, all = g.max_strengthen_all_heroes;
-      return `<section class="sec weapon"><div class="w-head"><span class="w-icon"><img src="${esc(g.weapon_icon)}" alt="Exclusive weapon"></span><div><h3 style="margin:0 0 4px">Exclusive weapon</h3><div class="muted" style="font-size:13px">Unlocks on season day ${esc(g.season_day)} · max level ${g.level_cap}</div></div></div>
+      return `<section class="sec weapon"><div class="w-head"><span class="w-icon"><img src="${esc(g.weapon_icon)}" alt="Exclusive weapon"></span><div><h3 style="margin:0 0 4px">Exclusive weapon</h3><div class="muted" style="font-size:13px">${I18N.t('Unlocks on season day {0} · max level {1}', [fmt(g.season_day), fmt(g.level_cap)])}</div></div></div>
         <div class="w-facts"><span class="chip sm"><img src="${UI}gear_hp.webp" alt="">At Lv. ${g.level_cap}: +${fmt(b['Hero HP'])} HP · +${fmt(b['Hero ATK'])} ATK · +${fmt(b['Hero DEF'])} DEF · +${pct(b['DMG Resistance'])} DMG resistance</span>
         <span class="chip sm">Skill caps 30 → ${Math.max(...g.skill_caps_at_max)}</span>
         <span class="chip sm"><img src="${UI}gear_def.webp" alt="">Upgrading gives ALL heroes +${fmt(all['Hero HP'])} HP · +${fmt(all['Hero ATK'])} ATK · +${fmt(all['Hero DEF'])} DEF</span></div>
@@ -875,13 +961,14 @@
       const ins = h.insight || {};
       const used = new Set();
       const lb = h.level_benefits.map(b => `${esc(b.name.replace(/\s*\+$/, ''))} +${pct(b.value)}`).join(', ');
+      const needs = I18N.t('Needs {0} Lv. {1} · Max level {2}', [esc(h.training_center.building_name), fmt(h.training_center.level), fmt(h.max_level)]);
       return `<div class="m-top" style="--q:${QCOL[h.quality]}">
           <div class="m-art"><img id="m-art-img" src="${esc(h.image)}" alt="${esc(h.display_name)}">${h.exclusive_gear && h.exclusive_gear.hero_art ? `<div class="art-toggle"><button type="button" data-art="${esc(h.image)}" aria-pressed="true">Hero</button><button type="button" data-art="${esc(h.exclusive_gear.hero_art)}" aria-pressed="false">Weapon</button></div>` : ''}</div>
           <div class="m-info">
             <div class="m-name"><img src="${esc(h.rarity_logo)}" alt="${esc(h.quality_name)}"><h2>${esc(h.display_name)}</h2><span class="id">#${h.id}</span></div>
-            <div class="chips"><span class="chip"><img src="${esc(h.camp_shield)}" alt="">${esc(h.camp_name)}</span><span class="chip"><img src="${esc(roleTile(h.role_short))}" alt="">${esc(h.role_short)}</span>${rowChip(h, false)}${focusChip(h, false)}</div>
-            <div class="vs"><span>Beats <img src="${campIcon(h.counters)}" alt=""><b>${esc(h.counters)}</b></span><span>Weak to <img src="${campIcon(h.countered_by)}" alt=""><b>${esc(h.countered_by)}</b></span>${h.damage_type ? `<span><img src="${UI}dmg_${h.damage_type === 'Radiation' ? 'radiation' : 'physical'}.webp" alt="">${termBtn(h.damage_type === 'Radiation' ? 'Radiation DMG' : 'Physical DMG', `${h.damage_type} damage`)}</span>` : ''}</div>
-            <div class="muted" style="font-size:12.5px">Needs ${esc(h.training_center.building_name)} Lv. ${h.training_center.level} · Max level ${h.max_level}${lb ? ` · Passive bonus: ${lb}` : ''}</div>
+            <div class="chips"><span class="chip"><img src="${esc(h.camp_shield)}" alt="">${esc(h.camp_label || factionLabel(h.camp_name))}</span><span class="chip"><img src="${esc(roleTile(h.role_short))}" alt="">${esc(roleLabel(h.role_short))}</span>${rowChip(h, false)}${focusChip(h, false)}</div>
+            <div class="vs"><span>${tr('Beats')} <img src="${campIcon(h.counters)}" alt=""><b>${esc(factionLabel(h.counters))}</b></span><span>${tr('Weak to')} <img src="${campIcon(h.countered_by)}" alt=""><b>${esc(factionLabel(h.countered_by))}</b></span>${h.damage_type ? `<span><img src="${UI}dmg_${h.damage_type === 'Radiation' ? 'radiation' : 'physical'}.webp" alt="">${termBtn(h.damage_type === 'Radiation' ? 'Radiation DMG' : 'Physical DMG', termLabel(h.damage_type === 'Radiation' ? 'Radiation DMG' : 'Physical DMG'))}</span>` : ''}</div>
+            <div class="muted" style="font-size:12.5px">${needs}${lb ? ` · ${I18N.t('Passive bonus: {0}', [lb])}` : ''}</div>
           </div>
           <div class="m-extra">
             <div class="m-stats">${statBox(h, 'hp', 'HP')}${statBox(h, 'attack', 'ATK')}${statBox(h, 'defense', 'DEF')}</div>
@@ -889,11 +976,11 @@
           </div>
         </div>
         ${h.variant_note ? `<div class="callout">${linkify(h.variant_note)}</div>` : ''}
-        <section class="sec insight f-${focusOf(h)}"><p class="lead">${linkify(ins.summary, used)}</p><div class="chips">${focusChip(h)}${(ins.tags || []).map(t => `<span class="chip sm">${esc(t)}</span>`).join('')}</div><ul>${(ins.tips || []).map(t => `<li>${linkify(t, new Set())}</li>`).join('')}</ul></section>
+        <section class="sec insight f-${focusOf(h)}"><p class="lead">${linkify(ins.summary, used)}</p><div class="chips">${focusChip(h)}${(ins.tags || []).map(t => `<span class="chip sm">${esc(localizeInlineNumbers(t))}</span>`).join('')}</div><ul>${(ins.tips || []).map(t => `<li>${linkify(t, new Set())}</li>`).join('')}</ul></section>
         <section class="sec" id="m-skills">${skillsSection(h)}</section>
         ${weaponSection(h)}
         <section class="sec"><h3>Star progression</h3>${starTable()}</section>
-        ${h.story ? `<details class="story"><summary>Story</summary><p>${esc(h.story)}</p></details>` : ''}`;
+        ${h.story ? `<details class="story"><summary>Story</summary><p>${esc(localizeInlineNumbers(h.story))}</p></details>` : ''}`;
     }
     function openHero(id, push = true) {
       const h = byId.get(id); if (!h) return;
@@ -905,7 +992,7 @@
       modal.classList.add('open'); modal.setAttribute('aria-hidden', 'false');
       document.body.style.overflow = 'hidden';
       $('#m-close').focus({ preventScroll: true });
-      if (push) history.replaceState(null, '', `#hero-${id}`);
+      if (push) history.replaceState(null, '', withHash(`#hero-${id}`));
     }
     function closeHero() {
       hidePop();
@@ -913,7 +1000,7 @@
       document.body.style.overflow = '';
       currentHero = null;
       const t = TABS.find(k => !$(`#panel-${k}`).hidden) || 'roster';
-      history.replaceState(null, '', t === 'squads' && squad.some(Boolean) ? `#squad=${squadIds()}` : `#${t}`);
+      history.replaceState(null, '', withHash(t === 'squads' && squad.some(Boolean) ? `#squad=${squadIds()}` : `#${t}`));
       if (lastFocus && lastFocus.focus) lastFocus.focus({ preventScroll: true });
     }
     $('#m-close').addEventListener('click', closeHero);
@@ -926,7 +1013,7 @@
       const add = e.target.closest('[data-add]');
       if (add) addToSquad(+add.dataset.add);
       const cp = e.target.closest('[data-copy-hero]');
-      if (cp) copyLink(`${location.origin}${location.pathname}#hero-${cp.dataset.copyHero}`);
+      if (cp) copyLink(`${location.href.split('#')[0]}#hero-${cp.dataset.copyHero}`);
     });
     document.addEventListener('keydown', e => {
       if (e.key === 'Escape') {
@@ -941,7 +1028,7 @@
       }
     });
     function copyLink(url) {
-      const done = () => toast('Link copied');
+      const done = () => toast(tr('Link copied'));
       if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(url).then(done, () => prompt('Copy this link', url));
       else prompt('Copy this link', url);
     }
@@ -960,28 +1047,28 @@
     }
     function saveSquad() {
       store.set('heroes-squad', squadIds());
-      if (!$('#panel-squads').hidden) history.replaceState(null, '', squad.some(Boolean) ? `#squad=${squadIds()}` : '#squads');
+      if (!$('#panel-squads').hidden) history.replaceState(null, '', withHash(squad.some(Boolean) ? `#squad=${squadIds()}` : '#squads'));
     }
     function addToSquad(id) {
-      if (squad.includes(id)) { toast('Already in your squad'); return; }
+      if (squad.includes(id)) { toast(tr('Already in your squad')); return; }
       const h = byId.get(id);
       const pref = h.position === 'front' ? [0, 1, 2, 3, 4] : [2, 3, 4, 0, 1];
       const i = pref.find(k => !squad[k]);
-      if (i === undefined) { toast('Squad is full: remove a hero first'); return; }
+      if (i === undefined) { toast(tr('Squad is full: remove a hero first')); return; }
       squad[i] = id; saveSquad();
       if (rendered.has('squads')) renderSquadState();
-      toast(`Added ${h.display_name} (${squad.filter(Boolean).length}/5)`);
+      toast(I18N.t('Added {0} ({1}/5)', [h.display_name, fmt(squad.filter(Boolean).length)]));
     }
     function renderSquads() {
-      $('#pick-filter').innerHTML = [['all', 'All'], ...FACTIONS.map(f => [f, `<img src="${campIcon(f)}" alt="">${f}`])].map(([v, html]) => `<button type="button" class="chip sm" data-pf="${v}" aria-pressed="${pickFaction === v}">${html}</button>`).join('');
+      $('#pick-filter').innerHTML = [['all', tr('All')], ...FACTIONS.map(f => [f, `<img src="${campIcon(f)}" alt="">${esc(factionLabel(f))}`])].map(([v, html]) => `<button type="button" class="chip sm" data-pf="${v}" aria-pressed="${pickFaction === v}">${html}</button>`).join('');
       $('#rules').innerHTML = rulesHtml();
       renderSquadState();
     }
     function slotHtml(i) {
       const id = squad[i], h = id && byId.get(id), front = i < 2;
       const bad = h && ((front && h.position === 'back') || (!front && h.position === 'front'));
-      if (!h) return `<button type="button" class="slot ${selSlot === i ? 'sel' : ''}" data-slot="${i}" aria-label="${front ? 'Front' : 'Back'} slot ${front ? i + 1 : i - 1}, empty${selSlot === i ? ', selected' : ''}"><span class="plus">+</span><span class="hint">${front ? 'Front' : 'Back'}</span></button>`;
-      return `<div class="slot filled ${selSlot === i ? 'sel' : ''} ${bad ? 'warnpos' : ''}" style="--q:${QCOL[h.quality]}"><button type="button" data-slot="${i}" style="all:unset;display:flex;flex-direction:column;align-items:center;gap:4px;cursor:pointer;width:100%" aria-label="${esc(h.display_name)} in ${front ? 'front' : 'back'} row. Select slot"><img class="head" src="${esc(h.head)}" alt=""><span class="nm">${esc(h.display_name)}</span></button><img class="cs" src="${esc(h.camp_shield)}" alt="${esc(h.camp_name)}"><button type="button" class="x" data-remove="${i}" aria-label="Remove ${esc(h.display_name)}">✕</button></div>`;
+      if (!h) return `<button type="button" class="slot ${selSlot === i ? 'sel' : ''}" data-slot="${i}" aria-label="${esc(I18N.t('{0} slot {1}, empty{2}', [tr(front ? 'Front' : 'Back'), fmt(front ? i + 1 : i - 1), selSlot === i ? `, ${tr('selected')}` : '']))}"><span class="plus">+</span><span class="hint">${esc(tr(front ? 'Front' : 'Back'))}</span></button>`;
+      return `<div class="slot filled ${selSlot === i ? 'sel' : ''} ${bad ? 'warnpos' : ''}" style="--q:${QCOL[h.quality]}"><button type="button" data-slot="${i}" style="all:unset;display:flex;flex-direction:column;align-items:center;gap:4px;cursor:pointer;width:100%" aria-label="${esc(I18N.t('{0} in {1} row. Select slot', [h.display_name, tr(front ? 'front' : 'back')]))}"><img class="head" src="${esc(h.head)}" alt=""><span class="nm">${esc(h.display_name)}</span></button><img class="cs" src="${esc(h.camp_shield)}" alt="${esc(h.camp_label || factionLabel(h.camp_name))}"><button type="button" class="x" data-remove="${i}" aria-label="${esc(I18N.t('Remove {0}', [h.display_name]))}">✕</button></div>`;
     }
     function bonusTier(counts) {
       const c = Object.values(counts).sort((a, b) => b - a);
@@ -1010,22 +1097,24 @@
       if (heroes.length) {
         notes.push(`<div class="note">${sorted.map(([f, n]) => `<span class="chip sm"><img src="${campIcon(f)}" alt="">${n} ${f}</span>`).join(' ')}</div>`);
         const main = topF;
-        notes.push(`<div class="note good"><img src="${campIcon(main)}" alt=""><span>Your ${termBtn(main, main)} heroes take 20% less damage from ${esc(beats(main))} heroes. Be careful against ${esc(weakTo(main))} squads: they take 20% less damage from you.</span></div>`);
+        notes.push(`<div class="note good"><img src="${campIcon(main)}" alt=""><span>${I18N.t('Your {0} heroes take 20% less damage from {1} heroes. Be careful against {2} squads: they take 20% less damage from you.', [termBtn(main, factionLabel(main)), esc(factionLabel(beats(main))), esc(factionLabel(weakTo(main)))])}</span></div>`);
         squad.forEach((id, i) => {
           if (!id) return; const h = byId.get(id), front = i < 2;
-          if (front && h.position === 'back') notes.push(`<div class="note warn"><img src="${roleRing(h.role_short === 'Support' ? 'Support' : 'Backline')}" alt=""><span><b>${esc(h.display_name)}</b> is in the front row but works best in the back. The game says: put Frontline (Defense) heroes in front.</span></div>`);
-          if (!front && h.position === 'front') notes.push(`<div class="note warn"><img src="${roleRing('Frontline')}" alt=""><span><b>${esc(h.display_name)}</b> is a ${esc(h.role_short)} hero in the back row. Move them to the front so they can absorb hits.</span></div>`);
+          if (front && h.position === 'back') notes.push(`<div class="note warn"><img src="${roleRing(h.role_short === 'Support' ? 'Support' : 'Backline')}" alt=""><span>${I18N.t('{0} is in the front row but works best in the back. The game says: put Frontline (Defense) heroes in front.', [esc(h.display_name)])}</span></div>`);
+          if (!front && h.position === 'front') notes.push(`<div class="note warn"><img src="${roleRing('Frontline')}" alt=""><span>${I18N.t('{0} is a {1} hero in the back row. Move them to the front so they can absorb hits.', [esc(h.display_name), esc(roleLabel(h.role_short))])}</span></div>`);
         });
         const n = f => counts[f] || 0;
-        if (squad.includes(30006)) notes.push(`<div class="note"><img src="${UI}weapon_30006.webp" alt=""><span>Monroe's ${termBtn('Barrage Amplification', '[Barrage Amplification]', 'kw')} can stack ${n('Warrior')} time${n('Warrior') === 1 ? '' : 's'} (one per Warrior). The rocket bonus needs 4.</span></div>`);
-        if (squad.includes(50006)) notes.push(`<div class="note"><img src="${UI}weapon_50006.webp" alt=""><span>Leah starts with ${Math.min(10, 2 * n('Tactical'))} ${termBtn('Radiation Charge', '[Radiation Charge]', 'kw')} stacks (2 per Tactical hero, max 10).</span></div>`);
-        if (squad.includes(50011)) notes.push(`<div class="note"><img src="${UI}weapon_50011.webp" alt=""><span>Yana's ${termBtn('Overload Charge', '[Overload Charge]', 'kw')} cap: ${3 * n('Assault')} stacks (3 per Assault hero, max 15).</span></div>`);
+        if (squad.includes(30006)) notes.push(`<div class="note"><img src="${UI}weapon_30006.webp" alt=""><span>${I18N.t("Monroe's [Barrage Amplification] can stack {0} times (one per Warrior). The rocket bonus needs 4.", [termBtn('Barrage Amplification', `[${termLabel('Barrage Amplification')}]`, 'kw')])}</span></div>`);
+        if (squad.includes(50006)) notes.push(`<div class="note"><img src="${UI}weapon_50006.webp" alt=""><span>${I18N.t('Leah starts with {0} [Radiation Charge] stacks (2 per Tactical hero, max 10).', [termBtn('Radiation Charge', `[${termLabel('Radiation Charge')}]`, 'kw')])}</span></div>`);
+        if (squad.includes(50011)) notes.push(`<div class="note"><img src="${UI}weapon_50011.webp" alt=""><span>${I18N.t("Yana's [Overload Charge] cap: {0} stacks (3 per Assault hero, max 15).", [termBtn('Overload Charge', `[${termLabel('Overload Charge')}]`, 'kw')])}</span></div>`);
         const rad = heroes.filter(h => h.damage_type === 'Radiation').length, phy = heroes.filter(h => h.damage_type === 'Physical').length;
-        notes.push(`<div class="note"><img src="${UI}dmg_${rad > phy ? 'radiation' : 'physical'}.webp" alt=""><span>Damage mix: ${phy} Physical, ${rad} Radiation. ${rad >= 3 ? 'Enemies with Bekka or Virgilio will blunt your Radiation damage.' : phy >= 4 ? 'Mostly Physical: Arnold-style Physical shields hurt you most.' : 'A mixed squad is hard to shield against.'}</span></div>`);
+        const mix = I18N.t('Damage mix: {0} Physical, {1} Radiation.', [fmt(phy), fmt(rad)]);
+        const counterTip = rad >= 3 ? tr('Enemies with Bekka or Virgilio will blunt your Radiation damage.') : phy >= 4 ? tr('Mostly Physical: Arnold-style Physical shields hurt you most.') : tr('A mixed squad is hard to shield against.');
+        notes.push(`<div class="note"><img src="${UI}dmg_${rad > phy ? 'radiation' : 'physical'}.webp" alt=""><span>${mix} ${counterTip}</span></div>`);
         const pve = heroes.filter(h => focusOf(h) === 'pve').length, util = heroes.filter(h => focusOf(h) === 'utility').length;
-        if (pve) notes.push(`<div class="note"><span class="chip sm focus f-pve"><span class="dot"></span>PvE only</span><span>${pve} hero${pve > 1 ? 'es have' : ' has'} skills that mostly work against monsters: great for zombies and rallies, weaker in PvP.</span></div>`);
-        if (util) notes.push(`<div class="note"><span class="chip sm focus f-utility"><span class="dot"></span>Gathering</span><span>${util} gathering hero${util > 1 ? 'es' : ''} (weak in combat). Use them for gathering marches.</span></div>`);
-        if (heroes.some(h => h.id === 50002)) notes.push(`<div class="note"><img src="${roleRing('Support')}" alt=""><span>Carter boosts the whole squad's ATK and skill cooldown speed.</span></div>`);
+        if (pve) notes.push(`<div class="note"><span class="chip sm focus f-pve"><span class="dot"></span>${tr('PvE only')}</span><span>${pve === 1 ? tr('1 hero has skills that mostly work against monsters: great for zombies and rallies, weaker in PvP.') : I18N.t('{0} heroes have skills that mostly work against monsters: great for zombies and rallies, weaker in PvP.', [fmt(pve)])}</span></div>`);
+        if (util) notes.push(`<div class="note"><span class="chip sm focus f-utility"><span class="dot"></span>${tr('Gathering')}</span><span>${util === 1 ? tr('1 gathering hero (weak in combat). Use it for gathering marches.') : I18N.t('{0} gathering heroes (weak in combat). Use them for gathering marches.', [fmt(util)])}</span></div>`);
+        if (heroes.some(h => h.id === 50002)) notes.push(`<div class="note"><img src="${roleRing('Support')}" alt=""><span>${tr("Carter boosts the whole squad's ATK and skill cooldown speed.")}</span></div>`);
       }
       $('#readout').innerHTML = `<div class="tiers">${lb.map((t, i) => `<div class="tier ${i === tier ? 'on' : ''}"><b>+${t.percent}%</b><small>${t.pattern.join(' + ')} of a faction</small></div>`).join('')}</div>
         <div class="muted" style="font-size:13px">${tier >= 0 ? `<b style="color:var(--good)">Active: HP, ATK and DEF +${lb[tier].percent}% in battle.</b> ` : '<b>No lineup bonus yet.</b> '}${esc(next)}</div>${notes.join('')}`;
@@ -1033,9 +1122,9 @@
     }
     function renderPicker() {
       const q = ($('#pq').value || '').trim().toLowerCase();
-      const list = H.filter(h => (pickFaction === 'all' || h.camp_name === pickFaction) && (!q || h.display_name.toLowerCase().includes(q)))
+      const list = H.filter(h => (pickFaction === 'all' || h.camp_name === pickFaction) && (!q || searchText.get(h.id).includes(q.toLocaleLowerCase(I18N.locale))))
         .sort((a, b) => FACTIONS.indexOf(a.camp_name) - FACTIONS.indexOf(b.camp_name) || b.quality - a.quality || a.army_type - b.army_type);
-      $('#picker').innerHTML = list.map(h => `<button type="button" class="pick" data-pick="${h.id}" style="--q:${QCOL[h.quality]}" aria-pressed="${squad.includes(h.id)}" aria-label="${esc(h.display_name)}, ${esc(h.camp_name)} ${esc(h.role_short)}"><img class="cs" src="${esc(h.camp_shield)}" alt=""><img class="rr" src="${esc(roleRing(h.role_short))}" alt=""><img class="head" src="${esc(h.head)}" alt="" loading="lazy"><span>${esc(h.display_name)}</span></button>`).join('');
+      $('#picker').innerHTML = list.map(h => `<button type="button" class="pick" data-pick="${h.id}" style="--q:${QCOL[h.quality]}" aria-pressed="${squad.includes(h.id)}" aria-label="${esc(h.display_name)}, ${esc(h.camp_label || factionLabel(h.camp_name))} ${esc(roleLabel(h.role_short))}"><img class="cs" src="${esc(h.camp_shield)}" alt=""><img class="rr" src="${esc(roleRing(h.role_short))}" alt=""><img class="head" src="${esc(h.head)}" alt="" loading="lazy"><span>${esc(h.display_name)}</span></button>`).join('');
     }
     $('#board').addEventListener('click', e => {
       const r = e.target.closest('[data-remove]');
@@ -1059,7 +1148,7 @@
     $('#pq').addEventListener('input', renderPicker);
     $('#pick-filter').addEventListener('click', e => { const b = e.target.closest('[data-pf]'); if (!b) return; pickFaction = b.dataset.pf; $('#pick-filter').querySelectorAll('button').forEach(x => x.setAttribute('aria-pressed', x === b)); renderPicker(); });
     $('#sq-clear').addEventListener('click', () => { squad = [null, null, null, null, null]; selSlot = 0; saveSquad(); renderSquadState(); });
-    $('#sq-share').addEventListener('click', () => copyLink(`${location.origin}${location.pathname}#squad=${squadIds()}`));
+    $('#sq-share').addEventListener('click', () => copyLink(`${location.href.split('#')[0]}#squad=${squadIds()}`));
 
     function triangleSvg() {
       const P = { Warrior: [180, 58], Assault: [300, 238], Tactical: [60, 238] };
@@ -1083,7 +1172,7 @@
           <table class="rules-table"><thead><tr><th>Lineup</th><th>Bonus in battle</th></tr></thead><tbody>${M.squad.lineup_bonus.map(t => `<tr><td>${esc(t.condition.replace('Heroes of the same type', 'heroes of one faction').replace('2 of another type', '2 of another faction'))}</td><td><b>+${t.percent}%</b> HP, ATK, DEF</td></tr>`).join('')}</tbody></table>
           <p class="quote">Game text: "${esc(r.same_faction_count_bonus_guide)}"</p></div>
         <div class="card"><h3>Faction counters</h3>${triangleSvg()}
-          <p style="font-size:13px">${linkify('Warrior beats Assault, Assault beats Tactical, Tactical beats Warrior.')} When your faction beats theirs, your heroes take <b>20% less damage</b> from them.</p>
+          <p style="font-size:13px">${linkify(tr('Warrior beats Assault, Assault beats Tactical, Tactical beats Warrior.'))} ${tr('When your faction beats theirs, your heroes take 20% less damage from them.')}</p>
           <p class="quote">Game text: "${esc(r.faction_counter_guide)}"</p></div>
         <div class="card"><h3>Positioning</h3>
           <div class="chips" style="margin-bottom:8px">${ROLES.map(x => `<span class="chip"><img src="${roleTile(x)}" alt="">${x} → ${x === 'Frontline' ? 'front row' : 'back row'}</span>`).join('')}</div>
@@ -1121,14 +1210,14 @@
       box.innerHTML = `<svg class="chart" viewBox="0 0 ${W} ${Hh}" role="img" aria-label="Scatter of base HP against base ATK for ${H.length} heroes">
         <defs>${pts.map(p => `<clipPath id="c${p.h.id}"><circle cx="${p.x.toFixed(1)}" cy="${p.y.toFixed(1)}" r="${r - 1.5}"/></clipPath>`).join('')}</defs>
         <g class="grid">${xt.map(v => `<line x1="${X(v)}" x2="${X(v)}" y1="${pad.t}" y2="${Hh - pad.b}"/>`).join('')}${yt.map(v => `<line x1="${pad.l}" x2="${W - pad.r}" y1="${Y(v)}" y2="${Y(v)}"/>`).join('')}</g>
-        <g class="axis">${xt.map(v => `<text x="${X(v)}" y="${Hh - pad.b + 16}" text-anchor="middle">${v / 1000}k</text>`).join('')}${yt.map(v => `<text x="${pad.l - 8}" y="${Y(v) + 4}" text-anchor="end">${v / 1000}k</text>`).join('')}</g>
+        <g class="axis">${xt.map(v => `<text x="${X(v)}" y="${Hh - pad.b + 16}" text-anchor="middle">${compact(v)}</text>`).join('')}${yt.map(v => `<text x="${pad.l - 8}" y="${Y(v) + 4}" text-anchor="end">${compact(v)}</text>`).join('')}</g>
         <text class="axis-title" x="${(W + pad.l) / 2}" y="${Hh - 4}" text-anchor="middle">Base HP →</text>
         <text class="axis-title" transform="translate(12 ${(Hh - pad.b) / 2}) rotate(-90)" text-anchor="middle">Base ATK →</text>
         ${pts.filter(p => Math.hypot(p.x - p.px, p.y - p.py) > 3).map(p => `<line x1="${p.px}" y1="${p.py}" x2="${p.x}" y2="${p.y}" stroke="var(--line2)"/><circle cx="${p.px}" cy="${p.py}" r="2" fill="var(--faint)"/>`).join('')}
         ${pts.map(p => `<g class="pt" tabindex="0" role="button" data-id="${p.h.id}" aria-label="${esc(p.h.display_name)}: HP ${fmt(p.h.base_stats.hp)}, ATK ${fmt(p.h.base_stats.attack)}"><circle cx="${p.x.toFixed(1)}" cy="${p.y.toFixed(1)}" r="${r}" fill="var(--s2)"/><image href="${esc(p.h.head)}" x="${(p.x - r).toFixed(1)}" y="${(p.y - r).toFixed(1)}" width="${r * 2}" height="${r * 2}" clip-path="url(#c${p.h.id})" preserveAspectRatio="xMidYMin slice"/><circle class="ring" cx="${p.x.toFixed(1)}" cy="${p.y.toFixed(1)}" r="${r}" fill="none" stroke="${QCOL[p.h.quality]}" stroke-width="2.5" ${dash[p.h.quality]}/></g>`).join('')}
       </svg><div class="chart-tip" id="sc-tip" hidden></div>`;
       const tip = $('#sc-tip');
-      const show = g => { const h = byId.get(+g.dataset.id), p = pts.find(q => q.h === h), sc = box.clientWidth / W; tip.innerHTML = `<b>${esc(h.display_name)}</b> · ${esc(h.quality_name)} ${esc(h.role_short)}<br>HP ${fmt(h.base_stats.hp)} · ATK ${fmt(h.base_stats.attack)}`; tip.hidden = false; const tw = tip.offsetWidth; tip.style.left = `${Math.min(Math.max(0, p.x * sc - tw / 2), box.clientWidth - tw)}px`; tip.style.top = `${p.y * sc - r * sc - tip.offsetHeight - 6}px`; };
+      const show = g => { const h = byId.get(+g.dataset.id), p = pts.find(q => q.h === h), sc = box.clientWidth / W; tip.innerHTML = `<b>${esc(h.display_name)}</b> · ${esc(h.quality_name)} ${esc(roleLabel(h.role_short))}<br>HP ${fmt(h.base_stats.hp)} · ATK ${fmt(h.base_stats.attack)}`; tip.hidden = false; const tw = tip.offsetWidth; tip.style.left = `${Math.min(Math.max(0, p.x * sc - tw / 2), box.clientWidth - tw)}px`; tip.style.top = `${p.y * sc - r * sc - tip.offsetHeight - 6}px`; };
       box.onpointerover = e => { const g = e.target.closest('.pt'); if (g) show(g); };
       box.onpointerout = e => { if (e.target.closest('.pt')) tip.hidden = true; };
       box.onfocusin = e => { const g = e.target.closest('.pt'); if (g) show(g); };
@@ -1141,8 +1230,8 @@
     function matrix() {
       const cell = (f, r) => H.filter(h => h.camp_name === f && h.role_short === r).sort((a, b) => b.quality - a.quality || b.base_stats.attack - a.base_stats.attack)
         .map(h => `<button type="button" class="mhero f-${focusOf(h)}" data-id="${h.id}" style="--q:${QCOL[h.quality]}" aria-label="${esc(h.display_name)}, ${esc(FOCUS[focusOf(h)])}"><img src="${esc(h.head)}" alt="" loading="lazy"><span>${esc(h.display_name.replace(' (', ' ').replace(')', ''))}</span><i></i></button>`).join('') || '<span class="faint" style="font-size:12px;padding:6px">None</span>';
-      $('#matrix').innerHTML = `<span></span>${FACTIONS.map(f => `<div class="mh"><img src="${campIcon(f)}" alt="${f}"><span>${f}</span></div>`).join('')}
-        ${ROLES.map(r => `<div class="rh"><img src="${roleTile(r)}" alt="${r}"><span>${r}</span></div>${FACTIONS.map(f => `<div class="cell">${cell(f, r)}</div>`).join('')}`).join('')}`;
+      $('#matrix').innerHTML = `<span></span>${FACTIONS.map(f => `<div class="mh"><img src="${campIcon(f)}" alt="${esc(factionLabel(f))}"><span>${esc(factionLabel(f))}</span></div>`).join('')}
+        ${ROLES.map(r => `<div class="rh"><img src="${roleTile(r)}" alt="${esc(roleLabel(r))}"><span>${esc(roleLabel(r))}</span></div>${FACTIONS.map(f => `<div class="cell">${cell(f, r)}</div>`).join('')}`).join('')}`;
       $('#matrix').onclick = e => { const b = e.target.closest('.mhero'); if (b) openHero(+b.dataset.id); };
     }
     function growth() {
@@ -1171,9 +1260,32 @@
     }
 
     // ---------- Footer ----------
-    $('#footer').innerHTML = `<p>Sources: ${esc(M.sources.tables)}. ${esc(M.sources.text)}. ${esc(M.sources.sprites)}.</p>
-      <p>Skill values use the client's own formula, (starBase + starGrow × skill level) × star factor, at each star's skill-level cap. The pre-antidote crossbow Nora (#10011) is omitted: the client replaces her with Awakened Nora.</p>
-      <p>Everything runs in your browser. <a href="https://github.com/JeffxLabs/zrouteredemption" target="_blank" rel="noopener">Source on GitHub</a></p>`;
+    function renderFooter() {
+      $('#footer').innerHTML = `<p>${esc(I18N.t('Sources: {0}. {1}. {2}.', [tr(M.sources.tables), tr(M.sources.text), tr(M.sources.sprites)]))}</p>
+        <p>${tr("Skill values use the client's own formula, (starBase + starGrow × skill level) × star factor, at each star's skill-level cap. The pre-antidote crossbow Nora (#10011) is omitted: the client replaces her with Awakened Nora.")}</p>
+        <p>${tr('Everything runs in your browser.')} <a href="https://github.com/JeffxLabs/zrouteredemption" target="_blank" rel="noopener">${tr('Source on GitHub')}</a></p>`;
+    }
+    renderFooter();
+
+    let localeRequest = 0;
+    document.addEventListener('languagechange', async () => {
+      const request = ++localeRequest;
+      const heroId = currentHero?.id;
+      const payload = await loadHeroLocale(I18N.language);
+      if (request !== localeRequest) return;
+      H = payload.heroes; M = payload.meta;
+      byId = new Map(H.map(hero => [hero.id, hero]));
+      factionMeta = Object.fromEntries(M.squad.counters.map(counter => [counter.faction, counter]));
+      state.q = $('#q').value.trim().toLocaleLowerCase(I18N.locale);
+      rebuildGlossary(); rebuildSearchIndex();
+      renderPills(); renderFilters(); renderGrid(); renderFooter();
+      if (rendered.has('squads')) renderSquads();
+      if (rendered.has('tips')) renderTips();
+      if (rendered.has('stats')) renderStats();
+      if (rendered.has('unreleased')) renderUnreleased();
+      if (heroId) openHero(heroId, false);
+      I18N.apply(document.body);
+    });
 
     // ---------- Boot ----------
     renderFilters(); renderGrid();
@@ -1184,6 +1296,7 @@
     if (heroMatch) tab = store.get('heroes-tab') || 'roster';
     setTab(TABS.includes(tab) ? tab : 'roster', !heroMatch);
     if (heroMatch) openHero(+heroMatch[1], false);
+    I18N.apply(document.body);
   })();
   </script>
 </body>
