@@ -6,6 +6,8 @@ Use the interactive [Z Route Progression Planner](https://jeffxlabs.github.io/zr
 
 Calculate exact leveling costs with the interactive [Hero EXP Calculator](https://jeffxlabs.github.io/zrouteredemption/hero-exp/) to find total EXP needed from brand new (Level 1) or any current level to Base Cap (Level 150: ~5.24B EXP) or Extended Cap (Level 175: ~15.29B EXP), with squad scaling and Alliance Duel VS Thursday point estimates.
 
+Explore all 32 playable heroes with the interactive [Heroes Directory](https://jeffxlabs.github.io/zrouteredemption/heroes/) to view official client card portraits, base stats (HP, ATK, DEF), training center gates, 4-skill scaling (with star tier progression from 0★ to 5★), mined character backstories, and exclusive weapon enhancements (Monroe, Leah, Yana).
+
 The [Alliance Intel dashboard](https://jeffxlabs.github.io/zrouteredemption/intel/) presents the supplied P1MP roster. Its [leaderboard evidence page](https://jeffxlabs.github.io/zrouteredemption/intel/leaderboard/) adds a dated, screenshot-based read of the Today event board, where P1MP and ddk leaderboard points remain separate from roster power.
 
 Producer ROI compares the selected producer levels' direct Food, Metal, and Oil costs with marginal hourly output, construction time, and user-defined relative values for unlike resources. A producer continues at its last completed level while the next upgrade builds, and fixed-horizon profit deducts each upgrade cost when that upgrade starts. Base gates are shown but their costs are excluded because they benefit the whole account.

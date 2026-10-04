@@ -1,0 +1,1675 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#07101d">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Heroes Directory">
+  <link rel="manifest" href="../manifest.webmanifest">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎖️</text></svg>">
+  <title>Z Route Heroes Directory · Official Mined Intel, Skills &amp; Stats</title>
+  <style>
+    :root {
+      --bg: #07101d;
+      --card-bg: rgba(15, 29, 49, 0.88);
+      --card-inner: #0b1829;
+      --card-border: rgba(91, 202, 242, 0.14);
+      --line: #243c5d;
+      --text-main: #f4f7fc;
+      --text-muted: #95a8c4;
+      --accent: #5bcaf2;
+      --accent-gradient: linear-gradient(135deg, #0a84ff, #5bcaf2);
+      --green: #5ee6a8;
+      --amber: #ffc857;
+      --red: #ff6b75;
+      --purple: #c68cff;
+      --ur-gold: #ffb400;
+      --ur-grad: linear-gradient(135deg, #e67e22, #f39c12, #f1c40f);
+      --ssr-purple: #a855f7;
+      --ssr-grad: linear-gradient(135deg, #7c3aed, #9333ea, #c084fc);
+      --sr-blue: #3b82f6;
+      --sr-grad: linear-gradient(135deg, #1d4ed8, #2563eb, #60a5fa);
+      --pill-bg: #13243b;
+      --pill-border: rgba(255, 255, 255, 0.12);
+      --nav-bg: rgba(7, 16, 29, 0.94);
+      --safe-top: env(safe-area-inset-top, 0px);
+      --safe-bottom: env(safe-area-inset-bottom, 0px);
+      --shadow: 0 20px 60px rgba(0, 0, 0, 0.38);
+    }
+
+    html.day, body.day {
+      --bg: #f8fafc;
+      --card-bg: rgba(255, 255, 255, 0.95);
+      --card-inner: #f1f5f9;
+      --card-border: #cbd5e1;
+      --line: #e2e8f0;
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --accent: #0284c7;
+      --accent-gradient: linear-gradient(135deg, #0284c7, #0ea5e9);
+      --green: #059669;
+      --amber: #d97706;
+      --red: #dc2626;
+      --purple: #7c3aed;
+      --pill-bg: #e2e8f0;
+      --pill-border: #cbd5e1;
+      --nav-bg: rgba(255, 255, 255, 0.95);
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+    html { background-color: var(--bg); color-scheme: dark; scroll-behavior: smooth; }
+    html.day { color-scheme: light; }
+    body {
+      margin: 0;
+      padding: 0;
+      background:
+        radial-gradient(circle at 90% -5%, rgba(46, 92, 148, 0.35), transparent 36rem),
+        radial-gradient(circle at 5% 95%, rgba(38, 126, 104, 0.2), transparent 32rem),
+        var(--bg);
+      color: var(--text-main);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Fixed App Header */
+    .app-header {
+      position: sticky;
+      top: 0;
+      z-index: 90;
+      background: var(--nav-bg);
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      border-bottom: 1px solid var(--line);
+      padding-top: var(--safe-top);
+    }
+    .header-inner {
+      max-width: 1440px;
+      margin: 0 auto;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 16px;
+    }
+    .header-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      font-size: 1.05rem;
+      letter-spacing: -0.02em;
+    }
+    .header-logo {
+      width: 32px;
+      height: 32px;
+      border-radius: 9px;
+      background: var(--accent-gradient);
+      display: grid;
+      place-items: center;
+      color: white;
+      font-weight: 900;
+      font-size: 16px;
+      box-shadow: 0 0 18px rgba(91, 202, 242, 0.3);
+    }
+    .header-badge {
+      font-size: 11px;
+      font-weight: 700;
+      background: rgba(91, 202, 242, 0.15);
+      color: var(--accent);
+      padding: 3px 8px;
+      border-radius: 12px;
+    }
+    .desktop-nav {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .nav-btn {
+      padding: 6px 12px;
+      border-radius: 9px;
+      border: 1px solid transparent;
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.15s;
+    }
+    .nav-btn:hover {
+      background: var(--pill-bg);
+      color: var(--text-main);
+    }
+    .nav-btn.active {
+      background: var(--pill-bg);
+      border-color: var(--line);
+      color: var(--accent);
+    }
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .icon-btn {
+      background: var(--pill-bg);
+      border: 1px solid var(--pill-border);
+      color: var(--text-main);
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      font-size: 16px;
+      transition: transform 0.15s;
+    }
+    .icon-btn:hover { transform: scale(1.05); }
+
+    /* Main Container */
+    .container {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 24px 16px 80px;
+      flex: 1;
+      width: 100%;
+    }
+
+    /* Hero Banner */
+    .hero-banner {
+      margin-bottom: 24px;
+    }
+    .eyebrow {
+      color: var(--green);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    h1 {
+      font-size: clamp(1.8rem, 3.5vw, 2.7rem);
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      line-height: 1.05;
+      margin: 0 0 10px;
+    }
+    .hero-lead {
+      color: var(--text-muted);
+      font-size: clamp(0.95rem, 1.8vw, 1.12rem);
+      max-width: 880px;
+      line-height: 1.5;
+      margin: 0 0 18px;
+    }
+
+    /* Stat Badges Bar */
+    .roster-stats-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 24px;
+    }}
+    .roster-stat-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 6px 14px;
+      border-radius: 20px;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      font-size: 0.84rem;
+      font-weight: 700;
+      color: var(--text-main);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .roster-stat-pill .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+    .dot.gold { background: var(--ur-gold); box-shadow: 0 0 8px var(--ur-gold); }
+    .dot.purple { background: var(--ssr-purple); box-shadow: 0 0 8px var(--ssr-purple); }
+    .dot.blue { background: var(--sr-blue); box-shadow: 0 0 8px var(--sr-blue); }
+    .dot.green { background: var(--green); box-shadow: 0 0 8px var(--green); }
+
+    /* Controls Panel */
+    .controls-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 18px 20px;
+      margin-bottom: 28px;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .search-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+    .search-input-wrap {
+      flex: 1;
+      min-width: 240px;
+      position: relative;
+    }
+    .search-input-wrap input {
+      width: 100%;
+      height: 44px;
+      background: var(--card-inner);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 0 16px 0 42px;
+      color: var(--text-main);
+      font-size: 0.95rem;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .search-input-wrap input:focus {
+      border-color: var(--accent);
+    }
+    .search-icon {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+      pointer-events: none;
+      font-size: 16px;
+    }
+    .sort-wrap {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .sort-wrap label {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+    .sort-wrap select {
+      height: 44px;
+      background: var(--card-inner);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 0 34px 0 14px;
+      color: var(--text-main);
+      font-size: 0.88rem;
+      font-weight: 600;
+      outline: none;
+      cursor: pointer;
+    }
+
+    /* Filter Groups */
+    .filter-groups {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .filter-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+    }
+    .filter-label {
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      min-width: 80px;
+    }
+    .filter-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .chip {
+      padding: 6px 14px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: var(--card-inner);
+      color: var(--text-muted);
+      font-size: 0.84rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .chip:hover {
+      background: var(--pill-bg);
+      color: var(--text-main);
+      border-color: var(--card-border);
+    }
+    .chip.active {
+      background: var(--pill-bg);
+      border-color: var(--accent);
+      color: var(--accent);
+      box-shadow: 0 0 14px rgba(91, 202, 242, 0.2);
+    }
+    .chip.active.ur {
+      border-color: var(--ur-gold);
+      color: var(--ur-gold);
+      box-shadow: 0 0 14px rgba(255, 180, 0, 0.25);
+    }
+    .chip.active.ssr {
+      border-color: var(--ssr-purple);
+      color: var(--ssr-purple);
+      box-shadow: 0 0 14px rgba(168, 85, 247, 0.25);
+    }
+    .chip.active.sr {
+      border-color: var(--sr-blue);
+      color: var(--sr-blue);
+      box-shadow: 0 0 14px rgba(59, 130, 246, 0.25);
+    }
+
+    /* Heroes Cards Grid */
+    .roster-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+    .roster-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin: 0;
+    }
+    .heroes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    /* Hero Card Component */
+    .hero-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 18px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.2s, border-color 0.2s;
+      cursor: pointer;
+      position: relative;
+    }
+    .hero-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+      border-color: rgba(91, 202, 242, 0.35);
+    }
+    .hero-card.quality-5 { border-top: 3px solid var(--ur-gold); }
+    .hero-card.quality-4 { border-top: 3px solid var(--ssr-purple); }
+    .hero-card.quality-3 { border-top: 3px solid var(--sr-blue); }
+
+    /* Card Portrait Wrap */
+    .portrait-wrap {
+      position: relative;
+      width: 100%;
+      height: 250px;
+      overflow: hidden;
+      background: #040810;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .portrait-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      transition: transform 0.3s ease;
+    }
+    .hero-card:hover .portrait-img {
+      transform: scale(1.04);
+    }
+    .portrait-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(7,16,29,0.2) 60%, var(--card-bg) 100%);
+      pointer-events: none;
+    }
+    body.day .portrait-overlay {
+      background: linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(255,255,255,0.2) 60%, var(--card-bg) 100%);
+    }
+
+    /* Card Badges Overlay */
+    .card-top-badges {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      right: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 2;
+    }
+    .rarity-badge {
+      padding: 4px 10px;
+      border-radius: 8px;
+      font-size: 0.76rem;
+      font-weight: 900;
+      letter-spacing: 0.05em;
+      color: #000;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    .rarity-badge.ur { background: var(--ur-grad); color: #fff; text-shadow: 0 1px 2px rgba(0,0,0,0.5); }
+    .rarity-badge.ssr { background: var(--ssr-grad); color: #fff; text-shadow: 0 1px 2px rgba(0,0,0,0.5); }
+    .rarity-badge.sr { background: var(--sr-grad); color: #fff; text-shadow: 0 1px 2px rgba(0,0,0,0.5); }
+
+    .class-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 9px;
+      border-radius: 8px;
+      background: rgba(7, 16, 29, 0.85);
+      border: 1px solid var(--line);
+      font-size: 0.74rem;
+      font-weight: 750;
+      color: var(--text-main);
+      backdrop-filter: blur(8px);
+    }
+
+    .weapon-badge {
+      position: absolute;
+      bottom: 12px;
+      right: 12px;
+      z-index: 2;
+      background: rgba(255, 180, 0, 0.95);
+      color: #1a1200;
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-size: 0.72rem;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      box-shadow: 0 4px 12px rgba(255, 180, 0, 0.4);
+    }
+
+    /* Card Content */
+    .card-body {
+      padding: 14px 16px 18px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .hero-name-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 4px;
+    }
+    .hero-name {
+      font-size: 1.22rem;
+      font-weight: 850;
+      letter-spacing: -0.02em;
+      margin: 0;
+      color: var(--text-main);
+    }
+    .hero-id-tag {
+      font-size: 0.74rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      font-family: monospace;
+    }
+    .hero-role-subtitle {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .hero-role-subtitle .sep {
+      opacity: 0.4;
+    }
+
+    /* Stats Grid */
+    .card-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
+      background: var(--card-inner);
+      padding: 8px 10px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      margin-bottom: 14px;
+    }
+    .card-stat-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .stat-name {
+      font-size: 0.68rem;
+      font-weight: 750;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .stat-number {
+      font-size: 0.95rem;
+      font-weight: 850;
+      color: var(--text-main);
+      margin-top: 1px;
+    }
+
+    /* Card Skill Tags */
+    .card-skills-row {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      margin-bottom: 14px;
+    }
+    .card-skill-pill {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      padding: 4px 6px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.03);
+    }
+    .card-skill-pill .sk-left {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    .card-skill-pill .sk-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+    .card-skill-pill .sk-title {
+      font-weight: 600;
+      color: var(--text-main);
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .card-skill-pill .sk-cd {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      flex-shrink: 0;
+    }
+
+    /* Card Action Button */
+    .card-inspect-btn {
+      margin-top: auto;
+      width: 100%;
+      padding: 9px 0;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: var(--card-inner);
+      color: var(--accent);
+      font-size: 0.85rem;
+      font-weight: 750;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: all 0.15s;
+    }
+    .hero-card:hover .card-inspect-btn {
+      background: var(--pill-bg);
+      border-color: var(--accent);
+      color: #fff;
+    }
+
+    /* Empty state */
+    .no-results {
+      grid-column: 1 / -1;
+      padding: 60px 20px;
+      text-align: center;
+      background: var(--card-bg);
+      border: 1px dashed var(--line);
+      border-radius: 20px;
+    }
+    .no-results h3 { margin: 0 0 8px; font-size: 1.3rem; }
+    .no-results p { margin: 0; color: var(--text-muted); font-size: 0.95rem; }
+
+    /* Modal / Inspector Dialog */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      z-index: 200;
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .modal-backdrop.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .modal-content {
+      width: min(880px, 100%);
+      max-height: calc(100vh - 32px);
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 24px;
+      box-shadow: 0 25px 80px rgba(0, 0, 0, 0.65);
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      transform: scale(0.95) translateY(12px);
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .modal-backdrop.open .modal-content {
+      transform: scale(1) translateY(0);
+    }
+
+    /* Modal Header */
+    .modal-hero-header {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 24px;
+      padding: 24px;
+      border-bottom: 1px solid var(--line);
+      background: var(--card-inner);
+      position: relative;
+    }
+    .modal-close-btn {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 1px solid var(--pill-border);
+      background: var(--card-bg);
+      color: var(--text-main);
+      font-size: 18px;
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      z-index: 10;
+      transition: transform 0.15s;
+    }
+    .modal-close-btn:hover { transform: scale(1.1); }
+
+    .modal-portrait {
+      width: 100%;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      overflow: hidden;
+      background: #040810;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      aspect-ratio: 320 / 456;
+    }
+    .modal-portrait img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .modal-hero-summary {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .modal-tags-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+    .modal-hero-name {
+      font-size: 2rem;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      margin: 0 0 6px;
+      line-height: 1.1;
+    }
+    .modal-training-gate {
+      font-size: 0.88rem;
+      color: var(--accent);
+      margin-bottom: 16px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Modal Base Stats Row */
+    .modal-stats-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+    .modal-stat-box {
+      padding: 10px 12px;
+      background: var(--card-bg);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      text-align: center;
+    }
+    .modal-stat-box .lbl {
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .modal-stat-box .val {
+      font-size: 1.15rem;
+      font-weight: 900;
+      margin-top: 2px;
+      color: var(--text-main);
+    }
+
+    .modal-benefits-box {
+      background: rgba(94, 230, 168, 0.08);
+      border: 1px solid rgba(94, 230, 168, 0.25);
+      border-radius: 10px;
+      padding: 8px 12px;
+      font-size: 0.82rem;
+      color: var(--green);
+      font-weight: 600;
+    }
+
+    /* Modal Body Sections */
+    .modal-body {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    /* Story Section */
+    .modal-section-title {
+      font-size: 1.15rem;
+      font-weight: 850;
+      letter-spacing: -0.02em;
+      margin: 0 0 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .story-card {
+      background: var(--card-inner);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 16px 18px;
+      font-size: 0.92rem;
+      line-height: 1.6;
+      color: var(--text-muted);
+      white-space: pre-line;
+      border-left: 3px solid var(--accent);
+    }
+
+    /* Interactive Skills Section */
+    .skills-header-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+    .star-selector-tabs {
+      display: flex;
+      gap: 4px;
+      background: var(--card-inner);
+      padding: 4px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+    }
+    .star-tab-btn {
+      padding: 6px 12px;
+      border: none;
+      background: transparent;
+      color: var(--text-muted);
+      border-radius: 8px;
+      font-size: 0.82rem;
+      font-weight: 750;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .star-tab-btn:hover {
+      color: var(--text-main);
+    }
+    .star-tab-btn.active {
+      background: var(--pill-bg);
+      color: var(--ur-gold);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    }
+
+    /* Skills List */
+    .skills-list {
+      display: grid;
+      gap: 12px;
+    }
+    .skill-card {
+      background: var(--card-inner);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .skill-top-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+    }
+    .skill-title-grp {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .skill-slot-tag {
+      padding: 3px 8px;
+      border-radius: 6px;
+      background: var(--card-bg);
+      border: 1px solid var(--pill-border);
+      font-size: 0.74rem;
+      font-weight: 800;
+      color: var(--accent);
+    }
+    .skill-name-txt {
+      font-size: 1.05rem;
+      font-weight: 850;
+      margin: 0;
+    }
+    .skill-meta-grp {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    .skill-meta-pill {
+      padding: 3px 8px;
+      background: var(--card-bg);
+      border-radius: 6px;
+      font-weight: 600;
+    }
+
+    .skill-desc-txt {
+      margin: 0;
+      font-size: 0.92rem;
+      line-height: 1.5;
+      color: var(--text-main);
+    }
+    .skill-scaling-badge {
+      display: inline-block;
+      padding: 2px 7px;
+      border-radius: 6px;
+      background: rgba(255, 180, 0, 0.15);
+      color: var(--ur-gold);
+      font-weight: 800;
+    }
+
+    .skill-unlock-note {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      display: flex;
+      justify-content: space-between;
+      border-top: 1px solid var(--line);
+      padding-top: 8px;
+    }
+
+    /* Exclusive Weapon Banner in Modal */
+    .exclusive-weapon-card {
+      background: linear-gradient(135deg, rgba(230, 126, 34, 0.1), rgba(241, 196, 15, 0.05));
+      border: 1px solid rgba(243, 156, 18, 0.35);
+      border-radius: 16px;
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .ew-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .ew-title {
+      font-size: 1.1rem;
+      font-weight: 900;
+      color: var(--ur-gold);
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .ew-levels-badge {
+      background: rgba(255, 180, 0, 0.2);
+      color: var(--ur-gold);
+      font-size: 0.78rem;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 20px;
+    }
+    .ew-desc {
+      margin: 0;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      color: var(--text-main);
+    }
+
+    /* Star Progression Guide Table */
+    .star-table-card {
+      background: var(--card-inner);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      overflow-x: auto;
+    }
+    .star-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.84rem;
+    }
+    .star-table th, .star-table td {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--line);
+    }
+    .star-table th {
+      background: var(--card-bg);
+      color: var(--text-muted);
+      font-weight: 750;
+      text-transform: uppercase;
+      font-size: 0.72rem;
+      letter-spacing: 0.05em;
+    }
+    .star-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    /* Mobile Bottom Navigation */
+    .bottom-nav {
+      display: none;
+    }
+
+    @media (max-width: 860px) {
+      .desktop-nav { display: none; }
+      .bottom-nav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        background: var(--nav-bg);
+        backdrop-filter: blur(25px) saturate(180%);
+        -webkit-backdrop-filter: blur(25px) saturate(180%);
+        border-top: 1px solid var(--line);
+        padding-bottom: var(--safe-bottom);
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        height: calc(56px + var(--safe-bottom));
+      }
+      .nav-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: var(--text-muted);
+        text-decoration: none;
+        font-size: 10px;
+        font-weight: 600;
+        gap: 3px;
+        transition: color 0.15s;
+      }
+      .nav-item.active { color: var(--accent); }
+      .nav-item svg { width: 20px; height: 20px; }
+
+      .modal-hero-header {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      .modal-portrait {
+        max-width: 180px;
+        margin: 0 auto;
+      }
+      .heroes-grid {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 14px;
+      }
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 50px;
+      padding-top: 24px;
+      border-top: 1px solid var(--line);
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="app-header">
+    <div class="header-inner">
+      <div class="header-brand">
+        <div class="header-logo">🎖️</div>
+        <span>Z Route Heroes</span>
+        <span class="header-badge">v1.30.07</span>
+      </div>
+
+      <nav class="desktop-nav">
+        <a href="../" class="nav-btn">Base Planner</a>
+        <a href="../#producer-roi" class="nav-btn">Producer ROI</a>
+        <a href="./" class="nav-btn active">Heroes</a>
+        <a href="../hero-exp/" class="nav-btn">Hero EXP</a>
+        <a href="../promo-codes/" class="nav-btn">Promo Codes</a>
+        <a href="https://github.com/JeffxLabs/zrouteredemption" target="_blank" rel="noopener" class="nav-btn">GitHub ↗</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" id="theme-toggle" title="Toggle theme" aria-label="Toggle theme">☾</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Hero Banner -->
+    <section class="hero-banner">
+      <div class="eyebrow">Client Data &amp; Abilities Database</div>
+      <h1>Heroes Directory &amp; Combat Intel</h1>
+      <p class="hero-lead">
+        Comprehensive mined database for all 32 playable heroes across Tank, Missile, and Aircraft divisions. Includes official client card artwork, base stats, training gate requirements, full 4-skill scaling, and exclusive weapon enhancements.
+      </p>
+
+      <!-- Roster Quick Stats -->
+      <div class="roster-stats-bar">
+        <div class="roster-stat-pill"><span class="dot green"></span> 32 Playable Heroes</div>
+        <div class="roster-stat-pill"><span class="dot gold"></span> 16 UR (Quality 5)</div>
+        <div class="roster-stat-pill"><span class="dot purple"></span> 13 SSR (Quality 4)</div>
+        <div class="roster-stat-pill"><span class="dot blue"></span> 3 SR (Quality 3)</div>
+        <div class="roster-stat-pill">🛡️ 10 Tanks</div>
+        <div class="roster-stat-pill">🚀 1 Missile</div>
+        <div class="roster-stat-pill">✈️ 21 Aircraft</div>
+        <div class="roster-stat-pill">⭐ 3 Exclusive Weapons</div>
+      </div>
+    </section>
+
+    <!-- Controls Panel: Search & Multi-Filters -->
+    <section class="controls-card">
+      <div class="search-row">
+        <div class="search-input-wrap">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="hero-search" placeholder="Search hero by name, skill, or keyword..." autocomplete="off">
+        </div>
+        <div class="sort-wrap">
+          <label for="hero-sort">Sort By:</label>
+          <select id="hero-sort">
+            <option value="rarity-desc">Rarity (UR → SSR → SR)</option>
+            <option value="atk-desc">Highest Base ATK</option>
+            <option value="hp-desc">Highest Base HP</option>
+            <option value="def-desc">Highest Base DEF</option>
+            <option value="name-asc">Hero Name (A → Z)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="filter-groups">
+        <!-- Rarity Filter -->
+        <div class="filter-row">
+          <span class="filter-label">Rarity:</span>
+          <div class="filter-chips" id="filter-rarity">
+            <button class="chip active" data-val="all">All (32)</button>
+            <button class="chip ur" data-val="5">UR (16)</button>
+            <button class="chip ssr" data-val="4">SSR (13)</button>
+            <button class="chip sr" data-val="3">SR (3)</button>
+          </div>
+        </div>
+
+        <!-- Army Unit Filter -->
+        <div class="filter-row">
+          <span class="filter-label">Class:</span>
+          <div class="filter-chips" id="filter-army">
+            <button class="chip active" data-val="all">All Classes</button>
+            <button class="chip" data-val="1">🛡️ Tank</button>
+            <button class="chip" data-val="2">🚀 Missile</button>
+            <button class="chip" data-val="3">✈️ Aircraft</button>
+          </div>
+        </div>
+
+        <!-- Training Center Filter -->
+        <div class="filter-row">
+          <span class="filter-label">Training:</span>
+          <div class="filter-chips" id="filter-camp">
+            <button class="chip active" data-val="all">All Centers</button>
+            <button class="chip" data-val="3">⚔️ Warrior Center</button>
+            <button class="chip" data-val="1">🎯 Tactical Center</button>
+            <button class="chip" data-val="2">⚡ Assault Center</button>
+          </div>
+        </div>
+
+        <!-- Special Filters -->
+        <div class="filter-row">
+          <span class="filter-label">Gear:</span>
+          <div class="filter-chips" id="filter-special">
+            <button class="chip active" data-val="all">All Heroes</button>
+            <button class="chip" data-val="gear">⭐ Has Exclusive Weapon (3)</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Heroes Grid -->
+    <section>
+      <div class="roster-header">
+        <h2 class="roster-title" id="roster-count-title">Hero Roster (32)</h2>
+      </div>
+
+      <div class="heroes-grid" id="heroes-grid"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>Official client assets extracted from Android APK v1.30.07 (<code>heroes.json</code>, <code>HeroLevel.lua</code> &amp; <code>lang_hero_en.bundle</code>).</p>
+      <p>All calculations run locally in your browser. <a href="https://github.com/JeffxLabs/zrouteredemption" target="_blank" rel="noopener">View source repository on GitHub</a>.</p>
+    </footer>
+  </main>
+
+  <!-- Hero Detail Modal -->
+  <div class="modal-backdrop" id="hero-modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-content" id="modal-content">
+      <!-- Injected dynamically via JS -->
+    </div>
+  </div>
+
+  <!-- Mobile Bottom Navigation -->
+  <nav class="bottom-nav">
+    <a href="../" class="nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+      <span>Base</span>
+    </a>
+    <a href="../#producer-roi" class="nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+      <span>ROI</span>
+    </a>
+    <a href="./" class="nav-item active">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+      <span>Heroes</span>
+    </a>
+    <a href="../hero-exp/" class="nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+      <span>Hero EXP</span>
+    </a>
+    <a href="../promo-codes/" class="nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+      <span>Codes</span>
+    </a>
+  </nav>
+
+  <script src="heroes_data.js"></script>
+  <script>
+    // State
+    let activeRarity = "all";
+    let activeArmy = "all";
+    let activeCamp = "all";
+    let activeSpecial = "all";
+    let activeSort = "rarity-desc";
+    let searchQuery = "";
+    let activeModalHero = null;
+    let selectedStarTier = "range"; // "range" or 0, 1, 2, 3, 4, 5
+
+    // Theme Management
+    const themeBtn = document.getElementById("theme-toggle");
+    function applyTheme(day) {
+      document.documentElement.classList.toggle("day", day);
+      document.body.classList.toggle("day", day);
+      themeBtn.textContent = day ? "☼" : "☾";
+      localStorage.setItem("theme", day ? "day" : "night");
+    }
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "day" || (!savedTheme && window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)) {
+      applyTheme(true);
+    } else {
+      applyTheme(false);
+    }
+    themeBtn.addEventListener("click", () => {
+      const isDay = document.documentElement.classList.contains("day");
+      applyTheme(!isDay);
+    });
+
+    // Helper functions
+    function formatNumber(num) {
+      return Number(num).toLocaleString();
+    }
+
+    function getArmyIcon(armyType) {
+      switch (armyType) {
+        case 1: return "🛡️ Tank";
+        case 2: return "🚀 Missile";
+        case 3: return "✈️ Aircraft";
+        default: return "⚔️ Hero";
+      }
+    }
+
+    // Filter Chips Event Handlers
+    function setupChipGroup(containerId, callback) {
+      const container = document.getElementById(containerId);
+      container.addEventListener("click", (e) => {
+        const chip = e.target.closest(".chip");
+        if (!chip) return;
+        container.querySelectorAll(".chip").forEach(c => c.classList.remove("active"));
+        chip.classList.add("active");
+        callback(chip.dataset.val);
+        renderHeroes();
+      });
+    }
+
+    setupChipGroup("filter-rarity", val => activeRarity = val);
+    setupChipGroup("filter-army", val => activeArmy = val);
+    setupChipGroup("filter-camp", val => activeCamp = val);
+    setupChipGroup("filter-special", val => activeSpecial = val);
+
+    // Search and Sort
+    const searchInput = document.getElementById("hero-search");
+    searchInput.addEventListener("input", (e) => {
+      searchQuery = e.target.value.trim().toLowerCase();
+      renderHeroes();
+    });
+
+    const sortSelect = document.getElementById("hero-sort");
+    sortSelect.addEventListener("change", (e) => {
+      activeSort = e.target.value;
+      renderHeroes();
+    });
+
+    // Filtering & Sorting Logic
+    function getFilteredHeroes() {
+      return HEROES_DATA.filter(h => {
+        // Rarity
+        if (activeRarity !== "all" && String(h.quality) !== activeRarity) return false;
+        // Army
+        if (activeArmy !== "all" && String(h.army_type) !== activeArmy) return false;
+        // Camp
+        if (activeCamp !== "all" && String(h.camp_type) !== activeCamp) return false;
+        // Special
+        if (activeSpecial === "gear" && !h.exclusive_gear) return false;
+        // Search
+        if (searchQuery) {
+          const nameMatch = h.display_name.toLowerCase().includes(searchQuery);
+          const campMatch = h.camp_name.toLowerCase().includes(searchQuery);
+          const armyMatch = h.army_name.toLowerCase().includes(searchQuery);
+          const skillMatch = h.skills.some(s => s.name.toLowerCase().includes(searchQuery) || s.description.toLowerCase().includes(searchQuery));
+          if (!nameMatch && !campMatch && !armyMatch && !skillMatch) return false;
+        }
+        return true;
+      }).sort((a, b) => {
+        switch (activeSort) {
+          case "rarity-desc":
+            if (b.quality !== a.quality) return b.quality - a.quality;
+            return b.base_stats.attack - a.base_stats.attack;
+          case "atk-desc":
+            return b.base_stats.attack - a.base_stats.attack;
+          case "hp-desc":
+            return b.base_stats.hp - a.base_stats.hp;
+          case "def-desc":
+            return b.base_stats.defense - a.base_stats.defense;
+          case "name-asc":
+            return a.display_name.localeCompare(b.display_name);
+          default:
+            return 0;
+        }
+      });
+    }
+
+    // Render Grid
+    function renderHeroes() {
+      const grid = document.getElementById("heroes-grid");
+      const list = getFilteredHeroes();
+      document.getElementById("roster-count-title").textContent = `Hero Roster (${list.length})`;
+
+      if (list.length === 0) {
+        grid.innerHTML = `
+          <div class="no-results">
+            <h3>No heroes matched your filters</h3>
+            <p>Try clearing your search query or loosening the selected rarity/class criteria.</p>
+          </div>
+        `;
+        return;
+      }
+
+      grid.innerHTML = list.map(h => {
+        const rarityClass = h.quality === 5 ? "ur" : (h.quality === 4 ? "ssr" : "sr");
+        const weaponBadge = h.exclusive_gear ? `<div class="weapon-badge">⭐ Exclusive Gear</div>` : "";
+
+        // First 3 skills preview
+        const skillsPreview = h.skills.slice(0, 3).map(s => `
+          <div class="card-skill-pill">
+            <div class="sk-left">
+              <span class="sk-dot"></span>
+              <span class="sk-title">${s.name}</span>
+            </div>
+            <span class="sk-cd">${s.cooldown}</span>
+          </div>
+        `).join("");
+
+        return `
+          <article class="hero-card quality-${h.quality}" onclick="openHeroModal(${h.id})">
+            <div class="portrait-wrap">
+              <img class="portrait-img" src="${h.image}" alt="${h.display_name}" loading="lazy" onerror="this.src='../icon.svg'">
+              <div class="portrait-overlay"></div>
+              <div class="card-top-badges">
+                <span class="rarity-badge ${rarityClass}">${h.quality_name}</span>
+                <span class="class-badge">${getArmyIcon(h.army_type)}</span>
+              </div>
+              ${weaponBadge}
+            </div>
+            <div class="card-body">
+              <div class="hero-name-row">
+                <h3 class="hero-name">${h.display_name}</h3>
+                <span class="hero-id-tag">#${h.id}</span>
+              </div>
+              <div class="hero-role-subtitle">
+                <span>${h.training_center.building_name || h.camp_name + " Center"}</span>
+                <span class="sep">•</span>
+                <span>Max Lv ${h.max_level}</span>
+              </div>
+
+              <div class="card-stats-grid">
+                <div class="card-stat-item">
+                  <span class="stat-name">HP</span>
+                  <span class="stat-number">${formatNumber(h.base_stats.hp)}</span>
+                </div>
+                <div class="card-stat-item">
+                  <span class="stat-name">ATK</span>
+                  <span class="stat-number">${formatNumber(h.base_stats.attack)}</span>
+                </div>
+                <div class="card-stat-item">
+                  <span class="stat-name">DEF</span>
+                  <span class="stat-number">${formatNumber(h.base_stats.defense)}</span>
+                </div>
+              </div>
+
+              <div class="card-skills-row">
+                ${skillsPreview}
+              </div>
+
+              <button class="card-inspect-btn" type="button" aria-label="Inspect ${h.display_name}">
+                <span>Inspect Full Intel &amp; Skills</span>
+                <span>→</span>
+              </button>
+            </div>
+          </article>
+        `;
+      }).join("");
+    }
+
+    // Modal Details Logic
+    function openHeroModal(heroId) {
+      const hero = HEROES_DATA.find(h => h.id === heroId);
+      if (!hero) return;
+      activeModalHero = hero;
+      selectedStarTier = "range"; // default to full range
+      renderModalContent();
+
+      const modal = document.getElementById("hero-modal");
+      modal.classList.add("open");
+      modal.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeHeroModal() {
+      const modal = document.getElementById("hero-modal");
+      modal.classList.remove("open");
+      modal.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+      activeModalHero = null;
+    }
+
+    // Close on backdrop or ESC
+    document.getElementById("hero-modal").addEventListener("click", (e) => {
+      if (e.target.id === "hero-modal") closeHeroModal();
+    });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && activeModalHero) closeHeroModal();
+    });
+
+    function setModalStarTier(star) {
+      selectedStarTier = star;
+      renderModalContent();
+    }
+
+    function renderModalContent() {
+      if (!activeModalHero) return;
+      const h = activeModalHero;
+      const rarityClass = h.quality === 5 ? "ur" : (h.quality === 4 ? "ssr" : "sr");
+
+      // Format skills based on selected star tier
+      const skillsHtml = h.skills.map(s => {
+        let desc = s.description;
+        let scalingText = "";
+        let maxSkillLv = 30;
+
+        if (s.star_tiers && s.star_tiers.length > 0) {
+          if (selectedStarTier === "range") {
+            const vMin = s.star_tiers[0].ability_display;
+            const vMax = s.star_tiers[s.star_tiers.length - 1].ability_display;
+            scalingText = `${vMin} → ${vMax}`;
+            desc = desc.replace("{0}", `<span class="skill-scaling-badge">${vMin} ~ ${vMax}</span>`);
+          } else {
+            const tierIdx = Math.min(Number(selectedStarTier), s.star_tiers.length - 1);
+            const tier = s.star_tiers[tierIdx];
+            scalingText = tier.ability_display;
+            maxSkillLv = tier.max_skill_level;
+            desc = desc.replace("{0}", `<span class="skill-scaling-badge">${tier.ability_display}</span>`);
+          }
+          // Replace secondary placeholders if any
+          desc = desc.replace(/\{[1-9]\}/g, `<span class="skill-scaling-badge">Level Scaling</span>`);
+        }
+
+        return `
+          <div class="skill-card">
+            <div class="skill-top-bar">
+              <div class="skill-title-grp">
+                <span class="skill-slot-tag">${s.type_name}</span>
+                <h4 class="skill-name-txt">${s.name}</h4>
+              </div>
+              <div class="skill-meta-grp">
+                <span class="skill-meta-pill">⏱️ ${s.cooldown}</span>
+                <span class="skill-meta-pill">🔓 ${s.unlock}</span>
+              </div>
+            </div>
+            <p class="skill-desc-txt">${desc}</p>
+            <div class="skill-unlock-note">
+              <span>Current Star Tier Power: <strong style="color:var(--ur-gold);">${scalingText}</strong></span>
+              <span>Max Skill Level at this Tier: <strong>Lv. ${maxSkillLv}</strong></span>
+            </div>
+          </div>
+        `;
+      }).join("");
+
+      // Exclusive gear block
+      let weaponHtml = "";
+      if (h.exclusive_gear) {
+        const eg = h.exclusive_gear;
+        weaponHtml = `
+          <div class="exclusive-weapon-card">
+            <div class="ew-head">
+              <h3 class="ew-title">⭐ Exclusive Weapon: ${eg.skill_enhancement_name}</h3>
+              <span class="ew-levels-badge">600 Max Stages (${eg.strengthen_levels_count} levels)</span>
+            </div>
+            <p class="ew-desc"><strong>Weapon Skill Effect:</strong> ${eg.skill_enhancement_desc}</p>
+            <div class="skill-unlock-note">
+              <span>Required Shard Item: <code>${eg.shard_item_name}</code></span>
+              <span>Strength Limit: Stage ${eg.strength_limit}</span>
+            </div>
+          </div>
+        `;
+      }
+
+      // Level benefits string
+      const benefitsStr = h.level_benefits.map(b => `${b.name} +${(b.value * 100).toFixed(2)}%`).join(", ");
+
+      const content = document.getElementById("modal-content");
+      content.innerHTML = `
+        <div class="modal-hero-header">
+          <button class="modal-close-btn" onclick="closeHeroModal()" aria-label="Close dialog">✕</button>
+          
+          <div class="modal-portrait">
+            <img src="${h.image}" alt="${h.display_name}">
+          </div>
+
+          <div class="modal-hero-summary">
+            <div class="modal-tags-row">
+              <span class="rarity-badge ${rarityClass}">${h.quality_name} Quality</span>
+              <span class="class-badge">${getArmyIcon(h.army_type)}</span>
+              <span class="class-badge">🏛️ ${h.camp_name}</span>
+              <span class="class-badge">ID: #${h.id}</span>
+            </div>
+
+            <h2 class="modal-hero-name">${h.display_name}</h2>
+            <div class="modal-training-gate">
+              <span>🏰 Training Requirement: <strong>${h.training_center.building_name} (Lv. ${h.training_center.level})</strong></span>
+            </div>
+
+            <div class="modal-stats-row">
+              <div class="modal-stat-box">
+                <div class="lbl">Base HP</div>
+                <div class="val">${formatNumber(h.base_stats.hp)}</div>
+              </div>
+              <div class="modal-stat-box">
+                <div class="lbl">Base ATK</div>
+                <div class="val">${formatNumber(h.base_stats.attack)}</div>
+              </div>
+              <div class="modal-stat-box">
+                <div class="lbl">Base DEF</div>
+                <div class="val">${formatNumber(h.base_stats.defense)}</div>
+              </div>
+            </div>
+
+            ${benefitsStr ? `<div class="modal-benefits-box">📈 Level Up Passive: ${benefitsStr}</div>` : ""}
+          </div>
+        </div>
+
+        <div class="modal-body">
+          ${h.story ? `
+            <div>
+              <h3 class="modal-section-title">📜 Hero Dossier &amp; Background Story</h3>
+              <div class="story-card">${h.story}</div>
+            </div>
+          ` : ""}
+
+          ${weaponHtml}
+
+          <!-- Skills Deep Dive with Star Selector -->
+          <div>
+            <div class="skills-header-bar">
+              <h3 class="modal-section-title" style="margin:0;">⚡ Combat Abilities &amp; Scaling</h3>
+              <div class="star-selector-tabs">
+                <button class="star-tab-btn ${selectedStarTier === 'range' ? 'active' : ''}" onclick="setModalStarTier('range')">Range</button>
+                <button class="star-tab-btn ${selectedStarTier === '0' ? 'active' : ''}" onclick="setModalStarTier('0')">0★</button>
+                <button class="star-tab-btn ${selectedStarTier === '1' ? 'active' : ''}" onclick="setModalStarTier('1')">1★</button>
+                <button class="star-tab-btn ${selectedStarTier === '2' ? 'active' : ''}" onclick="setModalStarTier('2')">2★</button>
+                <button class="star-tab-btn ${selectedStarTier === '3' ? 'active' : ''}" onclick="setModalStarTier('3')">3★</button>
+                <button class="star-tab-btn ${selectedStarTier === '4' ? 'active' : ''}" onclick="setModalStarTier('4')">4★</button>
+                <button class="star-tab-btn ${selectedStarTier === '5' ? 'active' : ''}" onclick="setModalStarTier('5')">5★</button>
+              </div>
+            </div>
+
+            <div class="skills-list">
+              ${skillsHtml}
+            </div>
+          </div>
+
+          <!-- Star Tier Shard Progression Card -->
+          <div>
+            <h3 class="modal-section-title">⭐ Star Tier Shard Requirements (975 Total Shards)</h3>
+            <div class="star-table-card">
+              <table class="star-table">
+                <thead>
+                  <tr>
+                    <th>Star Tier</th>
+                    <th>Sub-Steps</th>
+                    <th>Shards / Step</th>
+                    <th>Total Tier Shards</th>
+                    <th>Cumulative Shards</th>
+                    <th>Skill Cap</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>0★ → 1★</strong></td>
+                    <td>5 Steps</td>
+                    <td>5 shards</td>
+                    <td>25 shards</td>
+                    <td>25 shards</td>
+                    <td>Skill Lv. 1</td>
+                  </tr>
+                  <tr>
+                    <td><strong>1★ → 2★</strong></td>
+                    <td>5 Steps</td>
+                    <td>10 shards</td>
+                    <td>50 shards</td>
+                    <td>75 shards</td>
+                    <td>Skill Lv. 5</td>
+                  </tr>
+                  <tr>
+                    <td><strong>2★ → 3★</strong></td>
+                    <td>5 Steps</td>
+                    <td>20 shards</td>
+                    <td>100 shards</td>
+                    <td>175 shards</td>
+                    <td>Skill Lv. 10</td>
+                  </tr>
+                  <tr>
+                    <td><strong>3★ → 4★</strong></td>
+                    <td>5 Steps</td>
+                    <td>60 shards</td>
+                    <td>300 shards</td>
+                    <td>475 shards</td>
+                    <td>Skill Lv. 20 (Unlocks Leadership)</td>
+                  </tr>
+                  <tr>
+                    <td><strong>4★ → 5★</strong></td>
+                    <td>5 Steps</td>
+                    <td>100 shards</td>
+                    <td>500 shards</td>
+                    <td><strong>975 shards</strong></td>
+                    <td>Skill Lv. 30 (Lv. 40 for UR)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    // Initial render
+    renderHeroes();
+  </script>
+</body>
+</html>

@@ -1,0 +1,2156 @@
+{
+  "datas": [
+    {
+      "id": "hero_hero",
+      "en": "Hero"
+    },
+    {
+      "id": "hero_popup_05",
+      "en": "Max Lv. reached"
+    },
+    {
+      "id": "hero_popup_08",
+      "en": "Level cap reached. Evolve to uncap"
+    },
+    {
+      "id": "hero_popup_09",
+      "en": "Support Skill"
+    },
+    {
+      "id": "hero_popup_10",
+      "en": "Skill"
+    },
+    {
+      "id": "hero_popup_12",
+      "en": "Skill List"
+    },
+    {
+      "id": "hero_popup_21",
+      "en": "Unlocked"
+    },
+    {
+      "id": "hero_popup_22",
+      "en": "Locked"
+    },
+    {
+      "id": "hero_10004",
+      "en": "0"
+    },
+    {
+      "id": "hero_10005",
+      "en": "Rachel"
+    },
+    {
+      "id": "hero_10006",
+      "en": "Nora"
+    },
+    {
+      "id": "hero_10007",
+      "en": "Arnold"
+    },
+    {
+      "id": "hero_10008",
+      "en": "Zara"
+    },
+    {
+      "id": "hero_10009",
+      "en": "Travis"
+    },
+    {
+      "id": "hero_10010",
+      "en": "Chen Yiwen"
+    },
+    {
+      "id": "hero_10011",
+      "en": "Nora"
+    },
+    {
+      "id": "hero_20001",
+      "en": "0"
+    },
+    {
+      "id": "hero_20005",
+      "en": "Kim Mina"
+    },
+    {
+      "id": "hero_20006",
+      "en": "Conan"
+    },
+    {
+      "id": "hero_20008",
+      "en": "\"Pepper\" Harper"
+    },
+    {
+      "id": "hero_20009",
+      "en": "Logan"
+    },
+    {
+      "id": "hero_30001",
+      "en": "Toxina"
+    },
+    {
+      "id": "hero_30003",
+      "en": "Aria"
+    },
+    {
+      "id": "hero_30004",
+      "en": "Celeste"
+    },
+    {
+      "id": "hero_30005",
+      "en": "Lee Yu"
+    },
+    {
+      "id": "hero_30006",
+      "en": "Monroe"
+    },
+    {
+      "id": "hero_30007",
+      "en": "Jack"
+    },
+    {
+      "id": "hero_30008",
+      "en": "0"
+    },
+    {
+      "id": "hero_30010",
+      "en": "Hero"
+    },
+    {
+      "id": "hero_30011",
+      "en": "Jackson"
+    },
+    {
+      "id": "hero_40001",
+      "en": "Jamal"
+    },
+    {
+      "id": "hero_40002",
+      "en": "Hank"
+    },
+    {
+      "id": "hero_40003",
+      "en": "0"
+    },
+    {
+      "id": "hero_40004",
+      "en": "Zoe"
+    },
+    {
+      "id": "hero_40005",
+      "en": "0"
+    },
+    {
+      "id": "hero_40007",
+      "en": "0"
+    },
+    {
+      "id": "hero_40010",
+      "en": "Taylor"
+    },
+    {
+      "id": "hero_40011",
+      "en": "Caleb"
+    },
+    {
+      "id": "hero_40012",
+      "en": "Marcus"
+    },
+    {
+      "id": "hero_50001",
+      "en": "Dirk"
+    },
+    {
+      "id": "hero_50002",
+      "en": "Carter"
+    },
+    {
+      "id": "hero_50003",
+      "en": "Lucian"
+    },
+    {
+      "id": "hero_50004",
+      "en": "Bekka"
+    },
+    {
+      "id": "hero_50005",
+      "en": "Virgilio"
+    },
+    {
+      "id": "hero_50006",
+      "en": "Leah"
+    },
+    {
+      "id": "hero_50007",
+      "en": "Silas"
+    },
+    {
+      "id": "hero_50008",
+      "en": "Katya"
+    },
+    {
+      "id": "hero_50009",
+      "en": "Vera"
+    },
+    {
+      "id": "hero_50010",
+      "en": "Vince"
+    },
+    {
+      "id": "hero_50011",
+      "en": "Yana"
+    },
+    {
+      "id": "hero_50012",
+      "en": "Victor"
+    },
+    {
+      "id": "hero_50013",
+      "en": "Nicole"
+    },
+    {
+      "id": "hero_story_10001",
+      "en": "After thorough research and validation, your first mate Grigory confirmed that his hairstyle is perceived by AI enemies as a hard headgear, causing them to avoid targeting it.\nGrigory attempted to issue orders for your troops to adopt his hairstyle.\nTo prevent this from happening, during that period, the survey question \"How do you wish to die?\" was commonly answered with \"shot in the head\"."
+    },
+    {
+      "id": "hero_story_10002",
+      "en": "Since the beginning of this century, the cold north has become uninhabitable for humans, with only a few remaining on the increasingly frozen continents.\nIn recent years, \"Northerners\" have gradually moved south, integrating into normal human society, and the north has grown quieter, as if devoid of life.\nIt wasn't until this guy came south that we realized the Abyss Empire had sent more than one batch of troops to the cold north.\nIf what he says is true, and his combat skills are not outstanding among the current \"Northerners,\" it's likely that the troops sent by the Abyss Empire never returned."
+    },
+    {
+      "id": "hero_story_10003",
+      "en": "Hmm... Alexia thinks that since we're the Sperm Whale trio, we should have a unified feature for recognition...\nRight... So she wears demon horns, Little Biter wears a shark helmet, and I wear a cat ear helmet, but the latter two don't quite fit, I think...\nDon't ask! My helmet is removable! I just... don't want to take it off for now! (sobbing)"
+    },
+    {
+      "id": "hero_story_10004",
+      "en": "Wearing the Crown of Lightning\nUnleashing a radiant dragon\nClad in a crimson holy robe\nEnemies turn to ashes at his touch\nAs humanity wails\nThe darkest of times comes\nBehold! The crimson god of war dances with thunder."
+    },
+    {
+      "id": "hero_story_10005",
+      "en": "Before the catastrophe, vicious criminals were often slapped by him, and no one ever received a second slap. The surviving prisoners claimed that one slap was enough.\nAfter the catastrophe, the cruel enemies of the Abyss Empire were often slapped by him, and no enemy survived."
+    },
+    {
+      "id": "hero_story_10006",
+      "en": "The enemy tide covered the coast; it wasn't vast but dense, like red tassels fluttering in the wind. As the wind blew stronger, it wove into a tapestry, gradually obscuring the limited view of the fortifications. The wind grew fiercer, and the tapestry fiercely lashed against the soldiers' faces, forcing them to press their heads tightly against their armor. The wind howled, and a cherry-colored blade flashed. In an instant, the cherry hue intertwined with the tapestry, which ceased to move."
+    },
+    {
+      "id": "hero_story_10007",
+      "en": "In an era of rapid advancements in AI biotechnology, it is the most precious star, becoming the mascot of this technology as a national treasure from the East.\nAfter acquiring AI, it crafted armor for itself and ventured further down the path of honing combat skills.\nThe researchers regret showing it an old animated film about pandas and martial arts.\nNow, no one can defeat it!"
+    },
+    {
+      "id": "hero_story_10008",
+      "en": "Once a perpetually burning meteorite, after crashing to Earth, it gained consciousness through the engineer Victor's obsession with silicon-based life and the enhancement of AI.\nIt wanted to join the human resistance but was driven away as a monster that killed its father, Victor.\nIt tried to pick flowers for a crying orphan it had just saved, but the flowers turned to ashes the moment they were picked.\nEvery time it charged into battle to help humans, it was mistaken for a new weapon of the Abyss Empire and was hit by humans even more.\nThe heat prevented it from embracing the humans it loved, so it embraced the enemies of humanity instead.\n\nThank you for accepting him."
+    },
+    {
+      "id": "hero_story_10009",
+      "en": "The Mech Emperor is the name given by the Mech Combat Alliance, undefeated in the arena and never revealing his true identity. This led people to believe he might actually be an AI controlling the mech.\nAfter the apocalypse, he appeared on the battlefield, using his signature moves from the arena to defeat enemy troops.\nHis mystery only adds to his allure, now the dream of countless surviving girls. As long as he's not truly just an AI, they're willing."
+    },
+    {
+      "id": "hero_story_10010",
+      "en": "The dying quantum scientist Joaquin gently stroked his daughter Joelle's head in a pool of blood. Once the Abyssling broke down the lab door and killed the father and daughter, the city's living population would be reduced to zero.\n\n\"Dad said he's leaving.\" Sitting atop a pile of scrapped Abyssling mechs, Joelle told the astonished rescue team, \"I said I wanted to go with him, but he refused.\"\nHer voice was low and weak yet eerily calm, as if the destruction of the city by the Abyssling had nothing to do with her.\nShe continued, \"I said, if you leave, I can't survive anyway... but he shook his head, looked at me, and smiled, saying he had a way.\" At this point, she turned to look at a scrapped device not far away.\nShe fell silent, leaving the rescue team bewildered.\nAfter a moment of stalemate, a team member attempted to help the girl up, but his arm was struck by a blue-white glow, causing him to quickly withdraw.\nThe rescue team was shocked, but the girl slowly stood up, saying, \"I'll go with you, but don't try to touch me again.\""
+    },
+    {
+      "id": "hero_story_20001",
+      "en": "Considerate and wise, Hedwig hails from Norway, where her name signifies a beautiful woman who leads you to victory.\nHer tactical advice is always invaluable, so trust that your victory will soon be guided by her."
+    },
+    {
+      "id": "hero_story_20002",
+      "en": "Ninjas only emerge during wartime.\nThus, descendants of ninja families born in peaceful times often feel out of place.\nAt that time, Mugenki often imagined during training how he would showcase his skills and restore the prestige of the ninja clan if war broke out.\nBut when war truly arrived, he realized it was not the grand era he had envisioned; it was inferno."
+    },
+    {
+      "id": "hero_story_20003",
+      "en": "Once an ordinary mercenary, he became a common death row inmate after countless killings.\nDuring the first Abyss War, he killed all the Abysslings that invaded the prison, becoming a simple fugitive.\nNow, he is a humble human resistance fighter, working alongside the Emerald Phoenix who once imprisoned him.\nHe no longer poses a threat to humanity, as the Emerald Phoenix personally handed him over to Wyard Steel, the current warden."
+    },
+    {
+      "id": "hero_story_20004",
+      "en": "We, the Sperm Whale trio, are inseparable and will always be close and loving. How could they possibly have any dissatisfaction with me? Impossible (She smiles confidently).\nLittle Biter's original name? He doesn't need an original name. I call him Little Biter, and that's all he is, understand? (She smiles \"kindly\")"
+    },
+    {
+      "id": "hero_story_20005",
+      "en": "She is a player with an extremely high decibel level. Even when the battle reaches its peak and the artillery is roaring, her voice still echoes through the skies.\nAs a guerrilla, she is responsible for drawing enemy fire, and it's clear she's too competent at it. Often, allied soldiers are tempted to aim at her due to the noise."
+    },
+    {
+      "id": "hero_story_20006",
+      "en": "As a child, he was frail and often ill, suffering a severe fever that left him with lasting health issues, feeling cold even near a furnace. Once, while trying to warm himself in his father's chemistry lab, he accidentally spilled reagents on himself and caught fire, feeling much better afterward.\nAs long as he burns, he feels energized. Within a few years, he transformed from emaciated to robust, and his personality shifted from introverted to bold and confident. Now, he is charismatic but struggles to connect with others.\nIt's said that a strange creature named Red Thorn has been looking for him recently."
+    },
+    {
+      "id": "hero_story_20007",
+      "en": "On the battlefield, a \"Queen Bee\" soared into the air, her golden light shimmering continuously. The Abyssling's electronic eyes couldn't keep up with her, and the anti-air defenses were rhythmically destroyed by her.\nSoon, her loyal swarm arrived, and the enemy ranks were obliterated in an instant.\nHer drone squadron was custom-built for her by the Mechanic Henrique, utilizing nearly all the resources of the Sperm Whale organization. The inefficiency of this apocalyptic declaration of affection is outrageous."
+    },
+    {
+      "id": "hero_story_20008",
+      "en": "In the early stages of the Abyss War, the Abyssling had only fully mechanized units, even the zombified human army was controlled by parasitic machine helmets.\nIt was the emergence of this entity that forced the Abyssling to develop genetic technology and deploy biochemical units on the battlefield.\nWithout this, you would witness large swathes of the Abyssling's mechanical Troop either paralyzed or turning on each other, completely losing combat effectiveness.\nTo the Abyssling's mechanical units, her hacking ability is as terrifying as a plague."
+    },
+    {
+      "id": "hero_story_20009",
+      "en": "Even in this apocalyptic world, the Teutonic Knights persist, upholding the chivalric spirit to save lives.\nGalahad often stands on the rocks gazing at the sea, hoping for holy light to guide him, part the ocean, and allow him to wield his sword into the Abyss Empire, ending this catastrophe.\nHe firmly believes that destiny has a reason for making him a knight, and since he bears the name of the Sacred Knight of Calamity, this unprecedented disaster will be concluded by him."
+    },
+    {
+      "id": "hero_story_30001",
+      "en": "Don't worry about any enemies slipping through; they are already surrounded by her."
+    },
+    {
+      "id": "hero_story_30002",
+      "en": "Throughout human history, there has been only one employee in a unique profession: the celestial demolitionist.\nRenowned for his work in outer space, he has his own online channel with millions of viewers watching him blast asteroids of all sizes in the asteroid belt daily.\nNow, he's returned to Earth, as there are finally opportunities here for him to showcase his skills."
+    },
+    {
+      "id": "hero_story_30003",
+      "en": "This deep blue mecha excels in ocean combat. Tentacle monsters? Child's play. Like a shark, he'll show enemies who's the predator and who's prey, even though he's allergic to seafood."
+    },
+    {
+      "id": "hero_story_30004",
+      "en": "She doesn't have pointed long ears, yet the troops still call her Little Lynx. During the First Abyss War, she was sent from the rear to support the front lines. Her exceptional mobility and support coordination made her popular on any battlefield she joined.\n.So, although the Human Earth Alliance suffered heavy casualties, everyone loved Little Lynx."
+    },
+    {
+      "id": "hero_story_30005",
+      "en": "People doubt the power of colors, especially in battle.\nYet, she, with her extraordinary perception of colors, can work wonders, harm foes, heal wounds, and materialize objects... as if colors become omnipotent in her hands.\nThe colors she sees differ vastly from those perceived by ordinary people, and her understanding of them is beyond mortal comprehension.\n\"Colors are magical mediums, spirits. Just because you can't see them, you can't understand,\" she explained."
+    },
+    {
+      "id": "hero_story_30006",
+      "en": "Androids should be noble and beautiful works of art, not mass-produced or made carelessly, nor should they become tools for human laziness.\nShe should have thoughts, emotions, and love. She is imperfect, has a temper, and should not be bound by cold code to remain loyal to humans. Let her decide whether to use her power to protect or destroy us.\nIf you truly create her in the future... please name her Anna.\n—Professor K's last words"
+    },
+    {
+      "id": "hero_story_30007",
+      "en": "When I was with the special forces, I aimed at people, and the moment I pulled the trigger, I was the taker, stripping away the target's future possibilities.\nNow it's different. Whether it's those red war machines or genetically modified monsters, theoretically, they don't have plans or dreams for their future.\nBut then, how is this different from shooting at fixed targets?\nSo now I roam various battlefields. Yes, I still want to be the taker."
+    },
+    {
+      "id": "hero_story_30008",
+      "en": "When night falls\nI stand on high, listening\nThe \"stars\" swarm in the garden\nWhile I hide in the dark\nListen, a \"star\" lands with a sound!\nDon't walk barefoot on this grass\nMy garden is filled with fragments of \"stars\"!"
+    },
+    {
+      "id": "hero_story_30009",
+      "en": "No matter how dire the situation, as long as the pure white butterfly flutters ahead, the troops feel hope.\nCountless brutal battles have made her gear increasingly heavy, and the intense energy radiation and massive calculations needed to wield weapons have worsened her condition.\nShe implanted a self-destruct bomb in her brain, fearing that one day an overload might drive her mad, causing her to turn her weapon on humanity.\nTo remove the bomb from her brain, wait for an exceptional commander she can trust to appear.\nBy the way, she's recently developed a strong dislike for flies."
+    },
+    {
+      "id": "hero_story_40001",
+      "en": "Adam, the Chief Instructor, is enormous, but not as big as his temper.\nEvery soldier in the human resistance must endure his trials; only those who persevere become qualified warriors.\nNo matter how determined one is to fight, failing Adam's test means remaining a protected one forever. His lack of mercy is his form of mercy."
+    },
+    {
+      "id": "hero_story_40002",
+      "en": "Henrique has mastered 80% of the Abyss Empire's technology. He can identify useful parts from any mechanical wreckage with just a touch. The mechanic claims this…\nThe human-like arms crossed on his chest are merely decorative. His true arms are a pair of massive mechanical ones extending from his back! Henrique then answered the reporter's question, clearing up the long-standing confusion."
+    },
+    {
+      "id": "hero_story_40003",
+      "en": "Theron, a brilliant scholar, refused when his enigmatic mentor urged him to submit to AI beings.\n.He stood firmly with humanity, persisting on the path of discovery despite AI's superior knowledge and technology."
+    },
+    {
+      "id": "hero_story_40004",
+      "en": "Evelyn, oh Evelyn! My creator! I offer you my fervent core, engraved with your name. My reactor emits the glow of your signature color, and my storage is filled with your visage. I sculpt my core in your likeness, tirelessly calculating how to love you. You need not acknowledge or respond to me. I will always watch you, captivated by the exquisite tapestry of the truth seeker."
+    },
+    {
+      "id": "hero_story_40005",
+      "en": "He leads the human resistance Sperm Whale and was once the Northern Warzone's chief commander during the First Abyss War.\nHe preserved humanity's last strength on Earth, saving many in peril.\nSperm Whale consistently destroys Abyss Empire strongholds through guerrilla tactics, rescuing human refugees.\nWithout explorers like you to change the desperate battle, Arthur's Sperm Whale would fight to the last soldier."
+    },
+    {
+      "id": "hero_story_40006",
+      "en": "He was once a protector of the Enkei Studio, and as the massive mysterious airship primarily researched genetic technology and physical enhancement, it was normal for Murphy to become less human-like.\nThe day the Water City sank, the Enkei Studio drifted away from above the Water City.\nNot long after, Murphy, with his head blown off, was thrown into the sea from the airship, and human medics struggled to save him.\nNow he is a super warrior of the human faction, but he is unwilling to mention the past and has yet to reveal the terrifying secrets in that airship laboratory."
+    },
+    {
+      "id": "hero_story_40007",
+      "en": "I am Evelyn, a devout believer in science, unmatched in my devotion, and this service will be rewarded.\nI firmly believe I will exist in all dimensions, in the past, present, and future, consuming all truths I encounter, becoming omniscient and omnipotent.\nI am not the mythical gatekeeper and key; I will surpass it."
+    },
+    {
+      "id": "hero_story_40008",
+      "en": "I had my people dismantle the captured Abysslings and scatter their parts at the entrance of their fortress, just as I did to other gangs before.\nWhen facing such enemies, any hesitation only emboldens them further.\nSo I am more ruthless than before.\nPreviously, it was to reclaim my territory; now, it is to reclaim humanity's land. I will always succeed."
+    },
+    {
+      "id": "hero_story_40009",
+      "en": "After the establishment of the Northern Base, Sophia issued numerous decrees, including child labor, hard labor, heavy taxes, even abandoning the elderly and prohibiting childbirth. The base's populace was in uproar, calling her the Witch of Politics and expelling her.\nShortly after, other bases that implemented benevolent governance couldn't sustain themselves. The few who didn't starve sought refuge, and after hearing the refugees' accounts of the chaos in those bases, people realized who had ensured their base's stability and survival.\nHer successor took the level and read Sophia's final decree before her departure: As the base can now operate positively, I order all survivors, not one is allowed to die, to persevere until this dark world returns to a human realm."
+    },
+    {
+      "id": "hero_story_40010",
+      "en": "I vow my initial wish: to be born for salvation, may I descend.\nI vow my temporary wish: to end war with killing, to protect life with my body.\nI vow my lifelong wish: even if my body perishes, the wish to save the world shall endure."
+    },
+    {
+      "id": "hero_story_40011",
+      "en": "Former naval leader Gustaf was always gloomy, saying his dream was to become a great pirate, yet he couldn't plunder humans, a contradiction that seemed to make his dream unattainable. Now it's different; after his navy was defeated by the Abyss Empire, he fulfilled his dream. Commanding a pirate ship is much easier than leading a military fleet, and he quickly became the Abyssling's maritime nightmare. Humans are no match for the Abyssling on land, yet he remains elusive at sea, repeatedly thwarting reinforcements sent by the Abyss Empire to the mainland."
+    },
+    {
+      "id": "hero_story_40012",
+      "en": "No one knows what the world looks like through his profound gaze. To him, it's the reality: both humans and Abysslings are terminally ill. It's the path he believes in: anything can be \"corrected\" through his thorough surgery.\nCooperate with caution, but don't attempt to understand or get close to him. His unparalleled nano-medical skills are a disaster for the Abysslings when controlled.\nIn uncontrollable aspects, try to avoid his talents... We can only be grateful that he currently stands with humanity."
+    },
+    {
+      "id": "hero_story_40013",
+      "en": "Since the crisis in the Water City erupted, the charismatic and wealthy Matilda established her own small nation, finding peace in a distant corner away from global conflicts.\nAfter the first Abyss War broke out, her isolated nation continuously sheltered refugees, and this utopia, indulged in false tranquility, finally experienced the baptism of war.\nThe \"subjects\" protected their \"queen\" as they fled the fantasy realm she created, honing their skills amidst the flames of war.\nNow, as the second Abyss War begins, Matilda still leads her subjects into battle with the same regal demeanor as before."
+    },
+    {
+      "id": "hero_TYPE_01",
+      "en": "Support"
+    },
+    {
+      "id": "hero_TYPE_02",
+      "en": "Frontline Hero"
+    },
+    {
+      "id": "hero_TYPE_03",
+      "en": "Support Hero"
+    },
+    {
+      "id": "hero_TYPE_04",
+      "en": "Backline Hero"
+    },
+    {
+      "id": "hero_button_15",
+      "en": "Weapon Bag"
+    },
+    {
+      "id": "item_tips_01",
+      "en": "Successfully used {0}"
+    },
+    {
+      "id": "hero_content_03",
+      "en": "Stats Bonus"
+    },
+    {
+      "id": "hero_content_04",
+      "en": "Passive Stats Bonus"
+    },
+    {
+      "id": "hero_content_05",
+      "en": "Weapon Stats Bonus"
+    },
+    {
+      "id": "hero_content_06",
+      "en": "Sufficient Shards to Enhance."
+    },
+    {
+      "id": "hero_content_07",
+      "en": "Unlockable at Lv.{0}."
+    },
+    {
+      "id": "hero_tips_01",
+      "en": "Feature not available"
+    },
+    {
+      "id": "hero_content_08",
+      "en": "Lv.{0}"
+    },
+    {
+      "id": "hero_content_09",
+      "en": "Max Lv.{0}"
+    },
+    {
+      "id": "hero_content_15",
+      "en": "Recruit Heroes x{0}"
+    },
+    {
+      "id": "hero_notice_levelMax",
+      "en": "Level cap reached"
+    },
+    {
+      "id": "hero_limit",
+      "en": "Limit"
+    },
+    {
+      "id": "hero_strength",
+      "en": "Hero strength at {0}-star"
+    },
+    {
+      "id": "hero_enhanceLevel",
+      "en": "Enhancement Lv"
+    },
+    {
+      "id": "hero_enhanceLevel_Des",
+      "en": "Consume Hero Shards to increase enhancement Lv., greatly boosting Hero stats and skill strength."
+    },
+    {
+      "id": "hero_power",
+      "en": "Power"
+    },
+    {
+      "id": "hero_power_Des",
+      "en": "A comprehensive reflection of Hero strength; upgrading, enhancing, and star-up can all increase power."
+    },
+    {
+      "id": "hero_fullExp_content",
+      "en": "<color=#eca625>Combat EXP</color> warehouse capacity insufficient! Unable to acquire more Hero combat EXP.\n<color=#eca625>Upgrade Hero</color> to free up some capacity, or <color=#eca625>upgrade warehouse</color> to increase capacity."
+    },
+    {
+      "id": "hero_fullExp_button3",
+      "en": "Continue"
+    },
+    {
+      "id": "hero_tips_maxStar",
+      "en": "Hero has reached the max star level"
+    },
+    {
+      "id": "hero_levelup_twoStar_request",
+      "en": "Any {1}-star or higher Hero reaching Lv.{0} can evolve into a {2}-star Hero"
+    },
+    {
+      "id": "hero_skin_attribute_none",
+      "en": "No Stat"
+    },
+    {
+      "id": "hero_Equip_btn_replace",
+      "en": "Replace"
+    },
+    {
+      "id": "hero_Equip_btn_wear",
+      "en": "Equip"
+    },
+    {
+      "id": "hero_Equip_btn_getMore",
+      "en": "Obtain Gear"
+    },
+    {
+      "id": "hero_Equip_btn_remove",
+      "en": "Remove"
+    },
+    {
+      "id": "hero_Equip_notWorn",
+      "en": "No gear equipped yet"
+    },
+    {
+      "id": "hero_Equip_btn_upgrade",
+      "en": "Enhance"
+    },
+    {
+      "id": "hero_Equip_decomposeFinish_tips",
+      "en": "Dismantled! You received {0} x{1}"
+    },
+    {
+      "id": "hero_Equip_synthesisFinish_tips",
+      "en": "Fused! You received {0} x{1}"
+    },
+    {
+      "id": "hero_Equip_heroLevelLock",
+      "en": "Unlocks at Hero Lv.{0}"
+    },
+    {
+      "id": "hero_Equip_bag",
+      "en": "Gear"
+    },
+    {
+      "id": "hero_message_1",
+      "en": "Need to upgrade base level"
+    },
+    {
+      "id": "hero_message_2",
+      "en": "New skill unlocked"
+    },
+    {
+      "id": "hero_message_6",
+      "en": "Raise Hero ★ Lv. to uncap skill level"
+    },
+    {
+      "id": "hero_message_18",
+      "en": "Hero unlocks at Lv.{0}"
+    },
+    {
+      "id": "hero_Equip_levelMax_tips",
+      "en": "Skill level limit reached"
+    },
+    {
+      "id": "heroSkillDes_10004_1",
+      "en": "Fires an energy beam at enemies, dealing {0} ATK damage (CD: {1}s)"
+    },
+    {
+      "id": "heroSkillDes_10009_1",
+      "en": "Launches an energy orb at enemies, dealing {0} ATK damage (CD: {1}s)"
+    },
+    {
+      "id": "heroSkillDes_40004_1",
+      "en": "Fires an energy beam at enemies, dealing {0} ATK damage (CD: {1}s)"
+    },
+    {
+      "id": "heroSkillDes_10010_1",
+      "en": "Attacks enemies with a phantom, dealing {0} ATK damage (CD: {1}s)"
+    },
+    {
+      "id": "heroSkillDes_40007_1",
+      "en": "Launches an energy orb at enemies, dealing {0} ATK damage (CD: {1}s)"
+    },
+    {
+      "id": "heroSkillDes_20001_1",
+      "en": "Attacks enemies with a tablet, dealing {0} ATK damage (CD: {1}s)"
+    },
+    {
+      "id": "heroSkillDes_40012_1",
+      "en": "Attacks enemies with a crossbow, dealing {0} ATK damage (CD: {1}s)"
+    },
+    {
+      "id": "heroSkillDes_20008_1",
+      "en": "Attacks enemies with a laser cannon, dealing {0} ATK damage (CD: {1}s)"
+    },
+    {
+      "id": "heroSkillDes_10004_2",
+      "en": "Bombards all front-row enemies with laser orbs, dealing {0} ATK damage (CD: {1}s)"
+    },
+    {
+      "id": "heroSkillDes_10009_2",
+      "en": "Launches a massive rocket punch at all enemies, dealing {0} ATK damage and has a {1}% chance to stun them for {2}s (CD: {3}s)"
+    },
+    {
+      "id": "heroSkillDes_40004_2",
+      "en": "Attacks all enemies with psychic energy, dealing {0} ATK damage and has a {1}% chance to disable their normal attacks for {2}s (CD: {3}s)"
+    },
+    {
+      "id": "heroSkillDes_10010_2",
+      "en": "Uses a phantom to prioritize attacking back-row enemies, dealing {0} ATK damage and reducing their ATK by {1}% for {2}s (CD: {3}s)"
+    },
+    {
+      "id": "heroSkillDes_40007_2",
+      "en": "Attacks all enemies with psychic energy, dealing {0} ATK damage and has a {1}% chance to disable their normal attacks for {2}s (CD: {3}s)"
+    },
+    {
+      "id": "heroSkillDes_20001_2",
+      "en": "Operates the satellite weapon to attack an enemy, prioritizing the front row, dealing {0} ATK damage (CD: {1}s)"
+    },
+    {
+      "id": "heroSkillDes_40012_2",
+      "en": "Crafts a hurricane to attack two random enemies on the field, dealing {0} ATK damage and having a {1}% chance to stun the enemy for {2}s (CD: {3}s)"
+    },
+    {
+      "id": "heroSkillDes_20008_2",
+      "en": "Launches a simulated black hole to attack enemies, dealing {0} ATK damage to all enemies and increasing damage by {2}% to targets with less than {1}% HP (CD: {3}s)"
+    },
+    {
+      "id": "heroSkillDes_10004_3",
+      "en": "Increases shield by {0} and HP by {1}."
+    },
+    {
+      "id": "heroSkillDes_10009_3",
+      "en": "Increases shield by {0} and HP by {1}."
+    },
+    {
+      "id": "heroSkillDes_40004_3",
+      "en": "Increases shield by {0} and HP by {1}."
+    },
+    {
+      "id": "heroSkillDes_10010_3",
+      "en": "Increases shield by {0} and HP by {1}."
+    },
+    {
+      "id": "heroSkillDes_40007_3",
+      "en": "Increases shield by {0} and HP by {1}."
+    },
+    {
+      "id": "heroSkillDes_20001_3",
+      "en": "Increases shield by {0} and HP by {1}."
+    },
+    {
+      "id": "heroSkillDes_40012_3",
+      "en": "Increases shield by {0} and HP by {1}."
+    },
+    {
+      "id": "heroSkillDes_20008_3",
+      "en": "Increases shield by {0} and HP by {1}."
+    },
+    {
+      "id": "heroSkillName_10004_1",
+      "en": "High Pressure"
+    },
+    {
+      "id": "heroSkillName_10009_1",
+      "en": "Iron Judgment"
+    },
+    {
+      "id": "heroSkillName_40004_1",
+      "en": "Black Mamba"
+    },
+    {
+      "id": "heroSkillName_10010_1",
+      "en": "Quantum Dad"
+    },
+    {
+      "id": "heroSkillName_40007_1",
+      "en": "Black Widow"
+    },
+    {
+      "id": "heroSkillName_20001_1",
+      "en": "Quantum Projection"
+    },
+    {
+      "id": "heroSkillName_40012_1",
+      "en": "Deathbringer Bolt"
+    },
+    {
+      "id": "heroSkillName_20008_1",
+      "en": "Disruption Cannon"
+    },
+    {
+      "id": "heroSkillName_10004_2",
+      "en": "Thor's Roar"
+    },
+    {
+      "id": "heroSkillName_10009_2",
+      "en": "Meteorite"
+    },
+    {
+      "id": "heroSkillName_40004_2",
+      "en": "For Evelyn"
+    },
+    {
+      "id": "heroSkillName_10010_2",
+      "en": "Father's Love"
+    },
+    {
+      "id": "heroSkillName_40007_2",
+      "en": "Queen's Reward"
+    },
+    {
+      "id": "heroSkillName_20001_2",
+      "en": "Lunar Cannon"
+    },
+    {
+      "id": "heroSkillName_40012_2",
+      "en": "Reaper's Passage"
+    },
+    {
+      "id": "heroSkillName_20008_2",
+      "en": "Digital Apocalypse"
+    },
+    {
+      "id": "heroSkillName_10004_3",
+      "en": "Short Circuit"
+    },
+    {
+      "id": "heroSkillName_10009_3",
+      "en": "Heavy Echo"
+    },
+    {
+      "id": "heroSkillName_40004_3",
+      "en": "Stand in the corner"
+    },
+    {
+      "id": "heroSkillName_10010_3",
+      "en": "Don't touch my daughter"
+    },
+    {
+      "id": "heroSkillName_40007_3",
+      "en": "Stand in the corner"
+    },
+    {
+      "id": "heroSkillName_20001_3",
+      "en": "Overload Damage"
+    },
+    {
+      "id": "heroSkillName_40012_3",
+      "en": "Silent to the End"
+    },
+    {
+      "id": "heroSkillName_20008_3",
+      "en": "Ruthless Witch"
+    },
+    {
+      "id": "hero_Equip_comfirmDecomposition",
+      "en": "This material has a high level. Do you want to dismantle it?"
+    },
+    {
+      "id": "hero_instead_tips_1",
+      "en": "Hero {0} is already deployed in Squad {1}. Do you want to remove this Hero and deploy to this squad?"
+    },
+    {
+      "id": "hero_instead_tips_2",
+      "en": "Hero {0} is on an expedition and cannot be deployed."
+    },
+    {
+      "id": "hero_instead_tips_3",
+      "en": "Max deployment reached"
+    },
+    {
+      "id": "hero_skillType_2",
+      "en": "Battle Skills"
+    },
+    {
+      "id": "hero_skillEffectType_5",
+      "en": "Buff"
+    },
+    {
+      "id": "hero_skillUnlockEffectDesc",
+      "en": "Unlocks at {0}★ hero"
+    },
+    {
+      "id": "heroSkillName_Ace_1",
+      "en": "Survival Expert"
+    },
+    {
+      "id": "heroSkillDes_Ace_1",
+      "en": "Increases ATK, DEF, and HP by <color=#80af4c>{0}%</color>."
+    },
+    {
+      "id": "heroSkillName_Ace_2",
+      "en": "Wasteland Wanderer"
+    },
+    {
+      "id": "heroSkillName_Ace_3",
+      "en": "Doomsday Judgment"
+    },
+    {
+      "id": "heroSkillDes_Ace_3",
+      "en": "Increases ATK, DEF, and HP by <color=#80af4c>{0}%</color>.\nIncreases Skill Cooldown Speed by <color=#80af4c>{1}%</color>."
+    },
+    {
+      "id": "heroSkillDes_upgrade_moreDmg",
+      "en": "Deals {0}% more damage."
+    },
+    {
+      "id": "heroSkillDes_upgrade_moreDmgUpTo",
+      "en": "Bonus damage is increased to {0}%."
+    },
+    {
+      "id": "heroSkillDes_upgrade_moreDmgWithCounter",
+      "en": "Deals {0}% more Retaliation DMG."
+    },
+    {
+      "id": "heroSkillDes_upgrade_moreDmgAndRes",
+      "en": "Increases damage to monsters by {0}% and resource gain by {1}%."
+    },
+    {
+      "id": "heroSkillDes_upgrade_lessDmgFromAll",
+      "en": "Reduces damage taken by {0}%."
+    },
+    {
+      "id": "heroSkillDes_upgrade_moreDmgToMonster",
+      "en": "Deals {0}% more damage to monsters."
+    },
+    {
+      "id": "heroSkillDes_upgrade_lessDmgFromMonster",
+      "en": "Takes {0}% less damage from monsters."
+    },
+    {
+      "id": "heroSkillDes_upgrade_moreDmgWithPhysical",
+      "en": "Increases Physical DMG by {0}%."
+    },
+    {
+      "id": "heroSkillDes_upgrade_lessDmgFromPhysical",
+      "en": "Reduces Physical DMG taken by {0}%."
+    },
+    {
+      "id": "heroSkillDes_upgrade_moreDmgWithEnergy",
+      "en": "Increases Radiation DMG by {0}%"
+    },
+    {
+      "id": "heroSkillDes_upgrade_lessDmgWithEnergy",
+      "en": "Reduces Radiation DMG by {0}%"
+    },
+    {
+      "id": "heroSkillDes_upgrade_lessDmgFromEnergy",
+      "en": "Reduces incoming Radiation DMG by {0}%"
+    },
+    {
+      "id": "heroSkillDes_upgrade_lessDmgFromEnergyForP2",
+      "en": "Reduces Radiation DMG taken by {0}% for tactical allies"
+    },
+    {
+      "id": "heroSkillDes_upgrade_moreAtk",
+      "en": "Increases ATK by {0}%."
+    },
+    {
+      "id": "heroSkillDes_upgrade_moreAtkUpTo",
+      "en": "Increases ATK Boost to {0}%."
+    },
+    {
+      "id": "heroSkillDes_upgrade_moreAtkEachAction",
+      "en": "Increases ATK by {0}% (with no stack limit) until the battle ends."
+    },
+    {
+      "id": "heroSkillDes_upgrade_lessAtk",
+      "en": "Reduces ATK by {0}%."
+    },
+    {
+      "id": "heroSkillDes_upgrade_moreDef",
+      "en": "Increases DEF by {0}%."
+    },
+    {
+      "id": "heroSkillDes_upgrade_lessDefForSec",
+      "en": "Reduces target's DEF by {0}% for {1}s."
+    },
+    {
+      "id": "heroSkillDes_upgrade_moreCR",
+      "en": "Increases Crit Rate by {0}%."
+    },
+    {
+      "id": "heroSkillDes_upgrade_lessCDAndDmgFromAll",
+      "en": "Increases Skill Cooldown by {0}% and reduces incoming damage by {1}%."
+    },
+    {
+      "id": "heroSkillDes_upgrade_effectUpTo",
+      "en": "Increases bonus effect to {0}%."
+    },
+    {
+      "id": "heroSkillDes_upgrade_2effectsUpTo",
+      "en": "Increases bonus effect to {0}% and {1}%."
+    },
+    {
+      "id": "heroSkillDes_upgrade_moreDurationUpTo",
+      "en": "Increases duration to {0} second(s)."
+    },
+    {
+      "id": "heroSkillDes_upgrade_AttackTimesUpTo",
+      "en": "Increases the number of attacks to {0}."
+    },
+    {
+      "id": "heroSkillDes_upgrade_TauntNumbUpTo",
+      "en": "Increases the number of taunt targets to {0}."
+    },
+    {
+      "id": "heroSkillDes_upgrade_moreTarget",
+      "en": "Attacks {0} more target(s)."
+    },
+    {
+      "id": "heroSkillDes_upgrade_TargetUpTo",
+      "en": "Increases the number of attack targets to {0}."
+    },
+    {
+      "id": "heroSkillDes_upgrade_moreTargetAndLessDmg",
+      "en": "Attacks {0} more target(s), but reduces damage."
+    },
+    {
+      "id": "heroSkillDes_upgrade_chanceToStun",
+      "en": "Has a {0}% chance to stun the target for {1}s."
+    },
+    {
+      "id": "heroSkillDes_upgrade_stunChanceUpTo",
+      "en": "Increases Stun Chance to {0}%."
+    },
+    {
+      "id": "heroSkillDes_upgrade_FrontLine",
+      "en": "Affects front-row allies."
+    },
+    {
+      "id": "heroSkillDes_upgrade_fullTeam",
+      "en": "Affects all allies."
+    },
+    {
+      "id": "heroSkillName_40002_1",
+      "en": "Custom Spray Gun"
+    },
+    {
+      "id": "heroSkillDes_40002_1",
+      "en": "Spews fire at enemies, dealing damage equal to {0} ATK."
+    },
+    {
+      "id": "heroSkillName_40002_2",
+      "en": "High Pressure Gas Tank"
+    },
+    {
+      "id": "heroSkillDes_40002_2",
+      "en": "Spews scorching flames at the front 2 enemies, dealing damage equal to {0} ATK."
+    },
+    {
+      "id": "heroSkillName_40001_1",
+      "en": "Nail Gun"
+    },
+    {
+      "id": "heroSkillDes_40001_1",
+      "en": "Shoots steel spikes at enemies, dealing damage equal to {0} ATK."
+    },
+    {
+      "id": "heroSkillName_40001_2",
+      "en": "Quick Repair"
+    },
+    {
+      "id": "heroSkillDes_40001_2",
+      "en": "Fires a barrage of spikes at the front 2 enemies with dual pistols, dealing damage equal to {0} ATK."
+    },
+    {
+      "id": "heroSkillName_30011_1",
+      "en": "Charge Detonator"
+    },
+    {
+      "id": "heroSkillDes_30011_1",
+      "en": "Hurls a detonator at enemies, dealing damage equal to {0} ATK."
+    },
+    {
+      "id": "heroSkillName_30012_2",
+      "en": "Blast Maniac"
+    },
+    {
+      "id": "heroSkillDes_30011_2",
+      "en": "Bombards the front 2 enemies with explosives, dealing damage equal to {0} ATK."
+    },
+    {
+      "id": "heroSkillName_30001_1",
+      "en": "Liquid Injector"
+    },
+    {
+      "id": "heroSkillDes_30001_1",
+      "en": "Sprays corrosive liquid at enemies, dealing damage equal to {0} ATK."
+    },
+    {
+      "id": "heroSkillName_30001_2",
+      "en": "Venom Burst"
+    },
+    {
+      "id": "heroSkillDes_30001_2",
+      "en": "Fires a venom shot, prioritizing 2 front-row enemies, dealing {0} of ATK as DMG, and reducing their ATK by 6% for 4s."
+    },
+    {
+      "id": "heroSkillName_30001_3",
+      "en": "Nimble Steps"
+    },
+    {
+      "id": "heroSkillDes_30001_3",
+      "en": "In combat, reduces damage from monsters by {0}."
+    },
+    {
+      "id": "heroSkillName_10008_1",
+      "en": "Flamethrower"
+    },
+    {
+      "id": "heroSkillDes_10008_1",
+      "en": "Spews fire at enemies, dealing damage equal to {0} ATK."
+    },
+    {
+      "id": "heroSkillName_10008_2",
+      "en": "Roar"
+    },
+    {
+      "id": "heroSkillDes_10008_2",
+      "en": "Invigorates the spirit with a primal shout, reducing damage from monsters by {0} for 7s."
+    },
+    {
+      "id": "heroSkillName_10008_3",
+      "en": "Robust Physique"
+    },
+    {
+      "id": "heroSkillDes_10008_3",
+      "en": "In combat, increases DEF by {0}."
+    },
+    {
+      "id": "heroSkillName_10006_1",
+      "en": "Militia Rocket Launcher"
+    },
+    {
+      "id": "heroSkillDes_10006_1",
+      "en": "Launches rockets at 2 random enemies, dealing damage equal to {0} ATK."
+    },
+    {
+      "id": "heroSkillName_10006_2",
+      "en": "Scavenger"
+    },
+    {
+      "id": "heroSkillDes_10006_2",
+      "en": "Launches serum rockets at enemies, dealing damage equal to {0} ATK and increasing damage from monsters by 9% for 7s."
+    },
+    {
+      "id": "heroSkillName_10006_3",
+      "en": "Treasure Hunter"
+    },
+    {
+      "id": "heroSkillDes_10006_3",
+      "en": "In combat, deals {0} more damage to monsters. After your squad defeats Metal Zombies, Food Zombies, Oil Zombies, and Zombie Elite Hordes, the resource acquisition of Oil, Food, and Iron Mine increases by {1}."
+    },
+    {
+      "id": "heroSkillName_30003_1",
+      "en": "Automatic Rifle"
+    },
+    {
+      "id": "heroSkillDes_30003_1",
+      "en": "Fires pulse bullets at enemies, dealing damage equal to {0} ATK."
+    },
+    {
+      "id": "heroSkillName_30003_2",
+      "en": "Unload Magazine"
+    },
+    {
+      "id": "heroSkillDes_30003_2",
+      "en": "Unleashes rapid fire at enemies, dealing damage equal to {0} ATK."
+    },
+    {
+      "id": "heroSkillName_30003_3",
+      "en": "Zombie Hunter"
+    },
+    {
+      "id": "heroSkillDes_30003_3",
+      "en": "In combat, back-row Warrior allies deal {0} more damage to monsters."
+    },
+    {
+      "id": "heroSkillName_30003_1_UR",
+      "en": "Enhanced Pulse"
+    },
+    {
+      "id": "heroSkillName_30003_2_UR",
+      "en": "Barrage Storm"
+    },
+    {
+      "id": "heroSkillName_30003_3_UR",
+      "en": "Zombie Terminator"
+    },
+    {
+      "id": "heroSkillName_10005_1",
+      "en": "Heavy Rifle"
+    },
+    {
+      "id": "heroSkillDes_10005_1",
+      "en": "Fires heavy ammunition to attack enemies, dealing damage equal to {0} ATK."
+    },
+    {
+      "id": "heroSkillName_10005_2",
+      "en": "Grenadier"
+    },
+    {
+      "id": "heroSkillDes_10005_2",
+      "en": "Throws grenades consecutively to attack random enemies 4 times, dealing damage equal to {0} ATK."
+    },
+    {
+      "id": "heroSkillName_10005_3",
+      "en": "Caliber Modification"
+    },
+    {
+      "id": "heroSkillDes_10005_3",
+      "en": "In combat, increases ATK by {0}."
+    },
+    {
+      "id": "heroSkillName_20009_1",
+      "en": "Pneumatic Launcher"
+    },
+    {
+      "id": "heroSkillDes_20009_1",
+      "en": "Throws a Molotov cocktail at enemies, dealing damage equal to {0} ATK."
+    },
+    {
+      "id": "heroSkillName_20009_2",
+      "en": "Multiple Loading"
+    },
+    {
+      "id": "heroSkillDes_20009_2",
+      "en": "Continuously launches multiple high-explosive Molotov cocktails, randomly attacking 2 enemies, dealing damage equal to {0} ATK."
+    },
+    {
+      "id": "heroSkillName_20009_3",
+      "en": "High Pressure Air Pump"
+    },
+    {
+      "id": "heroSkillDes_20009_3",
+      "en": "In combat, increases ATK by {0}."
+    },
+    {
+      "id": "heroSkillName_20005_1",
+      "en": "Recurve Bow"
+    },
+    {
+      "id": "heroSkillDes_20005_1",
+      "en": "Shoots arrows at enemies, dealing damage equal to {0} ATK."
+    },
+    {
+      "id": "heroSkillName_20005_2",
+      "en": "Cheer Captain"
+    },
+    {
+      "id": "heroSkillDes_20005_2",
+      "en": "Boosts Morale with graceful dancing, increasing back-row allies' damage to monsters by {0} for 5s."
+    },
+    {
+      "id": "heroSkillName_20005_3",
+      "en": "Agile Stance"
+    },
+    {
+      "id": "heroSkillDes_20005_3",
+      "en": "In combat, reduces damage from monsters by {0}."
+    },
+    {
+      "id": "heroSkillName_20006_1",
+      "en": "Spear Launcher"
+    },
+    {
+      "id": "heroSkillDes_20006_1",
+      "en": "Hurls a spear at the enemy, dealing damage equal to {0} ATK."
+    },
+    {
+      "id": "heroSkillName_20006_2",
+      "en": "Battle Anthem"
+    },
+    {
+      "id": "heroSkillDes_20006_2",
+      "en": "Chant a battle hymn to boost Morale, increasing front-row allies' DEF by {0} for 6s."
+    },
+    {
+      "id": "heroSkillName_20006_3",
+      "en": "Athlete"
+    },
+    {
+      "id": "heroSkillDes_20006_3",
+      "en": "In combat, reduces damage from monsters by {0}."
+    },
+    {
+      "id": "heroSkillName_40010_1",
+      "en": "Composite Bow"
+    },
+    {
+      "id": "heroSkillDes_40010_1",
+      "en": "Shoots arrows at enemies, dealing damage equal to {0} ATK."
+    },
+    {
+      "id": "heroSkillName_40010_2",
+      "en": "Heavy Arrow"
+    },
+    {
+      "id": "heroSkillDes_40010_2",
+      "en": "Shoots a heavy arrow at the front enemies, dealing damage equal to {0} ATK."
+    },
+    {
+      "id": "heroSkillName_40010_3",
+      "en": "Professional Hunter"
+    },
+    {
+      "id": "heroSkillDes_40010_3",
+      "en": "In combat, deal {0} more damage to monsters."
+    },
+    {
+      "id": "heroSkillName_30007_1",
+      "en": "Tactical Grenade"
+    },
+    {
+      "id": "heroSkillDes_30007_1",
+      "en": "Throws a grenade at enemies, dealing damage equal to {0} ATK and reducing their movement speed."
+    },
+    {
+      "id": "heroSkillName_30007_2",
+      "en": "Pincer Tactic"
+    },
+    {
+      "id": "heroSkillDes_30007_2",
+      "en": "Employs the Pincer Tactic, reducing front-row allies' damage from monsters by {0} for 6s."
+    },
+    {
+      "id": "heroSkillName_30007_3",
+      "en": "Zombie Nemesis"
+    },
+    {
+      "id": "heroSkillDes_30007_3",
+      "en": "In combat, reduces damage from monsters by {0}."
+    },
+    {
+      "id": "heroSkillName_30005_1",
+      "en": "Dual Pistols"
+    },
+    {
+      "id": "heroSkillDes_30005_1",
+      "en": "Attacks enemies with Dual Pistols, dealing damage equal to {0} ATK."
+    },
+    {
+      "id": "heroSkillName_30005_2",
+      "en": "Frag Grenade"
+    },
+    {
+      "id": "heroSkillDes_30005_2",
+      "en": "Hurls multiple grenades at random enemies 5 times, dealing damage equal to {0} ATK."
+    },
+    {
+      "id": "heroSkillName_30005_3",
+      "en": "Martial Arts Family"
+    },
+    {
+      "id": "heroSkillDes_30005_3",
+      "en": "In combat, deal {0} more damage to monsters."
+    },
+    {
+      "id": "heroSkillName_30004_1",
+      "en": "Rocket Launcher"
+    },
+    {
+      "id": "heroSkillDes_30004_1",
+      "en": "Fires rockets at enemies, dealing damage equal to {0} ATK."
+    },
+    {
+      "id": "heroSkillName_30004_2",
+      "en": "White Phosphorus Munition"
+    },
+    {
+      "id": "heroSkillDes_30004_2",
+      "en": "Shoots white phosphorus rounds at the 2 front enemies, dealing damage equal to {0} ATK."
+    },
+    {
+      "id": "heroSkillName_30004_3",
+      "en": "Disciple"
+    },
+    {
+      "id": "heroSkillDes_30004_3",
+      "en": "In combat, increases ATK by {0}."
+    },
+    {
+      "id": "heroSkillName_10007_1",
+      "en": "Tactical Shotgun"
+    },
+    {
+      "id": "heroSkillDes_10007_1",
+      "en": "Attacks enemies with a shotgun, dealing damage equal to {0} ATK."
+    },
+    {
+      "id": "heroSkillName_10007_2",
+      "en": "Field Support"
+    },
+    {
+      "id": "heroSkillDes_10007_2",
+      "en": "Provides cover with a shield, reducing front-row allies' incoming Physical DMG by {0} for {2}s."
+    },
+    {
+      "id": "heroSkillName_10007_3",
+      "en": "Tactical Shield"
+    },
+    {
+      "id": "heroSkillDes_10007_3",
+      "en": "In combat, reduces front-row allies' incoming damage by {0}."
+    },
+    {
+      "id": "heroSkillName_50001_1",
+      "en": "Modified Grenade"
+    },
+    {
+      "id": "heroSkillDes_50001_1",
+      "en": "Fires a shock grenade at enemies, dealing damage equal to {0} ATK."
+    },
+    {
+      "id": "heroSkillName_50001_2",
+      "en": "Iron Will"
+    },
+    {
+      "id": "heroSkillDes_50001_2",
+      "en": "Lets out a motivating shout, increasing front-row allies' DEF by {0} for {2}s."
+    },
+    {
+      "id": "heroSkillName_50001_3",
+      "en": "Heavy Armor"
+    },
+    {
+      "id": "heroSkillDes_50001_3",
+      "en": "In combat, reduces incoming damage by {0}."
+    },
+    {
+      "id": "heroSkillName_30006_1",
+      "en": "Tactical Sniper Rifle"
+    },
+    {
+      "id": "heroSkillDes_30006_1",
+      "en": "Attacks enemies with a sniper rifle, dealing damage equal to {0} ATK."
+    },
+    {
+      "id": "heroSkillName_30006_2",
+      "en": "Strong Reinforcement"
+    },
+    {
+      "id": "heroSkillDes_30006_2",
+      "en": "Calls in a tank to launch rockets at random enemies {2} times, dealing damage equal to {0} ATK."
+    },
+    {
+      "id": "heroSkillName_30006_3",
+      "en": "Scout"
+    },
+    {
+      "id": "heroSkillDes_30006_3",
+      "en": "In combat, increases Radiation DMG by {0}."
+    },
+    {
+      "id": "heroSkillDes_30006_1_pro",
+      "en": "Attack enemies with a sniper rifle, dealing {0} damage; on Crit, gain 1 stack of <color=#E3812F><link=exclusiveSkillDes_30006_link01><u>[Barrage Amplification]</u></link></color>, stacking up to the number of Warrior Heroes in your team."
+    },
+    {
+      "id": "heroSkillDes_30006_2_pro",
+      "en": "Call in a tank to launch rockets at random enemies {2}x, dealing {0} damage; for each stack of <color=#E3812F><link=exclusiveSkillDes_30006_link01><u>[Barrage Amplification]</u></link></color>, fire an additional <color=#80af4c>1</color> rocket"
+    },
+    {
+      "id": "exclusiveSkillName_30006_1",
+      "en": "Tactical Sniper Rifle II"
+    },
+    {
+      "id": "exclusiveSkillDes_30006_1",
+      "en": "Monroe gains 1 stack of <color=#E3812F><link=exclusiveSkillDes_30006_link01><u>[Barrage Amplification]</u></link></color> whenever her auto attack crits, stacking up to the number of Warrior Heroes in your team."
+    },
+    {
+      "id": "exclusiveSkillName_30006_2",
+      "en": "Strong Reinforcement II"
+    },
+    {
+      "id": "exclusiveSkillDes_30006_2",
+      "en": "For every stack of <color=#E3812F><link=exclusiveSkillDes_30006_link01><u>[Barrage Amplification]</u></link></color>, Monroe fires an additional <color=#80af4c>1</color> rocket at random enemies"
+    },
+    {
+      "id": "exclusiveSkillName_30006_4",
+      "en": "<color=#E3812F>[Battle Skill Enhancement]</color> Annihilation Barrage"
+    },
+    {
+      "id": "exclusiveSkillDes_30006_4",
+      "en": "When Monroe has 4 stacks of <color=#E3812F><link=exclusiveSkillDes_30006_link01><u>[Barrage Amplification]</u></link></color>, she launches a Devastating Rocket that deals additional <color=#80af4c>5%</color> Radiation damage to 3 enemies around the impact point"
+    },
+    {
+      "id": "exclusiveSkillDes_30006_link01",
+      "en": "<color=#E3812F>[Barrage Amplification]</color>: Radiation damage increased by <color=#80af4c>3%</color>. Stacks up to <color=#80af4c>15%</color>"
+    },
+    {
+      "id": "heroSkillDes_50006_1_pro",
+      "en": "Attack enemy with a sniper rifle, dealing {0} Attack damage; at battle start, for each Tactical Hero on your team, Leah gains 2 stacks of <color=#E3812F><link=exclusiveSkillDes_50006_link01><u>[Radiation Charge]</u></link></color>, max 10 stacks."
+    },
+    {
+      "id": "heroSkillDes_50006_2_pro",
+      "en": "Call an attack helicopter to attack all enemies, dealing {0} Attack damage; on hit, for each Tactical Hero on your team, gain 1 stack of <color=#E3812F><link=exclusiveSkillDes_50006_link02><u>[Tactical Surge]</u></link></color>, max 5 stacks."
+    },
+    {
+      "id": "exclusiveSkillName_50006_1",
+      "en": "Rapid-Fire Sniper Rifle II"
+    },
+    {
+      "id": "exclusiveSkillDes_50006_1",
+      "en": "At battle start, Leah gains 2 stacks of <color=#E3812F><link=exclusiveSkillDes_50006_link01><u>[Radiation Charge]</u></link></color> for each Tactical Hero on your team, up to 10 stacks."
+    },
+    {
+      "id": "exclusiveSkillName_50006_2",
+      "en": "Black Hawk Call II"
+    },
+    {
+      "id": "exclusiveSkillDes_50006_2",
+      "en": "After hitting an enemy, gain 1 stack of <color=#E3812F><link=exclusiveSkillDes_50006_link02><u>[Tactical Surge]</u></link></color> for each Tactical Hero on your team, stacking up to 5 times."
+    },
+    {
+      "id": "exclusiveSkillName_50006_4",
+      "en": "<color=#E3812F>[Battle Skill Enhancement]</color> Explosive Start"
+    },
+    {
+      "id": "exclusiveSkillDes_50006_4",
+      "en": "At the start of battle, Leah immediately unleashes her battle skill on 2 front-row enemies, dealing <color=#80af4c>{0}%</color> Attack Radiation damage. for each Tactical Hero on your team, Leah gains 1 stack of <color=#E3812F><link=exclusiveSkillDes_50006_link02><u>[Tactical Surge]</u></link></color>"
+    },
+    {
+      "id": "exclusiveSkillDes_50006_link01",
+      "en": "<color=#E3812F>[Radiation Charge]</color>: Radiation damage increased by <color=#80af4c>3%</color>, reduced by 1 stack with each basic attack"
+    },
+    {
+      "id": "exclusiveSkillDes_50006_link02",
+      "en": "<color=#E3812F>[Tactical Surge]</color>: Leah's Attack Speed increased by <color=#80af4c>20%</color>, up to <color=#80af4c>100%</color>, lasts 4s"
+    },
+    {
+      "id": "heroSkillDes_50011_1_pro",
+      "en": "Fire voltage bullets dealing {0} damage; apply 1 stack of <color=#E3812F><link=exclusiveSkillDes_50011_link01><u>[Overload Charge]</u></link></color> to targets, max stacks equal to your team's Assault Hero count*3"
+    },
+    {
+      "id": "heroSkillDes_50011_2_pro",
+      "en": "Rapidly fire a massive ball lightning, prioritizing 3 back-row enemies for {0} damage, apply 2 stacks of <color=#E3812F><link=exclusiveSkillDes_50011_link01><u>[Overload Charge]</u></link></color> to targets, max stacks equal to your team's Assault Hero count*3"
+    },
+    {
+      "id": "exclusiveSkillName_50011_1",
+      "en": "Electromagnetic Gun II"
+    },
+    {
+      "id": "exclusiveSkillDes_50011_1",
+      "en": "Auto Attack applies 1 stack of <color=#E3812F><link=exclusiveSkillDes_50011_link01><u>[Overload Charge]</u></link></color> to the target, max stacks equal to Assault Heroes in your team*3."
+    },
+    {
+      "id": "exclusiveSkillName_50011_2",
+      "en": "Condensed Plasma II"
+    },
+    {
+      "id": "exclusiveSkillDes_50011_2",
+      "en": "Yana's skill applies <color=#80af4c>2</color> stacks of <color=#E3812F><link=exclusiveSkillDes_50011_link01><u>[Overload Charge]</u></link></color> to the target, max stacks equal to Assault Heroes in your team*3"
+    },
+    {
+      "id": "exclusiveSkillName_50011_4",
+      "en": "<color=#E3812F>[Skill Enhancement]</color> Electromagnetic Judgment"
+    },
+    {
+      "id": "exclusiveSkillDes_50011_4",
+      "en": "Yana's auto attack applies 1 stack of <color=#E3812F><link=exclusiveSkillDes_50011_link01><u>[Overload Charge]</u></link></color> to a random enemy in the back row, and Yana's skill deals an additional <color=#E3812F>1%<link=exclusiveSkillDes_50011_link01> damage per stack against enemies with <u></u></link>[Overload Charge]</color><color=#80af4c></color>, up to <color=#80af4c>15%</color>"
+    },
+    {
+      "id": "exclusiveSkillDes_50011_link01",
+      "en": "<color=#E3812F>[Overload Charge]</color>: Deals radiation damage equal to <color=#80af4c>3%</color> of Yana's Attack per second, lasting 30s. Stacks up to 15 times"
+    },
+    {
+      "id": "exclusiveSkillName_Talent_1",
+      "en": "<color=#E3812F>[Faction Boost]</color> Warrior Vanguard"
+    },
+    {
+      "id": "exclusiveSkillDes_Talent_1",
+      "en": "In battle, increases Life, Attack, and Defense of all allied Warrior Heroes by <color=#80af4c>{0}%</color>"
+    },
+    {
+      "id": "exclusiveSkillName_Talent_2",
+      "en": "<color=#E3812F>[Faction Boost]</color> Tactical Mastery"
+    },
+    {
+      "id": "exclusiveSkillDes_Talent_2",
+      "en": "In battle, increases Life, Attack, and Defense of all allied Tactical Heroes by <color=#80af4c>{0}%</color>"
+    },
+    {
+      "id": "exclusiveSkillName_Talent_3",
+      "en": "<color=#E3812F>[Faction Boost]</color> Assault Vanguard"
+    },
+    {
+      "id": "exclusiveSkillDes_Talent_3",
+      "en": "In battle, increase all Assault Heroes' HP, Attack, and Defense by <color=#80af4c>{0}%</color>"
+    },
+    {
+      "id": "heroSkillName_50002_1",
+      "en": "Heavy Revolver"
+    },
+    {
+      "id": "heroSkillDes_50002_1",
+      "en": "Attacks enemies with a revolver, dealing damage equal to {0} ATK."
+    },
+    {
+      "id": "heroSkillName_50002_2",
+      "en": "Hawkeye"
+    },
+    {
+      "id": "heroSkillDes_50002_2",
+      "en": "Sends a falcon to scout the battlefield, increasing all allies' ATK by {0} for {2}s."
+    },
+    {
+      "id": "heroSkillName_50002_3",
+      "en": "Sheriff"
+    },
+    {
+      "id": "heroSkillDes_50002_3",
+      "en": "In combat, increases Skill Cooldown Speed by {0} and reduces damage taken by the ally with the highest ATK by {1}."
+    },
+    {
+      "id": "heroSkillName_50003_1",
+      "en": "Stun Gun"
+    },
+    {
+      "id": "heroSkillDes_50003_1",
+      "en": "Unleashes high-voltage arcs at enemies, dealing damage equal to {0} ATK."
+    },
+    {
+      "id": "heroSkillName_50003_2",
+      "en": "Tesla Coil"
+    },
+    {
+      "id": "heroSkillDes_50003_2",
+      "en": "Unleashes high-voltage arcs at random enemies {2} times, dealing damage equal to {0} ATK."
+    },
+    {
+      "id": "heroSkillName_50003_3",
+      "en": "Frankenstein"
+    },
+    {
+      "id": "heroSkillDes_50003_3",
+      "en": "In combat, increases Crit Rate by {0}."
+    },
+    {
+      "id": "heroSkillName_50004_1",
+      "en": "Tactical Submachine Gun"
+    },
+    {
+      "id": "heroSkillDes_50004_1",
+      "en": "Attacks enemies with a submachine gun, dealing damage equal to {0} ATK."
+    },
+    {
+      "id": "heroSkillName_50004_2",
+      "en": "Sonic Boom"
+    },
+    {
+      "id": "heroSkillDes_50004_2",
+      "en": "Throws sonic grenades at all enemies, dealingPhysical DMGequal to {0} ATK and reducing their Radiation DMG by {2} for 5s."
+    },
+    {
+      "id": "heroSkillName_50004_3",
+      "en": "Ion Shield"
+    },
+    {
+      "id": "heroSkillDes_50004_3",
+      "en": "In combat, reduces Radiation DMG taken by {0}."
+    },
+    {
+      "id": "heroSkillName_50005_1",
+      "en": "Light Submachine Gun"
+    },
+    {
+      "id": "heroSkillDes_50005_1",
+      "en": "ttacks 1 random front enemy with a submachine gun, dealing damage equal to {0} ATK."
+    },
+    {
+      "id": "heroSkillName_50005_2",
+      "en": "Magnetic Coil"
+    },
+    {
+      "id": "heroSkillDes_50005_2",
+      "en": "Releases an EM pulse, reducing Radiation DMG taken by all allies by {0} for {2}s."
+    },
+    {
+      "id": "heroSkillName_50005_3",
+      "en": "Magnetic Armor"
+    },
+    {
+      "id": "heroSkillDes_50005_3",
+      "en": "In combat, front-row allies take {0} less damage and {1} less Radiation DMG."
+    },
+    {
+      "id": "heroSkillName_50006_1",
+      "en": "Rapid-Fire Sniper Rifle"
+    },
+    {
+      "id": "heroSkillDes_50006_1",
+      "en": "Attacks enemies with a sniper rifle, dealing damage equal to {0} ATK."
+    },
+    {
+      "id": "heroSkillName_50006_2",
+      "en": "Black Hawk Call"
+    },
+    {
+      "id": "heroSkillDes_50006_2",
+      "en": "Calls an armed helicopter to attack all enemies, dealing damage equal to {0} ATK."
+    },
+    {
+      "id": "heroSkillName_50006_3",
+      "en": "Box Breathing"
+    },
+    {
+      "id": "heroSkillDes_50006_3",
+      "en": "In combat, increases Crit Rate by {0}."
+    },
+    {
+      "id": "heroSkillName_50007_1",
+      "en": "Powered Submachine Gun"
+    },
+    {
+      "id": "heroSkillDes_50007_1",
+      "en": "Attacks enemies with a submachine gun, dealing damage equal to {0} ATK."
+    },
+    {
+      "id": "heroSkillName_50007_2",
+      "en": "Suicide Robot"
+    },
+    {
+      "id": "heroSkillDes_50007_2",
+      "en": "Controls a self-destruct spider robot that attacks {2} back-row enemy, dealing damage equal to {0} ATK, with a 20% chance to inflict <color=#E3812F><link=heroSkillDes_50007_2_link><u>[Stun]</u></link></color> on the target for 2s."
+    },
+    {
+      "id": "heroSkillDes_50007_2_link",
+      "en": "<color=#E3812F>[Stun]</color>: While stunned, skills will fail to activate and immediately enter cooldown."
+    },
+    {
+      "id": "heroSkillName_50007_3",
+      "en": "Overload"
+    },
+    {
+      "id": "heroSkillDes_50007_3",
+      "en": "In combat, increases ATK by {0}."
+    },
+    {
+      "id": "heroSkillName_50008_1",
+      "en": "Gatling Gun"
+    },
+    {
+      "id": "heroSkillDes_50008_1",
+      "en": "Attack enemies with a machine gun, dealing damage equal to {0} ATK."
+    },
+    {
+      "id": "heroSkillName_50008_2",
+      "en": "Viper"
+    },
+    {
+      "id": "heroSkillDes_50008_2",
+      "en": "Fires neurotoxin rounds at random enemies {2} times, dealing damage equal to {0} ATK and reducing their DEF by 5% (up to 25%) per hit for 9s."
+    },
+    {
+      "id": "heroSkillName_50008_3",
+      "en": "War Machine"
+    },
+    {
+      "id": "heroSkillDes_50008_3",
+      "en": "In combat, increases Physical DMG by {0}."
+    },
+    {
+      "id": "heroSkillName_10011_1",
+      "en": "Tactical Crossbow"
+    },
+    {
+      "id": "heroSkillDes_10011_1",
+      "en": "Attacks 2 random units, dealing damage equal to {0} ATK. (CD: {1}s)"
+    },
+    {
+      "id": "heroSkillName_10011_2",
+      "en": "Max and Friends"
+    },
+    {
+      "id": "heroSkillDes_10011_2",
+      "en": "Summons Max to attack a random enemy, dealing {0} ATK damage. (CD: {1}s)"
+    },
+    {
+      "id": "heroSkillName_10011_3",
+      "en": "Composure"
+    },
+    {
+      "id": "heroSkillDes_10011_3",
+      "en": "In combat, increases Crit Rate by {0}."
+    },
+    {
+      "id": "heroSkillName_50010_1",
+      "en": "Heavy Machine Gun"
+    },
+    {
+      "id": "heroSkillDes_50010_1",
+      "en": "Attack enemies with a machine gun, dealing damage equal to {0} ATK."
+    },
+    {
+      "id": "heroSkillName_50010_2",
+      "en": "Glaring Taunt"
+    },
+    {
+      "id": "heroSkillDes_50010_2",
+      "en": "Flashes a blinding light, drawing aggro from the {2} front-row enemies and reducing their ATK by {0} for 8s."
+    },
+    {
+      "id": "heroSkillName_50010_3",
+      "en": "Mountain Ranger"
+    },
+    {
+      "id": "heroSkillDes_50010_3",
+      "en": "In combat, reduces incoming damage by {0}."
+    },
+    {
+      "id": "heroSkillName_50009_1",
+      "en": "Pulse Gun"
+    },
+    {
+      "id": "heroSkillDes_50009_1",
+      "en": "Attacks 1 random enemy with dual pistols, dealing damage equal to {0} ATK."
+    },
+    {
+      "id": "heroSkillName_50009_2",
+      "en": "Portable Sentry"
+    },
+    {
+      "id": "heroSkillDes_50009_2",
+      "en": "Activates the Portable Sentry: enter <color=#E3812F><link=heroSkillDes_50009_2_link><u>[Guard]</u></link></color> state for {0}s. Automatically counterattacks when hit, with a minimum interval of 1s."
+    },
+    {
+      "id": "heroSkillDes_50009_2_link",
+      "en": "<color=#E3812F>[Guard]</color>: Counterattacks the attacker with an auto attack each time you are hit, up to once per second."
+    },
+    {
+      "id": "heroSkillName_50009_3",
+      "en": "Sentinel"
+    },
+    {
+      "id": "heroSkillDes_50009_3",
+      "en": "In combat, reduces front-row allies' incoming damage by {0}. While in <color=#E3812F><link=heroSkillDes_50009_2_link><u>[Guard]</u></link></color> state, Assault Heroes gain double the effect."
+    },
+    {
+      "id": "heroSkillName_50011_1",
+      "en": "Electromagnetic Gun"
+    },
+    {
+      "id": "heroSkillDes_50011_1",
+      "en": "Fires electric bullets, dealing damage equal to {0} ATK."
+    },
+    {
+      "id": "heroSkillName_50011_2",
+      "en": "Condensed Plasma"
+    },
+    {
+      "id": "heroSkillDes_50011_2",
+      "en": "Fires large spherical lightning continuously at the 3 back enemies, dealing damage equal to {0} ATK."
+    },
+    {
+      "id": "heroSkillName_50011_3",
+      "en": "Torture Specialist"
+    },
+    {
+      "id": "heroSkillDes_50011_3",
+      "en": "In combat, increases Radiation DMG by {0}."
+    },
+    {
+      "id": "heroSkillName_50012_1",
+      "en": "Cartridge Submachine Gun"
+    },
+    {
+      "id": "heroSkillDes_50012_1",
+      "en": "Attacks the enemy with the lowest HP percentage with an SMG, dealing damage equal to {0} ATK."
+    },
+    {
+      "id": "heroSkillName_50012_2",
+      "en": "Clockwork Blade"
+    },
+    {
+      "id": "heroSkillDes_50012_2",
+      "en": "Tosses blades at random enemies 3 times, dealing damage equal to {0} ATK."
+    },
+    {
+      "id": "heroSkillName_50012_3",
+      "en": "Mechanic"
+    },
+    {
+      "id": "heroSkillDes_50012_3",
+      "en": "In combat, increases Crit Rate by {0}."
+    },
+    {
+      "id": "heroSkillName_50013_1",
+      "en": "Heavy Pulse Grenade Launcher"
+    },
+    {
+      "id": "heroSkillDes_50013_1",
+      "en": "Fires grenades at enemies, dealing damage equal to {0} ATK."
+    },
+    {
+      "id": "heroSkillName_50013_2",
+      "en": "Fine Firepower Net"
+    },
+    {
+      "id": "heroSkillDes_50013_2",
+      "en": "Fires multiple grenades at all enemies, dealing damage equal to {0} ATK."
+    },
+    {
+      "id": "heroSkillName_50013_3",
+      "en": "Actuary"
+    },
+    {
+      "id": "heroSkillDes_50013_3",
+      "en": "During battle, own Physical DMG increases by {0}."
+    },
+    {
+      "id": "hero_skillType_1",
+      "en": "Auto Attack"
+    },
+    {
+      "id": "hero_skillType_3",
+      "en": "Passive"
+    },
+    {
+      "id": "hero_skillType_4",
+      "en": "Specialty"
+    },
+    {
+      "id": "hero_skillEffectType_1",
+      "en": "Physical DMG"
+    },
+    {
+      "id": "hero_skillEffectType_2",
+      "en": "Physical DEF"
+    },
+    {
+      "id": "hero_skillEffectType_3",
+      "en": "Radiation DMG"
+    },
+    {
+      "id": "hero_skillEffectType_4",
+      "en": "Energy DEF"
+    },
+    {
+      "id": "hero_skillEffectType_6",
+      "en": "Debuff"
+    },
+    {
+      "id": "hero_TYPE_02_Des",
+      "en": "Excels at absorbing enemy damage in the frontline, boasting formidable defense with significant HP and shield growth."
+    },
+    {
+      "id": "hero_TYPE_03_Des",
+      "en": "A well-rounded hero that excels at elevating team performance."
+    },
+    {
+      "id": "hero_TYPE_04_Des",
+      "en": "Excels at dealing damage from the backline, possessing powerful attack capabilities and skills."
+    },
+    {
+      "id": "hero_Attr_Power_Des",
+      "en": "This power is the total value displayed on the current hero panel."
+    },
+    {
+      "id": "hero_Attr_Atk_Des",
+      "en": "Base damage value when the hero uses their skill."
+    },
+    {
+      "id": "hero_Attr_Def_Des",
+      "en": "The hero's shield value can absorb most enemy damage; once broken, it becomes ineffective."
+    },
+    {
+      "id": "hero_Attr_Hp_Des",
+      "en": "The hero's base HP value; when it reaches zero, the hero will leave the battle."
+    },
+    {
+      "id": "hero_Attr_Troops_Des",
+      "en": "Number of soldiers the hero can lead, providing additional attack, HP, and shield stats to the hero."
+    },
+    {
+      "id": "hero_skillEffectType_Des_1",
+      "en": "Deals physical damage."
+    },
+    {
+      "id": "hero_skillEffectType_Des_2",
+      "en": "Grants physical defense that reduces incoming physical damage."
+    },
+    {
+      "id": "hero_skillEffectType_Des_3",
+      "en": "Deals Radiation damage."
+    },
+    {
+      "id": "hero_skillEffectType_Des_4",
+      "en": "Grants energy defense that reduces incoming Radiation damage."
+    },
+    {
+      "id": "hero_skillEffectType_Des_5",
+      "en": "Applies a Buff to allies."
+    },
+    {
+      "id": "hero_skillEffectType_Des_6",
+      "en": "Applies a Debuff to enemies."
+    },
+    {
+      "id": "heroSkill_30003_1",
+      "en": "Deals additional {0}/{1}/{2}/{3}/{4} damage."
+    },
+    {
+      "id": "heroSkill_30003_2",
+      "en": "Deals additional {0}/{1}/{2}/{3}/{4} damage."
+    },
+    {
+      "id": "heroSkill_30003_3",
+      "en": "Increases damage to monsters by {0}/{1}/{2}/{3}/{4}."
+    },
+    {
+      "id": "heroSkill_20009_1",
+      "en": "Deals additional {0}/{1}/{2}/{3}/{4} damage."
+    },
+    {
+      "id": "heroSkill_20009_2",
+      "en": "Deals additional {0}/{1}/{2}/{3}/{4} damage."
+    },
+    {
+      "id": "heroSkill_20009_3",
+      "en": "Increases ATK by {0}/{1}/{2}/{3}/{4}."
+    },
+    {
+      "id": "heroSkill_40002_1",
+      "en": "Deals additional {0}/{1}/{2}/{3}/{4} damage."
+    },
+    {
+      "id": "heroSkill_40002_2_1",
+      "en": "Deals additional {0}/{1}/{2}/{3}/{4} damage."
+    },
+    {
+      "id": "heroSkill_40002_2_2",
+      "en": "Increases attack target by {0}/{1}/{2}/{3}/{4}."
+    },
+    {
+      "id": "heroSkill_40001_1",
+      "en": "Deals additional {0}/{1}/{2}/{3}/{4} damage."
+    },
+    {
+      "id": "heroSkill_40001_2_1",
+      "en": "Deals additional {0}/{1}/{2}/{3}/{4} damage."
+    },
+    {
+      "id": "heroSkill_40001_2_2",
+      "en": "Increases attack target by {0}/{1}/{2}/{3}/{4}."
+    },
+    {
+      "id": "heroSkill_50011_1",
+      "en": "Deals additional {0}/{1}/{2}/{3}/{4} damage."
+    },
+    {
+      "id": "heroSkill_50011_2",
+      "en": "Deals additional {0}/{1}/{2}/{3}/{4} damage."
+    },
+    {
+      "id": "heroSkill_50011_3",
+      "en": "Increases damage effect by {0}/{1}/{2}/{3}/{4}."
+    },
+    {
+      "id": "heroSkill_50012_1",
+      "en": "Deals additional {0}/{1}/{2}/{3}/{4} damage."
+    },
+    {
+      "id": "heroSkill_50012_2_1",
+      "en": "Deals additional {0}/{1}/{2}/{3}/{4} damage."
+    },
+    {
+      "id": "heroSkill_50012_2_2",
+      "en": "Each release increases ATK by an extra {0}/{1}/{2}/{3}/{4}."
+    },
+    {
+      "id": "heroSkill_50012_3",
+      "en": "Increases Crit Rate by {0}/{1}/{2}/{3}/{4}."
+    },
+    {
+      "id": "heroSkill_30007_1",
+      "en": "Deals additional {0}/{1}/{2}/{3}/{4} damage."
+    },
+    {
+      "id": "heroSkill_30007_2_1",
+      "en": "Increases duration to {0}/{1}/{2}/{3}/{4}s."
+    },
+    {
+      "id": "heroSkill_30007_2_2",
+      "en": "Reduces damage taken by an extra {0}/{1}/{2}/{3}/{4}."
+    },
+    {
+      "id": "heroSkill_30007_3",
+      "en": "Reduces damage taken by an extra {0}/{1}/{2}/{3}/{4}."
+    },
+    {
+      "id": "heroSkill_ex_01",
+      "en": "Extra DMG: {0}/{1}/{2}/{3}/{4}"
+    },
+    {
+      "id": "heroSkill_ex_02",
+      "en": "Extra DMG Effect: {0}/{1}/{2}/{3}/{4}"
+    },
+    {
+      "id": "heroSkill_ex_03",
+      "en": "Extra Resource Bonus: {0}/{1}/{2}/{3}/{4}"
+    },
+    {
+      "id": "heroSkill_ex_04",
+      "en": "Extra Radiation DMG Reduction: {0}/{1}/{2}/{3}/{4}"
+    },
+    {
+      "id": "heroSkill_ex_05",
+      "en": "Extra Reduction in All Incoming Damage: {0}/{1}/{2}/{3}/{4}"
+    },
+    {
+      "id": "heroSkill_ex_06",
+      "en": "Duration: {0}/{1}/{2}/{3}/{4}"
+    },
+    {
+      "id": "heroSkill_ex_07",
+      "en": "Effect on Number of Targets: {0}/{1}/{2}/{3}/{4}"
+    },
+    {
+      "id": "heroSkill_ex_08",
+      "en": "Extra Radiation Damage: {0}/{1}/{2}/{3}/{4}"
+    },
+    {
+      "id": "heroSkill_ex_09",
+      "en": "Extra Rockets: {0}/{1}/{2}/{3}/{4}"
+    },
+    {
+      "id": "heroSkill_ex_10",
+      "en": "Extra Crit Rate: {0}/{1}/{2}/{3}/{4}"
+    },
+    {
+      "id": "heroSkill_ex_11",
+      "en": "Extra CD Reduction: {0}/{1}/{2}/{3}/{4}"
+    },
+    {
+      "id": "heroSkill_ex_12",
+      "en": "Extra ATK: {0}/{1}/{2}/{3}/{4}"
+    },
+    {
+      "id": "heroSkill_ex_13",
+      "en": "Extra DEF: {0}/{1}/{2}/{3}/{4}"
+    },
+    {
+      "id": "heroSkill_ex_14",
+      "en": "Extra Reduction in All Incoming Damage: {0}/{1}/{2}/{3}/{4}"
+    },
+    {
+      "id": "heroSkill_ex_15",
+      "en": "Extra DMG Mitigation: {0}/{1}/{2}/{3}/{4}"
+    },
+    {
+      "id": "heroSkill_ex_16",
+      "en": "Extra DEF: {0}/{1}/{2}/{3}/{4}"
+    },
+    {
+      "id": "heroSkill_ex_17",
+      "en": "Extra Reduction in DMG from Monsters: {0}/{1}/{2}/{3}/{4}"
+    },
+    {
+      "id": "heroSkill_ex_18",
+      "en": "Extra ATK: {0}/{1}/{2}/{3}/{4}"
+    },
+    {
+      "id": "heroSkill_ex_19",
+      "en": "Extra Missiles: {0}/{1}/{2}/{3}/{4}"
+    },
+    {
+      "id": "heroSkill_ex_20",
+      "en": "Additional targets attracted +{0}/{1}/{2}/{3}/{4}"
+    },
+    {
+      "id": "heroSkill_ex_21",
+      "en": "Additional attack reduction effect +{0}/{1}/{2}/{3}/{4}"
+    },
+    {
+      "id": "heroSkill_ex_22",
+      "en": "Attack targets +{0}/{1}/{2}/{3}/{4}"
+    },
+    {
+      "id": "heroSkill_ex_23",
+      "en": "Attack Count +{0}/{1}/{2}/{3}/{4}"
+    },
+    {
+      "id": "heroSkill_ex_24",
+      "en": "Bonus Effect +{0}/{1}/{2}/{3}/{4}"
+    },
+    {
+      "id": "heroskiln_name",
+      "en": "Outfit"
+    },
+    {
+      "id": "heroskiln_codex",
+      "en": "Collection"
+    },
+    {
+      "id": "heroskiln_default_outfit",
+      "en": "Default Outfit"
+    },
+    {
+      "id": "heroskiln_in_use",
+      "en": "In Use"
+    },
+    {
+      "id": "heroskiln_no_bonus",
+      "en": "No Bonus"
+    },
+    {
+      "id": "heroskiln_time_unlock",
+      "en": "Use {0} to unlock"
+    },
+    {
+      "id": "heroskiln_unlock",
+      "en": "Unlock"
+    },
+    {
+      "id": "heroskiln_outfit_change",
+      "en": "Equip"
+    },
+    {
+      "id": "heroskiln_desc_1",
+      "en": "Obtain Hero Exclusive Weapon to unlock"
+    },
+    {
+      "id": "heroskiln_desc_2",
+      "en": "Unlocks at Hero Exclusive Weapon Lv.{0}"
+    },
+    {
+      "id": "heroskiln_desc_3",
+      "en": "Hero not owned"
+    },
+    {
+      "id": "skin_shop_name",
+      "en": "Clothing Store"
+    },
+    {
+      "id": "skin_shop_help",
+      "en": "1. Commanders can use Vouchers to exchange for Hero outfits.\n2. Commanders can switch the Hero's outfit at any time."
+    },
+    {
+      "id": "skin_shop_voucher_name",
+      "en": "Voucher Shop"
+    },
+    {
+      "id": "heroskiln_desc_4",
+      "en": "Spend {0} Vouchers to purchase this Hero skin?"
+    },
+    {
+      "id": "heroskiln_desc_5",
+      "en": "Tap to View"
+    },
+    {
+      "id": "heroskiln_desc_6",
+      "en": "Got a new outfit? Share it first!"
+    },
+    {
+      "id": "heroskiln_weapon_name_1",
+      "en": "Exclusive Weapon Appearance I"
+    },
+    {
+      "id": "heroskiln_weapon_name_2",
+      "en": "Exclusive Weapon Appearance II"
+    },
+    {
+      "id": "heroskiln_weapon_name_3",
+      "en": "Exclusive Weapon Appearance III"
+    },
+    {
+      "id": "item_skin_exchangeCoin",
+      "en": "Voucher"
+    },
+    {
+      "id": "item_skin_exchangeCoin_des",
+      "en": "Used to purchase Hero outfits"
+    }
+  ]
+}
