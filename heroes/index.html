@@ -1103,7 +1103,7 @@
       <div class="eyebrow">Client Data &amp; Abilities Database</div>
       <h1>Heroes Directory &amp; Combat Intel</h1>
       <p class="hero-lead">
-        Comprehensive mined database for all 32 playable heroes across Tank, Missile, and Aircraft divisions. Includes official client card artwork, base stats, training gate requirements, full 4-skill scaling, and exclusive weapon enhancements.
+        Comprehensive mined database for all 32 playable heroes across Frontline, Backline, and Support tactical roles. Includes official client card artwork, base stats, training gate requirements, full 4-skill scaling, and exclusive weapon enhancements.
       </p>
 
       <!-- Roster Quick Stats -->
@@ -1112,9 +1112,9 @@
         <div class="roster-stat-pill"><span class="dot gold"></span> 16 UR (Quality 5)</div>
         <div class="roster-stat-pill"><span class="dot purple"></span> 13 SSR (Quality 4)</div>
         <div class="roster-stat-pill"><span class="dot blue"></span> 3 SR (Quality 3)</div>
-        <div class="roster-stat-pill">🛡️ 10 Tanks</div>
-        <div class="roster-stat-pill">🚀 1 Missile</div>
-        <div class="roster-stat-pill">✈️ 21 Aircraft</div>
+        <div class="roster-stat-pill">🛡️ 12 Frontline</div>
+        <div class="roster-stat-pill">🎯 19 Backline</div>
+        <div class="roster-stat-pill">✨ 1 Support</div>
         <div class="roster-stat-pill">⭐ 3 Exclusive Weapons</div>
       </div>
     </section>
@@ -1150,14 +1150,14 @@
           </div>
         </div>
 
-        <!-- Army Unit Filter -->
+        <!-- Tactical Role Filter -->
         <div class="filter-row">
-          <span class="filter-label">Class:</span>
+          <span class="filter-label">Role:</span>
           <div class="filter-chips" id="filter-army">
-            <button class="chip active" data-val="all">All Classes</button>
-            <button class="chip" data-val="1">🛡️ Tank</button>
-            <button class="chip" data-val="2">🚀 Missile</button>
-            <button class="chip" data-val="3">✈️ Aircraft</button>
+            <button class="chip active" data-val="all">All Roles</button>
+            <button class="chip" data-val="1">🛡️ Frontline (12)</button>
+            <button class="chip" data-val="3">🎯 Backline (19)</button>
+            <button class="chip" data-val="2">✨ Support (1)</button>
           </div>
         </div>
 
@@ -1268,9 +1268,9 @@
 
     function getArmyIcon(armyType) {
       switch (armyType) {
-        case 1: return "🛡️ Tank";
-        case 2: return "🚀 Missile";
-        case 3: return "✈️ Aircraft";
+        case 1: return "🛡️ Frontline Hero";
+        case 2: return "✨ Support Hero";
+        case 3: return "🎯 Backline Hero";
         default: return "⚔️ Hero";
       }
     }

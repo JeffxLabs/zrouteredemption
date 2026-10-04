@@ -6,7 +6,7 @@
     "quality": 4,
     "quality_name": "SSR",
     "army_type": 3,
-    "army_name": "Aircraft",
+    "army_name": "Backline Hero",
     "camp_type": 3,
     "camp_name": "Warrior",
     "training_center": {
@@ -220,7 +220,12 @@
         ]
       }
     ],
-    "exclusive_gear": null
+    "exclusive_gear": null,
+    "role_type": 3,
+    "role_name": "Backline Hero",
+    "role_short": "Backline",
+    "role_icon": "🎯",
+    "role_description": "Excels at dealing damage from the backline with high attack and burst skills."
   },
   {
     "id": 10006,
@@ -229,7 +234,7 @@
     "quality": 4,
     "quality_name": "SSR",
     "army_type": 3,
-    "army_name": "Aircraft",
+    "army_name": "Backline Hero",
     "camp_type": 3,
     "camp_name": "Warrior",
     "training_center": {
@@ -443,7 +448,12 @@
         ]
       }
     ],
-    "exclusive_gear": null
+    "exclusive_gear": null,
+    "role_type": 3,
+    "role_name": "Backline Hero",
+    "role_short": "Backline",
+    "role_icon": "🎯",
+    "role_description": "Excels at dealing damage from the backline with high attack and burst skills."
   },
   {
     "id": 10007,
@@ -452,7 +462,7 @@
     "quality": 5,
     "quality_name": "UR",
     "army_type": 1,
-    "army_name": "Tank",
+    "army_name": "Frontline Hero",
     "camp_type": 3,
     "camp_name": "Warrior",
     "training_center": {
@@ -666,7 +676,12 @@
         ]
       }
     ],
-    "exclusive_gear": null
+    "exclusive_gear": null,
+    "role_type": 1,
+    "role_name": "Frontline Hero",
+    "role_short": "Frontline",
+    "role_icon": "🛡️",
+    "role_description": "Excels at absorbing enemy damage in the frontline with high HP and shield growth."
   },
   {
     "id": 10008,
@@ -675,7 +690,7 @@
     "quality": 4,
     "quality_name": "SSR",
     "army_type": 1,
-    "army_name": "Tank",
+    "army_name": "Frontline Hero",
     "camp_type": 3,
     "camp_name": "Warrior",
     "training_center": {
@@ -889,7 +904,12 @@
         ]
       }
     ],
-    "exclusive_gear": null
+    "exclusive_gear": null,
+    "role_type": 1,
+    "role_name": "Frontline Hero",
+    "role_short": "Frontline",
+    "role_icon": "🛡️",
+    "role_description": "Excels at absorbing enemy damage in the frontline with high HP and shield growth."
   },
   {
     "id": 10011,
@@ -898,7 +918,7 @@
     "quality": 4,
     "quality_name": "SSR",
     "army_type": 3,
-    "army_name": "Aircraft",
+    "army_name": "Backline Hero",
     "camp_type": 3,
     "camp_name": "Warrior",
     "training_center": {
@@ -1112,7 +1132,12 @@
         ]
       }
     ],
-    "exclusive_gear": null
+    "exclusive_gear": null,
+    "role_type": 3,
+    "role_name": "Backline Hero",
+    "role_short": "Backline",
+    "role_icon": "🎯",
+    "role_description": "Excels at dealing damage from the backline with high attack and burst skills."
   },
   {
     "id": 20005,
@@ -1121,7 +1146,7 @@
     "quality": 4,
     "quality_name": "SSR",
     "army_type": 3,
-    "army_name": "Aircraft",
+    "army_name": "Backline Hero",
     "camp_type": 1,
     "camp_name": "Tactical",
     "training_center": {
@@ -1335,7 +1360,12 @@
         ]
       }
     ],
-    "exclusive_gear": null
+    "exclusive_gear": null,
+    "role_type": 3,
+    "role_name": "Backline Hero",
+    "role_short": "Backline",
+    "role_icon": "🎯",
+    "role_description": "Excels at dealing damage from the backline with high attack and burst skills."
   },
   {
     "id": 20006,
@@ -1344,7 +1374,7 @@
     "quality": 4,
     "quality_name": "SSR",
     "army_type": 1,
-    "army_name": "Tank",
+    "army_name": "Frontline Hero",
     "camp_type": 1,
     "camp_name": "Tactical",
     "training_center": {
@@ -1558,7 +1588,12 @@
         ]
       }
     ],
-    "exclusive_gear": null
+    "exclusive_gear": null,
+    "role_type": 1,
+    "role_name": "Frontline Hero",
+    "role_short": "Frontline",
+    "role_icon": "🛡️",
+    "role_description": "Excels at absorbing enemy damage in the frontline with high HP and shield growth."
   },
   {
     "id": 20009,
@@ -1567,7 +1602,7 @@
     "quality": 4,
     "quality_name": "SSR",
     "army_type": 3,
-    "army_name": "Aircraft",
+    "army_name": "Backline Hero",
     "camp_type": 3,
     "camp_name": "Warrior",
     "training_center": {
@@ -1781,7 +1816,12 @@
         ]
       }
     ],
-    "exclusive_gear": null
+    "exclusive_gear": null,
+    "role_type": 3,
+    "role_name": "Backline Hero",
+    "role_short": "Backline",
+    "role_icon": "🎯",
+    "role_description": "Excels at dealing damage from the backline with high attack and burst skills."
   },
   {
     "id": 30001,
@@ -1790,7 +1830,7 @@
     "quality": 4,
     "quality_name": "SSR",
     "army_type": 1,
-    "army_name": "Tank",
+    "army_name": "Frontline Hero",
     "camp_type": 3,
     "camp_name": "Warrior",
     "training_center": {
@@ -2004,7 +2044,12 @@
         ]
       }
     ],
-    "exclusive_gear": null
+    "exclusive_gear": null,
+    "role_type": 1,
+    "role_name": "Frontline Hero",
+    "role_short": "Frontline",
+    "role_icon": "🛡️",
+    "role_description": "Excels at absorbing enemy damage in the frontline with high HP and shield growth."
   },
   {
     "id": 30003,
@@ -2013,7 +2058,7 @@
     "quality": 4,
     "quality_name": "SSR",
     "army_type": 3,
-    "army_name": "Aircraft",
+    "army_name": "Backline Hero",
     "camp_type": 3,
     "camp_name": "Warrior",
     "training_center": {
@@ -2227,7 +2272,12 @@
         ]
       }
     ],
-    "exclusive_gear": null
+    "exclusive_gear": null,
+    "role_type": 3,
+    "role_name": "Backline Hero",
+    "role_short": "Backline",
+    "role_icon": "🎯",
+    "role_description": "Excels at dealing damage from the backline with high attack and burst skills."
   },
   {
     "id": 30004,
@@ -2236,7 +2286,7 @@
     "quality": 4,
     "quality_name": "SSR",
     "army_type": 3,
-    "army_name": "Aircraft",
+    "army_name": "Backline Hero",
     "camp_type": 2,
     "camp_name": "Assault",
     "training_center": {
@@ -2450,7 +2500,12 @@
         ]
       }
     ],
-    "exclusive_gear": null
+    "exclusive_gear": null,
+    "role_type": 3,
+    "role_name": "Backline Hero",
+    "role_short": "Backline",
+    "role_icon": "🎯",
+    "role_description": "Excels at dealing damage from the backline with high attack and burst skills."
   },
   {
     "id": 30005,
@@ -2459,7 +2514,7 @@
     "quality": 4,
     "quality_name": "SSR",
     "army_type": 3,
-    "army_name": "Aircraft",
+    "army_name": "Backline Hero",
     "camp_type": 2,
     "camp_name": "Assault",
     "training_center": {
@@ -2673,7 +2728,12 @@
         ]
       }
     ],
-    "exclusive_gear": null
+    "exclusive_gear": null,
+    "role_type": 3,
+    "role_name": "Backline Hero",
+    "role_short": "Backline",
+    "role_icon": "🎯",
+    "role_description": "Excels at dealing damage from the backline with high attack and burst skills."
   },
   {
     "id": 30006,
@@ -2682,7 +2742,7 @@
     "quality": 5,
     "quality_name": "UR",
     "army_type": 3,
-    "army_name": "Aircraft",
+    "army_name": "Backline Hero",
     "camp_type": 3,
     "camp_name": "Warrior",
     "training_center": {
@@ -2922,7 +2982,12 @@
       "strengthen_levels_count": 600,
       "skill_enhancement_name": "[Battle Skill Enhancement] Annihilation Barrage",
       "skill_enhancement_desc": "When Monroe has 4 stacks of [Barrage Amplification], she launches a Devastating Rocket that deals additional 5% Radiation damage to 3 enemies around the impact point"
-    }
+    },
+    "role_type": 3,
+    "role_name": "Backline Hero",
+    "role_short": "Backline",
+    "role_icon": "🎯",
+    "role_description": "Excels at dealing damage from the backline with high attack and burst skills."
   },
   {
     "id": 30007,
@@ -2931,7 +2996,7 @@
     "quality": 4,
     "quality_name": "SSR",
     "army_type": 1,
-    "army_name": "Tank",
+    "army_name": "Frontline Hero",
     "camp_type": 2,
     "camp_name": "Assault",
     "training_center": {
@@ -3145,7 +3210,12 @@
         ]
       }
     ],
-    "exclusive_gear": null
+    "exclusive_gear": null,
+    "role_type": 1,
+    "role_name": "Frontline Hero",
+    "role_short": "Frontline",
+    "role_icon": "🛡️",
+    "role_description": "Excels at absorbing enemy damage in the frontline with high HP and shield growth."
   },
   {
     "id": 30011,
@@ -3154,7 +3224,7 @@
     "quality": 3,
     "quality_name": "SR",
     "army_type": 3,
-    "army_name": "Aircraft",
+    "army_name": "Backline Hero",
     "camp_type": 1,
     "camp_name": "Tactical",
     "training_center": {
@@ -3321,7 +3391,12 @@
         ]
       }
     ],
-    "exclusive_gear": null
+    "exclusive_gear": null,
+    "role_type": 3,
+    "role_name": "Backline Hero",
+    "role_short": "Backline",
+    "role_icon": "🎯",
+    "role_description": "Excels at dealing damage from the backline with high attack and burst skills."
   },
   {
     "id": 31003,
@@ -3330,7 +3405,7 @@
     "quality": 5,
     "quality_name": "UR",
     "army_type": 3,
-    "army_name": "Aircraft",
+    "army_name": "Backline Hero",
     "camp_type": 3,
     "camp_name": "Warrior",
     "training_center": {
@@ -3544,7 +3619,12 @@
         ]
       }
     ],
-    "exclusive_gear": null
+    "exclusive_gear": null,
+    "role_type": 3,
+    "role_name": "Backline Hero",
+    "role_short": "Backline",
+    "role_icon": "🎯",
+    "role_description": "Excels at dealing damage from the backline with high attack and burst skills."
   },
   {
     "id": 40001,
@@ -3553,7 +3633,7 @@
     "quality": 3,
     "quality_name": "SR",
     "army_type": 1,
-    "army_name": "Tank",
+    "army_name": "Frontline Hero",
     "camp_type": 3,
     "camp_name": "Warrior",
     "training_center": {
@@ -3720,7 +3800,12 @@
         ]
       }
     ],
-    "exclusive_gear": null
+    "exclusive_gear": null,
+    "role_type": 1,
+    "role_name": "Frontline Hero",
+    "role_short": "Frontline",
+    "role_icon": "🛡️",
+    "role_description": "Excels at absorbing enemy damage in the frontline with high HP and shield growth."
   },
   {
     "id": 40002,
@@ -3729,7 +3814,7 @@
     "quality": 3,
     "quality_name": "SR",
     "army_type": 1,
-    "army_name": "Tank",
+    "army_name": "Frontline Hero",
     "camp_type": 3,
     "camp_name": "Warrior",
     "training_center": {
@@ -3896,7 +3981,12 @@
         ]
       }
     ],
-    "exclusive_gear": null
+    "exclusive_gear": null,
+    "role_type": 1,
+    "role_name": "Frontline Hero",
+    "role_short": "Frontline",
+    "role_icon": "🛡️",
+    "role_description": "Excels at absorbing enemy damage in the frontline with high HP and shield growth."
   },
   {
     "id": 40010,
@@ -3905,7 +3995,7 @@
     "quality": 4,
     "quality_name": "SSR",
     "army_type": 3,
-    "army_name": "Aircraft",
+    "army_name": "Backline Hero",
     "camp_type": 1,
     "camp_name": "Tactical",
     "training_center": {
@@ -4119,7 +4209,12 @@
         ]
       }
     ],
-    "exclusive_gear": null
+    "exclusive_gear": null,
+    "role_type": 3,
+    "role_name": "Backline Hero",
+    "role_short": "Backline",
+    "role_icon": "🎯",
+    "role_description": "Excels at dealing damage from the backline with high attack and burst skills."
   },
   {
     "id": 50001,
@@ -4128,7 +4223,7 @@
     "quality": 5,
     "quality_name": "UR",
     "army_type": 1,
-    "army_name": "Tank",
+    "army_name": "Frontline Hero",
     "camp_type": 3,
     "camp_name": "Warrior",
     "training_center": {
@@ -4342,7 +4437,12 @@
         ]
       }
     ],
-    "exclusive_gear": null
+    "exclusive_gear": null,
+    "role_type": 1,
+    "role_name": "Frontline Hero",
+    "role_short": "Frontline",
+    "role_icon": "🛡️",
+    "role_description": "Excels at absorbing enemy damage in the frontline with high HP and shield growth."
   },
   {
     "id": 50002,
@@ -4351,7 +4451,7 @@
     "quality": 5,
     "quality_name": "UR",
     "army_type": 2,
-    "army_name": "Missile",
+    "army_name": "Support Hero",
     "camp_type": 3,
     "camp_name": "Warrior",
     "training_center": {
@@ -4565,7 +4665,12 @@
         ]
       }
     ],
-    "exclusive_gear": null
+    "exclusive_gear": null,
+    "role_type": 2,
+    "role_name": "Support Hero",
+    "role_short": "Support",
+    "role_icon": "✨",
+    "role_description": "A well-rounded hero that excels at elevating team performance and skill speed."
   },
   {
     "id": 50003,
@@ -4574,7 +4679,7 @@
     "quality": 5,
     "quality_name": "UR",
     "army_type": 3,
-    "army_name": "Aircraft",
+    "army_name": "Backline Hero",
     "camp_type": 3,
     "camp_name": "Warrior",
     "training_center": {
@@ -4788,7 +4893,12 @@
         ]
       }
     ],
-    "exclusive_gear": null
+    "exclusive_gear": null,
+    "role_type": 3,
+    "role_name": "Backline Hero",
+    "role_short": "Backline",
+    "role_icon": "🎯",
+    "role_description": "Excels at dealing damage from the backline with high attack and burst skills."
   },
   {
     "id": 50004,
@@ -4797,7 +4907,7 @@
     "quality": 5,
     "quality_name": "UR",
     "army_type": 1,
-    "army_name": "Tank",
+    "army_name": "Frontline Hero",
     "camp_type": 1,
     "camp_name": "Tactical",
     "training_center": {
@@ -5011,7 +5121,12 @@
         ]
       }
     ],
-    "exclusive_gear": null
+    "exclusive_gear": null,
+    "role_type": 1,
+    "role_name": "Frontline Hero",
+    "role_short": "Frontline",
+    "role_icon": "🛡️",
+    "role_description": "Excels at absorbing enemy damage in the frontline with high HP and shield growth."
   },
   {
     "id": 50005,
@@ -5020,7 +5135,7 @@
     "quality": 5,
     "quality_name": "UR",
     "army_type": 1,
-    "army_name": "Tank",
+    "army_name": "Frontline Hero",
     "camp_type": 1,
     "camp_name": "Tactical",
     "training_center": {
@@ -5234,7 +5349,12 @@
         ]
       }
     ],
-    "exclusive_gear": null
+    "exclusive_gear": null,
+    "role_type": 1,
+    "role_name": "Frontline Hero",
+    "role_short": "Frontline",
+    "role_icon": "🛡️",
+    "role_description": "Excels at absorbing enemy damage in the frontline with high HP and shield growth."
   },
   {
     "id": 50006,
@@ -5243,7 +5363,7 @@
     "quality": 5,
     "quality_name": "UR",
     "army_type": 3,
-    "army_name": "Aircraft",
+    "army_name": "Backline Hero",
     "camp_type": 1,
     "camp_name": "Tactical",
     "training_center": {
@@ -5477,7 +5597,12 @@
       "strengthen_levels_count": 600,
       "skill_enhancement_name": "[Battle Skill Enhancement] Explosive Start",
       "skill_enhancement_desc": "At the start of battle, Leah immediately unleashes her battle skill on 2 front-row enemies, dealing {0}% Attack Radiation damage. for each Tactical Hero on your team, Leah gains 1 stack of [Tactical Surge]"
-    }
+    },
+    "role_type": 3,
+    "role_name": "Backline Hero",
+    "role_short": "Backline",
+    "role_icon": "🎯",
+    "role_description": "Excels at dealing damage from the backline with high attack and burst skills."
   },
   {
     "id": 50007,
@@ -5486,7 +5611,7 @@
     "quality": 5,
     "quality_name": "UR",
     "army_type": 3,
-    "army_name": "Aircraft",
+    "army_name": "Backline Hero",
     "camp_type": 1,
     "camp_name": "Tactical",
     "training_center": {
@@ -5700,7 +5825,12 @@
         ]
       }
     ],
-    "exclusive_gear": null
+    "exclusive_gear": null,
+    "role_type": 3,
+    "role_name": "Backline Hero",
+    "role_short": "Backline",
+    "role_icon": "🎯",
+    "role_description": "Excels at dealing damage from the backline with high attack and burst skills."
   },
   {
     "id": 50008,
@@ -5709,7 +5839,7 @@
     "quality": 5,
     "quality_name": "UR",
     "army_type": 3,
-    "army_name": "Aircraft",
+    "army_name": "Backline Hero",
     "camp_type": 1,
     "camp_name": "Tactical",
     "training_center": {
@@ -5923,7 +6053,12 @@
         ]
       }
     ],
-    "exclusive_gear": null
+    "exclusive_gear": null,
+    "role_type": 3,
+    "role_name": "Backline Hero",
+    "role_short": "Backline",
+    "role_icon": "🎯",
+    "role_description": "Excels at dealing damage from the backline with high attack and burst skills."
   },
   {
     "id": 50009,
@@ -5932,7 +6067,7 @@
     "quality": 5,
     "quality_name": "UR",
     "army_type": 1,
-    "army_name": "Tank",
+    "army_name": "Frontline Hero",
     "camp_type": 2,
     "camp_name": "Assault",
     "training_center": {
@@ -6146,7 +6281,12 @@
         ]
       }
     ],
-    "exclusive_gear": null
+    "exclusive_gear": null,
+    "role_type": 1,
+    "role_name": "Frontline Hero",
+    "role_short": "Frontline",
+    "role_icon": "🛡️",
+    "role_description": "Excels at absorbing enemy damage in the frontline with high HP and shield growth."
   },
   {
     "id": 50010,
@@ -6155,7 +6295,7 @@
     "quality": 5,
     "quality_name": "UR",
     "army_type": 1,
-    "army_name": "Tank",
+    "army_name": "Frontline Hero",
     "camp_type": 2,
     "camp_name": "Assault",
     "training_center": {
@@ -6369,7 +6509,12 @@
         ]
       }
     ],
-    "exclusive_gear": null
+    "exclusive_gear": null,
+    "role_type": 1,
+    "role_name": "Frontline Hero",
+    "role_short": "Frontline",
+    "role_icon": "🛡️",
+    "role_description": "Excels at absorbing enemy damage in the frontline with high HP and shield growth."
   },
   {
     "id": 50011,
@@ -6378,7 +6523,7 @@
     "quality": 5,
     "quality_name": "UR",
     "army_type": 3,
-    "army_name": "Aircraft",
+    "army_name": "Backline Hero",
     "camp_type": 2,
     "camp_name": "Assault",
     "training_center": {
@@ -6618,7 +6763,12 @@
       "strengthen_levels_count": 600,
       "skill_enhancement_name": "[Skill Enhancement] Electromagnetic Judgment",
       "skill_enhancement_desc": "Yana's auto attack applies 1 stack of [Overload Charge] to a random enemy in the back row, and Yana's skill deals an additional 1% damage per stack against enemies with [Overload Charge], up to 15%"
-    }
+    },
+    "role_type": 3,
+    "role_name": "Backline Hero",
+    "role_short": "Backline",
+    "role_icon": "🎯",
+    "role_description": "Excels at dealing damage from the backline with high attack and burst skills."
   },
   {
     "id": 50012,
@@ -6627,7 +6777,7 @@
     "quality": 5,
     "quality_name": "UR",
     "army_type": 3,
-    "army_name": "Aircraft",
+    "army_name": "Backline Hero",
     "camp_type": 2,
     "camp_name": "Assault",
     "training_center": {
@@ -6841,7 +6991,12 @@
         ]
       }
     ],
-    "exclusive_gear": null
+    "exclusive_gear": null,
+    "role_type": 3,
+    "role_name": "Backline Hero",
+    "role_short": "Backline",
+    "role_icon": "🎯",
+    "role_description": "Excels at dealing damage from the backline with high attack and burst skills."
   },
   {
     "id": 50013,
@@ -6850,7 +7005,7 @@
     "quality": 5,
     "quality_name": "UR",
     "army_type": 3,
-    "army_name": "Aircraft",
+    "army_name": "Backline Hero",
     "camp_type": 2,
     "camp_name": "Assault",
     "training_center": {
@@ -7064,6 +7219,11 @@
         ]
       }
     ],
-    "exclusive_gear": null
+    "exclusive_gear": null,
+    "role_type": 3,
+    "role_name": "Backline Hero",
+    "role_short": "Backline",
+    "role_icon": "🎯",
+    "role_description": "Excels at dealing damage from the backline with high attack and burst skills."
   }
 ]
