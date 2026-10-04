@@ -4,6 +4,8 @@ This repository turns static progression facts from Android client version `1.30
 
 Use the interactive [Z Route Progression Planner](https://jeffxlabs.github.io/zrouteredemption/) to calculate a Base route or compare the payback time and 30-day profit of every resource-producer upgrade.
 
+Calculate exact leveling costs with the interactive [Hero EXP Calculator](https://jeffxlabs.github.io/zrouteredemption/hero-exp/) to find total EXP needed from brand new (Level 1) or any current level to Base Cap (Level 150: ~5.24B EXP) or Extended Cap (Level 175: ~15.29B EXP), with squad scaling and Alliance Duel VS Thursday point estimates.
+
 The [Alliance Intel dashboard](https://jeffxlabs.github.io/zrouteredemption/intel/) presents the supplied P1MP roster. Its [leaderboard evidence page](https://jeffxlabs.github.io/zrouteredemption/intel/leaderboard/) adds a dated, screenshot-based read of the Today event board, where P1MP and ddk leaderboard points remain separate from roster power.
 
 Producer ROI compares the selected producer levels' direct Food, Metal, and Oil costs with marginal hourly output, construction time, and user-defined relative values for unlike resources. A producer continues at its last completed level while the next upgrade builds, and fixed-horizon profit deducts each upgrade cost when that upgrade starts. Base gates are shown but their costs are excluded because they benefit the whole account.
@@ -18,6 +20,7 @@ Producer ROI compares the selected producer levels' direct Food, Metal, and Oil 
 - [`data/equipment.json`](data/equipment.json) joins all 16 equipment bases to manufacturing, strengthening, and Mythic promotion data.
 - [`data/model-manifest.json`](data/model-manifest.json) pins source hashes and records model joins and uncertainty boundaries.
 - [`docs/base-leveling-guide.svg`](docs/base-leveling-guide.svg) is a visual Base level 1–30 guide with Base time, combined Base/prerequisite resources, and per-building prerequisite time for parallel scheduling.
+- [`docs/hero-exp-guide.md`](docs/hero-exp-guide.md) is a comprehensive Hero EXP guide with Level 1–175 costs, HQ gating (HQ × 5), milestone brackets, and Alliance Duel VS Thursday event scoring.
 
 All JSON values are direct client-table facts or explicitly identified interpretations. Raw tables, localization assets, bundles, and APKs are not included.
 
