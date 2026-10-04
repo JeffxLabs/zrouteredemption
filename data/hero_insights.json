@@ -1,5 +1,5 @@
 {
-  "_about": "Plain-language reading of the datamined client data: hero tables from client 1.30.07 and English game text from catalog V202610032200. Every tip follows from a skill description, a stat or a rule text in the game files. Exact skill percentages are not extracted yet, so tips compare what skills do, not their numbers.",
+  "_about": "Plain-language reading of the datamined client data: hero tables from client 1.30.07, skill values and squad rules from the decrypted catalog V202610032200 tables, and English game text from the same catalog. Numbers quoted in tips are the client's displayed values at 5 stars and skill level 30 unless stated.",
   "heroes": {
     "10005": {
       "focus": "pvp",
@@ -10,8 +10,8 @@
       ],
       "summary": "Fragile Warrior gunner who throws a 4-grenade volley and boosts her own attack.",
       "tips": [
-        "Her grenades land on random enemies, so she is best against full enemy squads, not a single boss.",
-        "Her passive raises her attack in every fight, so she is one of the SSRs still worth using in PvP."
+        "Grenadier lands on random enemies (up to 8 grenades at 5★), so she is best against full enemy squads, not a single boss.",
+        "Caliber Modification gives a flat +28.2% ATK in every fight, so she is one of the SSRs still worth using in PvP."
       ]
     },
     "10006": {
@@ -38,8 +38,8 @@
       ],
       "summary": "Warrior tank who reduces the damage the whole front row takes.",
       "tips": [
-        "Both his battle skill and passive protect every front-row ally, not just him.",
-        "His shield skill blocks Physical damage only. Against Radiation-heavy squads (Monroe, Yana, Leah), add Virgilio or Bekka."
+        "Field Support cuts the front row's Physical damage taken by up to 30% for 8 seconds, and Tactical Shield adds a permanent 17.7% reduction.",
+        "Field Support only blocks Physical damage. Against Radiation-heavy squads (Monroe, Yana, Leah, Lucian, Silas), add Virgilio or Bekka."
       ]
     },
     "10008": {
@@ -116,8 +116,8 @@
       ],
       "summary": "SSR Aria: a quick-firing rifle and a passive that makes your back-row Warriors hit monsters harder.",
       "tips": [
-        "She is a natural partner for back-row Warriors like Monroe, Lucian, Rachel and Logan in zombie content.",
-        "The UR Aria (#31003) shares her skills. Decide which one to invest in before spending shards."
+        "In Season 1 she is upgraded to UR Aria (#31003), who replaces her.",
+        "Her passive gives back-row Warriors up to +22.9% damage to monsters, a natural fit next to Monroe, Lucian, Rachel and Logan in zombie content."
       ]
     },
     "30004": {
@@ -171,8 +171,9 @@
       ],
       "summary": "Assault tank whose grenades slow enemies and whose tactics cut monster damage to the front row.",
       "tips": [
-        "Slowing enemies buys time against charging zombies.",
-        "His damage reduction only works against monsters. For PvP fronts use Vera or Vince."
+        "Tactical Grenade also slows enemies, which buys time against charging zombies.",
+        "His damage reduction only works against monsters. For PvP fronts use Vera or Vince.",
+        "The client's own table gives Pincer Tactic an impossible value (295% damage reduction at 5★), which looks like a game data error."
       ]
     },
     "30011": {
@@ -192,13 +193,14 @@
       "focus": "pve",
       "position": "back",
       "tags": [
-        "UR version",
+        "UR upgrade",
         "Buffs Warrior back row"
       ],
-      "summary": "UR-quality Aria with her own card art but the same skills as SSR Aria.",
+      "summary": "UR Aria: the Season 1 upgrade of SSR Aria, with stronger versions of all her skills.",
       "tips": [
-        "The game has no separate skill text for this version, so this page shows SSR Aria's skills. In-game names may differ.",
-        "Her base HP and ATK are about 1.5× SSR Aria's, but her skills grow at the SSR rate."
+        "In Season 1, SSR Aria is upgraded to this UR version and the UR replaces her, so invest knowing she carries over.",
+        "Her Barrage Storm is a long channel: about 3,032% ATK in total at 5★ Lv. 30, versus 1,754% for SSR Aria.",
+        "Zombie Terminator gives back-row Warriors +25.5% damage to monsters at 5★."
       ]
     },
     "40001": {
@@ -249,8 +251,8 @@
       ],
       "summary": "Warrior UR tank: his shout adds DEF (shield) to the front row and his armor cuts all damage he takes.",
       "tips": [
-        "His armor works against everything, not just monsters, so he holds up in PvP.",
-        "Pair him with Arnold: Dirk adds shield while Arnold reduces damage, two layers of protection."
+        "Heavy Armor reduces ALL damage he takes by up to 30.3%, so he holds up in PvP.",
+        "Iron Will gives the front row up to +50.5% DEF (shield) for 10 seconds. Pair him with Arnold: Dirk adds shield while Arnold reduces damage."
       ]
     },
     "50002": {
@@ -263,9 +265,9 @@
       ],
       "summary": "The only Support hero: he raises the whole squad's attack and makes everyone's skills recharge faster.",
       "tips": [
-        "None of his buffs depend on faction or enemy type, so he fits almost any squad.",
-        "His passive also protects your highest-attack ally, so build your main damage dealer first.",
-        "His own battle skill recharges slowly (12 seconds), but his cooldown-speed passive offsets that."
+        "Hawkeye raises ALL allies' ATK by up to 16.8% for 8 seconds, and Sheriff speeds up skill cooldowns by up to 30.3%. None of it depends on faction or enemy type.",
+        "Sheriff also cuts the damage your highest-attack ally takes by up to 12.2%, so build your main damage dealer first.",
+        "His own battle skill recharges slowly (12.3 seconds), which his cooldown-speed passive offsets."
       ]
     },
     "50003": {
@@ -277,8 +279,8 @@
       ],
       "summary": "The highest attack in the game and the lowest HP of any UR: an all-in Warrior damage dealer.",
       "tips": [
-        "His Tesla Coil arcs between several random enemies, and his passive adds Crit Rate.",
-        "Protect him with Arnold or Dirk; one bad matchup and he goes down first."
+        "Tesla Coil arcs between 5 random enemies, and Frankenstein adds up to 30.3% Crit Rate.",
+        "He has the lowest HP of any UR, so keep Arnold or Dirk in front of him."
       ]
     },
     "50004": {
@@ -291,8 +293,8 @@
       ],
       "summary": "The tankiest hero in the game. Her sonic grenade hits all enemies and weakens their Radiation attacks.",
       "tips": [
-        "She counters Radiation damage dealers like Monroe and Yana: her grenade lowers their Radiation damage, and her passive cuts the Radiation damage she takes.",
-        "With Virgilio she makes a near Radiation-proof Tactical front line."
+        "Ion Shield cuts the Radiation damage she takes by up to 40.6%, and Sonic Boom lowers ALL enemies' Radiation damage by 15.3% for 5 seconds.",
+        "She is the hard counter to Radiation damage dealers (Monroe, Yana, Leah, Lucian, Silas). With Virgilio she makes a near Radiation-proof front line."
       ]
     },
     "50005": {
@@ -304,8 +306,8 @@
       ],
       "summary": "Tactical tank who shields the whole squad from Radiation damage and toughens the front row.",
       "tips": [
-        "His EM pulse lowers Radiation damage taken by ALL allies, so bring him against Monroe, Yana or Leah squads.",
-        "His passive also gives the front row general damage reduction."
+        "Magnetic Coil lowers Radiation damage taken by ALL allies by up to 20.4% for 8 seconds.",
+        "Magnetic Armor gives the front row 13.5% less damage and another 13.5% less Radiation damage."
       ]
     },
     "50006": {
@@ -333,8 +335,8 @@
       ],
       "summary": "Tactical damage dealer whose spider robot dives the enemy back row, with a 20% chance to stun.",
       "tips": [
-        "A stunned enemy's skills fail and go straight onto cooldown, so stunning their back-row damage dealers matters most.",
-        "His passive raises his attack in every fight."
+        "His spider robot hits 3 back-row enemies for up to 934% ATK, with a 20% chance to stun.",
+        "Overload gives him a flat +40.5% ATK, the biggest self-buff in the roster."
       ]
     },
     "50008": {
@@ -346,8 +348,8 @@
       ],
       "summary": "Tactical machine-gunner whose toxin rounds strip up to 25% of the target's DEF.",
       "tips": [
-        "DEF is the enemy's shield: shredding it makes the whole squad's hits break through sooner.",
-        "Her passive boosts Physical damage, which also pairs well with Nicole in mixed squads."
+        "Viper fires 20 neurotoxin rounds (at 5★), each stripping 5% DEF up to -25% for 9 seconds.",
+        "DEF is the enemy's shield, so shredding it helps every hit your squad lands. War Machine adds +30.2% Physical damage."
       ]
     },
     "50009": {
@@ -359,8 +361,8 @@
       ],
       "summary": "Assault tank who hits back: in Guard state she counter-attacks every time she is hit.",
       "tips": [
-        "She has the highest attack of any tank, and her Guard state turns that into counter-damage (at most once per second).",
-        "Her passive protects the front row, and the effect doubles for Assault heroes while she is on Guard, so field her with Vince and Jack."
+        "Portable Sentry puts her in Guard for up to 8.8 seconds: she counter-attacks every time she is hit (at most once per second). At 4★ the Guard also covers the front row.",
+        "Sentinel cuts front-row damage taken by up to 13.2%, doubled for Assault heroes while she is on Guard, so field her with Vince and Jack."
       ]
     },
     "50010": {
@@ -372,8 +374,8 @@
       ],
       "summary": "Assault tank who taunts the enemy front row and lowers their attack for 8 seconds.",
       "tips": [
-        "Taunting pulls enemy fire away from your back row.",
-        "His passive reduces all damage he takes, so he works in PvP too."
+        "Glaring Taunt pulls aggro from up to 4 front-row enemies and cuts their ATK by 16.8% for 8 seconds.",
+        "Mountain Ranger reduces all damage he takes by up to 30.3%, so he works in PvP too."
       ]
     },
     "50011": {
@@ -400,8 +402,8 @@
       ],
       "summary": "Assault finisher: his SMG always targets the enemy with the lowest HP percentage.",
       "tips": [
-        "He mops up wounded enemies, so pair him with heroes that hit everyone (Nicole, Yana).",
-        "His passive adds Crit Rate."
+        "His SMG always targets the enemy with the lowest HP percentage, so he finishes wounded enemies.",
+        "Mechanic adds up to 30.3% Crit Rate. Pair him with heroes that hit everyone (Nicole, Yana)."
       ]
     },
     "50013": {
@@ -413,8 +415,8 @@
       ],
       "summary": "Assault grenadier whose firepower net hits every enemy, with a passive that boosts Physical damage.",
       "tips": [
-        "One of only three heroes whose battle skill hits the whole enemy squad (with Leah and Bekka).",
-        "Katya's DEF shred makes her Physical hits land harder in mixed squads."
+        "Fine Firepower Net hits ALL enemies for up to 716% ATK, one of only three battle skills that hit the whole enemy squad (with Leah and Bekka).",
+        "Actuary adds +30.3% Physical damage, so Katya's DEF shred pairs well with her."
       ]
     }
   },
@@ -441,15 +443,19 @@
     },
     {
       "title": "Physical vs Radiation",
-      "body": "There are two damage types. All three exclusive weapons deal Radiation damage. Bekka and Virgilio are the Radiation counters; Arnold's shield only blocks Physical damage. A front line with both covers you either way."
+      "body": "There are two damage types. Radiation dealers: Monroe, Leah, Yana, Lucian, Silas, Celeste and Carter (plus Conan's and Jack's auto attacks). Everyone else deals Physical damage. Bekka and Virgilio cut Radiation damage; Arnold's Field Support only blocks Physical damage. A front line with both covers you either way."
     },
     {
       "title": "Exclusive weapons are huge",
       "body": "A level-30 exclusive weapon adds about 703k HP, 8.4k ATK, 4.2k DEF and 5% damage resistance to its hero. That is more HP than levelling the hero to 150. It also raises skill caps from 30 to 40. Upgrading it gives every hero up to +40k HP, +800 ATK and +200 DEF, so weapon shards help your whole roster."
     },
     {
+      "title": "4★ unlocks a big stat talent",
+      "body": "At Hero Lv. 31 and 4★ the 4th slot unlocks a permanent talent: UR heroes get Doomsday Judgment (+20% HP, ATK and DEF, +10% skill cooldown speed), SSR heroes get Wasteland Wanderer (+10%), and SR heroes Survival Expert (+5%). Pushing a hero to 4★ is one of the biggest single upgrades."
+    },
+    {
       "title": "Raise stars before skill books",
-      "body": "Star level caps skill level: 1★ → Lv. 1, 2★ → 5, 3★ → 10, 4★ → 20, 5★ → 30. Books beyond the cap are wasted, so star a hero up first. Going from 0 to 5 stars takes 975 shards."
+      "body": "Star level caps skill level: 1★ → Lv. 1, 2★ → 5, 3★ → 10, 4★ → 20, 5★ → 30. Stars also multiply skill damage (for example Monroe's sniper shot: 70% ATK at 0★, 486% at 5★). Books beyond the cap are wasted, so star a hero up first. Going from 0 to 5 stars takes 975 shards."
     },
     {
       "title": "UR heroes start faster",

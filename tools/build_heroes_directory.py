@@ -3,6 +3,7 @@
 
 Inputs (all in this repository):
   data/heroes.json          client tables HeroInfo/HeroLevel/HeroStar/NewHeroSkill/... (1.30.07)
+  data/hero_skills.json     skill values, icons and squad rules (tools/extract_hero_skills.py)
   data/lang_hero_en.json    English hero text from the live client catalog
   data/hero_insights.json   curated analysis (tags, tips, global insights)
   assets/heroes/{skills,heads,ui}/  sprites exported from the client's UI_HeroSkill / UI_HeroIcon / UI_Hero atlases
@@ -23,26 +24,14 @@ CAMP = {1: "Tactical", 2: "Assault", 3: "Warrior"}  # confirmed by levelBenefit 
 COUNTERS = {3: 2, 2: 1, 1: 3}  # Warrior > Assault > Tactical > Warrior (lang_hmi faction_counter_guide)
 SKILL_TYPE_KEY = {1: "hero_skillType_1", 2: "hero_skillType_2", 3: "hero_skillType_3", 4: "hero_skillType_4"}
 
-# Client sprite names that differ from the English hero name.  "artwork" = matched by comparing the
-# client head icon with the hero card; everything else matches by name or transliteration.
-SPRITE_NAME = {
-    10005: "Rachel", 10006: "Nora", 10011: "NoraClassics", 10007: "Arnold", 10008: "Zara",
-    20005: "Jinmina", 20006: "Conan", 20009: "Logan", 30001: "Brooks", 30003: "Alia", 31003: "Alia",
-    30004: "Celeste", 30005: "Liyu", 30006: "Monroe", 30007: "Jack", 30011: "Jackson", 40001: "Jamal",
-    40002: "Hank", 40010: "Taylor", 50001: "Deke", 50002: "Carter", 50003: "Lucien", 50004: "Bekka",
-    50005: "Vigilo", 50006: "Leah", 50007: "Silas", 50008: "Katya", 50009: "Vera", 50010: "Vince",
-    50011: "Yana", 50012: "Victor", 50013: "Niko",
-}
-HEAD_SPRITE = {**SPRITE_NAME, 30003: "AliaClassics", 31003: "Alia", 30006: "MarilynMonroe"}
-ARTWORK_MATCH = {30001, 50001, 50013, 30006, 30003, 31003}
 
 # Heroes whose client name collides with another hero.
 VARIANT = {
-    10006: ("Nora", None, "Awakened Nora, unlocked through the Nora Awakening Project (the antidote questline). The pre-antidote crossbow Nora (#10011) from the early story is not listed."),
-    30003: ("Aria", "SSR", "SSR Aria (#30003)."),
-    31003: ("Aria", "UR", "UR-quality Aria (#31003). The client has no separate name or skill text for her and reuses SSR Aria's skills, skill weights and level curve, so this card shows #30003's text."),
+    10006: ("Nora", None, "Awakened Nora, unlocked through the Nora Awakening Project (the antidote questline). In the client she replaces the early-story crossbow Nora (#10011), who is not listed."),
+    30003: ("Aria", "SSR", "SSR Aria. In Season 1 she is upgraded to UR Aria (#31003), who replaces her."),
+    31003: ("Aria", "UR", "UR Aria, the Season 1 upgrade of SSR Aria (#30003), with stronger versions of her skills."),
 }
-TEXT_ALIAS = {31003: 30003}  # hero whose text is borrowed
+TEXT_ALIAS = {31003: 30003}  # story text is borrowed from SSR Aria
 EXCLUDE = {10011}  # pre-antidote Nora, superseded by Awakened Nora (#10006)
 WEAPON_ART = {30006, 50006, 50011}
 
@@ -64,6 +53,7 @@ def main():
     heroes = json.loads((ROOT / "data/heroes.json").read_text())
     lang = {row["id"]: row["en"] for row in json.loads((ROOT / "data/lang_hero_en.json").read_text())["datas"]}
     insights = json.loads((ROOT / "data/hero_insights.json").read_text())
+    client = json.loads((ROOT / "data/hero_skills.json").read_text())["heroes"]
     skills_by_group = {}
     for row in heroes["skills"]:
         skills_by_group.setdefault(row["group_id"], []).append(row)
@@ -96,11 +86,11 @@ def main():
     for hero in playable:
         hid = hero["id"]
         tid = TEXT_ALIAS.get(hid, hid)
-        name = lang.get(f"hero_{tid}") or hero["name"]
+        name = client[str(hid)]["name"] or lang.get(f"hero_{tid}") or hero["name"]
         variant = VARIANT.get(hid)
         peers = [h for h in playable if h["quality"] == hero["quality"] and h["army_type"] == hero["army_type"]]
-        sprite = SPRITE_NAME[hid]
 
+        cs = {x["slot"]: x for x in client[str(hid)]["skills"]}
         skills = []
         for slot, group in enumerate(hero["skill_group_ids"], 1):
             rows = sorted(skills_by_group.get(group, []), key=lambda r: r["star"])
@@ -108,37 +98,42 @@ def main():
                 continue
             first = rows[0]
             stype = first["type"]
-            text_slot = slot if stype != 4 else None
-            sname = lang.get(f"heroSkillName_{tid}_{text_slot}") if text_slot else None
-            sdesc = lang.get(f"heroSkillDes_{tid}_{text_slot}") if text_slot else None
+            c = cs.get(slot, {})
             icon = skill_icons / f"{hid}_{slot}.webp"
             unlock = f"Hero Lv. {first['required_hero_level']}"
             if first["required_hero_star"]:
                 unlock += f" · {first['required_hero_star']}★"
-            skills.append({
+            entry = {
                 "slot": slot,
                 "group_id": group,
                 "type": stype,
                 "type_name": lang[SKILL_TYPE_KEY[stype]],
-                "name": sname or ("Specialty" if stype == 4 else "Unnamed skill"),
-                "name_in_client": bool(sname),
-                "description": clean(sdesc) if sdesc else (
-                    "Specialty slot. The client has no name or description for it; it unlocks at Hero Lv. 31 and 4★ and its weight does not grow with stars."
-                    if stype == 4 else "The client has no name for this skill."),
-                "description_in_client": bool(sdesc),
-                "keywords": keywords(f"heroSkillDes_{tid}_{text_slot}") if text_slot else [],
+                "name": clean(c.get("name")) or ("Specialty" if stype == 4 else "Unnamed skill"),
+                "name_in_client": bool(c.get("name")),
+                "effect_type": c.get("effect_type"),
+                "cooldown_s": c.get("cooldown_s") or (first["cooldown"] or 0) / 1000,
                 "cooldown_ms": first["cooldown"],
-                "cooldown": fmt_cd(first["cooldown"]) or "Passive",
+                "cooldown": f"{c['cooldown_s']:g}s" if c.get("cooldown_s") else "Passive",
                 "unlock": unlock,
                 "unlock_level": first["required_hero_level"],
                 "unlock_star": first["required_hero_star"],
                 "icon": f"../assets/heroes/skills/{hid}_{slot}.webp" if icon.exists() else None,
-                "icon_sprite": f"Hero_{sprite}_skill_0{slot}" if icon.exists() else None,
-                "weights": [{"star": r["star"], "weight": r["ability"], "max_skill_level": r["skill_max_level"]}
-                            for r in rows if not r["required_exclusive_gear_level"]],
-                "gear_upgrades": [{"weapon_level": r["required_exclusive_gear_level"], "gear_weight": r["exclusive_gear_ability"]}
-                                  for r in rows if r["required_exclusive_gear_level"]],
-            })
+                "icon_sprite": c.get("icon_sprite"),
+                "gear_upgrades": [{"weapon_level": r["required_exclusive_gear_level"]} for r in rows if r["required_exclusive_gear_level"]],
+            }
+            if stype == 4:
+                entry["description"] = clean(c.get("text")) or "No description in the client."
+                entry["description_in_client"] = bool(c.get("text"))
+            else:
+                entry["description"] = clean(c["by_star"][5]["text"]) if c.get("by_star") else clean(lang.get(f"heroSkillDes_{tid}_{slot}"))
+                entry["description_in_client"] = bool(c.get("template"))
+                entry["template"] = clean(c.get("template"))
+                entry["by_star"] = [{"star": b["star"], "skill_level": b["skill_level"], "args": b["args"], "text": clean(b["text"])} for b in c.get("by_star", [])]
+                entry["star_upgrades"] = c.get("star_upgrades", [])
+                entry["keywords"] = keywords(c.get("desc_key", ""))
+                if c.get("value_note"):
+                    entry["value_note"] = c["value_note"]
+            skills.append(entry)
 
         gear = gear_by_hero.get(hid)
         gear_out = None
@@ -148,18 +143,15 @@ def main():
                 return max(vals) if vals else 0
             top = gear_curve[-1]
             gskills = []
-            for key, icon_key in (("1", "1"), ("2", "2"), ("4", "4")):
-                gskills.append({
-                    "name": clean(lang.get(f"exclusiveSkillName_{hid}_{key}")),
-                    "description": clean(lang.get(f"exclusiveSkillDes_{hid}_{key}")),
-                    "icon": f"../assets/heroes/skills/{hid}_gear_{icon_key}.webp",
-                })
-            talent = {1: 2, 2: 3, 3: 1}[hero["camp_type"]]  # Talent_1 Warrior, _2 Tactical, _3 Assault
-            gskills.append({
-                "name": clean(lang.get(f"exclusiveSkillName_Talent_{talent}")),
-                "description": clean(lang.get(f"exclusiveSkillDes_Talent_{talent}")),
-                "icon": f"../assets/heroes/skills/{hid}_gear_talent.webp",
-            })
+            for g in client[str(hid)]["exclusive_gear_skills"]:
+                if g["slot"] < 5:
+                    continue
+                icon_path = skill_icons / f"{hid}_gear_{g['slot']}.webp"
+                gskills.append({"name": clean(g.get("name")), "description": clean(g.get("text") or g.get("template")),
+                                "icon": f"../assets/heroes/skills/{hid}_gear_{g['slot']}.webp" if icon_path.exists() else None})
+            upgraded = [{"slot": g["slot"], "name": clean(g.get("name")), "at_max": clean(g["by_star"][5]["text"]),
+                         "icon": f"../assets/heroes/skills/{hid}_gear_{g['slot']}.webp"}
+                        for g in client[str(hid)]["exclusive_gear_skills"] if g["slot"] < 5 and g.get("by_star")]
             gear_out = {
                 "gear_id": gear["gear_id"],
                 "weapon_icon": f"../assets/heroes/ui/weapon_{hid}.webp",
@@ -177,11 +169,15 @@ def main():
                              if k.startswith(f"exclusiveSkillDes_{hid}_link")
                              for m in [re.match(r"\[([^\]]+)\]:?\s*(.*)", clean(lang[k]))] if m],
                 "skills": gskills,
+                "upgraded_skills": upgraded,
             }
 
         ins = ins_for(hid)
+        dmg = next((x["effect_type"] for x in skills if x.get("effect_type") in ("Physical DMG", "Radiation DMG") and x["type"] == 2), None) \
+            or next((x["effect_type"] for x in skills if x.get("effect_type") in ("Physical DMG", "Radiation DMG")), None)
         out.append({
             "id": hid,
+            "damage_type": {"Physical DMG": "Physical", "Radiation DMG": "Radiation"}.get(dmg),
             "name": name,
             "display_name": f"{name} ({variant[1]})" if variant and variant[1] else name,
             "variant_note": variant[2] if variant else None,
@@ -215,8 +211,7 @@ def main():
             "counters": CAMP[COUNTERS[hero["camp_type"]]],
             "countered_by": CAMP[next(c for c, t in COUNTERS.items() if t == hero["camp_type"])],
             "head": f"../assets/heroes/heads/{hid}.webp" if (heads / f"{hid}.webp").exists() else None,
-            "head_sprite": f"Icon_Hero_{HEAD_SPRITE[hid]}",
-            "sprite_match": "artwork" if hid in ARTWORK_MATCH else "name",
+            "head_sprite": client[str(hid)]["head_sprite"],
             "story": clean(lang.get(f"hero_story_{tid}")) or None,
             "skills": skills,
             "exclusive_gear": gear_out,
@@ -267,7 +262,7 @@ def main():
 
     meta = {
         "sources": {
-            "tables": "client 1.30.07 (catalog V202608062022): HeroInfo, HeroLevel, HeroStar, NewHeroSkill, NewHeroSkillLevel, HeroExclusive*",
+            "tables": "client 1.30.07 (catalog V202608062022): HeroInfo, HeroLevel, HeroStar, NewHeroSkill, HeroExclusive*; skill values, icons and squad rules from HeroSkillDes, HeroInfo, HeroCamp and HeroCampAttr of catalog V202610032200",
             "text": f"lang_hero_en.json from client catalog {LANG_CATALOG}",
             "sprites": f"UI_HeroSkill, UI_HeroIcon and UI_Hero sprite atlases from client catalog {LANG_CATALOG}",
         },

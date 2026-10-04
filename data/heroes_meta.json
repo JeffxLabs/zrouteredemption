@@ -1,6 +1,6 @@
 {
   "sources": {
-    "tables": "client 1.30.07 (catalog V202608062022): HeroInfo, HeroLevel, HeroStar, NewHeroSkill, NewHeroSkillLevel, HeroExclusive*",
+    "tables": "client 1.30.07 (catalog V202608062022): HeroInfo, HeroLevel, HeroStar, NewHeroSkill, HeroExclusive*; skill values, icons and squad rules from HeroSkillDes, HeroInfo, HeroCamp and HeroCampAttr of catalog V202610032200",
     "text": "lang_hero_en.json from client catalog V202610032200",
     "sprites": "UI_HeroSkill, UI_HeroIcon and UI_Hero sprite atlases from client catalog V202610032200"
   },
@@ -460,15 +460,19 @@
     },
     {
       "title": "Physical vs Radiation",
-      "body": "There are two damage types. All three exclusive weapons deal Radiation damage. Bekka and Virgilio are the Radiation counters; Arnold's shield only blocks Physical damage. A front line with both covers you either way."
+      "body": "There are two damage types. Radiation dealers: Monroe, Leah, Yana, Lucian, Silas, Celeste and Carter (plus Conan's and Jack's auto attacks). Everyone else deals Physical damage. Bekka and Virgilio cut Radiation damage; Arnold's Field Support only blocks Physical damage. A front line with both covers you either way."
     },
     {
       "title": "Exclusive weapons are huge",
       "body": "A level-30 exclusive weapon adds about 703k HP, 8.4k ATK, 4.2k DEF and 5% damage resistance to its hero. That is more HP than levelling the hero to 150. It also raises skill caps from 30 to 40. Upgrading it gives every hero up to +40k HP, +800 ATK and +200 DEF, so weapon shards help your whole roster."
     },
     {
+      "title": "4★ unlocks a big stat talent",
+      "body": "At Hero Lv. 31 and 4★ the 4th slot unlocks a permanent talent: UR heroes get Doomsday Judgment (+20% HP, ATK and DEF, +10% skill cooldown speed), SSR heroes get Wasteland Wanderer (+10%), and SR heroes Survival Expert (+5%). Pushing a hero to 4★ is one of the biggest single upgrades."
+    },
+    {
       "title": "Raise stars before skill books",
-      "body": "Star level caps skill level: 1★ → Lv. 1, 2★ → 5, 3★ → 10, 4★ → 20, 5★ → 30. Books beyond the cap are wasted, so star a hero up first. Going from 0 to 5 stars takes 975 shards."
+      "body": "Star level caps skill level: 1★ → Lv. 1, 2★ → 5, 3★ → 10, 4★ → 20, 5★ → 30. Stars also multiply skill damage (for example Monroe's sniper shot: 70% ATK at 0★, 486% at 5★). Books beyond the cap are wasted, so star a hero up first. Going from 0 to 5 stars takes 975 shards."
     },
     {
       "title": "UR heroes start faster",
@@ -865,5 +869,5 @@
       "description": "Excels at dealing damage from the backline, possessing powerful attack capabilities and skills."
     }
   },
-  "about": "Plain-language reading of the datamined client data: hero tables from client 1.30.07 and English game text from catalog V202610032200. Every tip follows from a skill description, a stat or a rule text in the game files. Exact skill percentages are not extracted yet, so tips compare what skills do, not their numbers."
+  "about": "Plain-language reading of the datamined client data: hero tables from client 1.30.07, skill values and squad rules from the decrypted catalog V202610032200 tables, and English game text from the same catalog. Numbers quoted in tips are the client's displayed values at 5 stars and skill level 30 unless stated."
 }

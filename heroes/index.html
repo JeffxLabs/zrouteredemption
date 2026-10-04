@@ -368,13 +368,31 @@
     .wt .col { width: 10px; height: 26px; display: flex; align-items: flex-end; background: var(--s2); border-radius: 3px; overflow: hidden; }
     .wt .col i { display: block; width: 100%; background: var(--muted); border-radius: 3px 3px 0 0; }
     .wt span { font-size: 10px; color: var(--faint); white-space: nowrap; }
+.val { color: var(--good); font-weight: 700; font-variant-numeric: tabular-nums; }
+    .star-pick { display: flex; gap: 4px; flex-wrap: wrap; }
+    .star-pick button { display: inline-flex; align-items: center; gap: 3px; height: 28px; padding: 0 9px; border-radius: 8px; border: 1px solid var(--line2); background: var(--s1); font-weight: 700; font-size: 12px; cursor: pointer; }
+    .star-pick button img { width: 13px; height: 13px; }
+    .star-pick button[aria-pressed="true"] { background: var(--text); color: var(--bg); border-color: var(--text); }
+    .sec-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap; margin-bottom: 4px; }
+    .sec-head h3 { margin: 0; }
+    details.ups { margin-top: 6px; font-size: 12.5px; }
+    details.ups summary { cursor: pointer; color: var(--muted); font-weight: 650; }
+    details.ups ol { margin: 6px 0 0; padding: 0; list-style: none; display: grid; gap: 3px; }
+    details.ups li { display: flex; gap: 8px; color: var(--faint); }
+    details.ups li.on { color: var(--text); }
+    details.ups li span { flex: none; width: 26px; font-weight: 700; color: var(--ur); }
+    .vnote { margin-top: 6px; font-size: 12px; color: var(--warn); }
+    .upg { padding: 8px 0; border-top: 1px solid color-mix(in srgb, var(--ur) 18%, var(--line)); display: grid; grid-template-columns: 40px 1fr; gap: 10px; }
+    .upg .sk-ico { width: 40px; height: 40px; border-radius: 10px; }
+    .upg p { margin: 2px 0 0; font-size: 13px; color: var(--muted); }
+    .wsub { font-size: 12px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--faint); margin: 10px 0 2px; }
     .spec { display: flex; align-items: center; gap: 8px; font-size: 12.5px; color: var(--muted); padding: 10px 0 0; border-top: 1px solid var(--line); }
     .weapon { border-radius: 14px; padding: 14px; background: linear-gradient(160deg, color-mix(in srgb, var(--ur) 12%, var(--s1)), var(--s1) 60%); border: 1px solid color-mix(in srgb, var(--ur) 28%, var(--line)); }
     .w-head { display: flex; gap: 12px; align-items: center; margin-bottom: 10px; }
     .w-icon { width: 68px; height: 68px; flex: none; display: grid; place-items: center; background: url(../assets/heroes/ui/weapon_frame.webp) center/contain no-repeat; }
     .w-icon img { width: 52px; height: 40px; object-fit: contain; }
     .w-facts { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
-    .w-facts .chip { height: auto; min-height: 24px; white-space: normal; line-height: 1.3; padding: 4px 9px; border-radius: 10px; }
+    .w-facts .chip { height: auto; min-height: 24px; white-space: normal; line-height: 1.3; padding: 4px 9px; border-radius: 10px; flex: 0 1 auto; max-width: 100%; }
     .gskill { display: grid; grid-template-columns: 40px 1fr; gap: 10px; padding: 8px 0; border-top: 1px solid color-mix(in srgb, var(--ur) 18%, var(--line)); }
     .gskill .sk-ico { width: 40px; height: 40px; border-radius: 10px; }
     .gskill b { font-size: 13.5px; }
@@ -593,9 +611,6 @@
       GLOSS[f] = { kind: 'term', match: [f], source: 'faction_counter_guide',
         text: `Hero faction. ${f} beats ${beats(f)}: ${f} heroes take 20% less damage from ${beats(f)} heroes. ${weakTo(f)} beats ${f}.` };
     }
-    GLOSS['Skill weight'] = { kind: 'term', match: [], source: 'NewHeroSkill.ability',
-      text: 'The client\'s per-star weight for this skill. It is the same for all three combat skills of a hero, so it shows how much stars matter, not the skill\'s effect. The real effect values (shown as ?) are not extracted yet.' };
-    GLOSS['?'] = { kind: 'term', match: [], text: 'Effect value. The game fills this number in from a table that is not extracted yet, so it is unknown here.' };
     delete GLOSS.ATK.match; // too common to underline everywhere; still available by name
     const TERM_OF = {};
     for (const [k, g] of Object.entries(GLOSS)) for (const m of (g.match || [])) TERM_OF[m] = k;
@@ -617,9 +632,9 @@
       }
       return out + esc(s.slice(last));
     }
-    function linkify(text, used = new Set()) {
+    function linkify(text, used = new Set(), args = null) {
       return String(text ?? '').split(/(\{\d+\}|\[[^\]]+\])/g).map(part => {
-        if (/^\{\d+\}$/.test(part)) return EFF;
+        if (/^\{\d+\}$/.test(part)) { const v = args && args[+part.slice(1, -1)]; return v != null ? `<b class="val">${esc(v)}</b>` : EFF; }
         if (/^\[[^\]]+\]$/.test(part)) {
           const k = part.slice(1, -1);
           if (GLOSS[k]) { used.add(k); return termBtn(k, part, 'kw'); }
@@ -720,12 +735,13 @@
     $('#tab-count').textContent = H.length;
 
     // ---------- Filters ----------
-    const state = { q: '', sort: 'rarity', quality: 'all', faction: 'all', role: 'all', focus: 'all', gear: 'all' };
+    const state = { q: '', sort: 'rarity', quality: 'all', faction: 'all', role: 'all', focus: 'all', damage: 'all', gear: 'all' };
     const FILTERS = [
       { key: 'quality', label: 'Rarity', opts: [['all', 'All'], ['5', `<img class="logo" src="${UI}rarity_5.webp" alt="UR">`], ['4', `<img class="logo" src="${UI}rarity_4.webp" alt="SSR">`], ['3', `<img class="logo" src="${UI}rarity_3.webp" alt="SR">`]], test: (h, v) => String(h.quality) === v },
       { key: 'faction', label: 'Faction', opts: [['all', 'All'], ...FACTIONS.map(f => [f, `<img src="${campIcon(f)}" alt="">${f}`])], test: (h, v) => h.camp_name === v },
       { key: 'role', label: 'Role', opts: [['all', 'All'], ...ROLES.map(r => [r, `<img src="${roleTile(r)}" alt="">${r}`])], test: (h, v) => h.role_short === v },
       { key: 'focus', label: 'Best for', opts: [['all', 'All'], ...Object.entries(FOCUS).map(([k, l]) => [k, `<span class="dot"></span>${l}`, `focus f-${k}`])], test: (h, v) => focusOf(h) === v },
+      { key: 'damage', label: 'Damage', opts: [['all', 'All'], ['Physical', `<img src="${UI}dmg_physical.webp" alt="">Physical`], ['Radiation', `<img src="${UI}dmg_radiation.webp" alt="">Radiation`]], test: (h, v) => h.damage_type === v },
       { key: 'sort', label: 'Sort', sort: true, opts: [['rarity', 'Rarity'], ['name', 'Name'], ['hp', 'HP'], ['attack', 'ATK'], ['defense', 'DEF']] },
       { key: 'gear', label: 'Weapon', opts: [['all', 'All'], ['yes', `<img src="${UI}weapon_50006.webp" alt="">Exclusive weapon`]], test: h => !!h.exclusive_gear }
     ];
@@ -767,7 +783,7 @@
         <span class="hc-art"><img class="portrait" src="${esc(h.image)}" alt="" loading="lazy" decoding="async" width="320" height="440"><img class="camp" src="${esc(h.camp_shield)}" alt="">${h.exclusive_gear ? `<span class="wpn" title="Exclusive weapon"><img src="${esc(h.exclusive_gear.weapon_icon)}" alt=""></span>` : ''}</span>
         <span class="hc-body">
           <span class="hc-title"><img class="rar" src="${esc(h.rarity_logo)}" alt="${esc(h.quality_name)}"><span class="hc-name">${esc(h.display_name)}</span></span>
-          <span class="hc-sub"><img src="${esc(roleTile(h.role_short))}" alt="">${esc(h.camp_name)} · ${esc(h.role_short)}</span>
+          <span class="hc-sub"><img src="${esc(roleTile(h.role_short))}" alt="">${esc(h.camp_name)} · ${esc(h.role_short)}${h.damage_type ? ` · <img src="${UI}dmg_${h.damage_type === 'Radiation' ? 'radiation' : 'physical'}.webp" alt="">${esc(h.damage_type)}` : ''}</span>
           <span class="hc-chips">${focusChip(h)}${(h.position === 'back') === (h.army_type === 1) ? rowChip(h) : ''}</span>
           <span class="hc-stats">${st}</span>
           <span class="hc-skills">${sk}</span>
@@ -779,7 +795,7 @@
       $('#grid').innerHTML = list.length ? list.map(card).join('') : `<div class="empty">No heroes match. <button class="reset" type="button" id="reset">Reset filters</button></div>`;
     }
     $('#grid').addEventListener('click', e => {
-      if (e.target.id === 'reset') { Object.assign(state, { q: '', quality: 'all', faction: 'all', role: 'all', focus: 'all', gear: 'all' }); $('#q').value = ''; renderFilters(); renderGrid(); return; }
+      if (e.target.id === 'reset') { Object.assign(state, { q: '', quality: 'all', faction: 'all', role: 'all', focus: 'all', damage: 'all', gear: 'all' }); $('#q').value = ''; renderFilters(); renderGrid(); return; }
       const c = e.target.closest('.hcard'); if (c) openHero(+c.dataset.id);
     });
 
@@ -814,16 +830,22 @@
       const a = h.stat_ranks.all[k], p = h.stat_ranks.peers[k];
       return `<div class="mstat"><small>${label}</small><b>${fmt(h.base_stats[k])}</b><div class="bar"><i style="width:${(h.base_stats[k] / max * 100).toFixed(1)}%"></i></div><div class="rk">#${a.rank} of ${a.of} heroes</div><div class="rk">#${p.rank} of ${p.of} ${esc(h.stat_ranks.peer_scope)}</div></div>`;
     }
+    const EFFECT_ICON = { 'Physical DMG': 'dmg_physical', 'Radiation DMG': 'dmg_radiation', 'Physical DEF': 'def_physical', 'Energy DEF': 'def_radiation' };
+    const effectChip = t => !t ? '' : `<span class="chip sm">${EFFECT_ICON[t] ? `<img src="${UI}${EFFECT_ICON[t]}.webp" alt="">` : ''}${esc(t === 'Energy DEF' ? 'Radiation DEF' : t)}</span>`;
+    let modalStar = 5;
     function skillRow(s) {
-      if (s.type === 4) return `<div class="spec">${skillIcon(s)}<span><b>Specialty</b> · unlocks at ${esc(s.unlock)}. No name or description in the client; it does not grow with stars.</span></div>`;
-      const maxW = Math.max(...s.weights.map(w => w.weight));
-      const weights = `<div class="weights"><span class="wl">${termBtn('Skill weight', 'Skill weight')}</span>${s.weights.map(w => `<span class="wt" title="${w.star}★: weight ${fmt(w.weight)}, skill level cap ${w.max_skill_level}"><span class="col"><i style="height:${Math.max(6, w.weight / maxW * 100).toFixed(0)}%"></i></span><span>${w.star}★</span><span>Lv ${w.max_skill_level}</span></span>`).join('')}</div>`;
-      const gear = s.gear_upgrades.length ? `<span class="chip sm" style="color:var(--ur)"><img src="${UI}weapon_frame.webp" alt="">Upgraded by weapon Lv. ${s.gear_upgrades.map(g => g.weapon_level).join(', ')}</span>` : '';
-      const name = s.name_in_client ? `<b>${linkify(s.name)}</b>` : `<b class="noname" title="No name in client text">${esc(s.type_name)} (unnamed)</b>`;
+      if (s.type === 4) return `<div class="spec">${skillIcon(s)}<span><b>${esc(s.name)}</b> <span class="chip sm">${esc(s.type_name)}</span> · unlocks at ${esc(s.unlock)}<br>${linkify(s.description)}</span></div>`;
+      const b = s.by_star && s.by_star[modalStar];
+      const desc = b && s.template ? linkify(s.template, new Set(), b.args) : linkify(s.description);
+      const gear = s.gear_upgrades.length ? `<span class="chip sm" style="color:var(--ur)"><img src="${UI}weapon_frame.webp" alt="">Weapon upgrade at Lv. ${s.gear_upgrades.map(g => g.weapon_level).join(', ')}</span>` : '';
+      const ups = (s.star_upgrades || []).length ? `<details class="ups"><summary>Star upgrades</summary><ol>${s.star_upgrades.map(u => `<li class="${u.star <= modalStar ? 'on' : ''}"><span>${u.star}★</span>${esc(u.text)}</li>`).join('')}</ol></details>` : '';
       return `<div class="skill">${skillIcon(s)}<div>
-        <div class="sk-head">${name}<span class="chip sm">${esc(s.type_name)}</span>${isPveOnly(s) ? '<span class="chip sm focus f-pve"><span class="dot"></span>PvE only</span>' : ''}${gear}</div>
-        <div class="sk-head"><span class="meta">${s.cooldown_ms ? `Cooldown ${(s.cooldown_ms / 1000).toFixed(2).replace(/0$/, '')}s` : 'Passive'} · Unlocks at ${esc(s.unlock)}</span></div>
-        <p class="sk-desc ${s.description_in_client ? '' : 'muted'}">${linkify(s.description)}</p>${weights}</div></div>`;
+        <div class="sk-head"><b>${linkify(s.name)}</b><span class="chip sm">${esc(s.type_name)}</span>${effectChip(s.effect_type)}${isPveOnly(s) ? '<span class="chip sm focus f-pve"><span class="dot"></span>PvE only</span>' : ''}${gear}</div>
+        <div class="sk-head"><span class="meta">${s.cooldown_s ? `Cooldown ${esc(s.cooldown)}` : 'Passive'} · Unlocks at ${esc(s.unlock)}${b ? ` · shown at ${modalStar}★, skill Lv. ${b.skill_level}` : ''}</span></div>
+        <p class="sk-desc">${desc}</p>${s.value_note ? `<div class="vnote">${esc(s.value_note)}</div>` : ''}${ups}</div></div>`;
+    }
+    function skillsSection(h) {
+      return `<div class="sec-head"><h3>Skills</h3><div class="star-pick" role="group" aria-label="Show values at star level">${[0, 1, 2, 3, 4, 5].map(n => `<button type="button" data-star="${n}" aria-pressed="${n === modalStar}">${n}<img src="${UI}star.webp" alt=" stars"></button>`).join('')}</div></div>${h.skills.map(skillRow).join('')}`;
     }
     function weaponSection(h) {
       const g = h.exclusive_gear; if (!g) return '';
@@ -832,7 +854,9 @@
         <div class="w-facts"><span class="chip sm"><img src="${UI}gear_hp.webp" alt="">At Lv. ${g.level_cap}: +${fmt(b['Hero HP'])} HP · +${fmt(b['Hero ATK'])} ATK · +${fmt(b['Hero DEF'])} DEF · +${pct(b['DMG Resistance'])} DMG resistance</span>
         <span class="chip sm">Skill caps 30 → ${Math.max(...g.skill_caps_at_max)}</span>
         <span class="chip sm"><img src="${UI}gear_def.webp" alt="">Upgrading gives ALL heroes +${fmt(all['Hero HP'])} HP · +${fmt(all['Hero ATK'])} ATK · +${fmt(all['Hero DEF'])} DEF</span></div>
-        ${g.skills.map(s => `<div class="gskill"><span class="sk-ico"><img src="${esc(s.icon)}" alt="" loading="lazy"></span><div><b>${linkify(s.name)}</b><p>${linkify(s.description)}</p></div></div>`).join('')}</section>`;
+        ${(g.upgraded_skills || []).length ? `<div class="wsub">Upgraded skills (5★, skill Lv. 30)</div>${g.upgraded_skills.map(u => `<div class="upg">${skillIcon({ icon: u.icon, type: u.slot })}<div><b>${linkify(u.name)}</b><p>${linkify(u.at_max)}</p></div></div>`).join('')}` : ''}
+        <div class="wsub">Weapon skills</div>
+        ${g.skills.map(s => `<div class="gskill">${skillIcon({ icon: s.icon, type: 3 })}<div><b>${linkify(s.name)}</b><p>${linkify(s.description)}</p></div></div>`).join('')}</section>`;
     }
     function starTable() {
       const tiers = [];
@@ -856,7 +880,7 @@
           <div class="m-info">
             <div class="m-name"><img src="${esc(h.rarity_logo)}" alt="${esc(h.quality_name)}"><h2>${esc(h.display_name)}</h2><span class="id">#${h.id}</span></div>
             <div class="chips"><span class="chip"><img src="${esc(h.camp_shield)}" alt="">${esc(h.camp_name)}</span><span class="chip"><img src="${esc(roleTile(h.role_short))}" alt="">${esc(h.role_short)}</span>${rowChip(h, false)}${focusChip(h, false)}</div>
-            <div class="vs"><span>Beats <img src="${campIcon(h.counters)}" alt=""><b>${esc(h.counters)}</b></span><span>Weak to <img src="${campIcon(h.countered_by)}" alt=""><b>${esc(h.countered_by)}</b></span></div>
+            <div class="vs"><span>Beats <img src="${campIcon(h.counters)}" alt=""><b>${esc(h.counters)}</b></span><span>Weak to <img src="${campIcon(h.countered_by)}" alt=""><b>${esc(h.countered_by)}</b></span>${h.damage_type ? `<span><img src="${UI}dmg_${h.damage_type === 'Radiation' ? 'radiation' : 'physical'}.webp" alt="">${termBtn(h.damage_type === 'Radiation' ? 'Radiation DMG' : 'Physical DMG', `${h.damage_type} damage`)}</span>` : ''}</div>
             <div class="muted" style="font-size:12.5px">Needs ${esc(h.training_center.building_name)} Lv. ${h.training_center.level} · Max level ${h.max_level}${lb ? ` · Passive bonus: ${lb}` : ''}</div>
           </div>
           <div class="m-extra">
@@ -866,7 +890,7 @@
         </div>
         ${h.variant_note ? `<div class="callout">${linkify(h.variant_note)}</div>` : ''}
         <section class="sec insight f-${focusOf(h)}"><p class="lead">${linkify(ins.summary, used)}</p><div class="chips">${focusChip(h)}${(ins.tags || []).map(t => `<span class="chip sm">${esc(t)}</span>`).join('')}</div><ul>${(ins.tips || []).map(t => `<li>${linkify(t, new Set())}</li>`).join('')}</ul></section>
-        <section class="sec"><h3>Skills</h3>${h.skills.map(skillRow).join('')}</section>
+        <section class="sec" id="m-skills">${skillsSection(h)}</section>
         ${weaponSection(h)}
         <section class="sec"><h3>Star progression</h3>${starTable()}</section>
         ${h.story ? `<details class="story"><summary>Story</summary><p>${esc(h.story)}</p></details>` : ''}`;
@@ -895,6 +919,8 @@
     $('#m-close').addEventListener('click', closeHero);
     modal.addEventListener('click', e => {
       if (e.target === modal) return closeHero();
+      const sb = e.target.closest('[data-star]');
+      if (sb && currentHero) { modalStar = +sb.dataset.star; $('#m-skills').innerHTML = skillsSection(currentHero); return; }
       const art = e.target.closest('[data-art]');
       if (art) { $('#m-art-img').src = art.dataset.art; art.parentElement.querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', b === art)); }
       const add = e.target.closest('[data-add]');
@@ -994,6 +1020,8 @@
         if (squad.includes(30006)) notes.push(`<div class="note"><img src="${UI}weapon_30006.webp" alt=""><span>Monroe's ${termBtn('Barrage Amplification', '[Barrage Amplification]', 'kw')} can stack ${n('Warrior')} time${n('Warrior') === 1 ? '' : 's'} (one per Warrior). The rocket bonus needs 4.</span></div>`);
         if (squad.includes(50006)) notes.push(`<div class="note"><img src="${UI}weapon_50006.webp" alt=""><span>Leah starts with ${Math.min(10, 2 * n('Tactical'))} ${termBtn('Radiation Charge', '[Radiation Charge]', 'kw')} stacks (2 per Tactical hero, max 10).</span></div>`);
         if (squad.includes(50011)) notes.push(`<div class="note"><img src="${UI}weapon_50011.webp" alt=""><span>Yana's ${termBtn('Overload Charge', '[Overload Charge]', 'kw')} cap: ${3 * n('Assault')} stacks (3 per Assault hero, max 15).</span></div>`);
+        const rad = heroes.filter(h => h.damage_type === 'Radiation').length, phy = heroes.filter(h => h.damage_type === 'Physical').length;
+        notes.push(`<div class="note"><img src="${UI}dmg_${rad > phy ? 'radiation' : 'physical'}.webp" alt=""><span>Damage mix: ${phy} Physical, ${rad} Radiation. ${rad >= 3 ? 'Enemies with Bekka or Virgilio will blunt your Radiation damage.' : phy >= 4 ? 'Mostly Physical: Arnold-style Physical shields hurt you most.' : 'A mixed squad is hard to shield against.'}</span></div>`);
         const pve = heroes.filter(h => focusOf(h) === 'pve').length, util = heroes.filter(h => focusOf(h) === 'utility').length;
         if (pve) notes.push(`<div class="note"><span class="chip sm focus f-pve"><span class="dot"></span>PvE only</span><span>${pve} hero${pve > 1 ? 'es have' : ' has'} skills that mostly work against monsters: great for zombies and rallies, weaker in PvP.</span></div>`);
         if (util) notes.push(`<div class="note"><span class="chip sm focus f-utility"><span class="dot"></span>Gathering</span><span>${util} gathering hero${util > 1 ? 'es' : ''} (weak in combat). Use them for gathering marches.</span></div>`);
@@ -1144,7 +1172,7 @@
 
     // ---------- Footer ----------
     $('#footer').innerHTML = `<p>Sources: ${esc(M.sources.tables)}. ${esc(M.sources.text)}. ${esc(M.sources.sprites)}.</p>
-      <p>Skill effect values (shown as ?) are not extracted yet. The pre-antidote crossbow Nora (#10011) is omitted in favour of Awakened Nora.</p>
+      <p>Skill values use the client's own formula, (starBase + starGrow × skill level) × star factor, at each star's skill-level cap. The pre-antidote crossbow Nora (#10011) is omitted: the client replaces her with Awakened Nora.</p>
       <p>Everything runs in your browser. <a href="https://github.com/JeffxLabs/zrouteredemption" target="_blank" rel="noopener">Source on GitHub</a></p>`;
 
     // ---------- Boot ----------

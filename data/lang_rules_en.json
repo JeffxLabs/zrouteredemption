@@ -88,6 +88,22 @@
     "attribute_effects_des012": {
       "file": "lang_benefit_en.json",
       "en": "Takes less damage when attacked by a countered target. This effect calculates independently. Hero Faction Counters:\nWarrior counters Assault\nAssault counters Tactical\nTactical counters Warrior"
+    },
+    "heroSkillName_10006_3_chushi": {
+      "file": "lang_hotUpdate_en.json",
+      "en": "In combat, deals {0} more damage to monsters. After your squad defeats Metal Zombies, Food Zombies, Oil Zombies, and Zombie Elite Hordes, the resource acquisition of Oil, Food, and Iron Mine increases by {1}."
+    },
+    "heroSkillDes_10006_3_link1": {
+      "file": "lang_hotUpdate_en.json",
+      "en": "<color=#E3812F>【Treasure Tracking】</color>: After defeating Metal Zombies, Food Zombies, Oil Zombies, and Elite Zombie Hordes, the amount of Iron Ore, Food, and Oil obtained increases."
+    },
+    "heroSkillDes_10006_3_link2": {
+      "file": "lang_hotUpdate_en.json",
+      "en": "<color=#E3812F>[Zombie Killer]</color>: Damage dealt to wild monsters and rally monsters +5%"
+    },
+    "nora_awaken_skill_des": {
+      "file": "lang_hotUpdate_en.json",
+      "en": "Whether Nora is deployed or not, all squads gain a <color=#E3812F>+5% damage dealt to Wild Monsters and Rally Monsters</color> buff."
     }
   }
 }
