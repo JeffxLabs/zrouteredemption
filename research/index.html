@@ -158,6 +158,25 @@
             <button class="btn sm" type="button" id="copy-plan">Copy plan</button>
           </div>
         </section>
+        <section class="card" aria-labelledby="plans-title">
+          <div class="card-head"><h2 id="plans-title">Saved plans</h2></div>
+          <p class="muted" style="font-size:12px">Save all trees and research speed together. Export a JSON file to back up or transfer a plan.</p>
+          <label for="plan-name">Plan name</label>
+          <input class="input" id="plan-name" type="text" maxlength="100" placeholder="My research plan" style="width:100%;margin:6px 0">
+          <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px">
+            <button class="btn sm" type="button" id="save-plan">Save plan</button>
+            <button class="btn sm" type="button" id="export-plan">Export JSON</button>
+            <button class="btn sm" type="button" id="import-plan">Import JSON</button>
+            <input id="import-plan-file" type="file" accept=".json,application/json" hidden>
+          </div>
+          <label for="saved-plans">Saved plans</label>
+          <select class="input" id="saved-plans" style="width:100%;margin:6px 0"></select>
+          <div style="display:flex;gap:6px;flex-wrap:wrap">
+            <button class="btn sm" type="button" id="load-plan">Load plan</button>
+            <button class="btn sm" type="button" id="delete-plan">Delete plan</button>
+          </div>
+          <p id="plan-status" class="muted" role="status" aria-live="polite" style="font-size:12px"></p>
+        </section>
         <div class="sheet-backdrop" id="backdrop"></div>
         <section class="card detail" id="detail" aria-live="polite"></section>
       </aside>
@@ -180,6 +199,7 @@
 
   <script src="../assets/app.js"></script>
   <script src="research_effects.js"></script>
+  <script src="research_plans.js"></script>
   <script src="research_data.js"></script>
   <script>
   (async () => {
@@ -262,12 +282,95 @@
     let saved = {};
     try { saved = JSON.parse(store.get('zr-research-plan') || '{}'); } catch (_) { saved = {}; }
     const plan = saved.plan || {};
-    const S = { tree: saved.tree || trees[0].id, tech: null, speed: saved.speed || 0, scope: 'tree' };
+    const S = { tree: saved.tree || trees[0].id, tech: null, speed: saved.speed || 0, scope: saved.scope === 'all' ? 'all' : 'tree' };
     const hashTree = +(location.hash.match(/^#tree-(\d+)/) || [])[1];
     if (hashTree && trees.some(t => t.id === hashTree)) S.tree = hashTree;
     if (!trees.some(t => t.id === S.tree)) S.tree = trees[0].id;
     const st = id => plan[id] || (plan[id] = { c: 0, t: 0 });
-    function save() { store.set('zr-research-plan', JSON.stringify({ plan, tree: S.tree, speed: S.speed })); }
+    function save() { store.set('zr-research-plan', JSON.stringify({ plan, tree: S.tree, speed: S.speed, scope: S.scope })); }
+
+    // Named snapshots are separate from the continuously autosaved working plan.
+    const RP = window.ResearchPlans, LIBRARY_KEY = 'zr-research-saved-plans';
+    const message = key => { $('#plan-status').textContent = I18N.t(key); };
+    let library = [];
+    try {
+      const stored = JSON.parse(store.get(LIBRARY_KEY) || '[]');
+      if (Array.isArray(stored)) library = stored.flatMap(file => {
+        try { return [RP.validate(file, D.trees)]; } catch (_) { return []; }
+      });
+    } catch (_) { message('Saved plans could not be read.'); }
+    function renderSavedPlans(selected = $('#saved-plans').value) {
+      $('#saved-plans').innerHTML = library.length
+        ? library.map((file, index) => `<option value="${index}">${esc(file.name)}</option>`).join('')
+        : `<option value="">${esc(I18N.t('No saved plans'))}</option>`;
+      if (library.length && library[+selected]) $('#saved-plans').value = selected;
+      $('#load-plan').disabled = $('#delete-plan').disabled = !library.length;
+    }
+    function persistLibrary(next) {
+      // Unlike autosave, a user-requested save must not claim success on failure.
+      localStorage.setItem(LIBRARY_KEY, JSON.stringify(next));
+      library = next;
+    }
+    function snapshot() {
+      const name = $('#plan-name').value.trim() || I18N.t('My research plan');
+      return RP.snapshot(name, { plan, tree: S.tree, speed: S.speed, scope: S.scope }, D.trees);
+    }
+    function activate(file) {
+      const clean = RP.validate(file, D.trees);
+      if (!confirm(I18N.t('Replace the active plan? Save or export it first to keep a backup.'))) return false;
+      localStorage.setItem('zr-research-plan', JSON.stringify(clean.state));
+      Object.keys(plan).forEach(id => delete plan[id]);
+      Object.assign(plan, clean.state.plan);
+      Object.assign(S, { tree: clean.state.tree, speed: clean.state.speed, scope: clean.state.scope, tech: null });
+      $('#plan-name').value = clean.name;
+      history.replaceState(null, '', withHash(`#tree-${S.tree}`));
+      refresh();
+      return true;
+    }
+    $('#save-plan').addEventListener('click', () => {
+      try {
+        const file = snapshot(), index = library.findIndex(p => p.name === file.name);
+        if (index >= 0 && !confirm(I18N.t('Overwrite the saved plan with this name?'))) return;
+        const next = library.slice();
+        if (index >= 0) next[index] = file; else next.push(file);
+        persistLibrary(next); renderSavedPlans(String(index >= 0 ? index : next.length - 1));
+        $('#plan-name').value = file.name; message('Plan saved');
+      } catch (_) { message('Could not save the plan. Export a file for backup.'); }
+    });
+    $('#saved-plans').addEventListener('change', () => {
+      const file = library[$('#saved-plans').value]; if (file) $('#plan-name').value = file.name;
+    });
+    $('#load-plan').addEventListener('click', () => {
+      try { const file = library[$('#saved-plans').value]; if (file && activate(file)) message('Plan loaded'); }
+      catch (_) { message('Could not load the plan.'); }
+    });
+    $('#delete-plan').addEventListener('click', () => {
+      const index = +$('#saved-plans').value;
+      if (!library[index] || !confirm(I18N.t('Delete this saved plan? The active plan will not change.'))) return;
+      try { persistLibrary(library.filter((_, i) => i !== index)); renderSavedPlans('0'); message('Saved plan deleted'); }
+      catch (_) { message('Could not save the plan. Export a file for backup.'); }
+    });
+    $('#export-plan').addEventListener('click', () => {
+      try {
+        const file = snapshot(), url = URL.createObjectURL(new Blob([JSON.stringify(file, null, 2)], { type: 'application/json' }));
+        const link = document.createElement('a');
+        link.href = url; link.download = 'zroute-research-' + (file.name.replace(/[^a-z0-9_-]/gi, '-').slice(0, 60) || 'plan') + '.json';
+        document.body.appendChild(link); link.click(); link.remove();
+        setTimeout(() => URL.revokeObjectURL(url), 1000); message('Plan exported');
+      } catch (_) { message('Could not export the plan.'); }
+    });
+    $('#import-plan').addEventListener('click', () => $('#import-plan-file').click());
+    $('#import-plan-file').addEventListener('change', async e => {
+      const input = e.target, file = input.files?.[0];
+      if (!file) return;
+      try {
+        if (file.size > RP.MAX_BYTES) throw new Error('File too large');
+        const imported = RP.parse(await file.text(), D.trees);
+        if (activate(imported)) message('Plan imported. Use Save plan to keep a named copy.');
+      } catch (_) { message('Import failed. Choose a valid research plan JSON file (up to 1 MB).'); }
+      finally { input.value = ''; }
+    });
+    renderSavedPlans('0');
 
     // ---------- Cost helpers ----------
     function cost(tech, from, to) {
@@ -349,7 +452,7 @@
       ].join('');
       $('#speed-r').value = Math.min(300, S.speed); $('#speed-n').value = S.speed;
     }
-    $('#scope').addEventListener('click', e => { const b = e.target.closest('[data-scope]'); if (b) { S.scope = b.dataset.scope; renderTotals(); } });
+    $('#scope').addEventListener('click', e => { const b = e.target.closest('[data-scope]'); if (b) { S.scope = b.dataset.scope; save(); renderTotals(); } });
     const setSpeed = v => { S.speed = Math.max(0, Math.min(1000, +v || 0)); save(); renderTotals(); renderDetail(); };
     $('#speed-r').addEventListener('input', e => setSpeed(e.target.value));
     $('#speed-n').addEventListener('input', e => setSpeed(e.target.value));
@@ -467,6 +570,7 @@
       trees = buildTrees(localeData);
       rebuildIndexes();
       renderPills();
+      renderSavedPlans();
       index = buildSearchIndex();
       refresh();
       if ($('#q').value.trim().length >= 2) $('#q').dispatchEvent(new Event('input', { bubbles: true }));
