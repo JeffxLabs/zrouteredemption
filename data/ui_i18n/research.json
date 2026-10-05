@@ -1,5 +1,16 @@
 {
   "strings": {
+    "Fighter": {
+      "fr": "Chasseur",
+      "ru": "Истребитель",
+      "tr": "Savaş uçağı",
+      "pl": "Myśliwiec",
+      "es": "Caza",
+      "pt": "Caça",
+      "de": "Kampfflugzeug",
+      "ko": "전투기",
+      "zh": "战斗机"
+    },
     "Copy summary": {"fr":"Copier le résumé","ru":"Копировать сводку","tr":"Özeti kopyala","pl":"Kopiuj podsumowanie","es":"Copiar resumen","pt":"Copiar resumo","de":"Zusammenfassung kopieren","ko":"요약 복사","zh":"复制摘要"},
     "Copy a shareable URL with all trees and research speed": {"fr":"Copier un lien partageable avec tous les arbres et la vitesse de recherche","ru":"Копировать ссылку со всеми деревьями и скоростью исследований","tr":"Tüm ağaçları ve araştırma hızını içeren paylaşım bağlantısını kopyala","pl":"Kopiuj link ze wszystkimi drzewkami i szybkością badań","es":"Copiar enlace con todos los árboles y la velocidad de investigación","pt":"Copiar ligação com todas as árvores e a velocidade de pesquisa","de":"Link mit allen Bäumen und Forschungstempo kopieren","ko":"모든 트리와 연구 속도를 담은 공유 URL 복사","zh":"复制包含所有科技树和研究速度的分享链接"},
     "Plan link copied": {"fr":"Lien du plan copié","ru":"Ссылка на план скопирована","tr":"Plan bağlantısı kopyalandı","pl":"Link do planu skopiowany","es":"Enlace del plan copiado","pt":"Ligação do plano copiada","de":"Planlink kopiert","ko":"계획 링크 복사됨","zh":"规划链接已复制"},

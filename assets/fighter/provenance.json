@@ -1,0 +1,304 @@
+{
+  "client": "v1.30.07",
+  "catalog": "P1_V202609071132",
+  "atlas": "SpriteAtlas/UI_Icon.spriteatlas",
+  "bundle_hash": "70eecdde4d520e321b23d3083e2e5bc4",
+  "encoding": "Lossless WebP; original transparent sprite pixels",
+  "sprites": {
+    "Icon_Item_drone01.webp": {
+      "sprite": "Icon_Item_drone01",
+      "width": 159,
+      "height": 110
+    },
+    "Icon_Item_drone02.webp": {
+      "sprite": "Icon_Item_drone02",
+      "width": 161,
+      "height": 101
+    },
+    "Icon_Item_drone03.webp": {
+      "sprite": "Icon_Item_drone03",
+      "width": 160,
+      "height": 88
+    },
+    "Icon_Item_drone04.webp": {
+      "sprite": "Icon_Item_drone04",
+      "width": 165,
+      "height": 100
+    },
+    "Icon_Item_drone05.webp": {
+      "sprite": "Icon_Item_drone05",
+      "width": 158,
+      "height": 110
+    },
+    "Icon_Item_drone06.webp": {
+      "sprite": "Icon_Item_drone06",
+      "width": 161,
+      "height": 101
+    },
+    "Icon_Item_drone07.webp": {
+      "sprite": "Icon_Item_drone07",
+      "width": 160,
+      "height": 87
+    },
+    "Icon_Item_drone08.webp": {
+      "sprite": "Icon_Item_drone08",
+      "width": 165,
+      "height": 100
+    },
+    "Icon_Item_drone09.webp": {
+      "sprite": "Icon_Item_drone09",
+      "width": 161,
+      "height": 103
+    },
+    "Icon_Item_drone10.webp": {
+      "sprite": "Icon_Item_drone10",
+      "width": 160,
+      "height": 123
+    },
+    "Icon_Item_drone11.webp": {
+      "sprite": "Icon_Item_drone11",
+      "width": 162,
+      "height": 102
+    },
+    "Icon_Item_drone12.webp": {
+      "sprite": "Icon_Item_drone12",
+      "width": 142,
+      "height": 103
+    },
+    "Icon_Item_drone13.webp": {
+      "sprite": "Icon_Item_drone13",
+      "width": 160,
+      "height": 104
+    },
+    "Icon_Item_drone14.webp": {
+      "sprite": "Icon_Item_drone14",
+      "width": 160,
+      "height": 123
+    },
+    "Icon_Item_drone15.webp": {
+      "sprite": "Icon_Item_drone15",
+      "width": 162,
+      "height": 102
+    },
+    "Icon_Item_drone16.webp": {
+      "sprite": "Icon_Item_drone16",
+      "width": 160,
+      "height": 115
+    },
+    "Icon_Item_drone17.webp": {
+      "sprite": "Icon_Item_drone17",
+      "width": 117,
+      "height": 149
+    },
+    "Icon_Item_drone18.webp": {
+      "sprite": "Icon_Item_drone18",
+      "width": 105,
+      "height": 109
+    },
+    "Icon_Item_drone19.webp": {
+      "sprite": "Icon_Item_drone19",
+      "width": 139,
+      "height": 152
+    },
+    "Icon_Item_drone20.webp": {
+      "sprite": "Icon_Item_drone20",
+      "width": 144,
+      "height": 128
+    },
+    "Icon_Item_drone21.webp": {
+      "sprite": "Icon_Item_drone21",
+      "width": 117,
+      "height": 149
+    },
+    "Icon_Item_drone22.webp": {
+      "sprite": "Icon_Item_drone22",
+      "width": 106,
+      "height": 110
+    },
+    "Icon_Item_drone23.webp": {
+      "sprite": "Icon_Item_drone23",
+      "width": 139,
+      "height": 152
+    },
+    "Icon_Item_drone24.webp": {
+      "sprite": "Icon_Item_drone24",
+      "width": 144,
+      "height": 128
+    },
+    "Icon_Item_drone25.webp": {
+      "sprite": "Icon_Item_drone25",
+      "width": 158,
+      "height": 128
+    },
+    "Icon_Item_drone26.webp": {
+      "sprite": "Icon_Item_drone26",
+      "width": 141,
+      "height": 118
+    },
+    "Icon_Item_drone27.webp": {
+      "sprite": "Icon_Item_drone27",
+      "width": 126,
+      "height": 144
+    },
+    "Icon_Item_drone28.webp": {
+      "sprite": "Icon_Item_drone28",
+      "width": 139,
+      "height": 148
+    },
+    "Icon_Item_drone29.webp": {
+      "sprite": "Icon_Item_drone29",
+      "width": 158,
+      "height": 128
+    },
+    "Icon_Item_drone30.webp": {
+      "sprite": "Icon_Item_drone30",
+      "width": 141,
+      "height": 118
+    },
+    "Icon_Item_drone31.webp": {
+      "sprite": "Icon_Item_drone31",
+      "width": 126,
+      "height": 144
+    },
+    "Icon_Item_drone32.webp": {
+      "sprite": "Icon_Item_drone32",
+      "width": 139,
+      "height": 148
+    },
+    "Icon_uav_armor_lv1.webp": {
+      "sprite": "Icon_uav_armor_lv1",
+      "width": 138,
+      "height": 109
+    },
+    "Icon_uav_armor_lv2.webp": {
+      "sprite": "Icon_uav_armor_lv2",
+      "width": 143,
+      "height": 110
+    },
+    "Icon_uav_armor_lv3.webp": {
+      "sprite": "Icon_uav_armor_lv3",
+      "width": 142,
+      "height": 131
+    },
+    "Icon_uav_armor_lv4.webp": {
+      "sprite": "Icon_uav_armor_lv4",
+      "width": 146,
+      "height": 109
+    },
+    "Icon_uav_battery_lv1.webp": {
+      "sprite": "Icon_uav_battery_lv1",
+      "width": 141,
+      "height": 109
+    },
+    "Icon_uav_battery_lv2.webp": {
+      "sprite": "Icon_uav_battery_lv2",
+      "width": 137,
+      "height": 117
+    },
+    "Icon_uav_battery_lv3.webp": {
+      "sprite": "Icon_uav_battery_lv3",
+      "width": 143,
+      "height": 108
+    },
+    "Icon_uav_battery_lv4.webp": {
+      "sprite": "Icon_uav_battery_lv4",
+      "width": 139,
+      "height": 115
+    },
+    "Icon_uav_missile_lv1.webp": {
+      "sprite": "Icon_uav_missile_lv1",
+      "width": 145,
+      "height": 94
+    },
+    "Icon_uav_missile_lv2.webp": {
+      "sprite": "Icon_uav_missile_lv2",
+      "width": 148,
+      "height": 124
+    },
+    "Icon_uav_missile_lv3.webp": {
+      "sprite": "Icon_uav_missile_lv3",
+      "width": 147,
+      "height": 106
+    },
+    "Icon_uav_missile_lv4.webp": {
+      "sprite": "Icon_uav_missile_lv4",
+      "width": 148,
+      "height": 126
+    },
+    "Icon_uav_radar_lv1.webp": {
+      "sprite": "Icon_uav_radar_lv1",
+      "width": 131,
+      "height": 135
+    },
+    "Icon_uav_radar_lv2.webp": {
+      "sprite": "Icon_uav_radar_lv2",
+      "width": 120,
+      "height": 141
+    },
+    "Icon_uav_radar_lv3.webp": {
+      "sprite": "Icon_uav_radar_lv3",
+      "width": 118,
+      "height": 140
+    },
+    "Icon_uav_radar_lv4.webp": {
+      "sprite": "Icon_uav_radar_lv4",
+      "width": 136,
+      "height": 137
+    },
+    "Icon_uav_thermal_lv1.webp": {
+      "sprite": "Icon_uav_thermal_lv1",
+      "width": 135,
+      "height": 126
+    },
+    "Icon_uav_thermal_lv2.webp": {
+      "sprite": "Icon_uav_thermal_lv2",
+      "width": 146,
+      "height": 115
+    },
+    "Icon_uav_thermal_lv3.webp": {
+      "sprite": "Icon_uav_thermal_lv3",
+      "width": 147,
+      "height": 117
+    },
+    "Icon_uav_thermal_lv4.webp": {
+      "sprite": "Icon_uav_thermal_lv4",
+      "width": 146,
+      "height": 135
+    },
+    "Icon_uav_turbine_lv1.webp": {
+      "sprite": "Icon_uav_turbine_lv1",
+      "width": 141,
+      "height": 105
+    },
+    "Icon_uav_turbine_lv2.webp": {
+      "sprite": "Icon_uav_turbine_lv2",
+      "width": 136,
+      "height": 139
+    },
+    "Icon_uav_turbine_lv3.webp": {
+      "sprite": "Icon_uav_turbine_lv3",
+      "width": 142,
+      "height": 98
+    },
+    "Icon_uav_turbine_lv4.webp": {
+      "sprite": "Icon_uav_turbine_lv4",
+      "width": 147,
+      "height": 110
+    },
+    "UVA_icon_skin_01.webp": {
+      "sprite": "UVA_icon_skin_01",
+      "width": 152,
+      "height": 128
+    },
+    "icon_item_drone_data.webp": {
+      "sprite": "icon_item_drone_data",
+      "width": 138,
+      "height": 147
+    },
+    "icon_item_drone_part.webp": {
+      "sprite": "icon_item_drone_part",
+      "width": 144,
+      "height": 143
+    }
+  }
+}

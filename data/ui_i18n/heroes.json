@@ -1,5 +1,16 @@
 {
   "strings": {
+    "Fighter": {
+      "fr": "Chasseur",
+      "ru": "Истребитель",
+      "tr": "Savaş uçağı",
+      "pl": "Myśliwiec",
+      "es": "Caza",
+      "pt": "Caça",
+      "de": "Kampfflugzeug",
+      "ko": "전투기",
+      "zh": "战斗机"
+    },
     "Base Planner": {
       "fr": "Planificateur de base",
       "ru": "План базы",

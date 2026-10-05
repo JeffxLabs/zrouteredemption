@@ -21,6 +21,7 @@
   // Each row is: English, French, Russian, Turkish, Polish, Spanish,
   // Portuguese, German, Korean, Japanese, Simplified Chinese.
   const ROWS = [
+    ["Fighter", "Chasseur", "Истребитель", "Savaş uçağı", "Myśliwiec", "Caza", "Caça", "Kampfflugzeug", "전투기", "戦闘機", "战斗机"],
     ["Language", "Langue", "Язык", "Dil", "Język", "Idioma", "Idioma", "Sprache", "언어", "言語", "语言"],
     ["Z Route Planner", "Planificateur Z Route", "Планировщик Z Route", "Z Route Planlayıcı", "Planer Z Route", "Planificador Z Route", "Planejador Z Route", "Z-Route-Planer", "Z Route 플래너", "Z Routeプランナー", "Z Route 规划器"],
     ["Z Route Progression Planner", "Planificateur de progression Z Route", "Планировщик прогрессии Z Route", "Z Route İlerleme Planlayıcısı", "Planer progresji Z Route", "Planificador de progresión de Z Route", "Planejador de progressão Z Route", "Z-Route-Fortschrittsplaner", "Z Route 진행 플래너", "Z Route進行プランナー", "Z Route 进度规划器"],

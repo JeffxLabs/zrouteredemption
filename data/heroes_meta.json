@@ -479,8 +479,8 @@
       "body": "UR heroes get about 27–46% more HP, ATK and DEF from levels 1–50. From Lv. 65 every hero gains the same from levelling, and the hero's own base stats make the difference. Troop command rises from 52 at Lv. 1 to 351 at Lv. 150."
     },
     {
-      "title": "Carter fits anywhere; SR heroes gather",
-      "body": "Carter's buffs work in any squad and against any enemy. Jamal, Hank and Jackson are weak fighters but the only heroes that raise Soldier Load, so use them for gathering."
+      "title": "SR gathering bonus is unverified",
+      "body": "Client data lists a Soldier Load benefit for Jackson, Jamal and Hank, but its live gathering effect is unverified. Do not choose them for gathering on this basis."
     }
   ],
   "squad": {

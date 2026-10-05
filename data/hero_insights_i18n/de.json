@@ -180,13 +180,12 @@
       "focus": "utility",
       "position": "back",
       "tags": [
-        "Ressourcensammeln",
-        "Traglast"
+        "SR"
       ],
-      "summary": "SR-Bomber, dessen eigentliche Aufgabe das Sammeln ist: Er erhöht die Traglast deines Marsches.",
+      "summary": "SR-Held; der behauptete Sammelbonus ist nicht bestätigt.",
       "tips": [
-        "Die drei SR-Helden Jackson, Jamal und Hank sind die einzigen, die die Soldaten-Traglast erhöhen. Schicke sie daher auf Sammelmärsche.",
-        "Er hat keine passive Fähigkeit und ist deshalb im Kampf schwach."
+        "Die Client-Daten enthalten für Jackson, Jamal und Hank einen Bonus auf die Traglast der Soldaten, doch seine Wirkung beim Sammeln im aktuellen Spiel ist nicht bestätigt. Wähle sie nicht allein deshalb zum Sammeln.",
+        "Überlebensexperte wird auf Heldenlevel 31 und mit 4★ freigeschaltet und erhöht ATK, DEF und HP um 5%."
       ]
     },
     "31003": {
@@ -207,26 +206,24 @@
       "focus": "utility",
       "position": "back",
       "tags": [
-        "Ressourcensammeln",
-        "Traglast"
+        "SR"
       ],
-      "summary": "SR-Sammler. Er wird als Frontkämpfer geführt, hat aber die Werte eines zerbrechlichen Schadensausteilers.",
+      "summary": "SR-Held; der behauptete Sammelbonus ist nicht bestätigt.",
       "tips": [
-        "Nutze ihn zum Sammeln (höhere Soldaten-Traglast), nicht als Tank: Kein anderer Frontkämpfer hat so wenig LP.",
-        "Wenn er kämpfen muss, stelle ihn in die Hinterreihe."
+        "Die Client-Daten enthalten für Jackson, Jamal und Hank einen Bonus auf die Traglast der Soldaten, doch seine Wirkung beim Sammeln im aktuellen Spiel ist nicht bestätigt. Wähle sie nicht allein deshalb zum Sammeln.",
+        "Überlebensexperte wird auf Heldenlevel 31 und mit 4★ freigeschaltet und erhöht ATK, DEF und HP um 5%."
       ]
     },
     "40002": {
       "focus": "utility",
       "position": "front",
       "tags": [
-        "Ressourcensammeln",
-        "Traglast"
+        "SR"
       ],
-      "summary": "SR-Flammenwerfer und Sammler mit echten Tank-Werten.",
+      "summary": "SR-Held; der behauptete Sammelbonus ist nicht bestätigt.",
       "tips": [
-        "Der robusteste der drei Sammler – eine gute Wahl, wenn dein Sammelmarsch angegriffen werden könnte.",
-        "Langsame Angriffe (alle 4 Sekunden) und keine passive Fähigkeit."
+        "Die Client-Daten enthalten für Jackson, Jamal und Hank einen Bonus auf die Traglast der Soldaten, doch seine Wirkung beim Sammeln im aktuellen Spiel ist nicht bestätigt. Wähle sie nicht allein deshalb zum Sammeln.",
+        "Überlebensexperte wird auf Heldenlevel 31 und mit 4★ freigeschaltet und erhöht ATK, DEF und HP um 5%."
       ]
     },
     "40010": {
@@ -462,8 +459,8 @@
       "body": "UR-Helden erhalten auf Lv. 1–50 etwa 27–46% mehr LP, ATK und VER. Ab Lv. 65 erhalten alle Helden durch Levelaufstiege gleich viel; dann machen die jeweiligen Basiswerte den Unterschied. Das Truppenlimit steigt von 52 bei Lv. 1 auf 351 bei Lv. 150."
     },
     {
-      "title": "Carter passt überall; SR-Helden sammeln",
-      "body": "Carters Boni wirken in jedem Trupp und gegen jeden Gegner. Jamal, Hank und Jackson sind schwache Kämpfer, aber die einzigen, die die Soldaten-Traglast erhöhen. Nutze sie daher zum Sammeln."
+      "title": "SR-Sammelbonus nicht bestätigt",
+      "body": "Die Client-Daten enthalten für Jackson, Jamal und Hank einen Bonus auf die Traglast der Soldaten, doch seine Wirkung beim Sammeln im aktuellen Spiel ist nicht bestätigt. Wähle sie nicht allein deshalb zum Sammeln."
     }
   ]
 }

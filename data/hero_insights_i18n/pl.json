@@ -180,13 +180,12 @@
       "focus": "utility",
       "position": "back",
       "tags": [
-        "Zbieranie zasobów",
-        "Udźwig"
+        "SR"
       ],
-      "summary": "Bombardier SR, którego głównym zadaniem jest zbieranie: zwiększa ładowność twojego marszu.",
+      "summary": "Bohater SR; deklarowana premia do zbierania nie została potwierdzona.",
       "tips": [
-        "Tylko trzech bohaterów SR (Jackson, Jamal i Hank) zwiększa udźwig żołnierzy, więc wysyłaj ich na marsze po zasoby.",
-        "Nie ma umiejętności pasywnej, więc słabo walczy."
+        "Dane klienta zawierają premię do udźwigu żołnierzy dla Jacksona, Jamala i Hanka, ale jej wpływ na zbieranie w aktualnej grze nie został potwierdzony. Nie wybieraj ich do zbierania wyłącznie na tej podstawie.",
+        "Ekspert przetrwania odblokowuje się na poziomie bohatera 31 i przy 4★, zwiększając ATK, DEF i HP o 5%."
       ]
     },
     "31003": {
@@ -207,26 +206,24 @@
       "focus": "utility",
       "position": "back",
       "tags": [
-        "Zbieranie zasobów",
-        "Udźwig"
+        "SR"
       ],
-      "summary": "Zbieracz SR. Jest przypisany do przedniego rzędu, ale jego statystyki przypominają delikatnego zadającego obrażenia.",
+      "summary": "Bohater SR; deklarowana premia do zbierania nie została potwierdzona.",
       "tips": [
-        "Używaj go do zbierania (większy udźwig żołnierzy), nie jako obrońcy: ma zdecydowanie najmniej HP ze wszystkich bohaterów przedniego rzędu.",
-        "Jeśli musi walczyć, umieść go w tylnym rzędzie."
+        "Dane klienta zawierają premię do udźwigu żołnierzy dla Jacksona, Jamala i Hanka, ale jej wpływ na zbieranie w aktualnej grze nie został potwierdzony. Nie wybieraj ich do zbierania wyłącznie na tej podstawie.",
+        "Ekspert przetrwania odblokowuje się na poziomie bohatera 31 i przy 4★, zwiększając ATK, DEF i HP o 5%."
       ]
     },
     "40002": {
       "focus": "utility",
       "position": "front",
       "tags": [
-        "Zbieranie zasobów",
-        "Udźwig"
+        "SR"
       ],
-      "summary": "Zbieracz SR z miotaczem ognia i solidnymi statystykami obrońcy.",
+      "summary": "Bohater SR; deklarowana premia do zbierania nie została potwierdzona.",
       "tips": [
-        "Najwytrzymalszy z trzech zbieraczy; dobry wybór, jeśli twój marsz po zasoby może zostać zaatakowany.",
-        "Atakuje powoli (raz na 4 sekundy) i nie ma umiejętności pasywnej."
+        "Dane klienta zawierają premię do udźwigu żołnierzy dla Jacksona, Jamala i Hanka, ale jej wpływ na zbieranie w aktualnej grze nie został potwierdzony. Nie wybieraj ich do zbierania wyłącznie na tej podstawie.",
+        "Ekspert przetrwania odblokowuje się na poziomie bohatera 31 i przy 4★, zwiększając ATK, DEF i HP o 5%."
       ]
     },
     "40010": {
@@ -462,8 +459,8 @@
       "body": "Na poz. 1–50 bohaterowie UR zyskują około 27–46% więcej HP, ATK i OBR. Od poz. 65 wszyscy bohaterowie otrzymują taki sam przyrost za poziomy, a różnicę robią ich własne statystyki bazowe. Dowodzenie oddziałami rośnie z 52 na poz. 1 do 351 na poz. 150."
     },
     {
-      "title": "Carter pasuje wszędzie; bohaterowie SR zbierają zasoby",
-      "body": "Wzmocnienia Cartera działają w każdym oddziale i przeciw każdemu wrogowi. Jamal, Hank i Jackson słabo walczą, ale jako jedyni zwiększają udźwig żołnierzy, więc wysyłaj ich na zbieranie."
+      "title": "Premia SR do zbierania niepotwierdzona",
+      "body": "Dane klienta zawierają premię do udźwigu żołnierzy dla Jacksona, Jamala i Hanka, ale jej wpływ na zbieranie w aktualnej grze nie został potwierdzony. Nie wybieraj ich do zbierania wyłącznie na tej podstawie."
     }
   ]
 }

@@ -180,13 +180,12 @@
       "focus": "utility",
       "position": "back",
       "tags": [
-        "Kaynak toplama",
-        "Taşıma kapasitesi"
+        "SR"
       ],
-      "summary": "Asıl işi kaynak toplamak olan SR bombacısı: yürüyüş kolunun taşıyabileceği yükü artırır.",
+      "summary": "SR kahraman; belirtilen toplama bonusu doğrulanmamıştır.",
       "tips": [
-        "Asker Yükünü artıran tek kahramanlar üç SR kahramanıdır (Jackson, Jamal, Hank); onları kaynak toplama yürüyüşlerine gönder.",
-        "Pasif yeteneği olmadığı için savaşta zayıftır."
+        "İstemci verilerinde Jackson, Jamal ve Hank için Asker Yükü bonusu bulunuyor, ancak güncel oyundaki toplama etkisi doğrulanmamıştır. Sadece buna dayanarak onları toplama için seçmeyin.",
+        "Hayatta Kalma Uzmanı, kahraman seviyesi 31 ve 4★ ile açılır; ATK, DEF ve HP değerlerini %5 artırır."
       ]
     },
     "31003": {
@@ -207,26 +206,24 @@
       "focus": "utility",
       "position": "back",
       "tags": [
-        "Kaynak toplama",
-        "Taşıma kapasitesi"
+        "SR"
       ],
-      "summary": "SR kaynak toplayıcısı. Ön Hat olarak listelenmiş olsa da istatistikleri dayanıksız bir hasar verene benzer.",
+      "summary": "SR kahraman; belirtilen toplama bonusu doğrulanmamıştır.",
       "tips": [
-        "Onu tank olarak değil kaynak toplamak için kullan (daha yüksek Asker Yükü): Ön Hat kahramanları arasında açık ara en düşük HP onda.",
-        "Savaşması gerekirse arka sıraya koy."
+        "İstemci verilerinde Jackson, Jamal ve Hank için Asker Yükü bonusu bulunuyor, ancak güncel oyundaki toplama etkisi doğrulanmamıştır. Sadece buna dayanarak onları toplama için seçmeyin.",
+        "Hayatta Kalma Uzmanı, kahraman seviyesi 31 ve 4★ ile açılır; ATK, DEF ve HP değerlerini %5 artırır."
       ]
     },
     "40002": {
       "focus": "utility",
       "position": "front",
       "tags": [
-        "Kaynak toplama",
-        "Taşıma kapasitesi"
+        "SR"
       ],
-      "summary": "Gerçek tank istatistiklerine sahip, alev makineli SR kaynak toplayıcısı.",
+      "summary": "SR kahraman; belirtilen toplama bonusu doğrulanmamıştır.",
       "tips": [
-        "Üç toplayıcı içinde en dayanıklısı; kaynak yürüyüşün saldırıya uğrayabilirse iyi bir seçim.",
-        "Yavaş saldırır (4 saniyede bir) ve pasif yeteneği yoktur."
+        "İstemci verilerinde Jackson, Jamal ve Hank için Asker Yükü bonusu bulunuyor, ancak güncel oyundaki toplama etkisi doğrulanmamıştır. Sadece buna dayanarak onları toplama için seçmeyin.",
+        "Hayatta Kalma Uzmanı, kahraman seviyesi 31 ve 4★ ile açılır; ATK, DEF ve HP değerlerini %5 artırır."
       ]
     },
     "40010": {
@@ -462,8 +459,8 @@
       "body": "UR kahramanlar 1–50. seviyelerde yaklaşık 27–46% daha fazla HP, SALDIRI ve SAVUNMA kazanır. 65. seviyeden itibaren herkes seviye atladığında aynı kazancı alır; farkı kahramanın temel değerleri yaratır. Birlik komutası 1. seviyedeki 52’den 150. seviyede 351’e çıkar."
     },
     {
-      "title": "Carter her takıma uyar; SR kahramanlar kaynak toplar",
-      "body": "Carter’ın güçlendirmeleri her takımda ve her düşmana karşı çalışır. Jamal, Hank ve Jackson savaşta zayıftır ancak Asker Yükünü artıran tek kahramanlardır; onları kaynak toplamaya gönder."
+      "title": "SR toplama bonusu doğrulanmamıştır",
+      "body": "İstemci verilerinde Jackson, Jamal ve Hank için Asker Yükü bonusu bulunuyor, ancak güncel oyundaki toplama etkisi doğrulanmamıştır. Sadece buna dayanarak onları toplama için seçmeyin."
     }
   ]
 }

@@ -180,13 +180,12 @@
       "focus": "utility",
       "position": "back",
       "tags": [
-        "Gathering",
-        "Carry load"
+        "SR"
       ],
-      "summary": "SR bomber whose real job is gathering: he raises the load your march can carry.",
+      "summary": "SR hero; the claimed gathering bonus is unverified.",
       "tips": [
-        "The three SR heroes (Jackson, Jamal, Hank) are the only ones that boost Soldier Load, so send them on gathering marches.",
-        "He has no passive skill, so he is weak in combat."
+        "Client data lists a Soldier Load benefit for Jackson, Jamal and Hank, but its live gathering effect is unverified. Do not choose them for gathering on this basis.",
+        "Survival Expert unlocks at Hero Lv.31 and 4★, increasing ATK, DEF and HP by 5%."
       ]
     },
     "31003": {
@@ -207,26 +206,24 @@
       "focus": "utility",
       "position": "back",
       "tags": [
-        "Gathering",
-        "Carry load"
+        "SR"
       ],
-      "summary": "SR gatherer. He is listed as Frontline, but his stats are those of a fragile damage dealer.",
+      "summary": "SR hero; the claimed gathering bonus is unverified.",
       "tips": [
-        "Use him for gathering (bigger Soldier Load), not as a tank: he has by far the lowest HP of any Frontline hero.",
-        "If he must fight, put him in the back row."
+        "Client data lists a Soldier Load benefit for Jackson, Jamal and Hank, but its live gathering effect is unverified. Do not choose them for gathering on this basis.",
+        "Survival Expert unlocks at Hero Lv.31 and 4★, increasing ATK, DEF and HP by 5%."
       ]
     },
     "40002": {
       "focus": "utility",
       "position": "front",
       "tags": [
-        "Gathering",
-        "Carry load"
+        "SR"
       ],
-      "summary": "SR flamethrower gatherer with real tank stats.",
+      "summary": "SR hero; the claimed gathering bonus is unverified.",
       "tips": [
-        "The sturdiest of the three gatherers, a good pick if your gathering march might be attacked.",
-        "Slow attacks (every 4 seconds) and no passive skill."
+        "Client data lists a Soldier Load benefit for Jackson, Jamal and Hank, but its live gathering effect is unverified. Do not choose them for gathering on this basis.",
+        "Survival Expert unlocks at Hero Lv.31 and 4★, increasing ATK, DEF and HP by 5%."
       ]
     },
     "40010": {
@@ -462,8 +459,8 @@
       "body": "UR heroes get about 27–46% more HP, ATK and DEF from levels 1–50. From Lv. 65 every hero gains the same from levelling, and the hero's own base stats make the difference. Troop command rises from 52 at Lv. 1 to 351 at Lv. 150."
     },
     {
-      "title": "Carter fits anywhere; SR heroes gather",
-      "body": "Carter's buffs work in any squad and against any enemy. Jamal, Hank and Jackson are weak fighters but the only heroes that raise Soldier Load, so use them for gathering."
+      "title": "SR gathering bonus is unverified",
+      "body": "Client data lists a Soldier Load benefit for Jackson, Jamal and Hank, but its live gathering effect is unverified. Do not choose them for gathering on this basis."
     }
   ]
 }

@@ -18,7 +18,7 @@ assert.equal(map.icons[5046], 'Icon_Build_HeroCamp2');
 assert.ok(html.includes('href="assets/app.css"') && html.includes('src="assets/app.js"'));
 assert.ok(html.includes('class="app-header"') && html.includes('class="desktop-nav"'));
 const bottom = html.match(/<nav class="bottom-nav"[\s\S]*?<\/nav>/)[0];
-assert.equal([...bottom.matchAll(/<svg/g)].length, 6, 'Same six SVG navigation entries as research/hero pages');
+assert.equal([...bottom.matchAll(/<svg/g)].length, 7, 'Same seven SVG navigation entries as research/hero/fighter pages');
 assert.ok(!html.includes('assets/buildings/${type}.svg'));
 const precache = JSON.parse(read('sw.js').match(/const ASSETS = (\[[^\n]+\]);/)[1]);
 for (const file of precache) assert.ok(existsSync(new URL(file, root)), `Missing precache asset: ${file}`);

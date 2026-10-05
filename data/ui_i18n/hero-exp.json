@@ -1,5 +1,16 @@
 {
   "strings": {
+    "Fighter": {
+      "fr": "Chasseur",
+      "ru": "Истребитель",
+      "tr": "Savaş uçağı",
+      "pl": "Myśliwiec",
+      "es": "Caza",
+      "pt": "Caça",
+      "de": "Kampfflugzeug",
+      "ko": "전투기",
+      "zh": "战斗机"
+    },
     "Language": {"fr":"Langue","ru":"Язык","tr":"Dil","pl":"Język","es":"Idioma","pt":"Idioma","de":"Sprache","ko":"언어","zh":"语言"},
     "Switch theme": {"fr":"Changer de thème","ru":"Сменить тему","tr":"Temayı değiştir","pl":"Zmień motyw","es":"Cambiar tema","pt":"Mudar tema","de":"Design wechseln","ko":"테마 전환","zh":"切换主题"},
     "Site": {"fr":"Navigation du site","ru":"Навигация по сайту","tr":"Site gezinmesi","pl":"Nawigacja witryny","es":"Navegación del sitio","pt":"Navegação do site","de":"Seitennavigation","ko":"사이트 탐색","zh":"网站导航"},

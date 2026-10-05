@@ -180,13 +180,12 @@
       "focus": "utility",
       "position": "back",
       "tags": [
-        "Recolha",
-        "Capacidade de carga"
+        "SR"
       ],
-      "summary": "Bombardeiro SR cuja verdadeira função é a recolha: aumenta a carga que a tua marcha consegue transportar.",
+      "summary": "Herói SR; o suposto bônus de coleta não foi verificado.",
       "tips": [
-        "Os três heróis SR (Jackson, Jamal e Hank) são os únicos que aumentam a Carga de Soldados, por isso envia-os em marchas de recolha.",
-        "Não tem habilidade passiva, por isso é fraco em combate."
+        "Os dados do cliente incluem um bônus de carga dos soldados para Jackson, Jamal e Hank, mas seu efeito na coleta no jogo atual não foi verificado. Não os escolha para coletar apenas com base nesse dado.",
+        "Especialista em sobrevivência é desbloqueado no nível de herói 31 e com 4★, aumentando ATQ, DEF e PV em 5%."
       ]
     },
     "31003": {
@@ -207,26 +206,24 @@
       "focus": "utility",
       "position": "back",
       "tags": [
-        "Recolha",
-        "Capacidade de carga"
+        "SR"
       ],
-      "summary": "Recolhedor SR. Está classificado como herói de linha da frente, mas tem atributos de um atacante frágil.",
+      "summary": "Herói SR; o suposto bônus de coleta não foi verificado.",
       "tips": [
-        "Usa-o na recolha (aumenta a Carga de Soldados), não como tanque: tem muito menos HP do que qualquer outro herói de linha da frente.",
-        "Se tiver de lutar, coloca-o na retaguarda."
+        "Os dados do cliente incluem um bônus de carga dos soldados para Jackson, Jamal e Hank, mas seu efeito na coleta no jogo atual não foi verificado. Não os escolha para coletar apenas com base nesse dado.",
+        "Especialista em sobrevivência é desbloqueado no nível de herói 31 e com 4★, aumentando ATQ, DEF e PV em 5%."
       ]
     },
     "40002": {
       "focus": "utility",
       "position": "front",
       "tags": [
-        "Recolha",
-        "Capacidade de carga"
+        "SR"
       ],
-      "summary": "Recolhedor SR com lança-chamas e atributos de tanque a sério.",
+      "summary": "Herói SR; o suposto bônus de coleta não foi verificado.",
       "tips": [
-        "É o mais resistente dos três recolhedores; boa escolha se a tua marcha de recolha puder ser atacada.",
-        "Ataques lentos (a cada 4 s) e sem habilidade passiva."
+        "Os dados do cliente incluem um bônus de carga dos soldados para Jackson, Jamal e Hank, mas seu efeito na coleta no jogo atual não foi verificado. Não os escolha para coletar apenas com base nesse dado.",
+        "Especialista em sobrevivência é desbloqueado no nível de herói 31 e com 4★, aumentando ATQ, DEF e PV em 5%."
       ]
     },
     "40010": {
@@ -462,8 +459,8 @@
       "body": "Entre os níveis 1 e 50, os heróis UR recebem cerca de mais 27–46 % de HP, ATQ e DEF por nível. A partir do nível 65, todos os heróis ganham o mesmo ao subir de nível; são os atributos base que fazem a diferença. O comando de tropas passa de 52 no nível 1 para 351 no nível 150."
     },
     {
-      "title": "Carter encaixa em qualquer lado; os SR servem para recolher",
-      "body": "Os reforços de Carter funcionam em qualquer esquadrão e contra qualquer inimigo. Jamal, Hank e Jackson são fracos em combate, mas os únicos heróis que aumentam a Carga de Soldados, por isso usa-os na recolha."
+      "title": "Bônus SR de coleta não verificado",
+      "body": "Os dados do cliente incluem um bônus de carga dos soldados para Jackson, Jamal e Hank, mas seu efeito na coleta no jogo atual não foi verificado. Não os escolha para coletar apenas com base nesse dado."
     }
   ]
 }

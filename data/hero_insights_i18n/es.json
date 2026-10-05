@@ -180,13 +180,12 @@
       "focus": "utility",
       "position": "back",
       "tags": [
-        "Recolección",
-        "Capacidad de carga"
+        "SR"
       ],
-      "summary": "Bombardero SR cuya verdadera función es recolectar: aumenta la carga que puede transportar tu marcha.",
+      "summary": "Héroe SR; la supuesta bonificación de recolección no está verificada.",
       "tips": [
-        "Los tres héroes SR (Jackson, Jamal y Hank) son los únicos que aumentan la carga de soldados, así que envíalos en marchas de recolección.",
-        "No tiene habilidad pasiva, por lo que es flojo en combate."
+        "Los datos del cliente incluyen una bonificación de carga de soldados para Jackson, Jamal y Hank, pero su efecto en la recolección del juego actual no está verificado. No los elijas para recolectar solo por este dato.",
+        "Experto en supervivencia se desbloquea al nivel de héroe 31 y con 4★, aumentando ATQ, DEF y PV un 5%."
       ]
     },
     "31003": {
@@ -207,26 +206,24 @@
       "focus": "utility",
       "position": "back",
       "tags": [
-        "Recolección",
-        "Capacidad de carga"
+        "SR"
       ],
-      "summary": "Recolector SR. Está clasificado como héroe de primera línea, pero sus estadísticas son las de un atacante frágil.",
+      "summary": "Héroe SR; la supuesta bonificación de recolección no está verificada.",
       "tips": [
-        "Úsalo para recolectar (aumenta la carga de soldados), no como tanque: tiene muchos menos HP que cualquier otro héroe de primera línea.",
-        "Si tiene que luchar, ponlo en la retaguardia."
+        "Los datos del cliente incluyen una bonificación de carga de soldados para Jackson, Jamal y Hank, pero su efecto en la recolección del juego actual no está verificado. No los elijas para recolectar solo por este dato.",
+        "Experto en supervivencia se desbloquea al nivel de héroe 31 y con 4★, aumentando ATQ, DEF y PV un 5%."
       ]
     },
     "40002": {
       "focus": "utility",
       "position": "front",
       "tags": [
-        "Recolección",
-        "Capacidad de carga"
+        "SR"
       ],
-      "summary": "Recolector SR con lanzallamas y estadísticas de tanque de verdad.",
+      "summary": "Héroe SR; la supuesta bonificación de recolección no está verificada.",
       "tips": [
-        "Es el más resistente de los tres recolectores; buena elección si tu marcha de recolección puede recibir ataques.",
-        "Ataca despacio (cada 4 s) y no tiene habilidad pasiva."
+        "Los datos del cliente incluyen una bonificación de carga de soldados para Jackson, Jamal y Hank, pero su efecto en la recolección del juego actual no está verificado. No los elijas para recolectar solo por este dato.",
+        "Experto en supervivencia se desbloquea al nivel de héroe 31 y con 4★, aumentando ATQ, DEF y PV un 5%."
       ]
     },
     "40010": {
@@ -462,8 +459,8 @@
       "body": "Entre los niveles 1 y 50, los héroes UR obtienen aproximadamente un 27–46 % más de HP, ATQ y DEF por nivel. Desde el nivel 65, todos los héroes ganan lo mismo al subir de nivel; la diferencia está en sus estadísticas base. El mando de tropas pasa de 52 en el nivel 1 a 351 en el nivel 150."
     },
     {
-      "title": "Carter encaja en cualquier equipo; los SR recolectan",
-      "body": "Las mejoras de Carter funcionan en cualquier escuadra y contra cualquier enemigo. Jamal, Hank y Jackson son malos combatientes, pero los únicos héroes que aumentan la carga de soldados, así que úsalos para recolectar."
+      "title": "Bonificación SR de recolección no verificada",
+      "body": "Los datos del cliente incluyen una bonificación de carga de soldados para Jackson, Jamal y Hank, pero su efecto en la recolección del juego actual no está verificado. No los elijas para recolectar solo por este dato."
     }
   ]
 }

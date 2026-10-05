@@ -180,13 +180,12 @@
       "focus": "utility",
       "position": "back",
       "tags": [
-        "Collecte",
-        "Capacité de charge"
+        "SR"
       ],
-      "summary": "Bombardier SR dont le vrai rôle est la collecte : il augmente la charge que votre marche peut transporter.",
+      "summary": "Héros SR ; le bonus de collecte annoncé reste non vérifié.",
       "tips": [
-        "Les trois héros SR (Jackson, Jamal et Hank) sont les seuls à augmenter la charge des soldats : envoyez-les en marche de collecte.",
-        "Il n’a pas de compétence passive et se bat donc mal."
+        "Les données du client indiquent un bonus de charge des soldats pour Jackson, Jamal et Hank, mais son effet sur la collecte dans le jeu actuel n’est pas vérifié. Ne les choisissez pas pour la collecte sur cette seule base.",
+        "Expert en survie se débloque au niveau de héros 31 et à 4★, et augmente l’ATQ, la DÉF et les PV de 5 %."
       ]
     },
     "31003": {
@@ -207,26 +206,24 @@
       "focus": "utility",
       "position": "back",
       "tags": [
-        "Collecte",
-        "Capacité de charge"
+        "SR"
       ],
-      "summary": "Collecteur SR. Il est classé en première ligne, mais ses stats sont celles d’un combattant fragile axé dégâts.",
+      "summary": "Héros SR ; le bonus de collecte annoncé reste non vérifié.",
       "tips": [
-        "Utilisez-le pour la collecte (charge des soldats accrue), pas comme tank : il a de loin le moins de PV parmi les héros de première ligne.",
-        "S’il doit combattre, placez-le en ligne arrière."
+        "Les données du client indiquent un bonus de charge des soldats pour Jackson, Jamal et Hank, mais son effet sur la collecte dans le jeu actuel n’est pas vérifié. Ne les choisissez pas pour la collecte sur cette seule base.",
+        "Expert en survie se débloque au niveau de héros 31 et à 4★, et augmente l’ATQ, la DÉF et les PV de 5 %."
       ]
     },
     "40002": {
       "focus": "utility",
       "position": "front",
       "tags": [
-        "Collecte",
-        "Capacité de charge"
+        "SR"
       ],
-      "summary": "Collecteur SR au lance-flammes avec de vraies stats de tank.",
+      "summary": "Héros SR ; le bonus de collecte annoncé reste non vérifié.",
       "tips": [
-        "Le plus robuste des trois collecteurs : un bon choix si votre marche de collecte risque d’être attaquée.",
-        "Attaques lentes (toutes les 4 s) et aucune compétence passive."
+        "Les données du client indiquent un bonus de charge des soldats pour Jackson, Jamal et Hank, mais son effet sur la collecte dans le jeu actuel n’est pas vérifié. Ne les choisissez pas pour la collecte sur cette seule base.",
+        "Expert en survie se débloque au niveau de héros 31 et à 4★, et augmente l’ATQ, la DÉF et les PV de 5 %."
       ]
     },
     "40010": {
@@ -462,8 +459,8 @@
       "body": "Du niveau 1 au niveau 50, les héros UR gagnent environ 27–46 % de PV, d’ATQ et de DÉF supplémentaires grâce aux niveaux. À partir du niveau 65, tous les héros gagnent la même chose en montant de niveau : ce sont leurs stats de base qui font la différence. Le commandement des troupes passe de 52 au niveau 1 à 351 au niveau 150."
     },
     {
-      "title": "Carter s’intègre partout ; les SR sont faits pour la collecte",
-      "body": "Les bonus de Carter fonctionnent dans toutes les escouades et contre tous les ennemis. Jamal, Hank et Jackson combattent mal, mais ce sont les seuls héros qui augmentent la charge des soldats : utilisez-les pour la collecte."
+      "title": "Bonus de collecte SR non vérifié",
+      "body": "Les données du client indiquent un bonus de charge des soldats pour Jackson, Jamal et Hank, mais son effet sur la collecte dans le jeu actuel n’est pas vérifié. Ne les choisissez pas pour la collecte sur cette seule base."
     }
   ]
 }
