@@ -1,5 +1,7 @@
 (async () => {
   'use strict';
+  // Refresh the shared offline cache even when landing directly on this tool.
+  globalThis.navigator?.serviceWorker?.register('../sw.js').catch(() => {});
   const $ = id => document.getElementById(id), {esc, fmt, store, copy} = ZR;
   const ACTIVE = 'zr-fighter-plan', SAVED = 'zr-fighter-saved-plans';
   let D, M, plan, saved = [];
@@ -78,7 +80,7 @@
     const items = Object.values(D.modules).filter(m => m.slot === slot);
     const attr = `data-side="${which}" data-slot="${slot}"`;
     const info = M.moduleInfo(m, plan.state[which].evolution);
-    return `<div><label>${sideNames[which]} chip${select(`${attr} data-field="module"`, opt(0,'Empty',m.id) + items.map(i => opt(i.id,i.name,m.id)).join(''))}</label>
+    return `<div class="wingman-side"><label>${sideNames[which]} chip${select(`${attr} data-field="module"`, opt(0,'Empty',m.id) + items.map(i => opt(i.id,i.name,m.id)).join(''))}</label>
       <label>Star step${select(`${attr} data-field="module-star"`, item ? Object.keys(item.stars).map(star => opt(star,Number(star) <= 5 ? `${star}★` : `5★ + ${star-5} red`,m.star)).join('') : opt(0,'Empty',0))}</label>
       ${info ? `<p><b>Configured chip power: ${fmt(info.power)}</b><br>${esc(info.description)}</p>` : '<p class="note">No chip selected.</p>'}</div>`;
   }
@@ -88,7 +90,7 @@
       const item = D.modules[b.id] || D.modules[a.id] || Object.values(D.modules).find(m => m.slot === slot);
       const copies = M.moduleCopies(a,b);
       const note = copies !== null ? `${fmt(copies)} additional copies of this exact chip to reach the target star step.` : 'Different/empty chips: compare effects, not an upgrade path. Acquisition and inventory are not included.';
-      return `<article class="chip"><header><img src="${esc(item.icon)}" alt=""><h3>${esc(item.type)}</h3></header><div class="pair">${moduleControl('current',slot)}${moduleControl('target',slot)}</div><p class="note">${esc(note)}</p></article>`;
+      return `<article class="wingman-card"><header><img src="${esc(item.icon)}" alt=""><h3>${esc(item.type)}</h3></header><div class="pair">${moduleControl('current',slot)}${moduleControl('target',slot)}</div><p class="note">${esc(note)}</p></article>`;
     }).join('');
   }
   function savedMenu(chosen = $('saved-plans').value) {

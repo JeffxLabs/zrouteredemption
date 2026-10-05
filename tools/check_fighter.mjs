@@ -66,10 +66,11 @@ function element(id) {
     addEventListener(type,fn){this[type]=fn;},click(){this.onclick?.();}});
   return elements.get(id);
 }
-const storage=new Map(); let copied='', confirmResult=true;
+const storage=new Map(); let copied='', confirmResult=true, registeredWorker='';
 const browser=vm.createContext({TextEncoder,TextDecoder,btoa,atob,URL,Blob,setTimeout,clearTimeout,Intl,
   document:{getElementById:element,createElement:()=>({click(){}}),addEventListener:(name,fn)=>events[name]=fn},
   location:{href:'https://example.test/fighter/',hash:''},
+  navigator:{serviceWorker:{register:async url=>{registeredWorker=url;}}},
   I18N:{locale:'en-US'},confirm:()=>confirmResult,
   ZR:{esc:v=>String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])),
     fmt:v=>Number(v).toLocaleString('en-US'),store:{get:k=>storage.get(k)||null,set:(k,v)=>storage.set(k,v)},copy:v=>copied=v},
@@ -77,7 +78,22 @@ const browser=vm.createContext({TextEncoder,TextDecoder,btoa,atob,URL,Blob,setTi
 browser.window=browser; browser.addEventListener=(type,fn)=>events[type]=fn;
 vm.runInContext(fs.readFileSync(path.join(root,'fighter/fighter_model.js'),'utf8'),browser);
 await vm.runInContext(fs.readFileSync(path.join(root,'fighter/fighter.js'),'utf8'),browser);
-assert.equal(element('planner').hidden,false); element('screenshot-example').click();
+assert.equal(element('planner').hidden,false);
+assert.equal(registeredWorker,'../sw.js');
+// Card classes must not collide with the shared fixed-height .chip pill.
+assert.equal([...element('modules').innerHTML.matchAll(/class="wingman-card"/g)].length,4);
+assert.equal([...element('modules').innerHTML.matchAll(/class="wingman-side"/g)].length,8);
+assert.ok(!element('modules').innerHTML.includes('class="chip"'));
+const fighterHtml=fs.readFileSync(path.join(root,'fighter/index.html'),'utf8');
+assert.ok(fighterHtml.includes('#modules{grid-template-columns:repeat(2,minmax(0,1fr))}'));
+assert.ok(fighterHtml.includes('@media(max-width:599px){.wingman-card .pair{grid-template-columns:minmax(0,1fr)}'));
+assert.ok(fighterHtml.includes('src="fighter.js?v=24"'));
+assert.ok(precache.includes('./fighter/fighter.js?v=24'));
+element('planner').change({target:{value:'1001',dataset:{field:'module',side:'target',slot:'0'}}});
+assert.ok(element('modules').innerHTML.includes('Warrior - Vanguard'));
+assert.ok(element('modules').innerHTML.includes('200K'));
+assert.ok(!element('modules').innerHTML.includes('class="chip"'));
+element('screenshot-example').click();
 assert.ok(element('fighter-stats').innerHTML.includes('32,545')); assert.ok(element('materials').innerHTML.includes('12,000'));
 element('share').click(); assert.ok(copied.startsWith('https://example.test/fighter/#plan='));
 const before=storage.get('zr-fighter-plan'); confirmResult=false; element('reset').click(); assert.equal(storage.get('zr-fighter-plan'),before);
