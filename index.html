@@ -11,7 +11,7 @@
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="apple-touch-icon" href="icon.svg">
   <meta name="description" content="Interactive Z Route Base leveling and resource-producer return-on-investment calculators.">
-  <link rel="icon" href="data:,">
+  <link rel="icon" href="assets/buildings/1001.webp" type="image/webp">
   <title>Z Route Progression Planner</title>
   <style>
     :root {
@@ -464,22 +464,45 @@
     body.day .error { background:#fff1f2; color:#9f1239; border-color:#be123c; }
     .topbar > .theme-toggle { margin-left:16px; flex-shrink:0; }
   </style>
+  <link rel="stylesheet" href="assets/app.css">
+  <style>
+    /* Keep calculator surfaces while using the shared header/nav design. */
+    .controls { top:calc(var(--header-h) + 16px); max-height:calc(100vh - var(--header-h) - 32px); }
+    .app-header .brand { letter-spacing:normal; }
+    .app-header .brand > span:last-child { display:inline; }
+    .app-header .language-control { margin:0; }
+    .app-header .language-control select { min-height:0; }
+    .building-icon img { object-fit:contain; }
+    .game-resource-icon { width:22px; height:22px; object-fit:contain; vertical-align:middle; margin-right:5px; }
+    .stage-header h2 { display:flex; align-items:center; gap:8px; }
+    .stage-header img, .building-inputs label img { width:32px; height:32px; object-fit:contain; vertical-align:middle; }
+    .building-inputs label { display:flex; align-items:center; gap:8px; }
+    .base-picker output { display:flex; align-items:center; justify-content:center; gap:8px; }
+    .base-picker output img { width:40px; height:40px; object-fit:contain; }
+    #roi-title { display:flex; align-items:center; gap:8px; }
+    #roi-title img { width:44px; height:44px; object-fit:contain; }
+    @media(max-width:899px) { .controls { position:static; max-height:none; } }
+  </style>
 </head>
 <body>
-  <header class="shell topbar">
-    <div class="brand"><span>Z Route Planner<small>S:117 Jeff</small></span></div>
-    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle day and night mode">☼</button>
-    <label class="language-control"><span>Language</span><select id="language-select" aria-label="Language"></select></label>
-    <nav class="site-nav" aria-label="Calculators">
-      <button id="base-view-button" aria-pressed="true">Base planner</button>
-      <button id="roi-view-button" aria-pressed="false">Producer ROI</button>
-      <a class="nav-link" href="heroes/">Heroes</a>
-      <a class="nav-link" href="hero-exp/">Hero EXP</a>
-      <a class="nav-link" href="research/">Research</a>
-      <a class="nav-link" href="promo-codes/">Promo Codes</a>
-      <button id="install-button" class="install-button" type="button">Install</button>
-      <a class="source-link" href="https://github.com/JeffxLabs/zrouteredemption">GitHub ↗</a>
-    </nav>
+  <header class="app-header">
+    <div class="header-inner">
+      <a class="brand" href="./"><img src="assets/buildings/1001.webp" alt="" width="22" height="22">Z Route Planner <span class="ver">v1.30.07</span></a>
+      <nav class="desktop-nav" aria-label="Site">
+        <a id="base-view-button" data-view="base" href="./" class="active" aria-current="page">Base planner</a>
+        <a id="roi-view-button" data-view="roi" href="#producer-roi">Producer ROI</a>
+        <a href="heroes/">Heroes</a>
+        <a href="hero-exp/">Hero EXP</a>
+        <a href="research/">Research</a>
+        <a href="promo-codes/">Promo Codes</a>
+        <a href="https://github.com/JeffxLabs/zrouteredemption" target="_blank" rel="noopener">GitHub ↗</a>
+      </nav>
+      <label class="language-control">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
+        <select id="language-select" data-i18n-languages="en,fr,ru,tr,pl,es,pt,de,ko,zh" aria-label="Language"></select>
+      </label>
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch theme"></button>
+    </div>
   </header>
 
   <main id="base-view" class="shell">
@@ -522,6 +545,7 @@
             <p class="advanced-note">Any-of training gates choose the center needing the least remaining builder work.</p>
           </details>
           <details class="config-details"><summary>Import / Export</summary><div class="config-actions">
+            <button id="install-button" class="install-button" type="button">Install</button>
             <button id="export-config" type="button">Export JSON</button>
             <button id="import-config" type="button">Import JSON</button>
             <input id="config-file" type="file" accept="application/json,.json" hidden>
@@ -543,9 +567,9 @@
             <dl class="totals-grid">
               <div><dt>Estimated elapsed</dt><dd id="elapsed-time"></dd></div>
               <div><dt>Adjusted Base work</dt><dd id="base-time"></dd></div>
-              <div><dt>Food required</dt><dd id="food"></dd></div>
-              <div><dt>Metal required</dt><dd id="metal"></dd></div>
-              <div><dt>Oil required</dt><dd id="oil"></dd></div>
+              <div><dt><img class="game-resource-icon" src="assets/ui/food.webp" alt="">Food required</dt><dd id="food"></dd></div>
+              <div><dt><img class="game-resource-icon" src="assets/ui/metal.webp" alt="">Metal required</dt><dd id="metal"></dd></div>
+              <div><dt><img class="game-resource-icon" src="assets/ui/oil.webp" alt="">Oil required</dt><dd id="oil"></dd></div>
             </dl>
             <p class="section-note" id="action-count"></p>
             <p class="section-note" id="modifier-summary"></p>
@@ -624,13 +648,13 @@
     </div>
   </main>
 
-  <nav class="bottom-nav" aria-label="App navigation">
-    <button class="bottom-nav-item active" data-view="base"><span>⌂</span><small>Base</small></button>
-    <button class="bottom-nav-item" data-view="roi"><span>↗</span><small>ROI</small></button>
-    <a class="bottom-nav-item" href="heroes/"><span>🎖</span><small>Heroes</small></a>
-    <a class="bottom-nav-item" href="hero-exp/"><span>⚡</span><small>Hero EXP</small></a>
-    <a class="bottom-nav-item" href="research/"><span>🔬</span><small>Research</small></a>
-    <a class="bottom-nav-item" href="promo-codes/"><span>🎁</span><small>Codes</small></a>
+  <nav class="bottom-nav" aria-label="Site">
+    <a href="./" data-view="base" class="active" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg><span>Base</span></a>
+    <a href="#producer-roi" data-view="roi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg><span>ROI</span></a>
+    <a href="heroes/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><span>Heroes</span></a>
+    <a href="hero-exp/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg><span>Hero EXP</span></a>
+    <a href="research/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.2 4.2l2.8 2.8M17 17l2.8 2.8M1 12h4M19 12h4M4.2 19.8 7 17M17 7l2.8-2.8"/></svg><span>Research</span></a>
+    <a href="promo-codes/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg><span>Codes</span></a>
   </nav>
 
   <footer class="shell">
@@ -639,6 +663,13 @@
   </footer>
 
   <script src="i18n.js"></script>
+  <script>
+    try {
+      if (!localStorage.getItem("theme") && localStorage.getItem("zroute-theme")) localStorage.setItem("theme", localStorage.getItem("zroute-theme"));
+    } catch (_) {}
+  </script>
+  <script src="assets/app.js"></script>
+  <script src="assets/buildings/icons.js"></script>
   <script>
     "use strict";
 
@@ -913,14 +944,17 @@
       if (n.includes("alliance")) return "economy";
       return "default";
     }
-    function buildingGlyph(name) {
-      const type = buildingType(name);
-      return `<img src="assets/buildings/${type}.svg" alt="" loading="lazy" decoding="async">`;
+    function buildingGlyph(id) {
+      const src = window.BUILDING_ICONS[id];
+      return src ? `<img src="${src}" alt="" loading="lazy" decoding="async">` : "";
+    }
+    function resourceGlyph(key) {
+      return `<img class="game-resource-icon" src="assets/ui/${key}.webp" alt="" loading="lazy" decoding="async">`;
     }
 
     function updateBasePicker() {
       const level = Number($("current-base").value);
-      $("base-value").textContent = `Base ${level}`;
+      $("base-value").innerHTML = `${buildingGlyph(1001)}<span>Base ${level}</span>`;
       $("base-down").disabled = level <= 0;
       $("base-up").disabled = level >= 30;
     }
@@ -955,11 +989,11 @@
           const stageTotal = summarize(stage.actions);
           const tasks = groupWork(stage.actions, modifier);
           const base = stage.actions.find(action => action.building_id === 1001);
-          const resources = total => `<div class="stage-resources">${["food", "metal", "oil"].map(key => `<div><span>${key[0].toUpperCase() + key.slice(1)}</span><strong>${compact(total[key])}</strong></div>`).join("")}</div>`;
+          const resources = total => `<div class="stage-resources">${["food", "metal", "oil"].map(key => `<div><span>${resourceGlyph(key)}${key[0].toUpperCase() + key.slice(1)}</span><strong>${compact(total[key])}</strong></div>`).join("")}</div>`;
           return `<article class="panel stage-card">
-            <header class="stage-header"><h2><span>Level</span> ${stage.level - 1} → ${stage.level}</h2></header>
+            <header class="stage-header"><h2>${buildingGlyph(1001)}<span>Level</span> ${stage.level - 1} → ${stage.level}</h2></header>
             <h3>Required buildings</h3>
-            <ul class="stage-buildings">${tasks.map(task => `<li class="building-row ${buildingType(task.name)}"><span class="building-icon" aria-hidden="true">${buildingGlyph(task.name)}</span><span class="building-label">${escape(task.name)}</span><strong>${task.from} → ${task.to}</strong></li>`).join("")}</ul>
+            <ul class="stage-buildings">${tasks.map(task => `<li class="building-row ${buildingType(task.name)}"><span class="building-icon" aria-hidden="true">${buildingGlyph(task.id)}</span><span class="building-label">${escape(task.name)}</span><strong>${task.from} → ${task.to}</strong></li>`).join("")}</ul>
             ${tasks.length ? "" : '<p class="section-note">No additional building upgrades needed.</p>'}
             <h3>Stage resources</h3>${resources(stageTotal)}
             <details class="stage-details"><summary>Upgrade details</summary>
@@ -992,7 +1026,7 @@
       $("building-inputs").innerHTML = BUILDING_IDS.map(id => {
         const selected = advanced ? manualLevels[id] ?? inferred[id] ?? 0 : quickOverrides[id] ?? -1;
         const auto = advanced ? "" : `<option value=""${selected === -1 ? " selected" : ""}>Auto · ${inferred[id] || 0}</option>`;
-        return `<label for="building-${id}" title="${escape(buildings[id].name)}">${escape(SHORT[buildings[id].name] || buildings[id].name)}</label><select id="building-${id}">${auto}${options(buildings[id].max_level, selected)}</select>`;
+        return `<label for="building-${id}" title="${escape(buildings[id].name)}">${buildingGlyph(id)}<span>${escape(SHORT[buildings[id].name] || buildings[id].name)}</span></label><select id="building-${id}">${auto}${options(buildings[id].max_level, selected)}</select>`;
       }).join("");
     }
 
@@ -1094,8 +1128,11 @@
       const roi = view === "roi";
       $("base-view").hidden = roi;
       $("roi-view").hidden = !roi;
-      $("base-view-button").setAttribute("aria-pressed", String(!roi));
-      $("roi-view-button").setAttribute("aria-pressed", String(roi));
+      document.querySelectorAll("[data-view]").forEach(link => {
+        const active = link.dataset.view === view;
+        link.classList.toggle("active", active);
+        if (active) link.setAttribute("aria-current", "page"); else link.removeAttribute("aria-current");
+      });
       history.replaceState(null, "", roi ? `${location.pathname}${location.search}#producer-roi` : location.pathname + location.search);
       document.title = roi ? "Z Route Producer ROI Calculator" : "Z Route Base Planner";
       if (roi) renderRoi();
@@ -1165,13 +1202,13 @@
         const gate = Math.max(0, ...upgrades.map(item => item.gate));
         $("roi-error").style.display = "none";
         $("roi-output-content").hidden = false;
-        $("roi-title").textContent = `${producer.building_name} ${current} → ${target}`;
+        $("roi-title").innerHTML = `${buildingGlyph(producer.building_id)}<span>${escape(producer.building_name)} ${current} → ${target}</span>`;
         $("roi-gate").textContent = `Requires Base ${gate || "—"} · Client v1.30.07`;
         $("roi-payback").textContent = durationHours(cumulative.paybackHours);
         $("roi-total-time").textContent = durationHours(cumulative.totalHours);
         $("roi-output").textContent = `+${compact(Math.round(cumulative.addedPerHour))}/h`;
         $("roi-output-note").textContent = `${producer.output_name}: ${compact(startOutput)} → ${compact(endOutput)} base per hour`;
-        $("roi-costs").innerHTML = directCosts.filter(cost => cost.count).map(cost => `<span>${escape(ROI_RESOURCE_NAMES[cost.type])} ${compact(cost.count)}</span>`).join("") || "Free";
+        $("roi-costs").innerHTML = directCosts.filter(cost => cost.count).map(cost => `<span>${resourceGlyph(RESOURCE[cost.type])}${escape(ROI_RESOURCE_NAMES[cost.type])} ${compact(cost.count)}</span>`).join("") || "Free";
         $("roi-investment").textContent = compact(Math.round(cumulative.investmentValue));
         $("roi-profit").textContent = number(Math.round(profit30));
         $("roi-profit").classList.toggle("negative", profit30 < 0);
@@ -1249,9 +1286,9 @@
             event.target.value = "";
           }
         });
-        $("base-view-button").addEventListener("click", () => setView("base"));
-        $("roi-view-button").addEventListener("click", () => setView("roi"));
-        document.querySelectorAll(".bottom-nav-item[data-view]").forEach(button => button.addEventListener("click", () => setView(button.dataset.view)));
+        document.querySelectorAll("[data-view]").forEach(link => link.addEventListener("click", event => {
+          event.preventDefault(); setView(link.dataset.view);
+        }));
         $("roi-producer").addEventListener("change", () => { renderRoiValues(); renderRoi(); });
         $("roi-current").addEventListener("change", () => {
           const current = Number($("roi-current").value);
@@ -1286,10 +1323,7 @@
       if (!deferredInstall) { alert("Use your browser menu and choose Install app or Add to Home Screen."); return; }
       deferredInstall.prompt(); await deferredInstall.userChoice; deferredInstall = null;
     });
-    const themeToggle = $("theme-toggle");
-    function setTheme(mode) { document.body.classList.toggle("day", mode === "day"); themeToggle.textContent = mode === "day" ? "☾" : "☼"; themeToggle.setAttribute("aria-label", mode === "day" ? "Switch to night mode" : "Switch to day mode"); localStorage.setItem("zroute-theme", mode); }
-    setTheme(localStorage.getItem("zroute-theme") || "night");
-    themeToggle.addEventListener("click", () => setTheme(document.body.classList.contains("day") ? "night" : "day"));
+    // Theme/header controls are shared with the hero and research pages (assets/app.js).
     if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js?v=6").catch(() => {});
     document.addEventListener("languagechange", () => { if (buildings) { render(); renderRoi(); } });
     init();

@@ -2,6 +2,8 @@
 
 This repository turns static progression facts from Android client version `1.30.07` into machine-readable JSON for route planning and leveling analysis. It covers buildings, research, resource generation and gathering nodes, speedups, playable heroes, hero progression, and equipment. The original Base level 1–30 CSV remains available for spreadsheet use.
 
+The Base and Producer ROI tools use the client's original building/resource artwork and the same header/mobile navigation as the hero and research tools; see [game icon provenance](docs/base-game-icons.md).
+
 Use the interactive [Z Route Progression Planner](https://jeffxlabs.github.io/zrouteredemption/) to calculate a Base route or compare the payback time and 30-day profit of every resource-producer upgrade.
 
 Calculate exact leveling costs with the interactive [Hero EXP Calculator](https://jeffxlabs.github.io/zrouteredemption/hero-exp/): EXP from any level to any level (Lv 150 needs 5,237,407,280 EXP), hero level caps per HQ level (HQ × 5, `BFCastleBase`), the 1K Battle EXP item and R/SR/SSR/UR Hero EXP chests sized for your HQ level (`CastleBox`), and Alliance Competition hero-day points (1 point per 650 Hero EXP, `PointSource` 1365, boosted by the Points Buff research). The EXP table continues to Lv 175, but HQ currently stops at 30, which caps heroes at Lv 150. Data: [`data/hero_exp.json`](data/hero_exp.json) from `tools/extract_hero_exp.py`.
