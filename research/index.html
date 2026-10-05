@@ -179,6 +179,7 @@
   </nav>
 
   <script src="../assets/app.js"></script>
+  <script src="research_effects.js"></script>
   <script src="research_data.js"></script>
   <script>
   (async () => {
@@ -375,7 +376,10 @@
       const reqs = new Map();
       x.levels.forEach(l => l.req.forEach(r => reqs.set(r.tech, Math.max(reqs.get(r.tech) || 0, r.level))));
       const c = cost(x, s.c, s.t);
+      const effect = window.researchUpgradeEffect(x, s.c, s.t);
+      const effectList = items => items.map(text => esc(I18N.t(text))).join(' · ');
       box.innerHTML = `<div class="detail-head"><span class="ring"><img src="${esc(x.icon)}" alt=""></span><div><h3>${esc(x.name)}</h3><div class="muted" style="font-size:12.5px">${esc(x.description || '')} · ${esc(t.name)} · ${I18N.t('max Lv {0}', [fmt(x.max_level)])}</div></div><button class="close-x" type="button" id="close-detail" aria-label="Close">✕</button></div>
+        <section class="note" aria-label="${esc(I18N.t('Upgrade effect'))}" style="margin:12px 0"><strong>${I18N.t('Upgrade effect')} · ${I18N.t('Lv {0}', [fmt(effect.level)])}</strong><p style="margin:6px 0 0">${effect.effects.length ? effectList(effect.effects) : esc(x.description || I18N.t('Effect not available in the source data.'))}</p>${s.c > 0 && effect.level > s.c && effect.currentEffects.length ? `<p class="muted" style="margin:6px 0 0">${I18N.t('Current')} · ${I18N.t('Lv {0}', [fmt(s.c)])}: ${effectList(effect.currentEffects)}</p>` : ''}</section>
         ${x.has_costs ? '' : '<div class="note warn">This tech is newer than the cost tables in this site (client 1.30.07), so its costs are not shown.</div>'}
         <div class="levels-ctl">
           <label>Current <span class="stepper"><button type="button" data-lv="c" data-d="-1" aria-label="Current level down">−</button><input type="number" id="lv-c" value="${s.c}" min="0" max="${x.max_level}" inputmode="numeric" aria-label="Current level"><button type="button" data-lv="c" data-d="1" aria-label="Current level up">+</button></span></label>
@@ -384,7 +388,7 @@
         </div>
         ${s.t > s.c ? `<div class="chips" style="margin-bottom:8px">${RES.filter(([k]) => c[k]).map(([k, l, ic]) => `<span class="chip sm"><img src="${UI}${ic}.webp" alt="">${fmt(c[k])}</span>`).join('')}<span class="chip sm">${duration(effTime(c.time))}</span><span class="chip sm"><img src="${UI}power.webp" alt="">+${fmt(c.power)}</span></div>` : ''}
         ${reqs.size ? `<div class="reqs">${[...reqs].map(([id, lv]) => { const r = techById.get(id), rs = st(id), bad = unmet.has(id); return `<div class="req ${bad ? 'unmet' : ''}">${r ? `<img src="${esc(r.icon)}" alt="">` : ''}<span>Needs ${esc(r ? r.name : `Tech ${id}`)} Lv ${lv}${bad ? ' (not planned)' : ' ✓'}</span></div>`; }).join('')}${unmet.size ? `<button class="btn sm" type="button" id="fix-reqs" style="justify-self:start">Plan missing prerequisites</button>` : ''}</div>` : ''}
-        <div class="table-wrap"><table class="data lvt"><thead><tr><th>Lv</th><th class="r">Time</th>${hasChips ? `<th class="r"><img class="th-ic" src="${UI}research_data.webp" alt="Research Data"></th>` : ''}<th class="r"><img class="th-ic" src="${UI}food.webp" alt="Food"></th><th class="r"><img class="th-ic" src="${UI}metal.webp" alt="Metal"></th><th class="r"><img class="th-ic" src="${UI}oil.webp" alt="Oil"></th></tr></thead><tbody>${x.levels.map(l => { const cls = l.level <= s.c ? 'done' : l.level <= s.t ? 'plan' : ''; return `<tr class="${cls} top"><td><b>${fmt(l.level)}</b></td><td class="r">${duration(effTime(l.time))}</td>${hasChips ? `<td class="r">${l.chips ? fmt(l.chips) : '—'}</td>` : ''}<td class="r">${short(l.food)}</td><td class="r">${short(l.metal)}</td><td class="r">${short(l.oil)}</td></tr><tr class="${cls} sub"><td></td><td colspan="${hasChips ? 5 : 4}" class="ben">${l.benefits.map(esc).join(' · ')}<span class="faint"> · ${I18N.t('Institute Lv {0}', [fmt(l.institute || 1)])} · Power +${fmt(l.power)}</span></td></tr>`; }).join('')}</tbody></table></div>`;
+        <div class="table-wrap"><table class="data lvt"><thead><tr><th>Lv</th><th class="r">Time</th>${hasChips ? `<th class="r"><img class="th-ic" src="${UI}research_data.webp" alt="Research Data"></th>` : ''}<th class="r"><img class="th-ic" src="${UI}food.webp" alt="Food"></th><th class="r"><img class="th-ic" src="${UI}metal.webp" alt="Metal"></th><th class="r"><img class="th-ic" src="${UI}oil.webp" alt="Oil"></th></tr></thead><tbody>${x.levels.map(l => { const cls = l.level <= s.c ? 'done' : l.level <= s.t ? 'plan' : ''; return `<tr class="${cls} top"><td><b>${fmt(l.level)}</b></td><td class="r">${duration(effTime(l.time))}</td>${hasChips ? `<td class="r">${l.chips ? fmt(l.chips) : '—'}</td>` : ''}<td class="r">${short(l.food)}</td><td class="r">${short(l.metal)}</td><td class="r">${short(l.oil)}</td></tr><tr class="${cls} sub"><td></td><td colspan="${hasChips ? 5 : 4}" class="ben">${effectList(window.researchUpgradeEffect(x, 0, l.level).effects)}<span class="faint"> · ${I18N.t('Institute Lv {0}', [fmt(l.institute || 1)])} · Power +${fmt(l.power)}</span></td></tr>`; }).join('')}</tbody></table></div>`;
       box.classList.add('open'); $('#backdrop').classList.add('open');
     }
     function setLevel(which, v) {
