@@ -7,6 +7,8 @@ The **Saved plans** panel adds named snapshots and portable JSON files.
 - Select a saved plan and choose **Load plan** to restore it. You are asked before replacing the active plan.
 - Saving the same name asks before overwriting that snapshot.
 - **Delete plan** deletes only the selected snapshot, not the active working plan.
+- **Copy plan** copies a shareable URL containing all trees, current/target levels, research speed, selected tree, cost scope and plan name. Opening the link asks before replacing the active plan. The data is encoded in the URL fragment, not uploaded to a server; anyone with the link can read the plan. Full-account plans are supported without a URL-shortening service.
+- **Copy summary** retains the readable text summary for the selected tree or all trees.
 - **Export JSON** downloads the active plan, including every tree (regardless of the selected cost scope), current and target levels, research speed, selected tree and cost scope.
 - **Import JSON** validates an exported file, then asks before replacing the active plan. Use **Save plan** afterwards to keep an additional named copy.
 

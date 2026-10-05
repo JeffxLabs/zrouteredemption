@@ -155,7 +155,8 @@
           <div class="m-actions" style="display:flex;gap:6px;flex-wrap:wrap;margin-top:10px">
             <button class="btn sm" type="button" id="max-tree">Plan whole tree</button>
             <button class="btn sm" type="button" id="reset-tree">Reset tree</button>
-            <button class="btn sm" type="button" id="copy-plan">Copy plan</button>
+            <button class="btn sm" type="button" id="copy-plan" title="Copy a shareable URL with all trees and research speed">Copy plan</button>
+            <button class="btn sm" type="button" id="copy-summary">Copy summary</button>
           </div>
         </section>
         <section class="card" aria-labelledby="plans-title">
@@ -522,6 +523,17 @@
     $('#max-tree').addEventListener('click', () => { trees.find(t => t.id === S.tree).techs.forEach(x => { st(x.id).t = x.max_level; }); save(); refresh(); toast('Whole tree planned'); });
     $('#reset-tree').addEventListener('click', () => { trees.find(t => t.id === S.tree).techs.forEach(x => { plan[x.id] = { c: 0, t: 0 }; }); save(); refresh(); toast('Tree reset'); });
     $('#copy-plan').addEventListener('click', () => {
+      try {
+        const encoded = RP.encodeLink(snapshot(), D.trees);
+        const url = new URL(location.href);
+        if (url.protocol === 'file:') {
+          url.href = 'https://jeffxlabs.github.io/zrouteredemption/research/';
+        }
+        url.hash = 'plan=' + encoded;
+        copy(url.href, 'Plan link copied');
+      } catch (_) { message('Could not create a plan link. Export JSON instead.'); }
+    });
+    $('#copy-summary').addEventListener('click', () => {
       const list = S.scope === 'all' ? [...techById.values()] : trees.find(t => t.id === S.tree).techs;
       const c = planCost(list);
       const lines = list.filter(x => st(x.id).t > st(x.id).c).map(x => I18N.t('• {0}: Lv {1} → {2}', [x.name, st(x.id).c, st(x.id).t]));
@@ -560,6 +572,16 @@
     function selectTech(id) { S.tech = id; refresh(); }
     function refresh() { renderTrees(); renderTree(); renderTotals(); renderDetail(); I18N.apply(document.body); }
     refresh();
+    // Validate first, then confirm before overwriting local working progress.
+    function openSharedPlan() {
+      if (!location.hash.startsWith('#plan=')) return;
+      try {
+        const shared = RP.decodeLink(location.hash.slice(6), D.trees);
+        if (activate(shared)) message('Shared plan loaded. Use Save plan to keep a named copy.');
+      } catch (_) { message('Could not open this plan link. The active plan was not changed.'); }
+    }
+    openSharedPlan();
+    window.addEventListener('hashchange', openSharedPlan);
     document.addEventListener('languagechange', async () => {
       const code = I18N.language;
       let next;

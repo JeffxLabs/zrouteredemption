@@ -5,7 +5,11 @@ import vm from 'node:vm';
 const root = new URL('../', import.meta.url);
 const read = path => readFileSync(new URL(path, root), 'utf8');
 const nodes = new Map(), storage = new Map();
-let allowConfirm = true, storageFails = false, downloaded = false;
+let allowConfirm = true, storageFails = false, downloaded = false, copied = '';
+class TestURL extends URL {
+  static createObjectURL() { return 'blob:test'; }
+  static revokeObjectURL() {}
+}
 function node(id) {
   if (!nodes.has(id)) nodes.set(id, {
     value: '', innerHTML: '', textContent: '', disabled: false, hidden: false,
@@ -20,16 +24,17 @@ const document = {
   body, head: { appendChild() {} }, querySelector: node, querySelectorAll: () => [],
   addEventListener() {}, createElement() { return { click() { downloaded = true; }, remove() {} }; },
 };
-const context = vm.createContext({ window: {}, document,
+const windowEvents = {};
+const context = vm.createContext({ window: { addEventListener(name, handler) { windowEvents[name] = handler; } }, document,
   I18N: { language: 'en', locale: 'en-US', t: (key, args = []) => key.replace(/\{(\d+)\}/g, (_, i) => args[i]), apply() {} },
   localStorage: { setItem(k, v) { if (storageFails) throw Error('quota'); storage.set(k, v); } },
-  location: { hash: '#tree-11', pathname: '/research/', search: '' }, history: { replaceState() {} },
-  confirm: () => allowConfirm, Blob, URL: { createObjectURL: () => 'blob:test', revokeObjectURL() {} },
+  location: { href: 'https://jeffxlabs.github.io/zrouteredemption/research/?lang=en#tree-11', hash: '#tree-11', pathname: '/research/', search: '?lang=en' }, history: { replaceState() {} },
+  confirm: () => allowConfirm, Blob, URL: TestURL, TextEncoder, TextDecoder, btoa, atob,
   setTimeout: fn => fn(), Intl, console,
 });
 context.window.ZR = { store: { get: k => storage.get(k) ?? null, set: (k, v) => storage.set(k, v) },
   esc: x => String(x ?? '').replace(/[<>"&]/g, '_'), fmt: String, short: String,
-  duration: x => String(x), copy() {}, toast() {} };
+  duration: x => String(x), copy(text) { copied = text; }, toast() {} };
 for (const path of ['research/research_data.js', 'research/research_effects.js', 'research/research_plans.js']) vm.runInContext(read(path), context);
 const { ResearchPlans: RP, RESEARCH_DATA: data } = context.window;
 const state = { plan: { 1001: { c: 1, t: 2 }, 11001: { c: 2, t: 7 }, 11023: { c: 0, t: 1 } }, tree: 11, speed: 125.5, scope: 'all' };
@@ -54,6 +59,26 @@ assert.throws(() => RP.parse(' '.repeat(RP.MAX_BYTES + 1), data.trees));
 const poison = clone(); poison.state.plan = JSON.parse('{"__proto__":{"c":0,"t":1}}');
 assert.throws(() => RP.validate(poison, data.trees));
 assert.equal({}.c, undefined);
+// Compact URL payloads round-trip across languages and include all account trees.
+const encoded = RP.encodeLink(original, data.trees);
+assert.match(encoded, /^[A-Za-z0-9_-]+$/);
+assert.equal(JSON.stringify(RP.decodeLink(encoded, data.trees)), JSON.stringify(original));
+const unicode = clone(); unicode.name = 'T10 · 研究 📘';
+assert.equal(RP.decodeLink(RP.encodeLink(unicode, data.trees), data.trees).name, unicode.name);
+const full = clone();
+full.state.plan = Object.fromEntries(data.trees.flatMap(t => t.techs.map(x => [x.id, { c: 0, t: x.max_level }])));
+const fullLink = RP.encodeLink(full, data.trees);
+assert.ok(fullLink.length < 10000, 'Full-account plan should fit in a practical URL');
+assert.equal(Object.keys(RP.decodeLink(fullLink, data.trees).state.plan).length, data.trees.flatMap(t => t.techs).length);
+for (const invalid of ['', '%invalid', 'A'.repeat(RP.MAX_LINK + 1), btoa('not JSON')]) assert.throws(() => RP.decodeLink(invalid, data.trees));
+const pack = value => btoa(JSON.stringify(value)).replace(/\\+/g, '-').replace(/\\//g, '_').replace(/=+$/, '');
+for (const value of [
+  [2, 'Plan', 11, 0, 0, []],
+  [1, 'Plan', 11, 0, 4, []],
+  [1, 'Plan', 11, 0, 0, [[11001, 0, 1], [11001, 0, 2]]],
+  [1, 'Plan', 11, 0, 0, [[99999, 0, 1]]],
+  [1, 'Plan', 11, 0, 0, [[11001, 0, 99]]],
+]) assert.throws(() => RP.decodeLink(pack(value), data.trees));
 const app = [...read('research/index.html').matchAll(/<script\b[^>]*>([\s\S]*?)<\/script>/g)].at(-1)[1];
 await vm.runInContext(app, context);
 const click = id => node('#' + id).listeners.click();
@@ -83,10 +108,34 @@ allowConfirm = true;
 click('load-plan');
 assert.equal(storage.get('zr-research-plan'), before, 'Loading reproduces the snapshot');
 click('export-plan'); assert.equal(downloaded, true, 'Export triggers file download');
+click('copy-plan');
+const copiedUrl = new URL(copied);
+assert.equal(copiedUrl.origin, 'https://jeffxlabs.github.io');
+assert.equal(copiedUrl.searchParams.get('lang'), 'en');
+assert.equal(copiedUrl.hash.slice(0, 6), '#plan=');
+assert.equal(JSON.stringify(RP.decodeLink(copiedUrl.hash.slice(6), data.trees)), JSON.stringify(original));
+click('copy-summary'); assert.match(copied, /Z Route research plan/);
 storageFails = true; node('#plan-name').value = 'Blocked save'; click('save-plan');
 assert.equal(JSON.parse(storage.get('zr-research-saved-plans')).length, 1);
 assert.match(node('#plan-status').textContent, /Could not save/);
 storageFails = false; click('delete-plan');
 assert.equal(JSON.parse(storage.get('zr-research-saved-plans')).length, 0);
 assert.equal(storage.get('zr-research-plan'), before, 'Deleting snapshot leaves active plan intact');
-console.log('Research plans: JSON round trips, validation, snapshot independence, import/save/load/export/delete handlers, cancellation and storage failures passed.');
+// Opening a shared URL is validated and confirmed just like a file import.
+context.location.hash = '#plan=' + RP.encodeLink(unicode, data.trees);
+allowConfirm = false;
+await vm.runInContext(app, context);
+assert.equal(storage.get('zr-research-plan'), before, 'Declining shared URL leaves local progress untouched');
+allowConfirm = true;
+await vm.runInContext(app, context);
+assert.equal(node('#plan-name').value, unicode.name);
+assert.deepEqual(JSON.parse(storage.get('zr-research-plan')), unicode.state);
+const sharedBefore = storage.get('zr-research-plan');
+context.location.hash = '#plan=bad_payload';
+await vm.runInContext(app, context);
+assert.equal(storage.get('zr-research-plan'), sharedBefore, 'Malformed shared URL preserves local progress');
+assert.match(node('#plan-status').textContent, /Could not open/);
+context.location.hash = '#plan=' + encoded;
+windowEvents.hashchange();
+assert.equal(node('#plan-name').value, original.name, 'Shared fragment navigation works without reloading');
+console.log('Research plans: JSON/URL round trips, full-account links, Unicode, validation, snapshots, import/save/load/export/copy/delete handlers, cancellation and storage failures passed.');
