@@ -97,6 +97,9 @@
       .detail:not(.open) { display: none; }
       .sheet-backdrop.open { display: block; position: fixed; inset: 0; z-index: 69; background: rgba(0,0,0,.6); }
     }
+    .note.effect { flex-direction: column; align-items: stretch; gap: 4px; margin: 12px 0; line-height: 1.4; }
+    .note.effect strong { display: block; }
+    .note.effect p { margin: 0; }
     .close-x { margin-left: auto; width: 32px; height: 32px; border-radius: 50%; border: 1px solid var(--line2); background: var(--s2); cursor: pointer; display: grid; place-items: center; }
     @media (min-width: 1000px) { .close-x { display: none; } }
 
@@ -105,7 +108,8 @@
     @media (min-width: 1200px) { .fab-wrap { right: 24px; bottom: 24px; } }
     .fab { width: 52px; height: 52px; border-radius: 50%; border: 1px solid var(--line2); background: var(--text); color: var(--bg); display: grid; place-items: center; cursor: pointer; box-shadow: 0 8px 28px rgba(0,0,0,.45); transition: transform .18s ease; }
     .fab svg { width: 22px; height: 22px; transition: transform .18s ease; }
-    .fab[aria-expanded="true"] svg { transform: rotate(45deg); }
+    .fab .ic-close, .fab[aria-expanded="true"] .ic-open { display: none; }
+    .fab[aria-expanded="true"] .ic-close { display: block; }
     .fab:active { transform: scale(.94); }
     .fab-menu { min-width: 220px; max-width: calc(100vw - 32px); background: var(--s3); border: 1px solid var(--line2); border-radius: 14px; padding: 6px; box-shadow: 0 14px 44px rgba(0,0,0,.55); transform-origin: bottom right; animation: fab-in .14s ease-out; }
     .fab-menu[hidden] { display: none; }
@@ -216,7 +220,7 @@
       <hr>
       <button type="button" role="menuitem" id="copy-plan" title="Copy a shareable URL with all trees and research speed"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg><span>Copy plan</span></button>
     </div>
-    <button class="fab" type="button" id="fab" aria-label="Plan actions" aria-haspopup="menu" aria-expanded="false" aria-controls="fab-menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+    <button class="fab" type="button" id="fab" aria-label="Plan actions" aria-haspopup="menu" aria-expanded="false" aria-controls="fab-menu"><svg class="ic-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h9M17 6h3M4 12h3M11 12h9M4 18h11M19 18h1"/><circle cx="15" cy="6" r="2"/><circle cx="9" cy="12" r="2"/><circle cx="17" cy="18" r="2"/></svg><svg class="ic-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
   </div>
 
   <nav class="bottom-nav" aria-label="Site">
@@ -418,6 +422,7 @@
     const totalLevels = t => t.techs.reduce((a, x) => a + x.max_level, 0);
     const doneLevels = t => t.techs.reduce((a, x) => a + Math.max(st(x.id).c, st(x.id).t), 0);
     const treeComplete = t => t.techs.every(x => st(x.id).c >= x.max_level);
+    const treeEmpty = t => t.techs.every(x => !st(x.id).c && !st(x.id).t);
     const treeMax = new Map(trees.map(t => [t.id, t.techs.reduce((a, x) => add(a, cost(x, 0, x.max_level)), {})]));
     const effTime = s => s / (1 + S.speed / 100);
 
@@ -522,7 +527,7 @@
           <label>Target <span class="stepper"><button type="button" data-lv="t" data-d="-1" aria-label="Target level down">−</button><input type="number" id="lv-t" value="${Math.max(s.t, s.c)}" min="0" max="${x.max_level}" inputmode="numeric" aria-label="Target level"><button type="button" data-lv="t" data-d="1" aria-label="Target level up">+</button></span></label>
           <button class="btn sm" type="button" data-lv-max>Max</button>
         </div>
-        <section class="note" aria-label="${esc(I18N.t('Upgrade effect'))}" style="margin:12px 0"><strong>${I18N.t('Upgrade effect')} · ${I18N.t('Lv {0}', [fmt(effect.level)])}</strong><p style="margin:6px 0 0">${effect.effects.length ? effectList(effect.effects) : esc(x.description || I18N.t('Effect not available in the source data.'))}</p>${s.c > 0 && effect.level > s.c && effect.currentEffects.length ? `<p class="muted" style="margin:6px 0 0">${I18N.t('Current')} · ${I18N.t('Lv {0}', [fmt(s.c)])}: ${effectList(effect.currentEffects)}</p>` : ''}</section>
+        <section class="note effect" aria-label="${esc(I18N.t('Upgrade effect'))}"><strong>${I18N.t('Upgrade effect')} · ${I18N.t('Lv {0}', [fmt(effect.level)])}</strong><p>${effect.effects.length ? effectList(effect.effects) : esc(x.description || I18N.t('Effect not available in the source data.'))}</p>${s.c > 0 && effect.level > s.c && effect.currentEffects.length ? `<p class="muted">${I18N.t('Current')} · ${I18N.t('Lv {0}', [fmt(s.c)])}: ${effectList(effect.currentEffects)}</p>` : ''}</section>
         ${x.has_costs ? '' : '<div class="note warn">This tech is newer than the cost tables in this site (client 1.30.07), so its costs are not shown.</div>'}
         ${s.t > s.c ? `<div class="chips" style="margin-bottom:8px">${RES.filter(([k]) => c[k]).map(([k, l, ic]) => `<span class="chip sm"><img src="${UI}${ic}.webp" alt="">${fmt(c[k])}</span>`).join('')}<span class="chip sm">${duration(effTime(c.time))}</span><span class="chip sm"><img src="${UI}power.webp" alt="">+${fmt(c.power)}</span></div>` : ''}
         ${reqs.size ? `<div class="reqs">${[...reqs].map(([id, lv]) => { const r = techById.get(id), rs = st(id), bad = unmet.has(id); return `<div class="req ${bad ? 'unmet' : ''}">${r ? `<img src="${esc(r.icon)}" alt="">` : ''}<span>Needs ${esc(r ? r.name : `Tech ${id}`)} Lv ${lv}${bad ? ' (not planned)' : ' ✓'}</span></div>`; }).join('')}${unmet.size ? `<button class="btn sm" type="button" id="fix-reqs" style="justify-self:start">Plan missing prerequisites</button>` : ''}</div>` : ''}
@@ -568,11 +573,18 @@
     $('#complete-tree').addEventListener('click', () => {
       const t = trees.find(z => z.id === S.tree);
       if (treeComplete(t)) { toast(I18N.t('Tree already fully researched')); return; }
-      if (!confirm(I18N.t('Mark every tech in {0} as fully researched? Current levels will be set to max.', [t.name]))) return;
+      // An untouched tree has nothing to lose, so only confirm when levels were set by hand.
+      if (!treeEmpty(t) && !confirm(I18N.t('Mark every tech in {0} as fully researched? Current levels will be set to max.', [t.name]))) return;
       t.techs.forEach(x => { plan[x.id] = { c: x.max_level, t: x.max_level }; });
       save(); refresh(); toast(I18N.t('Tree marked as fully researched'));
     });
-    $('#reset-tree').addEventListener('click', () => { trees.find(t => t.id === S.tree).techs.forEach(x => { plan[x.id] = { c: 0, t: 0 }; }); save(); refresh(); toast('Tree reset'); });
+    $('#reset-tree').addEventListener('click', () => {
+      const t = trees.find(z => z.id === S.tree);
+      if (treeEmpty(t)) { toast(I18N.t('Tree is already empty')); return; }
+      if (!confirm(I18N.t('Reset {0}? All current and target levels in this tree will be set to 0.', [t.name]))) return;
+      t.techs.forEach(x => { plan[x.id] = { c: 0, t: 0 }; });
+      save(); refresh(); toast(I18N.t('Tree reset'));
+    });
     $('#copy-plan').addEventListener('click', () => {
       try {
         const encoded = RP.encodeLink(snapshot(), D.trees);
