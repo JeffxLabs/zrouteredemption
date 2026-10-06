@@ -35,6 +35,10 @@
     .ttile .bar { grid-column: 1 / -1; height: 3px; border-radius: 2px; background: var(--line2); overflow: hidden; margin-top: 3px; }
     .ttile .bar i { display: block; height: 100%; background: var(--accent); }
     .ttile[aria-pressed="true"] { border-color: var(--text); background: var(--s2); }
+    .ttile { position: relative; }
+    .ttile.complete { border-color: color-mix(in srgb, var(--ur) 55%, var(--line)); }
+    .ttile.complete .bar i { background: var(--ur); }
+    .ttile .done-mark { position: absolute; top: 4px; right: 6px; font-size: 11px; font-weight: 800; color: var(--ur); }
 
     .main { display: grid; gap: 12px; }
     @media (min-width: 1000px) { .main { grid-template-columns: minmax(0, 1fr) 400px; align-items: start; } .side { position: sticky; top: calc(var(--header-h) + 12px); max-height: calc(100vh - var(--header-h) - 24px); overflow: auto; } }
@@ -155,6 +159,7 @@
           <div class="speed"><label for="speed-r" style="white-space:nowrap">Research speed</label><input type="range" id="speed-r" min="0" max="300" step="1"><input class="input num" id="speed-n" type="number" min="0" max="1000" inputmode="numeric" aria-label="Research speed bonus percent"><span>%</span></div>
           <div class="m-actions" style="display:flex;gap:6px;flex-wrap:wrap;margin-top:10px">
             <button class="btn sm" type="button" id="max-tree">Plan whole tree</button>
+            <button class="btn sm" type="button" id="complete-tree" title="Set every tech in this tree to its max level as already researched">Mark tree maxed</button>
             <button class="btn sm" type="button" id="reset-tree">Reset tree</button>
             <button class="btn sm" type="button" id="copy-plan" title="Copy a shareable URL with all trees and research speed">Copy plan</button>
             <button class="btn sm" type="button" id="copy-summary">Copy summary</button>
@@ -388,6 +393,7 @@
     function planCost(list) { const o = { chips: 0, food: 0, metal: 0, oil: 0, time: 0, power: 0, techs: 0, levels: 0 }; list.forEach(x => { const s = st(x.id); if (s.t > s.c) { add(o, cost(x, s.c, s.t)); o.techs++; o.levels += s.t - s.c; } }); return o; }
     const totalLevels = t => t.techs.reduce((a, x) => a + x.max_level, 0);
     const doneLevels = t => t.techs.reduce((a, x) => a + Math.max(st(x.id).c, st(x.id).t), 0);
+    const treeComplete = t => t.techs.every(x => st(x.id).c >= x.max_level);
     const treeMax = new Map(trees.map(t => [t.id, t.techs.reduce((a, x) => add(a, cost(x, 0, x.max_level)), {})]));
     const effTime = s => s / (1 + S.speed / 100);
 
@@ -409,8 +415,8 @@
     // ---------- Tree strip ----------
     function renderTrees() {
       $('#trees').innerHTML = trees.map(t => {
-        const pct = doneLevels(t) / totalLevels(t) * 100, mx = treeMax.get(t.id);
-        return `<button type="button" class="ttile" data-tree="${t.id}" aria-pressed="${t.id === S.tree}" title="${esc(t.name)} · ${esc(t.unlock.map(unlockText).join(' · '))}"><img src="${esc(t.icon)}" alt=""><b title="${esc(t.name)}">${esc(t.name)}</b><small>${I18N.t('{0} techs', [fmt(t.techs.length)])}${mx.chips ? ` · <img src="${UI}research_data.webp" alt="">${short(mx.chips)}` : ''}</small><span class="bar"><i style="width:${pct.toFixed(1)}%"></i></span></button>`;
+        const pct = doneLevels(t) / totalLevels(t) * 100, mx = treeMax.get(t.id), done = treeComplete(t);
+        return `<button type="button" class="ttile${done ? ' complete' : ''}" data-tree="${t.id}" aria-pressed="${t.id === S.tree}" title="${esc(t.name)}${done ? ` · ${esc(I18N.t('Fully researched'))}` : ''} · ${esc(t.unlock.map(unlockText).join(' · '))}">${done ? `<span class="done-mark" aria-hidden="true">✓</span>` : ''}<img src="${esc(t.icon)}" alt=""><b title="${esc(t.name)}">${esc(t.name)}</b><small>${I18N.t('{0} techs', [fmt(t.techs.length)])}${mx.chips ? ` · <img src="${UI}research_data.webp" alt="">${short(mx.chips)}` : ''}</small><span class="bar"><i style="width:${pct.toFixed(1)}%"></i></span></button>`;
       }).join('');
     }
     $('#trees').addEventListener('click', e => { const b = e.target.closest('[data-tree]'); if (b) selectTree(+b.dataset.tree); });
@@ -421,7 +427,7 @@
       const t = trees.find(x => x.id === S.tree);
       const mx = treeMax.get(t.id);
       $('#thead').innerHTML = `<img src="${esc(t.icon)}" alt=""><div class="grow"><h2 id="tree-name">${esc(t.name)}</h2><div class="chips">${t.unlock.map(u => `<span class="chip sm">${u.kind === 'institute_level' ? `<img src="../assets/buildings/research.svg" alt="">` : u.kind === 'tree_progress' ? `<img src="${esc((trees.find(z => z.id === u.tree) || {}).icon || '')}" alt="">` : ''}${esc(unlockText(u))}</span>`).join('')}</div></div>
-        <div class="chips">${mx.chips ? `<span class="chip" title="Research Data to max this tree"><img src="${UI}research_data.webp" alt="">${fmt(mx.chips)}</span>` : ''}<span class="chip" title="Base research time to max this tree">${duration(mx.time)}</span></div>`;
+        <div class="chips">${treeComplete(t) ? `<span class="chip" style="color:var(--ur)">✓ ${esc(I18N.t('Fully researched'))}</span>` : ''}${mx.chips ? `<span class="chip" title="Research Data to max this tree"><img src="${UI}research_data.webp" alt="">${fmt(mx.chips)}</span>` : ''}<span class="chip" title="Base research time to max this tree">${duration(mx.time)}</span></div>`;
       const pos = new Map(t.techs.map(x => [x.pos, x]));
       const rowh = 100, links = [];
       t.techs.forEach(x => x.from.forEach(p => {
@@ -523,6 +529,13 @@
 
     // ---------- Tree actions ----------
     $('#max-tree').addEventListener('click', () => { trees.find(t => t.id === S.tree).techs.forEach(x => { st(x.id).t = x.max_level; }); save(); refresh(); toast('Whole tree planned'); });
+    $('#complete-tree').addEventListener('click', () => {
+      const t = trees.find(z => z.id === S.tree);
+      if (treeComplete(t)) { toast(I18N.t('Tree already fully researched')); return; }
+      if (!confirm(I18N.t('Mark every tech in {0} as fully researched? Current levels will be set to max.', [t.name]))) return;
+      t.techs.forEach(x => { plan[x.id] = { c: x.max_level, t: x.max_level }; });
+      save(); refresh(); toast(I18N.t('Tree marked as fully researched'));
+    });
     $('#reset-tree').addEventListener('click', () => { trees.find(t => t.id === S.tree).techs.forEach(x => { plan[x.id] = { c: 0, t: 0 }; }); save(); refresh(); toast('Tree reset'); });
     $('#copy-plan').addEventListener('click', () => {
       try {
