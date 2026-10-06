@@ -114,7 +114,6 @@ assert.equal(copiedUrl.origin, 'https://jeffxlabs.github.io');
 assert.equal(copiedUrl.searchParams.get('lang'), 'en');
 assert.equal(copiedUrl.hash.slice(0, 6), '#plan=');
 assert.equal(JSON.stringify(RP.decodeLink(copiedUrl.hash.slice(6), data.trees)), JSON.stringify(original));
-click('copy-summary'); assert.match(copied, /Z Route research plan/);
 storageFails = true; node('#plan-name').value = 'Blocked save'; click('save-plan');
 assert.equal(JSON.parse(storage.get('zr-research-saved-plans')).length, 1);
 assert.match(node('#plan-status').textContent, /Could not save/);

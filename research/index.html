@@ -99,6 +99,25 @@
     }
     .close-x { margin-left: auto; width: 32px; height: 32px; border-radius: 50%; border: 1px solid var(--line2); background: var(--s2); cursor: pointer; display: grid; place-items: center; }
     @media (min-width: 1000px) { .close-x { display: none; } }
+
+    /* Floating plan-actions menu */
+    .fab-wrap { position: fixed; right: 16px; bottom: calc(76px + var(--safe-b)); z-index: 50; display: flex; flex-direction: column; align-items: flex-end; gap: 10px; }
+    @media (min-width: 1200px) { .fab-wrap { right: 24px; bottom: 24px; } }
+    .fab { width: 52px; height: 52px; border-radius: 50%; border: 1px solid var(--line2); background: var(--text); color: var(--bg); display: grid; place-items: center; cursor: pointer; box-shadow: 0 8px 28px rgba(0,0,0,.45); transition: transform .18s ease; }
+    .fab svg { width: 22px; height: 22px; transition: transform .18s ease; }
+    .fab[aria-expanded="true"] svg { transform: rotate(45deg); }
+    .fab:active { transform: scale(.94); }
+    .fab-menu { min-width: 220px; max-width: calc(100vw - 32px); background: var(--s3); border: 1px solid var(--line2); border-radius: 14px; padding: 6px; box-shadow: 0 14px 44px rgba(0,0,0,.55); transform-origin: bottom right; animation: fab-in .14s ease-out; }
+    .fab-menu[hidden] { display: none; }
+    @keyframes fab-in { from { opacity: 0; transform: translateY(6px) scale(.96); } to { opacity: 1; transform: none; } }
+    .fab-title { font-size: 11px; font-weight: 700; color: var(--faint); text-transform: uppercase; letter-spacing: .04em; padding: 6px 10px 4px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .fab-menu hr { border: 0; border-top: 1px solid var(--line); margin: 4px 6px; }
+    .fab-menu button { display: flex; align-items: center; gap: 10px; width: 100%; text-align: left; border: 0; background: none; color: var(--text); font: inherit; font-size: 13.5px; font-weight: 600; padding: 9px 10px; border-radius: 9px; cursor: pointer; }
+    .fab-menu button:hover, .fab-menu button:focus-visible { background: var(--s2); outline: none; }
+    .fab-menu button:disabled { opacity: .45; cursor: default; background: none; }
+    .fab-menu button svg { width: 18px; height: 18px; flex: none; color: var(--muted); }
+    .fab-menu button.danger { color: var(--warn); }
+    .fab-menu button.danger svg { color: var(--warn); }
   </style>
 </head>
 <body>
@@ -157,12 +176,6 @@
           <div class="card-head"><h2>Plan cost</h2><div class="seg" id="scope" role="group" aria-label="Scope"><button type="button" data-scope="tree">This tree</button><button type="button" data-scope="all">All trees</button></div></div>
           <div class="totals" id="totals"></div>
           <div class="speed"><label for="speed-r" style="white-space:nowrap">Research speed</label><input type="range" id="speed-r" min="0" max="300" step="1"><input class="input num" id="speed-n" type="number" min="0" max="1000" inputmode="numeric" aria-label="Research speed bonus percent"><span>%</span></div>
-          <div class="m-actions" style="display:flex;gap:6px;flex-wrap:wrap;margin-top:10px">
-            <button class="btn sm" type="button" id="max-tree">Plan whole tree</button>
-            <button class="btn sm" type="button" id="reset-tree">Reset tree</button>
-            <button class="btn sm" type="button" id="copy-plan" title="Copy a shareable URL with all trees and research speed">Copy plan</button>
-            <button class="btn sm" type="button" id="copy-summary">Copy summary</button>
-          </div>
         </section>
         <section class="card" aria-labelledby="plans-title">
           <div class="card-head"><h2 id="plans-title">Saved plans</h2></div>
@@ -193,6 +206,18 @@
       <p>Your plan is saved in this browser only. <a href="https://github.com/JeffxLabs/zrouteredemption" target="_blank" rel="noopener">Source on GitHub</a></p>
     </footer>
   </main>
+
+  <div class="fab-wrap" id="fab-wrap">
+    <div class="fab-menu" id="fab-menu" role="menu" aria-label="Plan actions" hidden>
+      <div class="fab-title" id="fab-title"></div>
+      <button type="button" role="menuitem" id="max-tree"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20V10"/><path d="m6 14 6-6 6 6"/><path d="M5 4h14"/></svg><span>Plan whole tree</span></button>
+      <button type="button" role="menuitem" id="complete-tree" title="Set every tech in this tree to its max level as already researched"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><span>Mark tree maxed</span></button>
+      <button type="button" role="menuitem" id="reset-tree" class="danger"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg><span>Reset tree</span></button>
+      <hr>
+      <button type="button" role="menuitem" id="copy-plan" title="Copy a shareable URL with all trees and research speed"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg><span>Copy plan</span></button>
+    </div>
+    <button class="fab" type="button" id="fab" aria-label="Plan actions" aria-haspopup="menu" aria-expanded="false" aria-controls="fab-menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+  </div>
 
   <nav class="bottom-nav" aria-label="Site">
     <a href="../"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg><span>Base</span></a>
@@ -426,7 +451,9 @@
       const t = trees.find(x => x.id === S.tree);
       const mx = treeMax.get(t.id);
       $('#thead').innerHTML = `<img src="${esc(t.icon)}" alt=""><div class="grow"><h2 id="tree-name">${esc(t.name)}</h2><div class="chips">${t.unlock.map(u => `<span class="chip sm">${u.kind === 'institute_level' ? `<img src="../assets/buildings/research.svg" alt="">` : u.kind === 'tree_progress' ? `<img src="${esc((trees.find(z => z.id === u.tree) || {}).icon || '')}" alt="">` : ''}${esc(unlockText(u))}</span>`).join('')}</div></div>
-        <div class="chips">${treeComplete(t) ? `<span class="chip" style="color:var(--ur)">✓ ${esc(I18N.t('Fully researched'))}</span>` : `<button class="btn sm" type="button" id="complete-tree" title="${esc(I18N.t('Set every tech in this tree to its max level as already researched'))}">${esc(I18N.t('Mark tree maxed'))}</button>`}${mx.chips ? `<span class="chip" title="Research Data to max this tree"><img src="${UI}research_data.webp" alt="">${fmt(mx.chips)}</span>` : ''}<span class="chip" title="Base research time to max this tree">${duration(mx.time)}</span></div>`;
+        <div class="chips">${treeComplete(t) ? `<span class="chip" style="color:var(--ur)">✓ ${esc(I18N.t('Fully researched'))}</span>` : ''}${mx.chips ? `<span class="chip" title="Research Data to max this tree"><img src="${UI}research_data.webp" alt="">${fmt(mx.chips)}</span>` : ''}<span class="chip" title="Base research time to max this tree">${duration(mx.time)}</span></div>`;
+      $('#fab-title').textContent = t.name;
+      $('#complete-tree').disabled = treeComplete(t);
       const pos = new Map(t.techs.map(x => [x.pos, x]));
       const rowh = 100, links = [];
       t.techs.forEach(x => x.from.forEach(p => {
@@ -526,10 +553,19 @@
       save(); refresh();
     }
 
-    // ---------- Tree actions ----------
+    // ---------- Tree actions (floating menu) ----------
+    function setMenu(open) {
+      $('#fab-menu').hidden = !open;
+      $('#fab').setAttribute('aria-expanded', String(open));
+      if (open) $('#fab-menu').querySelector('button:not(:disabled)')?.focus();
+    }
+    $('#fab').addEventListener('click', () => setMenu($('#fab-menu').hidden));
+    // Close after any action; outside clicks and Escape also dismiss.
+    $('#fab-menu').addEventListener('click', e => { if (e.target.closest('button')) setMenu(false); });
+    document.addEventListener('click', e => { if (!$('#fab-menu').hidden && !e.target.closest('#fab-wrap')) setMenu(false); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && !$('#fab-menu').hidden) { setMenu(false); $('#fab').focus(); } });
     $('#max-tree').addEventListener('click', () => { trees.find(t => t.id === S.tree).techs.forEach(x => { st(x.id).t = x.max_level; }); save(); refresh(); toast('Whole tree planned'); });
-    $('#thead').addEventListener('click', e => {
-      if (!e.target.closest('#complete-tree')) return;
+    $('#complete-tree').addEventListener('click', () => {
       const t = trees.find(z => z.id === S.tree);
       if (treeComplete(t)) { toast(I18N.t('Tree already fully researched')); return; }
       if (!confirm(I18N.t('Mark every tech in {0} as fully researched? Current levels will be set to max.', [t.name]))) return;
@@ -547,19 +583,6 @@
         url.hash = 'plan=' + encoded;
         copy(url.href, 'Plan link copied');
       } catch (_) { message('Could not create a plan link. Export JSON instead.'); }
-    });
-    $('#copy-summary').addEventListener('click', () => {
-      const list = S.scope === 'all' ? [...techById.values()] : trees.find(t => t.id === S.tree).techs;
-      const c = planCost(list);
-      const lines = list.filter(x => st(x.id).t > st(x.id).c).map(x => I18N.t('• {0}: Lv {1} → {2}', [x.name, st(x.id).c, st(x.id).t]));
-      const scopeLabel = S.scope === 'all' ? I18N.t('all trees') : trees.find(t => t.id === S.tree).name;
-      const timeLabel = S.speed
-        ? I18N.t('Time: {0} (+{1}% speed; {2} base)', [duration(effTime(c.time)), S.speed, duration(c.time)])
-        : I18N.t('Time: {0}', [duration(effTime(c.time))]);
-      copy([I18N.t('Z Route research plan: {0}', [scopeLabel]),
-        c.chips ? I18N.t('Research Data: {0}', [fmt(c.chips)]) : null,
-        I18N.t('Food: {0}', [fmt(c.food)]), I18N.t('Metal: {0}', [fmt(c.metal)]), I18N.t('Oil: {0}', [fmt(c.oil)]),
-        timeLabel, I18N.t('Power: +{0}', [fmt(c.power)]), '', ...(lines.length ? lines : [I18N.t('• Nothing planned')])].filter(v => v !== null).join('\n'), 'Plan copied');
     });
 
     // ---------- Search ----------
