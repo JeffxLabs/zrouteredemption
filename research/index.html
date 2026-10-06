@@ -10,9 +10,9 @@
   <meta name="description" content="Z Route: Redemption research trees laid out like the in-game Institute, with costs, Research Data, times, benefits and a level planner.">
   <link rel="manifest" href="../manifest.webmanifest">
   <link rel="icon" href="../assets/ui/research_data.webp" type="image/webp">
-  <link rel="stylesheet" href="../assets/app.css">
-  <script src="../i18n.js"></script>
-  <script src="../i18n/research.js"></script>
+  <link rel="stylesheet" href="../assets/app.css?v=25">
+  <script src="../i18n.js?v=25"></script>
+  <script src="../i18n/research.js?v=25"></script>
   <title>Z Route Research</title>
   <style>
     .toolbar { display: flex; gap: 8px; align-items: center; margin-bottom: 10px; position: relative; }
@@ -233,10 +233,10 @@
     <a href="../promo-codes/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg><span>Codes</span></a>
   </nav>
 
-  <script src="../assets/app.js"></script>
-  <script src="research_effects.js"></script>
-  <script src="research_plans.js"></script>
-  <script src="research_data.js"></script>
+  <script src="../assets/app.js?v=25"></script>
+  <script src="research_effects.js?v=25"></script>
+  <script src="research_plans.js?v=25"></script>
+  <script src="research_data.js?v=25"></script>
   <script>
   (async () => {
     'use strict';
@@ -252,7 +252,7 @@
       if (LOCALES.has(code)) return LOCALES.get(code);
       const pending = new Promise((resolve, reject) => {
         const script = document.createElement('script');
-        script.src = `research_i18n/${code}.js`;
+        script.src = `research_i18n/${code}.js?v=25`;
         script.onload = () => resolve(window.RESEARCH_I18N?.[code] || null);
         script.onerror = () => reject(new Error(`Could not load ${code} research strings`));
         document.head.appendChild(script);
