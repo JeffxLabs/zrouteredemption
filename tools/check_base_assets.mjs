@@ -58,7 +58,7 @@ const context = vm.createContext({ window: { addEventListener() {} }, document, 
   scrollTo() {}, console, Intl, URLSearchParams, setTimeout, clearTimeout,
 });
 vm.runInContext(read('assets/buildings/icons.js'), context);
-const app = scripts.at(-1).replace('    init();', '    window.BASE_TEST = { setView, render, buildingGlyph }; window.INIT = init();');
+const app = scripts.at(-1).replace('    init();', '    window.BASE_TEST = { setView, render, renderRoi, roiProductionFactor, buildingGlyph }; window.INIT = init();');
 vm.runInContext(app, context);
 await context.window.INIT;
 assert.equal(node('error').style.display, 'none', node('error').textContent);
@@ -72,6 +72,23 @@ assert.equal(node('base-view').hidden, true); assert.equal(node('roi-view').hidd
 assert.equal(links[1].attrs['aria-current'], 'page'); assert.equal(links[0].attrs['aria-current'], undefined);
 assert.ok(node('roi-title').innerHTML.includes('assets/buildings/1016.webp'));
 assert.equal(node('roi-error').style.display, 'none', node('roi-error').textContent);
+const survivorBenefits = new Map(progression.benefits.map(item => [item.id, item.name]));
+for (const id of [20001, 20002, 20003, 20006]) assert.ok(survivorBenefits.has(id), `Missing client Survivor benefit ${id}`);
+for (const [container, ids] of [['roi-survivor-output-inputs', [20001, 20002, 20003]], ['roi-survivor-shared-inputs', [20006]]]) {
+  for (const id of ids) assert.ok(node(container).innerHTML.includes(`data-benefit-id="${id}"`), `Missing rendered Survivor benefit ${id}`);
+}
+for (const icon of ['food', 'metal', 'oil']) assert.ok(node('roi-survivor-output-inputs').innerHTML.includes(`assets/ui/${icon}.webp`));
+assert.equal(context.window.BASE_TEST.roiProductionFactor(2, 10, {2: 25}), 1.35);
+node('roi-producer').value = '1017';
+context.window.BASE_TEST.renderRoi();
+const basePayback = node('roi-payback').textContent, baseUpgradeRows = node('roi-rows').innerHTML;
+node('roi-survivor-output-2').value = '25';
+node('roi-survivor-free').value = '10';
+context.window.BASE_TEST.renderRoi();
+assert.ok(node('roi-output-note').textContent.includes('+25% applied output bonus'));
+assert.ok(node('roi-modifier-summary').textContent.includes('Survivor +10m'));
+assert.notEqual(node('roi-payback').textContent, basePayback, 'Survivor output bonus changes the break-even calculation');
+assert.notEqual(node('roi-rows').innerHTML, baseUpgradeRows, 'Survivor free-finish time changes upgrade build times');
 context.window.BASE_TEST.setView('base');
 assert.equal(links[0].attrs['aria-current'], 'page');
 console.log('Base assets/nav: complete ID mappings, real asset paths, calculator self-checks, rendered base/ROI icons and synchronized navigation passed.');

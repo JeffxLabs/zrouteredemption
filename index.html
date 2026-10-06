@@ -100,6 +100,13 @@
     .value-inputs { display: grid; grid-template-columns: 1fr 92px; gap: 9px 12px; align-items: center }
     .value-inputs label { color: #b9c8dc; font-size: .82rem }
     .value-inputs input { padding: 7px 9px; font-size: .84rem }
+    .survivor-settings summary { display:flex; align-items:center; gap:8px }
+    .survivor-settings summary img { width:22px; height:22px; object-fit:contain }
+    .survivor-benefit-label { display:flex; align-items:center; gap:7px; min-width:0 }
+    .survivor-benefit-label img { flex:none; width:22px; height:22px; object-fit:contain }
+    .survivor-benefit-label span { overflow:hidden; text-overflow:ellipsis }
+    .survivor-settings .field label small { white-space:nowrap }
+    .roi-modifier-summary { margin:14px 2px 0; padding:12px 14px; border:1px solid var(--line); border-radius:13px; background:rgba(15,29,49,.72); color:var(--muted); font-size:.82rem }
     .profit { color: var(--green); font-weight: 800 }
     .profit.negative { color: var(--red) }
     .nowrap { white-space: nowrap }
@@ -599,10 +606,17 @@
             <div class="field"><label for="roi-current">Current level</label><select id="roi-current"></select></div>
             <div class="field"><label for="roi-target">Target level</label><select id="roi-target"></select></div>
             <div class="field"><label for="roi-speed">Construction speed <small>%</small></label><input id="roi-speed" type="number" min="0" max="1000" step="0.1" value="0"></div>
-            <div class="field"><label for="roi-free">Free-finish time <small>minutes</small></label><input id="roi-free" type="number" min="0" max="100000" step="1" value="0"></div>
-            <div class="field"><label for="roi-production">Production bonus <small>%</small></label><input id="roi-production" type="number" min="0" max="10000" step="0.1" value="0"></div>
+            <div class="field"><label for="roi-free">Other free-finish time <small>minutes</small></label><input id="roi-free" type="number" min="0" max="100000" step="1" value="0"></div>
+            <div class="field"><label for="roi-production">Other production bonus <small>%</small></label><input id="roi-production" type="number" min="0" max="10000" step="0.1" value="0"></div>
             <div class="field"><label for="roi-utilization">Collection uptime <small>%</small></label><input id="roi-utilization" type="number" min="0.1" max="100" step="0.1" value="100"></div>
           </div>
+          <details class="settings survivor-settings" open>
+            <summary><img src="assets/buildings/1001.webp" alt=""> Survivor buff modifiers</summary>
+            <p class="advanced-note">Enter your current totals from the in-game Survivor/bonus screen. The values are not guessed; benefit names and IDs come from the client data.</p>
+            <div id="roi-survivor-shared-inputs" class="settings-grid"></div>
+            <p class="advanced-note">Resource output benefits apply to the matching Food, Metal, or Oil producer.</p>
+            <div id="roi-survivor-output-inputs" class="settings-grid"></div>
+          </details>
           <details class="settings" open>
             <summary>Relative resource values</summary>
             <p class="advanced-note">Value of one unit in a common comparison unit. Defaults treat Food, Metal, and Oil equally; set the produced resource to reflect how valuable it is to you.</p>
@@ -624,10 +638,11 @@
             <article class="metric"><div class="metric-label">Runtime after target</div><div id="roi-payback" class="metric-value"></div><div class="metric-note">Additional time after all upgrades finish</div></article>
             <article class="metric"><div class="metric-label">Total to break even</div><div id="roi-total-time" class="metric-value"></div><div class="metric-note">From starting the first upgrade</div></article>
             <article class="metric"><div class="metric-label">Added output</div><div id="roi-output" class="metric-value"></div><div id="roi-output-note" class="metric-note"></div></article>
-            <article class="metric"><div class="metric-label">Direct upgrade costs</div><div id="roi-costs" class="metric-value resource-stack"></div><div class="metric-note">Selected producer levels only</div></article>
-            <article class="metric"><div class="metric-label">Investment value</div><div id="roi-investment" class="metric-value"></div><div class="metric-note">Direct costs after relative weighting</div></article>
+            <article class="metric"><div class="metric-label">Direct upgrade costs</div><div id="roi-costs" class="metric-value resource-stack"></div><div id="roi-cost-note" class="metric-note">Selected producer levels only · client costs</div></article>
+            <article class="metric"><div class="metric-label">Investment value</div><div id="roi-investment" class="metric-value"></div><div id="roi-investment-note" class="metric-note">Direct costs after relative weighting</div></article>
             <article class="metric"><div class="metric-label">Profit after 30 days</div><div id="roi-profit" class="metric-value profit"></div><div class="metric-note">Weighted net value from construction start</div></article>
           </div>
+          <p id="roi-modifier-summary" class="roi-modifier-summary" aria-live="polite"></p>
 
           <section class="panel section">
             <div class="section-head"><div><h3>Upgrade-by-upgrade ROI</h3><div class="section-note">Each row evaluates that level alone against its marginal output gain.</div></div></div>
@@ -641,7 +656,7 @@
 
           <section class="panel section">
             <h3>How this is calculated</h3>
-            <p class="section-note">The building keeps producing at its last completed level while the next upgrade builds. Break-even credits that intermediate output above your starting level and compares it with the selected upgrades' direct Food, Metal, and Oil costs; the 30-day result deducts each upgrade cost when that upgrade starts. Relative values convert unlike inputs and output into one comparison unit. Base prerequisite costs are excluded because they benefit the whole account, not only this producer.</p>
+            <p class="section-note">The building keeps producing at its last completed level while the next upgrade builds. Break-even credits that intermediate output above your starting level and compares it with the selected upgrades' direct Food, Metal, and Oil costs; the 30-day result deducts each upgrade cost when that upgrade starts. Survivor Food/Metal/Oil Output buffs increase matching producer output, while the Survivor Free Building Speedup Time benefit reduces build time. Relative values convert unlike inputs and output into one comparison unit. Base prerequisite costs are excluded because they benefit the whole account, not only this producer.</p>
           </section>
           </div>
         </div>
@@ -678,6 +693,14 @@
     const BUILDING_IDS = [1002, 1004, 1006, 1007, 1010, 1020, 5006, 5013, 5031, 5044, 5045, 5046];
     const RESEARCH_IDS = [1001, 1008, 1015, 1022];
     const ROI_RESOURCE_NAMES = {1: "Food", 2: "Metal", 3: "Oil", 5: "Hero EXP", 99: "Produced material"};
+    const ROI_SURVIVOR_SHARED = [
+      {benefitId: 20006, inputId: "roi-survivor-free", unit: "minutes", min: 0, max: 100000, step: 1}
+    ];
+    const ROI_SURVIVOR_OUTPUTS = [
+      {type: 1, benefitId: 20001, resource: "food"},
+      {type: 2, benefitId: 20002, resource: "metal"},
+      {type: 3, benefitId: 20003, resource: "oil"}
+    ];
     const RESOURCE = {1: "food", 2: "metal", 3: "oil"};
     const SHORT = {
       "Alpha Research Division": "Alpha Research",
@@ -783,6 +806,7 @@
           || schedule([{building_id: 1, from_level: 0, level: 1, requirements: [[2, 1]], base_time_seconds: 100}, {building_id: 2, from_level: 0, level: 1, requirements: [], base_time_seconds: 10}], 2, unchanged).seconds !== 110
           || adjustedTime({base_time_seconds: 100}, {speedPercent: 100, freeSeconds: 10}) !== 40
           || roiFor({costValue: 1000, previousOutput: 100, output: 200, buildSeconds: 3600}, {outputValue: 1, productionFactor: 1, utilization: 1}).totalHours !== 11
+          || Math.abs(roiProductionFactor(2, 10, {2: 25}) - 1.35) > 1e-9
           || roiPlanBreakEven([{costValue: 50, previousOutput: 100, output: 200, buildSeconds: 3600}, {costValue: 100, previousOutput: 200, output: 300, buildSeconds: 3600}], {outputValue: 1, productionFactor: 1, utilization: 1}) !== 2.25
           || roiPlanProfit([{costValue: 50, previousOutput: 100, output: 200, buildSeconds: 7200}, {costValue: 100, previousOutput: 200, output: 300, buildSeconds: 7200}], {outputValue: 1, productionFactor: 1, utilization: 1}, 1) !== -50) {
         throw new Error("Planner self-check failed for client v1.30.07");
@@ -830,6 +854,11 @@
 
     function adjustedTotal(actions, modifier) {
       return actions.reduce((sum, action) => sum + adjustedTime(action, modifier), 0);
+    }
+
+    function roiProductionFactor(outputType, otherBonusPercent, survivorOutputPercent) {
+      const survivorBonus = [1, 2, 3].includes(outputType) ? survivorOutputPercent[outputType] || 0 : 0;
+      return 1 + (otherBonusPercent + survivorBonus) / 100;
     }
 
     function roiFor(upgrade, assumptions) {
@@ -1153,10 +1182,16 @@
 
     function roiAssumptions(producer) {
       const values = Object.fromEntries([...new Set([1, 2, 3, producer.output_type])].map(type => [type, readNumber(`roi-value-${type}`, type === producer.output_type ? 0.000001 : 0, 1000000, `${ROI_RESOURCE_NAMES[type] || producer.output_name} value`)]));
+      const survivorOutput = Object.fromEntries(ROI_SURVIVOR_OUTPUTS.map(item => [item.type, readNumber(`roi-survivor-output-${item.type}`, 0, 10000, `Survivor ${ROI_RESOURCE_NAMES[item.type]} Output`)]));
+      const otherProductionPercent = readNumber("roi-production", 0, 10000, "Other production bonus");
+      const survivorFreeSeconds = readNumber("roi-survivor-free", 0, 100000, "Survivor free building speedup time") * 60;
       return {
         speedPercent: readNumber("roi-speed", 0, 1000, "Construction speed"),
-        freeSeconds: readNumber("roi-free", 0, 100000, "Free-finish time") * 60,
-        productionFactor: 1 + readNumber("roi-production", 0, 10000, "Production bonus") / 100,
+        freeSeconds: readNumber("roi-free", 0, 100000, "Other free-finish time") * 60 + survivorFreeSeconds,
+        survivorFreeSeconds,
+        productionFactor: roiProductionFactor(producer.output_type, otherProductionPercent, survivorOutput),
+        productionBonusPercent: otherProductionPercent + ([1, 2, 3].includes(producer.output_type) ? survivorOutput[producer.output_type] : 0),
+        survivorOutput,
         utilization: readNumber("roi-utilization", 0.1, 100, "Collection uptime") / 100,
         values,
         outputValue: values[producer.output_type]
@@ -1169,6 +1204,19 @@
 
     function formatCosts(costs) {
       return costs.filter(cost => cost.count).map(cost => `${escape(cost.type_name)} ${compact(cost.count)}`).join(" · ") || "Free";
+    }
+
+    function renderSurvivorModifierInputs(benefitDefinitions) {
+      const benefits = new Map(benefitDefinitions.map(benefit => [benefit.id, benefit]));
+      const benefitName = id => {
+        const benefit = benefits.get(id);
+        if (!benefit?.name) throw new Error(`Missing client benefit definition ${id}`);
+        return benefit.name;
+      };
+      const shared = ROI_SURVIVOR_SHARED.map(item => `<div class="field"><label for="${item.inputId}"><span class="survivor-benefit-label"><img src="assets/buildings/1001.webp" alt=""><span>${escape(benefitName(item.benefitId))}</span></span><small>#${item.benefitId} · ${item.unit}</small></label><input id="${item.inputId}" data-benefit-id="${item.benefitId}" type="number" min="${item.min}" max="${item.max}" step="${item.step}" value="0"></div>`).join("");
+      const output = ROI_SURVIVOR_OUTPUTS.map(item => `<div class="field"><label for="roi-survivor-output-${item.type}"><span class="survivor-benefit-label">${resourceGlyph(item.resource)}<span>${escape(benefitName(item.benefitId))}</span></span><small>#${item.benefitId} · %</small></label><input id="roi-survivor-output-${item.type}" data-benefit-id="${item.benefitId}" type="number" min="0" max="10000" step="0.1" value="0"></div>`).join("");
+      $("roi-survivor-shared-inputs").innerHTML = shared;
+      $("roi-survivor-output-inputs").innerHTML = output;
     }
 
     function renderRoiValues() {
@@ -1209,9 +1257,13 @@
         $("roi-payback").textContent = durationHours(cumulative.paybackHours);
         $("roi-total-time").textContent = durationHours(cumulative.totalHours);
         $("roi-output").textContent = `+${compact(Math.round(cumulative.addedPerHour))}/h`;
-        $("roi-output-note").textContent = `${producer.output_name}: ${compact(startOutput)} → ${compact(endOutput)} base per hour`;
+        $("roi-output-note").textContent = `${producer.output_name}: ${compact(startOutput)} → ${compact(endOutput)} base per hour · +${number(Number(assumptions.productionBonusPercent.toFixed(3)))}% applied output bonus`;
         $("roi-costs").innerHTML = directCosts.filter(cost => cost.count).map(cost => `<span>${resourceGlyph(RESOURCE[cost.type])}${escape(ROI_RESOURCE_NAMES[cost.type])} ${compact(cost.count)}</span>`).join("") || "Free";
+        $("roi-cost-note").textContent = "Selected producer levels only · original client costs";
         $("roi-investment").textContent = compact(Math.round(cumulative.investmentValue));
+        $("roi-investment-note").textContent = "Direct costs after relative weighting";
+        const survivorOutput = [1, 2, 3].includes(producer.output_type) ? assumptions.survivorOutput[producer.output_type] : 0;
+        $("roi-modifier-summary").textContent = `Applied: Building Speed +${number(Number(assumptions.speedPercent.toFixed(3)))}% · free finish ${time(assumptions.freeSeconds)} total (Survivor +${time(assumptions.survivorFreeSeconds)}) · ${producer.output_name} output bonus +${number(Number(assumptions.productionBonusPercent.toFixed(3)))}% (Survivor portion +${number(Number(survivorOutput.toFixed(3)))}%) · collection uptime ${number(Number((assumptions.utilization * 100).toFixed(3)))}%.`;
         $("roi-profit").textContent = number(Math.round(profit30));
         $("roi-profit").classList.toggle("negative", profit30 < 0);
         $("roi-rows").innerHTML = upgrades.map(item => {
@@ -1238,6 +1290,7 @@
         vipSpeed = progression.construction_modifiers?.vip_building_speed_percent_by_level;
         producers = resources.producer_buildings;
         if (research.some(tech => !tech) || vipSpeed?.length !== 19) throw new Error("Construction modifier data is incomplete");
+        renderSurvivorModifierInputs(progression.benefits);
         selfCheck();
         const requestedBase = Number(new URLSearchParams(location.search).get("current"));
         const startingBase = Number.isInteger(requestedBase) && requestedBase >= 0 && requestedBase <= 30 ? requestedBase : 22;
