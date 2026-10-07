@@ -22,11 +22,12 @@
 @media(max-width:599px){.wingman-card .pair{grid-template-columns:minmax(0,1fr)}.wingman-side+.wingman-side{border-top:1px solid var(--line);padding-top:12px}}
 .intro{display:flex;gap:15px;align-items:center}.intro img{width:72px;height:72px;object-fit:contain}details{margin-top:12px}summary{cursor:pointer;font-weight:600}.status{min-height:22px;margin:12px 0 0}.examples{display:flex;gap:8px;flex-wrap:wrap}.btn{cursor:pointer}#plan-name{width:min(300px,100%)}@media(min-width:1050px){.stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}}[hidden]{display:none!important}
 </style>
+<style>.fighter-footer{margin:18px 2px 6px;font-size:12px;color:var(--faint)}</style>
 </head>
 <body>
 <header class="app-header"><div class="header-inner">
-<a class="brand" href="./"><img src="../assets/fighter/UVA_icon_skin_01.webp" width="22" height="22" alt="">Z Route Fighter <span class="ver">v1.30.07 data</span></a>
-<nav class="desktop-nav" aria-label="Site"><a href="../">Base Planner</a><a href="../#producer-roi">Producer ROI</a><a href="../heroes/">Heroes</a><a href="../hero-exp/">Hero EXP</a><a href="../research/">Research</a><a href="./" class="active" aria-current="page">Fighter</a><a href="../promo-codes/">Promo Codes</a><a href="https://github.com/JeffxLabs/zrouteredemption" target="_blank" rel="noopener">GitHub ↗</a></nav>
+<a class="brand" href="../"><img src="../assets/fighter/UVA_icon_skin_01.webp" width="22" height="22" alt="">Z Route Fighter <span class="ver">v1.30.07 data</span></a>
+<nav class="desktop-nav" aria-label="Site"><a href="../base/">Base</a><a href="../heroes/">Heroes</a><a href="../hero-exp/">Hero EXP</a><a href="../research/">Research</a><a href="../fighter/" class="active" aria-current="page">Fighter</a></nav>
 <label class="language-control"><select id="language-select" aria-label="Language"></select></label><button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch theme"></button>
 </div></header>
 <main class="wrap layout">
@@ -48,15 +49,14 @@
 <p class="note">Autosaved on this browser. Shared URLs contain the whole plan in the fragment, including its name, materials and both loadouts. Anyone with the URL can read it. Importing or loading asks before replacing your active plan.</p></section>
 <section class="panel"><h2>Data and accuracy</h2><p class="note">766 level/stage states, 2,448 component states and 32 wingman chips from the v1.30.07 client catalog dated 2026-09-07. Screenshot checks cover Lv.95 Stage 3/5: 12,000 Combat Chips + 90 Fighter Parts per click, component bonuses and the next-stage stat gains. Other levels are table-derived, not individually battle-tested. Evolution activation costs, bag inventory optimization and server RNG are not modeled. All artwork is original game sprites, not screenshot crops. <a href="../docs/fighter-planner.md">Model and asset provenance</a>.</p></section>
 </div>
+<footer class="fighter-footer"><a href="https://github.com/JeffxLabs/zrouteredemption" target="_blank" rel="noopener">Source on GitHub</a></footer>
 </main>
 <nav class="bottom-nav" aria-label="Site">
-    <a href="../"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg><span>Base</span></a>
-    <a href="../#producer-roi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg><span>ROI</span></a>
+    <a href="../base/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg><span>Base</span></a>
     <a href="../heroes/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><span>Heroes</span></a>
     <a href="../hero-exp/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg><span>Hero EXP</span></a>
     <a href="../research/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.2 4.2l2.8 2.8M17 17l2.8 2.8M1 12h4M19 12h4M4.2 19.8 7 17M17 7l2.8-2.8"/></svg><span>Research</span></a>
-    <a href="./" class="active" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l2 6 8 6v2l-8-3v6l3 3H7l3-3v-6l-8 3v-2l8-6 2-6z"/></svg><span>Fighter</span></a>
-    <a href="../promo-codes/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg><span>Codes</span></a>
+    <a href="../fighter/" class="active" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l2 6 8 6v2l-8-3v6l3 3H7l3-3v-6l-8 3v-2l8-6 2-6z"/></svg><span>Fighter</span></a>
   </nav>
 <script src="../assets/app.js"></script><script src="fighter_model.js"></script><script src="fighter.js?v=24"></script>
 </body></html>

@@ -5,7 +5,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 LANGUAGES = ("fr", "ru", "tr", "pl", "es", "pt", "de", "ko", "zh")
-PAGES = ("heroes", "hero-exp", "research")
+PAGES = ("home", "heroes", "hero-exp", "research")
 
 
 def main():

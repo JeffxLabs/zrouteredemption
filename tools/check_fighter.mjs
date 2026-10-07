@@ -50,10 +50,11 @@ const provenance=JSON.parse(fs.readFileSync(path.join(root,'assets/fighter/prove
 assert.equal(Object.keys(provenance.sprites).length,59);
 const precache=JSON.parse(fs.readFileSync(path.join(root,'sw.js'),'utf8').match(/const ASSETS = (\[[^\n]+\]);/)[1]);
 for(const icon of images) assert.ok(precache.includes('./'+icon.replace('../','')));
-for(const page of ['index.html','heroes/index.html','hero-exp/index.html','research/index.html','fighter/index.html','promo-codes/index.html']) {
+for(const page of ['index.html','base/index.html','heroes/index.html','hero-exp/index.html','research/index.html','fighter/index.html','promo-codes/index.html']) {
   const html=fs.readFileSync(path.join(root,page),'utf8');
   const nav=html.match(/<nav class="bottom-nav"[\s\S]*?<\/nav>/)[0];
-  assert.equal([...nav.matchAll(/<a\b/g)].length,7,page);
+  assert.equal([...nav.matchAll(/<a\b/g)].length,5,page);
+  assert.ok(!html.includes('promo-codes/"'),page+' must not link Promo Codes from navigation');
 }
 
 

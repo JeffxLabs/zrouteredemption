@@ -11,7 +11,7 @@ const issues = [];
 const identical = Object.fromEntries(TARGETS.map(code => [code, []]));
 let checked = 0;
 const ALLOWED_IDENTICAL = new Set([
-  "Z Route", "GitHub ↗", "ROI", "PvP + PvE", "PvP", "PvE", "HP", "ATK", "DEF", "SSR", "SR", "UR", "HQ", "EXP", "VIP",
+  "Z Route", "ZR:Reference", "Base 1–30", "GitHub ↗", "ROI", "PvP + PvE", "PvP", "PvE", "HP", "ATK", "DEF", "SSR", "SR", "UR", "HQ", "EXP", "VIP",
   "Lv.", "K", "M", "B", "Base", "Metal", "Oil", "Codes", "Name", "Stats", "Faction", "Total", "Radiation", "Level", "Tech", "Chips", "Max", "Sections",
   "Grenadier", "Disciple", "Hawkeye", "Sheriff", "Frankenstein", "Viper", "Anti-Pillage", "5 grenades"
 ]);
@@ -111,14 +111,15 @@ function checkChinese(value, where) {
 }
 
 function checkPageDictionaries() {
-  for (const page of ["heroes", "hero-exp", "research"]) {
+  for (const page of ["home", "heroes", "hero-exp", "research"]) {
     const source = json(`data/ui_i18n/${page}.json`).strings;
-    const html = read(`${page}/index.html`);
+    const htmlPath = page === "home" ? "index.html" : `${page}/index.html`; // the landing page is the site root
+    const html = read(htmlPath);
     const usedPattern = /(?:I18N\.t|\btr)\(\s*(['"])((?:\\.|(?!\1)[^\\])*)\1/g;
     let used;
     while ((used = usedPattern.exec(html))) {
       const english = used[2].replace(/\\(['"\\])/g, "$1");
-      if (!(english in source)) issue("missing used UI key", `${page}/index.html`, english);
+      if (!(english in source)) issue("missing used UI key", htmlPath, english);
     }
     const staticHtml = html
       .replace(/<!--[\s\S]*?-->/g, "")
@@ -139,7 +140,7 @@ function checkPageDictionaries() {
     }
     for (const english of staticStrings) {
       if (!/[A-Za-z]/.test(english) || english === "Z Route" || /^v\d+(?:\.\d+)+$/i.test(english) || allowedEnglish(english)) continue;
-      if (!(english in source)) issue("missing used UI key", `${page}/index.html`, english);
+      if (!(english in source)) issue("missing used UI key", htmlPath, english);
     }
     const context = runScript(`i18n/${page}.js`);
     const dictionaries = context.window.PAGE_I18N;

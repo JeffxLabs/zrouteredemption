@@ -23,6 +23,7 @@
   const ROWS = [
     ["Fighter", "Chasseur", "Истребитель", "Savaş uçağı", "Myśliwiec", "Caza", "Caça", "Kampfflugzeug", "전투기", "戦闘機", "战斗机"],
     ["Language", "Langue", "Язык", "Dil", "Język", "Idioma", "Idioma", "Sprache", "언어", "言語", "语言"],
+    ["Source on GitHub", "Code source sur GitHub", "Исходный код на GitHub", "GitHub'da kaynak kodu", "Kod źródłowy na GitHubie", "Código fuente en GitHub", "Código-fonte no GitHub", "Quellcode auf GitHub", "GitHub 소스 코드", "GitHubのソースコード", "GitHub 源码"],
     ["Z Route Planner", "Planificateur Z Route", "Планировщик Z Route", "Z Route Planlayıcı", "Planer Z Route", "Planificador Z Route", "Planejador Z Route", "Z-Route-Planer", "Z Route 플래너", "Z Routeプランナー", "Z Route 规划器"],
     ["Z Route Progression Planner", "Planificateur de progression Z Route", "Планировщик прогрессии Z Route", "Z Route İlerleme Planlayıcısı", "Planer progresji Z Route", "Planificador de progresión de Z Route", "Planejador de progressão Z Route", "Z-Route-Fortschrittsplaner", "Z Route 진행 플래너", "Z Route進行プランナー", "Z Route 进度规划器"],
     ["Calculators", "Calculateurs", "Калькуляторы", "Hesaplayıcılar", "Kalkulatory", "Calculadoras", "Calculadoras", "Rechner", "계산기", "計算機", "计算器"],
