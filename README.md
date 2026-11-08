@@ -22,6 +22,21 @@ Use the [Sky Fighter planner](https://jeffxlabs.github.io/zrouteredemption/fight
 
 The Heroes Directory now marks the SR Soldier Load claim as unverified instead of recommending Jackson, Jamal and Hank for gathering; see [the correction and evidence](docs/hero-soldier-load.md).
 
+## APK review and standalone Capitol research
+
+The [2026-11-08 APK review](docs/apk-review-2026-11-08.md) resolves and inspects the
+current official website download. It serves historical website-package version
+**1.22.05**, not a newer global build; the advertised global **1.41.02** APK and
+current hot-update catalog remain unverified. Existing planner datasets have not
+been downgraded or relabeled.
+
+The [headless Capitol client assessment](docs/capitol-headless-client.md) finds
+explicit office, application and dismissal commands and proposes reusing ZR Chat's
+session layer with an Apparatchik backend. It includes a pinned
+[derived protocol field inventory](data/capitol_protocol.json), provenance and a
+read-only-first validation plan. Current server acceptance and auto-appointment
+queue removal remain unverified; no live account or buffs were changed.
+
 ## Data
 
 - [`data/base-upgrades.csv`](data/base-upgrades.csv) is the compact, spreadsheet-friendly dataset.

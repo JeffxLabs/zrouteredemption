@@ -1,0 +1,134 @@
+{
+  "reviewed_at_utc": "2026-11-08",
+  "status": "official_website_download_is_historical_not_latest_global_build",
+  "acquisition": {
+    "website": "https://www.zrrglobal.com/zrrofficial/",
+    "javascript": "https://abres.octlib.com/site/zrrofficial/assets/index-ebe_Naoj.js",
+    "config_url": "https://www.zrrglobal.com/website/getWebsiteConfig?name=official_zroute&websiteName=official_zroute&language=en-US",
+    "config_apk_field": "data.websiteConfig.EXT_PARAMS \u2192 urlConfig.default.downloadUrlConfig.apkUrl",
+    "apk_url": "https://d2ex983vwhbc52.cloudfront.net/exe/2026/06/09/232380/85541.apk",
+    "languages_checked": [
+      "en-US",
+      "ja-JP",
+      "ko-KR",
+      "ru-RU"
+    ]
+  },
+  "apk": {
+    "package": "com.zroute.global.website",
+    "version_name": "1.22.05",
+    "version_code": 250,
+    "bytes": 1420324932,
+    "sha256": "23e7d694915351860de717bb01a6da2d7179c93307ee9b29670aaae96d339bcd",
+    "signer_certificate_sha256": "3dc1a0a21b63f0a23239fb886d6dc61afa33dee5eccf9d84012f4a0928872002",
+    "signature_verified": true,
+    "signer_continuity_with_global_package_verified": false
+  },
+  "catalog": {
+    "package": "P1",
+    "version": "V202606032030",
+    "json_sha256": "01fe162d72ba5a776b5ae0082e1e53b7bbadffcba6cf16138b65ed0d5a5d8791",
+    "manifest_sha256": "af55697a310c3825f24b24b7e71aea76227c4f35b614da4c8c7decb3e3e9d7ef",
+    "asset_count": 13909,
+    "bundle_count": 8373
+  },
+  "latest_version_limit": {
+    "third_party_advertised_version": "1.41.02",
+    "third_party_source": "https://z-route-redemption.en.uptodown.com/android",
+    "apk_retrieved": false,
+    "effective_hot_update_catalog_retrieved": false,
+    "current_global_version_verified": false
+  },
+  "sources": [
+    {
+      "name": "KingdomBuffTimeQueue.lua",
+      "bundle": "22ea01e864aebf50a10308f6593407b9",
+      "sha256": "bcdbbdb3cf8de49663e1265bf5f2e5547edca5a018b4002e0d3aa0c5a34cf6d2",
+      "bytes": 408
+    },
+    {
+      "name": "TempleTitleModule.lua",
+      "bundle": "2a90c1b775bc3af14a871cdc7f660d33",
+      "sha256": "ebd6194793b9c40cc46346b5cf10249497c3fc0f55ea78c4d23b32ac1b8dcde9",
+      "bytes": 12771
+    },
+    {
+      "name": "temple.lua",
+      "bundle": "2cdaa971f72d793387b3526f76a19e30",
+      "sha256": "fb022b2a452ce771c736a8291f125c2ea61bdd2f9455861729978ca3aa45841f",
+      "bytes": 5770
+    },
+    {
+      "name": "UITempleOfficialApplicationListCell.lua",
+      "bundle": "44efcfbf579f73994007d06147e8a148",
+      "sha256": "a9e2a5921ea483498c9cd47336732909d989ddf6ce885b819853fb4a62425906",
+      "bytes": 5596
+    },
+    {
+      "name": "UITempleOfficialApplicationListPanel.lua",
+      "bundle": "44efcfbf579f73994007d06147e8a148",
+      "sha256": "a599e385ad104a5418047bebbf9f4d6939705bc49b25cd64a06a988be2c206b0",
+      "bytes": 5944
+    },
+    {
+      "name": "temple.proto",
+      "bundle": "5bb809a11793b38211fa73788e9374c8",
+      "sha256": "d8a12cfc91ce7c46acb1bdb0f024772ff322f040c7a25d294e1f0e4f1c012263",
+      "bytes": 14718
+    },
+    {
+      "name": "Network.lua",
+      "bundle": "7649400d82f764f914ba648b19be2750",
+      "sha256": "3ecbcba9093a43ed230f7d8fba92f5f40d1f07424a65fdd66ff1f50506c94cca",
+      "bytes": 12588
+    },
+    {
+      "name": "UITempleOfficialTimeSettingPanel.lua",
+      "bundle": "7eef196c6e46c6f8230d3ca75b4d65cf",
+      "sha256": "2c22f7352732537db6a7065566d39b9bddf69476238566897fc6cb97503c3296",
+      "bytes": 3701
+    },
+    {
+      "name": "UITempleOfficialInformationPanel.lua",
+      "bundle": "7eef196c6e46c6f8230d3ca75b4d65cf",
+      "sha256": "392f72cf2946968d2f92297a19c604251b7e6946f223c55359b5bd1f2a5861bc",
+      "bytes": 23156
+    },
+    {
+      "name": "ActivityTempleBattleParameter.lua",
+      "bundle": "8cdc8d2e0d9c961d737dd6b6f9cf2c26",
+      "sha256": "61dfca0f8ff34328daceaf6b83e43e91464dfe5585a9a8319e89bf2d8c165b86",
+      "bytes": 6986
+    },
+    {
+      "name": "temple.lua",
+      "bundle": "8dcc67d53471b46451b308822a7180b3",
+      "sha256": "4ce063e8589f57bd1535553839f1f269e96901bb8a42b21a4aad005cb85bc86f",
+      "bytes": 5822
+    },
+    {
+      "name": "TempleDefine.lua",
+      "bundle": "90fefc5313879562f2dc767f12dcd099",
+      "sha256": "39ddf2e05147edd3f74f44bb43fe23cd513694c1107ea1d794447946fc0f9363",
+      "bytes": 3981
+    },
+    {
+      "name": "ActivityTempleBattleTitle.lua",
+      "bundle": "af8414edd85b26c5553178caf0bbb4c4",
+      "sha256": "3fd666401b944814fde2ae6cd3af2e7f3d69c3a296cb780d4dfe514373ad999d",
+      "bytes": 3532
+    },
+    {
+      "name": "TempleTitleObject.lua",
+      "bundle": "d8f529572bc2e3fa711120a0ee998174",
+      "sha256": "70d6d1297283466b117ad5531aa7ff45dfaab6a6c03bbff82603f0572e6a80ca",
+      "bytes": 8073
+    },
+    {
+      "name": "TempleKingdomInfoObject.lua",
+      "bundle": "d8f529572bc2e3fa711120a0ee998174",
+      "sha256": "8005727b39400c01e5345b52b4b5954add26b7374b3cf6462d65411c4994978f",
+      "bytes": 13548
+    }
+  ]
+}
