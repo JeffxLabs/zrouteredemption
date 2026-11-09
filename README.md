@@ -42,6 +42,12 @@ see the [current field inventory](data/capitol_protocol_build344.json), provenan
 and read-only-first validation plan. Current server acceptance and automatic
 appointment queue removal remain unverified; no live account or buffs were changed.
 
+The [Apparatchik Direct implementation plan](docs/apparatchik-direct-implementation-plan.md)
+details a complete Linux-hosted fork: shared Capitol/chat session ownership,
+Apparatchik Android remote administration, hosted ZR Chat Android transport,
+queue/appointment parity gates, security, Arch-to-LXC deployment, resource targets
+and phased acceptance tests. It is a design plan, not an implemented service.
+
 The [permanent server-transfer tracker](docs/server-transfer-tracker.md) preserves
 build 344's migration-item, protocol-field and notification-code evidence as a
 [versioned baseline](data/server-transfer/build344.json), with a comparison tool
