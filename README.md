@@ -24,18 +24,23 @@ The Heroes Directory now marks the SR Soldier Load claim as unverified instead o
 
 ## APK review and standalone Capitol research
 
-The [2026-11-08 APK review](docs/apk-review-2026-11-08.md) resolves and inspects the
-current official website download. It serves historical website-package version
-**1.22.05**, not a newer global build; the advertised global **1.41.02** APK and
-current hot-update catalog remain unverified. Existing planner datasets have not
-been downgraded or relabeled.
+The [build-344 review](docs/apk-build344-review.md) inspects the owner-supplied
+**global 1.41.02** split APKs and embedded catalog **V202611021100**, superseding
+the [earlier acquisition limitation](docs/apk-review-2026-11-08.md) (the official
+website still linked to 1.22.05). It identifies four additional gated research
+technologies costing **20,760 Research Data** to max and eight additional
+building/decor definitions; the Base cap remains 30 and the playable hero filter
+still yields 32 heroes. See [versioned findings](data/build344-findings.json).
+Existing planners retain their original baseline; these findings do not mean
+all planners have been migrated. The effective live hot-update catalog remains
+unverified.
 
-The [headless Capitol client assessment](docs/capitol-headless-client.md) finds
-explicit office, application and dismissal commands and proposes reusing ZR Chat's
-session layer with an Apparatchik backend. It includes a pinned
-[derived protocol field inventory](data/capitol_protocol.json), provenance and a
-read-only-first validation plan. Current server acceptance and auto-appointment
-queue removal remain unverified; no live account or buffs were changed.
+The [headless Capitol client assessment](docs/capitol-headless-client.md) proposes
+reusing ZR Chat's session layer with an Apparatchik backend. The build-344 schema
+and restored UI bytecode confirm the main title/application/dismissal contracts;
+see the [current field inventory](data/capitol_protocol_build344.json), provenance
+and read-only-first validation plan. Current server acceptance and automatic
+appointment queue removal remain unverified; no live account or buffs were changed.
 
 ## Data
 

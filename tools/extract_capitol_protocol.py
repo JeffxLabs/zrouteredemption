@@ -21,7 +21,7 @@ MESSAGES = (
 )
 
 
-def extract(raw):
+def extract(raw, *, build344=False):
     digest = hashlib.sha256(raw).hexdigest()
     if digest != SOURCE_SHA256:
         raise ValueError("unreviewed schema SHA-256; do not relabel another version")
@@ -43,7 +43,7 @@ def extract(raw):
             fields.append({"number": int(number), "name": key,
                            "type": kind.replace(" ", ""), "repeated": bool(repeated)})
         messages[name] = fields
-    return {
+    result = {
         "source": {"app_version": "1.22.05", "version_code": 250,
                    "package": "com.zroute.global.website", "catalog": "V202606032030",
                    "apk_sha256": "23e7d694915351860de717bb01a6da2d7179c93307ee9b29670aaae96d339bcd",
@@ -52,15 +52,23 @@ def extract(raw):
         "status": "historical_static_evidence_not_latest_or_live_verified",
         "messages": messages,
     }
+    if build344:
+        result["source"].update(app_version="1.41.02", version_code=344,
+                                package="com.zroute.global", catalog="V202611021100",
+                                apk_sha256="e8db032e0ab264f9282628484c97cc3ef0c4a9aedfd2128986d953f742f5efaf",
+                                bundle="84b0b2a13d3cf9e5d0f0a00844d35c08")
+        result["status"] = "build344_embedded_schema_not_live_verified"
+    return result
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("schema", type=Path)
     parser.add_argument("output", type=Path)
+    parser.add_argument("--build344", action="store_true", help="use independently reviewed build-344 provenance")
     args = parser.parse_args()
-    # Validate before touching the output.
-    result = extract(args.schema.read_bytes())
+    # Validate before touching the output. Both inspected schemas share this hash.
+    result = extract(args.schema.read_bytes(), build344=args.build344)
     args.output.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
 
 

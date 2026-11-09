@@ -1,5 +1,21 @@
 # Capitol management without the full game client
 
+## Build-344 follow-up
+
+The owner-supplied **global 1.41.02 / build 344** APKs have now been inspected.
+See [the follow-up report](apk-build344-review.md): the embedded `temple.proto`
+is byte-identical to the historical schema, and restored Lua bytecode confirms
+the current dismissal, send-wrapper and permission paths. Current title names,
+benefits, interval mappings and relevant parameter values are recorded in
+[`data/build344-findings.json`](../data/build344-findings.json); the versioned
+schema inventory is [`data/capitol_protocol_build344.json`](../data/capitol_protocol_build344.json).
+
+This resolves the missing-current-APK evidence below **for the supplied embedded
+build**, but not the effective live hot-update catalog, live server acceptance,
+queue mutation, session coexistence or operational guarantees. The original
+historical assessment is retained below; read its acquisition/current-schema
+gaps in light of this follow-up.
+
 ## Assessment
 
 **A standalone Capitol service is technically plausible, but not yet demonstrated.**

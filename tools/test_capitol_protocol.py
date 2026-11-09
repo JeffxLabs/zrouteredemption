@@ -23,6 +23,15 @@ class CapitolProtocolTests(unittest.TestCase):
         ])
         self.assertIn("TempleChanegeTitleC2S", data["messages"])
 
+    def test_build344_contract_matches_historical(self):
+        root = Path(__file__).resolve().parents[1] / "data"
+        old = json.loads((root / "capitol_protocol.json").read_text())
+        current = json.loads((root / "capitol_protocol_build344.json").read_text())
+        self.assertEqual(current["messages"], old["messages"])
+        self.assertEqual(current["source"]["version_code"], 344)
+        self.assertEqual(current["source"]["plaintext_sha256"], subject.SOURCE_SHA256)
+        self.assertEqual(current["status"], "build344_embedded_schema_not_live_verified")
+
     def test_reject_unpinned_input(self):
         with self.assertRaisesRegex(ValueError, "unreviewed"):
             subject.extract(b"message TempleTitleDto {}")

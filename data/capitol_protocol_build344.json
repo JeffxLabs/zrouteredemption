@@ -1,0 +1,297 @@
+{
+  "source": {
+    "app_version": "1.41.02",
+    "version_code": 344,
+    "package": "com.zroute.global",
+    "catalog": "V202611021100",
+    "apk_sha256": "e8db032e0ab264f9282628484c97cc3ef0c4a9aedfd2128986d953f742f5efaf",
+    "table": "temple.proto",
+    "plaintext_sha256": "d8a12cfc91ce7c46acb1bdb0f024772ff322f040c7a25d294e1f0e4f1c012263",
+    "bundle": "84b0b2a13d3cf9e5d0f0a00844d35c08"
+  },
+  "status": "build344_embedded_schema_not_live_verified",
+  "messages": {
+    "TempleTitleDto": [
+      {
+        "number": 1,
+        "name": "title",
+        "type": "int32",
+        "repeated": false
+      },
+      {
+        "number": 2,
+        "name": "appointTime",
+        "type": "int64",
+        "repeated": false
+      },
+      {
+        "number": 3,
+        "name": "appointAgreeTime",
+        "type": "int64",
+        "repeated": false
+      },
+      {
+        "number": 4,
+        "name": "playerSimpleData",
+        "type": "PlayerSimpleDataPB",
+        "repeated": false
+      },
+      {
+        "number": 5,
+        "name": "waitPlayers",
+        "type": "PlayerSimpleDataPB",
+        "repeated": true
+      },
+      {
+        "number": 6,
+        "name": "closeTime",
+        "type": "int64",
+        "repeated": false
+      }
+    ],
+    "TempleTitleC2S": [
+      {
+        "number": 1,
+        "name": "title",
+        "type": "int32",
+        "repeated": false
+      }
+    ],
+    "TempleTitleS2C": [
+      {
+        "number": 1,
+        "name": "titleDto",
+        "type": "TempleTitleDto",
+        "repeated": false
+      }
+    ],
+    "TempleAppointTitleC2S": [
+      {
+        "number": 1,
+        "name": "title",
+        "type": "int32",
+        "repeated": false
+      },
+      {
+        "number": 2,
+        "name": "userUid",
+        "type": "int64",
+        "repeated": false
+      }
+    ],
+    "TempleApplicationTitleC2S": [
+      {
+        "number": 1,
+        "name": "title",
+        "type": "int32",
+        "repeated": false
+      }
+    ],
+    "TempleCancelTitleC2S": [
+      {
+        "number": 1,
+        "name": "title",
+        "type": "int32",
+        "repeated": false
+      },
+      {
+        "number": 2,
+        "name": "playerId",
+        "type": "int64",
+        "repeated": false
+      }
+    ],
+    "TempleAgreeTitleApplicationC2S": [
+      {
+        "number": 1,
+        "name": "title",
+        "type": "int32",
+        "repeated": false
+      },
+      {
+        "number": 2,
+        "name": "playerId",
+        "type": "int64",
+        "repeated": false
+      }
+    ],
+    "TempleTitleCDC2S": [
+      {
+        "number": 1,
+        "name": "id",
+        "type": "int32",
+        "repeated": false
+      }
+    ],
+    "TempleAutoApplicationC2S": [
+      {
+        "number": 1,
+        "name": "auto",
+        "type": "bool",
+        "repeated": false
+      }
+    ],
+    "TempleApplicationListC2S": [
+      {
+        "number": 1,
+        "name": "title",
+        "type": "int32",
+        "repeated": false
+      }
+    ],
+    "TempleApplicationListS2C": [
+      {
+        "number": 1,
+        "name": "title",
+        "type": "int32",
+        "repeated": false
+      },
+      {
+        "number": 2,
+        "name": "applicationPlayers",
+        "type": "TempleApplicationPlayer",
+        "repeated": true
+      }
+    ],
+    "TempleApplicationPlayer": [
+      {
+        "number": 1,
+        "name": "playerSimpleData",
+        "type": "PlayerSimpleDataPB",
+        "repeated": false
+      },
+      {
+        "number": 2,
+        "name": "applicationTime",
+        "type": "int64",
+        "repeated": false
+      }
+    ],
+    "TempleChanegeTitleC2S": [
+      {
+        "number": 1,
+        "name": "title",
+        "type": "int32",
+        "repeated": false
+      },
+      {
+        "number": 2,
+        "name": "userUid",
+        "type": "int64",
+        "repeated": false
+      }
+    ],
+    "TempleDepriveTitleC2S": [
+      {
+        "number": 1,
+        "name": "title",
+        "type": "int32",
+        "repeated": false
+      },
+      {
+        "number": 2,
+        "name": "userUid",
+        "type": "int64",
+        "repeated": false
+      }
+    ],
+    "UpdateTempleTitleS2C": [
+      {
+        "number": 1,
+        "name": "titleInfo",
+        "type": "TempleTitleDto",
+        "repeated": false
+      }
+    ],
+    "GetTempleTitleC2S": [
+      {
+        "number": 1,
+        "name": "serverId",
+        "type": "int32",
+        "repeated": false
+      }
+    ],
+    "PushTempleTitleS2C": [
+      {
+        "number": 1,
+        "name": "serverId",
+        "type": "int32",
+        "repeated": false
+      },
+      {
+        "number": 2,
+        "name": "titleInfos",
+        "type": "TempleTitleDto",
+        "repeated": true
+      }
+    ],
+    "PushApplicationTitleS2C": [
+      {
+        "number": 1,
+        "name": "applicationTitleMap",
+        "type": "map<int32,int64>",
+        "repeated": false
+      },
+      {
+        "number": 2,
+        "name": "titleId",
+        "type": "int32",
+        "repeated": false
+      }
+    ],
+    "GetTempleTitleRecordC2S": [
+      {
+        "number": 1,
+        "name": "serverId",
+        "type": "int32",
+        "repeated": false
+      },
+      {
+        "number": 2,
+        "name": "titleId",
+        "type": "int32",
+        "repeated": false
+      }
+    ],
+    "TempleTitleRecordS2C": [
+      {
+        "number": 1,
+        "name": "serverId",
+        "type": "int32",
+        "repeated": false
+      },
+      {
+        "number": 2,
+        "name": "titleId",
+        "type": "int32",
+        "repeated": false
+      },
+      {
+        "number": 3,
+        "name": "records",
+        "type": "TempleTitleRecord",
+        "repeated": true
+      }
+    ],
+    "TempleTitleRecord": [
+      {
+        "number": 1,
+        "name": "playerSimpleData",
+        "type": "PlayerSimpleDataPB",
+        "repeated": false
+      },
+      {
+        "number": 2,
+        "name": "startTime",
+        "type": "int64",
+        "repeated": false
+      },
+      {
+        "number": 3,
+        "name": "endTime",
+        "type": "int64",
+        "repeated": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "app_version": "1.41.02",
+  "catalog": "V202611021100",
+  "sources": {
+    "lang_building_en": {
+      "bundle": "096e2b8bb62f55e9d5a6f626b15bfd45",
+      "payload_sha256": "de15ca6d6bb0361159e1f4048eebd71119665422b29460260d29d5d69e79d168"
+    },
+    "ActivityTempleBattleTitle.lua": {
+      "bundle": "0f7e5b9e7dd4c82d093f007efb491320",
+      "payload_sha256": "0bc3a2e1e080d9a1935a7cb5ac411008695c73d140fb757475e855a8d2fcadd7"
+    },
+    "KingdomBuffTimeQueue.lua": {
+      "bundle": "14dfe5cdea47e447ee3fb3212b927b7c",
+      "payload_sha256": "8ece9e5d412c187dea4e7489f771e905f9b4843c1fd7d5df5165b05ef12e6f47"
+    },
+    "HeroInfo.lua": {
+      "bundle": "1deb339ae453c222557a85382c9f7013",
+      "payload_sha256": "023f4309d09a8e1ffe313f0e8ebf00483c41c0c95e0fed77787cfb2ac5e4fb3e"
+    },
+    "BuildingLevel.lua": {
+      "bundle": "3d51a2ee9698c11fe630395ea98782a9",
+      "payload_sha256": "bd22fe20398f1e9d0ad6c9cb89d981b17b5cce5d537be7ed1fe01999cc10d66f"
+    },
+    "HeroStar.lua": {
+      "bundle": "4b73afabbf56c6d78e2245e211b98d29",
+      "payload_sha256": "12c6b0829a10effe2ed4985fac34540003209482e2287e72483d37a0772ef79a"
+    },
+    "BuildingUpgrade.lua": {
+      "bundle": "4d4ee882dc9952670aa266b6a2dcebb6",
+      "payload_sha256": "356122b8e9aecc30bf661157ee630d8d36d5fe7983bb313289447b8a0dd112f4"
+    },
+    "Building.lua": {
+      "bundle": "77aec33e60eb99422b22416bce1cac86",
+      "payload_sha256": "8bcd56f923bc49a7128a6ce62f2bd501692d7126032d518429fea9627eed168b"
+    },
+    "DefineBenefit.lua": {
+      "bundle": "9edff26184a66ab1b89f3dd7c87f23d6",
+      "payload_sha256": "81d7a9e7caf8d459a59910d4767ed9781fbbe767dc73fa4d7fab183b81890cbd"
+    },
+    "lang_benefit_en": {
+      "bundle": "a56d97e85cfbc811fcc14d2c61fd938e",
+      "payload_sha256": "c6f62007ea61ea7585a3e8ea0c88c236f9a6458a701ab53be5d5f161f7e11ff4"
+    },
+    "lang_map_en": {
+      "bundle": "a9f5ca9620d62924a742cae311e135cd",
+      "payload_sha256": "3474d200b60677f3099eacbff2a5be1685d615e4dbacecca1473b5d2b1581297"
+    },
+    "lang_hero_en": {
+      "bundle": "ae57f25636f8302dccb75e484866cca5",
+      "payload_sha256": "88845313ce9917e6989921771437cbff0ab106b2061a54a33cd39eebb37b184f"
+    },
+    "HeroLevel.lua": {
+      "bundle": "bac905a6548df0a3b97ef214b7ed8266",
+      "payload_sha256": "2b20aeaf3c9f9a8bbbaa9f4f5bddc22d1b4e0a7690428c0780e320152b692a9a"
+    },
+    "CollegeTechLevel.lua": {
+      "bundle": "c7894c5ef6e595371cfecb292cfedbf6",
+      "payload_sha256": "97466f7519a91a8ce669894f3f2928e55d2aefc9e245d3a8ac7c89f73e7e0e53"
+    },
+    "lang_base_en": {
+      "bundle": "eb9821fa9130fe3b7cdaf34841664c79",
+      "payload_sha256": "37281e56c9343ee509353e2d695c33e53e0119472e72b74e5b452657db3078f9"
+    },
+    "CollegeTech.lua": {
+      "bundle": "ec6a76c7315d2e05febd9b30d7af308f",
+      "payload_sha256": "1dc027f79b014b2353ad2a859687b4b9d814867037891aed1ac4abb63ad4639e"
+    },
+    "ActivityTempleBattleParameter.lua": {
+      "bundle": "fcb855474504a49e11a1ca80549d6711",
+      "payload_sha256": "f5d472c7413e55d49a563e064289975ace64d224e1daa1b695025e95ca107d0b"
+    },
+    "lang_item_en": {
+      "bundle": "c783b18fc93b17f966147b83b7a9c3fe",
+      "payload_sha256": "2bdc3c365565b59f21ca592aed6da191f36346586ffad75aa52eab0b5ae0ab35"
+    }
+  }
+}

@@ -1,5 +1,12 @@
 # Official website APK review — 2026-11-08
 
+## Follow-up: global build 344 acquired
+
+After this website-only review, the owner supplied global **1.41.02 / build 344**
+split APKs. They have now been inspected; see [the follow-up report](apk-build344-review.md).
+The limitation below describes the original website acquisition, not the current
+state of the investigation. The effective live patch catalog remains unverified.
+
 ## Result and important version limitation
 
 The current APK button on the official website was resolved and its target
