@@ -7,6 +7,24 @@
 - **Clients:** Apparatchik Android for complete host/Capitol administration; ZR Chat Android for hosted chat.
 - **Hard requirement:** production operation must not need Unity, the game APK, an Android emulator, OCR, screen capture, ADB, or a permanently connected phone.
 
+## Capitol-first execution update — 2026-11-09
+
+Implementation is now prepared in the private **`JeffxLabs/apparatchik-direct`**
+repository, local directory `/home/jeff/src/apparatchik-direct`. Its governing
+entry points are `AGENTS.md`, `docs/CAPITOL_FIRST_EXECUTION.md`,
+`docs/CAPITOL_ACCEPTANCE.md` and `docs/HANDOFF.md`.
+
+**Full Capitol parity takes priority over hosted chat**, including immediate
+**bump to next**, selected queued appointment, **appoint from search**, and safe
+timed equivalents. Reuse ZR Chat session/auth infrastructure now; defer hosted
+chat UI/history/AI/media until all Capitol gates pass. The private execution
+contract supersedes this document's phase ordering and earlier per-stage live
+approval text within its recorded, bounded operator authorization. It specifies
+automated traditional-owner pause/drain/session release and verified restoration,
+autonomous testing, and commits/PRs for implementation subagents. Credentials and
+operational account/test details stay private. No application implementation or
+live production change was made by preparing that repository.
+
 ## 1. Decision summary
 
 Build a **private functionality fork of Apparatchik**, not a fresh dashboard or an OCR shim. Retain its Linux daemon, secure remote-control platform, policy concepts, audit/recovery machinery and Android companion. Add a structured game-protocol backend and a shared game-session service derived from ZR Chat's pure Kotlin/JVM modules.
