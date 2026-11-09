@@ -42,6 +42,12 @@ see the [current field inventory](data/capitol_protocol_build344.json), provenan
 and read-only-first validation plan. Current server acceptance and automatic
 appointment queue removal remain unverified; no live account or buffs were changed.
 
+The [permanent server-transfer tracker](docs/server-transfer-tracker.md) preserves
+build 344's migration-item, protocol-field and notification-code evidence as a
+[versioned baseline](data/server-transfer/build344.json), with a comparison tool
+for future APK reviews. **References are present, but a complete permanent-transfer
+workflow is not established**; temporary cross-server travel is tracked separately.
+
 ## Data
 
 - [`data/base-upgrades.csv`](data/base-upgrades.csv) is the compact, spreadsheet-friendly dataset.

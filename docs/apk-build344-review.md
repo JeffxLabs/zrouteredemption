@@ -164,6 +164,18 @@ operation. Keep the safeguards and incremental gates in the
 [headless integration assessment](capitol-headless-client.md). No game account
 was connected, no credentials inspected, no live state mutated.
 
+## Permanent server-transfer follow-up
+
+The [server-transfer tracker](server-transfer-tracker.md) records a versioned
+build-344 baseline for future APK comparisons: a **Server Migration** item,
+an inactive immigration-card placeholder, migration-related server/kingdom fields,
+and an immigration notification setter. These are scaffolding references, **not
+an established end-to-end permanent transfer implementation**. The setter only
+stores a notification flag and dispatches an event; no dedicated permanent
+transfer UI/request or complete item-use route was established. The tracker
+separates temporary cross-server travel, season migration and relocation cosmetics,
+pins the relevant source identities, and documents coverage limits.
+
 ## Reproduce and validate
 
 Supply local TextAssets named `<bundle>-<asset-name>` as recorded in the source
