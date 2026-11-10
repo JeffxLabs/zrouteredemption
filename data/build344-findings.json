@@ -1,0 +1,1710 @@
+{
+  "source": {
+    "app_version": "1.41.02",
+    "version_code": 344,
+    "catalog": "V202611021100",
+    "status": "embedded_client_facts_not_live_patch_or_release_status"
+  },
+  "row_counts": {
+    "ActivityTempleBattleTitle": 10,
+    "KingdomBuffTimeQueue": 4,
+    "HeroInfo": 351,
+    "BuildingLevel": 1576,
+    "HeroStar": 26,
+    "BuildingUpgrade": 1314,
+    "Building": 107,
+    "DefineBenefit": 360,
+    "HeroLevel": 350,
+    "CollegeTechLevel": 1684,
+    "CollegeTech": 332,
+    "ActivityTempleBattleParameter": 70
+  },
+  "baseline": "data/model-manifest.json (1.30.07); this is not a diff against every later feature dataset",
+  "base": {
+    "max_level": 30,
+    "levels_with_changed_cost_time_or_prerequisites": []
+  },
+  "playable_hero_ids": [
+    40002,
+    40001,
+    30011,
+    30001,
+    10008,
+    10006,
+    30003,
+    31003,
+    10005,
+    20009,
+    20005,
+    20006,
+    40010,
+    30007,
+    30005,
+    30004,
+    10007,
+    50001,
+    30006,
+    50002,
+    50003,
+    50004,
+    50005,
+    50006,
+    50007,
+    50008,
+    10011,
+    50010,
+    50009,
+    50011,
+    50012,
+    50013
+  ],
+  "new_playable_hero_ids": [],
+  "added_buildings": [
+    {
+      "id": 10034,
+      "name": "Dinki",
+      "type": 3,
+      "max_level": 7,
+      "show_conditions": []
+    },
+    {
+      "id": 10035,
+      "name": "Wasteland Falcon",
+      "type": 3,
+      "max_level": 7,
+      "show_conditions": []
+    },
+    {
+      "id": 10036,
+      "name": "Skyguard",
+      "type": 3,
+      "max_level": 7,
+      "show_conditions": []
+    },
+    {
+      "id": 10037,
+      "name": "Air-Ground Synergy",
+      "type": 3,
+      "max_level": 7,
+      "show_conditions": []
+    },
+    {
+      "id": 10038,
+      "name": "Clockwork Witch",
+      "type": 3,
+      "max_level": 7,
+      "show_conditions": []
+    },
+    {
+      "id": 10039,
+      "name": "Clockwork Warlock",
+      "type": 3,
+      "max_level": 7,
+      "show_conditions": []
+    },
+    {
+      "id": 10040,
+      "name": "Clockwork Pumpkin King",
+      "type": 3,
+      "max_level": 7,
+      "show_conditions": []
+    },
+    {
+      "id": 20015,
+      "name": "grey_zone_caravan",
+      "type": 5,
+      "max_level": 1,
+      "show_conditions": [
+        {
+          "id": 200901,
+          "param1": "141",
+          "param2": "1",
+          "param3": "",
+          "param4": ""
+        }
+      ]
+    }
+  ],
+  "added_research": [
+    {
+      "id": 9011,
+      "name": "Convoy Points Buff",
+      "tree_id": 9,
+      "max_level": 10,
+      "position": "1_8_1",
+      "tree_conditions": [
+        {
+          "id": 300007,
+          "param1": "1",
+          "param2": "5",
+          "param3": "0",
+          "param4": "1"
+        }
+      ],
+      "research_data_total": 4520,
+      "levels": [
+        {
+          "level": 1,
+          "base_time_seconds": 17400,
+          "costs": [],
+          "special_costs": [
+            {
+              "type": 99,
+              "id": "item_research_info",
+              "count": 100
+            }
+          ],
+          "prerequisites": [
+            {
+              "id": 20107,
+              "param1": "7",
+              "param2": "15",
+              "param3": ""
+            },
+            {
+              "id": 20201,
+              "param1": "9010",
+              "param2": "1",
+              "param3": ""
+            }
+          ],
+          "benefits": [
+            {
+              "Source": 401,
+              "Type": 6009,
+              "Value": 0.05
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "base_time_seconds": 33060,
+          "costs": [],
+          "special_costs": [
+            {
+              "type": 99,
+              "id": "item_research_info",
+              "count": 100
+            }
+          ],
+          "prerequisites": [
+            {
+              "id": 20107,
+              "param1": "7",
+              "param2": "16",
+              "param3": ""
+            }
+          ],
+          "benefits": [
+            {
+              "Source": 401,
+              "Type": 6009,
+              "Value": 0.1
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "base_time_seconds": 59460,
+          "costs": [],
+          "special_costs": [
+            {
+              "type": 99,
+              "id": "item_research_info",
+              "count": 200
+            }
+          ],
+          "prerequisites": [
+            {
+              "id": 20107,
+              "param1": "7",
+              "param2": "17",
+              "param3": ""
+            }
+          ],
+          "benefits": [
+            {
+              "Source": 401,
+              "Type": 6009,
+              "Value": 0.15
+            }
+          ]
+        },
+        {
+          "level": 4,
+          "base_time_seconds": 101100,
+          "costs": [],
+          "special_costs": [
+            {
+              "type": 99,
+              "id": "item_research_info",
+              "count": 200
+            }
+          ],
+          "prerequisites": [
+            {
+              "id": 20107,
+              "param1": "7",
+              "param2": "18",
+              "param3": ""
+            }
+          ],
+          "benefits": [
+            {
+              "Source": 401,
+              "Type": 6009,
+              "Value": 0.2
+            }
+          ]
+        },
+        {
+          "level": 5,
+          "base_time_seconds": 161700,
+          "costs": [],
+          "special_costs": [
+            {
+              "type": 99,
+              "id": "item_research_info",
+              "count": 350
+            }
+          ],
+          "prerequisites": [
+            {
+              "id": 20107,
+              "param1": "7",
+              "param2": "19",
+              "param3": ""
+            }
+          ],
+          "benefits": [
+            {
+              "Source": 401,
+              "Type": 6009,
+              "Value": 0.25
+            }
+          ]
+        },
+        {
+          "level": 6,
+          "base_time_seconds": 242580,
+          "costs": [],
+          "special_costs": [
+            {
+              "type": 99,
+              "id": "item_research_info",
+              "count": 450
+            }
+          ],
+          "prerequisites": [
+            {
+              "id": 20107,
+              "param1": "7",
+              "param2": "20",
+              "param3": ""
+            }
+          ],
+          "benefits": [
+            {
+              "Source": 401,
+              "Type": 6009,
+              "Value": 0.3
+            }
+          ]
+        },
+        {
+          "level": 7,
+          "base_time_seconds": 339600,
+          "costs": [],
+          "special_costs": [
+            {
+              "type": 99,
+              "id": "item_research_info",
+              "count": 600
+            }
+          ],
+          "prerequisites": [
+            {
+              "id": 20107,
+              "param1": "7",
+              "param2": "21",
+              "param3": ""
+            }
+          ],
+          "benefits": [
+            {
+              "Source": 401,
+              "Type": 6009,
+              "Value": 0.35
+            }
+          ]
+        },
+        {
+          "level": 8,
+          "base_time_seconds": 475440,
+          "costs": [],
+          "special_costs": [
+            {
+              "type": 99,
+              "id": "item_research_info",
+              "count": 720
+            }
+          ],
+          "prerequisites": [
+            {
+              "id": 20107,
+              "param1": "7",
+              "param2": "22",
+              "param3": ""
+            }
+          ],
+          "benefits": [
+            {
+              "Source": 401,
+              "Type": 6009,
+              "Value": 0.4
+            }
+          ]
+        },
+        {
+          "level": 9,
+          "base_time_seconds": 618060,
+          "costs": [],
+          "special_costs": [
+            {
+              "type": 99,
+              "id": "item_research_info",
+              "count": 840
+            }
+          ],
+          "prerequisites": [
+            {
+              "id": 20107,
+              "param1": "7",
+              "param2": "23",
+              "param3": ""
+            }
+          ],
+          "benefits": [
+            {
+              "Source": 401,
+              "Type": 6009,
+              "Value": 0.45
+            }
+          ]
+        },
+        {
+          "level": 10,
+          "base_time_seconds": 803460,
+          "costs": [],
+          "special_costs": [
+            {
+              "type": 99,
+              "id": "item_research_info",
+              "count": 960
+            }
+          ],
+          "prerequisites": [
+            {
+              "id": 20107,
+              "param1": "7",
+              "param2": "24",
+              "param3": ""
+            }
+          ],
+          "benefits": [
+            {
+              "Source": 401,
+              "Type": 6009,
+              "Value": 0.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 9012,
+      "name": "Special Ops Points Buff",
+      "tree_id": 9,
+      "max_level": 10,
+      "position": "1_8_2",
+      "tree_conditions": [
+        {
+          "id": 300007,
+          "param1": "1",
+          "param2": "5",
+          "param3": "0",
+          "param4": "1"
+        }
+      ],
+      "research_data_total": 4520,
+      "levels": [
+        {
+          "level": 1,
+          "base_time_seconds": 17400,
+          "costs": [],
+          "special_costs": [
+            {
+              "type": 99,
+              "id": "item_research_info",
+              "count": 100
+            }
+          ],
+          "prerequisites": [
+            {
+              "id": 20107,
+              "param1": "7",
+              "param2": "15",
+              "param3": ""
+            },
+            {
+              "id": 20201,
+              "param1": "9010",
+              "param2": "1",
+              "param3": ""
+            }
+          ],
+          "benefits": [
+            {
+              "Source": 401,
+              "Type": 6010,
+              "Value": 0.05
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "base_time_seconds": 33060,
+          "costs": [],
+          "special_costs": [
+            {
+              "type": 99,
+              "id": "item_research_info",
+              "count": 100
+            }
+          ],
+          "prerequisites": [
+            {
+              "id": 20107,
+              "param1": "7",
+              "param2": "16",
+              "param3": ""
+            }
+          ],
+          "benefits": [
+            {
+              "Source": 401,
+              "Type": 6010,
+              "Value": 0.1
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "base_time_seconds": 59460,
+          "costs": [],
+          "special_costs": [
+            {
+              "type": 99,
+              "id": "item_research_info",
+              "count": 200
+            }
+          ],
+          "prerequisites": [
+            {
+              "id": 20107,
+              "param1": "7",
+              "param2": "17",
+              "param3": ""
+            }
+          ],
+          "benefits": [
+            {
+              "Source": 401,
+              "Type": 6010,
+              "Value": 0.15
+            }
+          ]
+        },
+        {
+          "level": 4,
+          "base_time_seconds": 101100,
+          "costs": [],
+          "special_costs": [
+            {
+              "type": 99,
+              "id": "item_research_info",
+              "count": 200
+            }
+          ],
+          "prerequisites": [
+            {
+              "id": 20107,
+              "param1": "7",
+              "param2": "18",
+              "param3": ""
+            }
+          ],
+          "benefits": [
+            {
+              "Source": 401,
+              "Type": 6010,
+              "Value": 0.2
+            }
+          ]
+        },
+        {
+          "level": 5,
+          "base_time_seconds": 161700,
+          "costs": [],
+          "special_costs": [
+            {
+              "type": 99,
+              "id": "item_research_info",
+              "count": 350
+            }
+          ],
+          "prerequisites": [
+            {
+              "id": 20107,
+              "param1": "7",
+              "param2": "19",
+              "param3": ""
+            }
+          ],
+          "benefits": [
+            {
+              "Source": 401,
+              "Type": 6010,
+              "Value": 0.25
+            }
+          ]
+        },
+        {
+          "level": 6,
+          "base_time_seconds": 242580,
+          "costs": [],
+          "special_costs": [
+            {
+              "type": 99,
+              "id": "item_research_info",
+              "count": 450
+            }
+          ],
+          "prerequisites": [
+            {
+              "id": 20107,
+              "param1": "7",
+              "param2": "20",
+              "param3": ""
+            }
+          ],
+          "benefits": [
+            {
+              "Source": 401,
+              "Type": 6010,
+              "Value": 0.3
+            }
+          ]
+        },
+        {
+          "level": 7,
+          "base_time_seconds": 339600,
+          "costs": [],
+          "special_costs": [
+            {
+              "type": 99,
+              "id": "item_research_info",
+              "count": 600
+            }
+          ],
+          "prerequisites": [
+            {
+              "id": 20107,
+              "param1": "7",
+              "param2": "21",
+              "param3": ""
+            }
+          ],
+          "benefits": [
+            {
+              "Source": 401,
+              "Type": 6010,
+              "Value": 0.35
+            }
+          ]
+        },
+        {
+          "level": 8,
+          "base_time_seconds": 475440,
+          "costs": [],
+          "special_costs": [
+            {
+              "type": 99,
+              "id": "item_research_info",
+              "count": 720
+            }
+          ],
+          "prerequisites": [
+            {
+              "id": 20107,
+              "param1": "7",
+              "param2": "22",
+              "param3": ""
+            }
+          ],
+          "benefits": [
+            {
+              "Source": 401,
+              "Type": 6010,
+              "Value": 0.4
+            }
+          ]
+        },
+        {
+          "level": 9,
+          "base_time_seconds": 618060,
+          "costs": [],
+          "special_costs": [
+            {
+              "type": 99,
+              "id": "item_research_info",
+              "count": 840
+            }
+          ],
+          "prerequisites": [
+            {
+              "id": 20107,
+              "param1": "7",
+              "param2": "23",
+              "param3": ""
+            }
+          ],
+          "benefits": [
+            {
+              "Source": 401,
+              "Type": 6010,
+              "Value": 0.45
+            }
+          ]
+        },
+        {
+          "level": 10,
+          "base_time_seconds": 803460,
+          "costs": [],
+          "special_costs": [
+            {
+              "type": 99,
+              "id": "item_research_info",
+              "count": 960
+            }
+          ],
+          "prerequisites": [
+            {
+              "id": 20107,
+              "param1": "7",
+              "param2": "24",
+              "param3": ""
+            }
+          ],
+          "benefits": [
+            {
+              "Source": 401,
+              "Type": 6010,
+              "Value": 0.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 9013,
+      "name": "Recruit Points Buff II",
+      "tree_id": 9,
+      "max_level": 10,
+      "position": "1_8_3",
+      "tree_conditions": [
+        {
+          "id": 300007,
+          "param1": "1",
+          "param2": "5",
+          "param3": "0",
+          "param4": "1"
+        }
+      ],
+      "research_data_total": 4520,
+      "levels": [
+        {
+          "level": 1,
+          "base_time_seconds": 17400,
+          "costs": [],
+          "special_costs": [
+            {
+              "type": 99,
+              "id": "item_research_info",
+              "count": 100
+            }
+          ],
+          "prerequisites": [
+            {
+              "id": 20107,
+              "param1": "7",
+              "param2": "15",
+              "param3": ""
+            },
+            {
+              "id": 20201,
+              "param1": "9010",
+              "param2": "1",
+              "param3": ""
+            }
+          ],
+          "benefits": [
+            {
+              "Source": 401,
+              "Type": 6011,
+              "Value": 0.05
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "base_time_seconds": 33060,
+          "costs": [],
+          "special_costs": [
+            {
+              "type": 99,
+              "id": "item_research_info",
+              "count": 100
+            }
+          ],
+          "prerequisites": [
+            {
+              "id": 20107,
+              "param1": "7",
+              "param2": "16",
+              "param3": ""
+            }
+          ],
+          "benefits": [
+            {
+              "Source": 401,
+              "Type": 6011,
+              "Value": 0.1
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "base_time_seconds": 59460,
+          "costs": [],
+          "special_costs": [
+            {
+              "type": 99,
+              "id": "item_research_info",
+              "count": 200
+            }
+          ],
+          "prerequisites": [
+            {
+              "id": 20107,
+              "param1": "7",
+              "param2": "17",
+              "param3": ""
+            }
+          ],
+          "benefits": [
+            {
+              "Source": 401,
+              "Type": 6011,
+              "Value": 0.15
+            }
+          ]
+        },
+        {
+          "level": 4,
+          "base_time_seconds": 101100,
+          "costs": [],
+          "special_costs": [
+            {
+              "type": 99,
+              "id": "item_research_info",
+              "count": 200
+            }
+          ],
+          "prerequisites": [
+            {
+              "id": 20107,
+              "param1": "7",
+              "param2": "18",
+              "param3": ""
+            }
+          ],
+          "benefits": [
+            {
+              "Source": 401,
+              "Type": 6011,
+              "Value": 0.2
+            }
+          ]
+        },
+        {
+          "level": 5,
+          "base_time_seconds": 161700,
+          "costs": [],
+          "special_costs": [
+            {
+              "type": 99,
+              "id": "item_research_info",
+              "count": 350
+            }
+          ],
+          "prerequisites": [
+            {
+              "id": 20107,
+              "param1": "7",
+              "param2": "19",
+              "param3": ""
+            }
+          ],
+          "benefits": [
+            {
+              "Source": 401,
+              "Type": 6011,
+              "Value": 0.25
+            }
+          ]
+        },
+        {
+          "level": 6,
+          "base_time_seconds": 242580,
+          "costs": [],
+          "special_costs": [
+            {
+              "type": 99,
+              "id": "item_research_info",
+              "count": 450
+            }
+          ],
+          "prerequisites": [
+            {
+              "id": 20107,
+              "param1": "7",
+              "param2": "20",
+              "param3": ""
+            }
+          ],
+          "benefits": [
+            {
+              "Source": 401,
+              "Type": 6011,
+              "Value": 0.3
+            }
+          ]
+        },
+        {
+          "level": 7,
+          "base_time_seconds": 339600,
+          "costs": [],
+          "special_costs": [
+            {
+              "type": 99,
+              "id": "item_research_info",
+              "count": 600
+            }
+          ],
+          "prerequisites": [
+            {
+              "id": 20107,
+              "param1": "7",
+              "param2": "21",
+              "param3": ""
+            }
+          ],
+          "benefits": [
+            {
+              "Source": 401,
+              "Type": 6011,
+              "Value": 0.35
+            }
+          ]
+        },
+        {
+          "level": 8,
+          "base_time_seconds": 475440,
+          "costs": [],
+          "special_costs": [
+            {
+              "type": 99,
+              "id": "item_research_info",
+              "count": 720
+            }
+          ],
+          "prerequisites": [
+            {
+              "id": 20107,
+              "param1": "7",
+              "param2": "22",
+              "param3": ""
+            }
+          ],
+          "benefits": [
+            {
+              "Source": 401,
+              "Type": 6011,
+              "Value": 0.4
+            }
+          ]
+        },
+        {
+          "level": 9,
+          "base_time_seconds": 618060,
+          "costs": [],
+          "special_costs": [
+            {
+              "type": 99,
+              "id": "item_research_info",
+              "count": 840
+            }
+          ],
+          "prerequisites": [
+            {
+              "id": 20107,
+              "param1": "7",
+              "param2": "23",
+              "param3": ""
+            }
+          ],
+          "benefits": [
+            {
+              "Source": 401,
+              "Type": 6011,
+              "Value": 0.45
+            }
+          ]
+        },
+        {
+          "level": 10,
+          "base_time_seconds": 803460,
+          "costs": [],
+          "special_costs": [
+            {
+              "type": 99,
+              "id": "item_research_info",
+              "count": 960
+            }
+          ],
+          "prerequisites": [
+            {
+              "id": 20107,
+              "param1": "7",
+              "param2": "24",
+              "param3": ""
+            }
+          ],
+          "benefits": [
+            {
+              "Source": 401,
+              "Type": 6011,
+              "Value": 0.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 9014,
+      "name": "Points Buff II",
+      "tree_id": 9,
+      "max_level": 10,
+      "position": "1_9_2",
+      "tree_conditions": [
+        {
+          "id": 300007,
+          "param1": "1",
+          "param2": "5",
+          "param3": "0",
+          "param4": "1"
+        }
+      ],
+      "research_data_total": 7200,
+      "levels": [
+        {
+          "level": 1,
+          "base_time_seconds": 242580,
+          "costs": [],
+          "special_costs": [
+            {
+              "type": 99,
+              "id": "item_research_info",
+              "count": 480
+            }
+          ],
+          "prerequisites": [
+            {
+              "id": 20107,
+              "param1": "7",
+              "param2": "20",
+              "param3": ""
+            },
+            {
+              "id": 20201,
+              "param1": "9011",
+              "param2": "1",
+              "param3": ""
+            },
+            {
+              "id": 20201,
+              "param1": "9012",
+              "param2": "1",
+              "param3": ""
+            },
+            {
+              "id": 20201,
+              "param1": "9013",
+              "param2": "1",
+              "param3": ""
+            }
+          ],
+          "benefits": [
+            {
+              "Source": 401,
+              "Type": 6004,
+              "Value": 0.05
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "base_time_seconds": 242580,
+          "costs": [],
+          "special_costs": [
+            {
+              "type": 99,
+              "id": "item_research_info",
+              "count": 480
+            }
+          ],
+          "prerequisites": [
+            {
+              "id": 20107,
+              "param1": "7",
+              "param2": "20",
+              "param3": ""
+            },
+            {
+              "id": 20201,
+              "param1": "9011",
+              "param2": "2",
+              "param3": ""
+            },
+            {
+              "id": 20201,
+              "param1": "9012",
+              "param2": "2",
+              "param3": ""
+            },
+            {
+              "id": 20201,
+              "param1": "9013",
+              "param2": "2",
+              "param3": ""
+            }
+          ],
+          "benefits": [
+            {
+              "Source": 401,
+              "Type": 6004,
+              "Value": 0.1
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "base_time_seconds": 339600,
+          "costs": [],
+          "special_costs": [
+            {
+              "type": 99,
+              "id": "item_research_info",
+              "count": 600
+            }
+          ],
+          "prerequisites": [
+            {
+              "id": 20107,
+              "param1": "7",
+              "param2": "21",
+              "param3": ""
+            },
+            {
+              "id": 20201,
+              "param1": "9011",
+              "param2": "3",
+              "param3": ""
+            },
+            {
+              "id": 20201,
+              "param1": "9012",
+              "param2": "3",
+              "param3": ""
+            },
+            {
+              "id": 20201,
+              "param1": "9013",
+              "param2": "3",
+              "param3": ""
+            }
+          ],
+          "benefits": [
+            {
+              "Source": 401,
+              "Type": 6004,
+              "Value": 0.15
+            }
+          ]
+        },
+        {
+          "level": 4,
+          "base_time_seconds": 339600,
+          "costs": [],
+          "special_costs": [
+            {
+              "type": 99,
+              "id": "item_research_info",
+              "count": 600
+            }
+          ],
+          "prerequisites": [
+            {
+              "id": 20107,
+              "param1": "7",
+              "param2": "21",
+              "param3": ""
+            },
+            {
+              "id": 20201,
+              "param1": "9011",
+              "param2": "4",
+              "param3": ""
+            },
+            {
+              "id": 20201,
+              "param1": "9012",
+              "param2": "4",
+              "param3": ""
+            },
+            {
+              "id": 20201,
+              "param1": "9013",
+              "param2": "4",
+              "param3": ""
+            }
+          ],
+          "benefits": [
+            {
+              "Source": 401,
+              "Type": 6004,
+              "Value": 0.2
+            }
+          ]
+        },
+        {
+          "level": 5,
+          "base_time_seconds": 475440,
+          "costs": [],
+          "special_costs": [
+            {
+              "type": 99,
+              "id": "item_research_info",
+              "count": 720
+            }
+          ],
+          "prerequisites": [
+            {
+              "id": 20107,
+              "param1": "7",
+              "param2": "22",
+              "param3": ""
+            },
+            {
+              "id": 20201,
+              "param1": "9011",
+              "param2": "5",
+              "param3": ""
+            },
+            {
+              "id": 20201,
+              "param1": "9012",
+              "param2": "5",
+              "param3": ""
+            },
+            {
+              "id": 20201,
+              "param1": "9013",
+              "param2": "5",
+              "param3": ""
+            }
+          ],
+          "benefits": [
+            {
+              "Source": 401,
+              "Type": 6004,
+              "Value": 0.25
+            }
+          ]
+        },
+        {
+          "level": 6,
+          "base_time_seconds": 475440,
+          "costs": [],
+          "special_costs": [
+            {
+              "type": 99,
+              "id": "item_research_info",
+              "count": 720
+            }
+          ],
+          "prerequisites": [
+            {
+              "id": 20107,
+              "param1": "7",
+              "param2": "22",
+              "param3": ""
+            },
+            {
+              "id": 20201,
+              "param1": "9011",
+              "param2": "6",
+              "param3": ""
+            },
+            {
+              "id": 20201,
+              "param1": "9012",
+              "param2": "6",
+              "param3": ""
+            },
+            {
+              "id": 20201,
+              "param1": "9013",
+              "param2": "6",
+              "param3": ""
+            }
+          ],
+          "benefits": [
+            {
+              "Source": 401,
+              "Type": 6004,
+              "Value": 0.3
+            }
+          ]
+        },
+        {
+          "level": 7,
+          "base_time_seconds": 618060,
+          "costs": [],
+          "special_costs": [
+            {
+              "type": 99,
+              "id": "item_research_info",
+              "count": 840
+            }
+          ],
+          "prerequisites": [
+            {
+              "id": 20107,
+              "param1": "7",
+              "param2": "23",
+              "param3": ""
+            },
+            {
+              "id": 20201,
+              "param1": "9011",
+              "param2": "7",
+              "param3": ""
+            },
+            {
+              "id": 20201,
+              "param1": "9012",
+              "param2": "7",
+              "param3": ""
+            },
+            {
+              "id": 20201,
+              "param1": "9013",
+              "param2": "7",
+              "param3": ""
+            }
+          ],
+          "benefits": [
+            {
+              "Source": 401,
+              "Type": 6004,
+              "Value": 0.35
+            }
+          ]
+        },
+        {
+          "level": 8,
+          "base_time_seconds": 618060,
+          "costs": [],
+          "special_costs": [
+            {
+              "type": 99,
+              "id": "item_research_info",
+              "count": 840
+            }
+          ],
+          "prerequisites": [
+            {
+              "id": 20107,
+              "param1": "7",
+              "param2": "23",
+              "param3": ""
+            },
+            {
+              "id": 20201,
+              "param1": "9011",
+              "param2": "8",
+              "param3": ""
+            },
+            {
+              "id": 20201,
+              "param1": "9012",
+              "param2": "8",
+              "param3": ""
+            },
+            {
+              "id": 20201,
+              "param1": "9013",
+              "param2": "8",
+              "param3": ""
+            }
+          ],
+          "benefits": [
+            {
+              "Source": 401,
+              "Type": 6004,
+              "Value": 0.4
+            }
+          ]
+        },
+        {
+          "level": 9,
+          "base_time_seconds": 803460,
+          "costs": [],
+          "special_costs": [
+            {
+              "type": 99,
+              "id": "item_research_info",
+              "count": 960
+            }
+          ],
+          "prerequisites": [
+            {
+              "id": 20107,
+              "param1": "7",
+              "param2": "24",
+              "param3": ""
+            },
+            {
+              "id": 20201,
+              "param1": "9011",
+              "param2": "9",
+              "param3": ""
+            },
+            {
+              "id": 20201,
+              "param1": "9012",
+              "param2": "9",
+              "param3": ""
+            },
+            {
+              "id": 20201,
+              "param1": "9013",
+              "param2": "9",
+              "param3": ""
+            }
+          ],
+          "benefits": [
+            {
+              "Source": 401,
+              "Type": 6004,
+              "Value": 0.45
+            }
+          ]
+        },
+        {
+          "level": 10,
+          "base_time_seconds": 803460,
+          "costs": [],
+          "special_costs": [
+            {
+              "type": 99,
+              "id": "item_research_info",
+              "count": 960
+            }
+          ],
+          "prerequisites": [
+            {
+              "id": 20107,
+              "param1": "7",
+              "param2": "24",
+              "param3": ""
+            },
+            {
+              "id": 20201,
+              "param1": "9011",
+              "param2": "10",
+              "param3": ""
+            },
+            {
+              "id": 20201,
+              "param1": "9012",
+              "param2": "10",
+              "param3": ""
+            },
+            {
+              "id": 20201,
+              "param1": "9013",
+              "param2": "10",
+              "param3": ""
+            }
+          ],
+          "benefits": [
+            {
+              "Source": 401,
+              "Type": 6004,
+              "Value": 0.5
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "alliance_competition_research_data_total": 54110,
+  "capitol": {
+    "titles": [
+      {
+        "id": 1,
+        "name": "President",
+        "appoint_permission_flag": 1,
+        "benefits": [
+          {
+            "type": 10005,
+            "value": 0.05,
+            "name": "Hero HP"
+          },
+          {
+            "type": 10006,
+            "value": 0.05,
+            "name": "Hero ATK"
+          },
+          {
+            "type": 10007,
+            "value": 0.05,
+            "name": "Hero DEF"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Vice President",
+        "appoint_permission_flag": 1,
+        "benefits": [
+          {
+            "type": 20005,
+            "value": 0.2,
+            "name": "Building Speed"
+          },
+          {
+            "type": 20008,
+            "value": 0.2,
+            "name": "Tech Research Speed"
+          },
+          {
+            "type": 20018,
+            "value": 0.1,
+            "name": "Training Speed"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Tactical Minister",
+        "appoint_permission_flag": 0,
+        "benefits": [
+          {
+            "type": 20021,
+            "value": 0.2,
+            "name": "Hospital Capacity"
+          },
+          {
+            "type": 20022,
+            "value": 0.2,
+            "name": "Healing Speed"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Defense Minister",
+        "appoint_permission_flag": 0,
+        "benefits": [
+          {
+            "type": 20017,
+            "value": 0.2,
+            "name": "Soldier Training Limit"
+          },
+          {
+            "type": 20018,
+            "value": 0.2,
+            "name": "Training Speed"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "Construction Minister",
+        "appoint_permission_flag": 0,
+        "benefits": [
+          {
+            "type": 20005,
+            "value": 0.5,
+            "name": "Building Speed"
+          },
+          {
+            "type": 20008,
+            "value": 0.25,
+            "name": "Tech Research Speed"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "name": "Research Director",
+        "appoint_permission_flag": 0,
+        "benefits": [
+          {
+            "type": 20008,
+            "value": 0.5,
+            "name": "Tech Research Speed"
+          },
+          {
+            "type": 20005,
+            "value": 0.25,
+            "name": "Building Speed"
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "name": "Civil Minister",
+        "appoint_permission_flag": 0,
+        "benefits": [
+          {
+            "type": 20001,
+            "value": 1,
+            "name": "Food Output"
+          },
+          {
+            "type": 20002,
+            "value": 1,
+            "name": "Metal Output"
+          },
+          {
+            "type": 20003,
+            "value": 1,
+            "name": "Oil Output"
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "name": "Overlord",
+        "appoint_permission_flag": 1,
+        "benefits": [
+          {
+            "type": 10005,
+            "value": 0.05,
+            "name": "Hero HP"
+          },
+          {
+            "type": 10006,
+            "value": 0.05,
+            "name": "Hero ATK"
+          },
+          {
+            "type": 10007,
+            "value": 0.05,
+            "name": "Hero DEF"
+          },
+          {
+            "type": 10107,
+            "value": 0.05,
+            "name": "Enemy Soldier Death Rate in <color=#e3812f><link=attribute_effects_des002><u>PvP Battle</u></link></color> +"
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "name": "Civil Commander",
+        "appoint_permission_flag": 0,
+        "benefits": [
+          {
+            "type": 20005,
+            "value": 0.6,
+            "name": "Building Speed"
+          },
+          {
+            "type": 20008,
+            "value": 0.6,
+            "name": "Tech Research Speed"
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "name": "Military Commander",
+        "appoint_permission_flag": 0,
+        "benefits": [
+          {
+            "type": 10101,
+            "value": 0.05,
+            "name": "Overall March Speed +"
+          },
+          {
+            "type": 10107,
+            "value": 0.05,
+            "name": "Enemy Soldier Death Rate in <color=#e3812f><link=attribute_effects_des002><u>PvP Battle</u></link></color> +"
+          }
+        ]
+      }
+    ],
+    "rotation_intervals": [
+      {
+        "id": 1,
+        "seconds": 300
+      },
+      {
+        "id": 2,
+        "seconds": 600
+      },
+      {
+        "id": 3,
+        "seconds": 1200
+      },
+      {
+        "id": 4,
+        "seconds": 1800
+      }
+    ],
+    "parameters": {
+      "kingdom_rank_max_list_queue": 50,
+      "kingdom_rank_max_list_approve": 50,
+      "kingdom_official_record_limit": 100,
+      "kingdom_same_rank_time_limit": 1800,
+      "kingdom_rank_appoint_limit": 300,
+      "kingdom_rank_time_limit": 280
+    }
+  }
+}

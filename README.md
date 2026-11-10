@@ -22,6 +22,38 @@ Use the [Sky Fighter planner](https://jeffxlabs.github.io/zrouteredemption/fight
 
 The Heroes Directory now marks the SR Soldier Load claim as unverified instead of recommending Jackson, Jamal and Hank for gathering; see [the correction and evidence](docs/hero-soldier-load.md).
 
+## APK review and standalone Capitol research
+
+The [build-344 review](docs/apk-build344-review.md) inspects the owner-supplied
+**global 1.41.02** split APKs and embedded catalog **V202611021100**, superseding
+the [earlier acquisition limitation](docs/apk-review-2026-11-08.md) (the official
+website still linked to 1.22.05). It identifies four additional gated research
+technologies costing **20,760 Research Data** to max and eight additional
+building/decor definitions; the Base cap remains 30 and the playable hero filter
+still yields 32 heroes. See [versioned findings](data/build344-findings.json).
+Existing planners retain their original baseline; these findings do not mean
+all planners have been migrated. The effective live hot-update catalog remains
+unverified.
+
+The [headless Capitol client assessment](docs/capitol-headless-client.md) proposes
+reusing ZR Chat's session layer with an Apparatchik backend. The build-344 schema
+and restored UI bytecode confirm the main title/application/dismissal contracts;
+see the [current field inventory](data/capitol_protocol_build344.json), provenance
+and read-only-first validation plan. Current server acceptance and automatic
+appointment queue removal remain unverified; no live account or buffs were changed.
+
+The [Apparatchik Direct implementation plan](docs/apparatchik-direct-implementation-plan.md)
+details a complete Linux-hosted fork: shared Capitol/chat session ownership,
+Apparatchik Android remote administration, hosted ZR Chat Android transport,
+queue/appointment parity gates, security, Arch-to-LXC deployment, resource targets
+and phased acceptance tests. It is a design plan, not an implemented service.
+
+The [permanent server-transfer tracker](docs/server-transfer-tracker.md) preserves
+build 344's migration-item, protocol-field and notification-code evidence as a
+[versioned baseline](data/server-transfer/build344.json), with a comparison tool
+for future APK reviews. **References are present, but a complete permanent-transfer
+workflow is not established**; temporary cross-server travel is tracked separately.
+
 ## Data
 
 - [`data/base-upgrades.csv`](data/base-upgrades.csv) is the compact, spreadsheet-friendly dataset.

@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "feature": "permanent_server_transfer",
+  "source": {
+    "package": "com.zroute.global",
+    "app_version": "1.41.02",
+    "version_code": 344,
+    "catalog": "V202611021100",
+    "reviewed_at": "2026-11-08",
+    "provenance": "../apk-build344-provenance.json",
+    "scope": "supplied_embedded_build_only",
+    "effective_hot_update_catalog_reviewed": false
+  },
+  "assessment": {
+    "status": "references_present_workflow_not_established",
+    "summary": "Preparatory or leftover migration references exist; an end-to-end permanent transfer implementation was not established in the inspected embedded client.",
+    "live_availability": "unverified",
+    "release_timing": "unknown"
+  },
+  "evidence": {
+    "items": {
+      "item_UseUp_abroadMove": {
+        "name": "itemname_UseUp_abroadMove",
+        "description": "itemDes_UseUp_abroadMove",
+        "type": "UseUp",
+        "typeSub": "abroadMove",
+        "icon": "Icon_Item_Useup_Abroadmove",
+        "isUse": 1,
+        "autoUse": false,
+        "isStack": 1,
+        "gotoID": "",
+        "preconditions": [
+          {
+            "id": 20103,
+            "param1": "1001",
+            "param2": "15",
+            "param3": "1"
+          }
+        ],
+        "english_name": "Server Migration",
+        "english_description": "Use to change your server."
+      },
+      "item_UseUp_immigrantCard": {
+        "name": "",
+        "description": "",
+        "type": "",
+        "typeSub": "",
+        "icon": "icon_item_UseUp_immigrantCard",
+        "isUse": 0,
+        "autoUse": false,
+        "isStack": 0,
+        "gotoID": "",
+        "preconditions": [],
+        "english_name": null,
+        "english_description": null
+      }
+    },
+    "protocol_fields": {
+      "SmallWorldServerInfoDto.isOpen": {
+        "schema": "server.proto",
+        "number": 6,
+        "type": "bool",
+        "comment_meaning": "whether character migration is open",
+        "limitation": "May also gate cross-server visits; no permanent-transfer execution flow established."
+      },
+      "KingdomInfoDto.migrateCastleLevel": {
+        "schema": "world.proto",
+        "number": 19,
+        "type": "int32",
+        "comment_meaning": "immigration Base level (cross-server)",
+        "limitation": "Exact threshold semantics and live policy unverified."
+      },
+      "KingdomInfoDto.lastMigrateLimitModifiedTime": {
+        "schema": "world.proto",
+        "number": 21,
+        "type": "int64",
+        "comment_meaning": "last modification time of immigration restrictions"
+      }
+    },
+    "client_functions": {
+      "TempleKingdomInfoObject.SetImmigrationRedPoint": {
+        "behavior": "Stores immigrateRedPoint and dispatches OnImmigrationRedPointUpdate.",
+        "implements_transfer": false
+      }
+    },
+    "workflow_review": {
+      "dedicated_permanent_transfer_screen": "not_identified",
+      "permanent_destination_selection_flow": "not_identified",
+      "clearly_named_permanent_transfer_request": "not_identified",
+      "migration_item_execution_path": "not_traced",
+      "ticket_costs_and_eligibility_rules": "not_established"
+    },
+    "separate_features": {
+      "temporary_cross_server_relocation": {
+        "message": "WorldCityRelocateC2S",
+        "state_message": "PushMyCityStateS2C",
+        "cooldown_field": "relocateCDEndTime",
+        "localization_key": "cross_server_tips8",
+        "english_text": "Indicates whether you can Relocate to this server, with a 5-minute cooldown for cross-server transfer",
+        "return_localization_key": "cross_server_tips9",
+        "return_english_text": "Click to return to the original Warzone",
+        "proves_permanent_transfer": false
+      },
+      "season_start_migration": {
+        "localization_key": "S1_season_mail_1",
+        "meaning": "Season-start Warzone migration and server restart; not evidence of player-selected permanent transfer."
+      },
+      "relocation_cosmetics": {
+        "config": "CityMigrationSkin",
+        "meaning": "Relocation appearance skins, not server migration eligibility or tickets."
+      }
+    }
+  },
+  "review_scope": {
+    "searched": "Embedded manifest address names; selected/restored protobuf schemas; 24 English localization TextAssets; Item definitions; selected Temple bytecode.",
+    "limitations": [
+      "Not an exhaustive semantic audit of all Lua or managed/native code.",
+      "Missing names or commands do not prove the feature is absent.",
+      "No live server/account query, migration attempt, item use or effective patch review.",
+      "Do not interpret the Base-15 item condition as confirmed transfer eligibility."
+    ]
+  },
+  "sources": {
+    "server.proto": {
+      "bundle": "84b0b2a13d3cf9e5d0f0a00844d35c08",
+      "textasset_payload_sha256": "db5dce258ec5990348da04ca7dc9c2fff82eeadc2a81991eef7e67e8e4289e66"
+    },
+    "world.proto": {
+      "bundle": "84b0b2a13d3cf9e5d0f0a00844d35c08",
+      "textasset_payload_sha256": "e1f9dd2ad1ecc0624a35d46d29f0840fcd0c1768d76855e5a91039bdee97e040"
+    },
+    "Item.lua": {
+      "bundle": "862515745405b5e5afd23118368d1d37",
+      "textasset_payload_sha256": "b79d953fe1ae129285ce0449470a53d17d52e2fd9dc0690b517a4b164173e833",
+      "restored_chunk_sha256": "8e76900c0c674015d7575c32236ed53bc978c0922b7476e4f83331b119c5b037"
+    },
+    "lang_map_en": {
+      "bundle": "a9f5ca9620d62924a742cae311e135cd",
+      "textasset_payload_sha256": "3474d200b60677f3099eacbff2a5be1685d615e4dbacecca1473b5d2b1581297"
+    },
+    "TempleKingdomInfoObject.lua": {
+      "bundle": "bad7c46622e7fe07a6f76c225cbe0183",
+      "textasset_payload_sha256": "3b6f317b2de7778c872fcac1526fca6a26d5d31155a16eaaf8d55f4a26434a70",
+      "restored_chunk_sha256": "03e9079c90435c8699677d5a5f42fcd68b19a112ca4d4110be2e3d9771704230"
+    },
+    "lang_item_en": {
+      "bundle": "c783b18fc93b17f966147b83b7a9c3fe",
+      "textasset_payload_sha256": "2bdc3c365565b59f21ca592aed6da191f36346586ffad75aa52eab0b5ae0ab35"
+    }
+  }
+}

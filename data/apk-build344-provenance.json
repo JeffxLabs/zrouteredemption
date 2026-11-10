@@ -1,0 +1,137 @@
+{
+  "acquisition": "User-provided Google Drive archive, downloaded 2026-11-08; not the stale official website distribution",
+  "package": "com.zroute.global",
+  "app_version": "1.41.02",
+  "version_code": 344,
+  "catalog": "V202611021100",
+  "signature": {
+    "all_three_apks_verified": true,
+    "shared_certificate_sha256": "ca6a10b0e3833c9154efae6c5f0304cc6c036e0f7215915d703232a34420cbc3",
+    "independent_publisher_signer_continuity_verified": false
+  },
+  "files": [
+    {
+      "name": "client.zip",
+      "bytes": 1645097570,
+      "sha256": "e760c5b9ab9d81db01c04bd3f7f3e0f4390e1e5d265d8945310f44aa908e5fb2"
+    },
+    {
+      "name": "base.apk",
+      "bytes": 19533917,
+      "sha256": "8936075cca36a4ddad8df8c3dd956d44ec4495fe2a39ebfac74364906fdfe536"
+    },
+    {
+      "name": "base_assets.apk",
+      "bytes": 1546823642,
+      "sha256": "e8db032e0ab264f9282628484c97cc3ef0c4a9aedfd2128986d953f742f5efaf"
+    },
+    {
+      "name": "config.arm64_v8a.apk",
+      "bytes": 78488647,
+      "sha256": "fa143d96b348798b81f5f3011bfa254f8a2c473a5f430c3ee34f7d76cc604cd5"
+    },
+    {
+      "name": "BuildinCatalog.json",
+      "bytes": 1265551,
+      "sha256": "11f78cfd2be190e5cd468a0188a6b0f31a059199451638fcf22b028cce074327"
+    },
+    {
+      "name": "P1_V202611021100.bytes",
+      "bytes": 806002,
+      "sha256": "855e10883a4a0f0ca8365861f95dac2a4e6e9ed2973fe628f1dda9d73ac34f95"
+    }
+  ],
+  "manifest": {
+    "assets": 18875,
+    "bundles": 9022,
+    "format": "2.3.1"
+  },
+  "effective_live_patch_catalog_verified": false,
+  "live_game_session_used": false,
+  "capitol_schema_identical_to_historical": true,
+  "sources": [
+    {
+      "name": "TempleTitleModule.lua",
+      "bundle": "051e041d4ea76ba3f277bc9f2c12ffc1",
+      "bytes": 8705,
+      "payload_sha256": "dc5f3b30698b032378fa164b9697a60fb2e894a904c3f1024285ba4717e34410",
+      "restored_chunk_sha256": "9f275e4458cecd846a4801ac73e1dff91419b0e75984ea4e99ac622b86cbcdbf"
+    },
+    {
+      "name": "temple.lua",
+      "bundle": "21bb1b611ba9ee21f297e9ae1874a47a",
+      "bytes": 3819,
+      "payload_sha256": "d42ce0d6ff541640482f2a1f02cb5a6d948b8bb65a2c0bb82ae947c6d1fd9b9f",
+      "restored_chunk_sha256": "43b8e23781a3ab6369ad6194a000966256fb8f34e7fe2a213fbc104cd8630c56"
+    },
+    {
+      "name": "TempleDefine.lua",
+      "bundle": "38934ed683f42e6dcd8b59c0e9e7ae23",
+      "bytes": 2384,
+      "payload_sha256": "4e9423d9470a5a323186511ee6140e7a086bead4a403a6b2fd4766e4e79867dc",
+      "restored_chunk_sha256": "ad69254acfdaf4fbd5bf4e2a460811ce0e4376090dab1aed5db982c52be2341e"
+    },
+    {
+      "name": "UITempleOfficialTimeSettingPanel.lua",
+      "bundle": "49c4d6eb864b0d1f8ec70044f1cdcf22",
+      "bytes": 2081,
+      "payload_sha256": "9aad89fe61330463bb4e7c0aef387f31d2fbee61ccb092bba15d3fe6d8d7804b",
+      "restored_chunk_sha256": "daa448c3b4b90431500073a4eee0469b52d2b9150a6679d0db4520d344c3326a"
+    },
+    {
+      "name": "UITempleOfficialInformationPanel.lua",
+      "bundle": "49c4d6eb864b0d1f8ec70044f1cdcf22",
+      "bytes": 15438,
+      "payload_sha256": "c0c72298dc85770a0d55ed998cc2cf0ca2feb1006749d06521c0d46dc6025643",
+      "restored_chunk_sha256": "e1de1fd64b5c7c357b72a4ea36fc3f607eddaf71c9b04ba9cd2772ddc7dc0bab"
+    },
+    {
+      "name": "UITempleOfficialTakeHintPanel.lua",
+      "bundle": "49c4d6eb864b0d1f8ec70044f1cdcf22",
+      "bytes": 4696,
+      "payload_sha256": "a1ca365a319bd4c817518d1fa69b2c87ae7946a0c95669a321e857e744a6ea49",
+      "restored_chunk_sha256": "556fbc19cb820910c55c3d66243af150feeed89e3c759606860a0b9b4f2c44ba"
+    },
+    {
+      "name": "temple.proto",
+      "bundle": "84b0b2a13d3cf9e5d0f0a00844d35c08",
+      "bytes": 14718,
+      "payload_sha256": "d8a12cfc91ce7c46acb1bdb0f024772ff322f040c7a25d294e1f0e4f1c012263"
+    },
+    {
+      "name": "TempleTitleObject.lua",
+      "bundle": "bad7c46622e7fe07a6f76c225cbe0183",
+      "bytes": 6151,
+      "payload_sha256": "1df094a856ef18e0ce0b8dd09b9712a6b8a663563c8bd412afaeb1b32c054d4d",
+      "restored_chunk_sha256": "6a599cc02a8da7670d91d97e39ff6426faacf246cd7ca961204a1dfa8232852b"
+    },
+    {
+      "name": "PlayerSimpleInfoObject.lua",
+      "bundle": "bad7c46622e7fe07a6f76c225cbe0183",
+      "bytes": 3055,
+      "payload_sha256": "43e12b115e8093fedd0fe94eaf7e55a4cbdd2432501710197193fdeb27fb9752",
+      "restored_chunk_sha256": "e53e8175dda2c3dfa7147635e464a98e461d5c2ffb8efbe7226b051472d354e0"
+    },
+    {
+      "name": "UITempleOfficialApplicationListCell.lua",
+      "bundle": "c70cc773c9e598265f8c2c203b571a45",
+      "bytes": 4271,
+      "payload_sha256": "3fa7e7be1d9296bcbc7ad589e6239f9903aca9bece8bf737bce9ebcd56e3c850",
+      "restored_chunk_sha256": "cb2ef1dde836ac6d582294ff3fc97e9af598f004ec581c6c150482addf2b8be9"
+    },
+    {
+      "name": "UITempleOfficialApplicationListPanel.lua",
+      "bundle": "c70cc773c9e598265f8c2c203b571a45",
+      "bytes": 3890,
+      "payload_sha256": "bae5c1632fa9eff8323b1ffb92cef5973f2c5f60729d3a3781ee0cc511878d8a",
+      "restored_chunk_sha256": "b2e425528577855fe60fdfd582fc0f7b8c6bb47dd65bf6073158d3044c5091a7"
+    },
+    {
+      "name": "temple.lua",
+      "bundle": "e612bb6922587d81260a1d91b4d6638c",
+      "bytes": 4499,
+      "payload_sha256": "086788a0caba0329cdcce0fe121f570bf08e00c36c897fcf41b530ad0a85514c",
+      "restored_chunk_sha256": "6577a323760d5834199917de4540a7cdd85adb44244c8ff2f64e34021f10e670"
+    }
+  ]
+}
