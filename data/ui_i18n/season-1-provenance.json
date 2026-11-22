@@ -1,0 +1,1080 @@
+{
+  "build": 344,
+  "catalog": "V202611021100",
+  "catalog_sha256": "855e10883a4a0f0ca8365861f95dac2a4e6e9ed2973fe628f1dda9d73ac34f95",
+  "term_keys": {
+    "Accelerate Production": "SeasonProfessionSkillName101",
+    "Alliance Outpost": "season_cross_battle_tips251",
+    "Alliance Peace Period": "season_cross_battle_tips139",
+    "Alliance Star": "union_star_ui_des001",
+    "Aria’s Hunting Day": "S1_season_rally_monster_text01",
+    "Assault Base": "building_20012",
+    "Battle Period": "season_cross_battle_tips181",
+    "Battle Prep Drill": "SeasonProfessionSkillName208",
+    "Battlefield Knowledge I": "SeasonProfessionSkillName301",
+    "Battlefield Knowledge II": "SeasonProfessionSkillName303",
+    "Battlefield Knowledge III": "SeasonProfessionSkillName304",
+    "Battlefield Morale": "SeasonProfessionSkillName211",
+    "Build Now": "SeasonProfessionSkillName107",
+    "Charge Banner": "SeasonProfessionSkillName218",
+    "Class EXP": "Profession_Exp",
+    "Class Hall": "ProfessionText001",
+    "Class Inspiration": "SeasonProfessionSkillName111",
+    "Class Reset Certificate": "ProfessionText007",
+    "Class Reset Ticket": "itemName_Profession_Reset",
+    "Contribution Reward": "SeasonProfessionSkillName102",
+    "Cooperative Construction": "SeasonProfessionSkillName113",
+    "Cooperative Healing": "SeasonProfessionSkillName117",
+    "Cooperative Research": "SeasonProfessionSkillName114",
+    "Cost Efficiency": "SeasonProfessionSkillName115",
+    "Demolition Specialist": "SeasonProfessionSkillName104",
+    "Drill Ground Maintenance": "SeasonProfessionSkillName203",
+    "Efficient Utilization": "SeasonProfessionSkillName116",
+    "Emergency Center": "emergency_center1",
+    "Engineer": "SeasonProfessionName01",
+    "Exclusive Weapon": "S1_season_other_system_text01",
+    "Field Emergency Care": "SeasonProfessionSkillName206",
+    "Fire Support": "SeasonProfessionSkillName215",
+    "Free Construction": "SeasonProfessionSkillName105",
+    "Free Research": "SeasonProfessionSkillName106",
+    "Friendship Shield": "SeasonProfessionSkillName118",
+    "Gray Zone Caravan": "grey_zone_caravan",
+    "Healing Expert": "SeasonProfessionSkillName305",
+    "Hero Promotion": "S1_season_world_situation_31",
+    "Hospital Maintenance": "SeasonProfessionSkillName204",
+    "Immune Protein": "S1_SeasonRule_12",
+    "Infection Spread": "SeasonProfessionSkillName306",
+    "Instant Recall": "SeasonProfessionSkillName201",
+    "Instant Research": "SeasonProfessionSkillName108",
+    "Logistics Support": "SeasonProfessionSkillName112",
+    "Lucky Hunt": "SeasonProfessionSkillName302",
+    "Military Stronghold": "S1_SeasonRule_20",
+    "Mutant Shard": "item_season_mutation_slice_1",
+    "Mutant Shop": "S1_Serum_Shop",
+    "Mutated Zombie Invasion": "S1_season_world_situation_45",
+    "Press the Advantage": "SeasonProfessionSkillName207",
+    "Promotion Medal": "itemname_heroPromote",
+    "Radiated Land": "S1_Season_Preview_1",
+    "Radiation Legion": "S1_ZombieAttackCity_Text_001",
+    "Radiation Shelter": "decoration_20002",
+    "Rally Charge": "SeasonProfessionSkillName213",
+    "Regressed": "SeasonProfessionSkillName217",
+    "Reinforcement Boost": "SeasonProfessionSkillName216",
+    "Reserve Mobilization": "SeasonProfessionSkillName202",
+    "Scorched Land March": "SeasonProfessionSkillName209",
+    "Season Achievements": "S1_season_achievements_1",
+    "Season I Skill Point": "itemName_ProfessionSkillPoints",
+    "Season Weekly Pass": "S1_start_virus_resistance012",
+    "Siege Banner": "SeasonProfessionSkillName110",
+    "Skill Reset Ticket": "itemName_Skill_Reset",
+    "Stamina Recovery": "SeasonProfessionSkillName103",
+    "Stealth": "SeasonProfessionSkillName214",
+    "Sustain Through War": "SeasonProfessionSkillName210",
+    "Swift Reinforcement": "SeasonProfessionSkillName212",
+    "Tactical Base": "building_20013",
+    "Team Fast March": "SeasonProfessionSkillName109",
+    "Unit Enhancement": "S1_season_world_situation_33",
+    "Unit Type Base": "building_20010",
+    "Uranium Crystal": "S1_SeasonRule_14",
+    "Uranium Crystal Refinery I": "building_20004",
+    "Uranium Crystal Refinery II": "building_20005",
+    "Uranium Crystal Refinery III": "building_20006",
+    "Uranium Crystal Refinery IV": "building_20007",
+    "Virus Experiment": "SeasonProfessionSkillName309",
+    "Virus Lab": "building_20003",
+    "Virus Resistance": "S1_SeasonRule_3",
+    "War Frenzy": "SeasonProfessionSkillName205",
+    "War Leader": "SeasonProfessionName02",
+    "Warrior Base": "building_20011",
+    "Warzone Clash": "S1_season_world_situation_38",
+    "Warzone Expedition": "S1_Season_Preview_6",
+    "World Geographic Society": "building_20008",
+    "γ Pathogen": "S1_SeasonRule_1",
+    "γ Pathogen Assault": "SeasonProfessionSkillName307",
+    "γ Pathogen Boost": "SeasonProfessionSkillName308"
+  },
+  "rank_rows": 152,
+  "rank_and_preview_text_keys": 165,
+  "bundles_by_client_locale": {
+    "en": {
+      "lang_alliance_en": {
+        "member": "assets/BuiltinFiles/P1/017f47056d724a1f46780d7f78dac0b5.bundle",
+        "sha256": "9bc05bd769b64a9decc09e0d0c5d1e2df1a99b6dbe7372a1d3cc3722027c940b"
+      },
+      "lang_annou_en": {
+        "member": "assets/BuiltinFiles/P1/13aadc310dad85d2f4b9ba33c64864ff.bundle",
+        "sha256": "5e0247c3195a58fe92a7dc929180abd596a9ff8337c5c38fa421a96d7f52237c"
+      },
+      "lang_base_en": {
+        "member": "assets/BuiltinFiles/P1/eb9821fa9130fe3b7cdaf34841664c79.bundle",
+        "sha256": "25bc6a843056a75219ec905f67952ce3564c45dadade14a792c9f4f97b3dd86d"
+      },
+      "lang_battle_en": {
+        "member": "assets/BuiltinFiles/P1/cb4c30a84a97f5e8f3db08879153df94.bundle",
+        "sha256": "fb81daf50717150ceb325ef3fe54947ca86ad2af7b3eab5a34dae323ee71d03a"
+      },
+      "lang_benefit_en": {
+        "member": "assets/BuiltinFiles/P1/a56d97e85cfbc811fcc14d2c61fd938e.bundle",
+        "sha256": "841633d20abfd20c1334da6c897b9f47824f788fe15692dc6db5d6837be905f9"
+      },
+      "lang_building_en": {
+        "member": "assets/BuiltinFiles/P1/096e2b8bb62f55e9d5a6f626b15bfd45.bundle",
+        "sha256": "a287c7937d5da1dc5b16a3d0ab41e9832c199b6fecec4d99e9e36734d91c8e1c"
+      },
+      "lang_button_en": {
+        "member": "assets/BuiltinFiles/P1/19688be847c27717e56f8136d767814e.bundle",
+        "sha256": "262e55bdb0757719318abd01f505d3bb58590a2296112a9194e83dcf0cba6ea9"
+      },
+      "lang_chat_en": {
+        "member": "assets/BuiltinFiles/P1/f9ce22f7ab36eb683b9f5f4792179a9a.bundle",
+        "sha256": "e6d2ce2d5adbbee1d7ab180d79d5155f9b34698337c0b55c9c52ae16466ab437"
+      },
+      "lang_client_en": {
+        "member": "assets/BuiltinFiles/P1/fad0228045840710f25a0b5763fcddd6.bundle",
+        "sha256": "718f62645902dbd22c04e116222ed1d3faf23aae11288b28e686566646dff69b"
+      },
+      "lang_hero_en": {
+        "member": "assets/BuiltinFiles/P1/ae57f25636f8302dccb75e484866cca5.bundle",
+        "sha256": "459c47386b6e56c704f42482af823dbe17463227f7a00c41b6faf8207fb0a4a0"
+      },
+      "lang_hmi_en": {
+        "member": "assets/BuiltinFiles/P1/05041ecd626ead3346186ac5600aafc0.bundle",
+        "sha256": "1d78a5cc4869840df60ed8a88a42cd53c0c46f00f83be61e6fc348b62a4e6c3a"
+      },
+      "lang_item_en": {
+        "member": "assets/BuiltinFiles/P1/c783b18fc93b17f966147b83b7a9c3fe.bundle",
+        "sha256": "7373520c3516c7bed2352b3f8f807043334b2256becdf93e160e4545c32a7698"
+      },
+      "lang_mail_en": {
+        "member": "assets/BuiltinFiles/P1/98e3a4dec78ff00c9430db16c879d561.bundle",
+        "sha256": "a9949db4262614d90b420988802ee647571aed7ef6fc70cbf967a47982ddfac1"
+      },
+      "lang_map_en": {
+        "member": "assets/BuiltinFiles/P1/a9f5ca9620d62924a742cae311e135cd.bundle",
+        "sha256": "af4de2332d0cda8db2dcec54a8de19c1323e2aca31d14593aa7c0128a97cfa8f"
+      },
+      "lang_operation_en": {
+        "member": "assets/BuiltinFiles/P1/3acd163fd8b3e59436b27d0bf41ed595.bundle",
+        "sha256": "fa2d9f5e3a61f0c1a2d2ab394f6d146aa030606073a7a607a7bf16b12f36c1d3"
+      },
+      "lang_pack_en": {
+        "member": "assets/BuiltinFiles/P1/7de6618171839f2792db28a85b40f9ea.bundle",
+        "sha256": "dab631595d46494fc73df7ef10a139d591118d8b63c348a0e9749135216b647f"
+      },
+      "lang_pay_en": {
+        "member": "assets/BuiltinFiles/P1/d40cb5882350eca5afe64f907b70ae38.bundle",
+        "sha256": "5a41510fed2ae0562462d1a19534243e393d516b7c3bf7947811cd732eded9b0"
+      },
+      "lang_prompt_en": {
+        "member": "assets/BuiltinFiles/P1/0d43a61f3498548d881e0d29e8ec5488.bundle",
+        "sha256": "4f93c69157b32038e0633478ef1422a028514ae13c4eb535484c2ac491712347"
+      },
+      "lang_public_en": {
+        "member": "assets/BuiltinFiles/P1/4c94e889f05202adfe29628c88174caf.bundle",
+        "sha256": "4363424ed99d5733bfe74f774c760a4cc93ea763c9a568a57a6aa4fc9d4c3f39"
+      },
+      "lang_rookie_en": {
+        "member": "assets/BuiltinFiles/P1/c22e930a4a1f8d39e23f470714eafa6c.bundle",
+        "sha256": "c233493e7c2d2f18816a7f36f896d92602bb8c2a1ca8ac2694ce7dff94a4e599"
+      },
+      "lang_story_en": {
+        "member": "assets/BuiltinFiles/P1/c36ce5b137343f06909f51d759f3c05c.bundle",
+        "sha256": "304a71d73664eee67af9610b472d9d0d8e91938949a752a4140e503106b00202"
+      },
+      "lang_system_en": {
+        "member": "assets/BuiltinFiles/P1/b1a6e44c1f38c30cda9d225d9bd354c7.bundle",
+        "sha256": "b7430f35baa54fa6a92fe32df45d2a351f37d5ca2922a1d43770762899bb48f5"
+      },
+      "lang_task_en": {
+        "member": "assets/BuiltinFiles/P1/6ff9399a87219c77f19c6cdbaee23ce5.bundle",
+        "sha256": "f03ded3308844f11be77e7d7862710aa397eb78cab721e4f9cbd63eee58fe016"
+      },
+      "lang_tips_en": {
+        "member": "assets/BuiltinFiles/P1/3519c0b86f0d35680316e2debdc82362.bundle",
+        "sha256": "f6984de7111837678c2798e07124f495f78f2f457505e3d823dbf2fbd5f0495e"
+      }
+    },
+    "fr": {
+      "lang_alliance_fr": {
+        "member": "assets/BuiltinFiles/P1/83ef15a71af9108865ece5169517c885.bundle",
+        "sha256": "fc7b984822a17f6da4b22a45dc8364ecda78785a8f497e68fa2599e978bc3d61"
+      },
+      "lang_annou_fr": {
+        "member": "assets/BuiltinFiles/P1/c9544b5886f9cf7bc8bb1dfdab5d8930.bundle",
+        "sha256": "5a43e6d042406a279e82a0151512bd80adb3e29fb62728469abc3bbd652beccd"
+      },
+      "lang_base_fr": {
+        "member": "assets/BuiltinFiles/P1/9f8d7328ee95e5c70bb265e0dea2e7d4.bundle",
+        "sha256": "c5d6a123d834a2c45f77eec3d5a58a902989ea28d367b029cab93f03132c922d"
+      },
+      "lang_battle_fr": {
+        "member": "assets/BuiltinFiles/P1/0b392c1396737a7b658f2f8ce744a70c.bundle",
+        "sha256": "cde3ff4e36b397b38ec4797ea3c7db4054b90bc2a9d7f48e19167b5c3c7647d2"
+      },
+      "lang_benefit_fr": {
+        "member": "assets/BuiltinFiles/P1/b85828d8055ac85b4654fa9272db0ca3.bundle",
+        "sha256": "fe0be3c54b2b3b3983b88bef04624a1a02609200abdc206974ca4b6d2bf6f5a1"
+      },
+      "lang_building_fr": {
+        "member": "assets/BuiltinFiles/P1/6a405d30b8bbeba3ab2f27e7a5e519b7.bundle",
+        "sha256": "6d8cd6a1cd324949fb7ead2e00304e8a5bb95c9a65ec7422f48f90a01b7553a5"
+      },
+      "lang_button_fr": {
+        "member": "assets/BuiltinFiles/P1/a73e9b854c126d59e3a0a16a6542b4ad.bundle",
+        "sha256": "70bc52fd3c7b0e6a470e83f523fe97cfdba37332e3350263b736071a9e3a5f5d"
+      },
+      "lang_chat_fr": {
+        "member": "assets/BuiltinFiles/P1/ea86198b636bb265523cf542985709ec.bundle",
+        "sha256": "439a1a779c3d4f675404703db8c0926bf9bbc78012c70f01698785c843041cd1"
+      },
+      "lang_client_fr": {
+        "member": "assets/BuiltinFiles/P1/23fcd3ff043c92b7f76492d62a33be35.bundle",
+        "sha256": "488ec4886a1e52e96c75e7fa15265c4138ba827a6fd32f7fc54347b95a6f7ac2"
+      },
+      "lang_hero_fr": {
+        "member": "assets/BuiltinFiles/P1/1cd99a6bd4ae77a3a029bf4fe6b8bd42.bundle",
+        "sha256": "d05e8f8d1be4374df751f1be05d4ff755e6b51ead3db2ea0fe8fe9d44ca8c27f"
+      },
+      "lang_hmi_fr": {
+        "member": "assets/BuiltinFiles/P1/d9786bce2b3a3d3052bac7d61f84fe3e.bundle",
+        "sha256": "7047975a00f99a9ac18a24ff1bd833720229f0805f62cd778e9df21d2b451523"
+      },
+      "lang_item_fr": {
+        "member": "assets/BuiltinFiles/P1/c7b429b29af51b44373ea075c5fbf08c.bundle",
+        "sha256": "840897ec4ac2696779e05a7671982cff21c03e799187159ee198364ce1e057af"
+      },
+      "lang_mail_fr": {
+        "member": "assets/BuiltinFiles/P1/b7556628956161b559df998e62891d62.bundle",
+        "sha256": "ebaddca043adeec86eb78204bac429fcafff8a073cabc6cabd537f8fba21a3ed"
+      },
+      "lang_map_fr": {
+        "member": "assets/BuiltinFiles/P1/37bf332e0de8304949c4b0f4be102c3a.bundle",
+        "sha256": "221ced63fecb23f6a7f31cf1b38b217427a10c08f6d4ad18fe3f2a280f98a35c"
+      },
+      "lang_operation_fr": {
+        "member": "assets/BuiltinFiles/P1/ec209d2539640029cc714c5c7b605fc4.bundle",
+        "sha256": "1a50caf088cd329108e994ff138fc571fdcf455d9ce06c8d8718ca0d118eb167"
+      },
+      "lang_pack_fr": {
+        "member": "assets/BuiltinFiles/P1/9ae9bcc2734a1ccff48a0b0a51cda116.bundle",
+        "sha256": "7b9d9f16c1fdb929793f240ad6393a87b82d536bfe6375595a8d950a0cf7c57d"
+      },
+      "lang_pay_fr": {
+        "member": "assets/BuiltinFiles/P1/9a72bb26f7f7c2b0c0f4c8db2627b2f0.bundle",
+        "sha256": "4e59703f5e3d2291ba6fc9f5edc413f9c958835589d61d69abdb17be4412fea1"
+      },
+      "lang_prompt_fr": {
+        "member": "assets/BuiltinFiles/P1/5d9d4cb64fbf8741c0f08f75b0b63104.bundle",
+        "sha256": "86911e6832eaad1a7464be5d82c077f14339aeb849c40149c09b76ffce63bdc0"
+      },
+      "lang_public_fr": {
+        "member": "assets/BuiltinFiles/P1/3c00eeb17bac97eaebabaf4d2c2ebfbb.bundle",
+        "sha256": "f0a43f7dc4a9d2480dd4e168173c17c045c32961e00f170c314cd3aeba93307a"
+      },
+      "lang_rookie_fr": {
+        "member": "assets/BuiltinFiles/P1/9083fbe94642f71c0384d50fd15b3ad8.bundle",
+        "sha256": "72b5f5280201d926bebaea8e1e68effa8f2a324554a56db7f44d99632fea386c"
+      },
+      "lang_story_fr": {
+        "member": "assets/BuiltinFiles/P1/9b8b66091ae5aee9df66675dc9247d7c.bundle",
+        "sha256": "4af35e076350672d000feb5515ed46f2d568ea7a1ccaf2758c14ac03639fbe36"
+      },
+      "lang_system_fr": {
+        "member": "assets/BuiltinFiles/P1/10e47dd1bd22975a4d3f92574d6d1ecf.bundle",
+        "sha256": "215d42d36c32bab9f6f0ec7007832676ebb3147895d61c23de7d92260f8a552b"
+      },
+      "lang_task_fr": {
+        "member": "assets/BuiltinFiles/P1/c7e8606c5729d7381e4d115663af10fe.bundle",
+        "sha256": "2584a420413151f33b25dbafe6df3787c6cc34b06c2ed1bc0445c6bee9017fe3"
+      },
+      "lang_tips_fr": {
+        "member": "assets/BuiltinFiles/P1/aba91138dc0f496ec461dee28bbf12a2.bundle",
+        "sha256": "d0960653d9fbb0a11dd139392997e6bd99f4059aa0c3f5ce7e571f8a508ba6bf"
+      }
+    },
+    "ru": {
+      "lang_alliance_ru": {
+        "member": "assets/BuiltinFiles/P1/96a232ec6d98d8c9cd5c8d8251e8bbe0.bundle",
+        "sha256": "83c693903fffd3b38aeb2db9c644d4fe67a29a2c623e676ef537f72f7ecf3e06"
+      },
+      "lang_annou_ru": {
+        "member": "assets/BuiltinFiles/P1/291e897de5bf74d9c0a14cc380351f09.bundle",
+        "sha256": "c22b4d4804cd5d6f23ccea170fb974d4e94a1a4a918fc26ae937a80344578d50"
+      },
+      "lang_base_ru": {
+        "member": "assets/BuiltinFiles/P1/0e14d07aa0acff19356b8271b187b964.bundle",
+        "sha256": "02f8450379e765d102b21a2263a6c5d2ffb9191ba6598e5a2e25f9fb4481f301"
+      },
+      "lang_battle_ru": {
+        "member": "assets/BuiltinFiles/P1/5935d2e77d605dc522a9a2044c00fcfe.bundle",
+        "sha256": "20e75876aaf2ecd582777ed046a99f79ceeadbd61878658a8f51b442a6903e41"
+      },
+      "lang_benefit_ru": {
+        "member": "assets/BuiltinFiles/P1/4c68bec64e9307a424ab9240f6245186.bundle",
+        "sha256": "660a69de5bcfd3a64a9e0da6f68dc91f5a7deca502695845ede704d3c4eb1f0d"
+      },
+      "lang_building_ru": {
+        "member": "assets/BuiltinFiles/P1/c2efda2584b469c039853fd84c4b390d.bundle",
+        "sha256": "6cfa70f2f78c5066ae68729d21842484c5b9c0711dace6e1ebc2aebb78bec357"
+      },
+      "lang_button_ru": {
+        "member": "assets/BuiltinFiles/P1/25f62908b12f73872f31300ca7a74aab.bundle",
+        "sha256": "7dc423840739c0d96ae50236a5f5eadd3024de1ed57e28e3d696829a32b0fc4c"
+      },
+      "lang_chat_ru": {
+        "member": "assets/BuiltinFiles/P1/ff10f413c8ad4583dc8b0be41bbc2b39.bundle",
+        "sha256": "ad932a19dee24b9bc86b18682a8ff19a2bd0dab9ae1d7b18503c3783924d6477"
+      },
+      "lang_client_ru": {
+        "member": "assets/BuiltinFiles/P1/f3547fb6e2ddc8fbd36e40e3cc54db5b.bundle",
+        "sha256": "8bae4ff18313c683023c603b59a8fe37085b938a395552a689bc8d60df2a1234"
+      },
+      "lang_hero_ru": {
+        "member": "assets/BuiltinFiles/P1/88aec6d563e668bd75bc20f7177fc45f.bundle",
+        "sha256": "98d50da2153b3700086af8978ea568227704b1281076b5d718df513a856bb5b0"
+      },
+      "lang_hmi_ru": {
+        "member": "assets/BuiltinFiles/P1/d9a61843e9c56b056076053a12932c82.bundle",
+        "sha256": "0ea0912e9db859f0db2dc468fcf6dd555eb5b1cbbb9d1f9bcb966f91f47a3a72"
+      },
+      "lang_item_ru": {
+        "member": "assets/BuiltinFiles/P1/3f7d2f839fb7dbb06ead8481da40856f.bundle",
+        "sha256": "1887e0262f7fa145c6e60f1025c73196df2e48dbb2c9110a5748883c66c5af42"
+      },
+      "lang_mail_ru": {
+        "member": "assets/BuiltinFiles/P1/676afdf4cd673092ffb0da19cb7f7c61.bundle",
+        "sha256": "e31c5bb6887b33104e73b0677ccdcfc264dfb8579f9d794aec0352d36a3889dc"
+      },
+      "lang_map_ru": {
+        "member": "assets/BuiltinFiles/P1/0faa093eedb9c5bd9e7289980a251b20.bundle",
+        "sha256": "6a8ec3c590e873d395f82b0dcf1e0f5c6dc1e38a972bbf34589a03dc3d4555f2"
+      },
+      "lang_operation_ru": {
+        "member": "assets/BuiltinFiles/P1/940a98ebadf8de7495728581c328c1fd.bundle",
+        "sha256": "61c2fa94b416524f638490fe11aefab845c464dd6e2ae30374640b542a9e30e2"
+      },
+      "lang_pack_ru": {
+        "member": "assets/BuiltinFiles/P1/52178eaddfd2cf0e84259349328be608.bundle",
+        "sha256": "dea6937b9acfe0590940585af4b523fc989ac518fc427e92c9d223aa6f9fbc88"
+      },
+      "lang_pay_ru": {
+        "member": "assets/BuiltinFiles/P1/77a1d64e69e843e28fc26471261a1e09.bundle",
+        "sha256": "2cb4bda2ea052d4be50c154574f28903de5cf5391256bd5ff3f460392edb5a43"
+      },
+      "lang_prompt_ru": {
+        "member": "assets/BuiltinFiles/P1/21f6916e45037b648008bf25cc8282a8.bundle",
+        "sha256": "8df80ca2e6d40aa72b80022ec00f8ab8bf8056b0ca7500347ccd8cfd50c3a3a0"
+      },
+      "lang_public_ru": {
+        "member": "assets/BuiltinFiles/P1/00428af67fc5af5b44a173cca99d9c77.bundle",
+        "sha256": "53d11936b2713b34216fb4ec804707679c4966330ceec936b03947c664ff0ed9"
+      },
+      "lang_rookie_ru": {
+        "member": "assets/BuiltinFiles/P1/38bbb29f539779fa5be01d3036377f1d.bundle",
+        "sha256": "98a4304e7a19b60e38aadb74cfe7f920c6ca95cd28cfc39ffaae17f78dc9ac76"
+      },
+      "lang_story_ru": {
+        "member": "assets/BuiltinFiles/P1/e11374098b4813603ea526b8724fad77.bundle",
+        "sha256": "4eb910d1bd97f6aa76a6bc1f947cce6ff906039480c721a1793cfa508e461d73"
+      },
+      "lang_system_ru": {
+        "member": "assets/BuiltinFiles/P1/21f42f64364158d85cadf4b99271fef8.bundle",
+        "sha256": "949c41b689040a1d82b48ae098b4d700acc8be857ae46c5781b648808d890830"
+      },
+      "lang_task_ru": {
+        "member": "assets/BuiltinFiles/P1/9a0e0d56a251e4b88228b74d18577607.bundle",
+        "sha256": "6197a0270c1e151d742700d1b90622bc2d34c0acdffa1d7fe0da67b9ece14fd8"
+      },
+      "lang_tips_ru": {
+        "member": "assets/BuiltinFiles/P1/2f7d2e4cfc4c65d6e33329a6684cdf9f.bundle",
+        "sha256": "cdb83069567002ce15d05c50bca31f013cffa16f9818ef960a31d7991cf1d521"
+      }
+    },
+    "tr": {
+      "lang_alliance_tr": {
+        "member": "assets/BuiltinFiles/P1/25b79eb081b3c18032fe744af9bbe67e.bundle",
+        "sha256": "cdb98226ba0fe0a66efbe19a1f4bf6318f474fd4f1a64a6f69504196c4a5acda"
+      },
+      "lang_annou_tr": {
+        "member": "assets/BuiltinFiles/P1/001dc9a53c1fd709cb4d419223d89571.bundle",
+        "sha256": "d923333d0522014dd6efda46dbbd143b79242f1ae5d8dfb7fee3b3e6d3e90ba2"
+      },
+      "lang_base_tr": {
+        "member": "assets/BuiltinFiles/P1/aabe91f6bd112e84d89ace4ae94b9a44.bundle",
+        "sha256": "89a1ea481f8fc185ca3ed390f4296c533f38ec20d000c40163ded73539b968e3"
+      },
+      "lang_battle_tr": {
+        "member": "assets/BuiltinFiles/P1/c90d8a9b306517dfe313aa1ec8848e7a.bundle",
+        "sha256": "27cfad67373159fa50d01c41e275ee7d7ff3c21573d365a5aed9be11a5d996af"
+      },
+      "lang_benefit_tr": {
+        "member": "assets/BuiltinFiles/P1/ec5e8c06284f39aa68b8ec26c127c089.bundle",
+        "sha256": "402769eb6bf15f4fbc4ddb5697fb644eb1f1513391934045e0d1e61e4d27943b"
+      },
+      "lang_building_tr": {
+        "member": "assets/BuiltinFiles/P1/218a3928277f9047fe7c8d1bed4630cb.bundle",
+        "sha256": "7543bc35c149f0cdede64ec03ab2b1b4f1b1f9fb2d309e743fd526764f3db301"
+      },
+      "lang_button_tr": {
+        "member": "assets/BuiltinFiles/P1/39329f92d0fe696775f9947916129b7e.bundle",
+        "sha256": "6439f014da2892e2db6114947d3f2456c745c453d02aaf5cb43f67563f9fc8ba"
+      },
+      "lang_chat_tr": {
+        "member": "assets/BuiltinFiles/P1/ac48997df1e2080942799969fbfe5538.bundle",
+        "sha256": "7fa875685c66c7c1fbd40a460e21c47090a933fe70cd9cb25df4315297f424d7"
+      },
+      "lang_client_tr": {
+        "member": "assets/BuiltinFiles/P1/247c0d849d254e2328d3b098b39dc536.bundle",
+        "sha256": "9bb0698996c8e8d0546dadae9a73317deb560e9d2dceaab6c3c0b1817eb5e8d6"
+      },
+      "lang_hero_tr": {
+        "member": "assets/BuiltinFiles/P1/2a563d4423c2b32a9c0836f9661d22a4.bundle",
+        "sha256": "766ba4863dd592ae73bb1dbf901e2030c456a0cd060d7d934dd12c0474858666"
+      },
+      "lang_hmi_tr": {
+        "member": "assets/BuiltinFiles/P1/2051e25dbb40f1e87c65d3c77824bb4d.bundle",
+        "sha256": "e564606d0b822ef6a854db297e0ebb604628efade95a355a5ddff29f97eba6af"
+      },
+      "lang_item_tr": {
+        "member": "assets/BuiltinFiles/P1/ae25be02b65a4847f5c8b7a160859362.bundle",
+        "sha256": "7fb3c8b3f7b1ee10e1af4db4afc50adc2258f79283da2e30e5537828492a0d38"
+      },
+      "lang_mail_tr": {
+        "member": "assets/BuiltinFiles/P1/69bc71c0d51ce4b97d15f9eb919245c4.bundle",
+        "sha256": "530b8dc1f49fc5c2e28cddb30194470ac5c4ef11e11c7d1443d67dd4cc46f8dc"
+      },
+      "lang_map_tr": {
+        "member": "assets/BuiltinFiles/P1/fd57d6ceb86649e00ba275302bfd00af.bundle",
+        "sha256": "384be6460e0ca05b60675102f5ff4b1a7d1217914b0b7a7786de6669d5cd240c"
+      },
+      "lang_operation_tr": {
+        "member": "assets/BuiltinFiles/P1/cc033b900dc19c42ba7cdfe825e8ae10.bundle",
+        "sha256": "c6d3f2258cf571526b0bc94e17dc227e209c0ac8697d2230226996f6e15bfadb"
+      },
+      "lang_pack_tr": {
+        "member": "assets/BuiltinFiles/P1/21986ba620aabc77c44b281ffd548e67.bundle",
+        "sha256": "4a710c75bf4a677fc3163ee51a97c9ab45545408bad1c168e35d8656ce982aef"
+      },
+      "lang_pay_tr": {
+        "member": "assets/BuiltinFiles/P1/7ba4c28b69c3151e446b45b96e19b8fb.bundle",
+        "sha256": "39e7a27650b3c995971e7c361ed07841b1f25da82ecd4da2e6a82a60d2c7ded0"
+      },
+      "lang_prompt_tr": {
+        "member": "assets/BuiltinFiles/P1/84e2b88f9b22a47e90a796500412b939.bundle",
+        "sha256": "0fbf2eefdfa0e613008b41ff419c02982d4b9f7d456ce6a6a064a86a61795463"
+      },
+      "lang_public_tr": {
+        "member": "assets/BuiltinFiles/P1/952bd6313347a09ec66935a1504e8936.bundle",
+        "sha256": "b49e9aa3dcc07cbc2c1a6e61f7c56c6904dbad48d7ed25bff514c9bd8f16e3a0"
+      },
+      "lang_rookie_tr": {
+        "member": "assets/BuiltinFiles/P1/67581569049374ab12daaf23528dd98e.bundle",
+        "sha256": "083ad12207dccdf8928b5bf93bca720113c73ffd656153785ebdaaff0c4abe3d"
+      },
+      "lang_story_tr": {
+        "member": "assets/BuiltinFiles/P1/f99383e7fb2b0002cac632694e48e7eb.bundle",
+        "sha256": "c4231133073c3b0b1e480708f82ec209c1aadc2839f2516e114f6d94ce7cfa0a"
+      },
+      "lang_system_tr": {
+        "member": "assets/BuiltinFiles/P1/e0f386c7068aee6768a82dfeb190a52c.bundle",
+        "sha256": "807268e59736d98a8116b81bd3a34d3518096359b1e8b39529510970278afb2e"
+      },
+      "lang_task_tr": {
+        "member": "assets/BuiltinFiles/P1/5193576805636427ed9ca5780e3db814.bundle",
+        "sha256": "d5c5fab2d2d49d3a81849a64a8f4c9afef935c46a70a8d5f265428fe39f62a50"
+      },
+      "lang_tips_tr": {
+        "member": "assets/BuiltinFiles/P1/34477f04831df17f51e3cff55865d16d.bundle",
+        "sha256": "bbf5a56297aee9cef21dee32b19dc3ae8b33649c019d654dc950b96046d94b9f"
+      }
+    },
+    "pl": {
+      "lang_alliance_pl": {
+        "member": "assets/BuiltinFiles/P1/2eb6681417e43afc56859a0baeadff37.bundle",
+        "sha256": "bf45ca7fe9b4cb5589677799fe4540eea3392923130694c5cf6afbb265696280"
+      },
+      "lang_annou_pl": {
+        "member": "assets/BuiltinFiles/P1/354832a242a9613687574c5ac169760f.bundle",
+        "sha256": "e8e5e843ec62b17b54e400cc974834284dead43c85cef74e965e6ff8d10c3e7d"
+      },
+      "lang_base_pl": {
+        "member": "assets/BuiltinFiles/P1/ce76bca51baf71e062f85d71ecc3c9b3.bundle",
+        "sha256": "b0053b78cc96d34063cff22715de01a393e7d9a12ffd1b99f893e0c073b92785"
+      },
+      "lang_battle_pl": {
+        "member": "assets/BuiltinFiles/P1/8ba723f8365b87a99c8847f993b0a815.bundle",
+        "sha256": "a9347bf44067cf35307c67c2594064842319b3b430f4d4ff91e3ab0d0c96a25c"
+      },
+      "lang_benefit_pl": {
+        "member": "assets/BuiltinFiles/P1/083969798ddf13a4deff45735919298f.bundle",
+        "sha256": "f45be22904101614dc419276a87035559de42bc394fafd7655ebaf5a2eb3bb86"
+      },
+      "lang_building_pl": {
+        "member": "assets/BuiltinFiles/P1/7647b536d74b28e7e247e0e6ea2b311a.bundle",
+        "sha256": "f3e34d8d2a2a7c0e41917e4b5afdb9f3a3c1372b2f8eea273fa2e1bc8250a5ac"
+      },
+      "lang_button_pl": {
+        "member": "assets/BuiltinFiles/P1/6aef6d0be1bec3eee0aaf7f6e0400638.bundle",
+        "sha256": "20884039e543f4ba12636f1ae49b16669c0f41f5ba311673b25da4f3c5abfde1"
+      },
+      "lang_chat_pl": {
+        "member": "assets/BuiltinFiles/P1/613b83936db09986bf234c235d478f19.bundle",
+        "sha256": "4faad3bb30c9a5cc7f8d6f68ad0f685fc644cbf63df6a0e4490f8a1a92451731"
+      },
+      "lang_client_pl": {
+        "member": "assets/BuiltinFiles/P1/3695a6c732c0eeb29db508e49314f5f4.bundle",
+        "sha256": "4c53e7b6225adca456f95133b846c47fd85145de555619d8411cf953343e9c32"
+      },
+      "lang_hero_pl": {
+        "member": "assets/BuiltinFiles/P1/b0335144fd01083a80ea0f6053fb4050.bundle",
+        "sha256": "aa15593257c765437bd953dde523fa38c7a2c5a5d21cc17abf4a4a9c461a1073"
+      },
+      "lang_hmi_pl": {
+        "member": "assets/BuiltinFiles/P1/2d53bb768aa3f8d1c8e9a4f06dbb622c.bundle",
+        "sha256": "cb876abc4035825e029950b53ec30137c579055a746e9465239a363e443bfa95"
+      },
+      "lang_item_pl": {
+        "member": "assets/BuiltinFiles/P1/53d76969af670de2e3cca198e4ba70ea.bundle",
+        "sha256": "3c8016793a7d6e4b5dde4f5369d9e0faacf8665309806024f3f1f021d462944d"
+      },
+      "lang_mail_pl": {
+        "member": "assets/BuiltinFiles/P1/e28f1554011995548e78c59f0065b691.bundle",
+        "sha256": "1e33b04e5dc447988552ff4b3fc7129505fc6f79ba5c40cdb2a058be83f2e35b"
+      },
+      "lang_map_pl": {
+        "member": "assets/BuiltinFiles/P1/03abf1799efbadbd22b5cf541810c4bc.bundle",
+        "sha256": "685407a8707aa60c5b6a3244baf66d042db736eee3e9e89fbd600ad6b1381093"
+      },
+      "lang_operation_pl": {
+        "member": "assets/BuiltinFiles/P1/affea646f0ea149aebb0778281b50bd0.bundle",
+        "sha256": "19b1df349a83986f76fea6825b3a29b4d63ab518a586415ef98773a6fea285cb"
+      },
+      "lang_pack_pl": {
+        "member": "assets/BuiltinFiles/P1/b03f001f53e1573c0a9cd32c520475a7.bundle",
+        "sha256": "310eacb5083b49dec56d6e86c8a3e38d09b6bf129a9e386e453da8efe47fd8ff"
+      },
+      "lang_pay_pl": {
+        "member": "assets/BuiltinFiles/P1/ae74d7aa9b053df029bae17f1d43bd7e.bundle",
+        "sha256": "c8b38db7f7b0203e7a915aba8681afbc37e705c0fad280ce2869c6bbb3aa81ee"
+      },
+      "lang_prompt_pl": {
+        "member": "assets/BuiltinFiles/P1/d4dfb37258c03c6e0949c5365216479c.bundle",
+        "sha256": "68c958231697289b7331cf0fb7c5588717e75b86b93a1e94b73b3d8718329e93"
+      },
+      "lang_public_pl": {
+        "member": "assets/BuiltinFiles/P1/7ba620f0fe24f532b1cb408f41368f7e.bundle",
+        "sha256": "4e136ffceb550bc2ee50a5eab90d1f76a613eae6e69f6a4747c23e0703158002"
+      },
+      "lang_rookie_pl": {
+        "member": "assets/BuiltinFiles/P1/384757903f72f69259907582a886df62.bundle",
+        "sha256": "6e2e4d7022ad0abeb39641a0c4d7bd40d6b8b2665f127d4cae3d24cfab1f8769"
+      },
+      "lang_story_pl": {
+        "member": "assets/BuiltinFiles/P1/adaefa5133d18d5f0d50b0e5b4d053a7.bundle",
+        "sha256": "43a908ceb0545069416758c1da76fa7f8dde8aa917f08bff6b07a48190e43462"
+      },
+      "lang_system_pl": {
+        "member": "assets/BuiltinFiles/P1/960c4eabb4a3592fe69fa09ac6619f97.bundle",
+        "sha256": "ae7f40fea2da607e69b82ddf5741930010401950eb60cce3e85edd6b26bd0ebd"
+      },
+      "lang_task_pl": {
+        "member": "assets/BuiltinFiles/P1/dbd24af4840c96f2a49dc7c4d4ab35cb.bundle",
+        "sha256": "1d277c8626bf394170c43af6a4f407f70f9d95e0f01d3f3bec108b6ab99e7e3d"
+      },
+      "lang_tips_pl": {
+        "member": "assets/BuiltinFiles/P1/2e836d9ea5ffbb62bef498d68ca3cc91.bundle",
+        "sha256": "b4e892cd3fb7f4f181f40a9ee68f3c8208b67587062521a993eb963d03edd2f4"
+      }
+    },
+    "es": {
+      "lang_alliance_es": {
+        "member": "assets/BuiltinFiles/P1/11b5d5932f20203c948ac99a3b103090.bundle",
+        "sha256": "dceacde4daaae9fd6c5de0146e5a5851caec263fe6a0ee457f7c0c1692e2fc43"
+      },
+      "lang_annou_es": {
+        "member": "assets/BuiltinFiles/P1/68a7fdc7ace8590a7b27ec6b5373a51c.bundle",
+        "sha256": "3bcc15b3230955f0bf3f653637e600be226ba7bfb3567e2219aba1802d175e57"
+      },
+      "lang_base_es": {
+        "member": "assets/BuiltinFiles/P1/9b2e864b728c738f61cef591c5c675f9.bundle",
+        "sha256": "575ff79357c300b4a2f8863d4b771aa2c5c37330668d50a1cdf2d2720e6a1003"
+      },
+      "lang_battle_es": {
+        "member": "assets/BuiltinFiles/P1/fb6810b60654d1b601fe31851ae40496.bundle",
+        "sha256": "9f46452c4cebb4b7dd517e13c85bccfd4b6fc4c66973271122aaa638aa628d77"
+      },
+      "lang_benefit_es": {
+        "member": "assets/BuiltinFiles/P1/9bd6fe57c76c6286e7e80689e444b048.bundle",
+        "sha256": "3ad15968a804a3bd9818ebca49a363f77332381e73c0ab03a9c528ff419b95de"
+      },
+      "lang_building_es": {
+        "member": "assets/BuiltinFiles/P1/bbf0893d3bbdf6844f0ee026387ecf18.bundle",
+        "sha256": "5280a7f432fd49361b43d65e5ef9197cffb1043d267fd1d139b304a4684b7764"
+      },
+      "lang_button_es": {
+        "member": "assets/BuiltinFiles/P1/8934cf26e0ac858ad310c1b76a4713da.bundle",
+        "sha256": "adc676d5e369b47247a506ac5fb265a9e4272e368d0b94e6a58a57e12e9b49bc"
+      },
+      "lang_chat_es": {
+        "member": "assets/BuiltinFiles/P1/3a3d44b3d07c555d9f5f3ec6015bf408.bundle",
+        "sha256": "fe8b1c9438d5ecbfb1a7a7cd4765358d305be5a2d79261b0e9fb6a4406128bec"
+      },
+      "lang_client_es": {
+        "member": "assets/BuiltinFiles/P1/08cd583da513834f060f5852d6f5615f.bundle",
+        "sha256": "7f6350f6ebec2da201b4a935fed42b14abeb56f854a72fbc6722483d426c5e99"
+      },
+      "lang_hero_es": {
+        "member": "assets/BuiltinFiles/P1/7e6f3a8e6893544cf238c84311069fa0.bundle",
+        "sha256": "cf1f06df0cf47ecc3463f9dba73c7b6d4801939d0bf4907cf6325718da10e211"
+      },
+      "lang_hmi_es": {
+        "member": "assets/BuiltinFiles/P1/6b2eca5c0fa82ea60749eae0c6e71c2b.bundle",
+        "sha256": "798fe469fa75cd91f06a6256a65fca01ebd43fd4c463be99c837d7f7394cb52f"
+      },
+      "lang_item_es": {
+        "member": "assets/BuiltinFiles/P1/cfe29ea3ddb2f5e5f59b07feeebab030.bundle",
+        "sha256": "c4e86060bfd07d17a82e1d77de3c8a65cc32aeedba592a95126fae812ae4bfbe"
+      },
+      "lang_mail_es": {
+        "member": "assets/BuiltinFiles/P1/0a321a973dbda612bbcc4591fd49cf71.bundle",
+        "sha256": "6d32dac132de2e786007e6b6b70c22cd0d4d4ac0e0e3c1fbbe7b222d345421b3"
+      },
+      "lang_map_es": {
+        "member": "assets/BuiltinFiles/P1/eb184f8d1a3d5a1b88fb772f8fae63ec.bundle",
+        "sha256": "3173881332f8591f89952d211df69a9d65460db2dfde71e7cc11792e28e1bdcd"
+      },
+      "lang_operation_es": {
+        "member": "assets/BuiltinFiles/P1/9f8a19241273de235e84a39f58379dbb.bundle",
+        "sha256": "481a8ebeda5d8eefb7e6099709fa93a92e28eb9c9426fa2ea05a05a4416d82cd"
+      },
+      "lang_pack_es": {
+        "member": "assets/BuiltinFiles/P1/2c941a76471e651f1eec3c311580206f.bundle",
+        "sha256": "70c8a4119ddeba6a266527765f7080114d50a48bcbf9bb78dad110e53f4bd1e3"
+      },
+      "lang_pay_es": {
+        "member": "assets/BuiltinFiles/P1/9a01046ed405373f0b8508b688817e29.bundle",
+        "sha256": "e16515a1ef71a5ff64ab364919a2cceaefd8beca475a007c283d6dc7d3fc8b91"
+      },
+      "lang_prompt_es": {
+        "member": "assets/BuiltinFiles/P1/c2754e1d457abbfe4d0541e72936bd81.bundle",
+        "sha256": "be122ea5531dedd779176027a1c1cbc7bc27fe6c3da3035754cd32e9792ae6ad"
+      },
+      "lang_public_es": {
+        "member": "assets/BuiltinFiles/P1/b242ad08e6b2677487d8404d76096dba.bundle",
+        "sha256": "dd3a6d486cc963f59733f564147d9c21973e56609bca9867fc510267a747f06f"
+      },
+      "lang_rookie_es": {
+        "member": "assets/BuiltinFiles/P1/ca1e60ad99b7501f931e059970bd383a.bundle",
+        "sha256": "0a65f6f23d2a73f279d351dba329d6c325a24c8df5f8655fed099899b40631a2"
+      },
+      "lang_story_es": {
+        "member": "assets/BuiltinFiles/P1/5229ec680c2964b0a12fd27f1636c4ba.bundle",
+        "sha256": "715e7f492997ee5dd8e4b310dfff8aa51d1b839ee98a876e8f27f55401589a4e"
+      },
+      "lang_system_es": {
+        "member": "assets/BuiltinFiles/P1/60799b2678dc6a6f0a2b418eed5aa058.bundle",
+        "sha256": "df10e2b3cb5c0b1d6048ff7ecbdb75f110bd388cd532e4d04a0efe4a33fd8e53"
+      },
+      "lang_task_es": {
+        "member": "assets/BuiltinFiles/P1/19481e1109c310599a4ca84f2896e908.bundle",
+        "sha256": "631f5ecd53ba3903d38589ea798294cb332fc5c09129c44d6faee26c32332ab9"
+      },
+      "lang_tips_es": {
+        "member": "assets/BuiltinFiles/P1/bc7c3f05f8dd2dfe8e6a68967a6830bf.bundle",
+        "sha256": "aab8758f76d36e864cf1c5d0d248ab39053dbde02384115fee28c27f6bfa65c0"
+      }
+    },
+    "pt": {
+      "lang_alliance_pt": {
+        "member": "assets/BuiltinFiles/P1/b8e48a50f0085a018222ec7c6b05ab31.bundle",
+        "sha256": "a196b0b67a9ee96080ebcc4d9c8666f81bfcb274966cc27ad34001b78b6ef428"
+      },
+      "lang_annou_pt": {
+        "member": "assets/BuiltinFiles/P1/14d59e91a861a264959ae21e945bcd04.bundle",
+        "sha256": "07bc3c2afdad2647da4c164d23ac043495d9ca59360ee2d516bed1b206c234eb"
+      },
+      "lang_base_pt": {
+        "member": "assets/BuiltinFiles/P1/c528b31632ca9f3180be63584ed095fa.bundle",
+        "sha256": "563b17e4c247d6812e5c8e0ef9b177c9cf1476d2def5e51281dc465afa53e7a0"
+      },
+      "lang_battle_pt": {
+        "member": "assets/BuiltinFiles/P1/b85431de6cfd22904caaea8d578486dd.bundle",
+        "sha256": "560f3976d5b6493094bfc24278686f9a0fda7a7a2b4531a632acd3ad7f17364c"
+      },
+      "lang_benefit_pt": {
+        "member": "assets/BuiltinFiles/P1/aabf86fdcd92972f750b07b98c903999.bundle",
+        "sha256": "a4d5a7cdef4afcebdddd09beb67f52695ff1a883c13b0c0334bb9f978dcccce7"
+      },
+      "lang_building_pt": {
+        "member": "assets/BuiltinFiles/P1/903316f492248b78385377916345ccf5.bundle",
+        "sha256": "ef6ff90099002bc1c5752f624b22b3fad357e7e5b42ca6177f0edaf1f6931089"
+      },
+      "lang_button_pt": {
+        "member": "assets/BuiltinFiles/P1/a13fec169342cc26af6ad181b1eb9819.bundle",
+        "sha256": "6bc751218cc0f211a30bdf672083f85f550b44efaaa36dafe42a32e4dab16ad2"
+      },
+      "lang_chat_pt": {
+        "member": "assets/BuiltinFiles/P1/86ae4dc930f1027bf7f337a57834f61b.bundle",
+        "sha256": "d57f18d449c64f5694e9200faf43e4e3499587443ac4ad51bdf4564ed5c4c610"
+      },
+      "lang_client_pt": {
+        "member": "assets/BuiltinFiles/P1/637b44e2943be5bde4a6fcf8b0a9038c.bundle",
+        "sha256": "c0ac7209f6639599ce05b9bbecbfb1881c8567045a289df517b824cf83a8dd12"
+      },
+      "lang_hero_pt": {
+        "member": "assets/BuiltinFiles/P1/16cfcda3573a29c20f8d0ec6c92695f5.bundle",
+        "sha256": "46f7cc0f7c9606f1292ec862860a5967829ae33f6ec9b88ee20166e310d5eef3"
+      },
+      "lang_hmi_pt": {
+        "member": "assets/BuiltinFiles/P1/95a2aa1e1ffaf4398a6524e786feb0bf.bundle",
+        "sha256": "7f665b0c71475f6e4070705513cca4186cf10d176974378fed660eded4a5e4be"
+      },
+      "lang_item_pt": {
+        "member": "assets/BuiltinFiles/P1/f7c288e601bc867798296df02f75b414.bundle",
+        "sha256": "9259708b562b2d12494dc76c754db0e8f7e0681c2f8a46d008b9230adb684da9"
+      },
+      "lang_mail_pt": {
+        "member": "assets/BuiltinFiles/P1/c80e230e190ab382664869c462d579cf.bundle",
+        "sha256": "fc1bfc994510b6c532957b069aa620d4677f34057d01d91625c88aea56d05a8d"
+      },
+      "lang_map_pt": {
+        "member": "assets/BuiltinFiles/P1/11f3da4eeb06069c87efde8cb0b645c1.bundle",
+        "sha256": "babd344f9db4a5b2885e3cee916db4b87f5ebf236bd6a607df9bb9e76e2a53e6"
+      },
+      "lang_operation_pt": {
+        "member": "assets/BuiltinFiles/P1/f5e2bee3a324aaa38174f9980c4c73e0.bundle",
+        "sha256": "e83b1c5aac6e5b1de77ae18e4b465b7e00b9af7a401a9fb48839c2a19256843e"
+      },
+      "lang_pack_pt": {
+        "member": "assets/BuiltinFiles/P1/6d8e50b8e6173d71e85512dd9b4be7df.bundle",
+        "sha256": "459dfc239c93f4f326487dfc13870eb575d8507326c5c17516a627afcd4d1ff9"
+      },
+      "lang_pay_pt": {
+        "member": "assets/BuiltinFiles/P1/29b4a47a60a605ecc5eb836ae667b7ec.bundle",
+        "sha256": "fc1895abaf9470c049a91136f1c3134277008b4c7637252f4526938fa5678d26"
+      },
+      "lang_prompt_pt": {
+        "member": "assets/BuiltinFiles/P1/58fb48d6acfd6acbdc216948ab4304b3.bundle",
+        "sha256": "4909f04c700c0c47de413299a16b79fe3a05bbaa46ae07c6a89478253bb9ade1"
+      },
+      "lang_public_pt": {
+        "member": "assets/BuiltinFiles/P1/3e7178d1f4d22b1a77a2a5eb76b2a5cd.bundle",
+        "sha256": "f5eeca18e961468ab77e2c54387db54facf06ad55bd813ad37b6b958b7a410a2"
+      },
+      "lang_rookie_pt": {
+        "member": "assets/BuiltinFiles/P1/acb6748eeed5b20d9709350f6c856e1f.bundle",
+        "sha256": "ed8c4fb9b7ba0c372a0fdb2b0b64e2bd627cd13633835a018956ad38de3c1539"
+      },
+      "lang_story_pt": {
+        "member": "assets/BuiltinFiles/P1/d931756efe5851382a7a91d8d5e290cb.bundle",
+        "sha256": "acdbcf26979f2aeb08ff9eca8d9ff8416e306a1baf12acb4539d26a13bbf97e7"
+      },
+      "lang_system_pt": {
+        "member": "assets/BuiltinFiles/P1/e0766e9f7997b43c9bd8159bc0f17ac4.bundle",
+        "sha256": "f372f5e3b33ec7e67b609e91085e63addc187de692c25631ce17f333484e786c"
+      },
+      "lang_task_pt": {
+        "member": "assets/BuiltinFiles/P1/0c1f007386d8d01614b7130e5b09f3c8.bundle",
+        "sha256": "9f5e04bdc40f02ffe112e62638a179c81acf73d96b8627bffee8e2f117a207fc"
+      },
+      "lang_tips_pt": {
+        "member": "assets/BuiltinFiles/P1/cb754f67f06edd5ed4996dffa9d3c327.bundle",
+        "sha256": "4b5f699c6888d50f9a31206cb2944b4127b8e0fc0d578d1fd4e6d74d8a1d60ad"
+      }
+    },
+    "de": {
+      "lang_alliance_de": {
+        "member": "assets/BuiltinFiles/P1/27fde1075d6eed86f720087fd50c430c.bundle",
+        "sha256": "608d698e4b92257bb7180d542fa9eb20c1fee9e1113eb3027b7474f3ea9acca8"
+      },
+      "lang_annou_de": {
+        "member": "assets/BuiltinFiles/P1/8f0d9927306683679a89628b30ffe778.bundle",
+        "sha256": "0246bfbe5dbfe5afd7767a64ea76b0fc1b1a84fe5add447b45a2e0dc365a3fca"
+      },
+      "lang_base_de": {
+        "member": "assets/BuiltinFiles/P1/00b05bdd744a53b6189b02036ccfdb31.bundle",
+        "sha256": "cb909f773864ca7e9ca20ba08771a2f282b9073604f4a6cc6a4912bbb193a08c"
+      },
+      "lang_battle_de": {
+        "member": "assets/BuiltinFiles/P1/eb1fa2c1fd3b4e49045a236228f04c5e.bundle",
+        "sha256": "b39124b3d8277a3e6c8b461ccff95efe9fb96793bb9a781724bdcbf7b5ccf846"
+      },
+      "lang_benefit_de": {
+        "member": "assets/BuiltinFiles/P1/c3f47a3c4ed13647a39c9baeff8b5d60.bundle",
+        "sha256": "f1bc89244c947fb1eb18c37a281bc04b43ab8a75f6c70cbf001615fa4d4ba40b"
+      },
+      "lang_building_de": {
+        "member": "assets/BuiltinFiles/P1/0352ab738a4dbc3a31b0c0064a54d386.bundle",
+        "sha256": "e26ee8c8d2887ea0a9c454e78604ec88e9939faf36765c97f2d20569b5030702"
+      },
+      "lang_button_de": {
+        "member": "assets/BuiltinFiles/P1/4cda95ff14e005bedacca66c8357c485.bundle",
+        "sha256": "1d529eaabae882c42542e2f13929f6c94c636d979f1420fd63c42cfc5cd41ae7"
+      },
+      "lang_chat_de": {
+        "member": "assets/BuiltinFiles/P1/363c8026b8da94d2746c570333192292.bundle",
+        "sha256": "c3b8bbb7b593cafea5b5c542892f4e00e0e37eeab4b28fae9d542002fa110a96"
+      },
+      "lang_client_de": {
+        "member": "assets/BuiltinFiles/P1/21955b9bd594fa0facde62a50bf9f5b8.bundle",
+        "sha256": "0ba6bc72ee3c133518c40cf390332aadc950752bec11936b160962ce8b63b8d5"
+      },
+      "lang_hero_de": {
+        "member": "assets/BuiltinFiles/P1/fc31969557b661649cca9629b24cfa54.bundle",
+        "sha256": "20856924d05e022071f3b4c67f60a47aaef78dbbcba3e0f7fc040e369ed80eaa"
+      },
+      "lang_hmi_de": {
+        "member": "assets/BuiltinFiles/P1/945e95bb59ab1571e1673d62fcfcab73.bundle",
+        "sha256": "c20a19e826874207f6bd2de2a004dbf878be8c449b1635f13605bae36d82cc0b"
+      },
+      "lang_item_de": {
+        "member": "assets/BuiltinFiles/P1/f30b4f62d69698f725b375e6a2a0ba7a.bundle",
+        "sha256": "483f4b2529484811d1c5d4664c65b845d4695870e54d377871ae3167a662d866"
+      },
+      "lang_mail_de": {
+        "member": "assets/BuiltinFiles/P1/adbf69692104860d7260a223fc23c56d.bundle",
+        "sha256": "ff68e16d3c7539afa6a0698279c7aacada0879c31da05cb69820c1bb912615ae"
+      },
+      "lang_map_de": {
+        "member": "assets/BuiltinFiles/P1/61b191a7ec58f2995fe11b3093c4f96a.bundle",
+        "sha256": "1b932de99d6af1699a32d18e0ef31007f302c6f16cd5cd2db6d4d4f047dc6b69"
+      },
+      "lang_operation_de": {
+        "member": "assets/BuiltinFiles/P1/57b7a2de78740922f2c96381007a6717.bundle",
+        "sha256": "3d316b1bbc3c09164ee4e83f4ff931ea0b736ac4e7dcd889e3b6c501b1b529fa"
+      },
+      "lang_pack_de": {
+        "member": "assets/BuiltinFiles/P1/3f6e162d0bf3920d47539f0961b80be1.bundle",
+        "sha256": "42c12761ebb333c71eb09e201cd8fd4f3f292b4ef333fb7e626ed37e85c105b9"
+      },
+      "lang_pay_de": {
+        "member": "assets/BuiltinFiles/P1/ce56eedc708581b44988e76ee6253dfb.bundle",
+        "sha256": "51acf01c0249b76942a617f69b0e76b9c1ead043c3ae845792981c2176fe31a7"
+      },
+      "lang_prompt_de": {
+        "member": "assets/BuiltinFiles/P1/ff269add3ecee98a74e78edc3a04052b.bundle",
+        "sha256": "ba778bd2ca2aa68f2fc1a1337be2608882a0e87ce7c6e64a996faada9656ac7f"
+      },
+      "lang_public_de": {
+        "member": "assets/BuiltinFiles/P1/0a15be5b291482ec4bb9acaabb5e874d.bundle",
+        "sha256": "7fd0743c4ca08a385eafae871b1196e3ca9dff6a2925b8623840d84e527be72d"
+      },
+      "lang_rookie_de": {
+        "member": "assets/BuiltinFiles/P1/bb091b9ee92738f174b9acb5974d3c6b.bundle",
+        "sha256": "6fb282f395bd4d0a3ea646b2dc454d9c64691307dd28ea3349cf2de464834131"
+      },
+      "lang_story_de": {
+        "member": "assets/BuiltinFiles/P1/fa40906e10deb806588d25e9895be078.bundle",
+        "sha256": "a6082971db79856eec9885442f49e4236eb5a081e9756c6242fe41f63f399f7b"
+      },
+      "lang_system_de": {
+        "member": "assets/BuiltinFiles/P1/ce33ac9077d5f91b4146e903377e50d4.bundle",
+        "sha256": "9cafbcd34f560e9d3c18a10652ce0a7492de0afadea435ab0b72781c6b4580ba"
+      },
+      "lang_task_de": {
+        "member": "assets/BuiltinFiles/P1/0da4d5e8779e703818878a8e13b9c494.bundle",
+        "sha256": "3e064787bb06265a1189fe1b369a0b41df3934d3ceae2c25e1155e4dd78d41c5"
+      },
+      "lang_tips_de": {
+        "member": "assets/BuiltinFiles/P1/b08692b50e22e7c9b9f41b01a11acc1f.bundle",
+        "sha256": "1ede6620d50177c36a70cb7bc2292f6f587f2776d23f3d46f0328ccbbb618beb"
+      }
+    },
+    "ko": {
+      "lang_alliance_ko": {
+        "member": "assets/BuiltinFiles/P1/8c36d327b24ed0dcc8247105279deda6.bundle",
+        "sha256": "4dda6f98a845c231a37707a001c8206b597126b590b06cdf0215387b82e6ccdf"
+      },
+      "lang_annou_ko": {
+        "member": "assets/BuiltinFiles/P1/82979769253f821011d925dd768a19ff.bundle",
+        "sha256": "10eb6d864cb5367ad086157b0055293bd593e65db9072c34b1d964ddc2c36013"
+      },
+      "lang_base_ko": {
+        "member": "assets/BuiltinFiles/P1/7bfe23b4c72a3606044571ddca80a00e.bundle",
+        "sha256": "fdc6e205cf67886b96de6cb26cf5e488c8138aaaa33f3e60cdbac0959f2d38c9"
+      },
+      "lang_battle_ko": {
+        "member": "assets/BuiltinFiles/P1/ef60a6280c7f3adf22dc1726df6af478.bundle",
+        "sha256": "2fee85323068fa7a6ec6929c2238b551dc1ec75beeb45b666fdb1053b54986c4"
+      },
+      "lang_benefit_ko": {
+        "member": "assets/BuiltinFiles/P1/c237c6d5f2631cee2b64e060dd804cf9.bundle",
+        "sha256": "e785d51a03fafc32e1850580b089d3926d07068ddea10b6bd47025083f0fe823"
+      },
+      "lang_building_ko": {
+        "member": "assets/BuiltinFiles/P1/a7a375e3f6b775d2a58b5a6ca7c63880.bundle",
+        "sha256": "bb4bc181eee2f214d09277e1961e69adbeb6efb7226d83f1d71f3832bb75d7ca"
+      },
+      "lang_button_ko": {
+        "member": "assets/BuiltinFiles/P1/27961e839b26f6ef7fd952afa68dc9b7.bundle",
+        "sha256": "5a7da0ee7cebad111f6228d12d59636059d89d6e1fefd68b67391f90ee6e2c17"
+      },
+      "lang_chat_ko": {
+        "member": "assets/BuiltinFiles/P1/46eb43f27c8dc2f4dc80b5837c4a43cb.bundle",
+        "sha256": "b3ccab2506c7c1a6da49780958dfb728ccd1e756daf36c043bee742da0835573"
+      },
+      "lang_client_ko": {
+        "member": "assets/BuiltinFiles/P1/1f444f02dae7e68565dddc537af7f98b.bundle",
+        "sha256": "147ade45afeb46c0562b37482589a866005266f8020d73e6a67eb2bb154b07de"
+      },
+      "lang_hero_ko": {
+        "member": "assets/BuiltinFiles/P1/8c01b272b366c860163461e114a87281.bundle",
+        "sha256": "c21fbcc8b4f2f613f3794b84af9317aaa58fbac08d00cfb8fcf9a8523562b764"
+      },
+      "lang_hmi_ko": {
+        "member": "assets/BuiltinFiles/P1/2992bb80b788c34516784fa97bc2f314.bundle",
+        "sha256": "6331a91cb662a289b393447819c3f5f8f5dcecf432194c5112255fb1a25a59b2"
+      },
+      "lang_item_ko": {
+        "member": "assets/BuiltinFiles/P1/4947dd1049dca4abfbb40a5b38a1ac3a.bundle",
+        "sha256": "77a269ab4066c3a2bf8fd9d5964ebc797808fa0c19723a8ac82eabcc1b2bdabc"
+      },
+      "lang_mail_ko": {
+        "member": "assets/BuiltinFiles/P1/03ac24e7f597d97729330d186e2c2ddb.bundle",
+        "sha256": "a429b80e004df90aaf1b3fa9d25a2fd1406fde409b2fdc35cf6a3988bf68516f"
+      },
+      "lang_map_ko": {
+        "member": "assets/BuiltinFiles/P1/d5ec7497491b0ffc1aaba3e4e65b3183.bundle",
+        "sha256": "d246d2590972b45e5bd229a7b016112cc1df1046b049298d751d440594e1ef7a"
+      },
+      "lang_operation_ko": {
+        "member": "assets/BuiltinFiles/P1/3b2ecea89386832549c5d260e33a0135.bundle",
+        "sha256": "1b93cbbfd1557991bbf514fe458fbf5ba80059f98d0ae35baac7c2a08a4ab643"
+      },
+      "lang_pack_ko": {
+        "member": "assets/BuiltinFiles/P1/c1a350e3348d7cb5e6c7ba5017ca0dc4.bundle",
+        "sha256": "d6b54ee530ffb94426e46bf085ab4e4ff8424fc00c81fe30ba756012780a1358"
+      },
+      "lang_pay_ko": {
+        "member": "assets/BuiltinFiles/P1/4b9926ee23adf77dbada17391b4b9f46.bundle",
+        "sha256": "91362f532d1311e713e09a617f292da391b024e3c13da476bb923b8b0d36b29a"
+      },
+      "lang_prompt_ko": {
+        "member": "assets/BuiltinFiles/P1/3b54500c77533a3bdba54e744360f1c3.bundle",
+        "sha256": "7f57b8d68b44d617004f765d99835c74423c36c70b7a084c4ed1f7292a31296d"
+      },
+      "lang_public_ko": {
+        "member": "assets/BuiltinFiles/P1/3efcbb47cc95fcac3980f8cd7052fbc4.bundle",
+        "sha256": "e0ec8b6e570e76b7e8bc8d67954742fd4eeb284038ca2d47bff19f2baf433a49"
+      },
+      "lang_rookie_ko": {
+        "member": "assets/BuiltinFiles/P1/03420e6b9a6025b6873ea0fd122194d9.bundle",
+        "sha256": "0b5dd4e34d91787f7ca50b3f4a514f20515a6579de51de8446f6b37ab35b1f13"
+      },
+      "lang_story_ko": {
+        "member": "assets/BuiltinFiles/P1/88c0e80280d69388877c07244d83eabd.bundle",
+        "sha256": "be75393bba3bf4da21d8e459cfcd256009d96580cdfa02171db362632b885af0"
+      },
+      "lang_system_ko": {
+        "member": "assets/BuiltinFiles/P1/0fd8910534f9b2e87a4799830613ed12.bundle",
+        "sha256": "20e17f0f4adcf304f00efc4736f69cece8b3f47bc83b03b7c3c70e3aa2add9a9"
+      },
+      "lang_task_ko": {
+        "member": "assets/BuiltinFiles/P1/5bb3a4dd5cedb9f7005d37cabbee021e.bundle",
+        "sha256": "5ff75cde3e9fb4d9ecdcd9f3dd56e7daf1b557dfed67987f40f83ad57710be02"
+      },
+      "lang_tips_ko": {
+        "member": "assets/BuiltinFiles/P1/c2522bb506e13a56437a2d99ef4c3d0c.bundle",
+        "sha256": "57c042b40ace424fcb17e70956d9340069983dc7af9078bdfb9a8a25d8beb42d"
+      }
+    },
+    "zh_tw": {
+      "lang_alliance_zh_tw": {
+        "member": "assets/BuiltinFiles/P1/b877d3e653e599805d6736276746d016.bundle",
+        "sha256": "ee94418fc7d6600e375a3f1b7915463db89658a17f9c4d42447353c961a1909f"
+      },
+      "lang_annou_zh_tw": {
+        "member": "assets/BuiltinFiles/P1/b0c87dc85abcb33a37ee95c017d90250.bundle",
+        "sha256": "51028366ff7416c204797a860eab3bad9ddc6fe45981a531fce625e176608057"
+      },
+      "lang_base_zh_tw": {
+        "member": "assets/BuiltinFiles/P1/fdc8e50021d291c23678363ffa564983.bundle",
+        "sha256": "a0ac63c39858ded41be8ba0d5a4f900b1dd31a3ac38a5697b716cc96a18c506b"
+      },
+      "lang_battle_zh_tw": {
+        "member": "assets/BuiltinFiles/P1/9dcaef0c8a4ee044f0fbbdaac0f6f81c.bundle",
+        "sha256": "5a23bbc176d1fe08852b05c703ca84494e56802aa35591d3d7d2108624eb0c78"
+      },
+      "lang_benefit_zh_tw": {
+        "member": "assets/BuiltinFiles/P1/ed45e73ddc7979f6413d5351be9dd510.bundle",
+        "sha256": "a4264eb4ab0dc733a121e57600c9dca68cc0cd0906c68964f96612097c1534d6"
+      },
+      "lang_building_zh_tw": {
+        "member": "assets/BuiltinFiles/P1/e40f00db6c3d25b62c8bf1ad98a320a1.bundle",
+        "sha256": "b9a8b21399807c0056f05106c7e743fda014aa9658c28ce6c44715b6eb39f858"
+      },
+      "lang_button_zh_tw": {
+        "member": "assets/BuiltinFiles/P1/8fd5238f67251e7e0c1214da44cbde60.bundle",
+        "sha256": "aa34c8f9f55281a78beae18f1177d5c23fb72d6460aa5af8491856c40bbfe9f6"
+      },
+      "lang_chat_zh_tw": {
+        "member": "assets/BuiltinFiles/P1/eeb29256336588deb85a352792e65f92.bundle",
+        "sha256": "b11090ef15d2130d49de4f9d9f11f2b22274eb5084fcfce536f0a3f0517061c6"
+      },
+      "lang_client_zh_tw": {
+        "member": "assets/BuiltinFiles/P1/734e3c20c9ed11f1eecc7a77913aa003.bundle",
+        "sha256": "03b9ad435957615d0efded03bb2deccd7e3a928f4bc355d909d047ac400e0230"
+      },
+      "lang_hero_zh_tw": {
+        "member": "assets/BuiltinFiles/P1/230c5402d6c501af8d08a48482b4f8e4.bundle",
+        "sha256": "eac05cea4a779f3be0367ecd175ed49da4a4a2290ee6317e464f21122aa667ea"
+      },
+      "lang_hmi_zh_tw": {
+        "member": "assets/BuiltinFiles/P1/70a8ae1bb48c47fc2fdfc86699a07e9c.bundle",
+        "sha256": "f70993d8b19016735ef33a50e3aeac76e46f2093510fe5e01aa9b0e876b5d541"
+      },
+      "lang_item_zh_tw": {
+        "member": "assets/BuiltinFiles/P1/0961db58bda91dccf8bd36d34c9b5187.bundle",
+        "sha256": "cf35ae1e0643463a0d3d37cc685a91c582f80db0b3f446d9974afdd1f3e7bff0"
+      },
+      "lang_mail_zh_tw": {
+        "member": "assets/BuiltinFiles/P1/31222ebbfd84dd09ca4b8e5c3d4386ce.bundle",
+        "sha256": "dd5d7e71b0c256caa54bc7696ed45052ee17be697183d248f21e498ec3a90701"
+      },
+      "lang_map_zh_tw": {
+        "member": "assets/BuiltinFiles/P1/0f3aefd41e4429b350127944874c2c95.bundle",
+        "sha256": "763aa745ee88e04159c5b21e3c2ada26af4156a5b682dcb0cb6fd654d6dbbe63"
+      },
+      "lang_operation_zh_tw": {
+        "member": "assets/BuiltinFiles/P1/ace0d218ca607619a8f506dbfd3cb06a.bundle",
+        "sha256": "bb41b16226fd1b4fb84bba81209136b76e64f3f39f381e21bfdddef9ca60a156"
+      },
+      "lang_pack_zh_tw": {
+        "member": "assets/BuiltinFiles/P1/876cc913850ef4425adc0901b6675cf5.bundle",
+        "sha256": "95ce1836777cd19f2e3afe11232b11e8c21aaceef32855cf33fa392bdb947c10"
+      },
+      "lang_pay_zh_tw": {
+        "member": "assets/BuiltinFiles/P1/cb8e95b954d6ce2f0909e1df50071b1f.bundle",
+        "sha256": "7d64371ba26727b41c4cc586fb6ed8960b1146984d598c8c2e469f398758ff74"
+      },
+      "lang_prompt_zh_tw": {
+        "member": "assets/BuiltinFiles/P1/fe19cd258751e6f8784c6a26a2b4af8c.bundle",
+        "sha256": "2b3d29e7562d553637d70e6d0eb149f9a5439574a42c1b41cf170c0f4515dc29"
+      },
+      "lang_public_zh_tw": {
+        "member": "assets/BuiltinFiles/P1/eb7cd194a37340231c15282683f1861b.bundle",
+        "sha256": "05525633accdd762e2ff3df84f0847f4cc2d4695cc82ea878b6028c46a2c91ca"
+      },
+      "lang_rookie_zh_tw": {
+        "member": "assets/BuiltinFiles/P1/bf1bb320b1501caefc90abb40a689f04.bundle",
+        "sha256": "8757465574afbdfc7e6f932dd78069abe8d9fb02319c41d258ac0b59f3b65c2f"
+      },
+      "lang_story_zh_tw": {
+        "member": "assets/BuiltinFiles/P1/32c0fc8974d49bc9ee5faa1202efe78c.bundle",
+        "sha256": "36c2e87e177fc6bb365495a85505734188f8f1a6f822e685989e83d6a71f2e69"
+      },
+      "lang_system_zh_tw": {
+        "member": "assets/BuiltinFiles/P1/79177ed321a8d06c382e6efe6d475f30.bundle",
+        "sha256": "dab641286548fa5193d2e0013ce962bea485e56656710a5aa0d1a80f37d92322"
+      },
+      "lang_task_zh_tw": {
+        "member": "assets/BuiltinFiles/P1/ce1da388bcc5cdc760a19c3812010996.bundle",
+        "sha256": "a2f11ddf4f13c031b8be4b6f5b2dbdc72e5fd5f43bfc8c8ed534552535a3bbe1"
+      },
+      "lang_tips_zh_tw": {
+        "member": "assets/BuiltinFiles/P1/6f508502071ee6078e4f37323544d9db.bundle",
+        "sha256": "87d3380726b34174e68a432ebfb443ee60e99324279bb8db000ff0c302e5b65d"
+      }
+    }
+  }
+}

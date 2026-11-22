@@ -28,6 +28,12 @@ The [field guide manifest](../assets/season-1/field-guide/sources.json) covers t
 - `HeroInfo[30003].upHeroId` points to 31003. Day 9 comes from the Promotion Medal description, not a world milestone offset. The weapon numbers are the S1 day parameters in `HeroExclusive.openCondition`, joined to the existing Hero Directory. Check the live event panel before spending upgrade resources.
 - Outpost and protection rules use `season_cross_battle_tips176–194`. Radiation Legion, Aria’s Hunting Day and settlement use the shipped event help and mail. These are not independently observed live schedules.
 
+## Languages and shareable links
+
+The guide and class skill reference use the language selector shared by the other ZR:Reference pages. For example, link to `season-1/?lang=es#buildings` or `season-1/skills/?lang=de#skill-1103`. Language selection preserves the section fragment. English content remains readable without JavaScript; enabled browsers can open localized links offline after the site cache is installed.
+
+Edit [the page dictionary](../data/ui_i18n/season-1.json), then run `python3 tools/build_page_i18n.py`. The [localization provenance](../data/ui_i18n/season-1-provenance.json) records build-344 client terms and bundle identities. Class and skill names, world milestones and all 152 skill rank descriptions use the corresponding client strings with the original stat parameters. Chinese terms are converted from the shipped Traditional Chinese locale to match the site's Simplified Chinese display. Explanatory guide prose is a fan translation, not official client copy.
+
 ## Checks
 
 Run `python3 tools/check_season1.py` and `python3 tools/check_season1_refresh.py` for navigation, skill and rank coverage, art hashes, and offline cache entries. Existing tool regression checks remain separate.

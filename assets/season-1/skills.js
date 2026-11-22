@@ -11,20 +11,22 @@
       level: Number(tier.dataset.level),
       cards: Array.from(tier.querySelectorAll('.skill-card'), card => ({
         card,
-        text: card.textContent.toLocaleLowerCase('en'),
       })),
     })),
   }));
 
   function update() {
-    const words = query.value.trim().toLocaleLowerCase('en').split(/\s+/).filter(Boolean);
+    const locale = window.I18N?.locale || 'en';
+    const normalize = value => value.normalize('NFC').toLocaleLowerCase(locale);
+    const words = normalize(query.value.trim()).split(/\s+/).filter(Boolean);
     let visible = 0;
     for (const { section, tiers } of sections) {
       let treeCount = 0;
       for (const entry of tiers) {
         let tierCount = 0;
         const eligible = (tree.value === 'all' || tree.value === section.id) && entry.level <= Number(level.value);
-        for (const { card, text } of entry.cards) {
+        for (const { card } of entry.cards) {
+          const text = normalize(card.textContent);
           const matches = eligible && words.every(word => text.includes(word));
           card.hidden = !matches;
           if (matches) tierCount++;
@@ -35,7 +37,9 @@
       section.hidden = !treeCount;
       visible += treeCount;
     }
-    count.textContent = visible ? `${visible} ${visible === 1 ? 'skill' : 'skills'} shown` : 'No skills match these filters.';
+    const message = visible ? (visible === 1 ? '{0} skill shown' : '{0} skills shown') : 'No skills match these filters.';
+    const values = [new Intl.NumberFormat(locale).format(visible)];
+    count.textContent = window.I18N ? I18N.t(message, values) : message.replace('{0}', values[0]);
   }
 
   function openTarget(hash) {
@@ -53,6 +57,7 @@
 
   form.addEventListener('submit', event => event.preventDefault());
   form.addEventListener('input', update);
+  document.addEventListener('languagechange', update);
   form.addEventListener('reset', event => {
     event.preventDefault();
     query.value = '';
