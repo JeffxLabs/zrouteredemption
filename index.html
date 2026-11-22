@@ -20,6 +20,7 @@
   <link rel="icon" href="assets/ui/chips.webp" type="image/webp">
   <link rel="apple-touch-icon" href="icon.svg">
   <link rel="stylesheet" href="assets/app.css?v=26">
+  <link rel="stylesheet" href="assets/editorial.css">
   <script src="i18n.js?v=26"></script>
   <script src="i18n/home.js?v=26"></script>
   <title>ZR:Reference · Z Route: Redemption tools</title>
@@ -30,7 +31,7 @@
     .hero { position: relative; overflow: hidden; border: 1px solid var(--line); border-radius: 22px; background:
       radial-gradient(90% 70% at 78% 18%, color-mix(in srgb, var(--ur) 13%, transparent), transparent 62%),
       radial-gradient(60% 60% at 12% 100%, color-mix(in srgb, var(--accent) 9%, transparent), transparent 70%), var(--bg); }
-    .lineup { position: relative; height: 250px; display: flex; justify-content: center; align-items: flex-end; pointer-events: none;
+    .lineup { position: relative; height: clamp(170px, 49vw, 250px); display: flex; justify-content: center; align-items: flex-end; pointer-events: none;
       -webkit-mask-image: linear-gradient(to bottom, #000 62%, transparent 100%); mask-image: linear-gradient(to bottom, #000 62%, transparent 100%); }
     .lineup img { height: 88%; width: auto; max-width: none; margin: 0 -34px; object-fit: contain; filter: brightness(.72) saturate(.9);
       -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 24%, #000 76%, transparent 100%); mask-image: linear-gradient(to right, transparent 0%, #000 24%, #000 76%, transparent 100%); }
@@ -39,15 +40,10 @@
     .hero-copy { position: relative; z-index: 3; padding: 0 22px 26px; margin-top: -26px; }
     .eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 11.5px; font-weight: 750; letter-spacing: .09em; text-transform: uppercase; color: var(--ur); }
     .eyebrow img { width: 18px; height: 18px; object-fit: contain; }
-    .hero h1 { margin: 10px 0 8px; font-size: clamp(40px, 9vw, 72px); line-height: .95; letter-spacing: -.035em; font-weight: 850;
-      background: linear-gradient(100deg, #ffd56a 0%, var(--ur) 22%, #fff 58%); -webkit-background-clip: text; background-clip: text; color: transparent; }
-    html.day .hero h1 { background: linear-gradient(100deg, #b07d00, #18181b 60%); -webkit-background-clip: text; background-clip: text; }
-    .hero p { margin: 0; max-width: 470px; color: var(--muted); font-size: 15.5px; line-height: 1.5; }
-    .cta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
-    .cta .btn { height: 42px; padding: 0 18px; border-radius: 12px; font-size: 14px; }
-    .cta .btn.primary { background: var(--ur); border-color: var(--ur); color: #000; }
+    .hero h1 { margin: 9px 0 10px; font: 650 clamp(37px, 8.5vw, 72px)/1.03 var(--display-face); letter-spacing: -.055em; color: var(--text); }
+    .hero p { margin: 0; max-width: 38ch; color: var(--muted); font-size: clamp(14px, 2vw, 17px); line-height: 1.55; text-wrap: pretty; }
     @media (min-width: 900px) {
-      .hero { min-height: 440px; display: flex; align-items: center; }
+      .hero { min-height: 320px; display: flex; align-items: center; }
       .lineup { position: absolute; right: -10px; bottom: 0; width: 64%; height: 100%; justify-content: flex-end;
         -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 30%), linear-gradient(to bottom, #000 70%, transparent 100%);
         mask-image: linear-gradient(to right, transparent 0%, #000 30%), linear-gradient(to bottom, #000 70%, transparent 100%);
@@ -55,7 +51,7 @@
       .lineup img { height: 80%; margin: 0 -44px; }
       .lineup img:nth-child(2), .lineup img:nth-child(4) { height: 88%; }
       .lineup img:nth-child(3) { height: 96%; }
-      .hero-copy { margin: 0; padding: 48px 52px; max-width: 560px; }
+      .hero-copy { margin: 0; padding: 36px clamp(28px, 4vw, 52px); max-width: 560px; }
     }
 
     /* Tools */
@@ -92,21 +88,25 @@
     .tool.roi .art .res { position: absolute; bottom: 4px; left: 50%; translate: -50% 0; display: flex; gap: 2px; }
     .tool.roi .art .res img { width: 26px; height: 26px; filter: drop-shadow(0 3px 5px rgba(0,0,0,.7)); }
     .tool.exp .art .chest { position: absolute; right: -6px; bottom: 2px; width: 62px; }
-    .tool.season-feature { grid-column: 1 / -1; min-height: 154px; --glow: #a9d790; color: #f4f7ed;
+    .tool.season-feature { grid-column: 1 / -1; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 12px;
+      min-height: 154px; padding: 16px clamp(16px, 3vw, 34px); --glow: #a9d790; color: #f6f4ea;
       background: #111b18; border-color: #4b5b4c; }
+    .tool.season-feature .txt { gap: 4px; }
+    .tool.season-feature .eyebrow { color: #d8e6af; font-size: .72rem; font-weight: 750; }
+    .tool.season-feature h3 { font: 650 clamp(1.85rem, 4.5vw, 3rem)/1.1 var(--display-face); letter-spacing: -.035em; text-wrap: balance; }
     .tool.season-feature::before { inset: 0; width: auto; height: auto; border-radius: 0; opacity: 1;
       background: linear-gradient(90deg, #111b18 0%, #111b18 39%, rgb(17 27 24 / 70%) 56%, rgb(17 27 24 / 16%) 80%, transparent 100%),
         linear-gradient(0deg, rgb(17 27 24 / 60%), transparent 65%),
         url("assets/season-1/home-banner.webp") right 32% / max(355px, min(72%, 710px)) auto no-repeat; }
-    .tool.season-feature p { color: #e1e9dc; max-width: 520px; }
-    .tool.season-feature .tag { min-height: 24px; height: auto; line-height: 1.1; padding-block: 1px;
-      color: #d1e6bb; border-color: #61765b; background: #1c2d21; }
-    .tool.season-feature .go { color: #eaf5e3; background: #2c4538; }
+    .tool.season-feature p { color: #e1e9dc; max-width: 40ch; font-size: .9rem; text-wrap: pretty; }
+    .tool.season-feature .go { width: 44px; height: 44px; color: #f4f7ea; background: #243a32; border: 1px solid #a9c68a; }
+    .tool.season-feature:focus-visible { outline-color: #c9e2a5; outline-offset: -4px; }
     @media (max-width: 619px) {
+      .tool.season-feature { min-height: 166px; align-items: end; }
       .tool.season-feature::before {
-        background: linear-gradient(90deg, #111b18 0%, rgb(17 27 24 / 96%) 25%, rgb(17 27 24 / 80%) 52%, rgb(17 27 24 / 25%) 78%, transparent 100%),
-          linear-gradient(0deg, rgb(17 27 24 / 64%), transparent 65%),
-          url("assets/season-1/home-banner.webp") 34% center / cover no-repeat;
+        background: linear-gradient(90deg, rgb(17 27 24 / 99%) 0%, rgb(17 27 24 / 94%) 29%, rgb(17 27 24 / 77%) 60%, rgb(17 27 24 / 34%) 100%),
+          linear-gradient(0deg, rgb(17 27 24 / 75%), transparent 75%),
+          url("assets/season-1/home-banner.webp") 42% center / cover no-repeat;
       }
     }
     .base { --glow: #5ab4ff; } .roi { --glow: var(--food); } .heroes { --glow: var(--ur); }
@@ -150,18 +150,14 @@
         <span class="eyebrow"><img src="assets/heroes/ui/star.webp" alt="">Z Route: Redemption toolkit</span>
         <h1 id="site-title">ZR:Reference</h1>
         <p>Planners and references for Z Route: Redemption, built from the game's own data.</p>
-        <div class="cta">
-          <a class="btn primary" href="base/">Plan your Base</a>
-          <a class="btn" href="heroes/">Browse heroes</a>
-          <a class="btn" href="season-1/">Season 1 guide</a>
-        </div>
       </div>
     </section>
 
     <div class="section-head"><h2 id="tools-title">Tools</h2></div>
     <nav class="tools" aria-labelledby="tools-title">
       <a class="tool season-feature" href="season-1/">
-        <div class="txt"><h3>Season 1 guide</h3><p>Start Radiated Land: build Virus Resistance, pick class skills, and plan your first outpost.</p><div class="foot"><span class="tag">Radiated Land</span><span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></div>
+        <div class="txt"><span class="eyebrow">Season 1 guide</span><h3>Radiated Land</h3><p>Start Radiated Land: build Virus Resistance, pick class skills, and plan your first outpost.</p></div>
+        <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
       </a>
       <a class="tool base" href="base/">
         <div class="txt"><h3>Base Planner</h3><p>Every remaining upgrade to Base 30, with build times and resource costs.</p><div class="foot"><span class="tag">Base 1–30</span><span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></div>

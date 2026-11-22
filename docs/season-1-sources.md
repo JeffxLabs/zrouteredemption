@@ -5,6 +5,10 @@ Bundled catalog `.bytes` SHA-256: `855e10883a4a0f0ca8365861f95dac2a4e6e9ed2973fe
 
 The guide uses the shipped English locale and statically decoded Lua configuration tables. The skill subset takes `validSeason` 0 or 1 at the S1 class cap (`SeasonProfessionInfo`, row 1); `ProfessionSkillLevel` joins on `skillID` and supplies the numbers interpolated into the corresponding English effect text. `TrendWorld` is filtered to group 1; day offsets are not shown because they are not proven absolute. Reward group 10001 is a client example. No activation date is inferred for Warzone 117.
 
+## Typography
+
+The homepage and Season 1 pages use self-hosted Lora display text (Google Fonts v37, variable weights 500–700, Latin, Latin Extended and Cyrillic). Lora is licensed under the [SIL Open Font License](../assets/fonts/lora-OFL.txt). Korean and Simplified Chinese headings use native serif fallbacks. The guide cover shares the official event-entry landscape used on the homepage.
+
 ## Artwork
 
 The selected Unity Sprite assets were found in the embedded catalog and physically present in `base_assets.apk`. Each was resized and re-encoded as WebP for this guide; no APK, raw bundle, or raw locale dump is distributed. Artwork remains the property of its respective rights holders.
