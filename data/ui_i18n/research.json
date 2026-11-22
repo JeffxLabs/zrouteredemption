@@ -1,5 +1,16 @@
 {
   "strings": {
+  "Season 1": {
+   "fr": "Saison 1",
+   "ru": "Сезон 1",
+   "tr": "1. Sezon",
+   "pl": "Sezon 1",
+   "es": "Temporada 1",
+   "pt": "Temporada 1",
+   "de": "Saison 1",
+   "ko": "시즌 1",
+   "zh": "赛季1"
+  },
     "Fighter": {
       "fr": "Chasseur",
       "ru": "Истребитель",

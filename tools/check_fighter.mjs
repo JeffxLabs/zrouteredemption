@@ -53,7 +53,9 @@ for(const icon of images) assert.ok(precache.includes('./'+icon.replace('../',''
 for(const page of ['index.html','base/index.html','heroes/index.html','hero-exp/index.html','research/index.html','fighter/index.html','promo-codes/index.html']) {
   const html=fs.readFileSync(path.join(root,page),'utf8');
   const nav=html.match(/<nav class="bottom-nav"[\s\S]*?<\/nav>/)[0];
-  assert.equal([...nav.matchAll(/<a\b/g)].length,5,page);
+  const links = [...nav.matchAll(/<a\b[^>]*href="([^"]+)"/g)].map(m => m[1]);
+  assert.equal(links.length, page.startsWith('promo-codes/') ? 5 : 6, page);
+  assert.equal(links.filter(href => /^(\.\.\/)?season-1\/$/.test(href)).length, page.startsWith('promo-codes/') ? 0 : 1, page);
   assert.ok(!html.includes('promo-codes/"'),page+' must not link Promo Codes from navigation');
 }
 

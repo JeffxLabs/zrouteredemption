@@ -1,5 +1,27 @@
 {
  "strings": {
+  "Season 1": {
+   "fr": "Saison 1",
+   "ru": "Сезон 1",
+   "tr": "1. Sezon",
+   "pl": "Sezon 1",
+   "es": "Temporada 1",
+   "pt": "Temporada 1",
+   "de": "Saison 1",
+   "ko": "시즌 1",
+   "zh": "赛季1"
+  },
+  "Season 1 guide": {
+   "fr": "Guide de la saison 1",
+   "ru": "Руководство по сезону 1",
+   "tr": "1. Sezon rehberi",
+   "pl": "Poradnik sezonu 1",
+   "es": "Guía de la temporada 1",
+   "pt": "Guia da temporada 1",
+   "de": "Leitfaden für Saison 1",
+   "ko": "시즌 1 가이드",
+   "zh": "赛季1指南"
+  },
   "Base Planner": {
    "fr": "Planificateur de base",
    "ru": "Планировщик базы",

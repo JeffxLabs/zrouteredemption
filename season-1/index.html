@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="A practical Season 1 guide to Class Hall, Virus Resistance, buildings, milestones, territory and rewards."><meta name="theme-color" content="#000000">
+  <title>Season 1: Radiated Land · ZR:Reference</title><link rel="icon" href="../icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/app.css"><link rel="stylesheet" href="../assets/season-1/guide.css">
+</head>
+<body>
+  <a class="season-skip" href="#main">Skip to content</a>
+  <header class="app-header"><div class="header-inner">
+    <a class="brand" href="../"><img src="../assets/ui/chips.webp" alt="" width="22" height="22">ZR:Reference</a>
+    <nav class="desktop-nav" aria-label="Site"><a href="../">Home</a><a href="../base/">Base</a><a href="../heroes/">Heroes</a><a href="../hero-exp/">Hero EXP</a><a href="../research/">Research</a><a href="../fighter/">Fighter</a><a href="../season-1/" class="active" aria-current="page">Season 1</a></nav>
+    <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch theme"></button>
+  </div></header>
+  <main class="season" id="main">
+<div class="season-hero">
+  <picture><img src="../assets/season-1/radiated-land.webp" alt="" width="342" height="760" fetchpriority="high"></picture>
+  <div><span class="eyebrow">Season 1 field guide</span><h1>Radiated Land</h1>
+  <p>What to build first, how Virus Resistance works, and what to check before your alliance declares war.</p>
+  <a class="btn" href="#start">Start here</a></div>
+</div>
+<div class="season-layout">
+  <nav class="season-toc" aria-labelledby="contents-title"><h2 id="contents-title">In this guide</h2><ul>
+  <li><a href="#start">Opening checklist</a></li><li><a href="#buildings">Season buildings</a></li><li><a href="#resistance">Resistance and infection</a></li><li><a href="#classes">Class Hall</a></li><li><a href="#milestones">Milestone unlocks</a></li><li><a href="#territory">Territory and outposts</a></li><li><a href="#events">Heroes and events</a></li><li><a href="#rewards">Rewards and resets</a></li><li><a href="#faq">Quick answers</a></li><li><a href="#sources">Sources and limits</a></li></ul></nav>
+  <div class="season-body">
+  <section id="start"><h2>Opening checklist</h2>
+    <ol class="steps">
+    <li><strong>During preparation, build the Class Hall.</strong> Pick Engineer for growth and alliance support, or War Leader if your role is combat. Follow your own alliance’s class policy.</li>
+    <li><strong>Once S1 opens, repair the Virus Lab first.</strong> Then repair Uranium Crystal Refinery I and spend its Immune Protein on the Lab. Follow the game’s building prerequisites as more refineries open.</li>
+    <li><strong>Check Resistance Required before attacking.</strong> Recall and redeploy troops after a Lab upgrade. For eligible Elite Zombie rallies, use a leader with enough resistance.</li>
+    <li><strong>Follow the alliance’s map markers.</strong> Take a Level 1 Military Stronghold to establish territory. Check adjacency, protection and the declaration window before committing to a city.</li>
+    </ol>
+    <p class="callout"><strong>Check your server’s timer.</strong> The shipped S1 schedule examples allow 14 days of preparation and 49 days of play, but they do not list Warzone 117 or establish a date for it. The preparation mail warns of migration and a restart when the season begins.</p>
+    <p class="source">Evidence: <a href="#src-opening">preparation mail and schedule</a>.</p>
+  </section>
+  <section id="buildings"><h2>Season buildings</h2>
+    <figure class="guide-figure"><img src="../assets/season-1/season-buildings.webp" width="800" height="418" loading="lazy" alt="Illustration from the in-game Season Building rules"><figcaption>Season Building artwork from the game’s help panel.</figcaption></figure>
+    <p class="callout"><strong>Uranium Crystals → refinery upgrades → Immune Protein → Virus Lab upgrades → Virus Resistance.</strong> “Protein Refinery” in the rules refers to the Uranium Crystal Refinery, not a separate building.</p>
+    <div class="scroll-table" role="region" aria-label="Season buildings and their uses" tabindex="0"><table><thead><tr><th scope="col">Building</th><th scope="col">Purpose</th></tr></thead><tbody>
+    <tr><th scope="row">Class Hall</th><td>Choose a class and manage skill points. Available during preparation according to the season mail.</td></tr>
+    <tr><th scope="row">World Geographic Society</th><td>Displays season information.</td></tr>
+    <tr><th scope="row">Virus Lab</th><td>Raises troop resistance. Repair it before Refinery I. The shipped building table caps it at Lv.30.</td></tr>
+    <tr><th scope="row">Uranium Crystal Refineries I–IV</th><td>Produce Immune Protein. Upgrade them with Uranium Crystals. A separate extra refinery is listed under the Weekly Pass.</td></tr>
+    <tr><th scope="row">Unit Type Base</th><td>A milestone unlocks the hero counter buildings: Warrior Base counters Tactical, Assault Base counters Warrior, and Tactical Base counters Assault. These hero types are unrelated to your Class Hall choice.</td></tr>
+    <tr><th scope="row">Emergency Center</th><td>Rescues severely wounded soldiers. Use the in-game panel to check which losses are eligible.</td></tr>
+    <tr><th scope="row">Radiation Shelter and Gray Zone Caravan</th><td>Named in the season building table. Their entries do not by themselves establish when they open on your server.</td></tr>
+    </tbody></table></div>
+    <p>The Lab’s base Resistance value is <strong>400</strong> at Lv.1, <strong>7,100</strong> at Lv.10, <strong>34,100</strong> at Lv.20, and <strong>108,100</strong> at Lv.30 in this build. Your troop’s current resistance is the number to use in battle.</p>
+    <p class="source">Evidence: <a href="#src-buildings">building tables, help text and repair hint</a>.</p>
+  </section>
+  <section id="resistance"><h2>Resistance and infection</h2>
+    <figure class="guide-figure"><img src="../assets/season-1/virus.webp" width="800" height="418" loading="lazy" alt="Illustration from the in-game pathogen rules"><figcaption>γ Pathogen artwork from the game’s help panel.</figcaption></figure>
+    <h3>Check the monster before you attack</h3><p>Below the required resistance, your troops deal less damage and enemies deal more. After raising your resistance, return deployed troops to base and send them out again. A march already on the map does not receive the new value.</p>
+    <h3>Choose the rally leader by resistance</h3><p>For an eligible Elite Zombie rally, each participant uses the higher of their own resistance and the leader’s resistance. A participant’s higher number helps only that participant, not the other members.</p>
+    <h3>Keep γ Pathogen stacks under control</h3><ul>
+    <li>Fighting above your resistance can infect troops. Monsters in Contaminated Zones can add stacks even when you meet the resistance requirement.</li>
+    <li>Returning troops bring their stacks to base. Too many stacks cause penalties. The base countdown warning says it can spread one-third of the base’s stacks to nearby commanders when it expires.</li>
+    <li>Send Recon Aircraft to an ally’s base to remove stacks or grant antibodies. The PvP help says the winner’s carried stacks transfer to the loser. Losses at the Capitol or Battery can also add stacks.</li>
+    </ul><p class="source">Evidence: <a href="#src-resistance">Rally Resistance and γ Pathogen help</a>.</p>
+  </section>
+  <section id="classes"><h2>Class Hall</h2>
+    <p>Choose one class. Build the Hall during preparation; earn Class EXP after the season starts. Upgrade season buildings, defeat monsters, capture cities and participate in seasonal events to gain EXP. You get one skill point per class level. <strong>S1 caps at Class Lv.40</strong>, and the Hall promises a free Class Reset Certificate at Lv.10.</p>
+    <div class="split season-classes"><div><img src="../assets/season-1/engineer.webp" width="427" height="760" loading="lazy" alt="Engineer class artwork"><h3>Engineer</h3><p>Growth and team support. Start with Stamina Recovery (Lv.5) or the S1 monster-EXP chain if those fit your play. Build Now and Instant Research open at Lv.15; cooperative construction and research open at Lv.30.</p></div>
+    <div><img src="../assets/season-1/war-leader.webp" width="427" height="760" loading="lazy" alt="War Leader class artwork"><h3>War Leader</h3><p>Combat and recovery. War Frenzy and Field Emergency Care open at Lv.10; Rally Charge and Stealth at Lv.30. Pick this if your leadership expects you to spend the season fighting rather than developing your base.</p></div></div>
+    <p class="callout"><a href="skills/"><strong>Open the complete S1 skill reference</strong></a> for prerequisites, unlock levels, rank values, and cooldowns. Reaching the right class level does not bypass a prerequisite skill.</p>
+    <p class="source">Evidence: <a href="#src-classes">Class Hall help and skill tables</a>.</p>
+  </section>
+  <section id="milestones"><h2>Milestone unlocks</h2>
+    <p>Open the season milestone panel to see the current chapter and its conditions. These are the client’s eight world-milestone chapters for S1, not calendar week numbers. The separate personal task track has four chapters.</p>
+    <div class="scroll-table" role="region" tabindex="0" aria-label="World milestone chapters"><table><thead><tr><th scope="col">Chapter</th><th scope="col">Milestones</th></tr></thead><tbody><tr><th scope="row">1</th><td>Repair: Virus Lab; Repair: Uranium Crystal Refinery; Lv.1 City Unlocked; Lv.2 City Unlocked</td></tr><tr><th scope="row">2</th><td>Hero Promotion; Legion Counterattack; Lv.3 City Unlocked; Lv.4 City Unlocked</td></tr><tr><th scope="row">3</th><td>Unit Enhancement; Warzone Expedition; Lv.5 City Unlocked; Lv.6 City Unlocked</td></tr><tr><th scope="row">4</th><td>Warzone Declaration; Warzone Clash Coming Soon; Capital Unlocked</td></tr><tr><th scope="row">5</th><td>Warzone Clash; Mutant Lizard Attack; Defeat Enemy Troops</td></tr><tr><th scope="row">6</th><td>Invasion and War Declaration; Defeat Enemy Troops; Mutated zombie invasion</td></tr><tr><th scope="row">7</th><td>Invasion and War Declaration; Defeat Enemy Troops</td></tr><tr><th scope="row">8</th><td>Alliance Commendation</td></tr></tbody></table></div>
+    <p class="source">Evidence: <a href="#src-world">world milestones and personal chapter tables</a>.</p>
+  </section>
+  <section id="territory"><h2>Territory, cities and outposts</h2>
+    <p><strong>Home Warzone:</strong> Start from a Level 1 Military Stronghold. To declare war on a city, hold at least one adjacent stronghold. Conquer connected territory rather than picking disconnected targets. Higher-level cities are worth more Influence; the rules say each Lv.1–5 city also raises the stronghold limit by one.</p>
+    <p><strong>Neutral and occupied objectives differ.</strong> Neutral strongholds can be taken without an occupied-target Battle Period. Neutral city declarations still have War Declaration Days. For captured targets, first check protection, the Battle Period, and your alliance’s peace setting. The help shows three daily one-hour windows and Wednesday/Saturday declarations; cross-Warzone attacks have additional restrictions. Use in-game server time, not the time on this site.</p>
+    <p><strong>Warzone Expedition:</strong> Once unlocked, R4 and above can place an Alliance Outpost in another Warzone. Garrison it to finish construction faster, then capture a stronghold within range and expand from there. The first build has five hours of protection. A destroyed outpost cannot support new captures until repaired; the help lists a 24-hour repair cooldown and 50% durability restored on success. A repair does not renew the first-build protection.</p>
+    <figure class="guide-figure expedition"><img src="../assets/season-1/expedition.webp" width="342" height="760" loading="lazy" alt="Illustration from the Warzone Expedition preview"><figcaption>Warzone Expedition preview artwork.</figcaption></figure>
+    <p class="source">Evidence: <a href="#src-world">capture rules, outpost help and rules table</a>.</p>
+  </section>
+  <section id="events"><h2>Heroes and events</h2>
+    <ul>
+    <li><strong>Hero Advancement:</strong> The preview names Aria’s UR promotion using Promotion Items and Exclusive Weapons for Monroe, Leah and Yana. It does not say they all open on day one.</li>
+    <li><strong>Radiation Legion and Mutated Zombie Invasion:</strong> These appear on different world milestones. Use your live event timer and check the resistance requirement before joining fights.</li>
+    <li><strong>Warzone Clash:</strong> A later milestone ties matchmaking to Warzone Influence. The later tasks include the Capitol and the Mutant Lizard.</li>
+    <li><strong>Alliance Star:</strong> React to awards and open the ceremony reward panel. The shipped table has reaction-reward milestones at 1, 2 and 3; it does not show an uncapped reward for every reaction.</li>
+    </ul><p class="source">Evidence: <a href="#src-events">preview, milestone and Alliance Star reward tables</a>.</p>
+  </section>
+  <section id="rewards"><h2>Rewards and season reset</h2>
+    <p><strong>Alliance Influence matters.</strong> City and outpost captures contribute to Influence. Final alliance tiers have Influence requirements; some also require rank or holding qualifying cities. The bundled reward group has different grants by alliance role. The Warzone ranking payout is a separate reward track.</p>
+    <details><summary>Shipped alliance reward conditions</summary><div><p>Example from reward group 10001. Check the payout screen for your Warzone, role and final standing.</p><div class="scroll-table" role="region" tabindex="0" aria-label="Alliance Influence tier requirements"><table><thead><tr><th scope="col">Tier</th><th scope="col">Shipped conditions</th></tr></thead><tbody><tr><th scope="row">1</th><td>Influence rank #1 and More than 6,500,000 Influence</td></tr><tr><th scope="row">2</th><td>More than 6,500,000 Influence and Hold 2 Lv.6 cities</td></tr><tr><th scope="row">3</th><td>More than 5,500,000 Influence and Hold 1 Lv.6 city</td></tr><tr><th scope="row">4</th><td>More than 4,500,000 Influence</td></tr><tr><th scope="row">5</th><td>More than 3,500,000 Influence</td></tr><tr><th scope="row">6</th><td>More than 1,500,000 Influence</td></tr><tr><th scope="row">7</th><td>More than 500,000 Influence</td></tr><tr><th scope="row">8</th><td>Influence rank #999</td></tr></tbody></table></div></div></details>
+    <p><strong>Spend season materials before the reset.</strong> The rules remove temporary buildings and say unspent Immune Protein converts to Class EXP. Uranium item text warns that it disappears. Season skills reset and their skill points are returned. Excess EXP at the cap is only partly carried forward; the help says the carryover is mailed at the next season start.</p>
+    <p class="source">Evidence: <a href="#src-rewards">reward group and reset text</a>.</p>
+  </section>
+  <section id="faq"><h2>Quick answers</h2>
+    <details><summary>Do I need the Weekly Pass to start?</summary><div>No pass is shown as a prerequisite for the normal Lab or the four regular refineries. The pass lists an extra refinery and a resistance bonus.</div></details>
+    <details><summary>Can I change my class after picking?</summary><div>Yes. A Class Reset Certificate lets you choose again and refunds spent points. The Class Hall lists a free certificate at Lv.10.</div></details>
+    <details><summary>Why didn’t my Lab upgrade fix a march already outside?</summary><div>Bring it back to base. The new resistance is applied when it deploys again.</div></details>
+    <details><summary>Can I enter an opposing Warzone as soon as S1 opens?</summary><div>No day-one access is shown. Check the Expedition milestone, outpost placement rules and live declaration windows.</div></details>
+  </section>
+  <section id="sources"><h2>Sources and limits</h2>
+    <p>Original guide based on the Android build 344 asset split, embedded catalog <code>V202611021100</code>, and decoded English labels. Client tables document what shipped; the live event screen is authoritative for your group’s activation, timers and payouts.</p>
+    <ul>
+    <li id="src-opening"><code>WorldSeason</code>, <code>SeasonPreview</code>, <code>S1_season_mail_1</code>.</li>
+    <li id="src-buildings"><code>Building</code>, <code>BuildingLevel</code>, <code>SeasonRule</code>, <code>S1_building_hint_1</code>.</li>
+    <li id="src-resistance"><code>S1_start_virus_resistance025–026</code>, <code>season_virus_tips31/37/129</code>.</li>
+    <li id="src-classes"><code>SeasonProfessionInfo</code>, <code>ProfessionSkill</code>, <code>ProfessionSkillLevel</code>, <code>ProfessionText002/065</code>.</li>
+    <li id="src-world"><code>TrendWorld</code>, <code>SeasonTaskChapterInfo</code>, <code>SeasonMechCityWarOutpost</code>, <code>season_cross_battle_tips176–194</code>.</li>
+    <li id="src-events"><code>SeasonPreview</code>, <code>TrendWorld</code>, <code>UnionStarLikeReward</code>.</li>
+    <li id="src-rewards"><code>AllianceSeasonReward</code>, <code>ZoneSeasonReward</code>, <code>ProfessionText002</code>, <code>item_season_uranium_ore_2</code>.</li>
+    </ul><p><a href="../docs/season-1-sources.md">Maintainer notes and art provenance</a>. Game artwork belongs to its respective rights holders. This page is an unofficial fan reference.</p>
+  </section>
+  </div>
+</div>
+
+  </main>
+  <nav class="bottom-nav season-bottom" aria-label="Site"><a href="../">Home</a><a href="../season-1/" class="active" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 21V3m0 1h13l-2 4 2 4H5"/></svg><span>Season 1</span></a><a href="../base/">Base</a><a href="../heroes/">Heroes</a></nav>
+  <script src="../assets/app.js"></script>
+  <script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('../sw.js?v=6').catch(() => {});</script>
+</body>
+</html>
