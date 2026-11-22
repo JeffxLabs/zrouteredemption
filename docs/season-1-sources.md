@@ -11,12 +11,15 @@ The selected Unity Sprite assets were found in the embedded catalog and physical
 
 | File | Catalog address | Asset split member (bundle basename) |
 | --- | --- | --- |
+| `home-banner.webp` | `UI_Sprite/Banner/Season/ActEntry/season_banner_s1_main.png` | `f9d100b1ffcda1c0da12428ecc6775a1.bundle` |
 | `radiated-land.webp` | `UI_Sprite/Bg/Season/foresight_bg_07.png` | `f96440bd1fd8fd022fe47911f0366667.bundle` |
 | `engineer.webp` | `UI_Sprite/Banner/Season/Profession/Occupation_img_engineer01.png` | `5fe540eca32c16e0a4c120417cfb963b.bundle` |
 | `war-leader.webp` | `UI_Sprite/Banner/Season/Profession/Occupation_img_warleader01.png` | `059155f160f35c2bd4d9f55b66b3daf7.bundle` |
 | `season-buildings.webp` | `UI_Sprite/Banner/Explanation/Rule_banner_S1_001.png` | `c38e6f6752970c3531181ffe7198d36b.bundle` |
 | `virus.webp` | `UI_Sprite/Banner/Explanation/Rule_banner_S1_003.png` | `dc6d79673325d526d04beb9d09608d45.bundle` |
 | `expedition.webp` | `UI_Sprite/Bg/Season/foresight_bg_06.png` | `9ab5dc3fad8898cc6cbe811ee75f9190.bundle` |
+
+The homepage uses the main Season 1 event-entry sprite (path ID `597244594278310346`). The decorative in-game frame is cropped out, and the card keeps the text as HTML so the banner works in all site languages.
 
 The [icon manifest](../assets/season-1/icons/sources.json) records the atlas, exact sprite name, archived bundle, path ID and WebP hash for every extracted skill, class, resistance and item icon. Atlas sprites were resolved with their packed texture dependencies from the same APK. The hero portraits reuse the existing Hero Directory art.
 

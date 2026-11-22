@@ -92,7 +92,23 @@
     .tool.roi .art .res { position: absolute; bottom: 4px; left: 50%; translate: -50% 0; display: flex; gap: 2px; }
     .tool.roi .art .res img { width: 26px; height: 26px; filter: drop-shadow(0 3px 5px rgba(0,0,0,.7)); }
     .tool.exp .art .chest { position: absolute; right: -6px; bottom: 2px; width: 62px; }
-    .tool.season-feature { grid-column: 1 / -1; min-height: 148px; --glow: #7bbd71; }
+    .tool.season-feature { grid-column: 1 / -1; min-height: 154px; --glow: #a9d790; color: #f4f7ed;
+      background: #111b18; border-color: #4b5b4c; }
+    .tool.season-feature::before { inset: 0; width: auto; height: auto; border-radius: 0; opacity: 1;
+      background: linear-gradient(90deg, #111b18 0%, #111b18 39%, rgb(17 27 24 / 70%) 56%, rgb(17 27 24 / 16%) 80%, transparent 100%),
+        linear-gradient(0deg, rgb(17 27 24 / 60%), transparent 65%),
+        url("assets/season-1/home-banner.webp") right 32% / max(355px, min(72%, 710px)) auto no-repeat; }
+    .tool.season-feature p { color: #e1e9dc; max-width: 520px; }
+    .tool.season-feature .tag { min-height: 24px; height: auto; line-height: 1.1; padding-block: 1px;
+      color: #d1e6bb; border-color: #61765b; background: #1c2d21; }
+    .tool.season-feature .go { color: #eaf5e3; background: #2c4538; }
+    @media (max-width: 619px) {
+      .tool.season-feature::before {
+        background: linear-gradient(90deg, #111b18 0%, rgb(17 27 24 / 96%) 25%, rgb(17 27 24 / 80%) 52%, rgb(17 27 24 / 25%) 78%, transparent 100%),
+          linear-gradient(0deg, rgb(17 27 24 / 64%), transparent 65%),
+          url("assets/season-1/home-banner.webp") 34% center / cover no-repeat;
+      }
+    }
     .base { --glow: #5ab4ff; } .roi { --glow: var(--food); } .heroes { --glow: var(--ur); }
     .exp { --glow: var(--ssr); } .research { --glow: #49c6ff; } .fighter { --glow: #3fd3a2; }
 
@@ -146,7 +162,6 @@
     <nav class="tools" aria-labelledby="tools-title">
       <a class="tool season-feature" href="season-1/">
         <div class="txt"><h3>Season 1 guide</h3><p>Start Radiated Land: build Virus Resistance, pick class skills, and plan your first outpost.</p><div class="foot"><span class="tag">Radiated Land</span><span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></div>
-        <div class="art"><img src="assets/season-1/field-guide/virus-lab.webp" alt="" width="101" height="118" loading="lazy"></div>
       </a>
       <a class="tool base" href="base/">
         <div class="txt"><h3>Base Planner</h3><p>Every remaining upgrade to Base 30, with build times and resource costs.</p><div class="foot"><span class="tag">Base 1–30</span><span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></div>

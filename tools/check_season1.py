@@ -44,6 +44,16 @@ class SeasonOne(unittest.TestCase):
         cards = [node for tag, node in home.nodes if tag == 'a' and 'tool' in node.get('class', '').split()]
         self.assertEqual(len([node for node in cards if node.get('href') == GUIDE]), 1)
 
+    def test_home_banner_uses_cached_official_season_art(self):
+        asset = 'assets/season-1/home-banner.webp'
+        html = (ROOT / 'index.html').read_text()
+        self.assertIn(f'url("{asset}")', html)
+        artwork = ROOT / asset
+        self.assertTrue(artwork.is_file())
+        self.assertIn('"./' + asset + '"', (ROOT / 'sw.js').read_text())
+        self.assertIn('UI_Sprite/Banner/Season/ActEntry/season_banner_s1_main.png',
+                      (ROOT / 'docs/season-1-sources.md').read_text())
+
     def test_season_bottom_navigation_matches_home(self):
         def tabs(route):
             html = (ROOT / route / 'index.html').read_text()
