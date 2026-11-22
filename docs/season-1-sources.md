@@ -56,6 +56,8 @@ The guide and class skill reference use the language selector shared by the othe
 
 Edit [the page dictionary](../data/ui_i18n/season-1.json), then run `python3 tools/build_page_i18n.py`. The [localization provenance](../data/ui_i18n/season-1-provenance.json) records build-344 client terms and bundle identities. Class and skill names, world milestones and all 152 skill rank descriptions use the corresponding client strings with the original stat parameters. Chinese terms are converted from the shipped Traditional Chinese locale to match the site's Simplified Chinese display. Explanatory guide prose is a fan translation, not official client copy.
 
+Thai is available on the homepage, guide and skill reference (`?lang=th`). Other tools keep their existing language lists. The Thai glossary, all 152 skill ranks and world milestone names were joined to the bundled `lang_*_th` TextAssets; editorial instructions use those terms. The Thai language is shown only where its page dictionary is available. The optional display face uses the self-hosted Noto Sans Thai v29 Thai-script subset, under [SIL OFL](../assets/fonts/noto-sans-thai-OFL.txt).
+
 ## Checks
 
 Run `python3 tools/check_season1.py` and `python3 tools/check_season1_refresh.py` for navigation, skill and rank coverage, art hashes, and offline cache entries. Existing tool regression checks remain separate.

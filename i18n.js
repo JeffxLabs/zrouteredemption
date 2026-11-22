@@ -12,14 +12,15 @@
     {code: "de", locale: "de-DE", label: "Deutsch"},
     {code: "ko", locale: "ko-KR", label: "한국어"},
     {code: "ja", locale: "ja-JP", label: "日本語"},
-    {code: "zh", locale: "zh-CN", label: "简体中文"}
+    {code: "zh", locale: "zh-CN", label: "简体中文"},
+    {code: "th", locale: "th-TH", label: "ภาษาไทย", pageDictionary: true}
   ];
   const LANGUAGE_CODES = new Set(LANGUAGES.map(item => item.code));
   const STORAGE_KEYS = ["zroute-lang", "zroute-language", "zroute-locale", "language"];
   const ATTRIBUTE_NAMES = ["aria-label", "title", "placeholder", "alt", "content"];
 
   // Each row is: English, French, Russian, Turkish, Polish, Spanish,
-  // Portuguese, German, Korean, Japanese, Simplified Chinese.
+  // Portuguese, German, Korean, Japanese, Simplified Chinese. Thai is per-page.
   const ROWS = [
     ["Fighter", "Chasseur", "Истребитель", "Savaş uçağı", "Myśliwiec", "Caza", "Caça", "Kampfflugzeug", "전투기", "戦闘機", "战斗机"],
     ["Language", "Langue", "Язык", "Dil", "Język", "Idioma", "Idioma", "Sprache", "언어", "言語", "语言"],
@@ -237,7 +238,13 @@
     return raw.split(",").map(value => value.trim()).filter(Boolean);
   }
 
+  // New page-dictionary locales must not appear on untranslated tools.
+  function availableOnPage(code) {
+    return !languageInfo(code).pageDictionary || !!global.PAGE_I18N?.[code];
+  }
+
   function contentLanguage(code = currentLanguage, doc = documentObject()) {
+    if (!availableOnPage(code)) return "en";
     if (doc?.documentElement?.dataset.i18nPageOnly !== "true") return code;
     const allowed = allowedPageLanguages(doc);
     return allowed.length && !allowed.includes(code) ? "en" : code;
@@ -444,7 +451,7 @@
     const selector = doc?.getElementById("language-select");
     if (selector) {
       const allowed = allowedPageLanguages(doc);
-      const selected = allowed.length && !allowed.includes(code) ? "en" : code;
+      const selected = !availableOnPage(code) || (allowed.length && !allowed.includes(code)) ? "en" : code;
       if (selector.value !== selected) selector.value = selected;
     }
     if (options.persist !== false) persist(code);
@@ -466,7 +473,7 @@
     const allowed = allowedPageLanguages(doc);
     if (!selectorReady) {
       while (selector.firstChild) selector.removeChild(selector.firstChild);
-      const choices = allowed.length ? LANGUAGES.filter(language => allowed.includes(language.code)) : LANGUAGES;
+      const choices = LANGUAGES.filter(({code}) => availableOnPage(code) && (!allowed.length || allowed.includes(code)));
       for (const language of choices) {
         const option = doc.createElement("option");
         option.value = language.code;

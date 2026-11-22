@@ -6,10 +6,13 @@
     I18N.setLanguage('en', { persist: false, updateUrl: false });
   }
 
-  // A copied cross-page link should not depend on the recipient's saved language.
+  // Preserve direct language links between the home card and both guide pages.
+  const isGuide = document.querySelector('main.season');
+  const guidePath = new URL('season-1/', root).pathname;
   const links = Array.from(document.querySelectorAll('a[href]')).filter(link => {
     if (link.getAttribute('href').startsWith('#')) return false;
     const url = new URL(link.href);
+    if (!isGuide && url.pathname !== guidePath) return false;
     return url.origin === root.origin && url.pathname.startsWith(root.pathname) &&
       (url.pathname.endsWith('/') || url.pathname.endsWith('/index.html'));
   });

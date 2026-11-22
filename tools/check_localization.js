@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-/* Cross-check generated page data and translations for the ten supported locales. */
+// Cross-check shared locales and the additional Thai dictionaries where supported.
 const fs = require("node:fs");
 const path = require("node:path");
 const vm = require("node:vm");
@@ -8,7 +8,7 @@ const ROOT = path.resolve(__dirname, "..");
 const LANGS = ["en", "fr", "ru", "tr", "pl", "es", "pt", "de", "ko", "zh"];
 const TARGETS = LANGS.slice(1);
 const issues = [];
-const identical = Object.fromEntries(TARGETS.map(code => [code, []]));
+const identical = Object.fromEntries([...TARGETS, "th"].map(code => [code, []]));
 let checked = 0;
 const ALLOWED_IDENTICAL = new Set([
   "Z Route", "ZR:Reference", "Base 1–30", "GitHub ↗", "ROI", "PvP + PvE", "PvP", "PvE", "HP", "ATK", "DEF", "SSR", "SR", "UR", "HQ", "EXP", "VIP",
@@ -144,7 +144,8 @@ function checkPageDictionaries() {
     }
     const context = runScript(`i18n/${page}.js`);
     const dictionaries = context.window.PAGE_I18N;
-    for (const code of TARGETS) {
+    const languages = page === "home" || page === "season-1" ? [...TARGETS, "th"] : TARGETS;
+    for (const code of languages) {
       const dictionary = dictionaries?.[code];
       if (!dictionary) {
         issue("missing locale dictionary", `${page}/${code}`, "dictionary not found");
@@ -154,6 +155,7 @@ function checkPageDictionaries() {
         checked++;
         const translated = dictionary[english];
         if (typeof translated !== "string" || !translated.trim()) issue("missing UI key", `${page}/${code}`, english);
+        if (code === "th" && typeof translated === "string" && !/[\u0e00-\u0e7f]/.test(translated)) issue("missing Thai text", `${page}/${code}`, english);
         if (JSON.stringify(vars(english)) !== JSON.stringify(vars(translated))) issue("placeholder mismatch", `${page}/${code}`, english);
         reportSame(code, english, translated, `${page}/UI`);
       }

@@ -1080,6 +1080,187 @@
         "member": "assets/BuiltinFiles/P1/6f508502071ee6078e4f37323544d9db.bundle",
         "sha256": "87d3380726b34174e68a432ebfb443ee60e99324279bb8db000ff0c302e5b65d"
       }
+    },
+    "th": {
+      "lang_alliance_th": {
+        "member": "assets/BuiltinFiles/P1/3b3c38b9577b71bce86f74f2a227cd73.bundle",
+        "sha256": "93a14821743d32987e7e5c83e708e43d961e2c62df64fed8a776921bcbe86400"
+      },
+      "lang_annou_th": {
+        "member": "assets/BuiltinFiles/P1/745a2e327c93ea7484204755adc5fd56.bundle",
+        "sha256": "9bd13d026b00825e901ef4e475a37aac68d08b646bb728aa800df9d3d9bb0946"
+      },
+      "lang_base_th": {
+        "member": "assets/BuiltinFiles/P1/6a3768c6aff852240188fbbd4761a549.bundle",
+        "sha256": "e2b28f741defdace7765a0840620fa170d6b96b7db58577e54140caba098e7eb"
+      },
+      "lang_battle_th": {
+        "member": "assets/BuiltinFiles/P1/367c5d1d51f5feb25f96bd61167f7dbe.bundle",
+        "sha256": "36b71a7e96769af57f245da97a465f6970d1d7205ea26f909ab1dae1699da339"
+      },
+      "lang_benefit_th": {
+        "member": "assets/BuiltinFiles/P1/5ab68ccd75ce32aafbfb45a399ab9d08.bundle",
+        "sha256": "155859599856473b081d12303fdec3a9384e2f66c5aea49e76e26dcc11afd75a"
+      },
+      "lang_building_th": {
+        "member": "assets/BuiltinFiles/P1/1bad0ae637fb93a096899a71ff28a706.bundle",
+        "sha256": "5fbe4b2b5269340937d58cfb29d335a19ee67057c5c591d0578c96a3dba4edd3"
+      },
+      "lang_button_th": {
+        "member": "assets/BuiltinFiles/P1/137d40dc251ff7786f4be105a6585826.bundle",
+        "sha256": "24501bb45234a11491871e252b8fc3240b5e5865796aa170a8b2f3c5eae7dbb1"
+      },
+      "lang_chat_th": {
+        "member": "assets/BuiltinFiles/P1/661f123944b7862f6a018a7ceb579544.bundle",
+        "sha256": "efabcd4c5f8d6beb379e7152d08d3d86a63c223027693151ae5961cd2de5ad63"
+      },
+      "lang_client_th": {
+        "member": "assets/BuiltinFiles/P1/068404abe2010d678cd1b6e1afa653c7.bundle",
+        "sha256": "fc1ae106a9189deb2701974443660f82c2564fca9e36f2d30d217eed23a61875"
+      },
+      "lang_hero_th": {
+        "member": "assets/BuiltinFiles/P1/2c68b3e76dea7388bfc6c1fae4bb22be.bundle",
+        "sha256": "389ecab4761d38eaf32f4e0c032ce535994d6ecefb228124a125f8d633aa08f0"
+      },
+      "lang_hmi_th": {
+        "member": "assets/BuiltinFiles/P1/4f86d363744a72b8b4881244b8992afe.bundle",
+        "sha256": "9decd98d82731d8fcdb2b0054001697f60365e142dadd29eb325031cf2e249dd"
+      },
+      "lang_item_th": {
+        "member": "assets/BuiltinFiles/P1/adafc5d1359abda842631c81a0b597f8.bundle",
+        "sha256": "f0f92647052bbfea507a8e30208155ca27640a9ed5c233f91868a57942b581b1"
+      },
+      "lang_mail_th": {
+        "member": "assets/BuiltinFiles/P1/60ea389e51579ba0267f72c3c156b56b.bundle",
+        "sha256": "c25c35d471776ff34832b58237b3ebd9f01044f9ee0549697fe5abeabbd58632"
+      },
+      "lang_map_th": {
+        "member": "assets/BuiltinFiles/P1/3079b78e6c3e9c8cca3e9a8ed89642ef.bundle",
+        "sha256": "431b764986ad3be583bd2e3e3cdb62f7aa20762ffceffd81798889c8b0ac83b3"
+      },
+      "lang_operation_th": {
+        "member": "assets/BuiltinFiles/P1/1a4db6e61724efda20bf0b903a0ce5a0.bundle",
+        "sha256": "bbe070cfe75d6d55b1b8eb34f611bac3702ef10c4d8c182a580b0c1ded8efbf3"
+      },
+      "lang_pack_th": {
+        "member": "assets/BuiltinFiles/P1/bd5045498e3cafcb0d83a79a7c4c46e0.bundle",
+        "sha256": "0e3cb633f5c4bab27c4eabc08e070eb378a3d53cf721d389a42f28f77f174d24"
+      },
+      "lang_pay_th": {
+        "member": "assets/BuiltinFiles/P1/069c47862ac034c47f3a595412af7dfe.bundle",
+        "sha256": "268b7385339a3d1fa8e3a6bf691013ee4281507c3bd387259c024d7639b2cb46"
+      },
+      "lang_prompt_th": {
+        "member": "assets/BuiltinFiles/P1/95265941e7bc212961e222158ec019c1.bundle",
+        "sha256": "9877c595f3e42ced73887825c2f583674aa8ca1decf744fcf0eaad545245b127"
+      },
+      "lang_public_th": {
+        "member": "assets/BuiltinFiles/P1/a43b2f9eda57cdd77e6c56cbd170ef72.bundle",
+        "sha256": "b00c9116de4a26288571637e90f1a6760b0b7b8c85f073662a27d2f735f6abb6"
+      },
+      "lang_rookie_th": {
+        "member": "assets/BuiltinFiles/P1/5892bc445f392a5f6d408ddaafdaff96.bundle",
+        "sha256": "402f53ff6d5365caca582913fb3d3eb6ac835c5180226ebb211bcc8fd869937a"
+      },
+      "lang_story_th": {
+        "member": "assets/BuiltinFiles/P1/d2644b3a549c413369e4251b92a15a21.bundle",
+        "sha256": "065571640ed75dedc40efaefb9c08c8708c04f4790436ddb3356e64a24cba62a"
+      },
+      "lang_system_th": {
+        "member": "assets/BuiltinFiles/P1/bd3c5e9c3bec99aefd718547b19395ff.bundle",
+        "sha256": "cfc34d1f3fdc4c2a3ac9f84a406dac525078b3cc64621bfa24221b20b6ae876a"
+      },
+      "lang_task_th": {
+        "member": "assets/BuiltinFiles/P1/1156c591a3f893a3eef41c437427434e.bundle",
+        "sha256": "217e9bbaa1f2706b20e966b7893505403737210f4e97e05768390610c1d7bdd5"
+      },
+      "lang_tips_th": {
+        "member": "assets/BuiltinFiles/P1/656ce07560dc0fe4d8644f9a484b564d.bundle",
+        "sha256": "721486cc15319a7705c02122eb3e9b88a65e41b538aebddc6212ceb0fefcfbeb"
+      }
     }
+  },
+  "thai": {
+    "rank_rows": 152,
+    "term_keys": {
+      "Accelerate Production": "SeasonProfessionSkillName101",
+      "Alliance Outpost": "season_cross_battle_tips251",
+      "Alliance Star": "union_star_ui_des001",
+      "Aria’s Hunting Day": "S1_season_rally_monster_text01",
+      "Assault Base": "building_20012",
+      "Battle Prep Drill": "SeasonProfessionSkillName208",
+      "Battlefield Knowledge I": "SeasonProfessionSkillName301",
+      "Battlefield Knowledge II": "SeasonProfessionSkillName303",
+      "Battlefield Knowledge III": "SeasonProfessionSkillName304",
+      "Battlefield Morale": "SeasonProfessionSkillName211",
+      "Build Now": "SeasonProfessionSkillName107",
+      "Charge Banner": "SeasonProfessionSkillName218",
+      "Class Hall": "ProfessionText001",
+      "Class Inspiration": "SeasonProfessionSkillName111",
+      "Class Reset Ticket": "itemName_Profession_Reset",
+      "Contribution Reward": "SeasonProfessionSkillName102",
+      "Cooperative Construction": "SeasonProfessionSkillName113",
+      "Cooperative Healing": "SeasonProfessionSkillName117",
+      "Cooperative Research": "SeasonProfessionSkillName114",
+      "Cost Efficiency": "SeasonProfessionSkillName115",
+      "Demolition Specialist": "SeasonProfessionSkillName104",
+      "Drill Ground Maintenance": "SeasonProfessionSkillName203",
+      "Efficient Utilization": "SeasonProfessionSkillName116",
+      "Emergency Center": "emergency_center1",
+      "Engineer": "SeasonProfessionName01",
+      "Field Emergency Care": "SeasonProfessionSkillName206",
+      "Fire Support": "SeasonProfessionSkillName215",
+      "Free Construction": "SeasonProfessionSkillName105",
+      "Free Research": "SeasonProfessionSkillName106",
+      "Friendship Shield": "SeasonProfessionSkillName118",
+      "Healing Expert": "SeasonProfessionSkillName305",
+      "Hospital Maintenance": "SeasonProfessionSkillName204",
+      "Infection Spread": "SeasonProfessionSkillName306",
+      "Instant Recall": "SeasonProfessionSkillName201",
+      "Instant Research": "SeasonProfessionSkillName108",
+      "Logistics Support": "SeasonProfessionSkillName112",
+      "Lucky Hunt": "SeasonProfessionSkillName302",
+      "Mutant Shop": "S1_Serum_Shop",
+      "Mutated Zombie Invasion": "S1_season_world_situation_45",
+      "Press the Advantage": "SeasonProfessionSkillName207",
+      "Promotion Medal": "itemname_heroPromote",
+      "Radiated Land": "S1_Season_Preview_1",
+      "Radiation Legion": "S1_ZombieAttackCity_Text_001",
+      "Radiation Shelter": "decoration_20002",
+      "Rally Charge": "SeasonProfessionSkillName213",
+      "Regressed": "SeasonProfessionSkillName217",
+      "Reinforcement Boost": "SeasonProfessionSkillName216",
+      "Reserve Mobilization": "SeasonProfessionSkillName202",
+      "Resistance Research": "S1_preheat_activity_bossGroup011",
+      "Scorched Land March": "SeasonProfessionSkillName209",
+      "Season Achievements": "S1_season_achievements_1",
+      "Season Boost": "S1_Inner_City_Milestone_3",
+      "Season I Skill Point": "itemName_ProfessionSkillPoints",
+      "Season Preview": "Season_Preview_1",
+      "Siege Banner": "SeasonProfessionSkillName110",
+      "Skill Reset Ticket": "itemName_Skill_Reset",
+      "Stamina Recovery": "SeasonProfessionSkillName103",
+      "Stealth": "SeasonProfessionSkillName214",
+      "Sustain Through War": "SeasonProfessionSkillName210",
+      "Swift Reinforcement": "SeasonProfessionSkillName212",
+      "Tactical Base": "building_20013",
+      "Team Fast March": "SeasonProfessionSkillName109",
+      "Unit Type Base": "building_20010",
+      "Virus Boss Invasion": "S1_preheat_activity_bossGroup019",
+      "Virus Experiment": "SeasonProfessionSkillName309",
+      "Virus Lab": "building_20003",
+      "Virus Resistance": "S1_SeasonRule_3",
+      "Virus Spread": "S1_preheat_activity_bossGroup001",
+      "War Frenzy": "SeasonProfessionSkillName205",
+      "War Leader": "SeasonProfessionName02",
+      "Warrior Base": "building_20011",
+      "Warzone Clash": "S1_season_world_situation_38",
+      "World Geographic Society": "building_20008",
+      "γ Pathogen Assault": "SeasonProfessionSkillName307",
+      "γ Pathogen Boost": "SeasonProfessionSkillName308",
+      "First Kill Reward": "item_season_Immune_protein_3",
+      "Base": "buildingname_01"
+    },
+    "editorial_translation_keys_corrected": 102
   }
 }
