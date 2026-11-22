@@ -48,7 +48,6 @@ html.day .season { --season: #425524; --season-wash: #edf1df; --paper: #f7f8f2; 
 .season-body > section:target, .season details:target { border-color: var(--season); }
 .season-body > section > h2 { width: fit-content; max-width: 100%; padding-bottom: 8px; border-bottom: 1px solid var(--panel-line); }
 .season .lede { color: var(--muted); font-size: 1.06em; text-wrap: pretty; }
-.season .source { margin-top: 1em; padding-top: 12px; border-top: 1px solid var(--panel-line); font-size: .82rem; color: var(--muted); }
 .season .section-number { padding-right: .55em; color: var(--season); font-size: .69em; font-variant-numeric: tabular-nums; }
 .season .callout { background: var(--season-wash); border-left: 3px solid var(--season); border-radius: 8px; padding: 12px 16px; margin: 16px 0; }
 .season .callout:last-child { margin-bottom: 0; }
@@ -94,7 +93,29 @@ html.day .season { --season: #425524; --season-wash: #edf1df; --paper: #f7f8f2; 
 /* Guide panels and reusable game sprites */
 .season .phase-grid, .season .item-grid, .season .activity-grid, .season .hero-change-grid,
 .season .outpost-grid, .season .skill-index, .season .skill-grid { display: grid; gap: 12px; }
-.season .phase-grid { margin: 20px 0; }
+.season .phase-grid { margin: 10px 0 12px; }
+.season .phase-grid h4, .season .warmup-card h4 { margin: 0 0 .45em; font-size: 1.12em; line-height: 1.25; }
+.season .warmup-card { display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; align-items: center; padding: clamp(14px, 3vw, 22px); border: 1px solid var(--panel-line); border-radius: 12px; background: var(--paper); }
+.season .warmup-art { width: min(124px, 50%); height: auto; justify-self: center; }
+.season .warmup-copy { min-width: 0; }
+.season .warmup-copy > p { margin-bottom: .55em; }
+.season .warmup-copy > p:last-child { margin-bottom: 0; }
+.season .warmup-note { font-size: .9em; color: var(--muted); }
+.season .activity-with-art { display: grid; grid-template-columns: clamp(48px, 12vw, 76px) minmax(0, 1fr); align-items: start; gap: 12px; }
+.season .activity-with-art img { display: block; width: 100%; height: auto; }
+.season .activity-with-art h3 { margin: 0 0 .45em; }
+.season .activity-grid .activity-with-art { grid-column: 1 / -1; }
+.season .settlement-card { margin-top: 16px; padding: 14px; background: var(--paper); border-radius: 10px; border: 1px solid var(--panel-line); }
+@media (max-width: 679px) {
+  .season .warmup-card { grid-template-columns: clamp(48px, 19vw, 76px) minmax(0, 1fr); row-gap: 0; align-items: start; }
+  .season .warmup-copy { display: contents; }
+  .season .warmup-art { grid-row: span 2; align-self: center; width: 100%; }
+  .season .warmup-card :is(.steps, .warmup-note) { grid-column: 1 / -1; }
+}
+@media (min-width: 680px) {
+  .season .warmup-card { grid-template-columns: minmax(0, .30fr) minmax(0, 1fr); gap: clamp(12px, 3vw, 24px); }
+  .season .warmup-art { width: min(180px, 100%); }
+}
 .season .phase-grid > div, .season .activity-grid > div, .season .talent-item, .season .hero-change {
   min-width: 0; border: 1px solid var(--line2); border-radius: 10px; padding: 14px; background: var(--s2);
 }

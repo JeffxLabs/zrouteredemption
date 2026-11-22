@@ -1,0 +1,57 @@
+{
+  "catalog": "V202611021100",
+  "sprites": {
+    "warmup-virus": {
+      "sprite": "s1_preheat_icon06",
+      "member": "assets/BuiltinFiles/P1/562bbf0765acfb80e992024b311c0807.bundle",
+      "bundle_sha256": "a8742c8c3e89db8a876f32c07cf0cbcd5029ce50212eadda5fdcd51419096b6c",
+      "addresses": [
+        "UI_Sprite/Others/Season/Preheat/s1_preheat_icon06.png"
+      ],
+      "path_id": 7170372065184413017,
+      "original_size": [
+        576,
+        676
+      ],
+      "webp_size": [
+        332,
+        390
+      ],
+      "webp_sha256": "e0a327c21bd8f093eae94c10f8479f3d0c8ed06736a3a45e4899794527a05888"
+    },
+    "gamma-terminator": {
+      "sprite": "Icon_Item_Skin_Castle8",
+      "atlas": "UI_Icon",
+      "member": "assets/BuiltinFiles/P1/5fb2473383d33a89f8960443b3d6ef04.bundle",
+      "bundle_sha256": "47dd1e7a74b330248279082cfa762176002beea412a518e8f87e5e1b0b068662",
+      "path_id": -6702114079678789860,
+      "original_size": [
+        135,
+        146
+      ],
+      "webp_size": [
+        135,
+        146
+      ],
+      "webp_sha256": "2f67acf54137687bdc91bafab4582414d1b5cda21bda97f02290c495b7ad804f"
+    },
+    "alliance-loot": {
+      "sprite": "icon_Season_Contribution_Lootbox",
+      "member": "assets/BuiltinFiles/P1/9f2422488a722ee995cb2db927ffca20.bundle",
+      "bundle_sha256": "d3faf24998827112020c99423baaed80199756c378597931322d95760f55defc",
+      "addresses": [
+        "UI_Sprite/Others/Contribution/icon_Season_Contribution_Lootbox.png"
+      ],
+      "path_id": 5016970254813529326,
+      "original_size": [
+        146,
+        132
+      ],
+      "webp_size": [
+        146,
+        132
+      ],
+      "webp_sha256": "42674b2e616fd870eee0ad98f6d9abc9a16b21bb6327c1dac42cd8d31005b2ee"
+    }
+  }
+}
