@@ -1,39 +1,61 @@
-.season { --season: #cbd580; --season-wash: #252b13; font-size: 16px; line-height: 1.65; max-width: 1230px; }
-html.day .season { --season: #4e600c; --season-wash: #edf0db; }
-.season h1, .season h2, .season h3 { line-height: 1.15; letter-spacing: -.025em; text-wrap: balance; }
-.season h2 { margin: 0 0 .7em; font-size: clamp(1.55rem, 3vw, 2.15rem); }
-.season h3 { margin: 1.35em 0 .45em; font-size: 1.16rem; }
-.season p { margin: 0 0 1em; max-width: 72ch; }
+.season {
+  --season: #d5df9f; --season-wash: #1d271b; --paper: #121513; --panel-line: #354035;
+  font-size: clamp(15px, 1.3vw, 17px); line-height: 1.65; max-width: 1230px;
+}
+html.day .season { --season: #425524; --season-wash: #edf1df; --paper: #f7f8f2; --panel-line: #d1d8c4; }
+.season h1, .season h2, .season h3 { line-height: 1.18; text-wrap: balance; }
+.season h1, .season h2 { font-family: var(--display-face); font-weight: 650; letter-spacing: -.037em; }
+:where(:lang(ko), :lang(zh)) .season :is(h1, h2) { letter-spacing: 0; }
+.season h2 { margin: 0 0 .55em; font-size: clamp(1.65rem, 3.5vw, 2.65rem); }
+.season h3 { margin: 1.55em 0 .42em; font-size: clamp(1.07rem, 1.75vw, 1.29rem); letter-spacing: -.017em; }
+.season p { margin: 0 0 1em; max-width: 67ch; }
 .season p:last-child { margin-bottom: 0; }
 .season code { overflow-wrap: anywhere; }
 .season [id] { scroll-margin-top: calc(var(--header-h) + 16px); }
 .season a { text-underline-offset: .2em; }
-.season .eyebrow { display: block; margin-bottom: .7em; color: var(--season); font-size: .76rem; font-weight: 800; text-transform: uppercase; letter-spacing: .13em; }
-.season-hero { position: relative; isolation: isolate; overflow: hidden; display: grid; align-items: end; min-height: 280px; padding: clamp(20px, 5vw, 60px); border: 1px solid #394221; border-radius: 18px; background: #151b0d; color: #f4f6e9; }
-.season-hero .eyebrow { color: #dbe69a; }
-.season-hero p { max-width: 46ch; color: #e1e6d6; }
-.season-hero h1 { margin: 0 0 .22em; font-size: clamp(2.25rem, 6.4vw, 5rem); line-height: .98; }
+.season .eyebrow { display: block; margin-bottom: .7em; color: var(--season); font-size: .73rem; font-weight: 800; text-transform: uppercase; letter-spacing: .12em; }
+.season-hero {
+  position: relative; isolation: isolate; overflow: hidden; display: grid; align-items: center;
+  min-height: 330px; padding: clamp(20px, 5vw, 55px); border: 1px solid #4c5c48;
+  border-radius: 20px; background: #111b18; color: #f6f4ea;
+}
+.season-hero .eyebrow { color: #d8e6af; }
+.season-hero-copy { min-width: 0; }
+.season-hero p { max-width: 43ch; color: #e1e9dc; text-wrap: pretty; }
+.season-hero h1 { margin: 0 0 .24em; font-size: clamp(2.65rem, 7vw, 5.9rem); line-height: 1.01; text-wrap: initial; }
 .season-hero picture, .season-hero::after { position: absolute; z-index: -1; inset: 0; }
-.season-hero img { width: 100%; height: 100%; object-fit: cover; object-position: center 44%; }
-.season-hero::after { content: ''; background: linear-gradient(90deg, #101508f7 0%, #101508e0 36%, #10150824 100%), linear-gradient(0deg, #101508cb, transparent 65%); }
+.season-hero img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 65% 38%; }
+.season-hero::after { content: ''; background: linear-gradient(90deg, #111b18 0%, rgb(17 27 24 / 94%) 24%, rgb(17 27 24 / 76%) 49%, transparent 95%), linear-gradient(0deg, rgb(17 27 24 / 48%), transparent 70%); }
+.season-hero-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
 .season-hero .btn { height: auto; min-height: 44px; padding: 8px 14px; white-space: normal; background: #dbe69a; color: #1b230a; border-color: #dbe69a; }
-.season-layout { display: grid; gap: 22px; align-items: start; margin-top: 22px; }
-.season-toc { border: 1px solid var(--line2); border-radius: var(--radius); background: var(--s1); padding: 12px; }
-.season-toc h2 { margin: 4px 8px 6px; font-size: .95rem; }
-.season-toc ul { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(140px, 100%), 1fr)); gap: 2px 8px; padding: 0; margin: 0; list-style: none; }
-.season-toc a, .season-jumps a { display: flex; align-items: center; min-height: 44px; padding: 6px 8px; border-radius: 8px; color: var(--text); font-weight: 650; font-size: .88rem; text-decoration: none; }
-.season-toc a:hover, .season-jumps a:hover { background: var(--s3); text-decoration: underline; }
+.season-hero .btn.secondary { background: #223029; color: #f4f7ea; border-color: #879b78; }
+.season-hero :is(a, button):focus-visible { outline-color: #dbe69a; }
+@media (max-width: 649px) {
+  .season-hero { align-items: end; min-height: 380px; }
+  .season-hero img { object-position: 60% 40%; }
+  .season-hero::after { background: linear-gradient(0deg, #111b18 0%, rgb(17 27 24 / 96%) 34%, rgb(17 27 24 / 74%) 57%, rgb(17 27 24 / 12%) 100%); }
+}
+.season-layout { display: grid; gap: clamp(18px, 2.5vw, 34px); align-items: start; margin-top: clamp(18px, 3vw, 34px); }
+.season-toc { border: 1px solid var(--panel-line); border-radius: var(--radius); background: var(--paper); padding: 13px; }
+.season-toc h2 { margin: 4px 8px 10px; font-size: 1.16rem; }
+.season-toc ul { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(120px, 100%), 1fr)); gap: 2px 6px; padding: 0; margin: 0; list-style: none; counter-reset: guide-chapter; }
+.season-toc li { min-width: 0; counter-increment: guide-chapter; }
+.season-toc a, .season-jumps a { display: flex; align-items: center; gap: 8px; min-height: 44px; padding: 6px 8px; border-radius: 8px; color: var(--text); font-weight: 650; font-size: .84rem; line-height: 1.25; text-decoration: none; overflow-wrap: anywhere; }
+.season-toc a::before { content: counter(guide-chapter, decimal-leading-zero) / ''; flex: none; color: var(--season); font-size: .7rem; font-weight: 750; font-variant-numeric: tabular-nums; }
+.season-toc a:hover, .season-jumps a:hover { background: var(--season-wash); text-decoration: underline; }
 .season-body { min-width: 0; }
-.season-body > section { margin: 0 0 18px; padding: clamp(16px, 3vw, 32px); border: 1px solid var(--line2); border-radius: var(--radius); background: var(--s1); }
+.season-body > section { margin: 0 0 20px; padding: clamp(16px, 4vw, 38px); border: 1px solid var(--panel-line); border-radius: 16px; background: var(--s1); }
 .season-body > section:target, .season details:target { border-color: var(--season); }
-.season .lede { color: var(--muted); font-size: 1.06rem; }
-.season .source { margin-top: 1em; font-size: .84rem; color: var(--muted); }
+.season-body > section > h2 { width: fit-content; max-width: 100%; padding-bottom: 8px; border-bottom: 1px solid var(--panel-line); }
+.season .lede { color: var(--muted); font-size: 1.06em; text-wrap: pretty; }
+.season .source { margin-top: 1em; padding-top: 12px; border-top: 1px solid var(--panel-line); font-size: .82rem; color: var(--muted); }
 .season .section-number { padding-right: .55em; color: var(--season); font-size: .69em; font-variant-numeric: tabular-nums; }
-.season .callout { background: var(--season-wash); border-radius: 10px; padding: 12px 16px; margin: 16px 0; }
+.season .callout { background: var(--season-wash); border-left: 3px solid var(--season); border-radius: 8px; padding: 12px 16px; margin: 16px 0; }
 .season .callout:last-child { margin-bottom: 0; }
-.season .steps { padding-left: 1.55em; }
-.season .steps li { margin: 8px 0; padding-left: .35em; }
-.season .steps li::marker { color: var(--season); font-weight: 750; }
+.season .steps { list-style: none; counter-reset: login-step; padding: 0; margin-top: 8px; border-top: 1px solid var(--panel-line); }
+.season .steps li { position: relative; margin: 0; padding: 12px 0 12px 41px; border-bottom: 1px solid var(--panel-line); counter-increment: login-step; }
+.season .steps li::before { content: counter(login-step) / ''; position: absolute; left: 0; top: 12px; width: 28px; height: 28px; display: grid; place-items: center; border: 1px solid var(--panel-line); border-radius: 50%; background: var(--season-wash); color: var(--season); font-size: .79rem; font-weight: 750; }
+.season .steps strong { display: block; margin-bottom: .07em; }
 .season .split { display: grid; gap: 12px; }
 .season .split > div { background: var(--s2); padding: 14px 16px; min-width: 0; border-radius: 10px; }
 .season .split h3 { margin: 0 0 .55em; }
@@ -48,7 +70,7 @@ html.day .season { --season: #4e600c; --season-wash: #edf0db; }
 .season summary { padding: 11px 14px; cursor: pointer; font-weight: 700; }
 .season summary::marker { color: var(--season); }
 .season details > div { padding: 0 14px 14px; }
-.season .skill-head { margin: 0 0 1.25em; padding: 12px 0; }
+.season .skill-head { margin: 0 0 1.25em; padding: clamp(16px, 3vw, 32px); border: 1px solid var(--panel-line); border-radius: 16px; background: var(--paper); }
 .season .skill-head h1 { margin: .25em 0; font-size: clamp(2rem, 5vw, 3.6rem); }
 .season .skill-meta { font-size: .9rem; color: var(--muted); }
 .season .skill-meta + table { margin-top: .6em; }
@@ -60,20 +82,15 @@ html.day .season { --season: #4e600c; --season-wash: #edf0db; }
 .season-skip:focus { top: 6px; }
 @media (min-width: 650px) { .season .split { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (min-width: 900px) {
-  .season-layout { grid-template-columns: 205px minmax(0, 1fr); gap: 24px; }
+  .season-layout { grid-template-columns: minmax(205px, 23%) minmax(0, 1fr); }
   .season-toc { position: sticky; top: calc(var(--header-h) + 16px); max-height: calc(100vh - var(--header-h) - 32px); overflow: auto; }
   .season-toc ul { grid-template-columns: 1fr; }
 }
 .season .guide-figure { margin: 0 0 1.1em; }
-.season .guide-figure img { display: block; width: 100%; max-height: 340px; object-fit: cover; border-radius: 9px; }
+.season .guide-figure img { display: block; width: 100%; max-height: 340px; object-fit: cover; border: 1px solid var(--panel-line); border-radius: 12px; }
 .season .guide-figure.expedition img { max-height: 240px; object-position: center 52%; }
 .season .guide-figure figcaption { color: var(--muted); font-size: .82rem; padding-top: .3em; }
 .season .season-classes img { width: 100%; height: clamp(145px, 25vw, 225px); object-fit: cover; object-position: center 24%; border-radius: 7px; margin-bottom: 12px; }
-.season-hero picture { width: min(100%, 620px); left: auto; }
-@media (min-width: 521px) { .season-hero picture { mask-image: linear-gradient(to right, transparent, black 25%); } }
-.season-hero img { object-position: center 44%; }
-@media (max-width: 520px) { .season-hero::after { background: linear-gradient(0deg, #101508 0%, #101508e8 53%, #10150835 100%); } .season-hero { min-height: 310px; } }
-
 /* Guide panels and reusable game sprites */
 .season .phase-grid, .season .item-grid, .season .activity-grid, .season .hero-change-grid,
 .season .outpost-grid, .season .skill-index, .season .skill-grid { display: grid; gap: 12px; }
@@ -106,7 +123,8 @@ html.day .season { --season: #4e600c; --season-wash: #edf0db; }
 .season .building-entry:last-child { border-bottom: 1px solid var(--line2); }
 .season .building-entry h4 { font-size: 1.04rem; line-height: 1.3; margin: 0 0 .35em; }
 .season .building-entry .eyebrow { margin-bottom: .3em; }
-.season .building-art img { display: block; width: 100%; height: clamp(76px, 17vw, 126px); object-fit: contain; }
+.season .building-art { align-self: start; border-radius: 10px; background: var(--paper); }
+.season .building-art img { display: block; width: 100%; height: clamp(76px, 17vw, 126px); object-fit: contain; padding: 6px; }
 .season ul.counter-gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; margin: 0 0 10px; padding: 0; list-style: none; }
 .season .counter-gallery li { display: flex; flex-direction: column; align-items: center; gap: 4px; min-width: 0; padding: 8px 3px; text-align: center; font-size: .82rem; line-height: 1.3; background: var(--s2); border-radius: 6px; }
 .season .counter-gallery img { width: min(100%, 112px); height: clamp(62px, 13vw, 106px); object-fit: contain; }

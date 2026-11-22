@@ -44,6 +44,18 @@ class SeasonOne(unittest.TestCase):
         cards = [node for tag, node in home.nodes if tag == 'a' and 'tool' in node.get('class', '').split()]
         self.assertEqual(len([node for node in cards if node.get('href') == GUIDE]), 1)
 
+    def test_home_hero_does_not_repeat_tool_links(self):
+        html = (ROOT / 'index.html').read_text()
+        hero = html.partition('<section class="hero"')[2].partition('</section>')[0]
+        self.assertTrue(hero)
+        self.assertNotIn('<a ', hero)
+
+    def test_guide_hero_surfaces_checklist_and_skill_reference(self):
+        html = (ROOT / GUIDE / 'index.html').read_text()
+        hero = html.partition('<div class="season-hero">')[2].partition('<div class="season-layout">')[0]
+        self.assertIn('href="#launch-day"', hero)
+        self.assertIn('href="skills/"', hero)
+
     def test_home_banner_uses_cached_official_season_art(self):
         asset = 'assets/season-1/home-banner.webp'
         html = (ROOT / 'index.html').read_text()
