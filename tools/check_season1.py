@@ -106,7 +106,8 @@ class SeasonOne(unittest.TestCase):
 
     def test_navigation_covers_player_decisions(self):
         targets = Page(GUIDE).targets
-        for topic in ('start', 'buildings', 'resistance', 'classes', 'milestones', 'territory', 'events', 'rewards', 'faq', 'sources'):
+        self.assertIn('start', targets)  # Keep links shared before warm-up got its own entry.
+        for topic in ('warmup', 'launch-day', 'buildings', 'resistance', 'classes', 'milestones', 'territory', 'hero-changes', 'events', 'rewards', 'faq'):
             self.assertIn(topic, targets)
             self.assertIn('#' + topic, Page(GUIDE).links())
 

@@ -38,6 +38,18 @@ The [field guide manifest](../assets/season-1/field-guide/sources.json) covers t
 - `HeroInfo[30003].upHeroId` points to 31003. Day 9 comes from the Promotion Medal description, not a world milestone offset. The weapon numbers are the S1 day parameters in `HeroExclusive.openCondition`, joined to the existing Hero Directory. Check the live event panel before spending upgrade resources.
 - Outpost and protection rules use `season_cross_battle_tips176–194`. Radiation Legion, Aria’s Hunting Day and settlement use the shipped event help and mail. These are not independently observed live schedules.
 
+## Warm-up, Season Boost and settlement
+
+- **Season Preview:** `S1_Season_Preview_Des25` says Phase Quests open daily, an incomplete phase’s preview opens with the next phase, and unclaimed warm-up rewards aren’t reissued. Do not apply this rule to World Progress; `S1_season_world_situation_54–56` includes a reissue notice for that track.
+- **Warm-up boss chain:** `S1_preheat_activity_bossGroup010/018/034` define the Virus Spread protein cap, temporary Resistance Research, and a shared three-attack reward limit across both bosses. Chests are limited and first come, first served. Warm-up protein becomes General Speedups; leftover season resources become Class EXP under `S1_season_mail_9`. These are separate from the later Mutant Lizard (`RadiationRemoval50`).
+- **Season Boost:** `S1_Inner_City_Milestone_3/4`, `season_virus_tips51/122/131/159–160`, and `Item[item_cityskin_globe_s1_1]` bind the Gamma Terminator skin, Like Reward and one-reward-per-base rule. The UI shows a daily cap; this guide does not assume a live cap value or a specific drop.
+- **Settlement:** `alliance_season_reward10/33` and `S1_season_mail_9` name R5 or the Housekeeper and state that finalized distributions cannot change. The settlement screen is distinct from the city-capture Alliance Contribution Ranking (`S1_season_contribution_rank026`).
+- [ARES’s Season 1 overview](https://www.youtube.com/watch?v=aGqR0Pa9Fys) prompted these checks (1:51, 2:46, 6:19 and 13:56). The game client supplies the labels and limits; the video is not evidence of a current Warzone schedule or a Nora drop bonus.
+
+The [activity art manifest](../assets/season-1/activities/sources.json) records the original Warm-up icon, Gamma Terminator item sprite and Alliance Loot chest. The Gamma Terminator image is its item icon (`Icon_Item_Skin_Castle8`), not a live map screenshot. The warm-up icon illustrates the event, not either actual boss.
+
+Earlier guide evidence remains here for maintenance instead of interrupting the player pages: opening uses `WorldSeason`, `SeasonPreview`, and `S1_season_mail_1`; construction and recovery use `Building`, `BuildingLevel`, `BuildingUpgrade`, `SeasonRule`, `S1_building_hint_1`, `emergency_center11` and `grey_zone_caravan_visit_tips`; rally and pathogen rules use `S1_start_virus_resistance025–026` and `season_virus_tips31/37/129`. `SeasonTaskChapterInfo` and `SeasonMechCityWarOutpost` supplement `TrendWorld`; rewards and events use `AllianceSeasonReward`, `ZoneSeasonReward`, `S1_season_mail_7/9`, `S1_ZombieAttackCity_Text_009`, `S1_season_other_system_text20` and `UnionStarLikeReward`. The listed build-344 examples span 14 days of preparation and 49 days of play; no launch timing is inferred for Warzone 117.
+
 ## Languages and shareable links
 
 The guide and class skill reference use the language selector shared by the other ZR:Reference pages. For example, link to `season-1/?lang=es#buildings` or `season-1/skills/?lang=de#skill-1103`. Language selection preserves the section fragment. English content remains readable without JavaScript; enabled browsers can open localized links offline after the site cache is installed.

@@ -40,6 +40,31 @@ class IllustratedGuide(unittest.TestCase):
                 end_tag = '<h3' if anchor in {'first-kill-rewards', 'rally-resistance'} else '</article>' if anchor == 'refinery' else '</section>'
                 self.assertIn(copy, block.split(end_tag, 1)[0])
 
+    def test_warmup_steps_precede_launch_and_use_offline_game_art(self):
+        page = Page(GUIDE)
+        html = (ROOT / GUIDE / 'index.html').read_text()
+        self.assertTrue({'warmup', 'launch-day', 'season-boost', 'settlement-loot'} <= set(page.targets))
+        warmup = html.split('id="warmup"', 1)[1].split('id="launch-day"', 1)[0]
+        self.assertIn('Phase Quest', warmup)
+        self.assertIn('Unclaimed rewards are not mailed.', warmup)
+        self.assertIn('three rewarded attacks per day across both bosses', warmup)
+        self.assertIn('separate from your Virus Lab', warmup)
+        self.assertIn('#warmup', page.links())
+        manifest = json.loads((ROOT / 'assets/season-1/activities/sources.json').read_text())['sprites']
+        sw = (ROOT / 'sw.js').read_text()
+        for name, art in manifest.items():
+            path = f'assets/season-1/activities/{name}.webp'
+            self.assertIn('../' + path, page.links('img', 'src'))
+            self.assertIn('"./' + path + '"', sw)
+            self.assertEqual(hashlib.sha256((ROOT / path).read_bytes()).hexdigest(), art['webp_sha256'])
+
+    def test_player_pages_do_not_show_evidence_citations(self):
+        for route in (GUIDE, SKILLS):
+            with self.subTest(route=route):
+                page = Page(route)
+                self.assertFalse(any('source' in a.get('class', '').split() for _, a in page.nodes))
+                self.assertFalse(any(href.startswith(('#src-', '../#src-')) for href in page.links()))
+
     def test_buildings_and_exclusive_weapons_show_in_game_art(self):
         guide = Page(GUIDE)
         html = (ROOT / GUIDE / 'index.html').read_text()

@@ -1,16 +1,5 @@
 {
   "strings": {
-    "(Class Hall preparation notice).": {
-      "es": "(Aviso de preparación Sala de clases).",
-      "ru": "(Уведомление о подготовке Зал классов).",
-      "fr": "(Avis de préparation Hall des classes).",
-      "pl": "(Zawiadomienie o przygotowaniu Sala klas).",
-      "tr": "(Sınıf Salonu hazırlık bildirimi).",
-      "pt": "(Aviso de preparação Salão de Classe).",
-      "de": "(Klassenhalle Vorbereitungshinweis).",
-      "ko": "(직업 전당 준비 공지)",
-      "zh": "（职业大厅准备通知）。"
-    },
     ") lists a free medal; check Season Achievements after repairing the Lab. The medal’s description lists the event opening on S1 Day 9.": {
       "es": ") enumera una medalla gratis; verifique Logros de Temporada después de reparar el laboratorio. La descripción de la medalla enumera la apertura del evento el día 9 del S1.",
       "ru": ") перечисляет бесплатную медаль; проверьте Достижения сезона после ремонта лаборатории. В описании медали указано начало мероприятия в 9-й день S1.",
@@ -32,17 +21,6 @@
       "de": "+1 Punkt",
       "ko": "+1 포인트",
       "zh": "+1 点"
-    },
-    ", and decoded English labels. Client tables document what shipped; the live event screen is authoritative for your group’s activation, timers and payouts.": {
-      "es": "y etiquetas en inglés decodificadas. Las tablas de clientes documentan lo que se envió; La pantalla de eventos en vivo tiene autoridad para la activación, los cronómetros y los pagos de su grupo.",
-      "ru": "и декодированные английские метки. Клиентские таблицы документируют, что было отправлено; Экран прямых трансляций отвечает за активацию вашей группы, таймеры и выплаты.",
-      "fr": ", et des étiquettes anglaises décodées. Les tableaux clients documentent ce qui a été expédié ; l’écran de l’événement en direct fait autorité pour l’activation, les minuteries et les paiements de votre groupe.",
-      "pl": "i odszyfrowane angielskie etykiety. Tabele klientów dokumentują to, co zostało wysłane; ekran wydarzenia na żywo jest miarodajny dla aktywacji Twojej grupy, liczników czasu i wypłat.",
-      "tr": "ve kodu çözülmüş İngilizce etiketler. Müşteri tabloları nelerin gönderildiğini belgeliyor; Canlı etkinlik ekranı grubunuzun aktivasyonu, zamanlayıcıları ve ödemeleri için yetkilidir.",
-      "pt": "e rótulos em inglês decodificados. As tabelas de clientes documentam o que foi enviado; a tela do evento ao vivo é responsável pela ativação, cronômetros e pagamentos do seu grupo.",
-      "de": "und entschlüsselte englische Etiketten. Kundentabellen dokumentieren, was versendet wurde; Der Live-Event-Bildschirm ist maßgeblich für die Aktivierung, Timer und Auszahlungen Ihrer Gruppe.",
-      "ko": ", 그리고 디코딩된 영어 라벨입니다. 클라이언트 테이블에는 배송된 내용이 기록되어 있습니다. 라이브 이벤트 화면은 그룹의 활성화, 타이머 및 지불금에 대한 권한을 갖습니다.",
-      "zh": "，以及解码后的英文标签。客户表记录了发货的内容；现场活动屏幕对于您的团队的激活、计时器和支出具有权威性。"
     },
     ", not squad power. Cross-Warzone outposts come later.": {
       "es": ", no poder de escuadrón. Los puestos de avanzada entre zonas de guerra llegarán más tarde.",
@@ -77,17 +55,6 @@
       "ko": ", 제한된 재고 및 잠금 해제 조건이 있습니다. 상점이 새로고침되면 다시 확인하세요.",
       "zh": "，库存有限且解锁条件有限。商店刷新后再次查看。"
     },
-    ". Game artwork belongs to its respective rights holders. This page is an unofficial fan reference.": {
-      "es": ". Las ilustraciones del juego pertenecen a sus respectivos titulares de derechos. Esta página es una referencia no oficial de los fans.",
-      "ru": ". Обложки игры принадлежат соответствующим правообладателям. Эта страница является неофициальным справочником фанатов.",
-      "fr": ". Les illustrations du jeu appartiennent à leurs titulaires de droits respectifs. Cette page est une référence non officielle pour les fans.",
-      "pl": ". Grafika gry należy do odpowiednich właścicieli praw. Ta strona jest nieoficjalnym źródłem informacji dla fanów.",
-      "tr": ". Oyunun çizimleri ilgili hak sahiplerine aittir. Bu sayfa resmi olmayan bir hayran referansıdır.",
-      "pt": ". A arte do jogo pertence aos seus respectivos detentores de direitos. Esta página é uma referência não oficial de fãs.",
-      "de": ". Spielgrafiken gehören den jeweiligen Rechteinhabern. Diese Seite ist eine inoffizielle Fan-Referenz.",
-      "ko": ". 게임 아트워크는 해당 권리 보유자의 소유입니다. 이 페이지는 비공식 팬 참고자료입니다.",
-      "zh": "。游戏艺术品属于其各自的权利所有者。此页面是非官方粉丝参考。"
-    },
     ". Stealth hides your information in Intel and Battle Reports; it isn’t a shield.": {
       "es": ". Sigilo oculta tu información en Intel y Battle Reports; no es un escudo.",
       "ru": ". Скрытность скрывает вашу информацию в Intel и Battle Reports; это не щит.",
@@ -120,17 +87,6 @@
       "de": ". Dabei handelt es sich um Waffensplitter, nicht um Heldensplitter. Waffen-Upgrades reichen bis Lv. 30, mit Änderungen im Aussehen bei Lv. 10 und Lv. 30.",
       "ko": ". 이것은 영웅 파편이 아닌 무기 파편입니다. 무기 업그레이드는 Lv.30까지 올라가며, Lv.10과 Lv.30에서는 외형이 변경됩니다.",
       "zh": "。这些是武器碎片，不是英雄碎片。武器升级至Lv.30，外观变化为Lv.10和Lv.30。"
-    },
-    ". Values may vary after a live update.": {
-      "es": ". Los valores pueden variar después de una actualización en vivo.",
-      "ru": ". Значения могут измениться после оперативного обновления.",
-      "fr": ". Les valeurs peuvent varier après une mise à jour en direct.",
-      "pl": ". Wartości mogą się różnić po aktualizacji na żywo.",
-      "tr": ". Canlı güncellemeden sonra değerler değişebilir.",
-      "pt": ". Os valores podem variar após uma atualização ao vivo.",
-      "de": ". Die Werte können nach einem Live-Update variieren.",
-      "ko": ". 실시간 업데이트 후에는 값이 달라질 수 있습니다.",
-      "zh": "。实时更新后值可能会有所不同。"
     },
     "1 rank": {
       "es": "1 rango",
@@ -495,6 +451,17 @@
       "ko": "Lv.30에서 확인",
       "zh": "在Lv.30时，检查"
     },
+    "Avoid promoting Aria right before an important fight.": {
+      "fr": "Évitez de promouvoir Aria juste avant un combat important.",
+      "ru": "Не повышайте Арию прямо перед важным боем.",
+      "tr": "Aria’yı önemli bir savaştan hemen önce terfi ettirmeyin.",
+      "pl": "Nie awansuj Arii tuż przed ważną walką.",
+      "es": "Evita ascender a Aria justo antes de un combate importante.",
+      "pt": "Evite promover Aria logo antes de uma luta importante.",
+      "de": "Befördere Aria nicht unmittelbar vor einem wichtigen Kampf.",
+      "ko": "중요한 전투 직전에는 아리아를 승급시키지 마세요.",
+      "zh": "不要在重要战斗前立刻晋升阿丽雅。"
+    },
     "Base": {
       "fr": "Base",
       "ru": "База",
@@ -637,17 +604,6 @@
       "de": "Vor dem Start",
       "ko": "출시 전",
       "zh": "发布前"
-    },
-    "Before launch & day one": {
-      "es": "Antes del lanzamiento y el primer día",
-      "ru": "До запуска и в первый день",
-      "fr": "Avant le lancement et le premier jour",
-      "pl": "Przed startem i pierwszym dniem",
-      "tr": "Lansmandan önce ve birinci gün",
-      "pt": "Antes do lançamento e primeiro dia",
-      "de": "Vor dem Start und am ersten Tag",
-      "ko": "출시 전 및 첫날",
-      "zh": "发布前和第一天"
     },
     "Before you promote:": {
       "es": "Antes de promocionar:",
@@ -902,6 +858,17 @@
       "ko": "몬스터의 필수 저항력을 확인하세요.",
       "zh": "检查怪物的所需抵抗力。"
     },
+    "Check the reward preview for Radiated Zombies and Radiated Elites. Prioritize unclaimed first-kill rewards over repeat kills when your troops meet the resistance requirement.": {
+      "fr": "Consultez l’aperçu des récompenses des Zombies irradiés et des Élites irradiées. Si vos troupes ont la résistance requise, privilégiez les premières éliminations dont la récompense reste à obtenir.",
+      "ru": "Посмотрите награды за облучённых зомби и облучённую элиту. Если у войск достаточно сопротивления, сначала побеждайте тех, за кого ещё не получена награда за первое убийство.",
+      "tr": "Radyasyonlu Zombi ve Radyasyonlu Elit için ödül ön izlemesine bakın. Birlikleriniz gerekli dirence sahipse aynı hedefi tekrar yenmek yerine henüz almadığınız İlk Öldürme Ödüllerine öncelik verin.",
+      "pl": "Sprawdź podgląd nagród za Napromieniowane zombie i Napromieniowaną elitę. Jeśli twoje oddziały mają wymaganą odporność, najpierw pokonuj cele, za które wciąż możesz dostać nagrodę za pierwsze zabójstwo.",
+      "es": "Revisa la vista previa de recompensas de los zombis radiactivos y la élite radiactiva. Si tus tropas tienen la resistencia necesaria, prioriza las recompensas por primera eliminación que aún no hayas obtenido.",
+      "pt": "Confira a prévia de recompensas de Zumbis Irradiados e Elites Irradiados. Quando suas tropas tiverem a resistência necessária, priorize recompensas pelo primeiro abate que você ainda não recebeu.",
+      "de": "Prüfe die Belohnungsvorschau bei Verstrahlten Zombies und der Verstrahlten Elite. Wenn deine Truppen den nötigen Widerstand haben, hole zuerst noch offene Ersttötungsbelohnungen, statt Kämpfe zu wiederholen.",
+      "ko": "피폭 좀비와 피폭 엘리트의 보상 미리보기를 확인하세요. 부대가 필요 저항을 충족한다면 같은 적을 반복해서 잡기보다 아직 받지 않은 최초 처치 보상을 우선하세요.",
+      "zh": "查看辐化丧尸和辐化精英的奖励预览。部队达到所需抗性时，优先挑战尚未领取首杀奖励的目标，而不是重复击杀。"
+    },
     "Check the target announcement and reinforce the marked city. The client lists attacks on Tuesdays and Fridays while active, even against protected cities. Surviving more waves improves rewards; repeated failures can cost the city when its durability reaches zero.": {
       "es": "Consulta el aviso del objetivo y refuerza la ciudad marcada. Durante el evento, hay ataques los martes y viernes, incluso contra ciudades protegidas. Resistir más oleadas mejora las recompensas. Si la durabilidad llega a cero, puedes perder la ciudad.",
       "ru": "Проверьте объявление о цели и укрепите отмеченный город. Клиент перечисляет атаки по вторникам и пятницам, пока они активны, даже против защищенных городов. Выживание в большем количестве волн улучшает награды; повторяющиеся сбои могут дорого стоить городу, когда его долговечность достигнет нуля.",
@@ -912,6 +879,17 @@
       "de": "Überprüfen Sie die Zielansage und verstärken Sie die markierte Stadt. Der Client listet Angriffe dienstags und freitags im aktiven Zustand auf, auch gegen geschützte Städte. Das Überleben weiterer Wellen verbessert die Belohnungen; Wiederholte Ausfälle können die Stadt kosten, wenn ihre Haltbarkeit den Wert Null erreicht.",
       "ko": "공격 대상 공지를 확인하고 표시된 도시에 지원군을 보내세요. 이벤트가 활성화되면 화요일과 금요일에 보호 중인 도시도 공격받을 수 있습니다. 더 많은 공격을 막아낼수록 보상이 커집니다. 방어에 반복해서 실패해 내구도가 0이 되면 도시를 잃을 수 있습니다.",
       "zh": "查看目标公告并加固标记的城市。客户列出了周二和周五活跃的攻击，甚至针对受保护的城市。生存更多的波浪会提高奖励；当城市的耐用性为零时，重复的故障可能会让城市付出代价。"
+    },
+    "Check your Warzone’s in-game timer for the start of the season and its events.": {
+      "fr": "Consultez le compte à rebours de votre zone de guerre pour savoir quand commencent la saison et ses événements.",
+      "ru": "Проверьте таймер в игре, чтобы узнать, когда в вашей зоне боевых действий начнутся сезон и события.",
+      "tr": "Sezonun ve etkinliklerin başlangıcını öğrenmek için Savaş Bölgenizdeki oyun içi sayaca bakın.",
+      "pl": "Sprawdź licznik w grze, aby zobaczyć, kiedy w twojej strefie wojny zaczynają się sezon i wydarzenia.",
+      "es": "Consulta el temporizador de tu Zona de Guerra para saber cuándo empiezan la temporada y sus eventos.",
+      "pt": "Confira o cronômetro da sua Zona de Guerra para saber quando a temporada e os eventos começam.",
+      "de": "Prüfe den Timer in deiner Kriegszone, um zu sehen, wann die Saison und ihre Events beginnen.",
+      "ko": "시즌과 이벤트가 언제 시작되는지 전쟁 구역의 게임 내 타이머를 확인하세요.",
+      "zh": "查看你所在战区的游戏内倒计时，确认赛季和活动的开始时间。"
     },
     "Choose the rally leader by resistance": {
       "es": "Elige al líder del rally por resistencia.",
@@ -990,17 +968,6 @@
       "ko": "직업 전당",
       "zh": "职业大厅"
     },
-    "Class Hall announcement and season schedule": {
-      "es": "Anuncio de Sala de clases y calendario de temporada.",
-      "ru": "Анонс Зал классов и расписание сезона",
-      "fr": "Annonce Hall des classes et calendrier de la saison",
-      "pl": "Ogłoszenie Sala klas i harmonogram sezonu",
-      "tr": "Sınıf Salonu duyurusu ve sezon programı",
-      "pt": "Anúncio Salão de Classe e programação da temporada",
-      "de": "Klassenhalle-Ankündigung und Saisonplan",
-      "ko": "직업 전당 발표 및 시즌 일정",
-      "zh": "职业大厅公告和赛季赛程"
-    },
     "Class Hall construction-menu render": {
       "es": "Renderizado del menú de construcción Sala de clases",
       "ru": "Зал классов Рендеринг меню конструкции",
@@ -1022,17 +989,6 @@
       "de": "Klassenhalle · Verstrahltes Land",
       "ko": "직업 전당 · 방사능 지대",
       "zh": "职业大厅 · 辐射之地"
-    },
-    "Class Hall, skill tables, items and reward sources": {
-      "es": "Sala de clases, tablas de habilidades, artículos y fuentes de recompensas",
-      "ru": "Зал классов, таблицы навыков, предметы и источники наград",
-      "fr": "Hall des classes, tableaux de compétences, objets et sources de récompenses",
-      "pl": "Sala klas, tabele umiejętności, przedmioty i źródła nagród",
-      "tr": "Sınıf Salonu, beceri tabloları, öğeler ve ödül kaynakları",
-      "pt": "Salão de Classe, tabelas de habilidades, itens e fontes de recompensa",
-      "de": "Klassenhalle, Fertigkeitstabellen, Gegenstände und Belohnungsquellen",
-      "ko": "직업 전당, 스킬 테이블, 아이템 및 보상 소스",
-      "zh": "职业大厅，技能表、物品和奖励来源"
     },
     "Class Hall: pick, level and spend": {
       "es": "Sala de clases: elige, nivela y gasta",
@@ -1231,6 +1187,17 @@
       "de": "Vergleichen Sie 45 Fertigkeiten und 152 Rangeffekte. Durchsuchen Sie die Klasse oder öffnen Sie eine einzelne Fertigkeit, um Effekte, Voraussetzungen und Abklingzeiten anzuzeigen.",
       "ko": "45개의 스킬과 152개의 랭크 효과를 비교해 보세요. 클래스별로 찾아보거나 개별 스킬을 열어 효과, 전제 조건, 재사용 대기시간을 확인하세요.",
       "zh": "比较 45 种技能和 152 种等级效果。按职业浏览，或打开个人技能以查看效果、先决条件和冷却时间。"
+    },
+    "Complete the daily Phase Quest and claim the rewards before they expire. Unclaimed rewards are not mailed. The preview unlocks even if you miss a quest.": {
+      "fr": "Terminez la quête de phase du jour et récupérez les récompenses avant leur expiration. Les récompenses non récupérées ne sont pas envoyées par courrier. L’aperçu se débloque même si vous manquez une quête.",
+      "ru": "Выполняйте ежедневное задание этапа и забирайте награды до истечения срока. Неполученные награды не придут по почте. Предпросмотр откроется, даже если вы пропустите задание.",
+      "tr": "Günlük Aşama Görevini tamamlayın ve süre dolmadan ödülleri alın. Alınmayan ödüller postayla gönderilmez. Bir görevi kaçırsanız da ön izleme açılır.",
+      "pl": "Wykonuj codzienne zadanie fazy i odbieraj nagrody przed upływem czasu. Nieodebrane nagrody nie trafią do poczty. Podgląd odblokuje się nawet po pominięciu zadania.",
+      "es": "Completa la misión de fase de cada día y reclama las recompensas antes de que caduquen. Las recompensas sin reclamar no se envían por correo. La vista previa se desbloquea aunque te pierdas una misión.",
+      "pt": "Conclua a missão de fase de cada dia e resgate as recompensas antes que expirem. As recompensas não resgatadas não são enviadas por correio. A prévia é liberada mesmo se você perder uma missão.",
+      "de": "Schließe jeden Tag die Phasenquest ab und hole die Belohnungen rechtzeitig ab. Nicht abgeholte Belohnungen kommen nicht per Post. Die Vorschau wird auch dann freigeschaltet, wenn du eine Quest verpasst.",
+      "ko": "매일 단계 퀘스트를 완료하고 기한이 끝나기 전에 보상을 받으세요. 받지 않은 보상은 우편으로 지급되지 않습니다. 퀘스트를 놓쳐도 미리보기는 열립니다.",
+      "zh": "每天完成阶段任务，并在到期前领取奖励。未领取的奖励不会通过邮件补发。即使错过任务，预览也会解锁。"
     },
     "Contribution Reward": {
       "fr": "Récompense de contribution",
@@ -1507,6 +1474,17 @@
       "ko": "장식 및 방문 캐러밴",
       "zh": "装饰和参观大篷车"
     },
+    "Defeat eligible zombies and Watchers to earn Immune Protein, up to the daily limit.": {
+      "fr": "Éliminez les zombies et les veilleurs de l’événement pour gagner de la Protéine immunitaire, dans la limite quotidienne.",
+      "ru": "Побеждайте зомби и наблюдателей события, чтобы получать иммунный белок до дневного лимита.",
+      "tr": "Günlük sınıra kadar Bağışıklık Proteini kazanmak için etkinlikteki zombileri ve Gözcüleri yenin.",
+      "pl": "Pokonuj zombie i obserwatorów z wydarzenia, aby zdobywać białko odpornościowe do dziennego limitu.",
+      "es": "Derrota a los zombis y vigilantes del evento para conseguir Proteína inmunitaria hasta el límite diario.",
+      "pt": "Derrote os zumbis e vigias do evento para obter Proteína Imune até o limite diário.",
+      "de": "Besiege Zombies und Wächter aus dem Event, um bis zum Tageslimit Immunprotein zu sammeln.",
+      "ko": "이벤트 대상 좀비와 감시자를 처치해 일일 한도까지 면역 단백질을 모으세요.",
+      "zh": "击败活动指定的僵尸和观察者，获取免疫蛋白，直到达到每日上限。"
+    },
     "Demolition Specialist": {
       "fr": "Spécialiste en démolition",
       "ru": "Специалист по сносу",
@@ -1528,6 +1506,17 @@
       "de": "Abriss-Spezialist Fertigkeitsränge",
       "ko": "철거 전문가 스킬 랭크",
       "zh": "专业拆迁 技能等级"
+    },
+    "Distribute Alliance Loot": {
+      "fr": "Distribuer le butin d’alliance",
+      "ru": "Раздать добычу альянса",
+      "tr": "İttifak Ganimetini dağıtın",
+      "pl": "Rozdaj łupy sojuszu",
+      "es": "Distribuye el botín de la alianza",
+      "pt": "Distribua o Saque da Aliança",
+      "de": "Allianz-Beute verteilen",
+      "ko": "연맹 전리품 분배",
+      "zh": "分发联盟战利品"
     },
     "Do I need the Weekly Pass to start?": {
       "es": "¿Necesito el Pase Semanal para empezar?",
@@ -1649,6 +1638,17 @@
       "de": "Während der Hauptstadt-Eroberung, Marschgeschwindigkeit im Verbrannten Land +50%.",
       "ko": "의회전 기간 동안 초토화 지역 행군 속도가 50% 증가한다.",
       "zh": "国会战期间，焦土地区域行军速度提升50%。"
+    },
+    "During settlement, rankings lock. You can’t relocate to another Warzone or declare new wars. When settlement ends, season buildings and skills are removed, and spent skill points are refunded.": {
+      "fr": "Pendant le règlement, les classements sont figés. Vous ne pouvez plus vous déplacer dans une autre zone de guerre ni déclarer de nouvelles guerres. À la fin du règlement, les bâtiments et les compétences de saison sont retirés. Les points de compétence dépensés sont rendus.",
+      "ru": "Во время расчёта рейтинги фиксируются. Нельзя перемещаться в другую зону боевых действий и объявлять новые войны. После расчёта сезонные здания и навыки удаляются, а потраченные очки навыков возвращаются.",
+      "tr": "Hesaplaşma sırasında sıralamalar kilitlenir. Başka bir Savaş Bölgesine taşınamaz veya yeni savaş ilan edemezsiniz. Hesaplaşma bitince sezon binaları ve becerileri kaldırılır, harcanan beceri puanları iade edilir.",
+      "pl": "Podczas rozliczenia rankingi zostają zablokowane. Nie można przenieść się do innej strefy wojny ani wypowiadać nowych wojen. Po rozliczeniu budynki i umiejętności sezonowe znikają, a wydane punkty umiejętności wracają.",
+      "es": "Durante la liquidación, se cierran las clasificaciones. No puedes trasladarte a otra Zona de Guerra ni declarar nuevas guerras. Al terminar la liquidación, se retiran los edificios y las habilidades de temporada y se devuelven los puntos de habilidad gastados.",
+      "pt": "Durante a apuração, as classificações ficam congeladas. Não dá para mudar para outra Zona de Guerra nem declarar novas guerras. No fim da apuração, os edifícios e as habilidades da temporada são removidos e os pontos de habilidade gastos são devolvidos.",
+      "de": "Während der Abrechnung stehen die Ranglisten fest. Du kannst nicht in eine andere Kriegszone umsiedeln oder neue Kriege erklären. Nach der Abrechnung verschwinden Saisongebäude und Saisonfähigkeiten. Ausgegebene Fähigkeitspunkte bekommst du zurück.",
+      "ko": "정산 중에는 순위가 확정되며, 다른 전쟁 구역으로 이전하거나 새로 선전포고할 수 없습니다. 정산이 끝나면 시즌 건물과 스킬이 사라지고 사용한 스킬 포인트가 반환됩니다.",
+      "zh": "结算期间排名锁定，无法跨战区迁移或发起新的宣战。结算结束后，赛季建筑和技能将被移除，已消耗的技能点会返还。"
     },
     "During your first 1 relocation(s) each day, all troops outside the Base instantly return.": {
       "fr": "Pour vos 1 premières relocalisations quotidiennes, toutes les troupes hors de la base rentrent instantanément.",
@@ -1793,17 +1793,6 @@
       "ko": "은닉 상태 활성화: 군사 정보 및 전투 보고서에서 개인 정보가 숨겨진다. 지속 시간 30분. 쿨타임 47.5시간.",
       "zh": "进入隐匿状态：军情和战报中的个人资讯将被隐藏。持续30分钟，冷却47.5小时。"
     },
-    "Evidence:": {
-      "es": "Evidencia:",
-      "ru": "Доказательства:",
-      "fr": "Preuve :",
-      "pl": "Dowody:",
-      "tr": "Kanıt:",
-      "pt": "Evidência:",
-      "de": "Beweis:",
-      "ko": "증거:",
-      "zh": "证据："
-    },
     "Example from reward group 10001. Check the payout screen for your Warzone, role and final standing.": {
       "es": "Ejemplo del grupo de recompensas 10001. Consulta la pantalla de pagos para conocer tu Warzone, tu rol y tu posición final.",
       "ru": "Пример из группы вознаграждений 10001. Проверьте на экране выплат свою боевую зону, роль и окончательный статус.",
@@ -1825,17 +1814,6 @@
       "de": "Exklusive Waffen",
       "ko": "전용 무기",
       "zh": "专属武器"
-    },
-    "Expand with your alliance": {
-      "es": "Expande con tu alianza",
-      "ru": "Расширяйте свой альянс",
-      "fr": "Développez votre alliance",
-      "pl": "Rozbuduj swój sojusz",
-      "tr": "İttifakınızla genişletin",
-      "pt": "Expanda com sua aliança",
-      "de": "Erweitern Sie Ihre Allianz",
-      "ko": "동맹을 통해 확장하세요",
-      "zh": "扩大您的联盟"
     },
     "Field Emergency Care": {
       "fr": "Soins d'urgence sur le terrain",
@@ -1946,94 +1924,6 @@
       "de": "Erste Tötungsbelohnung",
       "ko": "최초 처치 보상",
       "zh": "首杀奖励"
-    },
-    "Recall and redeploy after each Lab upgrade. Then look for": {
-      "fr": "Après chaque amélioration du laboratoire, rappelez puis renvoyez vos troupes. Vérifiez la",
-      "ru": "После каждого улучшения лаборатории отзывайте и снова отправляйте войска. Проверьте, доступна ли",
-      "tr": "Her laboratuvar yükseltmesinden sonra birliklerinizi geri çağırıp yeniden gönderin. Şuna bakın:",
-      "pl": "Po każdym ulepszeniu laboratorium wycofaj i ponownie wyślij wojska. Sprawdź, czy jest dostępna",
-      "es": "Tras cada mejora del laboratorio, retira las tropas a la Base y vuelve a enviarlas. Busca la",
-      "pt": "Após cada melhoria do laboratório, traga as tropas de volta e envie-as de novo. Confira a",
-      "de": "Rufe deine Truppen nach jedem Labor-Upgrade zurück und schicke sie erneut los. Achte auf die",
-      "ko": "실험실을 업그레이드할 때마다 부대를 복귀시킨 뒤 다시 출정시키세요. 같은 전투를 반복하기 전에",
-      "zh": "每次升级实验室后，先召回部队再重新出征。重复挑战前先查看"
-    },
-    "before repeating fights.": {
-      "fr": "avant de répéter un combat.",
-      "ru": "прежде чем повторять бой.",
-      "tr": "— aynı savaşı tekrarlamadan önce.",
-      "pl": "przed powtórzeniem walki.",
-      "es": "antes de repetir un combate.",
-      "pt": "antes de repetir uma luta.",
-      "de": "bevor du einen Kampf wiederholst.",
-      "ko": "을 확인하세요.",
-      "zh": "。"
-    },
-    "Check the reward preview for Radiated Zombies and Radiated Elites. Prioritize unclaimed first-kill rewards over repeat kills when your troops meet the resistance requirement.": {
-      "fr": "Consultez l’aperçu des récompenses des Zombies irradiés et des Élites irradiées. Si vos troupes ont la résistance requise, privilégiez les premières éliminations dont la récompense reste à obtenir.",
-      "ru": "Посмотрите награды за облучённых зомби и облучённую элиту. Если у войск достаточно сопротивления, сначала побеждайте тех, за кого ещё не получена награда за первое убийство.",
-      "tr": "Radyasyonlu Zombi ve Radyasyonlu Elit için ödül ön izlemesine bakın. Birlikleriniz gerekli dirence sahipse aynı hedefi tekrar yenmek yerine henüz almadığınız İlk Öldürme Ödüllerine öncelik verin.",
-      "pl": "Sprawdź podgląd nagród za Napromieniowane zombie i Napromieniowaną elitę. Jeśli twoje oddziały mają wymaganą odporność, najpierw pokonuj cele, za które wciąż możesz dostać nagrodę za pierwsze zabójstwo.",
-      "es": "Revisa la vista previa de recompensas de los zombis radiactivos y la élite radiactiva. Si tus tropas tienen la resistencia necesaria, prioriza las recompensas por primera eliminación que aún no hayas obtenido.",
-      "pt": "Confira a prévia de recompensas de Zumbis Irradiados e Elites Irradiados. Quando suas tropas tiverem a resistência necessária, priorize recompensas pelo primeiro abate que você ainda não recebeu.",
-      "de": "Prüfe die Belohnungsvorschau bei Verstrahlten Zombies und der Verstrahlten Elite. Wenn deine Truppen den nötigen Widerstand haben, hole zuerst noch offene Ersttötungsbelohnungen, statt Kämpfe zu wiederholen.",
-      "ko": "피폭 좀비와 피폭 엘리트의 보상 미리보기를 확인하세요. 부대가 필요 저항을 충족한다면 같은 적을 반복해서 잡기보다 아직 받지 않은 최초 처치 보상을 우선하세요.",
-      "zh": "查看辐化丧尸和辐化精英的奖励预览。部队达到所需抗性时，优先挑战尚未领取首杀奖励的目标，而不是重复击杀。"
-    },
-    "Refinery I Lv.6 requires Refinery II Lv.5.": {
-      "fr": "Pour monter la Raffinerie I au niveau 6, la Raffinerie II doit être au niveau 5.",
-      "ru": "Для повышения завода I до 6-го уровня нужен завод II 5-го уровня.",
-      "tr": "Rafineri I’i Sv.6’ya yükseltmek için Rafineri II’nin Sv.5 olması gerekir.",
-      "pl": "Aby ulepszyć Rafinerię I do poziomu 6, Rafineria II musi mieć poziom 5.",
-      "es": "Para subir la Refinería I al nivel 6, la Refinería II debe estar en el nivel 5.",
-      "pt": "Para subir a Refinaria I ao nível 6, a Refinaria II precisa estar no nível 5.",
-      "de": "Für Raffinerie I auf Stufe 6 muss Raffinerie II auf Stufe 5 sein.",
-      "ko": "제련소 I을 Lv.6으로 올리려면 제련소 II가 Lv.5여야 합니다.",
-      "zh": "提炼厂I升到6级需要提炼厂II达到5级。"
-    },
-    "Once Refinery II unlocks, repair it and raise it to Lv.5 before pushing Refinery I higher.": {
-      "fr": "Dès que la Raffinerie II est débloquée, réparez-la et montez-la au niveau 5 avant de continuer à améliorer la Raffinerie I.",
-      "ru": "Когда завод II откроется, отремонтируйте его и улучшите до 5-го уровня, прежде чем дальше улучшать завод I.",
-      "tr": "Rafineri II açılınca onarın ve Rafineri I’i daha fazla yükseltmeden önce onu Sv.5’e çıkarın.",
-      "pl": "Po odblokowaniu Rafinerii II napraw ją i podnieś do poziomu 5 przed dalszym ulepszaniem Rafinerii I.",
-      "es": "Cuando se desbloquee la Refinería II, repárala y súbela al nivel 5 antes de seguir mejorando la Refinería I.",
-      "pt": "Quando a Refinaria II for desbloqueada, repare-a e suba-a ao nível 5 antes de continuar melhorando a Refinaria I.",
-      "de": "Repariere Raffinerie II nach der Freischaltung und bringe sie auf Stufe 5, bevor du Raffinerie I weiter ausbaust.",
-      "ko": "제련소 II가 잠금 해제되면 수리하고 Lv.5까지 올린 뒤 제련소 I의 업그레이드를 계속하세요.",
-      "zh": "提炼厂II解锁后，先修复并升到5级，再继续升级提炼厂I。"
-    },
-    "Have your highest-resistance player lead the rally.": {
-      "fr": "Confiez le ralliement au joueur qui a la résistance la plus élevée.",
-      "ru": "Поручите возглавить сбор игроку с самым высоким сопротивлением вирусу.",
-      "tr": "Toplanmayı Virüs Direnci en yüksek oyuncu başlatsın.",
-      "pl": "Niech rajd poprowadzi gracz z najwyższą odpornością na wirusa.",
-      "es": "Haz que el jugador con mayor resistencia viral lidere la reunión.",
-      "pt": "Deixe o jogador com maior Resistência Viral liderar o ataque em grupo.",
-      "de": "Lass den Spieler mit dem höchsten Viruswiderstand den Sammelangriff anführen.",
-      "ko": "바이러스 저항이 가장 높은 플레이어가 집결을 이끌게 하세요.",
-      "zh": "让病毒抗性最高的玩家担任集结队长。"
-    },
-    "Avoid promoting Aria right before an important fight.": {
-      "fr": "Évitez de promouvoir Aria juste avant un combat important.",
-      "ru": "Не повышайте Арию прямо перед важным боем.",
-      "tr": "Aria’yı önemli bir savaştan hemen önce terfi ettirmeyin.",
-      "pl": "Nie awansuj Arii tuż przed ważną walką.",
-      "es": "Evita ascender a Aria justo antes de un combate importante.",
-      "pt": "Evite promover Aria logo antes de uma luta importante.",
-      "de": "Befördere Aria nicht unmittelbar vor einem wichtigen Kampf.",
-      "ko": "중요한 전투 직전에는 아리아를 승급시키지 마세요.",
-      "zh": "不要在重要战斗前立刻晋升阿丽雅。"
-    },
-    "Set aside shards and Skill Insignias to rebuild her stars and skills first.": {
-      "fr": "Prévoyez des fragments et des insignes de compétence pour remonter ses étoiles et ses compétences.",
-      "ru": "Запасите осколки и знаки навыков, чтобы восстановить её звёзды и уровни навыков.",
-      "tr": "Yıldızlarını ve becerilerini yeniden yükseltmek için Parça ve Beceri Nişanı ayırın.",
-      "pl": "Odłóż odłamki i odznaki umiejętności, by ponownie podnieść jej poziom gwiazdek i umiejętności.",
-      "es": "Reserva fragmentos e insignias de habilidad para volver a subir sus estrellas y habilidades.",
-      "pt": "Reserve fragmentos e insígnias de habilidade para voltar a subir as estrelas e habilidades dela.",
-      "de": "Lege Splitter und Fertigkeitsabzeichen zurück, damit du ihre Sterne und Fertigkeiten wieder steigern kannst.",
-      "ko": "별과 스킬 레벨을 다시 올릴 수 있도록 조각과 스킬 휘장을 미리 확보해 두세요.",
-      "zh": "提前留好碎片和技能徽章，以便重新提升她的星级和技能。"
     },
     "First login checklist": {
       "es": "Lista de verificación para el primer inicio de sesión",
@@ -2398,6 +2288,17 @@
       "ko": "그레이존 상인 단체:",
       "zh": "灰区商队："
     },
+    "Have your highest-resistance player lead the rally.": {
+      "fr": "Confiez le ralliement au joueur qui a la résistance la plus élevée.",
+      "ru": "Поручите возглавить сбор игроку с самым высоким сопротивлением вирусу.",
+      "tr": "Toplanmayı Virüs Direnci en yüksek oyuncu başlatsın.",
+      "pl": "Niech rajd poprowadzi gracz z najwyższą odpornością na wirusa.",
+      "es": "Haz que el jugador con mayor resistencia viral lidere la reunión.",
+      "pt": "Deixe o jogador com maior Resistência Viral liderar o ataque em grupo.",
+      "de": "Lass den Spieler mit dem höchsten Viruswiderstand den Sammelangriff anführen.",
+      "ko": "바이러스 저항이 가장 높은 플레이어가 집결을 이끌게 하세요.",
+      "zh": "让病毒抗性最高的玩家担任集结队长。"
+    },
     "Heal up to 1000 untreated Soldiers in the Hospital.": {
       "fr": "Soigne jusqu'à 1000 soldats non soignés à l'Hôpital.",
       "ru": "Восстанавливает до 1000 раненых солдат в госпитале.",
@@ -2639,6 +2540,17 @@
       "de": "Krankenhaus-Wartung Fertigkeitsränge",
       "ko": "병원 정비 스킬 랭크",
       "zh": "医院整备 技能等级"
+    },
+    "If these events are open in your Warzone, do them in this order:": {
+      "fr": "Si ces événements sont ouverts dans votre zone de guerre, suivez cet ordre :",
+      "ru": "Если эти события доступны в вашей зоне боевых действий, проходите их в таком порядке:",
+      "tr": "Bu etkinlikler Savaş Bölgenizde açıksa şu sırayla ilerleyin:",
+      "pl": "Jeśli te wydarzenia są dostępne w twojej strefie wojny, wykonuj je w tej kolejności:",
+      "es": "Si estos eventos están activos en tu Zona de Guerra, hazlos en este orden:",
+      "pt": "Se esses eventos estiverem disponíveis na sua Zona de Guerra, faça-os nesta ordem:",
+      "de": "Wenn diese Events in deiner Kriegszone aktiv sind, geh in dieser Reihenfolge vor:",
+      "ko": "전쟁 구역에서 이 이벤트가 열렸다면 다음 순서로 진행하세요.",
+      "zh": "如果你的战区已开放这些活动，请按以下顺序参加："
     },
     "Illustration from the in-game pathogen rules": {
       "es": "Ilustración de las reglas de patógenos del juego.",
@@ -3157,17 +3069,6 @@
       "ko": "언어",
       "zh": "语言"
     },
-    "Later milestones": {
-      "es": "Hitos posteriores",
-      "ru": "Более поздние вехи",
-      "fr": "Jalons ultérieurs",
-      "pl": "Późniejsze kamienie milowe",
-      "tr": "Daha sonraki kilometre taşları",
-      "pt": "Marcos posteriores",
-      "de": "Spätere Meilensteine",
-      "ko": "이후의 이정표",
-      "zh": "后来的里程碑"
-    },
     "Leah": {
       "es": "Lea",
       "ru": "Лия",
@@ -3189,6 +3090,28 @@
       "de": "Leah: Exklusivwaffe",
       "ko": "레아 전용 무기",
       "zh": "利亚的专属武器"
+    },
+    "Leftover season Immune Protein, Mutant Shards and Uranium Crystals convert to Class EXP. Your class level, Class EXP and Class EXP items carry over.": {
+      "fr": "Les restes de Protéine immunitaire, de fragments mutants et de cristaux d’uranium de la saison sont convertis en EXP de classe. Votre niveau de classe, votre EXP de classe et vos objets d’EXP de classe sont conservés.",
+      "ru": "Оставшиеся иммунный белок, фрагменты мутанта и урановые кристаллы сезона превращаются в опыт класса. Уровень класса, его опыт и предметы опыта класса сохраняются.",
+      "tr": "Sezondan kalan Bağışıklık Proteini, Mutant Parçaları ve Uranyum Kristalleri Sınıf DP’ye dönüşür. Sınıf seviyeniz, Sınıf DP’niz ve Sınıf DP eşyalarınız saklanır.",
+      "pl": "Pozostałe sezonowe białko odpornościowe, odłamki mutanta i kryształy uranu zamieniają się w PD klasy. Poziom klasy, PD klasy i przedmioty dające PD klasy zostają zachowane.",
+      "es": "La Proteína inmunitaria, los fragmentos mutantes y los cristales de uranio de temporada que sobren se convierten en EXP de clase. Conservas el nivel de clase, la EXP de clase y sus objetos de EXP.",
+      "pt": "A Proteína Imune, os fragmentos mutantes e os cristais de urânio que sobrarem da temporada viram EXP de Classe. Você mantém o nível de classe, a EXP de Classe e os itens de EXP de Classe.",
+      "de": "Übriges Immunprotein, Mutanten-Splitter und Urankristalle aus der Saison werden in Klassen-EP umgewandelt. Deine Klassenstufe, Klassen-EP und Gegenstände für Klassen-EP bleiben erhalten.",
+      "ko": "시즌에 남은 면역 단백질, 돌연변이 조각, 우라늄 결정은 직업 레벨 경험치로 바뀝니다. 직업 레벨, 직업 레벨 경험치와 관련 아이템은 유지됩니다.",
+      "zh": "剩余的赛季免疫蛋白、突变切片和铀结晶会转换为职业等级经验。职业等级、职业等级经验和相关经验道具都会保留。"
+    },
+    "Like a base using the Gamma Terminator skin to claim its Like Reward. You can claim it once per base, up to the daily limit. You don’t need to own the skin.": {
+      "fr": "Aimez une base avec le skin Exterminateur Gamma pour obtenir sa récompense de J’aime. Vous pouvez la récupérer une fois par base, dans la limite quotidienne. Vous n’avez pas besoin de posséder le skin.",
+      "ru": "Поставьте отметку «Нравится» базе с обликом «Гамма-терминатор», чтобы получить награду за оценку. Награду можно получить один раз с каждой базы до дневного лимита. Сам облик вам не нужен.",
+      "tr": "Beğeni Ödülü almak için Gama Yok Edici görünümünü kullanan bir Üssü beğenin. Günlük sınıra kadar her Üsten bir kez ödül alabilirsiniz. Görünüme sahip olmanız gerekmez.",
+      "pl": "Polub bazę ze skórką Terminator Gamma, aby odebrać nagrodę za polubienie. Możesz ją odebrać raz na bazę, do dziennego limitu. Nie musisz posiadać skórki.",
+      "es": "Dale a Me gusta a una base con la apariencia Exterminador Gamma para reclamar su recompensa de Me gusta. Puedes recibirla una vez por base, hasta el límite diario. No necesitas tener la apariencia.",
+      "pt": "Curta uma base com a aparência Exterminador Gama para resgatar a Recompensa de Curtida. Você pode recebê-la uma vez por base, até o limite diário. Não precisa ter a aparência.",
+      "de": "Like eine Basis mit dem Gamma-Terminator-Skin, um ihre Like-Belohnung abzuholen. Das geht einmal pro Basis bis zum Tageslimit. Du musst den Skin nicht besitzen.",
+      "ko": "γ 종결자 스킨을 사용하는 기지에 좋아요를 눌러 좋아요 보상을 받으세요. 기지마다 한 번씩, 일일 한도까지 받을 수 있습니다. 스킨을 보유할 필요는 없습니다.",
+      "zh": "给使用 γ终结者 皮肤的基地点赞，领取点赞奖励。每座基地只能领取一次，且有每日上限。你无需拥有该皮肤。"
     },
     "Link to this skill": {
       "es": "Enlace a esta habilidad",
@@ -3255,17 +3178,6 @@
       "de": "Glücksjagd Fertigkeitsränge",
       "ko": "행운 사냥 스킬 랭크",
       "zh": "幸运猎杀 技能等级"
-    },
-    "Maintainer notes and art provenance": {
-      "es": "Notas del mantenedor y procedencia del arte.",
-      "ru": "Заметки сопровождающего и художественное происхождение",
-      "fr": "Notes du responsable et provenance de l'art",
-      "pl": "Notatki konserwatora i pochodzenie dzieł sztuki",
-      "tr": "Bakım notları ve sanat kaynağı",
-      "pt": "Notas do mantenedor e proveniência da arte",
-      "de": "Hinweise des Betreuers und Kunstherkunft",
-      "ko": "유지관리자 메모 및 예술품 출처",
-      "zh": "维护者注释和艺术出处"
     },
     "Milestone unlocks": {
       "es": "Desbloqueos de hitos",
@@ -3476,6 +3388,17 @@
       "ko": "필터와 일치하는 스킬이 없습니다.",
       "zh": "没有符合筛选条件的技能。"
     },
+    "Once Refinery II unlocks, repair it and raise it to Lv.5 before pushing Refinery I higher.": {
+      "fr": "Dès que la Raffinerie II est débloquée, réparez-la et montez-la au niveau 5 avant de continuer à améliorer la Raffinerie I.",
+      "ru": "Когда завод II откроется, отремонтируйте его и улучшите до 5-го уровня, прежде чем дальше улучшать завод I.",
+      "tr": "Rafineri II açılınca onarın ve Rafineri I’i daha fazla yükseltmeden önce onu Sv.5’e çıkarın.",
+      "pl": "Po odblokowaniu Rafinerii II napraw ją i podnieś do poziomu 5 przed dalszym ulepszaniem Rafinerii I.",
+      "es": "Cuando se desbloquee la Refinería II, repárala y súbela al nivel 5 antes de seguir mejorando la Refinería I.",
+      "pt": "Quando a Refinaria II for desbloqueada, repare-a e suba-a ao nível 5 antes de continuar melhorando a Refinaria I.",
+      "de": "Repariere Raffinerie II nach der Freischaltung und bringe sie auf Stufe 5, bevor du Raffinerie I weiter ausbaust.",
+      "ko": "제련소 II가 잠금 해제되면 수리하고 Lv.5까지 올린 뒤 제련소 I의 업그레이드를 계속하세요.",
+      "zh": "提炼厂II解锁后，先修复并升到5级，再继续升级提炼厂I。"
+    },
     "Once construction finishes, take a stronghold within range, then expand outward through connected territory. Use the live Battle Period and check the target rules rather than assuming home-warzone timing applies.": {
       "es": "Una vez que finalice la construcción, toma una fortaleza dentro del alcance y luego expande hacia afuera a través del territorio conectado. Utilice el período de batalla en vivo y verifique las reglas de los objetivos en lugar de asumir que se aplica el tiempo de la zona de guerra local.",
       "ru": "Как только строительство завершится, захватите крепость в пределах досягаемости, а затем расширяйтесь через прилегающую территорию. Используйте текущий период битвы и проверяйте целевые правила, а не предполагайте, что применяется время домашней зоны боевых действий.",
@@ -3530,17 +3453,6 @@
       "de": "Öffnet ein Fenster mit Saisoninformationen, einschließlich der Karte und ihren Sonderzielen. Dies ist ein Informationsgebäude, keine Quelle von Viruswiderstand.",
       "ko": "지도와 관심 지점을 포함한 계절 정보가 포함된 패널을 엽니다. 이것은 바이러스 저항의 소스가 아닌 정보 건물입니다.",
       "zh": "打开包含季节信息的面板，包括地图及其兴趣点。这是一个信息大厦，不是病毒抗性的来源。"
-    },
-    "Original guide based on the Android build 344 asset split, embedded catalog": {
-      "es": "Guía original basada en la división de activos de Android build 344, catálogo integrado",
-      "ru": "Оригинальное руководство на основе встроенного каталога разделения ресурсов Android build 344.",
-      "fr": "Guide original basé sur la répartition des actifs Android build 344, catalogue intégré",
-      "pl": "Oryginalny przewodnik oparty na kompilacji 344 zasobów systemu Android i osadzonym katalogu",
-      "tr": "Android build 344 varlık bölünmüş, yerleşik kataloğu temel alan orijinal kılavuz",
-      "pt": "Guia original baseado na divisão de ativos do Android build 344, catálogo incorporado",
-      "de": "Originalanleitung basierend auf dem eingebetteten Android Build 344 Asset Split-Katalog",
-      "ko": "Android 빌드 344 자산 분할, 삽입된 카탈로그를 기반으로 한 원본 가이드",
-      "zh": "基于Android build 344的原创指南资产分割、嵌入目录"
     },
     "Other exchange sources and the paid pass": {
       "es": "Otras fuentes de cambio y el pase pagado",
@@ -3685,17 +3597,6 @@
       "ko": "맹추격 스킬 랭크",
       "zh": "乘胜追击 技能等级"
     },
-    "ProfessionSkill and ProfessionSkillLevel (build 344)": {
-      "es": "ProfessionSkill y ProfessionSkillLevel (compilación 344)",
-      "ru": "ProfessionSkill и ProfessionSkillLevel (сборка 344)",
-      "fr": "ProfessionSkill et ProfessionSkillLevel (build 344)",
-      "pl": "ProfessionSkill i ProfessionSkillLevel (kompilacja 344)",
-      "tr": "ProfessionSkill ve ProfessionSkillLevel (derleme 344)",
-      "pt": "ProfessionSkill e ProfessionSkillLevel (compilação 344)",
-      "de": "ProfessionSkill und ProfessionSkillLevel (Build 344)",
-      "ko": "ProfessionSkill 및 ProfessionSkillLevel(빌드 344)",
-      "zh": "ProfessionSkill 和 ProfessionSkillLevel（版本 344）"
-    },
     "Promotion Medal": {
       "fr": "Médaille de promotion",
       "ru": "Медаль за повышение",
@@ -3717,6 +3618,17 @@
       "de": "Schnelle Antworten",
       "ko": "빠른 답변",
       "zh": "快速解答"
+    },
+    "R5 or the Housekeeper should distribute it before the settlement timer ends. Double-check the recipients before confirming. You can’t change or redistribute these rewards afterward.": {
+      "fr": "Le R5 ou le R4 chargé du butin doit le distribuer avant la fin du décompte de règlement. Vérifiez les destinataires avant de confirmer. Les récompenses ne peuvent plus être modifiées ni redistribuées ensuite.",
+      "ru": "R5 или управленец должен раздать добычу до конца расчётного периода. Проверьте получателей перед подтверждением. После раздачи награды нельзя изменить или распределить заново.",
+      "tr": "R5 veya Kâhya, hesaplaşma sayacı dolmadan ganimeti dağıtmalı. Onaylamadan önce alıcıları kontrol edin. Daha sonra ödülleri değiştiremez veya yeniden dağıtamazsınız.",
+      "pl": "R5 lub R4 odpowiedzialny za łupy powinni rozdać łupy przed końcem rozliczenia. Przed zatwierdzeniem sprawdź odbiorców. Później nie można zmienić ani rozdać nagród ponownie.",
+      "es": "El R5 o el Ama de llaves debe repartirlo antes de que termine el tiempo de liquidación. Revisa los destinatarios antes de confirmar. Después no podrás cambiar ni volver a repartir las recompensas.",
+      "pt": "O R5 ou a Empregada Doméstica deve distribuí-lo antes do fim do período de apuração. Confira quem vai receber antes de confirmar. Depois disso, não dá para mudar nem redistribuir as recompensas.",
+      "de": "R5 oder der Haushälter sollte die Beute vor Ende der Abrechnung verteilen. Überprüfe vor der Bestätigung die Empfänger. Danach kannst du die Belohnungen weder ändern noch neu verteilen.",
+      "ko": "R5 또는 집사는 정산 타이머가 끝나기 전에 전리품을 분배하세요. 확정하기 전에 받을 사람을 다시 확인하세요. 분배한 보상은 변경하거나 다시 나눌 수 없습니다.",
+      "zh": "R5 或管家应在结算倒计时结束前分发战利品。确认前请核对领取人。奖励一旦发放，就不能修改或重新分配。"
     },
     "Radiated Land": {
       "fr": "Terres irradiées",
@@ -3806,17 +3718,6 @@
       "ko": "집결 돌격 스킬 랭크",
       "zh": "集结冲锋 技能等级"
     },
-    "Rally Resistance and γ Pathogen help": {
-      "es": "Resistencia de rally y ayuda Patógeno γ",
-      "ru": "Rally Resistance и γ-патоген помогают",
-      "fr": "Aide Rally Resistance et Pathogène γ",
-      "pl": "Pomoc Rally Resistance i Patogen γ",
-      "tr": "Ralli Direnci ve γ Patojen yardımı",
-      "pt": "Rally Resistance e ajuda Patógeno γ",
-      "de": "Rally Resistance und γ-Erreger helfen",
-      "ko": "랠리 저항 및 γ 병원체 도움말",
-      "zh": "反弹阻力和 γ病原体 帮助"
-    },
     "Rank": {
       "es": "Rango",
       "ru": "Ранг",
@@ -3827,17 +3728,6 @@
       "de": "Rang",
       "ko": "순위",
       "zh": "排名"
-    },
-    "Rankings lock and cross-zone relocation and new declarations stop. The settlement mail says R5 or the Housekeeper should distribute Alliance Loot before the timer ends. Temporary buildings and season skills are removed; spent season skill points are returned. The settlement mail says leftover Immune Protein, Mutant Shards and Uranium Crystals are cleared and converted to Class EXP. Class level, Class EXP and Class EXP items carry over. Check live mail for your group’s settlement deadline.": {
-      "es": "Las clasificaciones se bloquean y se detiene la reubicación entre zonas y las nuevas declaraciones. El correo del acuerdo dice que R5 o el ama de llaves deben distribuir el botín de la Alianza antes de que termine el tiempo. Se eliminan los edificios temporales y las habilidades de temporada; Se devuelven los puntos de habilidad de la temporada gastada. El correo de liquidación dice que los restos de Proteína inmunitaria, Mutant Shards y Cristal de uranio se limpian y se convierten a EXP de clase. Los elementos de nivel de clase, EXP de clase y EXP de clase se transfieren. Consulte el correo en vivo para conocer la fecha límite de liquidación de su grupo.",
-      "ru": "Рейтинги блокируются, перемещение между зонами и новые объявления прекращаются. В письме о расчете говорится, что R5 или Домработница должны раздать добычу Альянса до истечения таймера. Временные постройки и сезонные навыки удалены; Очки навыков за потраченный сезон возвращаются. В сообщении об урегулировании говорится, что остатки Иммунный белок, Mutant Shards и Урановый кристалл очищены и преобразованы в Опыт класса. Уровень класса, предметы Опыт класса и Опыт класса переносятся. Проверьте почту, чтобы узнать крайний срок урегулирования вашей группы.",
-      "fr": "Le verrouillage des classements, les déplacements entre zones et les nouvelles déclarations s'arrêtent. Le courrier de règlement indique que R5 ou la gouvernante doit distribuer le butin de l'Alliance avant la fin du chronomètre. Les bâtiments temporaires et les compétences saisonnières sont supprimés ; les points de compétence de saison dépensés sont rendus. Le courrier de règlement indique que les restes de Protéine immunitaire, Mutant Shards et Cristal d'uranium sont effacés et convertis en EXP de classe. Le niveau de classe, les éléments EXP de classe et EXP de classe sont conservés. Consultez le courrier en direct pour connaître la date limite de règlement de votre groupe.",
-      "pl": "Blokada rankingów, relokacje międzystrefowe i nowe deklaracje ustają. Poczta rozliczeniowa mówi, że R5 lub Gospodyni powinni rozdać Łupy Sojuszu przed upływem czasu. Tymczasowe budynki i umiejętności sezonowe zostaną usunięte; punkty umiejętności spędzone w sezonie są zwracane. Poczta rozliczeniowa mówi, że pozostałości Białko odpornościowe, Mutant Shards i Kryształ uranu zostały usunięte i zamienione na PD klasy. Poziom klasy, elementy PD klasy i PD klasy zostają przeniesione. Sprawdź pocztę na żywo, aby poznać ostateczny termin rozliczenia swojej grupy.",
-      "tr": "Sıralamalar kilitlenir ve bölgeler arası yer değiştirme ve yeni bildirimler durdurulur. Anlaşma postası, R5 veya Temizlikçinin, İttifak Ganimeti'ni süre sona ermeden dağıtması gerektiğini söylüyor. Geçici binalar ve sezon becerileri kaldırıldı; harcanan sezon beceri puanları iade edilir. Anlaşma postasında kalan Bağışıklık Proteini, Mutant Parçaları ve Uranyum Kristali'nin temizlendiği ve Sınıf DP'ye dönüştürüldüğü belirtiliyor. Sınıf düzeyinde Sınıf DP ve Sınıf DP öğeleri aktarılır. Grubunuzun uzlaşma son tarihi için canlı postayı kontrol edin.",
-      "pt": "As classificações são bloqueadas, a realocação entre zonas e as novas declarações são interrompidas. O e-mail de liquidação diz que R5 ou a governanta devem distribuir o saque da aliança antes que o tempo termine. Edifícios temporários e habilidades sazonais são removidos; os pontos de habilidade da temporada passada são devolvidos. O e-mail de liquidação diz que os restos de Proteína Imune, Mutant Shards e Cristal de Urânio foram limpos e convertidos em EXP de Classe. Nível de classe, itens EXP de Classe e EXP de Classe são transferidos. Verifique o correio ao vivo para saber o prazo de liquidação do seu grupo.",
-      "de": "Die Ranglisten werden gesperrt, zonenübergreifende Verschiebungen und neue Deklarationen werden gestoppt. In der Siedlungspost steht, dass R5 oder die Haushälterin Allianzbeute verteilen sollen, bevor der Timer abläuft. Temporäre Gebäude und Saisonfähigkeiten werden entfernt; Fertigkeitspunkte der verbrauchten Saison werden zurückgegeben. In der Abrechnungsmail heißt es, dass übrig gebliebene Immunprotein, Mutant Shards und Urankristall gelöscht und in Klassen-EP umgewandelt werden. Elemente auf Klassenebene, Klassen-EP und Klassen-EP werden übernommen. Informieren Sie sich per Live-Mail über die Abrechnungsfrist Ihrer Gruppe.",
-      "ko": "순위 잠금, 영역 간 재배치 및 신규 선언이 중지됩니다. 결산 메일에는 타이머가 끝나기 전에 R5 또는 Housekeeper가 Alliance Loot를 배포해야 한다고 나와 있습니다. 임시 건물과 시즌 스킬이 제거됩니다. 소모한 시즌 스킬 포인트가 반환됩니다. 정산 메일에는 남은 면역 단백질, Mutant Shards 및 우라늄 결정가 지워지고 직업 레벨 경험치로 변환된다고 나와 있습니다. 클래스 레벨, 직업 레벨 경험치 및 직업 레벨 경험치 아이템은 이월됩니다. 그룹의 정산 마감일은 실시간 메일을 확인하세요.",
-      "zh": "排名锁定、跨区迁移和新申报停止。和解邮件称 R5 或管家应在计时器结束前分发联盟战利品。临时建筑和季节技能被移除；花费的赛季技能点将被返还。和解邮件称剩余的免疫蛋白、变异碎片和铀结晶已被清除并转换为职业等级经验。等级级别，职业等级经验 和 职业等级经验 物品结转。检查实时邮件以了解您所在团体的结算截止日期。"
     },
     "React to awards and claim from the ceremony reward panel. The shipped reward milestones are 1, 2 and 3 reactions; do not assume unlimited gifts for each reaction.": {
       "es": "Reaccione a los premios y reclame desde el panel de recompensas de la ceremonia. Los hitos de recompensa enviados son 1, 2 y 3 reacciones; No asumas regalos ilimitados por cada reacción.",
@@ -3861,7 +3751,28 @@
       "ko": "선언 화면 읽기",
       "zh": "阅读声明屏幕"
     },
-
+    "Recall and redeploy after each Lab upgrade. Then look for": {
+      "fr": "Après chaque amélioration du laboratoire, rappelez puis renvoyez vos troupes. Vérifiez la",
+      "ru": "После каждого улучшения лаборатории отзывайте и снова отправляйте войска. Проверьте, доступна ли",
+      "tr": "Her laboratuvar yükseltmesinden sonra birliklerinizi geri çağırıp yeniden gönderin. Şuna bakın:",
+      "pl": "Po każdym ulepszeniu laboratorium wycofaj i ponownie wyślij wojska. Sprawdź, czy jest dostępna",
+      "es": "Tras cada mejora del laboratorio, retira las tropas a la Base y vuelve a enviarlas. Busca la",
+      "pt": "Após cada melhoria do laboratório, traga as tropas de volta e envie-as de novo. Confira a",
+      "de": "Rufe deine Truppen nach jedem Labor-Upgrade zurück und schicke sie erneut los. Achte auf die",
+      "ko": "실험실을 업그레이드할 때마다 부대를 복귀시킨 뒤 다시 출정시키세요. 같은 전투를 반복하기 전에",
+      "zh": "每次升级实验室后，先召回部队再重新出征。重复挑战前先查看"
+    },
+    "Refinery I Lv.6 requires Refinery II Lv.5.": {
+      "fr": "Pour monter la Raffinerie I au niveau 6, la Raffinerie II doit être au niveau 5.",
+      "ru": "Для повышения завода I до 6-го уровня нужен завод II 5-го уровня.",
+      "tr": "Rafineri I’i Sv.6’ya yükseltmek için Rafineri II’nin Sv.5 olması gerekir.",
+      "pl": "Aby ulepszyć Rafinerię I do poziomu 6, Rafineria II musi mieć poziom 5.",
+      "es": "Para subir la Refinería I al nivel 6, la Refinería II debe estar en el nivel 5.",
+      "pt": "Para subir a Refinaria I ao nível 6, a Refinaria II precisa estar no nível 5.",
+      "de": "Für Raffinerie I auf Stufe 6 muss Raffinerie II auf Stufe 5 sein.",
+      "ko": "제련소 I을 Lv.6으로 올리려면 제련소 II가 Lv.5여야 합니다.",
+      "zh": "提炼厂I升到6级需要提炼厂II达到5级。"
+    },
     "Refinery II needs Refinery I at Lv.5.": {
       "es": "La Refinería II necesita la Refinería I en el nivel 5.",
       "ru": "Нефтеперерабатывающему заводу II необходим нефтеперерабатывающий завод I на уровне 5.",
@@ -4005,39 +3916,6 @@
       "ko": "바이러스 실험실를 수리한 다음 우라늄 결정 제련소 I를 수리하세요.",
       "zh": "修复 病毒实验室，然后修复 铀结晶提炼厂I。"
     },
-    "Upgrade the Virus Lab to Lv.30 as soon as you can.": {
-      "fr": "Montez le Laboratoire de virologie au niveau 30 dès que possible.",
-      "ru": "Как можно скорее улучшите Лабораторию вирусов до 30-го уровня.",
-      "tr": "Virüs Laboratuvarı’nı mümkün olan en kısa sürede Sv.30’a yükseltin.",
-      "pl": "Jak najszybciej ulepsz Laboratorium wirusowe do 30. poziomu.",
-      "es": "Mejora el Laboratorio del Virus al nivel 30 cuanto antes.",
-      "pt": "Melhore o Laboratório Viral para o nível 30 assim que puder.",
-      "de": "Verbessere das Viruslabor so früh wie möglich auf Stufe 30.",
-      "ko": "바이러스 실험실을 가능한 한 빨리 Lv.30까지 업그레이드하세요.",
-      "zh": "尽快将病毒实验室升至30级。"
-    },
-    "Your base does not need to be Lv.30 to do this.": {
-      "fr": "Votre Base n’a pas besoin d’être au niveau 30 pour cela.",
-      "ru": "Для этого не нужно повышать Базу до 30-го уровня.",
-      "tr": "Bunun için Üssünüzün Sv.30 olması gerekmez.",
-      "pl": "Twoja Baza nie musi mieć poziomu 30.",
-      "es": "Tu Base no necesita estar en el nivel 30 para hacerlo.",
-      "pt": "Sua Base não precisa estar no nível 30 para isso.",
-      "de": "Deine Basis muss dafür nicht auf Stufe 30 sein.",
-      "ko": "이를 위해 기지가 Lv.30일 필요는 없습니다.",
-      "zh": "无需将基地升到30级。"
-    },
-    "Spend Immune Protein to raise your troops’ Virus Resistance.": {
-      "fr": "Utilisez de la protéine immunitaire pour augmenter la résistance virale de vos troupes.",
-      "ru": "Используйте иммунный белок, чтобы повысить сопротивление вирусу у ваших войск.",
-      "tr": "Birliklerinizin Virüs Direnci’ni artırmak için Bağışıklık Proteini harcayın.",
-      "pl": "Wydawaj białko odpornościowe, by zwiększyć odporność na wirusa swoich oddziałów.",
-      "es": "Usa proteína inmunitaria para aumentar la resistencia viral de tus tropas.",
-      "pt": "Use proteína imune para aumentar a resistência viral das suas tropas.",
-      "de": "Setze Immunprotein ein, um den Viruswiderstand deiner Truppen zu erhöhen.",
-      "ko": "면역 단백질을 사용해 부대의 바이러스 저항을 높이세요.",
-      "zh": "消耗免疫蛋白，提高部队的病毒抗性。"
-    },
     "Repair: Virus Lab; Repair: Uranium Crystal Refinery; Lv.1 City Unlocked; Lv.2 City Unlocked": {
       "fr": "Réparer : Laboratoire de virologie; Réparer : Raffinerie de cristal d'uranium; Ville niv.1 débloquée; Ville niv.2 débloquée",
       "ru": "Ремонт: лаборатория вирусов; Ремонт: завод урановых кристаллов; Город ур. 1 открыт; Город ур. 2 открыт",
@@ -4092,6 +3970,17 @@
       "de": "Reservemobilisierung Fertigkeitsränge",
       "ko": "예비군 동원 스킬 랭크",
       "zh": "预备役动员 技能等级"
+    },
+    "Resistance Research": {
+      "fr": "Recherche de résistance",
+      "ru": "Исследование сопротивления",
+      "tr": "Direnç Araştırması",
+      "pl": "Badanie odporności",
+      "es": "Investigación de resistencia",
+      "pt": "Pesquisa de Resistência",
+      "de": "Widerstandsforschung",
+      "ko": "저항 연구",
+      "zh": "抗性研究"
     },
     "Resistance and infection": {
       "es": "Resistencia e infección",
@@ -4280,6 +4169,17 @@
       "ko": "시즌 업적",
       "zh": "赛季成就"
     },
+    "Season Boost": {
+      "fr": "Bonus de saison",
+      "ru": "Усиление сезона",
+      "tr": "Sezon Güçlendirmesi",
+      "pl": "Wzmocnienie sezonowe",
+      "es": "Impulso de temporada",
+      "pt": "Impulso da Temporada",
+      "de": "Saison-Boost",
+      "ko": "시즌 버프",
+      "zh": "赛季增幅"
+    },
     "Season I Skill Point": {
       "fr": "Point de compétence de la saison I",
       "ru": "Очко навыка сезона I",
@@ -4290,6 +4190,17 @@
       "de": "Saison I Fertigkeitspunkt",
       "ko": "시즌 1 스킬 포인트",
       "zh": "赛季1技能点"
+    },
+    "Season Preview": {
+      "fr": "Aperçu de la saison",
+      "ru": "Предпросмотр сезона",
+      "tr": "Sezon Ön İzlemesi",
+      "pl": "Podgląd sezonu",
+      "es": "Vista previa de temporada",
+      "pt": "Prévia da Temporada",
+      "de": "Saison-Vorschau",
+      "ko": "시즌 미리보기",
+      "zh": "赛季前瞻"
     },
     "Season activities": {
       "es": "Actividades de temporada",
@@ -4389,6 +4300,17 @@
       "de": "Senden Sie Truppen, um den Bau zu beschleunigen. Für die Erstvermittlung gilt eine Schutzfrist von fünf Stunden. Organisieren Sie Garnisonen und Deckung, bevor dieser Schutz abläuft.",
       "ko": "군대를 보내 건설을 가속화하세요. 첫 번째 배치에는 5시간의 보호 기간이 있습니다. 보호가 만료되기 전에 수비대와 지원을 조직하십시오.",
       "zh": "派兵加速建设。第一次安置有五个小时的保护期。在保护到期之前组织驻军和保护。"
+    },
+    "Set aside shards and Skill Insignias to rebuild her stars and skills first.": {
+      "fr": "Prévoyez des fragments et des insignes de compétence pour remonter ses étoiles et ses compétences.",
+      "ru": "Запасите осколки и знаки навыков, чтобы восстановить её звёзды и уровни навыков.",
+      "tr": "Yıldızlarını ve becerilerini yeniden yükseltmek için Parça ve Beceri Nişanı ayırın.",
+      "pl": "Odłóż odłamki i odznaki umiejętności, by ponownie podnieść jej poziom gwiazdek i umiejętności.",
+      "es": "Reserva fragmentos e insignias de habilidad para volver a subir sus estrellas y habilidades.",
+      "pt": "Reserve fragmentos e insígnias de habilidade para voltar a subir as estrelas e habilidades dela.",
+      "de": "Lege Splitter und Fertigkeitsabzeichen zurück, damit du ihre Sterne und Fertigkeiten wieder steigern kannst.",
+      "ko": "별과 스킬 레벨을 다시 올릴 수 있도록 조각과 스킬 휘장을 미리 확보해 두세요.",
+      "zh": "提前留好碎片和技能徽章，以便重新提升她的星级和技能。"
     },
     "Shared Season 1": {
       "es": "Temporada 1 compartida",
@@ -4555,28 +4477,6 @@
       "ko": "병사 훈련 속도가 5% 증가한다.",
       "zh": "士兵训练速度提升5%。"
     },
-    "Source:": {
-      "es": "Fuente:",
-      "ru": "Источник:",
-      "fr": "Source :",
-      "pl": "Źródło:",
-      "tr": "Kaynak:",
-      "pt": "Fonte:",
-      "de": "Quelle:",
-      "ko": "출처:",
-      "zh": "来源："
-    },
-    "Sources and limits": {
-      "es": "Fuentes y límites",
-      "ru": "Источники и ограничения",
-      "fr": "Sources et limites",
-      "pl": "Źródła i ograniczenia",
-      "tr": "Kaynaklar ve sınırlar",
-      "pt": "Fontes e limites",
-      "de": "Quellen und Grenzen",
-      "ko": "소스 및 한도",
-      "zh": "来源和限制"
-    },
     "Spend Class Skill Points and claim free rewards.": {
       "es": "Gaste puntos de habilidad de clase y reclame recompensas gratuitas.",
       "ru": "Тратьте очки классовых навыков и получайте бесплатные награды.",
@@ -4587,6 +4487,17 @@
       "de": "Geben Sie Klassenfertigkeitspunkte aus und holen Sie sich kostenlose Belohnungen.",
       "ko": "클래스 스킬 포인트를 사용하고 무료 보상을 받으세요.",
       "zh": "花费职业技能点并领取免费奖励。"
+    },
+    "Spend Immune Protein to raise your troops’ Virus Resistance.": {
+      "fr": "Utilisez de la protéine immunitaire pour augmenter la résistance virale de vos troupes.",
+      "ru": "Используйте иммунный белок, чтобы повысить сопротивление вирусу у ваших войск.",
+      "tr": "Birliklerinizin Virüs Direnci’ni artırmak için Bağışıklık Proteini harcayın.",
+      "pl": "Wydawaj białko odpornościowe, by zwiększyć odporność na wirusa swoich oddziałów.",
+      "es": "Usa proteína inmunitaria para aumentar la resistencia viral de tus tropas.",
+      "pt": "Use proteína imune para aumentar a resistência viral das suas tropas.",
+      "de": "Setze Immunprotein ein, um den Viruswiderstand deiner Truppen zu erhöhen.",
+      "ko": "면역 단백질을 사용해 부대의 바이러스 저항을 높이세요.",
+      "zh": "消耗免疫蛋白，提高部队的病毒抗性。"
     },
     "Spend Stamina to start Bonecrusher Butcher rallies when the event is open. Victories can drop Aria Shards. The help caps rewarded clears at 20 per day, not the number of rallies you may start.": {
       "es": "Gasta resistencia para iniciar los mítines de Bonecrusher Butcher cuando el evento esté abierto. Las victorias pueden dejar caer Aria Shards. Los límites de ayuda recompensados ​​son 20 por día, no la cantidad de rallies que puedes iniciar.",
@@ -4609,6 +4520,17 @@
       "de": "Geben Sie Urankristall für Raffinerien aus. Geben Sie ihr Immunprotein für das Viruslabor aus.",
       "ko": "정유소에 우라늄 결정를 사용하세요. 바이러스 실험실에 면역 단백질를 사용하세요.",
       "zh": "在炼油厂上花费 铀结晶。将 免疫蛋白 花在 病毒实验室 上。"
+    },
+    "Spend it here before fighting the bosses. Higher resistance means more damage.": {
+      "fr": "Dépensez-la ici avant d’affronter les boss. Plus votre résistance est élevée, plus vous infligez de dégâts.",
+      "ru": "Потратьте белок здесь перед боем с боссами. Чем выше сопротивление, тем больше урон.",
+      "tr": "Bosslarla savaşmadan önce proteini burada harcayın. Direnç arttıkça verdiğiniz hasar artar.",
+      "pl": "Wydaj tu białko przed walką z bossami. Wyższa odporność zwiększa zadawane obrażenia.",
+      "es": "Gasta aquí la proteína antes de luchar contra los jefes. Cuanta más resistencia tengas, más daño infligirás.",
+      "pt": "Gaste a proteína aqui antes de enfrentar os chefes. Quanto maior a resistência, maior o dano.",
+      "de": "Gib das Protein hier aus, bevor du gegen die Bosse kämpfst. Je höher die Resistenz, desto mehr Schaden verursachst du.",
+      "ko": "보스와 싸우기 전에 이곳에서 단백질을 사용하세요. 저항력이 높을수록 더 큰 피해를 줍니다.",
+      "zh": "挑战首领前，先在这里消耗蛋白。抗性越高，造成的伤害越大。"
     },
     "Stamina Recovery": {
       "fr": "Récupération d'endurance",
@@ -4664,17 +4586,6 @@
       "de": "Beginnen Sie mit Beitrag Belohnung und Ausdauer-Wiederherstellung, wenn Sie regelmäßig spenden, helfen und kostenlose Ausdauer in Anspruch nehmen. Warten Sie lange Upgrades oder Forschungen, bevor Sie die aktiven Fertigkeiten der Stufe 15 nutzen.",
       "ko": "정기적으로 기부하고, 돕고, 무료 체력을 요청한다면 공헌 보상 및 체력 충만로 시작하세요. Lv.15 액티브 스킬을 사용하기 전에 긴 업그레이드나 연구를 대기열에 추가하세요.",
       "zh": "如果您定期捐赠、帮助和索取免费体力，请从 贡献嘉奖 和 体力充沛 开始。在使用 Lv.15 主动技能之前，请先进行长时间的升级或研究。"
-    },
-    "Start with a Lv.1 Military Stronghold. Work toward connected cities, then deploy to other Warzones when Expedition and its Alliance Outposts unlock.": {
-      "es": "Comience con un Bastión Militar Lv.1. Trabaja en ciudades conectadas y luego despliégate en otras zonas de guerra cuando Expedition y sus puestos avanzados de la Alianza se desbloqueen.",
-      "ru": "Начните с Военный опорный пункт 1-го уровня. Работайте над созданием связанных городов, а затем отправляйтесь в другие зоны боевых действий, когда откроются Экспедиция и ее аванпосты Альянса.",
-      "fr": "Commencez avec un Forteresse militaire Lv.1. Travaillez vers des villes connectées, puis déployez-vous dans d’autres zones de guerre lorsque l’expédition et ses avant-postes d’alliance se débloqueront.",
-      "pl": "Zacznij od Twierdza wojskowa poziomu 1. Pracuj w kierunku połączonych miast, a następnie rozmieszczaj się w innych Strefach Wojny, gdy Ekspedycja i jej Posterunki Sojuszu zostaną odblokowane.",
-      "tr": "Sv.1 Askeri Kale ile başlayın. Bağlantılı şehirlere doğru çalışın, ardından Expedition ve İttifak Karakollarının kilidi açıldığında diğer Savaş Bölgelerine konuşlandırın.",
-      "pt": "Comece com um Fortaleza Militar Lv.1. Trabalhe em direção a cidades conectadas e, em seguida, implante-se em outras zonas de guerra quando a Expedição e seus Postos Avançados da Aliança forem desbloqueados.",
-      "de": "Beginnen Sie mit einem Lv.1 Militärstützpunkt. Arbeite auf verbundene Städte hin und entsende sie dann in anderen Kriegsgebieten, wenn Expedition und ihre Außenposten der Allianz freigeschaltet werden.",
-      "ko": "Lv.1 군사 거점로 시작하세요. 연결된 도시를 향해 노력하고 Expedition과 Alliance Outposts가 잠금 해제되면 다른 Warzone에 배치하세요.",
-      "zh": "从 Lv.1 军事据点 开始。努力建设互联城市，然后在远征队及其联盟前哨解锁时部署到其他战区。"
     },
     "Stealth": {
       "fr": "Furtivité",
@@ -4973,17 +4884,6 @@
       "ko": "아래 날짜는 배송된 클라이언트의 S1 항목이며 Warzone 날짜가 아닙니다. 라이브 이벤트 패널에서 타이머와 요구 사항을 확인하세요.",
       "zh": "以下日期是已发货客户端中的 S1 条目，而不是您的战区日期。在现场活动面板中确认计时器和要求。"
     },
-    "The shipped S1 examples run 14 days of preparation and 49 days of play before settlement. Use your own Warzone’s in-game timer. Build 344 does not list Warzone 117.": {
-      "es": "Los ejemplos S1 enviados requieren 14 días de preparación y 49 días de juego antes de la liquidación. Usa el temporizador del juego de tu propia Warzone. La compilación 344 no incluye Warzone 117.",
-      "ru": "Отправленные экземпляры S1 требуют 14 дней подготовки и 49 дней игры до расчета. Используйте внутриигровой таймер вашей собственной Warzone. В сборке 344 не указана Warzone 117.",
-      "fr": "Les exemples S1 expédiés nécessitent 14 jours de préparation et 49 jours de jeu avant le règlement. Utilisez le minuteur de votre propre Warzone dans le jeu. La build 344 ne répertorie pas Warzone 117.",
-      "pl": "Dostarczone egzemplarze S1 trwają 14 dni przygotowań i 49 dni gry przed rozliczeniem. Użyj własnego licznika czasu w grze Warzone. Wersja 344 nie zawiera Warzone 117.",
-      "tr": "Gönderilen S1 örnekleri, karara bağlanmadan önce 14 günlük hazırlık ve 49 günlük oyun sürecini çalıştırıyor. Kendi Warzone'unuzun oyun içi zamanlayıcısını kullanın. Derleme 344, Warzone 117'yi listelemiyor.",
-      "pt": "Os exemplares S1 enviados duram 14 dias de preparação e 49 dias de jogo antes da liquidação. Use o cronômetro do jogo do seu próprio Warzone. Build 344 não lista Warzone 117.",
-      "de": "Die ausgelieferten S1-Beispiele durchlaufen 14 Tage Vorbereitungszeit und 49 Tage Spielzeit vor der Abrechnung. Verwenden Sie den In-Game-Timer Ihres eigenen Warzone. Build 344 listet Warzone 117 nicht auf.",
-      "ko": "배송된 S1 예시는 정산 전 14일의 준비 기간과 49일의 플레이 기간을 실행합니다. 나만의 Warzone의 게임 내 타이머를 사용하세요. 빌드 344에는 Warzone 117이 나열되지 않습니다.",
-      "zh": "发货的 S1 示例在结算前经过 14 天的准备和 49 天的试用。使用您自己的战区游戏内计时器。 Build 344 未列出 Warzone 117。"
-    },
     "These are the building requirements. Check your milestone panel for any additional unlocks.": {
       "es": "Estos son los requisitos de construcción. Consulte su panel de hitos para ver si hay desbloqueos adicionales.",
       "ru": "Это требования к строительству. Проверьте панель этапов на наличие дополнительных разблокировок.",
@@ -4994,6 +4894,17 @@
       "de": "Das sind die Bauvoraussetzungen. Überprüfen Sie Ihr Meilensteinfenster auf zusätzliche Freischaltungen.",
       "ko": "이것이 건물 요구 사항입니다. 추가 잠금 해제가 있는지 마일스톤 패널을 확인하세요.",
       "zh": "这些是建筑要求。检查您的里程碑面板是否有任何其他解锁。"
+    },
+    "This resistance is separate from your Virus Lab. It resets after the event, and leftover Immune Protein from the warm-up becomes General Speedups.": {
+      "fr": "Cette résistance est distincte de celle du Laboratoire de virologie. Elle est réinitialisée à la fin de l’événement. La Protéine immunitaire restante de la préparation est convertie en accélérateurs universels.",
+      "ru": "Это сопротивление не связано с лабораторией вирусов. После события оно сбрасывается, а оставшийся иммунный белок события превращается в универсальные ускорения.",
+      "tr": "Bu direnç, Virüs Laboratuvarındaki dirençten ayrıdır. Etkinlik bitince sıfırlanır ve hazırlıktan kalan Bağışıklık Proteini Genel Hızlandırmalara dönüşür.",
+      "pl": "Ta odporność nie pochodzi z Laboratorium wirusowego. Zeruje się po wydarzeniu, a pozostałe białko odpornościowe z rozgrzewki zamienia się w uniwersalne przyspieszenia.",
+      "es": "Esta resistencia es independiente de la del Laboratorio del Virus. Se reinicia al terminar el evento y la Proteína inmunitaria sobrante de la preparación se convierte en aceleradores generales.",
+      "pt": "Essa resistência é separada da do Laboratório Viral. Ela é reiniciada ao fim do evento, e a Proteína Imune que sobrar do aquecimento vira acelerações gerais.",
+      "de": "Diese Resistenz ist unabhängig vom Viruslabor. Sie wird nach dem Event zurückgesetzt. Übriges Immunprotein aus der Vorbereitung wird in allgemeine Beschleuniger umgewandelt.",
+      "ko": "이 저항력은 바이러스 실험실과 별개입니다. 이벤트가 끝나면 초기화되고, 준비 이벤트에서 남은 면역 단백질은 일반 가속 아이템으로 바뀝니다.",
+      "zh": "这项抗性与病毒实验室无关。活动结束后会重置，剩余的预热免疫蛋白会转换为通用加速道具。"
     },
     "Tier": {
       "es": "Nivel",
@@ -5193,6 +5104,17 @@
       "ko": "잠금 해제자",
       "zh": "解锁者"
     },
+    "Upgrade the Virus Lab to Lv.30 as soon as you can.": {
+      "fr": "Montez le Laboratoire de virologie au niveau 30 dès que possible.",
+      "ru": "Как можно скорее улучшите Лабораторию вирусов до 30-го уровня.",
+      "tr": "Virüs Laboratuvarı’nı mümkün olan en kısa sürede Sv.30’a yükseltin.",
+      "pl": "Jak najszybciej ulepsz Laboratorium wirusowe do 30. poziomu.",
+      "es": "Mejora el Laboratorio del Virus al nivel 30 cuanto antes.",
+      "pt": "Melhore o Laboratório Viral para o nível 30 assim que puder.",
+      "de": "Verbessere das Viruslabor so früh wie möglich auf Stufe 30.",
+      "ko": "바이러스 실험실을 가능한 한 빨리 Lv.30까지 업그레이드하세요.",
+      "zh": "尽快将病毒实验室升至30级。"
+    },
     "Uranium Crystal Refineries I–IV": {
       "es": "Cristal de uranio Refinerías I–IV",
       "ru": "Урановый кристалл НПЗ I–IV",
@@ -5391,17 +5313,6 @@
       "ko": "자신 또는 연맹원 1명에게 4시간 동안 지속되는 실드를 부여한다(중첩 불가). 쿨타임 71.5시간.",
       "zh": "对自己或一名盟友使用，使目标获得4小时的护盾（不可叠加）。冷却71.5小时。"
     },
-    "Use settlement to claim and distribute rewards.": {
-      "es": "Utilice la liquidación para reclamar y distribuir recompensas.",
-      "ru": "Используйте поселение, чтобы требовать и распределять вознаграждения.",
-      "fr": "Utilisez le règlement pour réclamer et distribuer des récompenses.",
-      "pl": "Użyj rozliczenia, aby odebrać i rozdać nagrody.",
-      "tr": "Ödülleri talep etmek ve dağıtmak için uzlaşmayı kullanın.",
-      "pt": "Use a liquidação para reivindicar e distribuir recompensas.",
-      "de": "Nutzen Sie die Abrechnung, um Prämien einzufordern und zu verteilen.",
-      "ko": "결제를 사용하여 보상을 청구하고 분배하세요.",
-      "zh": "使用结算来领取和分配奖励。"
-    },
     "Use the Class Hall, Season Achievements and the season exchange when available. See": {
       "es": "Utilice Sala de clases, Logros de Temporada y el intercambio de temporada cuando esté disponible. Ver",
       "ru": "Используйте Зал классов, Достижения сезона и сезонную биржу, если они доступны. См.",
@@ -5434,6 +5345,17 @@
       "de": "Verwenden Sie diese Baumenü-Renderings im Spiel, um die neuen Gebäude zu erkennen. Beginnen Sie mit dem Labor und der Raffinerie I; Die anderen Gebäude dienen unterschiedlichen Zwecken.",
       "ko": "이러한 게임 내 건설 메뉴 렌더링을 사용하여 새 건물을 인식하세요. 실험실과 정제소 I부터 시작하세요. 다른 건물은 다른 목적으로 사용됩니다.",
       "zh": "使用这些游戏内的建筑菜单渲染来识别新建筑。从实验室和炼油厂 I 开始；其他建筑物有不同的用途。"
+    },
+    "Virus Boss Invasion": {
+      "fr": "Invasion du boss viral",
+      "ru": "Вторжение вирусного босса",
+      "tr": "Virüs Bossu İstilası",
+      "pl": "Inwazja Wirusowego Bossa",
+      "es": "Invasión del jefe viral",
+      "pt": "Invasão do Chefe Viral",
+      "de": "Virus-Boss-Invasion",
+      "ko": "바이러스 보스 침입",
+      "zh": "病毒首领入侵"
     },
     "Virus Experiment": {
       "fr": "Expérience virale",
@@ -5512,6 +5434,17 @@
       "ko": "바이러스 저항. 의도적인 재구축을 위해 티켓을 저장하세요. 포인트 할당을 변경하기 위해 수업을 전환할 필요가 없습니다.",
       "zh": "病毒抗性。为刻意重建留一张票；您无需切换班级即可更改积分分配。"
     },
+    "Virus Spread": {
+      "fr": "Propagation du virus",
+      "ru": "Распространение вируса",
+      "tr": "Virüs Yayılımı",
+      "pl": "Rozprzestrzenianie wirusa",
+      "es": "Propagación de virus",
+      "pt": "Disseminação do Vírus",
+      "de": "Virus-Ausbreitung",
+      "ko": "바이러스 확산",
+      "zh": "病毒蔓延"
+    },
     "Virus Stack Limit +50.": {
       "fr": "Limite de charges virales +50.",
       "ru": "Лимит зарядов вируса: +50.",
@@ -5566,6 +5499,17 @@
       "de": "Kunstwerke der Kriegsanführer-Klasse",
       "ko": "전쟁 군주 클래스 아트워크",
       "zh": "战争领袖级艺术品"
+    },
+    "Warm-up events": {
+      "fr": "Événements de préparation",
+      "ru": "События подготовки",
+      "tr": "Hazırlık etkinlikleri",
+      "pl": "Wydarzenia rozgrzewkowe",
+      "es": "Eventos de preparación",
+      "pt": "Eventos de aquecimento",
+      "de": "Vorbereitungs-Events",
+      "ko": "시즌 준비 이벤트",
+      "zh": "赛季预热活动"
     },
     "Warrior Base": {
       "fr": "Base de guerrier",
@@ -5654,6 +5598,17 @@
       "de": "Was passiert, wenn Staffel 1 beginnt?",
       "ko": "시즌 1이 열리면 어떻게 되나요?",
       "zh": "第一季开放后会发生什么？"
+    },
+    "What resets": {
+      "fr": "Ce qui est réinitialisé",
+      "ru": "Что сбрасывается",
+      "tr": "Neler sıfırlanır?",
+      "pl": "Co się resetuje?",
+      "es": "Qué se reinicia",
+      "pt": "O que é reiniciado",
+      "de": "Was zurückgesetzt wird",
+      "ko": "초기화되는 항목",
+      "zh": "重置内容"
     },
     "When attacking a burning Base, enemy soldier death rate +1%.": {
       "fr": "Lors de l'attaque d'une base en feu, taux de perte des soldats ennemis +1%.",
@@ -6128,6 +6083,28 @@
       "ko": "그렇습니다. 전직 증명서를 사용하면 다시 선택하고 사용한 포인트를 환불받을 수 있습니다. 직업 전당에는 Lv.10에 무료 인증서가 나열되어 있습니다. 클래스를 유지하고 트리만 다시 작성하려면 대신 스킬 초기화권를 사용하세요.",
       "zh": "是的。 转职证明 可以让您重新选择并退还已花费的积分。 职业大厅 列出了 Lv.10 的免费证书。要保留您的类并仅重建树，请改用 技能重置券。"
     },
+    "You get three rewarded attacks per day across both bosses. When a boss falls, look for Reward Chests on the map. They’re first come, first served.": {
+      "fr": "Vous recevez des récompenses pour 3 attaques par jour au total, tous boss confondus. Quand un boss tombe, cherchez les coffres de récompense sur la carte. Les premiers arrivés sont les premiers servis.",
+      "ru": "В день награды дают за 3 атаки суммарно на обоих боссов. Когда босс падёт, ищите сундуки с наградами на карте. Их получит тот, кто успеет первым.",
+      "tr": "İki boss için toplamda günde 3 saldırı ödül verir. Bir boss yenilince haritada ödül sandıklarını arayın. Sandıkları ilk ulaşanlar alır.",
+      "pl": "Za ataki na obu bossów można dostać nagrody łącznie 3 razy dziennie. Gdy boss padnie, szukaj na mapie skrzyń z nagrodami. Kto pierwszy, ten lepszy.",
+      "es": "Los dos jefes comparten un límite de 3 ataques con recompensa al día. Cuando caiga un jefe, busca los cofres de recompensa en el mapa. Se los lleva quien llegue primero.",
+      "pt": "Os dois chefes compartilham o limite de 3 ataques com recompensa por dia. Quando um chefe cair, procure os baús de recompensa no mapa. Quem chegar primeiro leva.",
+      "de": "Für beide Bosse zusammen gibt es täglich für 3 Angriffe eine Belohnung. Wenn ein Boss fällt, such auf der Karte nach Belohnungstruhen. Wer zuerst kommt, bekommt sie.",
+      "ko": "두 보스를 합쳐 하루에 3번의 공격에서 보상을 받습니다. 보스가 쓰러지면 지도에서 보상 상자를 찾으세요. 상자는 선착순입니다.",
+      "zh": "两个首领共用每日 3 次攻击奖励。首领被击败后，到地图上找奖励宝箱。宝箱先到先得。"
+    },
+    "Your base does not need to be Lv.30 to do this.": {
+      "fr": "Votre Base n’a pas besoin d’être au niveau 30 pour cela.",
+      "ru": "Для этого не нужно повышать Базу до 30-го уровня.",
+      "tr": "Bunun için Üssünüzün Sv.30 olması gerekmez.",
+      "pl": "Twoja Baza nie musi mieć poziomu 30.",
+      "es": "Tu Base no necesita estar en el nivel 30 para hacerlo.",
+      "pt": "Sua Base não precisa estar no nível 30 para isso.",
+      "de": "Deine Basis muss dafür nicht auf Stufe 30 sein.",
+      "ko": "이를 위해 기지가 Lv.30일 필요는 없습니다.",
+      "zh": "无需将基地升到30级。"
+    },
     "Your first day, free class items, hero upgrades, and the path from your first stronghold to cross-Warzone play.": {
       "es": "Tu primer día, artículos de clase gratuitos, mejoras de héroe y el camino desde tu primera fortaleza hasta el juego en Warzone.",
       "ru": "Ваш первый день, бесплатные классовые предметы, улучшения героев и путь от вашей первой крепости к игре в разных зонах боевых действий.",
@@ -6260,38 +6237,16 @@
       "ko": "Lv.5에서 일일 무료 스태미나를 청구하기 전 그것은 수동적 재생이 아니라 그 주장을 강화합니다.",
       "zh": "在领取每日免费耐力之前达到 Lv.5；它增强了这一主张，而不是被动再生。"
     },
-    "building tables, help text and repair hint": {
-      "es": "tablas de construcción, texto de ayuda y sugerencia de reparación",
-      "ru": "сборочные таблицы, текст справки и подсказки по ремонту",
-      "fr": "construction de tables, texte d'aide et astuce de réparation",
-      "pl": "budowanie tabel, tekst pomocy i wskazówka dotycząca naprawy",
-      "tr": "Bina tabloları, yardım metni ve onarım ipucu",
-      "pt": "construção de tabelas, texto de ajuda e dicas de reparo",
-      "de": "Aufbautabellen, Hilfetext und Reparaturhinweis",
-      "ko": "테이블 만들기, 도움말 텍스트 및 수리 힌트",
-      "zh": "构建表格、帮助文本和修复提示"
-    },
-    "capture rules, outpost help and rules table": {
-      "es": "reglas de captura, ayuda avanzada y tabla de reglas",
-      "ru": "правила захвата, справка по аванпосту и таблица правил",
-      "fr": "capture des règles, aide de l'avant-poste et tableau des règles",
-      "pl": "zasady przechwytywania, pomoc dla placówki i tabela zasad",
-      "tr": "yakalama kuralları, karakol yardımı ve kurallar tablosu",
-      "pt": "regras de captura, ajuda do posto avançado e tabela de regras",
-      "de": "Capture-Regeln, Outpost-Hilfe und Regeltabelle",
-      "ko": "캡처 규칙, 전초 기지 도움말 및 규칙 테이블",
-      "zh": "捕获规则、前哨站帮助和规则表"
-    },
-    "event help, milestones and Alliance Star reward tables": {
-      "es": "ayuda de eventos, hitos y tablas de recompensas Estrella de la alianza",
-      "ru": "справка по событиям, этапы и таблицы наград Звезда альянса",
-      "fr": "aide à l'événement, jalons et tableaux de récompenses Champion de l'alliance",
-      "pl": "pomoc w wydarzeniu, kamienie milowe i tabele nagród Gwiazda Sojuszu",
-      "tr": "event help, milestones and İttifak Yıldızı reward tables",
-      "pt": "ajuda do evento, marcos e tabelas de recompensa Estrela da Aliança",
-      "de": "Event-Hilfe, Meilensteine und Allianz-Star-Belohnungstabellen",
-      "ko": "이벤트 도움말, 마일스톤 및 연맹 스타 보상 테이블",
-      "zh": "活动帮助、里程碑和 联盟之星 奖励表"
+    "before repeating fights.": {
+      "fr": "avant de répéter un combat.",
+      "ru": "прежде чем повторять бой.",
+      "tr": "— aynı savaşı tekrarlamadan önce.",
+      "pl": "przed powtórzeniem walki.",
+      "es": "antes de repetir un combate.",
+      "pt": "antes de repetir uma luta.",
+      "de": "bevor du einen Kampf wiederholst.",
+      "ko": "을 확인하세요.",
+      "zh": "。"
     },
     "for eligible wounded troops. Save active effects for when the alliance can use them.": {
       "es": "para tropas heridas elegibles. Guarde los efectos activos para cuando la alianza pueda usarlos.",
@@ -6325,17 +6280,6 @@
       "de": "Hilft, wenn Sie früh Monster farmen. Befolgen Sie die verlinkten Voraussetzungen durch",
       "ko": "일찍 몬스터를 키우는 데 도움이 됩니다. 다음을 통해 연결된 전제 조건을 따르세요.",
       "zh": "如果你想尽早耕种怪物，这会有所帮助。遵循链接的先决条件"
-    },
-    "hero promotion and Exclusive Weapon tables and help": {
-      "es": "Promoción de héroes y tablas de armas exclusivas y ayuda.",
-      "ru": "Таблицы продвижения героев и эксклюзивного оружия, а также помощь",
-      "fr": "promotion des héros et tables d'armes exclusives et aide",
-      "pl": "promocja bohaterów i ekskluzywne stoły z bronią oraz pomoc",
-      "tr": "kahraman tanıtımı ve Özel Silah tabloları ve yardım",
-      "pt": "promoção de heróis e tabelas de armas exclusivas e ajuda",
-      "de": "Helden-Promotion und exklusive Waffentabellen und Hilfe",
-      "ko": "영웅 승급 및 전용 무기 표 및 도움말",
-      "zh": "英雄升级和专属武器表和帮助"
     },
     "if you help and donate regularly. Take": {
       "es": "si ayudas y donas regularmente. tomar",
@@ -6436,17 +6380,6 @@
       "ko": "또는",
       "zh": "或"
     },
-    "reward group and reset text": {
-      "es": "grupo de recompensa y restablecer texto",
-      "ru": "группа вознаграждений и текст сброса",
-      "fr": "groupe de récompense et réinitialisation du texte",
-      "pl": "grupa nagród i tekst resetowania",
-      "tr": "Ödül grubu ve sıfırlama açıklaması",
-      "pt": "grupo de recompensa e texto de redefinição",
-      "de": "Belohnungsgruppe und Text zurücksetzen",
-      "ko": "보상 그룹 및 텍스트 재설정",
-      "zh": "奖励组和重置文本"
-    },
     "the shared tree": {
       "es": "el árbol compartido",
       "ru": "общее дерево",
@@ -6490,17 +6423,6 @@
       "de": "mit einem Verbündeten.",
       "ko": "동맹과 함께.",
       "zh": "与盟友。"
-    },
-    "world milestones and personal chapter tables": {
-      "es": "Hitos mundiales y tablas de capítulos personales.",
-      "ru": "мировые вехи и таблицы личных глав",
-      "fr": "jalons mondiaux et tables de chapitres personnels",
-      "pl": "światowe kamienie milowe i osobiste tabele rozdziałów",
-      "tr": "dünya kilometre taşları ve kişisel bölüm tabloları",
-      "pt": "marcos mundiais e tabelas de capítulos pessoais",
-      "de": "Weltmeilensteine und persönliche Kapiteltabellen",
-      "ko": "세계 이정표 및 개인 챕터 테이블",
-      "zh": "世界里程碑和个人章节表"
     },
     "{0} skill shown": {
       "es": "Habilidad {0} mostrada",
