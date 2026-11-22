@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-i18n-page-only="true" data-i18n-languages="en,fr,ru,tr,pl,es,pt,de,ko,zh">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="description" content="A practical Season 1 guide to Class Hall, Virus Resistance, buildings, milestones, territory and rewards."><meta name="theme-color" content="#000000">
@@ -11,6 +11,10 @@
   <header class="app-header"><div class="header-inner">
     <a class="brand" href="../"><img src="../assets/ui/chips.webp" alt="" width="22" height="22">ZR:Reference</a>
     <nav class="desktop-nav" aria-label="Site"><a href="../">Home</a><a href="../base/">Base</a><a href="../heroes/">Heroes</a><a href="../hero-exp/">Hero EXP</a><a href="../research/">Research</a><a href="../fighter/">Fighter</a><a href="../season-1/" class="active" aria-current="page">Season 1</a></nav>
+    <label class="language-control">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
+      <select id="language-select" aria-label="Language"><option value="en" data-i18n-ignore>English</option></select>
+    </label>
     <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch theme"></button>
   </div></header>
   <main class="season" id="main">
@@ -159,6 +163,9 @@
 
   </main>
   <nav class="bottom-nav season-bottom" aria-label="Site"><a href="../">Home</a><a href="../season-1/" class="active" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 21V3m0 1h13l-2 4 2 4H5"/></svg><span>Season 1</span></a><a href="../base/">Base</a><a href="../heroes/">Heroes</a></nav>
+  <script src="../i18n/season-1.js"></script>
+  <script src="../i18n.js"></script>
+  <script src="../assets/season-1/localize.js"></script>
   <script src="../assets/app.js"></script>
   <script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('../sw.js?v=6').catch(() => {});</script>
 </body>
