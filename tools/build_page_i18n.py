@@ -6,16 +6,24 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 LANGUAGES = ("fr", "ru", "tr", "pl", "es", "pt", "de", "ko", "zh")
 PAGES = ("home", "heroes", "hero-exp", "research", "season-1")
+PAGE_LANGUAGES = {page: LANGUAGES + ("th",) for page in ("home", "season-1")}
+
+
+def page_languages(page):
+    return PAGE_LANGUAGES.get(page, LANGUAGES)
 
 
 def main():
     for page in PAGES:
         source = ROOT / "data/ui_i18n" / f"{page}.json"
         data = json.loads(source.read_text()) if source.exists() else {"strings": {}}
-        dictionaries = {code: {} for code in LANGUAGES}
+        languages = page_languages(page)
+        dictionaries = {code: {} for code in languages}
         missing = []
         for english, translations in data.get("strings", {}).items():
-            for code in LANGUAGES:
+            for code in languages:
+                if code == "th" and not translations.get(code, "").strip():
+                    raise ValueError(f"{page}: missing Thai translation for {english!r}")
                 value = translations.get(code, english)
                 dictionaries[code][english] = value
                 if value == english:

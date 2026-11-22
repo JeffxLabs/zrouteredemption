@@ -5,7 +5,9 @@ import re
 import unittest
 from html.parser import HTMLParser
 
-from build_page_i18n import LANGUAGES
+from build_page_i18n import page_languages
+
+LANGUAGES = page_languages("season-1")
 from check_season1 import ROOT, GUIDE, SKILLS
 
 
@@ -68,6 +70,30 @@ class SeasonOneLocales(unittest.TestCase):
                 self.assertTrue(value.strip(), key)
                 self.assertEqual(sorted(re.findall(r'\{\d+\}', key)), sorted(re.findall(r'\{\d+\}', value)), key)
                 self.assertNotIn('ZXQ', value)
+
+    def test_thai_is_available_with_client_terms(self):
+        for route in ('', GUIDE, SKILLS):
+            html = (ROOT / route / 'index.html').read_text()
+            self.assertRegex(html, r'data-i18n-languages="[^"]*\bth\b')
+        for english, thai in (
+            ('Radiated Land', 'แดนรังสี'),
+            ('Virus Boss Invasion', 'บอสไวรัสบุก'),
+            ('Resistance Research', 'การวิจัยความต้านทาน'),
+            ('Season Boost', 'บัฟซีซัน'),
+        ):
+            self.assertEqual(self.data[english]['th'], thai)
+        receipt = json.loads((ROOT / 'data/ui_i18n/season-1-provenance.json').read_text())
+        self.assertEqual(receipt['thai']['rank_rows'], 152)
+        self.assertIn('lang_hmi_th', receipt['bundles_by_client_locale']['th'])
+        self.assertIn('lang_annou_th', receipt['bundles_by_client_locale']['th'])
+        for english, row in self.data.items():
+            self.assertIn('th', row, english)
+            self.assertRegex(row['th'], r'[\u0e00-\u0e7f]', english)
+            self.assertNotRegex(row['th'], r'ZXQ|[\ue000-\uf8ff]')
+        home = json.loads((ROOT / 'data/ui_i18n/home.json').read_text())['strings']
+        self.assertEqual(home['Radiated Land']['th'], self.data['Radiated Land']['th'])
+        self.assertTrue(all(re.search(r'[\u0e00-\u0e7f]', row['th']) for row in home.values()))
+        self.assertIn('"./assets/fonts/noto-sans-thai.woff2"', (ROOT / 'sw.js').read_text())
 
     def test_rank_effects_and_client_glossary(self):
         ranks = Copy(ROOT / SKILLS / 'index.html').rank_rows
