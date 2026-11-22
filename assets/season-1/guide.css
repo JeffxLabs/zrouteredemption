@@ -74,3 +74,76 @@ html.day .season { --season: #4e600c; --season-wash: #edf0db; }
 .season-hero img { object-position: center 44%; }
 .season-bottom a { min-height: 44px; justify-content: center; }
 @media (max-width: 520px) { .season-hero::after { background: linear-gradient(0deg, #101508 0%, #101508e8 53%, #10150835 100%); } .season-hero { min-height: 310px; } }
+
+/* Guide panels and reusable game sprites */
+.season .phase-grid, .season .item-grid, .season .activity-grid, .season .hero-change-grid,
+.season .outpost-grid, .season .skill-index, .season .skill-grid { display: grid; gap: 12px; }
+.season .phase-grid { margin: 20px 0; }
+.season .phase-grid > div, .season .activity-grid > div, .season .talent-item, .season .hero-change {
+  min-width: 0; border: 1px solid var(--line2); border-radius: 10px; padding: 14px; background: var(--s2);
+}
+.season .phase-grid h3, .season .activity-grid h3, .season .talent-item h3, .season .hero-change h3, .season .aria-promo h3 { margin: 0 0 .45em; }
+.season .phase-grid .eyebrow, .season .hero-change .eyebrow, .season .aria-promo .eyebrow { margin-bottom: .4em; }
+.season .talent-item { display: flex; gap: 12px; align-items: start; }
+.season .talent-item > div { min-width: 0; }
+.season .game-icon { display: inline-block; flex: 0 0 auto; width: 48px; height: 48px; object-fit: contain; }
+.season .with-icon { display: flex; align-items: center; gap: 10px; }
+.season .season-action { display: inline-flex; align-items: center; min-height: 44px; margin-top: 8px; padding: 8px 14px; border: 1px solid var(--line2); border-radius: 8px; background: var(--season-wash); color: var(--season); font-weight: 750; }
+.season .split + .outpost-grid, .season .hero-change-grid { margin-bottom: 1em; }
+.season .outpost-grid { align-items: start; margin: 0 0 1em; }
+.season .outpost-grid ol, .season .outpost-grid figure { margin: 0; }
+.season .outpost-grid figure img { object-position: center 42%; }
+.season .aria-promo { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; padding: 16px; margin: 18px 0; border-radius: 12px; background: var(--season-wash); }
+.season .aria-promo > div:last-child { flex: 1 1 270px; min-width: 0; }
+.season .aria-portraits, .season .hero-change-top { display: flex; align-items: center; gap: 6px; }
+.season .hero-change-top { margin-bottom: 10px; }
+.season .hero-head, .season .weapon-icon { object-fit: contain; }
+.season .hero-head { border-radius: 12px; }
+.season .aria-portraits { flex-wrap: wrap; }
+.season .hero-change-grid p, .season .activity-grid p { font-size: .95rem; }
+
+/* Skill filters enhance a fully readable static reference. */
+.season [hidden] { display: none !important; }
+.season .skill-head .eyebrow { margin: 18px 0 0; }
+.season .skill-index a { display: flex; min-height: 76px; align-items: center; gap: 12px; border: 1px solid var(--line2); border-radius: 10px; padding: 12px; background: var(--s1); color: var(--text); text-decoration: none; }
+.season .skill-index a:hover { border-color: var(--season); }
+.season .skill-index strong, .season .skill-index small { display: block; }
+.season .skill-index small, .season .skill-helper { color: var(--muted); }
+.season .skill-helper { margin-top: 14px; font-size: .9rem; }
+.season .skill-filter { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: end; gap: 10px; background: var(--s1); border: 1px solid var(--line2); border-radius: 12px; padding: 14px; }
+.season .skill-filter > div:first-child, .season .skill-filter #skill-count { grid-column: 1 / -1; }
+.season .skill-filter label { display: block; margin-bottom: 3px; font-size: .88rem; font-weight: 700; }
+.season .skill-filter input, .season .skill-filter select, .season .skill-filter button { font: inherit; min-width: 0; min-height: 44px; width: 100%; padding: 6px 8px; border: 1px solid var(--line2); border-radius: 7px; background: var(--s2); color: var(--text); }
+.season .skill-filter button { cursor: pointer; }
+.season .skill-filter button:hover { background: var(--s3); }
+.season #skill-count { margin: 0; color: var(--muted); font-size: .87rem; }
+.season .skill-class { border-top: 1px solid var(--line2); padding-top: 22px; }
+.season .skill-tier h3 { margin: 20px 0 8px; color: var(--season); font-size: .9rem; letter-spacing: .04em; }
+.season .skill-grid { align-items: start; }
+.season .skill-card { margin: 0; min-width: 0; }
+.season .skill-card summary { display: grid; grid-template-columns: 42px minmax(0, 1fr) 16px; align-items: start; gap: 10px; padding: 12px; list-style: none; }
+.season .skill-card summary::-webkit-details-marker { display: none; }
+.season .skill-icon { width: 42px; height: 42px; background: var(--s1); border-radius: 7px; }
+.season .skill-name { display: block; font-size: .98rem; line-height: 1.28; }
+.season .skill-tags { display: flex; flex-wrap: wrap; gap: 4px; margin: 5px 0; }
+.season .skill-tags span { background: var(--season-wash); color: var(--season); border-radius: 4px; padding: 1px 6px; font-size: .74rem; line-height: 1.55; }
+.season .skill-preview { display: block; color: var(--muted); font-size: .86rem; font-weight: 400; line-height: 1.48; }
+.season .skill-chevron { color: var(--season); justify-self: center; }
+.season .skill-card[open] .skill-chevron { transform: rotate(45deg); }
+.season .skill-card[open] summary { border-bottom: 1px solid var(--line2); margin-bottom: 10px; }
+.season .skill-anchor { display: inline-flex; align-items: center; min-height: 44px; font-size: .85rem; }
+.season :is(a, button, input, select, summary, [tabindex]):focus-visible { outline: 2px solid var(--season); outline-offset: 3px; }
+@media (max-width: 649px) {
+  .season .skill-index { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+  .season .skill-index a { flex-direction: column; justify-content: start; gap: 5px; padding: 8px 4px; text-align: center; font-size: .85rem; line-height: 1.28; }
+  .season .skill-index .game-icon { width: 34px; height: 34px; }
+  .season .skill-index small { display: none; }
+}
+@media (min-width: 650px) {
+  .season .item-grid, .season .activity-grid, .season .skill-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .season .outpost-grid { grid-template-columns: minmax(140px, 1fr) 3fr; }
+  .season .outpost-grid figure img { max-height: 335px; }
+  .season .skill-index, .season .phase-grid, .season .hero-change-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .season .skill-filter { grid-template-columns: 2fr 1.3fr 1.1fr auto; }
+  .season .skill-filter > div:first-child { grid-column: auto; }
+}

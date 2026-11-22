@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Dependency-free checks for the Season 1 guide and GitHub Pages links."""
+import json
 import re
 import unittest
 from collections import Counter
@@ -51,7 +52,13 @@ class SeasonOne(unittest.TestCase):
                     local = ROOT / url.path.removeprefix(BASE)
                     self.assertTrue((local / 'index.html' if local.is_dir() else local).is_file(), link)
                     if url.fragment:
-                        self.assertIn(url.fragment, Page(url.path.removeprefix(BASE)).targets, link)
+                        route_target = url.path.removeprefix(BASE)
+                        if route_target == 'heroes/' and re.fullmatch(r'hero-\d+', url.fragment):
+                            # The hero directory interprets its modal deep links at runtime.
+                            heroes = json.loads((ROOT / 'data/heroes_directory.json').read_text())
+                            self.assertIn(int(url.fragment[5:]), {hero['id'] for hero in heroes}, link)
+                        else:
+                            self.assertIn(url.fragment, Page(route_target).targets, link)
 
     def test_navigation_covers_player_decisions(self):
         targets = Page(GUIDE).targets
