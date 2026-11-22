@@ -15,6 +15,26 @@ class IllustratedGuide(unittest.TestCase):
         self.assertEqual({int(m[1]) for href in guide.links() if (m := re.fullmatch(r'../heroes/#hero-(\d+)', href))},
                          {30003, 31003, 30006, 50006, 50011})
 
+    def test_buildings_and_exclusive_weapons_show_in_game_art(self):
+        guide = Page(GUIDE)
+        html = (ROOT / GUIDE / 'index.html').read_text()
+        self.assertNotIn('Wait for the server restart', html)
+        self.assertIn('50 matching weapon shards', html)
+        expected = {'class-hall', 'virus-lab', 'refinery', 'world-geographic',
+                    'unit-type-base', 'warrior-base', 'assault-base', 'tactical-base',
+                    'emergency-center', 'radiation-shelter',
+                    'weapon-monroe', 'weapon-leah', 'weapon-yana'}
+        folder = 'assets/season-1/field-guide/'
+        images = {href for href in guide.links('img', 'src') if href.startswith('../' + folder)}
+        self.assertEqual(images, {'../' + folder + name + '.webp' for name in expected})
+        manifest = json.loads((ROOT / folder / 'sources.json').read_text())['sprites']
+        self.assertEqual(set(manifest), expected)
+        sw = (ROOT / 'sw.js').read_text()
+        for name, art in manifest.items():
+            path = folder + name + '.webp'
+            self.assertIn('"./' + path + '"', sw)
+            self.assertEqual(hashlib.sha256((ROOT / path).read_bytes()).hexdigest(), art['webp_sha256'])
+
     def test_every_skill_can_be_linked_and_rank_rows_are_preserved(self):
         page = Page(SKILLS)
         self.assertEqual(len([n for n in page.targets if re.fullmatch(r'skill-\d+', n)]), 45)

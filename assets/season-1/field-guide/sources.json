@@ -1,0 +1,150 @@
+{
+  "build": 344,
+  "catalog": "V202611021100",
+  "catalog_sha256": "855e10883a4a0f0ca8365861f95dac2a4e6e9ed2973fe628f1dda9d73ac34f95",
+  "sprites": {
+    "class-hall": {
+      "atlas": "UI_BuildingIcon",
+      "sprite": "Icon_S1Bulid_Professional_Association",
+      "member": "assets/BuiltinFiles/P1/6369f3b315964f893fd6fed54b883e4b.bundle",
+      "bundle_sha256": "623fada93a9c04fd962723095a0dfea726f8053fdf41929b72406f5d373bb086",
+      "path_id": 2485963279595597395,
+      "logical_bundle": "p1_assets_gameassets_aa_asset_spriteatlas_ui_buildingicon.bundle",
+      "width": 255,
+      "height": 240,
+      "webp_sha256": "56c8c32157c2a5710e32e1c868afab51cfb5058ee7d1bdc66dfeb3617daf0f1d"
+    },
+    "virus-lab": {
+      "atlas": "UI_BuildingIcon",
+      "sprite": "Icon_S1Bulid_Virus_InstituteRevision",
+      "member": "assets/BuiltinFiles/P1/6369f3b315964f893fd6fed54b883e4b.bundle",
+      "bundle_sha256": "623fada93a9c04fd962723095a0dfea726f8053fdf41929b72406f5d373bb086",
+      "path_id": -8631768383416702573,
+      "logical_bundle": "p1_assets_gameassets_aa_asset_spriteatlas_ui_buildingicon.bundle",
+      "width": 205,
+      "height": 240,
+      "webp_sha256": "0f7ffaad4e75b628b00f92a92e8b41c9dcea0d36174655dc343a5a61957fbf88"
+    },
+    "refinery": {
+      "atlas": "UI_BuildingIcon",
+      "sprite": "Icon_S1Bulid_Refining_Association",
+      "member": "assets/BuiltinFiles/P1/6369f3b315964f893fd6fed54b883e4b.bundle",
+      "bundle_sha256": "623fada93a9c04fd962723095a0dfea726f8053fdf41929b72406f5d373bb086",
+      "path_id": 1256523497948478833,
+      "logical_bundle": "p1_assets_gameassets_aa_asset_spriteatlas_ui_buildingicon.bundle",
+      "width": 170,
+      "height": 240,
+      "webp_sha256": "1b1176a7fd3efb46c6f695860ddfdfebdacae410d431aafcdf7642bed283d927"
+    },
+    "world-geographic": {
+      "atlas": "UI_BuildingIcon",
+      "sprite": "Icon_S1Bulid_Geographical_Association",
+      "member": "assets/BuiltinFiles/P1/6369f3b315964f893fd6fed54b883e4b.bundle",
+      "bundle_sha256": "623fada93a9c04fd962723095a0dfea726f8053fdf41929b72406f5d373bb086",
+      "path_id": 408743491845798692,
+      "logical_bundle": "p1_assets_gameassets_aa_asset_spriteatlas_ui_buildingicon.bundle",
+      "width": 248,
+      "height": 240,
+      "webp_sha256": "5ac9c4162cee58dd8f1aab088ee3f68f490c0a7b6813ca96bf6359d76cca1a0a"
+    },
+    "unit-type-base": {
+      "atlas": "UI_BuildingIcon",
+      "sprite": "Icon_S1Bulid_Military_ResearchInstitute",
+      "member": "assets/BuiltinFiles/P1/6369f3b315964f893fd6fed54b883e4b.bundle",
+      "bundle_sha256": "623fada93a9c04fd962723095a0dfea726f8053fdf41929b72406f5d373bb086",
+      "path_id": 8000730460358251126,
+      "logical_bundle": "p1_assets_gameassets_aa_asset_spriteatlas_ui_buildingicon.bundle",
+      "width": 203,
+      "height": 240,
+      "webp_sha256": "5c88ebc745429f74315185206edc23b02cbad7bce338af04aa25389f0aa794d1"
+    },
+    "warrior-base": {
+      "atlas": "UI_BuildingIcon",
+      "sprite": "Icon_Build_HeroCamp3",
+      "member": "assets/BuiltinFiles/P1/6369f3b315964f893fd6fed54b883e4b.bundle",
+      "bundle_sha256": "623fada93a9c04fd962723095a0dfea726f8053fdf41929b72406f5d373bb086",
+      "path_id": 1124109364022092005,
+      "logical_bundle": "p1_assets_gameassets_aa_asset_spriteatlas_ui_buildingicon.bundle",
+      "width": 254,
+      "height": 240,
+      "webp_sha256": "6bfca4f870770fd061774a8c280f5851ffad92ba8bed1725ed2534c0460f37c7"
+    },
+    "assault-base": {
+      "atlas": "UI_BuildingIcon",
+      "sprite": "Icon_Build_HeroCamp1",
+      "member": "assets/BuiltinFiles/P1/6369f3b315964f893fd6fed54b883e4b.bundle",
+      "bundle_sha256": "623fada93a9c04fd962723095a0dfea726f8053fdf41929b72406f5d373bb086",
+      "path_id": 7156955682387232064,
+      "logical_bundle": "p1_assets_gameassets_aa_asset_spriteatlas_ui_buildingicon.bundle",
+      "width": 258,
+      "height": 240,
+      "webp_sha256": "4e50b9f9f501b7f55eb2ded3cc70e530ea6091a92919ee675f1c04fa980e11e7"
+    },
+    "tactical-base": {
+      "atlas": "UI_BuildingIcon",
+      "sprite": "Icon_Build_HeroCamp2",
+      "member": "assets/BuiltinFiles/P1/6369f3b315964f893fd6fed54b883e4b.bundle",
+      "bundle_sha256": "623fada93a9c04fd962723095a0dfea726f8053fdf41929b72406f5d373bb086",
+      "path_id": -3047056720606650594,
+      "logical_bundle": "p1_assets_gameassets_aa_asset_spriteatlas_ui_buildingicon.bundle",
+      "width": 217,
+      "height": 240,
+      "webp_sha256": "9330d82cbfbe4254b72aaa9f8ab5b211cb28c17ed61bb2c0959ecb3449fb5d5b"
+    },
+    "radiation-shelter": {
+      "atlas": "UI_BuildingIcon",
+      "sprite": "Icon_Decoration_Refuge",
+      "member": "assets/BuiltinFiles/P1/6369f3b315964f893fd6fed54b883e4b.bundle",
+      "bundle_sha256": "623fada93a9c04fd962723095a0dfea726f8053fdf41929b72406f5d373bb086",
+      "path_id": 6298207648610907875,
+      "logical_bundle": "p1_assets_gameassets_aa_asset_spriteatlas_ui_buildingicon.bundle",
+      "width": 320,
+      "height": 238,
+      "webp_sha256": "c898483fda346caf689ea4fb1185a0340338929043932e82cd5826ce7aad3707"
+    },
+    "emergency-center": {
+      "atlas": "UI_BuildingIcon",
+      "sprite": "Icon_S1Bulid_Emergency_Center",
+      "member": "assets/BuiltinFiles/P1/6369f3b315964f893fd6fed54b883e4b.bundle",
+      "bundle_sha256": "623fada93a9c04fd962723095a0dfea726f8053fdf41929b72406f5d373bb086",
+      "path_id": -2911828936579750601,
+      "logical_bundle": "p1_assets_gameassets_aa_asset_spriteatlas_ui_buildingicon.bundle",
+      "width": 242,
+      "height": 240,
+      "webp_sha256": "9c60d9fb83356eaae83fb9e44ba9b85582a3ef33f5ed3f0338e1d06be32afda5"
+    },
+    "weapon-monroe": {
+      "atlas": "UI_HeroSignatureWeapon",
+      "sprite": "ExclusiveWeapon_icon_MarilynMonroe",
+      "member": "assets/BuiltinFiles/P1/738eedcb8a83c7673c5589e49d40c628.bundle",
+      "bundle_sha256": "b6a16454aff8d30a569c480d2362bd3da4e1ab69c3ff2b9b274035f229b4552c",
+      "path_id": 8206792854119482670,
+      "logical_bundle": "p1_assets_gameassets_aa_asset_spriteatlas_ui_herosignatureweapon.bundle",
+      "width": 203,
+      "height": 146,
+      "webp_sha256": "6d612b9f3db670b749bb9e6f72f0d0fd2f6e4d2a077888e00ab88b45ba05c636"
+    },
+    "weapon-leah": {
+      "atlas": "UI_HeroSignatureWeapon",
+      "sprite": "ExclusiveWeapon_icon_Leah",
+      "member": "assets/BuiltinFiles/P1/738eedcb8a83c7673c5589e49d40c628.bundle",
+      "bundle_sha256": "b6a16454aff8d30a569c480d2362bd3da4e1ab69c3ff2b9b274035f229b4552c",
+      "path_id": 5820940405379189253,
+      "logical_bundle": "p1_assets_gameassets_aa_asset_spriteatlas_ui_herosignatureweapon.bundle",
+      "width": 205,
+      "height": 127,
+      "webp_sha256": "c5f659026979509d2a7b702a64b67cbe184ef6fd4da8608e5112cfd94100647c"
+    },
+    "weapon-yana": {
+      "atlas": "UI_HeroSignatureWeapon",
+      "sprite": "ExclusiveWeapon_icon_yana",
+      "member": "assets/BuiltinFiles/P1/738eedcb8a83c7673c5589e49d40c628.bundle",
+      "bundle_sha256": "b6a16454aff8d30a569c480d2362bd3da4e1ab69c3ff2b9b274035f229b4552c",
+      "path_id": -6117445846893287615,
+      "logical_bundle": "p1_assets_gameassets_aa_asset_spriteatlas_ui_herosignatureweapon.bundle",
+      "width": 212,
+      "height": 171,
+      "webp_sha256": "e08c4004a6319cbd93ac450387e3c22ab4b1cd63e267534eacf1ac5b5a2a0137"
+    }
+  }
+}

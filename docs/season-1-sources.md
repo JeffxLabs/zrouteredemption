@@ -18,7 +18,9 @@ The selected Unity Sprite assets were found in the embedded catalog and physical
 | `virus.webp` | `UI_Sprite/Banner/Explanation/Rule_banner_S1_003.png` | `dc6d79673325d526d04beb9d09608d45.bundle` |
 | `expedition.webp` | `UI_Sprite/Bg/Season/foresight_bg_06.png` | `9ab5dc3fad8898cc6cbe811ee75f9190.bundle` |
 
-The [icon manifest](../assets/season-1/icons/sources.json) records the atlas, exact sprite name, archived bundle, path ID and WebP hash for every extracted skill, class, resistance and item icon. Atlas sprites were resolved with their packed texture dependencies from the same APK. The five hero portraits and three weapon icons reuse the existing Hero Directory art and its source data rather than duplicating downloads.
+The [icon manifest](../assets/season-1/icons/sources.json) records the atlas, exact sprite name, archived bundle, path ID and WebP hash for every extracted skill, class, resistance and item icon. Atlas sprites were resolved with their packed texture dependencies from the same APK. The hero portraits reuse the existing Hero Directory art.
+
+The [field guide manifest](../assets/season-1/field-guide/sources.json) covers ten construction-menu renders (`UI_BuildingIcon`) and three larger weapon sprites (`UI_HeroSignatureWeapon`). Building IDs and `buildMenuIcon` bind the renders to their labels. These images are from the construction menu, not live base screenshots or a level-by-level model gallery. The Gray Zone Caravan row has no menu sprite; the guide does not substitute an image. `HeroExclusive` binds each weapon sprite and lists appearances at weapon levels 1, 10 and 30. The matching `itemdes_exclusiveWeapon_*` entries specify the hero’s five-star gate and 50-shard cost.
 
 ## Additional joins
 
