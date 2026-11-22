@@ -11,6 +11,28 @@
    "ko": "시즌 1",
    "zh": "赛季1"
   },
+  "Radiated Land": {
+    "fr": "Terres irradiées",
+    "ru": "Облученная земля",
+    "tr": "Radyasyonlu Topraklar",
+    "pl": "Napromieniowana Ziemia",
+    "es": "Tierra radiactiva",
+    "pt": "Terra Irradiada",
+    "de": "Verstrahltes Land",
+    "ko": "방사능 지대",
+    "zh": "辐射之地"
+  },
+  "Start Radiated Land: build Virus Resistance, pick class skills, and plan your first outpost.": {
+    "fr": "Lancez-vous dans les Terres irradiées : augmentez votre résistance virale, choisissez vos compétences de classe et préparez votre premier avant-poste.",
+    "ru": "Начните сезон «Облученная земля»: повышайте сопротивление вирусу, выбирайте навыки класса и планируйте первый аванпост.",
+    "tr": "Radyasyonlu Topraklar’a başlayın: Virüs Direnci’ni artırın, sınıf becerilerinizi seçin ve ilk Karakolunuzu planlayın.",
+    "pl": "Rozpocznij sezon na Napromieniowanej Ziemi: zwiększ odporność na wirusa, wybierz umiejętności klasy i zaplanuj pierwszą placówkę.",
+    "es": "Empieza en Tierra radiactiva: aumenta tu resistencia viral, elige habilidades de clase y planifica tu primer puesto de avanzada.",
+    "pt": "Comece em Terra Irradiada: aumente a Resistência Viral, escolha habilidades de classe e planeje seu primeiro posto avançado.",
+    "de": "Starte ins Verstrahlte Land: Erhöhe deinen Viruswiderstand, wähle Klassenfähigkeiten und plane deinen ersten Außenposten.",
+    "ko": "방사능 지대에서 시작하세요. 바이러스 저항을 높이고, 직업 스킬을 선택하고, 첫 전초기지를 계획하세요.",
+    "zh": "开启辐射之地：提升病毒抗性、选择职业技能，并规划首个前哨站。"
+  },
   "Season 1 guide": {
    "fr": "Guide de la saison 1",
    "ru": "Руководство по сезону 1",

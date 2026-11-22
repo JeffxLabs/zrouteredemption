@@ -39,6 +39,28 @@ class SeasonOne(unittest.TestCase):
                 links = Page(route).links()
                 self.assertGreaterEqual(links.count('../' + GUIDE if route else GUIDE), 2)
 
+    def test_home_has_a_season_guide_card(self):
+        home = Page('')
+        cards = [node for tag, node in home.nodes if tag == 'a' and 'tool' in node.get('class', '').split()]
+        self.assertEqual(len([node for node in cards if node.get('href') == GUIDE]), 1)
+
+    def test_season_bottom_navigation_matches_home(self):
+        def tabs(route):
+            html = (ROOT / route / 'index.html').read_text()
+            nav = re.search(r'<nav class="bottom-nav"[^>]*>(.*?)</nav>', html, re.S)
+            if nav is None:
+                self.fail(f'{route}: use the standard bottom navigation')
+            out = []
+            for href, icon, label in re.findall(r'<a href="([^"]+)"[^>]*>(<svg[^>]*>.*?</svg>)<span>([^<]+)</span></a>', nav[1], re.S):
+                out.append((urljoin(BASE + route, href), icon, label))
+            return out
+
+        expected = tabs('')
+        self.assertEqual(len(expected), 6)
+        for route in (GUIDE, SKILLS):
+            with self.subTest(route=route):
+                self.assertEqual(tabs(route), expected)
+
     def test_pages_have_resolvable_links_assets_and_fragments(self):
         for route in (GUIDE, SKILLS):
             with self.subTest(route=route):

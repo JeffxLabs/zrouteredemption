@@ -72,7 +72,6 @@ html.day .season { --season: #4e600c; --season-wash: #edf0db; }
 .season-hero picture { width: min(100%, 620px); left: auto; }
 @media (min-width: 521px) { .season-hero picture { mask-image: linear-gradient(to right, transparent, black 25%); } }
 .season-hero img { object-position: center 44%; }
-.season-bottom a { min-height: 44px; justify-content: center; }
 @media (max-width: 520px) { .season-hero::after { background: linear-gradient(0deg, #101508 0%, #101508e8 53%, #10150835 100%); } .season-hero { min-height: 310px; } }
 
 /* Guide panels and reusable game sprites */
