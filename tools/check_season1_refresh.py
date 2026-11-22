@@ -21,7 +21,8 @@ class IllustratedGuide(unittest.TestCase):
             with self.subTest(anchor=anchor):
                 block = html.split(f'id="{anchor}"', 1)[1].split(f'</{tag}>', 1)[0]
                 self.assertIn('Upgrade the Virus Lab to Lv.30 as soon as you can.', block)
-                self.assertIn('Base Lv.10 is enough; you do not need Base Lv.30.', block)
+                self.assertIn('Your base does not need to be Lv.30 to do this.', block)
+                self.assertNotIn('Base Lv.10', block)
 
     def test_tactical_tips_are_in_the_relevant_sections(self):
         page = Page(GUIDE)

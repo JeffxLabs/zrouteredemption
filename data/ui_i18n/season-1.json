@@ -2494,7 +2494,7 @@
       "es": "EXP de héroes",
       "pt": "EXP de heróis",
       "de": "Helden-EXP",
-      "ko": "영웅 EXP",
+      "ko": "영웅 경험치",
       "zh": "英雄经验"
     },
     "Hero Promotion; Legion Counterattack; Lv.3 City Unlocked; Lv.4 City Unlocked": {
@@ -4016,16 +4016,16 @@
       "ko": "바이러스 실험실을 가능한 한 빨리 Lv.30까지 업그레이드하세요.",
       "zh": "尽快将病毒实验室升至30级。"
     },
-    "Base Lv.10 is enough; you do not need Base Lv.30.": {
-      "fr": "Une Base de niveau 10 suffit : pas besoin d’atteindre le niveau 30.",
-      "ru": "Достаточно Базы 10-го уровня. База 30-го уровня не нужна.",
-      "tr": "Üs Sv.10 yeterli; Üs Sv.30 gerekmez.",
-      "pl": "Wystarczy Baza na 10. poziomie. Baza na 30. poziomie nie jest wymagana.",
-      "es": "Una Base de nivel 10 basta; no necesitas que llegue al nivel 30.",
-      "pt": "Uma Base de nível 10 é suficiente; não é preciso chegar ao nível 30.",
-      "de": "Eine Basis auf Stufe 10 reicht aus. Stufe 30 ist für die Basis nicht nötig.",
-      "ko": "기지는 Lv.10이면 충분합니다. 기지 Lv.30은 필요하지 않습니다.",
-      "zh": "基地达到10级即可，无需升到30级。"
+    "Your base does not need to be Lv.30 to do this.": {
+      "fr": "Votre Base n’a pas besoin d’être au niveau 30 pour cela.",
+      "ru": "Для этого не нужно повышать Базу до 30-го уровня.",
+      "tr": "Bunun için Üssünüzün Sv.30 olması gerekmez.",
+      "pl": "Twoja Baza nie musi mieć poziomu 30.",
+      "es": "Tu Base no necesita estar en el nivel 30 para hacerlo.",
+      "pt": "Sua Base não precisa estar no nível 30 para isso.",
+      "de": "Deine Basis muss dafür nicht auf Stufe 30 sein.",
+      "ko": "이를 위해 기지가 Lv.30일 필요는 없습니다.",
+      "zh": "无需将基地升到30级。"
     },
     "Spend Immune Protein to raise your troops’ Virus Resistance.": {
       "fr": "Utilisez de la protéine immunitaire pour augmenter la résistance virale de vos troupes.",
@@ -4470,8 +4470,8 @@
     "Site": {
       "fr": "Navigation du site",
       "ru": "Навигация по сайту",
-      "tr": "Site gezinmesi",
-      "pl": "Nawigacja witryny",
+      "tr": "Site navigasyonu",
+      "pl": "Nawigacja strony",
       "es": "Navegación del sitio",
       "pt": "Navegação do site",
       "de": "Seitennavigation",
