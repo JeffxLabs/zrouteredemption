@@ -15,6 +15,14 @@ class IllustratedGuide(unittest.TestCase):
         self.assertEqual({int(m[1]) for href in guide.links() if (m := re.fullmatch(r'../heroes/#hero-(\d+)', href))},
                          {30003, 31003, 30006, 50006, 50011})
 
+    def test_virus_lab_priority_is_in_opening_and_building_card(self):
+        html = (ROOT / GUIDE / 'index.html').read_text()
+        for tag, anchor in [('section', 'start'), ('article', 'virus-lab')]:
+            with self.subTest(anchor=anchor):
+                block = html.split(f'id="{anchor}"', 1)[1].split(f'</{tag}>', 1)[0]
+                self.assertIn('Upgrade the Virus Lab to Lv.30 as soon as you can.', block)
+                self.assertIn('Base Lv.10 is enough; you do not need Base Lv.30.', block)
+
     def test_buildings_and_exclusive_weapons_show_in_game_art(self):
         guide = Page(GUIDE)
         html = (ROOT / GUIDE / 'index.html').read_text()

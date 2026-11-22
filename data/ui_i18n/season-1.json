@@ -3916,16 +3916,38 @@
       "ko": "바이러스 실험실를 수리한 다음 우라늄 결정 제련소 I를 수리하세요.",
       "zh": "修复 病毒实验室，然后修复 铀结晶提炼厂I。"
     },
-    "Repair this first. Spend Immune Protein to raise your troops’ Virus Resistance. The Lab caps at Lv.30. After an upgrade, recall and redeploy marches so they use the new resistance.": {
-      "es": "Repara esto primero. Gasta Proteína inmunitaria para aumentar el Resistencia viral de tus tropas. El laboratorio tiene un límite de nivel 30. Después de una mejora, retira y redistribuye las marchas para que utilicen la nueva resistencia.",
-      "ru": "Сначала отремонтируйте это. Потратьте Иммунный белок, чтобы поднять Сопротивление вирусу своих войск. Лаборатория ограничена 30-м уровнем. После обновления отзовите и перераспределите марши, чтобы они использовали новое сопротивление.",
-      "fr": "Réparez-le d'abord. Dépensez du Protéine immunitaire pour augmenter le Résistance virale de vos troupes. Le laboratoire plafonne au niveau 30. Après une mise à niveau, rappelez et redéployez les marches afin qu'ils utilisent la nouvelle résistance.",
-      "pl": "Najpierw napraw to. Wydaj Białko odpornościowe, aby podnieść Odporność na wirusa swoich żołnierzy. Laboratorium ogranicza się do poziomu 30. Po ulepszeniu przywołaj i ponownie rozmieść marsze, aby wykorzystały nowy opór.",
-      "tr": "Önce bunu onarın. Birliklerinizin Virüs Direnci'sini yükseltmek için Bağışıklık Proteini harcayın. Laboratuar Sv.30'dadır. Yükseltmeden sonra, yeni direnişi kullanabilmeleri için yürüyüşleri geri çağırın ve yeniden konuşlandırın.",
-      "pt": "Repare isso primeiro. Gaste Proteína Imune para aumentar o Resistência Viral de suas tropas. O Laboratório atinge o nível 30. Após uma atualização, recupere e redistribua marchas para que usem a nova resistência.",
-      "de": "Reparieren Sie dies zuerst. Geben Sie Immunprotein aus, um die Viruswiderstand Ihrer Truppen zu erhöhen. Das Labor ist auf Lv. 30 begrenzt. Rufen Sie nach einem Upgrade die Märsche zurück und verteilen Sie sie neu, damit sie den neuen Widerstand nutzen.",
-      "ko": "이것을 먼저 수리하세요. 면역 단백질를 사용하여 군대의 바이러스 저항를 키우세요. 연구실은 Lv.30으로 제한됩니다. 업그레이드 후에는 새로운 저항군을 사용할 수 있도록 행군을 소환하고 재배치하세요.",
-      "zh": "先修这个吧花费免疫蛋白来提升你的部队的病毒抗性。实验室上限为 Lv.30。升级后，召回并重新部署行军，以便他们使用新的抵抗力量。"
+    "Upgrade the Virus Lab to Lv.30 as soon as you can.": {
+      "fr": "Montez le Laboratoire de virologie au niveau 30 dès que possible.",
+      "ru": "Как можно скорее улучшите Лабораторию вирусов до 30-го уровня.",
+      "tr": "Virüs Laboratuvarı’nı mümkün olan en kısa sürede Sv.30’a yükseltin.",
+      "pl": "Jak najszybciej ulepsz Laboratorium wirusowe do 30. poziomu.",
+      "es": "Mejora el Laboratorio del Virus al nivel 30 cuanto antes.",
+      "pt": "Melhore o Laboratório Viral para o nível 30 assim que puder.",
+      "de": "Verbessere das Viruslabor so früh wie möglich auf Stufe 30.",
+      "ko": "바이러스 실험실을 가능한 한 빨리 Lv.30까지 업그레이드하세요.",
+      "zh": "尽快将病毒实验室升至30级。"
+    },
+    "Base Lv.10 is enough; you do not need Base Lv.30.": {
+      "fr": "Une Base de niveau 10 suffit : pas besoin d’atteindre le niveau 30.",
+      "ru": "Достаточно Базы 10-го уровня. База 30-го уровня не нужна.",
+      "tr": "Üs Sv.10 yeterli; Üs Sv.30 gerekmez.",
+      "pl": "Wystarczy Baza na 10. poziomie. Baza na 30. poziomie nie jest wymagana.",
+      "es": "Una Base de nivel 10 basta; no necesitas que llegue al nivel 30.",
+      "pt": "Uma Base de nível 10 é suficiente; não é preciso chegar ao nível 30.",
+      "de": "Eine Basis auf Stufe 10 reicht aus. Stufe 30 ist für die Basis nicht nötig.",
+      "ko": "기지는 Lv.10이면 충분합니다. 기지 Lv.30은 필요하지 않습니다.",
+      "zh": "基地达到10级即可，无需升到30级。"
+    },
+    "Spend Immune Protein to raise your troops’ Virus Resistance.": {
+      "fr": "Utilisez de la protéine immunitaire pour augmenter la résistance virale de vos troupes.",
+      "ru": "Используйте иммунный белок, чтобы повысить сопротивление вирусу у ваших войск.",
+      "tr": "Birliklerinizin Virüs Direnci’ni artırmak için Bağışıklık Proteini harcayın.",
+      "pl": "Wydawaj białko odpornościowe, by zwiększyć odporność na wirusa swoich oddziałów.",
+      "es": "Usa proteína inmunitaria para aumentar la resistencia viral de tus tropas.",
+      "pt": "Use proteína imune para aumentar a resistência viral das suas tropas.",
+      "de": "Setze Immunprotein ein, um den Viruswiderstand deiner Truppen zu erhöhen.",
+      "ko": "면역 단백질을 사용해 부대의 바이러스 저항을 높이세요.",
+      "zh": "消耗免疫蛋白，提高部队的病毒抗性。"
     },
     "Repair: Virus Lab; Repair: Uranium Crystal Refinery; Lv.1 City Unlocked; Lv.2 City Unlocked": {
       "fr": "Réparer : Laboratoire de virologie; Réparer : Raffinerie de cristal d'uranium; Ville niv.1 débloquée; Ville niv.2 débloquée",
