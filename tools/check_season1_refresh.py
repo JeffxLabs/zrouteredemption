@@ -23,6 +23,22 @@ class IllustratedGuide(unittest.TestCase):
                 self.assertIn('Upgrade the Virus Lab to Lv.30 as soon as you can.', block)
                 self.assertIn('Base Lv.10 is enough; you do not need Base Lv.30.', block)
 
+    def test_tactical_tips_are_in_the_relevant_sections(self):
+        page = Page(GUIDE)
+        html = (ROOT / GUIDE / 'index.html').read_text()
+        self.assertIn('#first-kill-rewards', page.links())
+        for anchor, copy in (
+            ('first-kill-rewards', 'Radiated Zombies and Radiated Elites'),
+            ('refinery', 'Refinery I Lv.6 requires Refinery II Lv.5.'),
+            ('rally-resistance', 'Have your highest-resistance player lead the rally'),
+            ('hero-changes', 'Avoid promoting Aria right before an important fight'),
+        ):
+            with self.subTest(anchor=anchor):
+                self.assertIn(anchor, page.targets)
+                block = html.partition(f'id="{anchor}"')[2]
+                end_tag = '<h3' if anchor in {'first-kill-rewards', 'rally-resistance'} else '</article>' if anchor == 'refinery' else '</section>'
+                self.assertIn(copy, block.split(end_tag, 1)[0])
+
     def test_buildings_and_exclusive_weapons_show_in_game_art(self):
         guide = Page(GUIDE)
         html = (ROOT / GUIDE / 'index.html').read_text()

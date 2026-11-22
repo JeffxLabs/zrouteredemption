@@ -1936,6 +1936,105 @@
       "ko": "화력 지원 스킬 랭크",
       "zh": "火力支援 技能等级"
     },
+    "First Kill Reward": {
+      "fr": "Récompense de première élimination",
+      "ru": "Награда за первое убийство",
+      "tr": "İlk Öldürme Ödülü",
+      "pl": "Nagroda za pierwsze zabójstwo",
+      "es": "Recompensa por Primera Eliminación",
+      "pt": "Recompensa pelo Primeiro Abate",
+      "de": "Erste Tötungsbelohnung",
+      "ko": "최초 처치 보상",
+      "zh": "首杀奖励"
+    },
+    "Recall and redeploy after each Lab upgrade. Then look for": {
+      "fr": "Après chaque amélioration du laboratoire, rappelez puis renvoyez vos troupes. Vérifiez la",
+      "ru": "После каждого улучшения лаборатории отзывайте и снова отправляйте войска. Проверьте, доступна ли",
+      "tr": "Her laboratuvar yükseltmesinden sonra birliklerinizi geri çağırıp yeniden gönderin. Şuna bakın:",
+      "pl": "Po każdym ulepszeniu laboratorium wycofaj i ponownie wyślij wojska. Sprawdź, czy jest dostępna",
+      "es": "Tras cada mejora del laboratorio, retira las tropas a la Base y vuelve a enviarlas. Busca la",
+      "pt": "Após cada melhoria do laboratório, traga as tropas de volta e envie-as de novo. Confira a",
+      "de": "Rufe deine Truppen nach jedem Labor-Upgrade zurück und schicke sie erneut los. Achte auf die",
+      "ko": "실험실을 업그레이드할 때마다 부대를 복귀시킨 뒤 다시 출정시키세요. 같은 전투를 반복하기 전에",
+      "zh": "每次升级实验室后，先召回部队再重新出征。重复挑战前先查看"
+    },
+    "before repeating fights.": {
+      "fr": "avant de répéter un combat.",
+      "ru": "прежде чем повторять бой.",
+      "tr": "— aynı savaşı tekrarlamadan önce.",
+      "pl": "przed powtórzeniem walki.",
+      "es": "antes de repetir un combate.",
+      "pt": "antes de repetir uma luta.",
+      "de": "bevor du einen Kampf wiederholst.",
+      "ko": "을 확인하세요.",
+      "zh": "。"
+    },
+    "Check the reward preview for Radiated Zombies and Radiated Elites. Prioritize unclaimed first-kill rewards over repeat kills when your troops meet the resistance requirement.": {
+      "fr": "Consultez l’aperçu des récompenses des Zombies irradiés et des Élites irradiées. Si vos troupes ont la résistance requise, privilégiez les premières éliminations dont la récompense reste à obtenir.",
+      "ru": "Посмотрите награды за облучённых зомби и облучённую элиту. Если у войск достаточно сопротивления, сначала побеждайте тех, за кого ещё не получена награда за первое убийство.",
+      "tr": "Radyasyonlu Zombi ve Radyasyonlu Elit için ödül ön izlemesine bakın. Birlikleriniz gerekli dirence sahipse aynı hedefi tekrar yenmek yerine henüz almadığınız İlk Öldürme Ödüllerine öncelik verin.",
+      "pl": "Sprawdź podgląd nagród za Napromieniowane zombie i Napromieniowaną elitę. Jeśli twoje oddziały mają wymaganą odporność, najpierw pokonuj cele, za które wciąż możesz dostać nagrodę za pierwsze zabójstwo.",
+      "es": "Revisa la vista previa de recompensas de los zombis radiactivos y la élite radiactiva. Si tus tropas tienen la resistencia necesaria, prioriza las recompensas por primera eliminación que aún no hayas obtenido.",
+      "pt": "Confira a prévia de recompensas de Zumbis Irradiados e Elites Irradiados. Quando suas tropas tiverem a resistência necessária, priorize recompensas pelo primeiro abate que você ainda não recebeu.",
+      "de": "Prüfe die Belohnungsvorschau bei Verstrahlten Zombies und der Verstrahlten Elite. Wenn deine Truppen den nötigen Widerstand haben, hole zuerst noch offene Ersttötungsbelohnungen, statt Kämpfe zu wiederholen.",
+      "ko": "피폭 좀비와 피폭 엘리트의 보상 미리보기를 확인하세요. 부대가 필요 저항을 충족한다면 같은 적을 반복해서 잡기보다 아직 받지 않은 최초 처치 보상을 우선하세요.",
+      "zh": "查看辐化丧尸和辐化精英的奖励预览。部队达到所需抗性时，优先挑战尚未领取首杀奖励的目标，而不是重复击杀。"
+    },
+    "Refinery I Lv.6 requires Refinery II Lv.5.": {
+      "fr": "Pour monter la Raffinerie I au niveau 6, la Raffinerie II doit être au niveau 5.",
+      "ru": "Для повышения завода I до 6-го уровня нужен завод II 5-го уровня.",
+      "tr": "Rafineri I’i Sv.6’ya yükseltmek için Rafineri II’nin Sv.5 olması gerekir.",
+      "pl": "Aby ulepszyć Rafinerię I do poziomu 6, Rafineria II musi mieć poziom 5.",
+      "es": "Para subir la Refinería I al nivel 6, la Refinería II debe estar en el nivel 5.",
+      "pt": "Para subir a Refinaria I ao nível 6, a Refinaria II precisa estar no nível 5.",
+      "de": "Für Raffinerie I auf Stufe 6 muss Raffinerie II auf Stufe 5 sein.",
+      "ko": "제련소 I을 Lv.6으로 올리려면 제련소 II가 Lv.5여야 합니다.",
+      "zh": "提炼厂I升到6级需要提炼厂II达到5级。"
+    },
+    "Once Refinery II unlocks, repair it and raise it to Lv.5 before pushing Refinery I higher.": {
+      "fr": "Dès que la Raffinerie II est débloquée, réparez-la et montez-la au niveau 5 avant de continuer à améliorer la Raffinerie I.",
+      "ru": "Когда завод II откроется, отремонтируйте его и улучшите до 5-го уровня, прежде чем дальше улучшать завод I.",
+      "tr": "Rafineri II açılınca onarın ve Rafineri I’i daha fazla yükseltmeden önce onu Sv.5’e çıkarın.",
+      "pl": "Po odblokowaniu Rafinerii II napraw ją i podnieś do poziomu 5 przed dalszym ulepszaniem Rafinerii I.",
+      "es": "Cuando se desbloquee la Refinería II, repárala y súbela al nivel 5 antes de seguir mejorando la Refinería I.",
+      "pt": "Quando a Refinaria II for desbloqueada, repare-a e suba-a ao nível 5 antes de continuar melhorando a Refinaria I.",
+      "de": "Repariere Raffinerie II nach der Freischaltung und bringe sie auf Stufe 5, bevor du Raffinerie I weiter ausbaust.",
+      "ko": "제련소 II가 잠금 해제되면 수리하고 Lv.5까지 올린 뒤 제련소 I의 업그레이드를 계속하세요.",
+      "zh": "提炼厂II解锁后，先修复并升到5级，再继续升级提炼厂I。"
+    },
+    "Have your highest-resistance player lead the rally.": {
+      "fr": "Confiez le ralliement au joueur qui a la résistance la plus élevée.",
+      "ru": "Поручите возглавить сбор игроку с самым высоким сопротивлением вирусу.",
+      "tr": "Toplanmayı Virüs Direnci en yüksek oyuncu başlatsın.",
+      "pl": "Niech rajd poprowadzi gracz z najwyższą odpornością na wirusa.",
+      "es": "Haz que el jugador con mayor resistencia viral lidere la reunión.",
+      "pt": "Deixe o jogador com maior Resistência Viral liderar o ataque em grupo.",
+      "de": "Lass den Spieler mit dem höchsten Viruswiderstand den Sammelangriff anführen.",
+      "ko": "바이러스 저항이 가장 높은 플레이어가 집결을 이끌게 하세요.",
+      "zh": "让病毒抗性最高的玩家担任集结队长。"
+    },
+    "Avoid promoting Aria right before an important fight.": {
+      "fr": "Évitez de promouvoir Aria juste avant un combat important.",
+      "ru": "Не повышайте Арию прямо перед важным боем.",
+      "tr": "Aria’yı önemli bir savaştan hemen önce terfi ettirmeyin.",
+      "pl": "Nie awansuj Arii tuż przed ważną walką.",
+      "es": "Evita ascender a Aria justo antes de un combate importante.",
+      "pt": "Evite promover Aria logo antes de uma luta importante.",
+      "de": "Befördere Aria nicht unmittelbar vor einem wichtigen Kampf.",
+      "ko": "중요한 전투 직전에는 아리아를 승급시키지 마세요.",
+      "zh": "不要在重要战斗前立刻晋升阿丽雅。"
+    },
+    "Set aside shards and Skill Insignias to rebuild her stars and skills first.": {
+      "fr": "Prévoyez des fragments et des insignes de compétence pour remonter ses étoiles et ses compétences.",
+      "ru": "Запасите осколки и знаки навыков, чтобы восстановить её звёзды и уровни навыков.",
+      "tr": "Yıldızlarını ve becerilerini yeniden yükseltmek için Parça ve Beceri Nişanı ayırın.",
+      "pl": "Odłóż odłamki i odznaki umiejętności, by ponownie podnieść jej poziom gwiazdek i umiejętności.",
+      "es": "Reserva fragmentos e insignias de habilidad para volver a subir sus estrellas y habilidades.",
+      "pt": "Reserve fragmentos e insígnias de habilidade para voltar a subir as estrelas e habilidades dela.",
+      "de": "Lege Splitter und Fertigkeitsabzeichen zurück, damit du ihre Sterne und Fertigkeiten wieder steigern kannst.",
+      "ko": "별과 스킬 레벨을 다시 올릴 수 있도록 조각과 스킬 휘장을 미리 확보해 두세요.",
+      "zh": "提前留好碎片和技能徽章，以便重新提升她的星级和技能。"
+    },
     "First login checklist": {
       "es": "Lista de verificación para el primer inicio de sesión",
       "ru": "Контрольный список первого входа",
@@ -3762,17 +3861,7 @@
       "ko": "선언 화면 읽기",
       "zh": "阅读声明屏幕"
     },
-    "Recall and redeploy after each Lab upgrade. Clear suitable targets first; for eligible Elite Zombie rallies, pick a leader whose resistance meets the requirement.": {
-      "es": "Recuperar y volver a implementar después de cada actualización del laboratorio. Primero, despeje los objetivos adecuados; Para reuniones de Elite Zombie elegibles, elige un líder cuya resistencia cumpla con el requisito.",
-      "ru": "Отзыв и повторное развертывание после каждого обновления лаборатории. Сначала очистите подходящие цели; для подходящих розыгрышей элитных зомби выберите лидера, сопротивление которого соответствует требованиям.",
-      "fr": "Rappelez et redéployez après chaque mise à niveau du Lab. Effacez d’abord les cibles appropriées ; pour les rassemblements Elite Zombie éligibles, choisissez un chef dont la résistance répond aux exigences.",
-      "pl": "Przywołaj i wdróż ponownie po każdej aktualizacji laboratorium. Najpierw usuń odpowiednie cele; w przypadku kwalifikujących się wieców Elitarnych Zombie wybierz przywódcę, którego opór spełnia wymagania.",
-      "tr": "Her Laboratuvar yükseltmesinden sonra geri çağırın ve yeniden konuşlandırın. Önce uygun hedefleri temizleyin; Uygun Elit Zombi mitingleri için direnci gereklilikleri karşılayan bir lider seçin.",
-      "pt": "Faça recall e reimplante após cada atualização do laboratório. Limpe primeiro os alvos adequados; para reuniões de zumbis de elite elegíveis, escolha um líder cuja resistência atenda ao requisito.",
-      "de": "Nach jedem Lab-Upgrade erneut aufrufen und bereitstellen. Räumen Sie zuerst geeignete Ziele ab; Wählen Sie für teilnahmeberechtigte Elite-Zombie-Rallyes einen Anführer aus, dessen Widerstand die Anforderungen erfüllt.",
-      "ko": "각 랩 업그레이드 후에는 회수하고 재배포하세요. 적합한 대상을 먼저 지우십시오. 자격을 갖춘 엘리트 좀비 집회의 경우 저항력이 요구 사항을 충족하는 리더를 선택하세요.",
-      "zh": "每次实验室升级后召回并重新部署。首先明确合适的目标；对于符合资格的精英僵尸集会，选择一位抵抗力满足要求的领导者。"
-    },
+
     "Refinery II needs Refinery I at Lv.5.": {
       "es": "La Refinería II necesita la Refinería I en el nivel 5.",
       "ru": "Нефтеперерабатывающему заводу II необходим нефтеперерабатывающий завод I на уровне 5.",
@@ -6083,16 +6172,16 @@
       "ko": "수집하고",
       "zh": "并收集"
     },
-    "and skill Lv.1. The SSR Wall of Honor goes away. Spent Skill Insignias and Wall of Honor shards are refunded by mail; shards spent getting SSR Aria to 5★ are not. UR evolution accepts original Aria Shards or SSR Omni Hero Shards and costs twice as many. Plan for the lost stars and skill levels before swapping her into a key squad.": {
-      "es": "y habilidad Lv.1. El Muro de Honor de la RSS desaparece. Las insignias de habilidades y los fragmentos del Muro de honor gastados se reembolsan por correo; los fragmentos gastados para llevar SSR Aria a 5★ no lo son. UR Evolution acepta Aria Shards originales o SSR Omni Hero Shards y cuesta el doble. Planifica las estrellas perdidas y los niveles de habilidad antes de cambiarla a un escuadrón clave.",
-      "ru": "и навык Ур.1. Стена почета ССР уходит. Потраченные Знаки отличия и осколки Стены Почета возвращаются по почте; осколки, потраченные на повышение уровня SSR Aria до 5★, не учитываются. UR Evolution принимает оригинальные осколки Aria или SSR Omni Hero Shards и стоит вдвое дороже. Примите во внимание потерянные звезды и уровни навыков, прежде чем менять ее в ключевой отряд.",
-      "fr": "et compétence Lv.1. Le Mur d’honneur de la RSS disparaît. Les insignes de compétence et les fragments de mur d'honneur dépensés sont remboursés par courrier ; les fragments dépensés pour amener SSR Aria à 5★ ne le sont pas. UR évolution accepte les fragments Aria originaux ou les fragments SSR Omni Hero et coûte deux fois plus cher. Planifiez les étoiles et les niveaux de compétence perdus avant de l'échanger dans une équipe clé.",
-      "pl": "i umiejętność poz.1. Ściana Honoru SSR znika. Wydane odznaki umiejętności i odłamki Ściany Honoru są zwracane pocztą; odłamki wydane na doprowadzenie SSR Aria do 5★ nie są. Ewolucja UR akceptuje oryginalne odłamki Arii lub odłamki bohatera SSR Omni i kosztuje dwa razy więcej. Zaplanuj utracone gwiazdy i poziomy umiejętności, zanim zamienisz ją w kluczową drużynę.",
-      "tr": "ve beceri Sv.1. SSR Onur Duvarı ortadan kalkar. Harcanan Beceri Nişanları ve Şeref Duvarı parçaları posta yoluyla iade edilir; SSR Aria'yı 5★'e çıkarmak için harcanan parçalar değil. UR evrimi, orijinal Aria Parçalarını veya SSR Omni Kahraman Parçalarını kabul eder ve maliyeti iki katıdır. Onu önemli bir kadroya almadan önce kaybedilen yıldızları ve beceri seviyelerini planlayın.",
-      "pt": "e habilidade Lv.1. O Muro de Honra da SSR desaparece. Insígnias de habilidade gastas e fragmentos do Mural de Honra são reembolsados ​​pelo correio; fragmentos gastos para levar SSR Aria a 5★ não são. A evolução UR aceita Aria Shards originais ou SSR Omni Hero Shards e custa o dobro. Planeje as estrelas perdidas e os níveis de habilidade antes de trocá-la por um time importante.",
-      "de": "und Fertigkeit Lv.1. The SSR Wall of Honor goes away. Verbrauchte Fertigkeitsabzeichen und Wand-der-Ehren-Splitter werden per Post zurückerstattet; shards spent getting SSR Aria to 5★ are not. UR evolution akzeptiert originale Aria Shards oder SSR Omni Hero Shards und kostet doppelt so viel. Planen Sie die verlorenen Sterne und Fähigkeitsstufen ein, bevor Sie sie in eine wichtige Truppe eintauschen.",
-      "ko": "그리고 스킬 Lv.1. SSR 명예의 벽이 사라집니다. 사용한 스킬 휘장과 명예의 벽 파편은 우편으로 환불됩니다. SSR Aria를 별 5개로 만드는 데 소비된 파편은 그렇지 않습니다. UR 진화는 원래 Aria 파편 또는 SSR 옴니 영웅 파편을 허용하며 비용은 두 배 더 높습니다. 그녀를 주요 분대로 교체하기 전에 잃어버린 별과 기술 수준에 대한 계획을 세우십시오.",
-      "zh": "和技能Lv.1。 SSR 荣誉墙消失了。已使用的技能徽章和荣誉墙碎片可通过邮寄方式退还； SSR Aria 达到 5★ 所花费的碎片则不然。 UR evolution 接受原始 Aria 碎片或 SSR Omni Hero 碎片，价格是原来的两倍。在将她调入关键阵容之前，先计划好失去的明星和技能水平。"
+    "and skill Lv.1. The SSR Wall of Honor goes away. Spent Skill Insignias and Wall of Honor shards are refunded by mail; shards spent getting SSR Aria to 5★ are not. UR evolution accepts original Aria Shards or SSR Omni Hero Shards and costs twice as many.": {
+      "fr": "et compétences au niveau 1. Le Mur d’honneur SSR disparaît. Les insignes de compétence et les fragments dépensés dans le Mur d’honneur sont rendus par courrier, mais pas les fragments utilisés pour monter Aria SSR à 5★. L’évolution UR utilise les fragments d’Aria ou les fragments universels SSR et en coûte deux fois plus.",
+      "ru": "и уровни навыков до 1. Стена почёта SSR исчезнет. Знаки навыков и осколки, потраченные на Стену почёта, вернутся по почте, а осколки за повышение Арии SSR до 5★ не вернутся. Для развития UR можно использовать осколки Арии или универсальные осколки SSR; их потребуется вдвое больше.",
+      "tr": "ve becerileri Sv.1’e düşer. SSR Onur Duvarı kaybolur. Onur Duvarı için harcanan parçalar ve kullanılan Beceri Nişanları postayla iade edilir; SSR Aria’yı 5★ yapmak için kullanılan parçalar iade edilmez. UR evriminde Aria Parçaları veya SSR Omni Kahraman Parçaları kullanılır ve iki kat parça gerekir.",
+      "pl": "i umiejętności na poziom 1. Ściana Honoru SSR znika. Wydane odznaki umiejętności i odłamki ze Ściany Honoru wrócą pocztą; odłamki zużyte na podniesienie Arii SSR do 5★ nie wrócą. Awans gwiazdek UR wymaga dwa razy więcej odłamków Arii lub uniwersalnych odłamków SSR.",
+      "es": "y sus habilidades bajan al nivel 1. El Muro de Honor de SSR desaparece. Las insignias de habilidad y los fragmentos gastados en el Muro de Honor se devuelven por correo. No se devuelven los fragmentos usados para subir a Aria SSR a 5★. La evolución UR admite fragmentos de Aria o fragmentos universales de héroe SSR y necesita el doble.",
+      "pt": "e suas habilidades voltam ao nível 1. O Muro de Honra SSR desaparece. As insígnias de habilidade e os fragmentos gastos no Muro de Honra voltam pelo correio, mas não os fragmentos usados para levar Aria SSR a 5★. A evolução UR usa fragmentos de Aria ou fragmentos universais de herói SSR e exige o dobro.",
+      "de": "und ihre Fertigkeiten fallen auf Stufe 1. Die SSR-Ehrenwand entfällt. Eingesetzte Fertigkeitsabzeichen und Splitter für die Ehrenwand werden per Post erstattet. Die Splitter für Aria SSR auf 5★ werden nicht erstattet. Die UR-Entwicklung kostet doppelt so viele Aria-Splitter oder universelle SSR-Heldensplitter.",
+      "ko": "가 되고 스킬은 Lv.1로 초기화됩니다. SSR 명예의 벽은 사라집니다. 사용한 스킬 휘장과 명예의 벽 조각은 우편으로 반환되지만 SSR 아리아를 5★까지 올리는 데 사용한 조각은 반환되지 않습니다. UR 진화에는 아리아 조각 또는 SSR 범용 영웅 조각을 사용하며 필요한 수량은 두 배입니다.",
+      "zh": "，技能重置为1级。SSR荣誉墙将消失。已消耗的技能徽章和用于荣誉墙的碎片会通过邮件退还，用于将SSR阿丽雅升至5★的碎片不退还。UR升星可用阿丽雅碎片或SSR万能英雄碎片，消耗量翻倍。"
     },
     "are map objectives (the preview also calls them Military Outposts). An": {
       "es": "son objetivos del mapa (la vista previa también los llama Puestos de avanzada militares). un",
