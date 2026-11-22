@@ -18,6 +18,14 @@ The selected Unity Sprite assets were found in the embedded catalog and physical
 | `virus.webp` | `UI_Sprite/Banner/Explanation/Rule_banner_S1_003.png` | `dc6d79673325d526d04beb9d09608d45.bundle` |
 | `expedition.webp` | `UI_Sprite/Bg/Season/foresight_bg_06.png` | `9ab5dc3fad8898cc6cbe811ee75f9190.bundle` |
 
+The [icon manifest](../assets/season-1/icons/sources.json) records the atlas, exact sprite name, archived bundle, path ID and WebP hash for every extracted skill, class, resistance and item icon. Atlas sprites were resolved with their packed texture dependencies from the same APK. The five hero portraits and three weapon icons reuse the existing Hero Directory art and its source data rather than duplicating downloads.
+
+## Additional joins
+
+- `ProfessionParameter` maps the different reset tickets to `Item` entries. `SeasonAchievements` target `400002` is shown as Virus Resistance in the associated English text. `WorldSeason.skillPointsItemMaxTimes` matches the item’s ten-use cap. `ExchangeShop` stock is conditional; `BattlePassReward` group 1000001 separates free and paid tracks.
+- `HeroInfo[30003].upHeroId` points to 31003. Day 9 comes from the Promotion Medal description, not a world milestone offset. The weapon numbers are the S1 day parameters in `HeroExclusive.openCondition`, joined to the existing Hero Directory. Check the live event panel before spending upgrade resources.
+- Outpost and protection rules use `season_cross_battle_tips176–194`. Radiation Legion, Aria’s Hunting Day and settlement use the shipped event help and mail. These are not independently observed live schedules.
+
 ## Checks
 
-Run `python3 tools/check_season1.py` for static navigation, assets, cache entries and the skill coverage. Existing tool regression checks remain separate.
+Run `python3 tools/check_season1.py` and `python3 tools/check_season1_refresh.py` for navigation, skill and rank coverage, art hashes, and offline cache entries. Existing tool regression checks remain separate.
